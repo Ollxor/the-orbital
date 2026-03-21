@@ -1,0 +1,88 @@
+{
+  "chunk_file": "chunk_006.json",
+  "actors": [],
+  "projects": [
+    {
+      "name": "Quadratic Voting (RxC)",
+      "website": "https://www.radicalxchange.org/",
+      "description": "Mathematical voting tool where voters allocate voice credits quadratically to issues they care about. Proven in Taiwanese Presidential Hackathon and Colorado state budget allocations.",
+      "geography": "Global",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "RadicalxChange", "relationship": "creator"}
+      ]
+    },
+    {
+      "name": "SEEDS Regenerative Currency",
+      "website": "https://hypha.earth/",
+      "description": "Regenerative currency ecosystem on Telos blockchain. Evolved into Hypha DAO Organization-in-a-Box solutions.",
+      "geography": "Global",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Hypha DAO", "relationship": "creator"}
+      ]
+    },
+    {
+      "name": "Regen Civics Alliance",
+      "website": "https://regenliving.eco/",
+      "description": "Alliance piloting 13 place-based regenerative development projects globally (eco-villages, food forests) equipped with Hypha DAO tools for local governance and cooperative business models.",
+      "geography": "Global (13 pilot sites)",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Hypha DAO", "relationship": "core partner"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Glen",
+      "last_name": "Weyl",
+      "job_title": "Founder, RadicalxChange (also Microsoft OCTOPEST)",
+      "primary_orientation": "ASSEMBLY",
+      "skills": "Political economy, democratic innovation, quadratic voting, cooperative plurality, mechanism design",
+      "actor_names": ["RadicalxChange"],
+      "role": "Founder",
+      "notes": "Author of 'Radical Markets: Uprooting Capitalism and Democracy for a Just Society'. Microsoft researcher. Key figure in democratic innovation."
+    },
+    {
+      "first_name": "Rieki",
+      "last_name": "Cordon",
+      "job_title": "Community Leader",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Community building, DAO governance, sociocracy, regenerative economics",
+      "actor_names": ["Hypha DAO"],
+      "role": "Community Leader"
+    },
+    {
+      "first_name": "Chuck",
+      "last_name": "Harrison",
+      "primary_orientation": "SPACESHIP",
+      "skills": "DAO facilitation, decentralised governance",
+      "actor_names": ["Hypha DAO"],
+      "role": "Community member / facilitator"
+    },
+    {
+      "first_name": "Stephen",
+      "last_name": "Reid",
+      "primary_orientation": "SPACESHIP",
+      "skills": "DAO facilitation, decentralised governance",
+      "actor_names": ["Hypha DAO"],
+      "role": "Community member / facilitator"
+    }
+  ],
+  "search_phrases": [
+    {"phrase": "RadicalxChange quadratic voting Colorado Taiwan Presidential Hackathon", "priority": "high"},
+    {"phrase": "Glen Weyl Radical Markets cooperative plurality mechanism design", "priority": "high"},
+    {"phrase": "Hypha DAO Decentralized Human Organizations DHO sociocracy teal", "priority": "high"},
+    {"phrase": "Hypha DAO SEEDS regenerative currency Telos blockchain", "priority": "medium"},
+    {"phrase": "Regen Civics Alliance place-based regenerative development pilot sites", "priority": "high"},
+    {"phrase": "Hypha DAO MIT Solve 2024 Economic Prosperity Challenge", "priority": "medium"},
+    {"phrase": "RxC QV tool open source quadratic election", "priority": "medium"}
+  ],
+  "source_urls": [
+    {"url": "https://www.radicalxchange.org/", "title": "RadicalxChange", "description": "Global movement for next-gen political economies and democratic innovations - Quadratic Voting", "monitor": true},
+    {"url": "https://hypha.earth/", "title": "Hypha DAO", "description": "Web3 toolkit for Decentralized Human Organizations - sociocracy, game theory, living systems", "monitor": true},
+    {"url": "https://regenliving.eco/", "title": "Regen Civics Alliance", "description": "13 place-based regenerative development pilots using Hypha DAO tools", "monitor": true},
+    {"url": "https://www.glenweyl.com/", "title": "Glen Weyl personal site", "description": "RadicalxChange founder - political economy, mechanism design", "monitor": false}
+  ]
+}

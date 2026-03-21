@@ -1,0 +1,18 @@
+{
+  "chunk_file": "chunk_008.json",
+  "actors": [],
+  "projects": [],
+  "people": [],
+  "search_phrases": [
+    {"phrase": "ReFi regenerative finance earth observation AI convergence actors", "priority": "high"},
+    {"phrase": "decentralised autonomous organizations DAOs cypher-physical network states", "priority": "medium"},
+    {"phrase": "Scandinavian Nordic hub planetary governance prototyping Sweden Denmark", "priority": "high"},
+    {"phrase": "smart covenants quadratic voting governance simulation game mechanics", "priority": "high"},
+    {"phrase": "Funding the Commons SF 2025 regenerative finance", "priority": "medium"}
+  ],
+  "source_urls": [
+    {"url": "https://fundingthecommons.io/", "title": "Funding the Commons", "description": "Event series where multiple seed actors participate (AERTH, Regen Network, Kolektivo)", "monitor": true},
+    {"url": "https://www.foresight.org/", "title": "Foresight Institute", "description": "RadicalxChange/Glen Weyl connection - existential risk and longtermism", "monitor": false},
+    {"url": "https://hatchexperience.org/", "title": "Hatch Experience", "description": "Referenced in AERTH context - climate/sustainability events", "monitor": false}
+  ]
+}

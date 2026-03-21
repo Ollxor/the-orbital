@@ -1,0 +1,85 @@
+{
+  "chunk_file": "chunk_001.json",
+  "actors": [],
+  "projects": [
+    {
+      "name": "AERTH Planetary AI",
+      "website": "https://www.aerth.live/",
+      "description": "AI-driven predictive platform functioning as a dynamic digital twin of Earth. Connects on-ground research with satellite observations. Blockchain-secured data sharing with bounty system for scenario modelling.",
+      "geography": "Global (Switzerland-affiliated)",
+      "stage": "Early",
+      "actors_involved": [
+        {"name": "AERTH", "relationship": "creator"}
+      ]
+    },
+    {
+      "name": "Ningaloo Reef Digital Twin",
+      "website": "https://www.aerth.live/",
+      "description": "Digital twin of Ningaloo Reef developed with UWA Oceans Institute and NASA JPL. Flagship demonstration of AERTH platform.",
+      "geography": "Australia",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "AERTH", "relationship": "creator"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Adina",
+      "last_name": "Popescu",
+      "job_title": "Founder and CEO",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Planetary AI, digital twins, DeSci, Gaia theory, environmental data platforms",
+      "actor_names": ["AERTH"],
+      "role": "Founder and CEO",
+      "notes": "Views AERTH as giving the planet a unified voice based on real-time environmental data. Leans heavily into Gaia theory and planetary homeostasis."
+    },
+    {
+      "first_name": "Brandon",
+      "last_name": "Levy",
+      "job_title": "Head of Partnerships",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Partnerships, business development",
+      "actor_names": ["AERTH"],
+      "role": "Head of Partnerships"
+    },
+    {
+      "first_name": "Sam",
+      "last_name": "Gbafa",
+      "job_title": "Privacy & Interoperability Lead",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Privacy, interoperability, blockchain",
+      "actor_names": ["AERTH"],
+      "role": "Privacy & Interoperability Lead"
+    },
+    {
+      "first_name": "Janne",
+      "last_name": "Kuka",
+      "job_title": "Product & Design Lead",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Product design, UX",
+      "actor_names": ["AERTH"],
+      "role": "Product & Design Lead"
+    },
+    {
+      "first_name": "Ion",
+      "last_name": "Vonic",
+      "job_title": "Chief Technology Officer",
+      "primary_orientation": "SPACESHIP",
+      "skills": "CTO, engineering, blockchain, AI",
+      "actor_names": ["AERTH"],
+      "role": "CTO"
+    }
+  ],
+  "search_phrases": [
+    {"phrase": "AERTH planetary AI digital twin blockchain DeSci", "priority": "high"},
+    {"phrase": "AERTH Ningaloo Reef digital twin NASA JPL", "priority": "medium"},
+    {"phrase": "Adina Popescu AERTH planetary homeostasis", "priority": "medium"},
+    {"phrase": "Gitcoin GG23 environmental science cooperative", "priority": "low"},
+    {"phrase": "AROSE space agency earth observation Australia", "priority": "low"}
+  ],
+  "source_urls": [
+    {"url": "https://www.aerth.live/", "title": "AERTH", "description": "AI-driven predictive platform for planetary digital twin. Blockchain-secured environmental data.", "monitor": true},
+    {"url": "https://deepgov.org/", "title": "DeepGov - AERTH related", "description": "Referenced in AERTH context for environmental science data standards", "monitor": false}
+  ]
+}

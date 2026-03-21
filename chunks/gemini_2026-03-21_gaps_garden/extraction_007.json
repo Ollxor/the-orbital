@@ -1,0 +1,109 @@
+{
+  "chunk_file": "chunk_007.json",
+  "actors": [
+    {
+      "name": "Curve Labs",
+      "type": "Company",
+      "primary_orientation": "SPACESHIP",
+      "description": "Web3 development lab building institutional ReFi technology. Core technical partner for Kolektivo Framework and tokenised ecological assets.",
+      "url": "https://www.curvelabs.eu/",
+      "location": "Global",
+      "scale": "Global",
+      "maturity": "Active",
+      "relevance_score": 3,
+      "connection": "Kolektivo technical partner",
+      "categories": ["Regenerative finance"],
+      "intel": [
+        {"field": "partner", "value": "Kolektivo - core technical partner for ReFi framework"},
+        {"field": "partner", "value": "Celo Climate Collective"},
+        {"field": "partner", "value": "Zed Labs"}
+      ],
+      "notes": "Technical builder behind Kolektivo Framework. Worth tracking as independent ReFi infrastructure builder."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Kolektivo Curacao",
+      "website": "https://www.kolektivo.network/",
+      "description": "Island-scale pilot implementing CuraDAI local stablecoin, tokenised food forests, and ecological UBI. Participants earn CuraDAI by contributing to social and ecological projects like beach cleanups and planting food forests.",
+      "geography": "Curacao",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Kolektivo", "relationship": "creator"},
+        {"name": "Curve Labs", "relationship": "technical partner"}
+      ]
+    },
+    {
+      "name": "Strawbees Sustainability Station",
+      "website": "https://strawbees.com/",
+      "description": "Educational programme aligning with UN SDGs, challenging students to design wind turbines, hurricane-resistant architecture, and assistive medical devices using physical prototyping tools.",
+      "geography": "Global (Sweden-based)",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Strawbees", "relationship": "creator"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Luuk",
+      "last_name": "",
+      "job_title": "Co-founder, Kolektivo",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Community economies, Web3, ReFi, token engineering",
+      "actor_names": ["Kolektivo"],
+      "role": "Co-founder",
+      "notes": "Only first name available in research."
+    },
+    {
+      "first_name": "Andy",
+      "last_name": "Kirchner",
+      "job_title": "Ecosystem Developer",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Ecosystem development, Web3, community economies",
+      "actor_names": ["Kolektivo"],
+      "role": "Ecosystem Developer"
+    },
+    {
+      "first_name": "Gilberto",
+      "last_name": "",
+      "job_title": "Head of Impact, Equity, and Inclusion",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Impact assessment, equity, inclusion, community development",
+      "actor_names": ["Kolektivo"],
+      "role": "Head of Impact",
+      "notes": "Only first name available in research."
+    },
+    {
+      "first_name": "Erik",
+      "last_name": "Thorstensson",
+      "job_title": "Inventor, Co-founder, and Chief Innovation Officer",
+      "primary_orientation": "TEMPLE",
+      "skills": "Physical prototyping, maker education, EdTech, sustainable design pedagogy",
+      "actor_names": ["Strawbees"],
+      "role": "Founder and CIO",
+      "notes": "FLAG: Nordic / Sweden. Invented Strawbees after observing children in India building with waste materials. Skapa Diploma innovation award winner."
+    },
+    {
+      "first_name": "Erik",
+      "last_name": "Bergelin",
+      "primary_orientation": "TEMPLE",
+      "skills": "EdTech, maker education",
+      "actor_names": ["Strawbees"],
+      "role": "Team member"
+    }
+  ],
+  "search_phrases": [
+    {"phrase": "Kolektivo Curacao CuraDAI local stablecoin ecological UBI food forests", "priority": "high"},
+    {"phrase": "Kolektivo Framework institutional ReFi tech nature-backed currency", "priority": "high"},
+    {"phrase": "Curve Labs Web3 ReFi institutional technology Kolektivo", "priority": "medium"},
+    {"phrase": "Strawbees Sweden EdTech maker education SDGs sustainability", "priority": "medium"},
+    {"phrase": "Erik Thorstensson Strawbees inventor Sweden", "priority": "medium"},
+    {"phrase": "Joshua Davila Blockchain Radicals book Kolektivo", "priority": "low"}
+  ],
+  "source_urls": [
+    {"url": "https://www.kolektivo.network/", "title": "Kolektivo", "description": "Innovation hub for local regenerative economies - CuraDAI pilot in Curacao", "monitor": true},
+    {"url": "https://strawbees.com/", "title": "Strawbees", "description": "Swedish EdTech for physical prototyping - 400k+ students, SDG-aligned curriculum", "monitor": true},
+    {"url": "https://www.curvelabs.eu/", "title": "Curve Labs", "description": "Web3 ReFi development lab - technical partner for Kolektivo", "monitor": false}
+  ]
+}

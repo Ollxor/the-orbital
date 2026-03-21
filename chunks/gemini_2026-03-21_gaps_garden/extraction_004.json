@@ -1,0 +1,99 @@
+{
+  "chunk_file": "chunk_004.json",
+  "actors": [
+    {
+      "name": "Viable Cities",
+      "type": "Government",
+      "primary_orientation": "SPACESHIP",
+      "secondary_orientation": "ASSEMBLY",
+      "description": "Swedish strategic innovation programme for climate-neutral cities by 2030. Collaborates with Dark Matter Labs on System Demonstrators in Lund and Stockholm.",
+      "url": "https://www.viablecities.se/",
+      "location": "Sweden",
+      "scale": "National",
+      "maturity": "Established",
+      "relevance_score": 3,
+      "connection": "Dark Matter Labs partner, Swedish government initiative",
+      "categories": ["Climate governance", "Smart cities"],
+      "intel": [
+        {"field": "partner", "value": "Dark Matter Labs - System Demonstrators"},
+        {"field": "partner", "value": "UN-Habitat"},
+        {"field": "focus", "value": "Climate-neutral cities by 2030 - whole-system approaches across governance, finance, data"}
+      ],
+      "notes": "FLAG: Nordic Connection / Sweden. Government innovation programme relevant as institutional partner."
+    }
+  ],
+  "projects": [
+    {
+      "name": "10 New Insights in Climate Science",
+      "website": "https://futureearth.org/",
+      "description": "Annual publication led by Future Earth Sweden Hub synthesising the most critical new findings in climate science. Led by Erik Pihl at Royal Swedish Academy of Sciences.",
+      "geography": "Global (Sweden Hub)",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Future Earth", "relationship": "creator"}
+      ]
+    },
+    {
+      "name": "Exponential Roadmap",
+      "website": "https://futureearth.org/",
+      "description": "Reports translating complex climate data into actionable insights for halving global emissions every decade.",
+      "geography": "Global",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Future Earth", "relationship": "creator"}
+      ]
+    },
+    {
+      "name": "DestinE Climate Change Adaptation Digital Twin",
+      "website": "https://destination-earth.eu/",
+      "description": "Multidecadal climate simulation digital twin built by ECMWF as part of EU Destination Earth initiative. Allows interactive testing of adaptation strategies.",
+      "geography": "European Union",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Destination Earth (DestinE)", "relationship": "creator"}
+      ]
+    },
+    {
+      "name": "DestinE Weather-Induced Extremes Digital Twin",
+      "website": "https://destination-earth.eu/",
+      "description": "High-resolution weather forecasting digital twin for floods and droughts, built by ECMWF.",
+      "geography": "European Union",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Destination Earth (DestinE)", "relationship": "creator"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Charalampos",
+      "last_name": "Tsitlakidis",
+      "job_title": "Head of the Destination Earth Sector, DG CNECT (European Commission)",
+      "primary_orientation": "SPACESHIP",
+      "skills": "EU digital policy, digital twins, climate tech governance",
+      "actor_names": ["Destination Earth (DestinE)"],
+      "role": "Head of DestinE Sector"
+    },
+    {
+      "first_name": "Jorn",
+      "last_name": "Hoffmann",
+      "job_title": "Applications and Innovation Partnerships Lead, ECMWF",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Climate modelling, digital twins, innovation partnerships",
+      "actor_names": ["Destination Earth (DestinE)"],
+      "role": "Applications Lead"
+    }
+  ],
+  "search_phrases": [
+    {"phrase": "Future Earth Sweden Hub Royal Swedish Academy of Sciences Stockholm", "priority": "high"},
+    {"phrase": "Destination Earth DestinE digital twin ECMWF ESA EUMETSAT 2030", "priority": "high"},
+    {"phrase": "DestinE platform user exchange 3500 users", "priority": "medium"},
+    {"phrase": "Viable Cities Sweden climate neutral 2030 system demonstrators", "priority": "high"},
+    {"phrase": "Future Earth Knowledge-Action Networks sustainability transformations", "priority": "medium"}
+  ],
+  "source_urls": [
+    {"url": "https://futureearth.org/", "title": "Future Earth", "description": "Global sustainability research platform - Sweden Hub at Royal Swedish Academy of Sciences", "monitor": true},
+    {"url": "https://destination-earth.eu/", "title": "Destination Earth (DestinE)", "description": "EU flagship initiative building digital twin of Earth by 2030", "monitor": true},
+    {"url": "https://www.viablecities.se/", "title": "Viable Cities", "description": "Swedish innovation programme for climate-neutral cities - Dark Matter Labs partner", "monitor": true}
+  ]
+}

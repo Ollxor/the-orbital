@@ -1,0 +1,78 @@
+{
+  "chunk_file": "chunk_003.json",
+  "actors": [],
+  "projects": [
+    {
+      "name": "RFCx Guardian System",
+      "website": "https://rfcx.org/",
+      "description": "Autonomous solar-powered listening devices made from recycled smartphones, installed in rainforest canopies to detect chainsaws, gunshots, and vehicles in real-time for anti-poaching and anti-logging.",
+      "geography": "Ecuador, Peru, Cameroon, Panama, Indonesia",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Rainforest Connection (RFCx)", "relationship": "creator"}
+      ]
+    },
+    {
+      "name": "RFCx Arbimon Platform",
+      "website": "https://rfcx.org/",
+      "description": "Web console platform for long-term biodiversity monitoring using CNNs for species identification from acoustic data. Developed with Microsoft AI for Good.",
+      "geography": "Global",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Rainforest Connection (RFCx)", "relationship": "creator"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Erik",
+      "last_name": "Pihl",
+      "job_title": "Sakkunnig bioekonomi och klimatfragor (Expert bioeconomy and climate)",
+      "primary_orientation": "GARDEN",
+      "skills": "Bioeconomy, forest carbon credits, climate policy, ReFi critique, Earth system science",
+      "actor_names": ["Naturskyddsforeningen", "Future Earth"],
+      "role": "Expert / Science Officer",
+      "notes": "FLAG: Nordic. Works at both Naturskyddsforeningen and Future Earth Sweden Hub. Critical of Web3 carbon credit schemes (Arbonics, Treebula). Leads annual '10 New Insights in Climate Science'. Co-authors Exponential Roadmap. Based at Royal Swedish Academy of Sciences."
+    },
+    {
+      "first_name": "Kristina",
+      "last_name": "Ostman",
+      "job_title": "Tf avdelningschef klimat och juridik (Acting Head of Climate and Law)",
+      "primary_orientation": "GARDEN",
+      "skills": "Climate law, policy, advocacy",
+      "actor_names": ["Naturskyddsforeningen"],
+      "role": "Acting Head of Climate and Law"
+    },
+    {
+      "first_name": "Jonas",
+      "last_name": "Rudberg",
+      "job_title": "Sakkunnig hallbar metall- och mineralforsorjning (Expert sustainable metals/minerals)",
+      "primary_orientation": "GARDEN",
+      "skills": "Sustainable metal and mineral supply",
+      "actor_names": ["Naturskyddsforeningen"],
+      "role": "Expert"
+    },
+    {
+      "first_name": "Hedvig",
+      "last_name": "Schylander",
+      "job_title": "Sakkunnig Klimat (Climate Expert)",
+      "primary_orientation": "GARDEN",
+      "skills": "Climate science, policy",
+      "actor_names": ["Naturskyddsforeningen"],
+      "role": "Climate Expert"
+    }
+  ],
+  "search_phrases": [
+    {"phrase": "Rainforest Connection RFCx Guardian bioacoustics real-time detection", "priority": "medium"},
+    {"phrase": "RFCx Arbimon Microsoft AI for Good species identification CNN", "priority": "medium"},
+    {"phrase": "Erik Pihl Naturskyddsforeningen carbon credits critique Arbonics Treebula", "priority": "high"},
+    {"phrase": "Naturskyddsforeningen reduktionsplikt Swedish emissions policy", "priority": "medium"},
+    {"phrase": "Klimatkollen ClimateView Swedish emissions tracking", "priority": "medium"},
+    {"phrase": "Bra Miljoval ecolabel Sweden environmental certification", "priority": "low"}
+  ],
+  "source_urls": [
+    {"url": "https://rfcx.org/", "title": "Rainforest Connection (RFCx)", "description": "Bioacoustic monitoring for rainforest conservation - Guardian devices and Arbimon platform", "monitor": true},
+    {"url": "https://www.naturskyddsforeningen.se/", "title": "Naturskyddsforeningen", "description": "Sweden's largest environmental NGO - critical perspective on ReFi and carbon credits", "monitor": true},
+    {"url": "https://natursidan.se/", "title": "Natursidan.se", "description": "Source for Naturskyddsforeningen coverage of forest carbon credits critique", "monitor": false}
+  ]
+}

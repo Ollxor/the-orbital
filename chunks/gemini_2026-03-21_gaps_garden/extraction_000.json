@@ -1,0 +1,91 @@
+{
+  "chunk_file": "chunk_000.json",
+  "actors": [],
+  "projects": [
+    {
+      "name": "OpenClimate",
+      "website": "https://www.openearth.org/",
+      "description": "Nested carbon accounting system with high verifiability to enable actions limiting global warming to 1.5C. Federated data commons incorporating subnational data into global commons.",
+      "geography": "Global",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "OpenEarth Foundation", "relationship": "creator"},
+        {"name": "Climate TRACE", "relationship": "data partner"}
+      ]
+    },
+    {
+      "name": "CityCatalyst",
+      "website": "https://www.openearth.org/",
+      "description": "Machine learning platform analysing satellite imagery for GHG emissions, empowering lower-resource cities to track and reduce greenhouse gas emissions.",
+      "geography": "Global",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "OpenEarth Foundation", "relationship": "creator"}
+      ]
+    },
+    {
+      "name": "Planetary Guardians Protocol",
+      "website": "https://spiralweb.earth/",
+      "description": "Ostrom-based regenerative governance protocol for landscape-scale ecological stewardship. Base unit is 10m2 pixel of land. Constitutional kernel frozen February 2026.",
+      "geography": "Denmark / Uganda / Morocco / Pakistan",
+      "stage": "Early",
+      "actors_involved": [
+        {"name": "Planetary Guardians / SpiralWeb", "relationship": "creator"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Martin",
+      "last_name": "Wainstein",
+      "job_title": "Executive Director and Founder",
+      "email": "mwainstein@openearth.org",
+      "primary_orientation": "GARDEN",
+      "skills": "Climate tech, blockchain, open data infrastructure, Paris Agreement tooling",
+      "actor_names": ["OpenEarth Foundation"],
+      "role": "Founder",
+      "notes": "LinkedIn available. Leads OpenClimate and CityCatalyst projects."
+    },
+    {
+      "first_name": "Joaquin",
+      "last_name": "Van Peborgh",
+      "job_title": "Director of Product",
+      "primary_orientation": "GARDEN",
+      "skills": "Product management, climate tech",
+      "actor_names": ["OpenEarth Foundation"],
+      "role": "Director of Product",
+      "notes": "LinkedIn available."
+    },
+    {
+      "first_name": "Louisa",
+      "last_name": "Durkin",
+      "job_title": "Climate Data Community Manager",
+      "primary_orientation": "GARDEN",
+      "skills": "Climate data, community management",
+      "actor_names": ["OpenEarth Foundation"],
+      "role": "Community Manager"
+    },
+    {
+      "first_name": "Lars",
+      "last_name": "Engberg",
+      "job_title": "Founder, PhD, Independent Scholar",
+      "primary_orientation": "GARDEN",
+      "skills": "Meta-governance, urban climate adaptation, participatory design, Ostrom-based protocols",
+      "actor_names": ["Planetary Guardians / SpiralWeb"],
+      "role": "Founder",
+      "notes": "Based in Denmark. Extensive research on urban renewal in Copenhagen, Aalborg, and Hammarby Sjostad (Stockholm). 20 working papers on Moral Biology, Planetary Guardianship, and Applied Protocols. FLAG: Nordic Connection."
+    }
+  ],
+  "search_phrases": [
+    {"phrase": "OpenEarth Foundation UNFCCC partnership open climate data", "priority": "high"},
+    {"phrase": "OpenClimate nested carbon accounting blockchain", "priority": "high"},
+    {"phrase": "SpiralWeb stewardship protocol evidence ledger", "priority": "medium"},
+    {"phrase": "Lars Engberg meta-governance Hammarby Sjostad Stockholm", "priority": "medium"},
+    {"phrase": "OS-Climate subnational data commons", "priority": "low"}
+  ],
+  "source_urls": [
+    {"url": "https://www.openearth.org/", "title": "OpenEarth Foundation", "description": "Official website - open digital infrastructure for Paris Agreement", "monitor": true},
+    {"url": "https://spiralweb.earth/", "title": "SpiralWeb / Planetary Guardians", "description": "Regenerative governance protocol for landscape-scale stewardship", "monitor": true},
+    {"url": "https://os-climate.org/", "title": "OS-Climate (Linux Foundation)", "description": "OpenEarth partner - subnational climate data commons", "monitor": false}
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "chunk_file": "chunk_002.json",
+  "actors": [],
+  "projects": [
+    {
+      "name": "Regen Ledger",
+      "website": "https://www.regen.network/",
+      "description": "Domain-specific public Cosmos blockchain for ecological regeneration. Supports ecological crediting protocols, ecocredit trading, and AI-driven measurement with peer-reviewed Ecological State Protocols.",
+      "geography": "Global",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Regen Network", "relationship": "creator"}
+      ]
+    },
+    {
+      "name": "Biocultural Jaguar Credits",
+      "website": "https://www.regen.network/",
+      "description": "Indigenous-led conservation credit program in Brazil and Latin America, developed with Fundacion Pachamama and the Sharamentsa Achuar community.",
+      "geography": "Brazil / Latin America",
+      "stage": "Active",
+      "actors_involved": [
+        {"name": "Regen Network", "relationship": "creator"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Gregory",
+      "last_name": "Landua",
+      "primary_orientation": "GARDEN",
+      "skills": "Regenerative economics, ecological finance, Web3, blockchain",
+      "actor_names": ["Regen Network"],
+      "role": "Leadership"
+    },
+    {
+      "first_name": "David",
+      "last_name": "Fortson",
+      "job_title": "Chief Growth Officer",
+      "primary_orientation": "GARDEN",
+      "skills": "Business growth, partnerships, ReFi",
+      "actor_names": ["Regen Network"],
+      "role": "Chief Growth Officer"
+    },
+    {
+      "first_name": "Al",
+      "last_name": "Gore",
+      "job_title": "Co-founder and Funder, Climate TRACE",
+      "primary_orientation": "GARDEN",
+      "skills": "Climate policy, political leadership, climate activism",
+      "actor_names": ["Climate TRACE"],
+      "role": "Co-founder",
+      "notes": "Former US Vice President. Primary funder and public face of Climate TRACE."
+    },
+    {
+      "first_name": "Gavin",
+      "last_name": "McCormick",
+      "job_title": "Co-founder (WattTime)",
+      "primary_orientation": "GARDEN",
+      "skills": "Emissions monitoring, satellite data, AI for climate",
+      "actor_names": ["Climate TRACE"],
+      "role": "Co-founder",
+      "notes": "Also founder of WattTime which acts as Climate TRACE secretariat."
+    }
+  ],
+  "search_phrases": [
+    {"phrase": "Regen Network Ecological State Protocols ecocredits", "priority": "high"},
+    {"phrase": "Biocultural Jaguar Credits Sharamentsa Achuar Regen Network", "priority": "medium"},
+    {"phrase": "Climate TRACE facility-level emissions 745 million assets", "priority": "high"},
+    {"phrase": "Climate TRACE IKEA Foundation Nordic funding", "priority": "medium"},
+    {"phrase": "ecoToken Regen Network cross-chain ecological protocol", "priority": "low"},
+    {"phrase": "WattTime Climate TRACE secretariat emissions monitoring", "priority": "medium"}
+  ],
+  "source_urls": [
+    {"url": "https://www.regen.network/", "title": "Regen Network", "description": "Digital public infrastructure for ecological regeneration - Regen Ledger, Registry, Market", "monitor": true},
+    {"url": "https://climatetrace.org/", "title": "Climate TRACE", "description": "Open-data coalition tracking global GHG emissions from 745M assets using satellites and AI", "monitor": true},
+    {"url": "https://www.watttime.org/", "title": "WattTime", "description": "Climate TRACE secretariat - coordinates emissions monitoring coalition", "monitor": false}
+  ]
+}

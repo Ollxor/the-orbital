@@ -1,0 +1,119 @@
+{
+  "chunk_file": "chunk_004.json",
+  "actors": [
+    {
+      "name": "Foodprint Nordic",
+      "type": "NGO",
+      "primary_orientation": "GARDEN",
+      "secondary_orientation": null,
+      "categories": ["Regenerative Agriculture", "Food Systems", "Impact Investing"],
+      "tags": ["regenerative-agriculture", "food-systems", "denmark", "nordic", "impact-investing", "farmer-network"],
+      "description": "Environmental non-profit dedicated to facilitating food system transition by directing funds and resources toward regenerative farming projects in the Nordic region. Launched Top 50 Farmers initiative.",
+      "location": "Denmark / Pan-Nordic",
+      "url": "https://www.foodprintnordic.org",
+      "scale": "Regional",
+      "maturity": "Active",
+      "relevance_score": 3,
+      "connection": "Nordic GARDEN landscape scan - priority 2",
+      "contact_pathway": "Connects to agricultural methodologies promoted by Fjallbete",
+      "notes": "Not a direct collaborator candidate. Structural node financing and amplifying grassroots actors stewarding the biosphere.",
+      "intel": [
+        {"field": "key_projects", "value": "Top 50 Farmers (T50F) initiative placing regenerative farmers at center of food value chain conversation; connects farmers with investors, markets, and peer-mentoring networks"},
+        {"field": "partner_orgs", "value": "Astanor, various educational hubs and investors across Europe"},
+        {"field": "funding_sources", "value": "Directs funds from investors toward regenerative farming projects"},
+        {"field": "nordic_connection", "value": "Denmark-based with pan-Nordic scope; elevates Nordic regenerative farmers"},
+        {"field": "collaboration_potential", "value": "Acts as structural node financing grassroots actors; bridges new ecological practices with economic incentives and supply chain transparency"}
+      ]
+    },
+    {
+      "name": "Coalition Clean Baltic",
+      "type": "NGO",
+      "primary_orientation": "GARDEN",
+      "secondary_orientation": "ASSEMBLY",
+      "categories": ["Marine Conservation", "Transnational Governance", "Environmental Advocacy"],
+      "tags": ["baltic-sea", "marine", "transnational", "sweden", "nordic", "eu-policy", "eutrophication"],
+      "description": "Politically independent non-profit network uniting 28 environmental organizations across 11 Baltic Sea countries. Won Nordic Council Nature and Environment Prize for model approach to uniting environmental bodies across geopolitical divides.",
+      "location": "Uppsala, Sweden (Secretariat) / Baltic Region",
+      "url": "https://www.ccb.se",
+      "scale": "Regional",
+      "maturity": "Established",
+      "relevance_score": 4,
+      "connection": "Nordic GARDEN landscape scan - priority 2",
+      "contact_pathway": "Based in Uppsala; geographical overlap with TPI Uppsala",
+      "notes": "Not a direct collaborator candidate. Simulates biosphere-centric governance body operating alongside and pressuring traditional state actors. Regional meta-organization.",
+      "intel": [
+        {"field": "key_projects", "value": "Lobbying for ecosystem-based marine management; combating eutrophication, hazardous emissions, overfishing; implementation of EU Nature Restoration Law"},
+        {"field": "partner_orgs", "value": "28 environmental non-profit organizations across 11 countries, HELCOM (Baltic Marine Environment Protection Commission), EU Marine Strategy Framework Directive bodies"},
+        {"field": "nordic_connection", "value": "Secretariat in Uppsala, Sweden; unites organizations across all Baltic Sea countries including Nordic nations"},
+        {"field": "collaboration_potential", "value": "Model for biosphere-centric governance across geopolitical divides; classic tragedy-of-the-commons governance case"},
+        {"field": "governance_model", "value": "Transnational network governance uniting 28 organizations across 11 countries for shared marine commons"},
+        {"field": "community_size", "value": "Network representing over 1.5 million members across 28 organizations in 11 countries"},
+        {"field": "event_participation", "value": "Awarded Nordic Council Nature and Environment Prize"}
+      ]
+    },
+    {
+      "name": "BalticWaters",
+      "type": "NGO",
+      "primary_orientation": "GARDEN",
+      "secondary_orientation": null,
+      "categories": ["Marine Conservation", "Ecological Restoration", "Environmental Research"],
+      "tags": ["baltic-sea", "marine", "sweden", "nordic", "fish-research", "ecological-restoration"],
+      "description": "Specialized environmental foundation focused on ecological restoration and preservation of the Baltic Sea, bridging scientific theory and practical implementation through research, policy advocacy, and knowledge dissemination.",
+      "location": "Stockholm, Sweden",
+      "url": "https://balticwaters.org",
+      "scale": "Regional",
+      "maturity": "Active",
+      "relevance_score": 3,
+      "connection": "Nordic GARDEN landscape scan - priority 2",
+      "contact_pathway": "Operates alongside WWF Baltic and Coalition Clean Baltic",
+      "notes": "Not a direct collaborator candidate. Represents dedicated private-sector funding for specific ecological interventions.",
+      "intel": [
+        {"field": "key_projects", "value": "First-of-its-kind fish research laboratory for studying reproduction and restocking of endangered cold-water fish species in the Baltic"},
+        {"field": "nordic_connection", "value": "Stockholm-based foundation focused exclusively on Baltic Sea ecology"},
+        {"field": "collaboration_potential", "value": "Essential for scientific monitoring and management of shared marine commons; private-sector funded ecological intervention model"}
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Top 50 Farmers (T50F)",
+      "website": "",
+      "description": "Platform placing regenerative farmers at center of food value chain, connecting them with investors, markets, and peer-mentoring networks through storytelling to shift cultural perceptions around food production",
+      "geography": "Nordic / European",
+      "stage": "deployed",
+      "tags": ["regenerative-agriculture", "farmer-network", "impact-investing", "storytelling"],
+      "actors_involved": [
+        {"name": "Foodprint Nordic", "relationship": "organiser"}
+      ],
+      "intel": []
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Cindie",
+      "last_name": "Christiansen",
+      "primary_orientation": "GARDEN",
+      "skills": "Food systems transition, regenerative agriculture advocacy, nonprofit leadership",
+      "tags": ["regenerative-agriculture", "food-systems", "denmark"],
+      "actor_names": ["Foodprint Nordic"],
+      "role": "founder",
+      "job_title": "Founder/Executive Director",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": ""
+    }
+  ],
+  "existing_actor_intel": [],
+  "events": [],
+  "search_phrases": [
+    {"phrase": "Coalition Clean Baltic transnational marine governance", "priority": "medium"},
+    {"phrase": "Foodprint Nordic Top 50 Farmers regenerative", "priority": "low"},
+    {"phrase": "BalticWaters fish research laboratory Baltic Sea", "priority": "low"}
+  ],
+  "source_urls": [
+    {"url": "https://www.foodprintnordic.org", "title": "Foodprint Nordic", "description": "Nordic regenerative agriculture funding and network organization", "monitor": false},
+    {"url": "https://www.ccb.se", "title": "Coalition Clean Baltic", "description": "Transnational Baltic Sea environmental network", "monitor": false},
+    {"url": "https://balticwaters.org", "title": "BalticWaters", "description": "Baltic Sea ecological restoration foundation", "monitor": false}
+  ]
+}

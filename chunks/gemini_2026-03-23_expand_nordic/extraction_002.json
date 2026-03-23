@@ -1,0 +1,116 @@
+{
+  "chunk_file": "chunk_002.json",
+  "actors": [
+    {
+      "name": "Demos Helsinki",
+      "type": "Research",
+      "primary_orientation": "ASSEMBLY",
+      "secondary_orientation": null,
+      "categories": ["Foresight", "Anticipatory Governance", "Policy Innovation"],
+      "tags": ["think-tank", "foresight", "futures", "intergenerational-justice", "finland", "nordic", "anticipatory-governance"],
+      "description": "Independent think tank and policy institute focusing on societal transformation, foresight, and long-term governance. Bridges foresight frameworks and practical policymaking.",
+      "location": "Helsinki, Finland",
+      "url": "https://demoshelsinki.fi",
+      "scale": "Global",
+      "maturity": "Established",
+      "relevance_score": 4,
+      "connection": "Nordic ASSEMBLY landscape scan - priority 1",
+      "contact_pathway": "Collaborates with Sitra on long-term governance and foresight initiatives",
+      "notes": "Not a direct collaborator candidate, but highly valuable for strategic foresight frameworks. Promotes anticipatory governance for future generations.",
+      "intel": [
+        {"field": "key_projects", "value": "Post-UN Summit of the Future initiatives to enhance Finland's long-term governance capabilities; frameworks operationalizing future awareness into intergenerational justice"},
+        {"field": "partner_orgs", "value": "Fingo, Sitra, National Foresight Network, Finland Futures Research Centre"},
+        {"field": "nordic_connection", "value": "Helsinki-based; leverages Finland's tradition of preparedness and high institutional trust"},
+        {"field": "collaboration_potential", "value": "Expertise in translating foresight and anticipatory governance into actionable policy; intellectual architecture for multi-generational planetary governance"},
+        {"field": "governance_model", "value": "Anticipatory governance models integrating rights and needs of future generations into contemporary policy"}
+      ]
+    },
+    {
+      "name": "Institute for Futures Studies",
+      "type": "Research",
+      "primary_orientation": "ASSEMBLY",
+      "secondary_orientation": "GARDEN",
+      "categories": ["Futures Research", "Climate Ethics", "Intergenerational Justice"],
+      "tags": ["futures-studies", "climate-ethics", "sweden", "nordic", "research", "intergenerational"],
+      "description": "Interdisciplinary research organization investigating long-term societal threats and living conditions of future generations, focusing on climate ethics, sustainable development, and social dilemmas.",
+      "location": "Stockholm, Sweden",
+      "url": "https://www.iffs.se",
+      "scale": "National",
+      "maturity": "Established",
+      "relevance_score": 3,
+      "connection": "Nordic ASSEMBLY landscape scan - priority 1",
+      "contact_pathway": "Operates within same academic and policy circles as Global Challenges Foundation",
+      "notes": "Not a direct collaborator candidate. Also known as IFFS or Institutet for Framtidsstudier.",
+      "intel": [
+        {"field": "key_projects", "value": "Research on normativization of climate emotions; future-oriented public attitudes across geopolitical contexts; rationing as climate policy mechanism"},
+        {"field": "partner_orgs", "value": "Academic networks across Sweden, Denmark, Poland, and Ukraine; IPCC-affiliated researchers"},
+        {"field": "nordic_connection", "value": "Stockholm-based Swedish research institute with interdisciplinary researchers affiliated with IPCC"},
+        {"field": "collaboration_potential", "value": "Provides theoretical and ethical research for institutions representing future generations within Assembly framework; informs governance simulation design"},
+        {"field": "publications", "value": "Research on climate ethics, sustainable development, social dilemmas, climate emotions, and rationing as climate policy"}
+      ]
+    }
+  ],
+  "projects": [],
+  "people": [
+    {
+      "first_name": "Onni",
+      "last_name": "Pekonen",
+      "primary_orientation": "ASSEMBLY",
+      "skills": "Foresight, training, democratic innovation",
+      "tags": ["foresight", "finland", "sitra"],
+      "actor_names": ["Sitra"],
+      "role": "researcher",
+      "job_title": "Specialist, Foresight and Training",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": ""
+    },
+    {
+      "first_name": "Hannu-Pekka",
+      "last_name": "Ikaheimo",
+      "primary_orientation": "ASSEMBLY",
+      "skills": "Programme direction, democratic innovation",
+      "tags": ["finland", "sitra", "programme-management"],
+      "actor_names": ["Sitra"],
+      "role": "leader",
+      "job_title": "Programme Director",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": ""
+    },
+    {
+      "first_name": "Pauli",
+      "last_name": "Saloranta",
+      "primary_orientation": "ASSEMBLY",
+      "skills": "Programme leadership, democratic innovation",
+      "tags": ["finland", "sitra", "programme-management"],
+      "actor_names": ["Sitra"],
+      "role": "leader",
+      "job_title": "Senior Lead, Programmes",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": ""
+    }
+  ],
+  "existing_actor_intel": [
+    {
+      "actor_name": "Global Challenges Foundation",
+      "intel": [
+        {"field": "partner_orgs", "value": "Institute for Futures Studies (IFFS) operates within same academic and policy circles in Stockholm"}
+      ]
+    }
+  ],
+  "events": [],
+  "search_phrases": [
+    {"phrase": "Demos Helsinki anticipatory governance future generations", "priority": "medium"},
+    {"phrase": "Institute for Futures Studies IFFS climate ethics Sweden", "priority": "low"},
+    {"phrase": "Finland long-term governance foresight UN Summit of the Future", "priority": "medium"}
+  ],
+  "source_urls": [
+    {"url": "https://demoshelsinki.fi", "title": "Demos Helsinki", "description": "Finnish think tank on societal transformation and foresight", "monitor": false},
+    {"url": "https://www.iffs.se", "title": "Institute for Futures Studies", "description": "Swedish interdisciplinary research on long-term societal threats", "monitor": false}
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "chunk_file": "chunk_007.json",
+  "actors": [
+    {
+      "name": "Nordic Deliberation",
+      "type": "Network",
+      "primary_orientation": "ASSEMBLY",
+      "secondary_orientation": "SPACESHIP",
+      "categories": ["Deliberative Democracy", "Transnational Network", "Democratic Innovation"],
+      "tags": ["deliberative-democracy", "nordic", "pan-nordic", "citizens-assemblies", "transnational", "democratic-resilience"],
+      "description": "Coalition of four leading democracy organizations across Scandinavia: We Do Democracy (Denmark), Sitra (Finland), Digidem Lab (Sweden), and SoCentral (Norway). Accelerating the deliberative wave across the Nordic region.",
+      "location": "Pan-Nordic",
+      "url": "https://www.wedodemocracy.com/program/nordic-deliberation",
+      "scale": "Regional",
+      "maturity": "Early",
+      "relevance_score": 5,
+      "connection": "Nordic cross-cutting landscape scan - priority 4",
+      "contact_pathway": "Unites We Do Democracy, Sitra, Digidem Lab, and SoCentral into single operational coalition",
+      "notes": "Direct collaborator candidate. Most critical network for ASSEMBLY orientation in the Nordics. Access to foremost experts, methodologies, and technological platforms for planetary governance prototype.",
+      "intel": [
+        {"field": "key_projects", "value": "Supporting large-scale deliberative projects; building capacity in public and private democracy sectors; compiling methodological knowledge bank for citizens' assemblies in Nordic context"},
+        {"field": "partner_orgs", "value": "We Do Democracy (Denmark), Sitra (Finland), Digidem Lab (Sweden), SoCentral (Norway)"},
+        {"field": "nordic_connection", "value": "Pan-Nordic coalition addressing declining institutional trust through accelerated deliberative democracy across all Nordic countries"},
+        {"field": "collaboration_potential", "value": "Access to foremost experts, methodologies, and technological platforms for designing scientifically rigorous and culturally adapted planetary governance prototype"},
+        {"field": "governance_model", "value": "Coalition pooling resources and expertise to empower citizens; supplementing representative democracies with robust participatory mechanisms"}
+      ]
+    },
+    {
+      "name": "SoCentral",
+      "type": "Company",
+      "primary_orientation": "ASSEMBLY",
+      "secondary_orientation": null,
+      "categories": ["Social Innovation", "Democratic Innovation"],
+      "tags": ["social-innovation", "norway", "nordic", "deliberative-democracy"],
+      "description": "Norwegian organization and partner in the Nordic Deliberation network, contributing to the pan-Nordic deliberative democracy initiative.",
+      "location": "Norway",
+      "url": "",
+      "scale": "National",
+      "maturity": "Established",
+      "relevance_score": 3,
+      "connection": "Mentioned as Nordic Deliberation partner - Norway representative",
+      "contact_pathway": "Via Nordic Deliberation network and We Do Democracy",
+      "notes": "Limited detail in source text; identified as the Norwegian arm of Nordic Deliberation.",
+      "intel": [
+        {"field": "partner_orgs", "value": "Nordic Deliberation network (We Do Democracy, Sitra, Digidem Lab)"},
+        {"field": "nordic_connection", "value": "Norwegian representative in pan-Nordic deliberative democracy coalition"}
+      ]
+    }
+  ],
+  "projects": [],
+  "people": [],
+  "existing_actor_intel": [],
+  "events": [],
+  "search_phrases": [
+    {"phrase": "Nordic Deliberation network citizens assemblies pan-Nordic", "priority": "high"},
+    {"phrase": "SoCentral Norway democratic innovation social enterprise", "priority": "medium"},
+    {"phrase": "deliberative wave Nordic countries declining institutional trust", "priority": "medium"}
+  ],
+  "source_urls": [
+    {"url": "https://www.wedodemocracy.com/program/nordic-deliberation", "title": "Nordic Deliberation", "description": "Pan-Nordic deliberative democracy coalition program page", "monitor": true},
+    {"url": "https://www.saamicouncil.net", "title": "Saami Council", "description": "Source reference for research brief", "monitor": false},
+    {"url": "https://naturensrattigheter.se", "title": "Rights of Nature Sweden", "description": "Source reference for research brief", "monitor": false},
+    {"url": "https://www.sitra.fi", "title": "Sitra", "description": "Source reference for research brief", "monitor": false},
+    {"url": "https://demoshelsinki.fi", "title": "Demos Helsinki", "description": "Source reference for research brief", "monitor": false},
+    {"url": "https://www.iffs.se", "title": "IFFS", "description": "Source reference for research brief", "monitor": false},
+    {"url": "https://rewilding-sweden.com", "title": "Rewilding Sweden", "description": "Source reference for research brief", "monitor": false},
+    {"url": "https://www.foodprintnordic.org", "title": "Foodprint Nordic", "description": "Source reference for research brief", "monitor": false},
+    {"url": "https://www.ccb.se", "title": "Coalition Clean Baltic", "description": "Source reference for research brief", "monitor": false},
+    {"url": "https://balticwaters.org", "title": "BalticWaters", "description": "Source reference for research brief", "monitor": false},
+    {"url": "https://citizenos.com", "title": "Citizen OS", "description": "Source reference for research brief", "monitor": false},
+    {"url": "https://civictech.se", "title": "Civic Tech Sweden", "description": "Source reference for research brief", "monitor": false},
+    {"url": "https://demokratigarage.dk", "title": "Demokrati Garage", "description": "Source reference for research brief", "monitor": false}
+  ]
+}

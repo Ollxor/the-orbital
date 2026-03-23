@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { getActor } from '../../lib/db';
+
+const news = await getCollection('news');
+const sortedNews = news
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+function getActorNames(actorIds: number[]): { id: number; name: string }[] {
+  return actorIds
+    .map(id => {
+      const actor = getActor(id);
+      return actor ? { id: actor.id, name: actor.name } : null;
+    })
+    .filter((a): a is { id: number; name: string } => a !== null);
+}
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+---
+<Base title="All Stories" currentPath="/news">
+  <a href="/" class="back-link">Feed</a>
+
+  <div class="section-heading reveal reveal-1">All Stories</div>
+
+  {sortedNews.map((story, i) => {
+    const actorLinks = getActorNames(story.data.actors);
+    return (
+      <article class={`news-card reveal reveal-${Math.min(i + 2, 6)}`}>
+        {story.data.image && (
+          <a href={`/news/${story.id}`}>
+            <img src={story.data.image} alt={story.data.imageAlt || ''} class="news-card__image" loading="lazy" />
+          </a>
+        )}
+        <div class="news-card__date">{formatDate(story.data.date)}</div>
+        <h2 class="news-card__title">
+          <a href={`/news/${story.id}`}>{story.data.title}</a>
+        </h2>
+        <p class="news-card__summary">{story.data.summary}</p>
+        <div class="news-card__tags">
+          {actorLinks.map(actor => (
+            <a href={`/actors/${actor.id}`} class="chip">
+              {actor.name}
+            </a>
+          ))}
+          {story.data.tags.map(tag => (
+            <a href={`/tags/${tag}`} class="chip">{tag}</a>
+          ))}
+        </div>
+      </article>
+    );
+  })}
+
+  {sortedNews.length === 0 && (
+    <div class="empty">No stories yet. Add markdown files to src/content/news/</div>
+  )}
+</Base>

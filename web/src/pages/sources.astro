@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import { getAllSources } from '../lib/db';
+
+const sources = getAllSources();
+const monitored = sources.filter(s => s.monitor);
+const other = sources.filter(s => !s.monitor);
+---
+<Base title="Sources" currentPath="/sources">
+  <div class="section-heading reveal reveal-2">Sources</div>
+  <p class="meta reveal reveal-2" style="margin-bottom:var(--sp-8)">
+    {sources.length} sources tracked ({monitored.length} monitored)
+  </p>
+
+  {monitored.length > 0 && (
+    <div class="reveal reveal-3" style="margin-bottom:var(--sp-10)">
+      <div class="section-heading" style="font-size:var(--text-sm)">Monitored</div>
+      <div style="display:flex;flex-direction:column;gap:0.5rem">
+        {monitored.map(src => (
+          <div class="card" style="padding:var(--sp-3) var(--sp-4)">
+            <a href={src.url} target="_blank" rel="noopener" style="font-size:var(--text-sm);word-break:break-all">
+              {src.title || src.url}
+            </a>
+            {src.description && <div class="meta" style="margin-top:0.25rem;font-size:var(--text-xs)">{src.description}</div>}
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <div class="reveal reveal-4">
+    <div class="section-heading" style="font-size:var(--text-sm)">All Sources</div>
+    <div style="display:flex;flex-direction:column;gap:0.375rem">
+      {other.map(src => (
+        <div style="padding:var(--sp-2) 0;border-bottom:var(--border-subtle)">
+          <a href={src.url} target="_blank" rel="noopener" style="font-size:var(--text-sm);word-break:break-all">
+            {src.title || src.url}
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</Base>

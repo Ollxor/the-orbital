@@ -1,0 +1,18 @@
+{
+  "source_file": "gemini_2026-03-23_expand_nordic.md",
+  "source_path": "/Users/Testsson/Projects/garden-crawler/inbox/gemini_2026-03-23_expand_nordic.md",
+  "total_words": 5735,
+  "total_chunks": 8,
+  "chunk_words": 800,
+  "overlap_words": 100,
+  "chunks": [
+    "chunk_000.json",
+    "chunk_001.json",
+    "chunk_002.json",
+    "chunk_003.json",
+    "chunk_004.json",
+    "chunk_005.json",
+    "chunk_006.json",
+    "chunk_007.json"
+  ]
+}

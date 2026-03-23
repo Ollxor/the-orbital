@@ -257,6 +257,7 @@ def brief_expand(cur, campaign, out_dir, orientation=None, category=None):
     lines.append("- Location and scale (Local / National / Regional / Global)")
     lines.append("- Maturity: Idea / Early / Active / Established")
     lines.append("- Relevance score (1-5) to The Garden's vision")
+    lines.append("- Tags: 3-6 lowercase hyphenated keywords (e.g. governance, open-source, nordic, regenerative)")
     lines.append("- Key person (name, role) if readily available")
     lines.append("- Why they're relevant — what makes them interesting for planetary governance prototyping")
     lines.append("")
@@ -277,6 +278,159 @@ def brief_expand(cur, campaign, out_dir, orientation=None, category=None):
 
     return _finalize(lines, "expand", campaign, [], out_dir, cur,
                      vertical=orientation or category)
+
+
+def brief_events(cur, campaign, out_dir, orientation=None, category=None):
+    """Generate a brief targeting event discovery and deepening."""
+    # Get existing events from the events table
+    cur.execute("""
+        SELECT e.id, e.name, e.type, e.series, e.edition, e.location,
+               e.date_start, e.recurrence,
+               GROUP_CONCAT(a.name, ', ') as linked_actors
+        FROM events e
+        LEFT JOIN event_actor ea ON ea.event_id = e.id
+        LEFT JOIN actors a ON a.id = ea.actor_id
+        GROUP BY e.id
+        ORDER BY e.date_start DESC NULLS LAST
+    """)
+    cols = [d[0] for d in cur.description]
+    existing_events = [dict(zip(cols, row)) for row in cur.fetchall()]
+
+    # Get actors missing event_participation intel
+    cur.execute("""
+        SELECT a.id, a.name, a.relevance_score, o.code as orientation
+        FROM actors a
+        LEFT JOIN orientations o ON o.id = a.primary_orientation_id
+        WHERE a.relevance_score >= 3 AND a.canonical_id IS NULL
+        AND a.id NOT IN (
+            SELECT entity_id FROM intel
+            WHERE entity_type = 'actor' AND field = 'event_participation'
+        )
+        ORDER BY a.relevance_score DESC
+    """)
+    missing_actors = cur.fetchall()
+
+    # Get known event series for upcoming edition research
+    cur.execute("""
+        SELECT DISTINCT series FROM events WHERE series IS NOT NULL
+    """)
+    known_series = [row[0] for row in cur.fetchall()]
+
+    lines = _build_header(campaign, "events")
+    lines.append("## Objective\n")
+    lines.append("Research events relevant to The Garden's landscape: conferences, summits,")
+    lines.append("festivals, workshops, assemblies, and gatherings where planetary governance,")
+    lines.append("regenerative systems, participatory democracy, and transformative experiences")
+    lines.append("are discussed, practised, or prototyped.\n")
+    lines.append("This brief has three goals:")
+    lines.append("1. **Deepen known events** — find dates, locations, websites, speakers, and agendas")
+    lines.append("2. **Discover new events** — find conferences and gatherings we don't yet track")
+    lines.append("3. **Map actor participation** — which of our tracked actors attend or organise these events\n")
+
+    # Section 1: Known events needing enrichment
+    sparse_events = [e for e in existing_events if not e["location"] or not e["date_start"]]
+    if sparse_events:
+        lines.append("## Known Events Needing Enrichment\n")
+        lines.append("These events are in our database but lack key details. For each, find:")
+        lines.append("- Exact dates (or next scheduled edition)")
+        lines.append("- Location (city, country)")
+        lines.append("- Website URL")
+        lines.append("- Key speakers / organisers")
+        lines.append("- Which of our tracked actors participate\n")
+        for e in sparse_events:
+            lines.append(f"### {e['name']}")
+            details = []
+            if e["series"]:
+                details.append(f"Series: {e['series']}")
+            if e["type"]:
+                details.append(f"Type: {e['type']}")
+            if e["location"]:
+                details.append(f"Location: {e['location']}")
+            if e["date_start"]:
+                details.append(f"Date: {e['date_start']}")
+            if e["linked_actors"]:
+                details.append(f"Known participants: {e['linked_actors']}")
+            missing = []
+            if not e["location"]:
+                missing.append("location")
+            if not e["date_start"]:
+                missing.append("dates")
+            details.append(f"Missing: {', '.join(missing)}")
+            for d in details:
+                lines.append(f"  - {d}")
+            lines.append("")
+
+    # Section 2: Known series — find next editions
+    if known_series:
+        lines.append("## Upcoming Editions of Known Event Series\n")
+        lines.append("Find the next scheduled edition (2025-2026) for each series:")
+        for series in known_series:
+            lines.append(f"- **{series}** — next edition date, location, website, theme")
+        lines.append("")
+
+    # Section 3: Actors missing event participation intel
+    if missing_actors:
+        lines.append("## Actors Without Event Data\n")
+        lines.append(f"{len(missing_actors)} tracked actors have no event_participation intel.")
+        lines.append("For the highest-relevance ones, research what events they attend or organise:\n")
+        for aid, name, score, orient in missing_actors[:15]:
+            lines.append(f"- **{name}** (relevance: {score}/5, {orient or 'unclassified'})")
+        lines.append("")
+
+    # Section 4: Event discovery prompt
+    lines.append("## New Event Discovery\n")
+    lines.append("Find events in 2025-2026 that we should be tracking. Focus on:")
+    lines.append("- Planetary governance / global coordination conferences")
+    lines.append("- Regenerative economics and commons gatherings")
+    lines.append("- Participatory democracy and deliberation assemblies")
+    lines.append("- Rights of nature tribunals and environmental justice events")
+    lines.append("- Transformative games, LARP festivals, and experiential futures events")
+    lines.append("- Technology for governance workshops (DAOs, digital democracy tools)")
+    lines.append("- Nordic / Scandinavian sustainability events")
+    lines.append("")
+    lines.append("For each event discovered, provide:")
+    lines.append("- Event name and type (Conference / Summit / Workshop / Festival / Assembly / LARP / Forum)")
+    lines.append("- If part of a recurring series, name the series")
+    lines.append("- Date(s) and location")
+    lines.append("- Website URL")
+    lines.append("- Organisers and key speakers")
+    lines.append("- Which of our tracked actors (if any) participate")
+    lines.append("- Why it matters for The Garden's mission")
+    lines.append("")
+
+    # List all tracked actors for cross-referencing
+    cur.execute("""
+        SELECT a.name FROM actors a
+        WHERE a.relevance_score >= 3 AND a.canonical_id IS NULL
+        ORDER BY a.relevance_score DESC LIMIT 50
+    """)
+    known = [row[0] for row in cur.fetchall()]
+    if known:
+        lines.append("## Our Tracked Actors (for cross-referencing participation)\n")
+        lines.append(", ".join(known))
+        lines.append("")
+
+    lines += _build_format_instructions_events()
+
+    return _finalize(lines, "events", campaign, [], out_dir, cur)
+
+
+def _build_format_instructions_events():
+    """Format instructions specific to event research output."""
+    return [
+        "## Output Format Instructions\n",
+        "Structure your response for optimal data extraction:\n",
+        "- Use `## Event Name` headers (one section per event)",
+        "- Include: name, type, series (if applicable), date_start, date_end, location, website",
+        "- List organisers and key speakers with full names and roles",
+        "- List participating actors from our tracked list",
+        "- For each fact, cite the source URL where you found it",
+        "- If an event is part of a recurring series, note the recurrence (annual, biennial, etc.)",
+        "- Flag events happening in the Nordics or with Nordic organisers",
+        "- Flag events where The Garden could present, exhibit, or network",
+        "- Prefer short, fact-dense entries over long descriptions",
+        "",
+    ]
 
 
 def _build_header(campaign, focus):
@@ -514,8 +668,8 @@ def run_deep_research(prompt_text, brief_filepath, brief_id, cur):
 def main():
     parser = argparse.ArgumentParser(description="Generate a research brief for the Garden landscape")
     parser.add_argument("--campaign", default="garden-landscape", help="Campaign name (default: garden-landscape)")
-    parser.add_argument("--focus", default="gaps", choices=["gaps", "deepen", "expand"],
-                        help="Brief focus: gaps (default), deepen, or expand")
+    parser.add_argument("--focus", default="gaps", choices=["gaps", "deepen", "expand", "events"],
+                        help="Brief focus: gaps (default), deepen, expand, or events")
     parser.add_argument("--orientation", default=None,
                         help="Filter by orientation: GARDEN, SPACESHIP, TEMPLE, ASSEMBLY")
     parser.add_argument("--category", default=None,
@@ -537,6 +691,8 @@ def main():
         result = brief_deepen(cur, campaign, args.out, args.orientation, args.category)
     elif args.focus == "expand":
         result = brief_expand(cur, campaign, args.out, args.orientation, args.category)
+    elif args.focus == "events":
+        result = brief_events(cur, campaign, args.out, args.orientation, args.category)
 
     if not result:
         conn.close()

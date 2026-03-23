@@ -1,0 +1,138 @@
+{
+  "chunk_file": "chunk_000.json",
+  "actors": [
+    {
+      "name": "Saami Council",
+      "type": "NGO",
+      "primary_orientation": "ASSEMBLY",
+      "secondary_orientation": "GARDEN",
+      "categories": ["Indigenous Governance", "Rights of Nature", "Climate Justice"],
+      "tags": ["indigenous", "sami", "arctic", "governance", "rights-of-nature", "green-colonialism", "nordic"],
+      "description": "Voluntary NGO promoting Sami rights and interests across Norway, Sweden, Finland, and Russia. Permanent participant in the Arctic Council representing over 100,000 Sami people.",
+      "location": "Karasjok, Norway / Sapmi (Regional)",
+      "url": "https://www.saamicouncil.net",
+      "scale": "Regional",
+      "maturity": "Established",
+      "relevance_score": 5,
+      "connection": "Nordic ASSEMBLY landscape scan - priority 1",
+      "contact_pathway": "Intersects with Naturskyddsforeningen's Swedish environmental policy goals",
+      "notes": "Trans-national biosphere-aligned governance structure operating outside Westphalian nation-state boundaries. Direct collaborator candidate.",
+      "intel": [
+        {"field": "key_projects", "value": "Green colonialism advocacy; co-authored report with Amnesty International on human rights violations tied to green energy exploitation in Sapmi; environmental advocacy on climate change adaptation and biodiversity"},
+        {"field": "partner_orgs", "value": "Arctic Council (Permanent Participant), UNFCCC, Convention on Biological Diversity (CBD), Amnesty International"},
+        {"field": "nordic_connection", "value": "Operates across Norway, Sweden, Finland covering Sapmi region; secretariat in Karasjok, Norway"},
+        {"field": "collaboration_potential", "value": "Foundational for prototyping indigenous governance, rights of nature, and non-state planetary representation. Living prototype for General Assembly of Earth."},
+        {"field": "governance_model", "value": "Trans-national indigenous governance body representing Sami people across four countries; integrates traditional ecological knowledge with international climate policy"},
+        {"field": "publications", "value": "Co-authored report with Amnesty International on green colonialism and human rights violations in Sapmi"},
+        {"field": "community_size", "value": "Represents over 100,000 Sami people"}
+      ]
+    },
+    {
+      "name": "Rights of Nature Sweden",
+      "type": "NGO",
+      "primary_orientation": "ASSEMBLY",
+      "secondary_orientation": "GARDEN",
+      "categories": ["Rights of Nature", "Legal Innovation", "Environmental Advocacy"],
+      "tags": ["rights-of-nature", "ecocide", "legal-reform", "sweden", "nordic", "constitutional-amendment"],
+      "description": "Non-profit advocating for recognition of nature's inherent rights within Swedish law, part of global movement for Earth jurisprudence. Also known as Naturens Rattigheter.",
+      "location": "Sweden",
+      "url": "https://naturensrattigheter.se",
+      "scale": "National",
+      "maturity": "Active",
+      "relevance_score": 5,
+      "connection": "Nordic ASSEMBLY landscape scan - priority 1",
+      "contact_pathway": "Same Swedish ecosystem as Naturskyddsforeningen and Global Challenges Foundation",
+      "notes": "Actively attempting to rewrite Swedish legal foundations to include non-human actors. Direct collaborator candidate.",
+      "intel": [
+        {"field": "key_projects", "value": "Advocating for rights of Lake Vattern; drafted proposed amendment to Swedish Constitution to guarantee nature the right to exist, thrive, regenerate, and evolve (2019)"},
+        {"field": "partner_orgs", "value": "End Ecocide Sweden, Lodyn, Global Alliance for the Rights of Nature (GARN), Community Environmental Legal Defense Fund (CELDF), UN Harmony with Nature Knowledge Network"},
+        {"field": "nordic_connection", "value": "Swedish-based organization working on Swedish constitutional reform; coordinator Pella Thiel is central node in European rights of nature movement"},
+        {"field": "collaboration_potential", "value": "Provides legal templates and philosophical grounding for planetary governance including biosphere as stakeholder"},
+        {"field": "publications", "value": "Drafted proposed constitutional amendment with Rebecka Le Moine (Swedish Green Party MP) and international legal experts"}
+      ]
+    }
+  ],
+  "projects": [],
+  "people": [
+    {
+      "first_name": "Per-Olof",
+      "last_name": "Nutti",
+      "primary_orientation": "ASSEMBLY",
+      "skills": "Indigenous governance leadership, international advocacy",
+      "tags": ["sami", "indigenous-governance", "arctic"],
+      "actor_names": ["Saami Council"],
+      "role": "leader",
+      "job_title": "President",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": ""
+    },
+    {
+      "first_name": "Gunn-Britt",
+      "last_name": "Retter",
+      "primary_orientation": "GARDEN",
+      "skills": "Arctic environmental policy, climate change, traditional ecological knowledge",
+      "tags": ["arctic", "environment", "sami", "climate"],
+      "actor_names": ["Saami Council"],
+      "role": "leader",
+      "job_title": "Head of Arctic and Environmental Unit",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": ""
+    },
+    {
+      "first_name": "Pella",
+      "last_name": "Thiel",
+      "primary_orientation": "ASSEMBLY",
+      "skills": "Rights of nature advocacy, legal reform, ecocide legislation, movement building",
+      "tags": ["rights-of-nature", "ecocide", "legal-innovation", "sweden"],
+      "actor_names": ["Rights of Nature Sweden"],
+      "role": "founder",
+      "job_title": "Coordinator and Co-founder",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": "Central node in European rights of nature movement. Named WWF Sweden Environmental Hero of the Year 2019. Represents Swedish movement within UN Harmony with Nature Knowledge Network."
+    },
+    {
+      "first_name": "Henrik",
+      "last_name": "Hallgren",
+      "primary_orientation": "ASSEMBLY",
+      "skills": "Rights of nature advocacy, legal and philosophical frameworks",
+      "tags": ["rights-of-nature", "sweden"],
+      "actor_names": ["Rights of Nature Sweden"],
+      "role": "advisor",
+      "job_title": "Co-author and Advocate",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": ""
+    }
+  ],
+  "existing_actor_intel": [
+    {
+      "actor_name": "Naturskyddsföreningen",
+      "intel": [
+        {"field": "nordic_connection", "value": "Operates in same Swedish ecosystem as Rights of Nature Sweden and Saami Council; intersects with Saami Council's environmental defense strategies"}
+      ]
+    },
+    {
+      "actor_name": "Global Alliance for the Rights of Nature",
+      "intel": [
+        {"field": "partner_orgs", "value": "Rights of Nature Sweden (Naturens Rattigheter) is a partner organization in Sweden"}
+      ]
+    }
+  ],
+  "events": [],
+  "search_phrases": [
+    {"phrase": "Saami Council green colonialism governance", "priority": "high"},
+    {"phrase": "Rights of Nature Sweden constitutional amendment Lake Vattern", "priority": "high"},
+    {"phrase": "Pella Thiel rights of nature UN Harmony", "priority": "medium"}
+  ],
+  "source_urls": [
+    {"url": "https://www.saamicouncil.net", "title": "Saami Council", "description": "Official website of Saami Council", "monitor": true},
+    {"url": "https://naturensrattigheter.se", "title": "Rights of Nature Sweden", "description": "Official website of Naturens Rattigheter", "monitor": true}
+  ]
+}

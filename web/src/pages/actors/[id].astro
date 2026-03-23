@@ -1,0 +1,374 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import {
+  getAllActors, getActor, getActorCategories, getActorPeople, getActorProjects,
+  getActorSources, getActorFlags, getActorIntel, getRelatedActors, getActorImages,
+  getActorTags, getActorEvents, EVENT_TYPE_ICONS,
+  ORIENTATION_COLORS, FLAG_LABELS, MATURITY_ORDER, SCALE_ORDER,
+} from '../../lib/db';
+
+export function getStaticPaths() {
+  const actors = getAllActors();
+  return actors.map(a => ({ params: { id: String(a.id) } }));
+}
+
+const { id } = Astro.params;
+const actorId = Number(id);
+const actor = getActor(actorId);
+
+if (!actor) return Astro.redirect('/actors');
+
+const categories = getActorCategories(actorId);
+const people = getActorPeople(actorId);
+const projects = getActorProjects(actorId);
+const actorEvents = getActorEvents(actorId);
+const sources = getActorSources(actorId);
+const flags = getActorFlags(actorId);
+const intel = getActorIntel(actorId);
+const related = getRelatedActors(actorId, 6);
+const images = getActorImages(actorId);
+const tags = getActorTags(actorId);
+
+const orientColor = actor.orientation_code ? ORIENTATION_COLORS[actor.orientation_code] || '#71717a' : '#71717a';
+
+// Related news
+const allNews = await getCollection('news');
+const relatedNews = allNews
+  .filter(n => n.data.actors.includes(actorId))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+---
+<Base title={actor.name}>
+  <a href="/actors" class="back-link">Landscape</a>
+
+  <!-- Orientation bar -->
+  <div class="dossier-header reveal reveal-1">
+    <div class="dossier-header__bar" style={`background: ${orientColor}`}></div>
+    <div class="dossier-header__ref">GC-{String(actor.id).padStart(3, '0')}</div>
+    <h1 class="dossier-header__title">{actor.name}</h1>
+    <div class="dossier-header__subtitle">
+      <span class="badge badge--type">{actor.type}</span>
+      {actor.orientation_name && (
+        <span class="badge badge--orientation" style={`background: ${orientColor}`}>
+          {actor.orientation_name}
+        </span>
+      )}
+      {actor.secondary_orientation_name && (
+        <span class="badge badge--orientation"
+          style={`background: ${actor.secondary_orientation_code ? ORIENTATION_COLORS[actor.secondary_orientation_code] || '#71717a' : '#71717a'}`}>
+          {actor.secondary_orientation_name}
+        </span>
+      )}
+      {actor.location && <span class="meta">{actor.location}</span>}
+    </div>
+    {actor.description && (
+      <p class="dossier-header__description">{actor.description}</p>
+    )}
+  </div>
+
+  <div class="dossier reveal reveal-2">
+    <!-- Sidebar -->
+    <aside class="dossier__sidebar">
+      <div class="dossier__sidebar-section">
+        <div class="dossier__sidebar-label">Relevance</div>
+        <div class="relevance" style="margin-top:0.25rem">
+          {[1,2,3,4,5].map(n => (
+            <span class={`relevance__bar ${n <= actor.relevance_score ? 'relevance__bar--filled' : ''}`}
+              style="width:24px;height:4px"></span>
+          ))}
+          <span class="relevance__label">{actor.relevance_score}/5</span>
+        </div>
+      </div>
+
+      {actor.scale && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Scale</div>
+          <div style="display:flex;gap:2px;margin-top:0.25rem">
+            {SCALE_ORDER.map(s => (
+              <span style={`
+                padding: 2px 6px;
+                font-size: var(--text-xs);
+                background: ${s === actor.scale ? orientColor : 'transparent'};
+                color: ${s === actor.scale ? 'white' : 'var(--zinc-light)'};
+                border: 1px solid ${s === actor.scale ? orientColor : 'var(--zinc-lighter)'};
+              `}>{s}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {actor.maturity && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Maturity</div>
+          <div style="display:flex;flex-direction:column;gap:2px;margin-top:0.25rem">
+            {MATURITY_ORDER.map((m, i) => {
+              const isActive = m === actor.maturity;
+              const isPast = MATURITY_ORDER.indexOf(actor.maturity!) > i;
+              return (
+                <div style={`
+                  display: flex; align-items: center; gap: 8px;
+                  padding: 2px 0;
+                `}>
+                  <span style={`
+                    width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+                    background: ${isActive ? orientColor : isPast ? orientColor : 'var(--zinc-lighter)'};
+                    opacity: ${isPast ? '0.4' : '1'};
+                  `}></span>
+                  <span style={`
+                    font-size: var(--text-xs);
+                    color: ${isActive ? 'var(--charcoal)' : 'var(--zinc-light)'};
+                    font-weight: ${isActive ? '500' : '400'};
+                  `}>{m}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {categories.length > 0 && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Categories</div>
+          <div style="display:flex;flex-direction:column;gap:2px;margin-top:0.25rem">
+            {categories.map(cat => (
+              <span style="font-size:var(--text-sm);color:var(--zinc)">{cat.name}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {flags.length > 0 && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Flags</div>
+          <div style="display:flex;flex-direction:column;gap:4px;margin-top:0.25rem">
+            {flags.map(flag => (
+              <div>
+                <span class="badge badge--flag">{FLAG_LABELS[flag.flag_type] || flag.flag_type}</span>
+                {flag.notes && <div style="font-size:var(--text-xs);color:var(--zinc);margin-top:2px;line-height:1.4">{flag.notes}</div>}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {tags.length > 0 && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Tags</div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.375rem;margin-top:0.25rem">
+            {tags.map(tag => (
+              <a href={`/tags/${tag.name}`} class="chip" style="font-size:var(--text-xs)">{tag.name}</a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {actor.website && actor.website !== 'UNKNOWN' && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Website</div>
+          <a href={actor.website} target="_blank" rel="noopener"
+            style="font-size:var(--text-sm);word-break:break-all">
+            {actor.domain || new URL(actor.website).hostname}
+          </a>
+        </div>
+      )}
+
+      {actor.contact_pathway && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Connection Pathway</div>
+          <div class="dossier__sidebar-value" style="font-style:italic">{actor.contact_pathway}</div>
+        </div>
+      )}
+
+      {sources.length > 0 && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Sources</div>
+          <ul class="source-list">
+            {sources.map(src => (
+              <li class="source-list__item">
+                {src.title ? (
+                  <a href={src.url} target="_blank" rel="noopener" style="font-size:var(--text-sm)">
+                    {src.title}
+                  </a>
+                ) : (
+                  <a href={src.url} target="_blank" rel="noopener" class="source-list__url">
+                    {src.url}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </aside>
+
+    <!-- Main content -->
+    <div class="dossier__main">
+
+      {/* Intelligence */}
+      {intel.length > 0 && (
+        <div class="section reveal reveal-3">
+          <div class="section-heading">Intelligence</div>
+          <div class="card-grid card-grid--2" style="gap:0.75rem">
+            {intel.map(item => (
+              <div class="intel-card">
+                <div class="intel-card__field">{item.field}</div>
+                <div class="intel-card__value">{item.value}</div>
+                <div class="intel-card__confidence">{item.confidence}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Gallery */}
+      {images.length > 0 && (
+        <div class="section reveal reveal-3" x-data={`{ lightbox: false, current: 0, images: ${JSON.stringify(images.map(img => ({ src: '/images/actors/' + img.filename, alt: img.alt_text || '', caption: img.caption || '' })))} }`}>
+          <div class="section-heading">Gallery</div>
+          <div class="gallery">
+            {images.map((img, i) => (
+              <div class="gallery__item" @click={`lightbox = true; current = ${i}`}>
+                <img src={`/images/actors/${img.filename}`} alt={img.alt_text || ''} class="gallery__img" loading="lazy" />
+                {img.caption && <div class="gallery__caption">{img.caption}</div>}
+              </div>
+            ))}
+          </div>
+          <template x-if="lightbox">
+            <div class="lightbox" @click.self="lightbox = false" @keydown.escape.window="lightbox = false">
+              <button class="lightbox__close" @click="lightbox = false">&times;</button>
+              <button class="lightbox__nav lightbox__nav--prev" @click="current = (current - 1 + images.length) % images.length" x-show="images.length > 1">&lsaquo;</button>
+              <img :src="images[current].src" :alt="images[current].alt" class="lightbox__img" />
+              <button class="lightbox__nav lightbox__nav--next" @click="current = (current + 1) % images.length" x-show="images.length > 1">&rsaquo;</button>
+              <div class="lightbox__caption" x-text="images[current].caption" x-show="images[current].caption"></div>
+            </div>
+          </template>
+        </div>
+      )}
+
+      {/* People */}
+      {people.length > 0 && (
+        <div class="section reveal reveal-3">
+          <div class="section-heading">People</div>
+          <div class="connected-grid">
+            {people.map(person => (
+              <a href={`/people/${person.id}`} class="person-card">
+                <span class="person-card__name">
+                  {person.first_name} {person.last_name}
+                </span>
+                {person.role && <span class="person-card__role">{person.role}</span>}
+                {person.job_title && <span class="person-card__detail">{person.job_title}</span>}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Projects */}
+      {projects.length > 0 && (
+        <div class="section reveal reveal-4">
+          <div class="section-heading">Projects</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            {projects.map(proj => (
+              <a href={`/projects/${proj.id}`} class="card card--link" style="padding:var(--sp-4) var(--sp-5)">
+                <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem">
+                  <span class="card__title" style="font-size:var(--text-base);margin-bottom:0">{proj.name}</span>
+                  <span style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0">
+                    {proj.relationship && <span class="meta">{proj.relationship}</span>}
+                    {proj.stage && (
+                      <span class="badge">{proj.stage}</span>
+                    )}
+                  </span>
+                </div>
+                {proj.geography && <div class="meta" style="margin-top:0.25rem">{proj.geography}</div>}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Events */}
+      {actorEvents.length > 0 && (
+        <div class="section reveal reveal-4">
+          <div class="section-heading">Events</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            {actorEvents.map(evt => {
+              const evtIcon = EVENT_TYPE_ICONS[evt.type || 'Other'] || '\u25CB';
+              return (
+                <a href={`/events/${evt.id}`} class="card card--link" style="padding:var(--sp-4) var(--sp-5)">
+                  <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem">
+                    <span style="display:flex;align-items:center;gap:0.5rem">
+                      <span style="font-size:0.65rem;color:var(--green)">{evtIcon}</span>
+                      <span class="card__title" style="font-size:var(--text-base);margin-bottom:0">{evt.name}</span>
+                    </span>
+                    <span style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0">
+                      {evt.role && <span class="meta" style="text-transform:capitalize">{evt.role}</span>}
+                      {evt.type && <span class="badge">{evt.type}</span>}
+                    </span>
+                  </div>
+                  <div class="meta" style="margin-top:0.25rem;display:flex;gap:1rem">
+                    {evt.date_start && <span>{evt.date_start === 'upcoming' ? 'Upcoming' : evt.date_start}</span>}
+                    {evt.location && <span>{evt.location}</span>}
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Related actors */}
+      {related.length > 0 && (
+        <div class="section reveal reveal-5">
+          <div class="section-heading">Related in the Landscape</div>
+          <div class="card-grid card-grid--3" style="gap:0.75rem">
+            {related.map(r => {
+              const rColor = r.orientation_code ? ORIENTATION_COLORS[r.orientation_code] || '#71717a' : '#71717a';
+              return (
+                <a href={`/actors/${r.id}`} class="card card--link" style="padding:var(--sp-4) var(--sp-5)">
+                  <div style={`display:flex;align-items:center;gap:0.4rem;margin-bottom:0.25rem`}>
+                    <span style={`width:4px;height:4px;border-radius:50%;background:${rColor}`}></span>
+                    <span class="badge badge--type" style="font-size:0.6rem">{r.type}</span>
+                  </div>
+                  <div style="font-family:var(--font-display);font-size:var(--text-sm);line-height:1.3">{r.name}</div>
+                  <div class="relevance" style="margin-top:0.4rem">
+                    {[1,2,3,4,5].map(n => (
+                      <span class={`relevance__bar ${n <= r.relevance_score ? 'relevance__bar--filled' : ''}`}
+                        style="width:10px;height:2px"></span>
+                    ))}
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Related news */}
+      {relatedNews.length > 0 && (
+        <div class="section reveal reveal-6">
+          <div class="section-heading">From the Field</div>
+          {relatedNews.map(story => (
+            <article class="news-card">
+              <div class="news-card__date">{formatDate(story.data.date)}</div>
+              <h3 class="news-card__title" style="font-size:var(--text-lg)">
+                <a href={`/news/${story.id}`}>{story.data.title}</a>
+              </h3>
+              <p class="news-card__summary" style="font-size:var(--text-sm)">{story.data.summary}</p>
+            </article>
+          ))}
+        </div>
+      )}
+
+      {/* Notes */}
+      {actor.notes && (
+        <div class="section reveal reveal-6">
+          <div class="section-heading">Notes</div>
+          <p class="meta" style="font-style:italic;line-height:1.7">{actor.notes}</p>
+        </div>
+      )}
+    </div>
+  </div>
+</Base>

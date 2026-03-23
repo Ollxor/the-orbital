@@ -1,0 +1,109 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+import { getActor, getProject, ORIENTATION_COLORS } from '../../lib/db';
+
+export async function getStaticPaths() {
+  const news = await getCollection('news');
+  return news.map(entry => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const linkedActors = entry.data.actors
+  .map(id => getActor(id))
+  .filter((a): a is NonNullable<typeof a> => a !== null);
+
+const linkedProjects = entry.data.projects
+  .map(id => getProject(id))
+  .filter((p): p is NonNullable<typeof p> => p !== null);
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+---
+<Base title={entry.data.title}>
+  <a href="/" class="back-link">Feed</a>
+
+  <article style="max-width:var(--content-width)">
+    {entry.data.image && (
+      <img src={entry.data.image} alt={entry.data.imageAlt || ''} class="news-article__image reveal reveal-1" />
+    )}
+
+    <header class="reveal reveal-1" style="margin-bottom:var(--sp-10)">
+      <div class="news-card__date" style="margin-bottom:var(--sp-3)">{formatDate(entry.data.date)}</div>
+      <h1 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:400;line-height:1.15;letter-spacing:-0.02em;margin-bottom:var(--sp-6)">
+        {entry.data.title}
+      </h1>
+      <p style="font-family:var(--font-display);font-size:var(--text-md);line-height:1.7;color:var(--charcoal-soft);font-style:italic">
+        {entry.data.summary}
+      </p>
+    </header>
+
+    <div class="reveal reveal-2" style="font-family:var(--font-display);font-size:var(--text-base);line-height:1.85;color:var(--charcoal-soft);margin-bottom:var(--sp-12)">
+      <Content />
+    </div>
+
+    {entry.data.sources.length > 0 && (
+      <div class="reveal reveal-3" style="margin-bottom:var(--sp-10)">
+        <div class="section-heading">Sources</div>
+        <ul class="source-list">
+          {entry.data.sources.map(source => (
+            <li class="source-list__item">
+              <a href={source.url} target="_blank" rel="noopener" style="font-size:var(--text-sm)">
+                {source.title}
+              </a>
+              <a href={source.url} target="_blank" rel="noopener" class="source-list__url">{source.url}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    {entry.data.tags.length > 0 && (
+      <div class="reveal reveal-4" style="margin-bottom:var(--sp-8)">
+        <div class="section-heading">Tags</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+          {entry.data.tags.map(tag => (
+            <a href={`/tags/${tag}`} class="chip">{tag}</a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {(linkedActors.length > 0 || linkedProjects.length > 0) && (
+      <footer class="reveal reveal-4" style="padding-top:var(--sp-8);border-top:var(--border-subtle)">
+        {linkedActors.length > 0 && (
+          <div style="margin-bottom:var(--sp-6)">
+            <div class="section-heading">Referenced Actors</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+              {linkedActors.map(actor => {
+                const color = actor.orientation_code ? ORIENTATION_COLORS[actor.orientation_code] || '#71717a' : '#71717a';
+                return (
+                  <a href={`/actors/${actor.id}`} class="chip">
+                    <span style={`width:4px;height:4px;border-radius:50%;background:${color}`}></span>
+                    {actor.name}
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        )}
+        {linkedProjects.length > 0 && (
+          <div>
+            <div class="section-heading">Referenced Projects</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+              {linkedProjects.map(project => (
+                <a href={`/projects/${project.id}`} class="chip">{project.name}</a>
+              ))}
+            </div>
+          </div>
+        )}
+      </footer>
+    )}
+  </article>
+</Base>

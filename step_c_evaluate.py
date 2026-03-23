@@ -1073,6 +1073,293 @@ for phrase, priority, cat in new_phrases:
 
 
 # ═══════════════════════════════════════════════════════════════
+# CURATED ACTORS FROM step_c_results.json (Round 2) — 30 phrases, 291 URLs
+# Applied strict inclusion/exclusion criteria.
+# Target: 10-20 high-quality new actors.
+# ═══════════════════════════════════════════════════════════════
+
+print("\n" + "=" * 60)
+print("Step C Evaluation (Round 2) — 30 phrases, 291 URLs")
+print("=" * 60)
+
+# ───────────────────────────────────────────────────────────────
+# GARDEN OF EDEN — Living systems, ecology, land stewardship
+# ───────────────────────────────────────────────────────────────
+print("\n--- GARDEN OF EDEN (Round 2) ---")
+
+# Arbonics — Nordic forest carbon credit platform using satellite + AI for MRV
+# Active: launched in Sweden 2025 with partner Treebula, data-driven forest management
+arbonics = add_actor(
+    "Arbonics",
+    "Company",
+    "GARDEN",
+    description="Estonian-Nordic forest carbon credit platform using satellite imagery and AI-driven growth models for transparent monitoring, reporting and verification (MRV) of forest carbon projects. Launched in Sweden 2025 via Treebula partnership.",
+    website="https://www.arbonics.com",
+    domain="arbonics.com",
+    location="Estonia / Sweden",
+    scale="Regional",
+    maturity="Active",
+    relevance_score=3,
+    connection="search: Erik Pihl carbon credits Arbonics Treebula",
+    secondary_orientation="SPACESHIP",
+    categories=["Blockchain & Regenerative Finance (ReFi)", "Open Earth Data & Satellite Intelligence"],
+    notes="Nordic-based. Intersection of forest ecology and tech-driven carbon accounting.",
+)
+add_flag(arbonics, "nordic_based", "Estonia/Sweden — active in Nordic forest carbon market")
+
+# Regen Civics Alliance — Global network of place-based regenerative development pilots
+regen_civics = add_actor(
+    "Regen Civics Alliance",
+    "Network",
+    "GARDEN",
+    description="Global decentralised alliance of place-based pilot projects supporting regenerative community development, using web3 governance tools (via SEEDS) to coordinate local food forests, ecovillages, and cooperative land projects.",
+    website="https://explore.joinseeds.earth/regenerative-civics-alliance/alliance-overview",
+    domain="joinseeds.earth",
+    location="Global",
+    scale="Global",
+    maturity="Active",
+    relevance_score=3,
+    connection="search: Regen Civics Alliance place-based regenerative development",
+    secondary_orientation="ASSEMBLY",
+    categories=["Community Land Trusts & Commons", "Blockchain & Regenerative Finance (ReFi)"],
+    notes="Bridges on-the-ground regeneration with DAO governance.",
+)
+
+# ───────────────────────────────────────────────────────────────
+# SPACESHIP EARTH — Technology, infrastructure, governance tools
+# ───────────────────────────────────────────────────────────────
+print("\n--- SPACESHIP EARTH (Round 2) ---")
+
+# Blockchain for Climate Foundation — Bridges blockchain tech and UNFCCC climate policy
+blockchain_climate = add_actor(
+    "Blockchain for Climate Foundation",
+    "NGO",
+    "SPACESHIP",
+    description="Canadian foundation bridging blockchain technology with UNFCCC climate policy, convening governments, NGOs and Indigenous leaders to explore transparent and interoperable carbon accounting infrastructure.",
+    website="https://www.blockchainforclimate.org",
+    domain="blockchainforclimate.org",
+    location="Canada",
+    scale="Global",
+    maturity="Active",
+    relevance_score=3,
+    connection="search: OpenClimate nested carbon accounting blockchain",
+    secondary_orientation="GARDEN",
+    categories=["Blockchain & Regenerative Finance (ReFi)"],
+)
+
+# Climate Action Data Trust (CAD Trust) — Open carbon credit metadata registry
+cad_trust = add_actor(
+    "Climate Action Data Trust",
+    "Network",
+    "SPACESHIP",
+    description="Multi-stakeholder initiative providing open, blockchain-based metadata infrastructure to prevent double counting of carbon credits across registries, linking Verra, Gold Standard and national registries through interoperable data layers.",
+    website="https://climateactiondata.org",
+    domain="climateactiondata.org",
+    location="Global",
+    scale="Global",
+    maturity="Active",
+    relevance_score=3,
+    connection="search: OpenClimate nested carbon accounting blockchain",
+    secondary_orientation="GARDEN",
+    categories=["Blockchain & Regenerative Finance (ReFi)", "Open Earth Data & Satellite Intelligence"],
+    notes="Co-convened by OpenEarth Foundation (already in DB). Critical infrastructure for transparent carbon markets.",
+)
+
+# ReFi DAO — Regenerative finance community and media hub
+refi_dao = add_actor(
+    "ReFi DAO",
+    "Network",
+    "SPACESHIP",
+    description="Global regenerative finance community hub providing media, research, builder cohorts, and ecosystem mapping connecting ReFi projects across blockchain and ecological domains.",
+    website="https://blog.refidao.com",
+    domain="refidao.com",
+    location="Global",
+    scale="Global",
+    maturity="Active",
+    relevance_score=3,
+    connection="search: ReFi regenerative finance earth observation AI convergence",
+    secondary_orientation="GARDEN",
+    categories=["Blockchain & Regenerative Finance (ReFi)"],
+    notes="Useful network connector — maps the ReFi ecosystem including Kolektivo, Regen Network, Toucan etc.",
+)
+
+# Plurality Institute — Glen Weyl's org for plural technology research
+plurality_institute = add_actor(
+    "Plurality Institute",
+    "Research",
+    "SPACESHIP",
+    description="Research institute founded by Glen Weyl advancing plural technology — collaborative tools for cooperation across difference, including quadratic voting/funding, plural money, and decentralised identity systems.",
+    website="https://glenweyl.com",
+    domain="glenweyl.com",
+    location="USA / Global",
+    scale="Global",
+    maturity="Active",
+    relevance_score=4,
+    connection="search: Glen Weyl Radical Markets cooperative plurality mechanism design",
+    secondary_orientation="ASSEMBLY",
+    categories=["Decentralised Governance Tech", "Participatory Democracy Movements"],
+    notes="Weyl's plural technology agenda directly intersects with Garden's governance simulation design.",
+)
+add_flag(plurality_institute, "close_vision", "Plural technology (quadratic voting, plural money) directly applicable to Garden governance mechanics")
+
+# Sociocracy For All — Open-source governance methodology training
+sociocracy_for_all = add_actor(
+    "Sociocracy For All",
+    "NGO",
+    "SPACESHIP",
+    description="Global nonprofit providing open-source training, resources, and community for sociocratic (consent-based) governance, supporting cooperatives, communities, and organisations in implementing distributed decision-making.",
+    website="https://www.sociocracyforall.org",
+    domain="sociocracyforall.org",
+    location="USA / Global",
+    scale="Global",
+    maturity="Established",
+    relevance_score=3,
+    connection="search: Hypha DAO sociocracy",
+    secondary_orientation="ASSEMBLY",
+    categories=["Decentralised Governance Tech", "Participatory Democracy Movements"],
+    notes="Provides the governance methodology underlying many DAOs. Practical governance training relevant to Garden assembly design.",
+)
+
+# ───────────────────────────────────────────────────────────────
+# ELEUSINIAN MYSTERIES — Games, ritual, experience, transformation
+# ───────────────────────────────────────────────────────────────
+print("\n--- ELEUSINIAN MYSTERIES (Round 2) ---")
+
+# Climate Interactive — Runs the World Climate Simulation game used globally
+climate_interactive = add_actor(
+    "Climate Interactive",
+    "NGO",
+    "TEMPLE",
+    description="MIT-affiliated nonprofit running the World Climate Simulation — a role-playing negotiation game putting participants in a fictitious UN climate summit, backed by the En-ROADS systems dynamics model providing real-time feedback on policy choices. Used in 100+ countries.",
+    website="https://www.climateinteractive.org",
+    domain="climateinteractive.org",
+    location="USA",
+    scale="Global",
+    maturity="Established",
+    relevance_score=5,
+    connection="search: megagame diplomacy climate simulation",
+    secondary_orientation="ASSEMBLY",
+    categories=["Megagames & Civilisational Simulation", "Education for Planetary Citizenship"],
+    notes="World Climate Simulation is exactly the kind of governance game Garden aims to create.",
+)
+add_flag(climate_interactive, "close_vision", "World Climate Simulation is a direct precursor to Garden's governance LARP approach")
+add_flag(climate_interactive, "event_opportunity", "World Climate Simulation format could be adapted for Garden assemblies")
+
+# PAXsims — Hub for peace, conflict, humanitarian simulations and serious games
+paxsims = add_actor(
+    "PAXsims",
+    "Network",
+    "TEMPLE",
+    description="Community hub and publication devoted to peace, conflict, humanitarian, and development simulations and serious games for education, training, and policy analysis.",
+    website="https://paxsims.wordpress.com",
+    domain="paxsims.wordpress.com",
+    location="Global",
+    scale="Global",
+    maturity="Established",
+    relevance_score=3,
+    connection="search: megagame diplomacy climate simulation",
+    secondary_orientation="ASSEMBLY",
+    categories=["Megagames & Civilisational Simulation"],
+)
+
+# Linköping University Climate Change Megagame — Swedish academic climate megagame
+liu_climate_megagame = add_actor(
+    "Linköping University Climate Change Megagame",
+    "Research",
+    "TEMPLE",
+    description="Swedish academic megagame project at Linköping University simulating regional climate transformation 2020-2100, using SMHI forecast data to create participatory governance simulations.",
+    website="https://liu.se/en/research/climate-change-megagame",
+    domain="liu.se",
+    location="Sweden",
+    scale="Local",
+    maturity="Active",
+    relevance_score=4,
+    connection="search: megagame diplomacy climate simulation",
+    secondary_orientation="ASSEMBLY",
+    categories=["Megagames & Civilisational Simulation", "Education for Planetary Citizenship"],
+    notes="Swedish-based climate megagame with real SMHI data. Directly relevant to Garden's Nordic context.",
+)
+add_flag(liu_climate_megagame, "nordic_based", "Linköping University, Sweden")
+add_flag(liu_climate_megagame, "close_vision", "Swedish climate megagame using real forecast data — very close to Garden's approach")
+
+# Governance Futures — Experiential governance design workshops
+governance_futures = add_actor(
+    "Governance Futures",
+    "NGO",
+    "TEMPLE",
+    description="Organisation creating experiential and world-building workshops that engage communities in radical imagination about governance futures, using art, illustration, and comic books to envision equitable decision-making.",
+    website="https://governancefutures.org",
+    domain="governancefutures.org",
+    location="USA",
+    scale="National",
+    maturity="Active",
+    relevance_score=4,
+    connection="search: experiential futures governance workshop",
+    secondary_orientation="ASSEMBLY",
+    categories=["Experiential Futures & Design Fiction", "Participatory Democracy Movements"],
+)
+add_flag(governance_futures, "close_vision", "Experiential governance world-building directly aligns with Garden's LARP approach")
+
+# ───────────────────────────────────────────────────────────────
+# GENERAL ASSEMBLY OF EARTH — Global governance, democracy, justice
+# ───────────────────────────────────────────────────────────────
+print("\n--- GENERAL ASSEMBLY OF EARTH (Round 2) ---")
+
+# Global Assembly — World's first global citizens' assembly (COP26)
+global_assembly = add_actor(
+    "Global Assembly",
+    "Movement",
+    "ASSEMBLY",
+    description="The world's first global citizens' assembly, bringing together randomly selected people from across the world to deliberate on the climate and ecological crisis. Presented the People's Declaration at COP26 in 2021.",
+    website="https://globalassembly.org",
+    domain="globalassembly.org",
+    location="Global",
+    scale="Global",
+    maturity="Active",
+    relevance_score=5,
+    connection="search: citizens assembly climate governance",
+    secondary_orientation="TEMPLE",
+    categories=["Participatory Democracy Movements", "Global Governance Innovation"],
+    notes="A direct prototype of what Garden envisions — global citizens' assembly on planetary challenges.",
+)
+add_flag(global_assembly, "close_vision", "World's first global citizens' assembly — direct precedent for Garden's assembly vision")
+
+# KNOCA — Knowledge Network on Climate Assemblies
+knoca = add_actor(
+    "KNOCA",
+    "Network",
+    "ASSEMBLY",
+    description="EU-funded Knowledge Network on Climate Assemblies, connecting organisers, researchers, and policymakers working on climate citizens' assemblies across Europe.",
+    website="https://www.knoca.eu",
+    domain="knoca.eu",
+    location="Europe",
+    scale="Regional",
+    maturity="Active",
+    relevance_score=4,
+    connection="search: citizens assembly climate governance",
+    categories=["Participatory Democracy Movements"],
+    notes="Key network for climate assembly methodology. Directly useful for Garden's assembly design.",
+)
+
+# ═══════════════════════════════════════════════════════════════
+# Mark all 30 phrases from Round 2 as searched
+# ═══════════════════════════════════════════════════════════════
+print("\n--- MARKING PHRASES AS SEARCHED (Round 2) ---")
+
+phrase_hits_r2 = {
+    145: 0, 146: 2, 150: 0, 155: 0, 157: 0, 163: 1, 167: 0,
+    168: 0, 170: 0, 172: 0, 173: 0, 175: 0, 176: 0, 177: 0,
+    178: 0, 179: 0, 180: 1, 181: 1, 183: 1, 186: 0, 187: 0,
+    192: 1, 194: 0, 195: 0, 197: 0, 198: 0, 199: 0, 200: 2,
+    202: 1, 205: 3,
+}
+
+for pid, hits in phrase_hits_r2.items():
+    mark_searched(pid, hits)
+
+print(f"  Marked {len(phrase_hits_r2)} phrases as searched (Round 2)")
+
+# ═══════════════════════════════════════════════════════════════
 # Commit and summarise
 # ═══════════════════════════════════════════════════════════════
 

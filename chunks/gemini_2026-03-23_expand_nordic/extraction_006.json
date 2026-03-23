@@ -1,0 +1,131 @@
+{
+  "chunk_file": "chunk_006.json",
+  "actors": [
+    {
+      "name": "Digidem Lab",
+      "type": "Company",
+      "primary_orientation": "SPACESHIP",
+      "secondary_orientation": "ASSEMBLY",
+      "categories": ["Digital Democracy", "Deliberative Democracy", "Civic Tech"],
+      "tags": ["worker-cooperative", "digital-democracy", "deliberative-democracy", "sweden", "nordic", "citizens-assemblies", "hybrid-governance"],
+      "description": "Swedish worker-owned cooperative specializing in design and development of methodologies for political and democratic innovation. Executed the historic Swedish Citizens' Assembly on Climate in 2024.",
+      "location": "Sweden",
+      "url": "",
+      "scale": "Regional",
+      "maturity": "Established",
+      "relevance_score": 4,
+      "connection": "Nordic SPACESHIP landscape scan - priority 3",
+      "contact_pathway": "Co-founders of Nordic Deliberation with We Do Democracy; collaborated with Stockholm Resilience Centre",
+      "notes": "Direct collaborator candidate. Merges civic tech ethos of Spaceship with deliberative mechanisms of Assembly. Proven capability handling complex environmental governance simulations.",
+      "intel": [
+        {"field": "key_projects", "value": "Swedish Citizens' Assembly on Climate (Medborgarrad om klimatet) spring 2024; nine hybrid in-person and online meetings for randomly selected citizens; founding partner of Nordic Deliberation"},
+        {"field": "partner_orgs", "value": "Fairtrans Research Programme (Stockholm Resilience Centre, Uppsala University), We Do Democracy, Democracy X"},
+        {"field": "nordic_connection", "value": "Swedish worker-owned cooperative; executed Sweden's first national climate assembly; founding partner of Nordic Deliberation"},
+        {"field": "collaboration_potential", "value": "Expertise in combining digital tools with physical deliberative spaces; excellent partners for hybrid governance prototyping"},
+        {"field": "governance_model", "value": "Worker-owned cooperative; hybrid model combining in-person and online deliberative meetings for randomly selected citizens"},
+        {"field": "open_source_tools", "value": "Develops methodologies and digital platforms for participatory democracy and citizen deliberation"}
+      ]
+    },
+    {
+      "name": "Nordic Blockchain Alliance",
+      "type": "Network",
+      "primary_orientation": "SPACESHIP",
+      "secondary_orientation": null,
+      "categories": ["Blockchain", "Circular Economy", "Supply Chain Transparency"],
+      "tags": ["blockchain", "nordic", "circular-economy", "supply-chain", "product-passports", "sme", "decentralized-ledger"],
+      "description": "Cross-border initiative funded by Nordic Innovation exploring joint Nordic blockchain ecosystem, targeting lifestyle and design industries for circular business model transition and European Product Passport compliance.",
+      "location": "Pan-Nordic (Finland, Norway, Sweden, Denmark)",
+      "url": "https://www.nordicinnovation.org/programs/nordic-blockchain-alliance",
+      "scale": "Regional",
+      "maturity": "Early",
+      "relevance_score": 3,
+      "connection": "Nordic SPACESHIP landscape scan - priority 3",
+      "contact_pathway": "Relates to blockchain-for-ecology space occupied by Single.Earth",
+      "notes": "Not a direct collaborator candidate. Testing technological infrastructure for tracking ecological footprint of global supply chains in decentralized manner.",
+      "intel": [
+        {"field": "key_projects", "value": "Common Nordic knowledge pool and toolbox for SMEs; decentralized ledger for product data exchange, supply chain history tracking, environmental impact measurement, regulatory compliance"},
+        {"field": "partner_orgs", "value": "Nordic Innovation, lifestyle and design SMEs across the Nordics"},
+        {"field": "funding_sources", "value": "Funded by Nordic Innovation"},
+        {"field": "nordic_connection", "value": "Pan-Nordic cross-border initiative addressing European Product Passport requirements through joint blockchain ecosystem"},
+        {"field": "collaboration_potential", "value": "Technological infrastructure for tracking ecological footprint of global supply chains; groundwork for alternative ownership and accountability models"}
+      ]
+    },
+    {
+      "name": "Demokrati Garage",
+      "type": "NGO",
+      "primary_orientation": "ASSEMBLY",
+      "secondary_orientation": "TEMPLE",
+      "categories": ["Democratic Innovation", "Civic Space", "Experiential Democracy"],
+      "tags": ["democratic-innovation", "denmark", "copenhagen", "civic-space", "diy", "experiential", "nordic"],
+      "description": "Independent NGO and physical gathering place in Copenhagen functioning as a DIY workshop and development platform for democratic innovation. Co-founded by leadership of We Do Democracy.",
+      "location": "Copenhagen, Denmark",
+      "url": "https://demokratigarage.dk",
+      "scale": "Local",
+      "maturity": "Active",
+      "relevance_score": 4,
+      "connection": "Nordic cross-cutting landscape scan - priority 4",
+      "contact_pathway": "Direct offshoot/partner of We Do Democracy",
+      "notes": "Direct collaborator candidate. Physical and cultural infrastructure for governance experimentation. Ideal real-world anchor for planetary governance simulations.",
+      "intel": [
+        {"field": "key_projects", "value": "Physical innovation hub for democratic experimentation; incubator for new participatory formats; bridges grassroots civic action and institutional policy reform"},
+        {"field": "partner_orgs", "value": "We Do Democracy"},
+        {"field": "nordic_connection", "value": "Copenhagen-based physical hub uniting Denmark's democracy sector"},
+        {"field": "collaboration_potential", "value": "Physical space dedicated to democratic innovation; perfect site for hosting prototype or simulation of the Assembly"},
+        {"field": "governance_model", "value": "Open DIY workshop philosophy; democracy requires continuous maintenance, expansion, and practical experimentation"}
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Swedish Citizens' Assembly on Climate",
+      "website": "",
+      "description": "Historic national climate assembly (Medborgarrad om klimatet) convened spring 2024 to generate policy proposals on reducing national greenhouse gas emissions through nine hybrid meetings",
+      "geography": "Sweden",
+      "stage": "deployed",
+      "tags": ["citizens-assembly", "climate", "sweden", "deliberative-democracy", "hybrid"],
+      "actors_involved": [
+        {"name": "Digidem Lab", "relationship": "organiser"},
+        {"name": "Fairtrans Research Programme", "relationship": "partner"},
+        {"name": "Stockholm Resilience Centre", "relationship": "partner"},
+        {"name": "Uppsala University", "relationship": "partner"}
+      ],
+      "intel": [
+        {"field": "governance_model", "value": "Hybrid model of nine in-person and online meetings for randomly selected citizens deliberating on greenhouse gas emission reduction"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Peter",
+      "last_name": "Munch-Madsen",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Innovation advisory, blockchain ecosystem development",
+      "tags": ["blockchain", "nordic-innovation", "nordic"],
+      "actor_names": ["Nordic Blockchain Alliance"],
+      "role": "advisor",
+      "job_title": "Senior Adviser at Nordic Innovation",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": ""
+    }
+  ],
+  "existing_actor_intel": [
+    {
+      "actor_name": "Single.Earth",
+      "intel": [
+        {"field": "partner_orgs", "value": "Nordic Blockchain Alliance relates to blockchain-for-ecology space; exploring similar decentralized ledger technology for environmental tracking"}
+      ]
+    }
+  ],
+  "events": [],
+  "search_phrases": [
+    {"phrase": "Digidem Lab Swedish Citizens Assembly on Climate Medborgarrad", "priority": "high"},
+    {"phrase": "Demokrati Garage Copenhagen democratic innovation hub", "priority": "medium"},
+    {"phrase": "Nordic Blockchain Alliance product passports circular economy", "priority": "low"}
+  ],
+  "source_urls": [
+    {"url": "https://demokratigarage.dk", "title": "Demokrati Garage", "description": "Copenhagen-based DIY workshop for democratic innovation", "monitor": true},
+    {"url": "https://www.nordicinnovation.org/programs/nordic-blockchain-alliance", "title": "Nordic Blockchain Alliance", "description": "Pan-Nordic blockchain ecosystem initiative", "monitor": false}
+  ]
+}

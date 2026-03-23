@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getAllPeople, ORIENTATION_COLORS } from '../../lib/db';
+
+const people = getAllPeople();
+
+// Group by relationship tier
+const tiers = [
+  'Core team candidate',
+  'Strategic advisor',
+  'Advisor / participant',
+  'Participant / contributor',
+  'Research collaborator',
+  'To explore',
+];
+
+const grouped = new Map<string, typeof people>();
+for (const tier of tiers) {
+  const members = people.filter(p => p.relationship_tier === tier);
+  if (members.length > 0) grouped.set(tier, members);
+}
+
+// Uncategorized
+const categorized = new Set(tiers);
+const uncategorized = people.filter(p => !p.relationship_tier || !categorized.has(p.relationship_tier));
+if (uncategorized.length > 0) grouped.set('Other', uncategorized);
+---
+<Base title="People" currentPath="/people">
+  <h1 class="page-title">People</h1>
+  <p class="page-subtitle">
+    Individuals connected to the landscape — researchers, practitioners, advisors, and collaborators
+  </p>
+
+  {Array.from(grouped.entries()).map(([tier, members]) => (
+    <div class="tier-group">
+      <h2 class="tier-group__heading">
+        {tier}
+        <span class="tier-group__count">{members.length}</span>
+      </h2>
+      <div class="connected-grid" style="margin-top:var(--sp-4)">
+        {members.map(person => {
+          const color = person.orientation_code ? ORIENTATION_COLORS[person.orientation_code] || '#71717a' : 'transparent';
+          return (
+            <a href={`/people/${person.id}`} class="person-card" style="text-decoration:none">
+              <div style="display:flex;align-items:center;gap:0.4rem">
+                {person.orientation_code && (
+                  <span style={`width:4px;height:4px;border-radius:50%;background:${color};flex-shrink:0`}></span>
+                )}
+                <span class="person-card__name">
+                  {person.first_name} {person.last_name}
+                </span>
+              </div>
+              {person.job_title && <span class="person-card__detail">{person.job_title}</span>}
+              {person.skills && (
+                <span class="person-card__detail" style="color:var(--zinc-light)">{person.skills}</span>
+              )}
+              {person.location && <span class="person-card__detail">{person.location}</span>}
+              {person.status && person.status !== 'To contact' && (
+                <span class="person-card__role" style="font-size:var(--text-xs)">{person.status}</span>
+              )}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  ))}
+</Base>

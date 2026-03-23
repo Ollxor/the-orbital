@@ -20,5 +20,12 @@ __pycache__/
 .venv/
 venv/
 
+# Node
+node_modules/
+
+# Build output
+web/dist/
+web/.astro/
+
 # Large output files
 step_c_results.json

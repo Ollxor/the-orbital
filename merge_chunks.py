@@ -93,6 +93,32 @@ def resolve_category_id(cur, name):
     return row[0] if row else None
 
 
+def normalize_tag(text):
+    """Normalize a string into a valid tag: lowercase, hyphenated."""
+    text = text.lower().strip()
+    text = re.sub(r'[^a-z0-9\s-]', '', text)
+    text = re.sub(r'[\s_]+', '-', text)
+    text = re.sub(r'-+', '-', text)
+    return text.strip('-')
+
+
+def ensure_tag(cur, tag_name):
+    """Insert tag if not exists, return tag_id."""
+    tag_name = normalize_tag(tag_name)
+    if not tag_name or len(tag_name) < 2:
+        return None
+    cur.execute("INSERT OR IGNORE INTO tags (name) VALUES (?)", (tag_name,))
+    cur.execute("SELECT id FROM tags WHERE name = ?", (tag_name,))
+    return cur.fetchone()[0]
+
+
+def link_entity_tag(cur, tag_id, entity_type, entity_id):
+    """Link a tag to an entity."""
+    if tag_id:
+        cur.execute("INSERT OR IGNORE INTO entity_tag (tag_id, entity_type, entity_id) VALUES (?, ?, ?)",
+                    (tag_id, entity_type, entity_id))
+
+
 def main():
     parser = argparse.ArgumentParser(description="Merge chunk extractions into garden.db")
     parser.add_argument("chunks_dir", help="Directory containing extraction_*.json files")
@@ -121,9 +147,11 @@ def main():
     all_actors = {}       # name_lower -> best record
     all_projects = {}
     all_people = {}       # (first_lower, last_lower) -> record
+    all_events = {}       # name_lower -> best record
     all_phrases = {}
     all_sources = {}
     all_project_actors = []  # (project_name, actor_name, relationship)
+    all_existing_actor_intel = {}  # (name_lower, field, value) -> record
 
     for ef in extraction_files:
         with open(ef) as f:
@@ -142,6 +170,11 @@ def main():
                         existing_cats = set(existing.get("categories", []))
                         existing_cats.update(a.get("categories", []))
                         existing["categories"] = list(existing_cats)
+                    elif field == "tags":
+                        # Merge tag lists
+                        existing_tags = set(existing.get("tags", []))
+                        existing_tags.update(a.get("tags", []))
+                        existing["tags"] = list(existing_tags)
                     elif a[field] and (not existing.get(field) or
                                     (field == "description" and len(str(a[field])) > len(str(existing.get(field, ""))))):
                         existing[field] = a[field]
@@ -161,6 +194,10 @@ def main():
                 for field in p:
                     if field == "intel":
                         existing["intel"] = merge_intel(existing.get("intel", []), p.get("intel", []))
+                    elif field == "tags":
+                        existing_tags = set(existing.get("tags", []))
+                        existing_tags.update(p.get("tags", []))
+                        existing["tags"] = list(existing_tags)
                     elif p[field] and not existing.get(field):
                         existing[field] = p[field]
             # Extract actor relationships
@@ -184,6 +221,10 @@ def main():
                         existing_names = set(existing.get("actor_names", []))
                         existing_names.update(person.get("actor_names", []))
                         existing["actor_names"] = list(existing_names)
+                    elif field == "tags":
+                        existing_tags = set(existing.get("tags", []))
+                        existing_tags.update(person.get("tags", []))
+                        existing["tags"] = list(existing_tags)
                     elif person[field] and not existing.get(field):
                         existing[field] = person[field]
             else:
@@ -202,10 +243,44 @@ def main():
             if isinstance(s, dict) and "url" in s and s["url"] not in all_sources:
                 all_sources[s["url"]] = s
 
+        # Events — dedup by name
+        for evt in data.get("events", []):
+            key = evt.get("name", "").strip().lower()
+            if not key:
+                continue
+            if key not in all_events:
+                all_events[key] = dict(evt)
+            else:
+                existing = all_events[key]
+                for field in evt:
+                    if field == "actors":
+                        # Merge actor lists
+                        existing_actors = {a["name"].lower(): a for a in existing.get("actors", [])}
+                        for a in evt.get("actors", []):
+                            existing_actors.setdefault(a["name"].lower(), a)
+                        existing["actors"] = list(existing_actors.values())
+                    elif evt[field] and not existing.get(field):
+                        existing[field] = evt[field]
+
+        # Existing actor intel — dedup by (actor_name, field, value)
+        for entry in data.get("existing_actor_intel", []):
+            actor_name = entry.get("actor_name", "").strip()
+            if not actor_name:
+                continue
+            for intel in entry.get("intel", []):
+                key = (actor_name.lower(), intel.get("field", ""), intel.get("value", ""))
+                if key not in all_existing_actor_intel:
+                    all_existing_actor_intel[key] = {
+                        "actor_name": actor_name,
+                        "field": intel.get("field", ""),
+                        "value": intel.get("value", ""),
+                    }
+
     print(f"\nMerged totals (after dedup):")
     print(f"  Actors: {len(all_actors)}")
     print(f"  Projects: {len(all_projects)}")
     print(f"  People: {len(all_people)}")
+    print(f"  Events: {len(all_events)}")
     print(f"  Search phrases: {len(all_phrases)}")
     print(f"  Source URLs: {len(all_sources)}")
     print(f"  Project-Actor links: {len(all_project_actors)}")
@@ -214,6 +289,8 @@ def main():
     total_intel += sum(len(p.get("intel", [])) for p in all_projects.values())
     if total_intel:
         print(f"  Intel items: {total_intel}")
+    if all_existing_actor_intel:
+        print(f"  Existing actor intel items: {len(all_existing_actor_intel)}")
 
     # Website resolution for actors missing websites
     if not args.skip_website_lookup:
@@ -248,6 +325,13 @@ def main():
             for person in all_people.values():
                 name = f"{person.get('first_name', '')} {person.get('last_name', '')}".strip()
                 print(f"  {name} — {person.get('skills', '?')} [{person.get('primary_orientation', '?')}]")
+        if all_events:
+            print("\nEvents:")
+            for evt in all_events.values():
+                actors_str = ", ".join(a.get("name", "?") for a in evt.get("actors", []))
+                print(f"  {evt['name']} ({evt.get('type', '?')}) — {evt.get('date_start', 'no date')} @ {evt.get('location', 'no location')}")
+                if actors_str:
+                    print(f"    actors: {actors_str}")
         return
 
     # Commit to database
@@ -340,6 +424,11 @@ def main():
             if cat_id:
                 cur.execute("INSERT OR IGNORE INTO actor_category VALUES (?, ?)", (aid, cat_id))
 
+        # Link tags
+        for tag_name in a.get("tags", []):
+            tag_id = ensure_tag(cur, tag_name)
+            link_entity_tag(cur, tag_id, 'actor', aid)
+
     # ─── Insert intel for actors ───
     new_intel = 0
     for key, a in all_actors.items():
@@ -352,6 +441,20 @@ def main():
                 VALUES ('actor', ?, ?, ?, ?, 'extracted', ?)""",
                 (aid, intel["field"], intel["value"], source_file_id, campaign_id))
             new_intel += cur.rowcount
+
+    # ─── Insert intel for existing actors in DB ───
+    new_existing_actor_intel = 0
+    for record in all_existing_actor_intel.values():
+        cur.execute("SELECT id FROM actors WHERE lower(name) = lower(?)", (record["actor_name"],))
+        row = cur.fetchone()
+        if not row:
+            continue
+        aid = row[0]
+        cur.execute("""INSERT OR IGNORE INTO intel
+            (entity_type, entity_id, field, value, source_id, confidence, campaign_id)
+            VALUES ('actor', ?, ?, ?, ?, 'extracted', ?)""",
+            (aid, record["field"], record["value"], source_file_id, campaign_id))
+        new_existing_actor_intel += cur.rowcount
 
     # ─── Insert projects ───
     project_ids = {}
@@ -381,6 +484,11 @@ def main():
 
         if source_file_id:
             cur.execute("INSERT OR IGNORE INTO source_project VALUES (?, ?)", (source_file_id, pid))
+
+        # Link tags
+        for tag_name in p.get("tags", []):
+            tag_id = ensure_tag(cur, tag_name)
+            link_entity_tag(cur, tag_id, 'project', pid)
 
     # Insert intel for projects
     for key, p in all_projects.items():
@@ -451,6 +559,11 @@ def main():
                 cur.execute("INSERT OR IGNORE INTO person_actor VALUES (?, ?, ?)",
                             (person_id, aid, role))
 
+        # Link tags
+        for tag_name in person.get("tags", []):
+            tag_id = ensure_tag(cur, tag_name)
+            link_entity_tag(cur, tag_id, 'person', person_id)
+
         # Link to source file
         if source_file_id:
             cur.execute("INSERT OR IGNORE INTO source_person VALUES (?, ?)", (source_file_id, person_id))
@@ -469,6 +582,61 @@ def main():
                     (s["url"], s.get("title", ""), s.get("description", ""), int(s.get("monitor", False))))
         new_sources += cur.rowcount
 
+    # ─── Insert events ───
+    new_events = 0
+    new_event_actor_links = 0
+    for key, evt in all_events.items():
+        cur.execute("SELECT id FROM events WHERE lower(name) = lower(?)", (evt["name"],))
+        row = cur.fetchone()
+        if row:
+            event_id = row[0]
+        else:
+            # Validate type
+            valid_types = {'Conference', 'Festival', 'Workshop', 'Assembly', 'Summit',
+                          'Symposium', 'Webinar', 'LARP', 'Convention', 'Forum', 'Prize',
+                          'Campaign', 'Other'}
+            etype = evt.get("type", "Other")
+            if etype not in valid_types:
+                etype = "Other"
+
+            valid_recurrence = {'one-off', 'annual', 'biennial', 'irregular', 'ongoing'}
+            recurrence = evt.get("recurrence")
+            if recurrence not in valid_recurrence:
+                recurrence = None
+
+            cur.execute("""INSERT INTO events
+                (name, type, series, edition, location, date_start, date_end,
+                 recurrence, website, description, relevance_note)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                (evt["name"], etype, evt.get("series"), evt.get("edition"),
+                 evt.get("location"), evt.get("date_start"), evt.get("date_end"),
+                 recurrence, evt.get("website"), evt.get("description"),
+                 evt.get("relevance_note")))
+            event_id = cur.lastrowid
+            new_events += 1
+
+        # Link actors to event
+        for actor_ref in evt.get("actors", []):
+            actor_name = actor_ref.get("name", "").strip()
+            if not actor_name:
+                continue
+            # Resolve actor ID
+            actor_key = actor_name.lower()
+            aid = actor_ids.get(actor_key)
+            if not aid:
+                cur.execute("SELECT id FROM actors WHERE lower(name) = lower(?)", (actor_name,))
+                arow = cur.fetchone()
+                if arow:
+                    aid = arow[0]
+            if aid:
+                valid_roles = {'organizer', 'speaker', 'attendee', 'sponsor', 'exhibitor', 'partner'}
+                role = actor_ref.get("role", "attendee")
+                if role not in valid_roles:
+                    role = "attendee"
+                cur.execute("INSERT OR IGNORE INTO event_actor (event_id, actor_id, role, notes) VALUES (?, ?, ?, ?)",
+                            (event_id, aid, role, actor_ref.get("notes")))
+                new_event_actor_links += cur.rowcount
+
     # Link result back to a brief if specified
     if args.brief:
         try:
@@ -485,9 +653,12 @@ def main():
     print(f"  New projects: {new_projects}")
     print(f"  New people: {new_people}")
     print(f"  New intel items: {new_intel}")
+    print(f"  New existing-actor intel items: {new_existing_actor_intel}")
     print(f"  New search phrases: {new_phrases}")
     print(f"  New sources: {new_sources}")
     print(f"  New project-actor links: {new_pa_links}")
+    print(f"  New events: {new_events}")
+    print(f"  New event-actor links: {new_event_actor_links}")
 
     # ─── Verification pass ───
     if args.source_file and os.path.exists(args.source_file):

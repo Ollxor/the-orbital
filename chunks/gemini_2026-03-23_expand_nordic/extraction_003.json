@@ -1,0 +1,118 @@
+{
+  "chunk_file": "chunk_003.json",
+  "actors": [
+    {
+      "name": "Rewilding Sweden",
+      "type": "NGO",
+      "primary_orientation": "GARDEN",
+      "secondary_orientation": null,
+      "categories": ["Rewilding", "Ecological Restoration", "Indigenous Land Stewardship"],
+      "tags": ["rewilding", "sweden", "nordic", "taiga", "river-restoration", "sami", "indigenous", "old-growth-forest"],
+      "description": "Non-profit organization and official Swedish partner of Rewilding Europe, focused on restoring and rewilding the vast natural landscapes of northern Sweden including the Nordic Taiga demonstration area of over 3 million hectares.",
+      "location": "Umea, Sweden / Swedish Lapland",
+      "url": "https://rewilding-sweden.com",
+      "scale": "National",
+      "maturity": "Active",
+      "relevance_score": 5,
+      "connection": "Nordic GARDEN landscape scan - priority 2",
+      "contact_pathway": "Overlaps geographically and philosophically with Saami Council's environmental defense strategies",
+      "notes": "Direct collaborator candidate. Prototyping living systems governance at massive geographical scale. Treats landscape, rivers, wildlife, and indigenous populations as single interconnected socio-ecological system.",
+      "intel": [
+        {"field": "key_projects", "value": "Nordic Taiga demonstration area (over 3 million hectares of old-growth forests, rivers, wetlands); river restoration removing dams for blue-green connectivity in Rane and Pite rivers; nature-based economic models"},
+        {"field": "partner_orgs", "value": "Rewilding Europe, Ecological Restoration Fund (ERF), Swedish Postcode Foundation, local Sami communities and reindeer herders, Open Rivers Programme"},
+        {"field": "funding_sources", "value": "Swedish Postcode Foundation, Ecological Restoration Fund (ERF)"},
+        {"field": "nordic_connection", "value": "Umea-based; works across Swedish Lapland and Sapmi; intimate collaboration with indigenous Sami communities"},
+        {"field": "collaboration_potential", "value": "Prime example of large-scale land stewardship integrating local indigenous economies; models how planetary stewardship must be enacted locally"},
+        {"field": "community_size", "value": "Works across 3+ million hectare demonstration area with local Sami communities"}
+      ]
+    },
+    {
+      "name": "Fjallbete",
+      "type": "Network",
+      "primary_orientation": "GARDEN",
+      "secondary_orientation": null,
+      "categories": ["Regenerative Agriculture", "Holistic Management", "Soil Health"],
+      "tags": ["regenerative-agriculture", "holistic-management", "savory-hub", "sweden", "nordic", "soil-health", "grazing"],
+      "description": "Pioneering Swedish farm and learning site serving as official Savory Hub in Sweden. Over two decades of holistic management practices for soil regeneration. Driving force behind Nordic Network for Regenerative Agriculture.",
+      "location": "Sweden",
+      "url": "",
+      "scale": "Regional",
+      "maturity": "Established",
+      "relevance_score": 4,
+      "connection": "Nordic GARDEN landscape scan - priority 2",
+      "contact_pathway": "Part of broader European and Nordic regenerative agriculture ecosystem via Savory Institute",
+      "notes": "Not a direct collaborator candidate. Represents localized, embodied experience of regenerative economics. Holistic Management as micro-governance framework for ecosystem stewardship.",
+      "intel": [
+        {"field": "key_projects", "value": "Official Savory Hub in Sweden; Nordic Network for Regenerative Agriculture facilitating peer-to-peer learning among farmers"},
+        {"field": "partner_orgs", "value": "Savory Institute (Holistic Management Sverige), Nordic Network for Regenerative Agriculture"},
+        {"field": "nordic_connection", "value": "Swedish-based farm; hub for Nordic Network for Regenerative Agriculture connecting farmers across the region"},
+        {"field": "collaboration_potential", "value": "Translates planetary boundaries into daily agricultural decision-making through Holistic Management micro-governance framework"},
+        {"field": "governance_model", "value": "Holistic Management framework for ecosystem stewardship; peer-to-peer learning network for regenerative practices"}
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Nordic Network for Regenerative Agriculture",
+      "website": "",
+      "description": "Peer-to-peer learning network among farmers, sheepherders, and agricultural professionals across the Nordic region, advocating for practices that increase soil fertility, carbon sequestration, and active microbiology",
+      "geography": "Pan-Nordic",
+      "stage": "deployed",
+      "tags": ["regenerative-agriculture", "peer-learning", "nordic", "soil-health", "carbon-sequestration"],
+      "actors_involved": [
+        {"name": "Fjallbete", "relationship": "organiser"},
+        {"name": "Savory Institute", "relationship": "partner"}
+      ],
+      "intel": [
+        {"field": "key_projects", "value": "Facilitates peer-to-peer learning on holistic grazing, soil fertility, carbon sequestration, and minimizing mechanical soil disturbance"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Henrik",
+      "last_name": "Persson",
+      "primary_orientation": "GARDEN",
+      "skills": "Rewilding leadership, landscape restoration, team management",
+      "tags": ["rewilding", "sweden", "landscape-restoration"],
+      "actor_names": ["Rewilding Sweden"],
+      "role": "leader",
+      "job_title": "Director and Team Leader",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": ""
+    },
+    {
+      "first_name": "Jorgen",
+      "last_name": "Andersson",
+      "primary_orientation": "GARDEN",
+      "skills": "Holistic management, regenerative agriculture, network building, teaching",
+      "tags": ["regenerative-agriculture", "holistic-management", "sweden"],
+      "actor_names": ["Fjallbete"],
+      "role": "founder",
+      "job_title": "Founder",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": "Driving force behind Nordic Network for Regenerative Agriculture; over two decades of experience"
+    }
+  ],
+  "existing_actor_intel": [
+    {
+      "actor_name": "Rewilding Europe",
+      "intel": [
+        {"field": "partner_orgs", "value": "Rewilding Sweden is the official Swedish partner, operating the Nordic Taiga demonstration area of over 3 million hectares"}
+      ]
+    }
+  ],
+  "events": [],
+  "search_phrases": [
+    {"phrase": "Rewilding Sweden Nordic Taiga Sami river restoration", "priority": "high"},
+    {"phrase": "Fjallbete Savory Hub Sweden holistic management", "priority": "medium"},
+    {"phrase": "Nordic Network for Regenerative Agriculture", "priority": "medium"}
+  ],
+  "source_urls": [
+    {"url": "https://rewilding-sweden.com", "title": "Rewilding Sweden", "description": "Official website for Swedish rewilding partner of Rewilding Europe", "monitor": true}
+  ]
+}

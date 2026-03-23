@@ -1,8 +1,8 @@
 {
   "source_file": "gemini_2026-03-21_gaps_garden.md",
   "source_path": "/Users/Testsson/Projects/garden-crawler/inbox/gemini_2026-03-21_gaps_garden.md",
-  "total_words": 7639,
-  "total_chunks": 9,
+  "total_words": 5724,
+  "total_chunks": 8,
   "chunk_words": 800,
   "overlap_words": 100,
   "chunks": [
@@ -13,7 +13,6 @@
     "chunk_004.json",
     "chunk_005.json",
     "chunk_006.json",
-    "chunk_007.json",
-    "chunk_008.json"
+    "chunk_007.json"
   ]
 }

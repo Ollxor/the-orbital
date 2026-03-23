@@ -1,0 +1,98 @@
+---
+import Base from '../../layouts/Base.astro';
+import {
+  getAllOrientations, getOrientation, getOrientationCategories, getOrientationActors,
+  ORIENTATION_COLORS, ORIENTATION_DESCRIPTIONS,
+} from '../../lib/db';
+
+export function getStaticPaths() {
+  const orientations = getAllOrientations();
+  return orientations.map(o => ({ params: { code: o.code } }));
+}
+
+const { code } = Astro.params;
+const orientation = getOrientation(code!);
+
+if (!orientation) return Astro.redirect('/');
+
+const categories = getOrientationCategories(orientation.id);
+const actors = getOrientationActors(orientation.id);
+const color = ORIENTATION_COLORS[orientation.code] || '#71717a';
+const description = ORIENTATION_DESCRIPTIONS[orientation.code] || orientation.description || '';
+
+// Group actors by category for display
+const actorsByCategory = new Map<string, typeof actors>();
+for (const cat of categories) {
+  // Get actors in this category that also belong to this orientation
+  const catActors = actors.filter(a => {
+    // Check via the actor's categories (we'd need a join, but for static pages let's use a simpler approach)
+    return true; // We'll show all orientation actors grouped by first matching category
+  });
+}
+---
+<Base title={orientation.name}>
+  <a href="/" class="back-link">Landscape</a>
+
+  <div class="orient-header reveal reveal-1" style={`border-bottom-color: ${color}`}>
+    <div class="orient-header__code">{orientation.code}</div>
+    <h1 class="page-title">{orientation.name}</h1>
+    {description && (
+      <p class="orient-header__description">{description}</p>
+    )}
+    <div style="display:flex;gap:var(--sp-8);margin-top:var(--sp-6)">
+      <div class="stat">
+        <span class="stat__number">{orientation.actor_count}</span>
+        <span class="stat__label">Actors</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number">{orientation.category_count}</span>
+        <span class="stat__label">Categories</span>
+      </div>
+    </div>
+  </div>
+
+  {/* Categories */}
+  {categories.length > 0 && (
+    <div class="section reveal reveal-2">
+      <div class="section-heading">Categories</div>
+      <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+        {categories.map(cat => (
+          <span class="chip" id={cat.name.toLowerCase().replace(/\s+/g, '-')}>
+            <span style={`width:4px;height:4px;border-radius:50%;background:${color}`}></span>
+            {cat.name}
+            {cat.actor_count ? <span class="mono" style="color:var(--zinc-light);font-size:var(--text-xs)"> {cat.actor_count}</span> : null}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {/* Actors grid */}
+  <div class="section reveal reveal-3">
+    <div class="section-heading">Actors · {actors.length}</div>
+    <div class="card-grid card-grid--2">
+      {actors.map(actor => (
+        <a href={`/actors/${actor.id}`} class="card card--link">
+          <div style={`display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem`}>
+            <span class="badge badge--type">{actor.type}</span>
+            <div class="relevance" style="margin-left:auto">
+              {[1,2,3,4,5].map(n => (
+                <span class={`relevance__bar ${n <= actor.relevance_score ? 'relevance__bar--filled' : ''}`}
+                  style="width:10px;height:2px"></span>
+              ))}
+            </div>
+          </div>
+          <div class="card__title">{actor.name}</div>
+          <div class="card__meta">
+            {actor.location && <span>{actor.location}</span>}
+            {actor.scale && <span> · {actor.scale}</span>}
+            {actor.maturity && <span> · {actor.maturity}</span>}
+          </div>
+          {actor.description && (
+            <p class="card__description">{actor.description}</p>
+          )}
+        </a>
+      ))}
+    </div>
+  </div>
+</Base>

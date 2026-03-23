@@ -30,6 +30,7 @@ EXTRACTION_TEMPLATE = {
         #     "primary_orientation": "GARDEN|SPACESHIP|TEMPLE|ASSEMBLY",
         #     "secondary_orientation": null,
         #     "categories": ["category name from the 30 categories"],
+        #     "tags": ["lowercase-hyphenated-keywords", "e.g. governance, funding, nordic, open-source"],
         #     "description": "1-2 sentences on what they do",
         #     "location": "Country or region",
         #     "url": "https://...",
@@ -51,6 +52,7 @@ EXTRACTION_TEMPLATE = {
         #     "description": "",
         #     "geography": "",
         #     "stage": "research|pilot|deployed|scaled",
+        #     "tags": ["lowercase-hyphenated-keywords"],
         #     "actors_involved": [{"name": "...", "relationship": "organiser|partner|funder|participant"}],
         #     "intel": [
         #         {"field": "field_name", "value": "field_value"}
@@ -63,6 +65,7 @@ EXTRACTION_TEMPLATE = {
         #     "last_name": "",
         #     "primary_orientation": "GARDEN|SPACESHIP|TEMPLE|ASSEMBLY",
         #     "skills": "what they bring",
+        #     "tags": ["lowercase-hyphenated-keywords"],
         #     "actor_names": ["Actor they work with"],
         #     "role": "founder|advisor|researcher|member|...",
         #     "job_title": "",
@@ -70,6 +73,31 @@ EXTRACTION_TEMPLATE = {
         #     "email": "",
         #     "relationship_tier": "To explore",
         #     "notes": ""
+        # }
+    ],
+    # Use this array to capture new intel about actors that already exist in the database. Match by name.
+    "existing_actor_intel": [
+        # {
+        #     "actor_name": "Name of actor already in database",
+        #     "intel": [
+        #         {"field": "field_name", "value": "field_value"}
+        #     ]
+        # }
+    ],
+    "events": [
+        # {
+        #     "name": "Event Name",
+        #     "type": "Conference|Summit|Workshop|Festival|Assembly|Symposium|LARP|Convention|Forum|Prize|Campaign|Other",
+        #     "series": "Recurring series name (e.g. 'UNFCCC COP') or null",
+        #     "edition": "Specific edition (e.g. 'COP30', '2025') or null",
+        #     "location": "City, Country",
+        #     "date_start": "ISO date or partial (e.g. '2025-06', '2025')",
+        #     "date_end": "ISO date or null",
+        #     "recurrence": "one-off|annual|biennial|irregular|ongoing",
+        #     "website": "https://...",
+        #     "description": "1-2 sentences",
+        #     "relevance_note": "Why this event matters for The Garden",
+        #     "actors": [{"name": "Actor Name", "role": "organizer|speaker|attendee|sponsor|exhibitor|partner"}]
         # }
     ],
     "search_phrases": [

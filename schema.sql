@@ -247,3 +247,62 @@ CREATE TABLE IF NOT EXISTS flags (
 
 CREATE INDEX IF NOT EXISTS idx_flags_actor ON flags(actor_id);
 CREATE INDEX IF NOT EXISTS idx_flags_type ON flags(flag_type);
+
+-- ═══════════════════════════════════════════════════════════════
+-- Events — conferences, festivals, assemblies, workshops
+-- ═══════════════════════════════════════════════════════════════
+
+CREATE TABLE IF NOT EXISTS events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    type TEXT CHECK (type IN (
+        'Conference', 'Festival', 'Workshop', 'Assembly',
+        'Summit', 'Symposium', 'Webinar', 'LARP', 'Convention',
+        'Forum', 'Prize', 'Campaign', 'Other'
+    )),
+    series TEXT,                              -- recurring event series name (e.g. "COP", "IUCN World Conservation Congress")
+    edition TEXT,                             -- specific edition (e.g. "COP26", "2021")
+    location TEXT,                            -- city, country
+    date_start TEXT,                          -- ISO date or partial (e.g. "2025-06", "2025")
+    date_end TEXT,
+    recurrence TEXT CHECK (recurrence IN ('one-off', 'annual', 'biennial', 'irregular', 'ongoing')),
+    website TEXT,
+    description TEXT,
+    relevance_note TEXT,                      -- why this event matters for The Garden
+    created_at DATETIME DEFAULT (datetime('now')),
+    updated_at DATETIME DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_events_date ON events(date_start);
+CREATE INDEX IF NOT EXISTS idx_events_series ON events(series);
+
+-- Junction: events ↔ actors (many-to-many, with role)
+CREATE TABLE IF NOT EXISTS event_actor (
+    event_id INTEGER NOT NULL REFERENCES events(id),
+    actor_id INTEGER NOT NULL REFERENCES actors(id),
+    role TEXT CHECK (role IN ('organizer', 'speaker', 'attendee', 'sponsor', 'exhibitor', 'partner')),
+    notes TEXT,
+    PRIMARY KEY (event_id, actor_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_event_actor_actor ON event_actor(actor_id);
+
+-- ═══════════════════════════════════════════════════════════════
+-- Tags — flexible keyword tagging for all entity types
+-- ═══════════════════════════════════════════════════════════════
+
+CREATE TABLE IF NOT EXISTS tags (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT UNIQUE NOT NULL,              -- lowercase, hyphenated (e.g. "rights-of-nature")
+    created_at DATETIME DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS entity_tag (
+    tag_id INTEGER NOT NULL REFERENCES tags(id),
+    entity_type TEXT NOT NULL CHECK (entity_type IN ('actor', 'project', 'person', 'event')),
+    entity_id INTEGER NOT NULL,
+    PRIMARY KEY (tag_id, entity_type, entity_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_entity_tag_entity ON entity_tag(entity_type, entity_id);
+CREATE INDEX IF NOT EXISTS idx_entity_tag_tag ON entity_tag(tag_id);

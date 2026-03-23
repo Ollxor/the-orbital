@@ -1,0 +1,153 @@
+{
+  "chunk_file": "chunk_005.json",
+  "actors": [
+    {
+      "name": "Citizen OS",
+      "type": "NGO",
+      "primary_orientation": "SPACESHIP",
+      "secondary_orientation": "ASSEMBLY",
+      "categories": ["Civic Tech", "Digital Democracy", "Open Source Tools"],
+      "tags": ["civic-tech", "open-source", "digital-democracy", "estonia", "nordic", "participation-platform", "voting"],
+      "description": "Estonian civic tech non-profit developing a free, open-source digital participation platform for participatory democracy. Founded in 2015 from environmental activism movements, enables communities to discuss, deliberate, and vote on decisions.",
+      "location": "Estonia",
+      "url": "https://citizenos.com",
+      "scale": "Global",
+      "maturity": "Established",
+      "relevance_score": 5,
+      "connection": "Nordic SPACESHIP landscape scan - priority 3",
+      "contact_pathway": "Roots in Estonian digital infrastructure, similar to Arbonics and Single.Earth",
+      "notes": "Direct collaborator candidate. Provides literal software architecture for Spaceship Earth governance approach. Working prototype of digital Assembly.",
+      "intel": [
+        {"field": "key_projects", "value": "Free open-source digital participation platform for discussions, proposals, and secure voting; international projects and training for civil society leaders"},
+        {"field": "partner_orgs", "value": "Civil society movements, active citizens, local municipalities"},
+        {"field": "nordic_connection", "value": "Estonian-based; part of Nordic-Baltic digital innovation ecosystem alongside Arbonics and Single.Earth"},
+        {"field": "collaboration_potential", "value": "Ready-to-use open-source digital infrastructure for democratic decision-making; critical tool for simulating large-scale participatory democracy"},
+        {"field": "open_source_tools", "value": "Free, open-source platform for public/private discussions, proposal deliberation, and secure voting"},
+        {"field": "governance_model", "value": "Decentralized digital democracy enabling communities, municipalities, NGOs, and political parties to achieve consensus transparently"}
+      ]
+    },
+    {
+      "name": "Civic Tech Sweden",
+      "type": "Network",
+      "primary_orientation": "SPACESHIP",
+      "secondary_orientation": "ASSEMBLY",
+      "categories": ["Civic Tech", "Open Data", "Digital Transparency"],
+      "tags": ["civic-tech", "open-data", "sweden", "nordic", "hackathons", "transparency", "freedom-of-information"],
+      "description": "Decentralized network of individuals, organizations, and public sector entities leveraging digital technology for public benefit. Closely intertwined with Open Knowledge Sweden.",
+      "location": "Sweden",
+      "url": "https://civictech.se",
+      "scale": "National",
+      "maturity": "Active",
+      "relevance_score": 4,
+      "connection": "Nordic SPACESHIP landscape scan - priority 3",
+      "contact_pathway": "Shares geographic and technological focus with Viable Cities and Kindship",
+      "notes": "Direct collaborator candidate. Network of hackers and civic technologists who could assist in building digital twins and tools for governance simulations.",
+      "intel": [
+        {"field": "key_projects", "value": "handlingar.se open-source Freedom of Information platform; hackathons and meetups on democracy/transparency, collaborative economy, and sustainable mobility"},
+        {"field": "partner_orgs", "value": "Open Knowledge Sweden (OKS), Agency for Digital Government (DIGG)"},
+        {"field": "nordic_connection", "value": "Swedish network consulting with national bodies like DIGG to shape Sweden's national open data portals and action plans"},
+        {"field": "collaboration_potential", "value": "Grassroots technological capability to build Spaceship; fights for open data and algorithmic transparency ensuring data feeds for planetary boundary simulations are publicly accessible"},
+        {"field": "open_source_tools", "value": "handlingar.se - open-source FOI platform automating and publishing requests for public documents from Swedish authorities"},
+        {"field": "governance_model", "value": "Decentralized community organizing around three pillars: democracy/transparency, collaborative economy/commons, and sustainable mobility"}
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "handlingar.se",
+      "website": "https://handlingar.se",
+      "description": "Open-source Freedom of Information platform that automates and publishes requests for public documents from Swedish authorities",
+      "geography": "Sweden",
+      "stage": "deployed",
+      "tags": ["open-source", "freedom-of-information", "transparency", "sweden"],
+      "actors_involved": [
+        {"name": "Civic Tech Sweden", "relationship": "organiser"},
+        {"name": "Open Knowledge Sweden", "relationship": "partner"}
+      ],
+      "intel": [
+        {"field": "open_source_tools", "value": "Automates FOI requests and publishes responses from Swedish government authorities"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Mattias",
+      "last_name": "Axell",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Civic technology, open data infrastructure, digital transparency",
+      "tags": ["civic-tech", "open-data", "sweden"],
+      "actor_names": ["Civic Tech Sweden", "Open Knowledge Sweden"],
+      "role": "leader",
+      "job_title": "Co-organizer, Board Member Open Knowledge Sweden",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": "Co-developed handlingar.se FOI platform"
+    },
+    {
+      "first_name": "Elenor",
+      "last_name": "Weijmar",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Civic technology, open data, digital infrastructure",
+      "tags": ["civic-tech", "open-data", "sweden"],
+      "actor_names": ["Civic Tech Sweden", "Open Knowledge Sweden"],
+      "role": "leader",
+      "job_title": "Co-organizer, Board Member Open Knowledge Sweden",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": "Co-developed handlingar.se FOI platform"
+    },
+    {
+      "first_name": "Pierre",
+      "last_name": "Mesure",
+      "primary_orientation": "SPACESHIP",
+      "skills": "Civic technology, open source development",
+      "tags": ["civic-tech", "sweden", "open-source"],
+      "actor_names": ["Civic Tech Sweden"],
+      "role": "member",
+      "job_title": "Contributor",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": ""
+    }
+  ],
+  "existing_actor_intel": [
+    {
+      "actor_name": "Arbonics",
+      "intel": [
+        {"field": "nordic_connection", "value": "Part of Estonian digital innovation ecosystem alongside Citizen OS and Single.Earth"}
+      ]
+    },
+    {
+      "actor_name": "Single.Earth",
+      "intel": [
+        {"field": "nordic_connection", "value": "Part of Estonian digital innovation ecosystem alongside Citizen OS and Arbonics"}
+      ]
+    },
+    {
+      "actor_name": "Viable Cities",
+      "intel": [
+        {"field": "partner_orgs", "value": "Civic Tech Sweden shares geographic and technological focus in Swedish civic innovation space"}
+      ]
+    },
+    {
+      "actor_name": "Kindship",
+      "intel": [
+        {"field": "partner_orgs", "value": "Civic Tech Sweden shares geographic and technological focus in Swedish civic innovation space"}
+      ]
+    }
+  ],
+  "events": [],
+  "search_phrases": [
+    {"phrase": "Citizen OS open source participation platform Estonia", "priority": "high"},
+    {"phrase": "Civic Tech Sweden handlingar.se open data", "priority": "medium"},
+    {"phrase": "Open Knowledge Sweden DIGG open data portal", "priority": "low"}
+  ],
+  "source_urls": [
+    {"url": "https://citizenos.com", "title": "Citizen OS", "description": "Open-source digital participation platform from Estonia", "monitor": true},
+    {"url": "https://civictech.se", "title": "Civic Tech Sweden", "description": "Swedish civic technology network", "monitor": true},
+    {"url": "https://handlingar.se", "title": "handlingar.se", "description": "Open-source FOI platform for Swedish public documents", "monitor": false}
+  ]
+}

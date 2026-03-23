@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { getAllTags } from '../../lib/db';
+
+const news = await getCollection('news');
+
+// Build tag → article count map from news
+const newsTagCounts = new Map<string, number>();
+for (const story of news) {
+  for (const tag of story.data.tags) {
+    newsTagCounts.set(tag, (newsTagCounts.get(tag) || 0) + 1);
+  }
+}
+
+// Get DB tags with entity counts
+const dbTags = getAllTags();
+const dbTagMap = new Map(dbTags.map(t => [t.name, t]));
+
+// Merge: all unique tag names from both sources
+const allTagNames = new Set([...newsTagCounts.keys(), ...dbTags.map(t => t.name)]);
+const mergedTags = [...allTagNames].map(name => {
+  const db = dbTagMap.get(name);
+  return {
+    name,
+    newsCount: newsTagCounts.get(name) || 0,
+    actorCount: db?.actor_count || 0,
+    projectCount: db?.project_count || 0,
+    personCount: db?.person_count || 0,
+    totalCount: (newsTagCounts.get(name) || 0) + (db?.total_count || 0),
+  };
+}).sort((a, b) => a.name.localeCompare(b.name));
+---
+<Base title="Tags" currentPath="/tags">
+  <div class="section-heading reveal reveal-2">Tags</div>
+  <p class="meta reveal reveal-2" style="margin-bottom:var(--sp-8)">
+    {mergedTags.length} tags across actors, projects, people, and stories
+  </p>
+
+  <div class="reveal reveal-3" style="display:flex;flex-wrap:wrap;gap:0.5rem">
+    {mergedTags.map(tag => (
+      <a href={`/tags/${tag.name}`} class="chip">
+        {tag.name}
+        <span style="opacity:0.5;margin-left:0.25rem;font-size:var(--text-xs)">{tag.totalCount}</span>
+      </a>
+    ))}
+  </div>
+
+  {mergedTags.length === 0 && (
+    <div class="empty">No tags found. Run migrate_tags.py or add tags to news articles.</div>
+  )}
+</Base>

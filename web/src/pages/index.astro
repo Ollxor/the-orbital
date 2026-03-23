@@ -1,0 +1,144 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { getAllOrientations, getOrientationCategories, getStats, getActor, ORIENTATION_COLORS } from '../lib/db';
+
+const news = await getCollection('news');
+const sortedNews = news
+  .filter(n => n.data.featured)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const orientations = getAllOrientations();
+const orientationsWithCategories = orientations.map(o => ({
+  ...o,
+  categories: getOrientationCategories(o.id),
+  color: ORIENTATION_COLORS[o.code] || '#71717a',
+}));
+
+const stats = getStats();
+
+// Resolve actor names for news tags
+function getActorNames(actorIds: number[]): { id: number; name: string }[] {
+  return actorIds
+    .map(id => {
+      const actor = getActor(id);
+      return actor ? { id: actor.id, name: actor.name } : null;
+    })
+    .filter((a): a is { id: number; name: string } => a !== null);
+}
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+---
+<Base title="Feed" currentPath="/">
+  <div class="stats-bar reveal reveal-2">
+    <a href="/actors" class="stat stat--link">
+      <span class="stat__number">{stats.actors}</span>
+      <span class="stat__label">Actors</span>
+    </a>
+    <a href="/projects" class="stat stat--link">
+      <span class="stat__number">{stats.projects}</span>
+      <span class="stat__label">Projects</span>
+    </a>
+    <a href="/people" class="stat stat--link">
+      <span class="stat__number">{stats.people}</span>
+      <span class="stat__label">People</span>
+    </a>
+    <a href="/events" class="stat stat--link">
+      <span class="stat__number">{stats.events}</span>
+      <span class="stat__label">Events</span>
+    </a>
+    <a href="/sources" class="stat stat--link">
+      <span class="stat__number">{stats.sources}</span>
+      <span class="stat__label">Sources</span>
+    </a>
+    <a href="/categories" class="stat stat--link">
+      <span class="stat__number">{stats.categories}</span>
+      <span class="stat__label">Categories</span>
+    </a>
+    <a href="/tags" class="stat stat--link">
+      <span class="stat__number">{stats.tags}</span>
+      <span class="stat__label">Tags</span>
+    </a>
+  </div>
+
+  <div class="page-grid">
+    <div>
+      <div class="section-heading reveal reveal-3">From the Field</div>
+
+      {sortedNews.map((story, i) => {
+        const actorLinks = getActorNames(story.data.actors);
+        return (
+          <article class={`news-card reveal reveal-${Math.min(i + 3, 6)}`}>
+            {story.data.image && (
+              <a href={`/news/${story.id}`}>
+                <img src={story.data.image} alt={story.data.imageAlt || ''} class="news-card__image" loading="lazy" />
+              </a>
+            )}
+            <div class="news-card__date">{formatDate(story.data.date)}</div>
+            <h2 class="news-card__title">
+              <a href={`/news/${story.id}`}>{story.data.title}</a>
+            </h2>
+            <p class="news-card__summary">{story.data.summary}</p>
+            <div class="news-card__tags">
+              {actorLinks.map(actor => (
+                <a href={`/actors/${actor.id}`} class="chip">
+                  {actor.name}
+                </a>
+              ))}
+              {story.data.tags.map(tag => (
+                <a href={`/tags/${tag}`} class="chip">{tag}</a>
+              ))}
+            </div>
+          </article>
+        );
+      })}
+
+      {sortedNews.length > 0 && (
+        <div class="reveal reveal-6" style="padding-top:var(--sp-6);text-align:center">
+          <a href="/news/" class="meta" style="color:var(--green);text-decoration:none">See all stories →</a>
+        </div>
+      )}
+
+      {sortedNews.length === 0 && (
+        <div class="empty">No stories yet. Add markdown files to src/content/news/</div>
+      )}
+    </div>
+
+    <aside class="landscape-nav reveal reveal-4">
+      <div class="section-heading">Landscape</div>
+
+      {orientationsWithCategories.map(o => (
+        <div class="landscape-nav__group">
+          <div class="landscape-nav__orientation">
+            <span class="landscape-nav__dot" style={`background: ${o.color}`}></span>
+            <span class="landscape-nav__name">
+              <a href={`/orientations/${o.code}`}>{o.name}</a>
+            </span>
+            <span class="landscape-nav__count">{o.actor_count}</span>
+          </div>
+          <ul class="landscape-nav__categories">
+            {o.categories.slice(0, 5).map(cat => (
+              <li class="landscape-nav__category">
+                <a href={`/orientations/${o.code}#${cat.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                  {cat.name}
+                </a>
+                {cat.actor_count ? <span class="landscape-nav__count"> {cat.actor_count}</span> : null}
+              </li>
+            ))}
+            {o.categories.length > 5 && (
+              <li class="landscape-nav__category meta">
+                <a href={`/orientations/${o.code}`}>+{o.categories.length - 5} more</a>
+              </li>
+            )}
+          </ul>
+        </div>
+      ))}
+    </aside>
+  </div>
+</Base>

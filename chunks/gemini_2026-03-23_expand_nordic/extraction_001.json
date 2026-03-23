@@ -1,0 +1,159 @@
+{
+  "chunk_file": "chunk_001.json",
+  "actors": [
+    {
+      "name": "We Do Democracy",
+      "type": "Company",
+      "primary_orientation": "ASSEMBLY",
+      "secondary_orientation": null,
+      "categories": ["Deliberative Democracy", "Citizens Assemblies", "Democratic Innovation"],
+      "tags": ["deliberative-democracy", "citizens-assemblies", "sortition", "denmark", "nordic", "social-enterprise"],
+      "description": "Leading Nordic consulting agency and social enterprise specializing in deliberative democracy, democratic innovation, and citizens' assemblies. Founding partner of Nordic Deliberation.",
+      "location": "Copenhagen, Denmark",
+      "url": "https://www.wedodemocracy.com",
+      "scale": "Regional",
+      "maturity": "Established",
+      "relevance_score": 5,
+      "connection": "Nordic ASSEMBLY landscape scan - priority 1",
+      "contact_pathway": "Close collaborators with Digidem Lab; co-founders of Nordic Deliberation",
+      "notes": "Executed over 20 citizens' assemblies across Scandinavia. OECD-standard participatory processes. Direct collaborator candidate.",
+      "intel": [
+        {"field": "key_projects", "value": "Over 20 citizens' assemblies and councils at municipal and regional levels; co-founded Nordic Deliberation alliance; initiated Demokrati Garage in Copenhagen"},
+        {"field": "partner_orgs", "value": "Demokrati Garage, Sitra (Finland), Digidem Lab (Sweden), SoCentral (Norway), OECD Innovative Citizen Participation Network"},
+        {"field": "nordic_connection", "value": "Copenhagen-based; founding partner of Nordic Deliberation pan-Nordic alliance; driving deliberative wave across Nordic countries"},
+        {"field": "collaboration_potential", "value": "Provides practical mechanics (sortition, facilitation, expert integration) required to build functional General Assembly prototype"},
+        {"field": "governance_model", "value": "OECD-standard deliberative processes with randomly selected, demographically representative citizen groups"},
+        {"field": "community_size", "value": "Over 20 assemblies executed across Scandinavia"}
+      ]
+    },
+    {
+      "name": "Sitra",
+      "type": "Government",
+      "primary_orientation": "ASSEMBLY",
+      "secondary_orientation": "SPACESHIP",
+      "categories": ["Democratic Innovation", "Governance Innovation", "Public Participation"],
+      "tags": ["deliberative-democracy", "citizens-panels", "finland", "nordic", "innovation-fund", "ai-moderation"],
+      "description": "Independent public fund in Finland promoting democracy, participation, and sustainability. Primary catalyst for the deliberative wave in Finland, funding large-scale citizens' panels and assemblies.",
+      "location": "Helsinki, Finland",
+      "url": "https://www.sitra.fi",
+      "scale": "National",
+      "maturity": "Established",
+      "relevance_score": 4,
+      "connection": "Nordic ASSEMBLY landscape scan - priority 1",
+      "contact_pathway": "Co-founders of Nordic Deliberation with We Do Democracy and Digidem Lab",
+      "notes": "Straddles state infrastructure and radical governance innovation. Uses AI moderation and digital platforms. Direct collaborator candidate.",
+      "intel": [
+        {"field": "key_projects", "value": "Finnish Citizens' Parliament 2023 with over 600 randomly selected Finns using Deliberative Poll methodology; establishing citizens' panels as permanent systemic participation method"},
+        {"field": "partner_orgs", "value": "Parliament of Finland, Abo Akademi University, Tampere University, Stanford University Center for Deliberative Democracy, We Do Democracy"},
+        {"field": "funding_sources", "value": "Independent public fund reporting to Finnish Parliament"},
+        {"field": "nordic_connection", "value": "Helsinki-based; founding member of Nordic Deliberation network; key institutional catalyst for Finnish deliberative wave"},
+        {"field": "collaboration_potential", "value": "Institutional partner for scaling Assembly prototype; deploys AI moderation and digital deliberation platforms at national scale"},
+        {"field": "governance_model", "value": "Uses James Fishkin's Deliberative Poll methodology; hybrid face-to-face and automated online platforms"},
+        {"field": "open_source_tools", "value": "Digital participation platforms including AI moderation tools for deliberative processes"},
+        {"field": "community_size", "value": "Citizens' Parliament 2023 engaged over 600 randomly selected citizens"}
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Nordic Deliberation",
+      "website": "https://www.wedodemocracy.com/program/nordic-deliberation",
+      "description": "Pan-Nordic alliance of four democracy organizations aimed at scaling deliberative democracy across the Nordic countries",
+      "geography": "Pan-Nordic (Denmark, Finland, Sweden, Norway)",
+      "stage": "pilot",
+      "tags": ["deliberative-democracy", "nordic", "citizens-assemblies", "pan-nordic"],
+      "actors_involved": [
+        {"name": "We Do Democracy", "relationship": "organiser"},
+        {"name": "Sitra", "relationship": "partner"},
+        {"name": "Digidem Lab", "relationship": "partner"},
+        {"name": "SoCentral", "relationship": "partner"}
+      ],
+      "intel": [
+        {"field": "nordic_connection", "value": "Cross-border democratic resilience initiative uniting Danish, Finnish, Swedish, and Norwegian democracy organizations"}
+      ]
+    },
+    {
+      "name": "Finnish Citizens' Parliament 2023",
+      "website": "",
+      "description": "Landmark deliberative democratic experiment bringing over 600 randomly selected Finns to deliberate on citizens' initiatives using Deliberative Poll methodology",
+      "geography": "Finland",
+      "stage": "deployed",
+      "tags": ["deliberative-democracy", "citizens-parliament", "finland", "deliberative-poll"],
+      "actors_involved": [
+        {"name": "Sitra", "relationship": "organiser"},
+        {"name": "Stanford University", "relationship": "partner"}
+      ],
+      "intel": [
+        {"field": "governance_model", "value": "James Fishkin's Deliberative Poll methodology; face-to-face and automated online platforms"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "first_name": "Zakia",
+      "last_name": "Elvang",
+      "primary_orientation": "ASSEMBLY",
+      "skills": "Deliberative democracy design, citizens' assembly facilitation, democratic advisory",
+      "tags": ["deliberative-democracy", "denmark", "citizens-assemblies"],
+      "actor_names": ["We Do Democracy", "Demokrati Garage"],
+      "role": "leader",
+      "job_title": "Executive Director & Democracy Advisor",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": "Co-initiator of Demokrati Garage"
+    },
+    {
+      "first_name": "Johan",
+      "last_name": "Galster",
+      "primary_orientation": "ASSEMBLY",
+      "skills": "Democratic innovation, participatory process design, policy advisory",
+      "tags": ["deliberative-democracy", "denmark", "citizens-assemblies"],
+      "actor_names": ["We Do Democracy", "Demokrati Garage"],
+      "role": "leader",
+      "job_title": "Director and Democracy Advisor",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": "Co-founder of Demokrati Garage"
+    },
+    {
+      "first_name": "Rebecka",
+      "last_name": "Le Moine",
+      "primary_orientation": "ASSEMBLY",
+      "skills": "Environmental legislation, parliamentary advocacy, rights of nature",
+      "tags": ["rights-of-nature", "sweden", "green-party", "parliament"],
+      "actor_names": ["Rights of Nature Sweden"],
+      "role": "advisor",
+      "job_title": "Member of Parliament (Swedish Green Party)",
+      "linkedin_url": "",
+      "email": "",
+      "relationship_tier": "To explore",
+      "notes": "Helped draft proposed amendment to Swedish Constitution for nature's rights (2019)"
+    }
+  ],
+  "existing_actor_intel": [
+    {
+      "actor_name": "Naturskyddsföreningen",
+      "intel": [
+        {"field": "partner_orgs", "value": "Operates in same Swedish ecosystem as Rights of Nature Sweden; both focus on environmental legal paradigm shifts"}
+      ]
+    },
+    {
+      "actor_name": "Global Challenges Foundation",
+      "intel": [
+        {"field": "partner_orgs", "value": "Operates in same Swedish ecosystem as Rights of Nature Sweden, focused on complementary legal paradigm shifts"}
+      ]
+    }
+  ],
+  "events": [],
+  "search_phrases": [
+    {"phrase": "We Do Democracy citizens assemblies Nordic", "priority": "high"},
+    {"phrase": "Sitra deliberative democracy citizens parliament Finland", "priority": "high"},
+    {"phrase": "Zakia Elvang democratic innovation Denmark", "priority": "medium"}
+  ],
+  "source_urls": [
+    {"url": "https://www.wedodemocracy.com", "title": "We Do Democracy", "description": "Leading Nordic deliberative democracy agency", "monitor": true},
+    {"url": "https://www.sitra.fi", "title": "Sitra - The Finnish Innovation Fund", "description": "Finnish public fund for democratic and sustainability innovation", "monitor": true}
+  ]
+}

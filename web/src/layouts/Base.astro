@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  currentPath?: string;
+}
+const { title, description, currentPath } = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Feed' },
+  { href: '/actors', label: 'Actors' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/people', label: 'People' },
+  { href: '/events', label: 'Events' },
+  { href: '/tags', label: 'Tags' },
+  { href: '/graph', label: 'Graph' },
+];
+
+import '../styles/global.css';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description || 'The Garden — Planetary governance research landscape'} />
+  <title>{title} · The Garden</title>
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"
+    integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="site-header reveal reveal-1">
+      <div class="site-header__inner">
+        <a href="/" class="site-title">The Garden <span>Landscape</span></a>
+        <nav class="site-nav">
+          {navItems.map(item => (
+            <a
+              href={item.href}
+              aria-current={currentPath === item.href ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main class="reveal reveal-2">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>The Garden — Planetary Governance Research</p>
+        <p>Landscape Database</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

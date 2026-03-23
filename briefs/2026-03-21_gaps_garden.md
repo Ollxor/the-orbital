@@ -38,93 +38,108 @@ Deep-dive the following high-priority actors in The Garden landscape. For each, 
 
 ## Target Actors
 
+### Global Alliance for the Rights of Nature (Network, relevance: 5/5)
+Known: International network advancing rights of nature through legal frameworks, hosting International Rights of Nature Tribunals, and supporting community-led campaigns for ecosystem legal personhood.
+Website: https://www.garn.org
+Orientation: GARDEN
+Location: Global
+Gaps: no intel on file, only 1 source
+
+### Metagov (Research, relevance: 5/5)
+Known: Research collective studying and building interoperable governance tools for online communities, exploring governance games and tool experimentation across digital and physical spaces.
+Website: https://metagov.org
+Orientation: SPACESHIP
+Location: USA / Global
+Gaps: no intel on file, only 1 source
+
+### Not Only Larp (Company, relevance: 5/5)
+Known: Italian design studio creating immersive LARP experiences explicitly for social change, running large-scale educational and political LARPs across Europe.
+Website: https://notonlylarp.com
+Orientation: TEMPLE
+Location: Italy
+Gaps: no intel on file, only 1 source
+
+### World Game Workshop (NGO, relevance: 5/5)
+Known: Organisation continuing Buckminster Fuller's World Game vision, running collaborative planetary resource simulation workshops that challenge participants to 'make the world work for 100% of humanity'.
+Website: https://worldgameworkshop.org
+Orientation: TEMPLE
+Location: USA
+Gaps: no intel on file, only 1 source
+
+### Sortition Foundation (NGO, relevance: 5/5)
+Known: UK-based organisation promoting and running citizens' assemblies selected by sortition (random selection), having facilitated over 100 stratified random selections for democratic bodies.
+Website: https://www.sortitionfoundation.org
+Orientation: ASSEMBLY
+Location: UK
+Gaps: no intel on file, only 1 source
+
+### Future Generations Commissioner for Wales (Government, relevance: 5/5)
+Known: Statutory body established by the Well-being of Future Generations Act, the world's first independent commissioner mandated to advocate for the interests of future generations in government decisions.
+Website: https://futuregenerations.wales
+Orientation: ASSEMBLY
+Location: Wales / UK
+Gaps: no intel on file, only 1 source
+
+### THE NEW INSTITUTE (Research, relevance: 5/5)
+Known: Hamburg-based institute running a dedicated Planetary Governance programme bringing together researchers, practitioners, and artists to develop new frameworks for governing planetary challenges.
+Website: https://thenew.institute
+Orientation: ASSEMBLY
+Location: Germany
+Gaps: no intel on file, only 1 source
+
+### Global Challenges Foundation (NGO, relevance: 5/5)
+Known: Swedish foundation offering major prizes for global governance reform proposals, funding research on existential risks and planetary commons, and building networks for institutional innovation.
+Website: https://globalchallenges.org
+Orientation: ASSEMBLY
+Location: Sweden
+Gaps: no intel on file, only 1 source
+
 ### OpenEarth Foundation (NGO, relevance: 4/5)
 Known: Martin Wainstein's org. Spatial mesh, earth data, active inference.
+Website: https://www.openearth.org
 Orientation: GARDEN
 Location: Global
 Gaps: no intel on file, only 1 source
 
 ### Planetary Guardians / SpiralWeb (NGO, relevance: 4/5)
 Known: Engberg's flow architecture for land stewards. Three-stream model, Ostrom-based.
+Website: https://www.planetaryguardians.org
 Orientation: GARDEN
 Location: DK / UG / MA / PK
 Gaps: no intel on file, only 1 source
 
 ### ÆRTH (Company, relevance: 4/5)
 Known: Planetary AI digital twin using blockchain and remote sensing.
+Website: https://www.aerth.live
 Orientation: GARDEN
 Location: Global
 Gaps: no intel on file, only 1 source
 
 ### Regen Network (Company, relevance: 4/5)
 Known: Blockchain-verified soil health and carbon sequestration tokens.
+Website: https://www.regen.network
 Orientation: GARDEN
 Location: Global
 Gaps: no intel on file, only 1 source
 
 ### Climate TRACE (NGO, relevance: 4/5)
 Known: AI + satellite global emissions monitoring. Al Gore-backed.
+Website: https://climatetrace.org
 Orientation: GARDEN
 Location: Global
 Gaps: no intel on file, only 1 source
 
 ### Rainforest Connection (RFCx) (Company, relevance: 4/5)
 Known: Bioacoustic sensors for forest biodiversity monitoring.
+Website: https://rfcx.org
 Orientation: GARDEN
 Location: Global
 Gaps: no intel on file, only 1 source
 
 ### Naturskyddsföreningen (NGO, relevance: 4/5)
 Known: Swedish Society for Nature Conservation. Erik Pihl connection.
+Website: https://www.naturskyddsforeningen.se
 Orientation: GARDEN
-Location: Sweden
-Gaps: no intel on file, only 1 source
-
-### Future Earth (Research, relevance: 4/5)
-Known: Global sustainability research platform. Erik Pihl background.
-Orientation: GARDEN
-Location: Global
-Gaps: no intel on file, only 1 source
-
-### Destination Earth (DestinE) (Government, relevance: 4/5)
-Known: EU initiative: high-precision digital model of Earth by 2030.
-Orientation: SPACESHIP
-Location: EU
-Gaps: no intel on file, only 1 source
-
-### Spatial Web Foundation / Verses AI (Company, relevance: 4/5)
-Known: HSML — making physical space programmable with digital rules.
-Orientation: SPACESHIP
-Location: Global
-Gaps: no intel on file, only 1 source
-
-### Dark Matter Labs (Company, relevance: 4/5)
-Known: Smart covenants, redesigning 21st century institutions.
-Orientation: SPACESHIP
-Location: UK / EU
-Gaps: no intel on file, only 1 source
-
-### RadicalxChange (NGO, relevance: 4/5)
-Known: Glen Weyl. Quadratic voting, plural management, new democracy tools.
-Orientation: SPACESHIP
-Location: Global
-Gaps: no intel on file, only 1 source
-
-### Hypha DAO (Company, relevance: 4/5)
-Known: Human-centric decentralised organisation tools for regenerative projects.
-Orientation: SPACESHIP
-Location: Global
-Gaps: no intel on file, only 1 source
-
-### Kolektivo (Company, relevance: 4/5)
-Known: Local network states using nature-based currencies for UBI.
-Orientation: SPACESHIP
-Location: Global
-Gaps: no intel on file, only 1 source
-
-### Strawbees (Company, relevance: 4/5)
-Known: Erik Thorstensson. Accessible construction/prototyping tools. Potential core team.
-Orientation: SPACESHIP
 Location: Sweden
 Gaps: no intel on file, only 1 source
 

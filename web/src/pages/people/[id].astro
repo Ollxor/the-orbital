@@ -1,0 +1,126 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getAllPeople, getPerson, getPersonActors, getPersonTags, ORIENTATION_COLORS } from '../../lib/db';
+
+export function getStaticPaths() {
+  const people = getAllPeople();
+  return people.map(p => ({ params: { id: String(p.id) } }));
+}
+
+const { id } = Astro.params;
+const personId = Number(id);
+const person = getPerson(personId);
+
+if (!person) return Astro.redirect('/people');
+
+const actors = getPersonActors(personId);
+const tags = getPersonTags(personId);
+const orientColor = person.orientation_code ? ORIENTATION_COLORS[person.orientation_code] || '#71717a' : '#71717a';
+const fullName = [person.first_name, person.last_name].filter(Boolean).join(' ');
+---
+<Base title={fullName}>
+  <a href="/people" class="back-link">People</a>
+
+  <div class="dossier-header reveal reveal-1">
+    <div class="dossier-header__bar" style={`background: ${orientColor}`}></div>
+    <div class="dossier-header__ref">GP-P{String(person.id).padStart(3, '0')}</div>
+    <h1 class="dossier-header__title">{fullName}</h1>
+    <div class="dossier-header__subtitle">
+      {person.job_title && <span class="meta">{person.job_title}</span>}
+      {person.relationship_tier && <span class="badge">{person.relationship_tier}</span>}
+      {person.location && <span class="meta">{person.location}</span>}
+    </div>
+  </div>
+
+  <div class="dossier reveal reveal-2">
+    <aside class="dossier__sidebar">
+      {person.relationship_tier && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Tier</div>
+          <div class="dossier__sidebar-value">{person.relationship_tier}</div>
+        </div>
+      )}
+
+      {person.status && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Status</div>
+          <div class="dossier__sidebar-value">{person.status}</div>
+        </div>
+      )}
+
+      {person.orientation_name && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Orientation</div>
+          <div style="display:flex;align-items:center;gap:0.4rem">
+            <span style={`width:6px;height:6px;border-radius:50%;background:${orientColor}`}></span>
+            <span class="dossier__sidebar-value">{person.orientation_name}</span>
+          </div>
+        </div>
+      )}
+
+      {tags.length > 0 && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">Tags</div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.375rem;margin-top:0.25rem">
+            {tags.map(tag => (
+              <a href={`/tags/${tag.name}`} class="chip" style="font-size:var(--text-xs)">{tag.name}</a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {person.linkedin_url && (
+        <div class="dossier__sidebar-section">
+          <div class="dossier__sidebar-label">LinkedIn</div>
+          <a href={person.linkedin_url} target="_blank" rel="noopener"
+            style="font-size:var(--text-sm);word-break:break-all">
+            Profile →
+          </a>
+        </div>
+      )}
+    </aside>
+
+    <div class="dossier__main">
+      {person.skills && (
+        <div class="section reveal reveal-3">
+          <div class="section-heading">Skills & Expertise</div>
+          <p style="font-family:var(--font-display);font-size:var(--text-md);line-height:1.7;color:var(--charcoal-soft)">
+            {person.skills}
+          </p>
+        </div>
+      )}
+
+      {actors.length > 0 && (
+        <div class="section reveal reveal-4">
+          <div class="section-heading">Connected Actors</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            {actors.map(actor => {
+              const color = actor.orientation_code ? ORIENTATION_COLORS[actor.orientation_code] || '#71717a' : '#71717a';
+              return (
+                <a href={`/actors/${actor.id}`} class="card card--link" style="padding:var(--sp-4) var(--sp-5)">
+                  <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem">
+                    <div style="display:flex;align-items:center;gap:0.5rem">
+                      <span style={`width:4px;height:4px;border-radius:50%;background:${color};flex-shrink:0`}></span>
+                      <span style="font-family:var(--font-display);font-size:var(--text-base)">{actor.name}</span>
+                    </div>
+                    <span style="display:flex;gap:0.5rem;align-items:center;flex-shrink:0">
+                      {actor.role && <span class="meta" style="font-style:italic">{actor.role}</span>}
+                      <span class="badge badge--type" style="font-size:0.6rem">{actor.type}</span>
+                    </span>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {person.notes && (
+        <div class="section reveal reveal-5">
+          <div class="section-heading">Notes</div>
+          <p class="meta" style="font-style:italic;line-height:1.7">{person.notes}</p>
+        </div>
+      )}
+    </div>
+  </div>
+</Base>

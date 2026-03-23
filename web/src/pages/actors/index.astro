@@ -1,0 +1,112 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getAllActors, getAllOrientations, ORIENTATION_COLORS } from '../../lib/db';
+
+const actors = getAllActors();
+const orientations = getAllOrientations();
+
+const types = [...new Set(actors.map(a => a.type))].sort();
+const scales = ['Local', 'National', 'Regional', 'Global'];
+const maturities = ['Idea', 'Early', 'Active', 'Established'];
+---
+<Base title="Actors" currentPath="/actors">
+  <h1 class="page-title">Actors</h1>
+  <p class="page-subtitle">
+    Organisations, networks, movements, and companies shaping the planetary governance landscape
+  </p>
+
+  <div x-data="{
+    orientation: '',
+    type: '',
+    scale: '',
+    maturity: '',
+    get activeCount() {
+      return document.querySelectorAll('.actor-item:not([style*=&quot;display: none&quot;])').length;
+    }
+  }">
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label class="filter-group__label" for="filter-orientation">Orientation</label>
+        <select id="filter-orientation" class="filter-select" x-model="orientation">
+          <option value="">All</option>
+          {orientations.map(o => (
+            <option value={o.code}>{o.name}</option>
+          ))}
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-group__label" for="filter-type">Type</label>
+        <select id="filter-type" class="filter-select" x-model="type">
+          <option value="">All</option>
+          {types.map(t => (
+            <option value={t}>{t}</option>
+          ))}
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-group__label" for="filter-scale">Scale</label>
+        <select id="filter-scale" class="filter-select" x-model="scale">
+          <option value="">All</option>
+          {scales.map(s => (
+            <option value={s}>{s}</option>
+          ))}
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-group__label" for="filter-maturity">Maturity</label>
+        <select id="filter-maturity" class="filter-select" x-model="maturity">
+          <option value="">All</option>
+          {maturities.map(m => (
+            <option value={m}>{m}</option>
+          ))}
+        </select>
+      </div>
+    </div>
+
+    <div class="card-grid card-grid--2">
+      {actors.map(actor => {
+        const color = actor.orientation_code ? ORIENTATION_COLORS[actor.orientation_code] || '#71717a' : '#71717a';
+        return (
+          <a
+            href={`/actors/${actor.id}`}
+            class="card card--link actor-item"
+            data-orientation={actor.orientation_code || ''}
+            data-type={actor.type}
+            data-scale={actor.scale || ''}
+            data-maturity={actor.maturity || ''}
+            x-show={`
+              (orientation === '' || '${actor.orientation_code || ''}' === orientation) &&
+              (type === '' || '${actor.type}' === type) &&
+              (scale === '' || '${actor.scale || ''}' === scale) &&
+              (maturity === '' || '${actor.maturity || ''}' === maturity)
+            `}
+            x-transition
+          >
+            <div style={`display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem`}>
+              <span style={`width:4px;height:4px;border-radius:50%;background:${color};flex-shrink:0`}></span>
+              <span class="badge badge--type">{actor.type}</span>
+              {actor.location && <span class="meta" style="margin-left:auto">{actor.location}</span>}
+            </div>
+            <div class="card__title">{actor.name}</div>
+            <div class="card__meta">
+              <div class="relevance" style="margin-bottom:0.25rem">
+                {[1,2,3,4,5].map(n => (
+                  <span class={`relevance__bar ${n <= actor.relevance_score ? 'relevance__bar--filled' : ''}`}></span>
+                ))}
+              </div>
+              {actor.orientation_name && <span>{actor.orientation_name}</span>}
+              {actor.scale && <span> · {actor.scale}</span>}
+              {actor.maturity && <span> · {actor.maturity}</span>}
+            </div>
+            {actor.description && (
+              <p class="card__description">{actor.description}</p>
+            )}
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</Base>

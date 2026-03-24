@@ -1,8 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getAllActors, getAllOrientations, ORIENTATION_COLORS } from '../../lib/db';
+import { getAllActors, getAllOrientations, ORIENTATION_COLORS, getFirstImages } from '../../lib/db';
 
 const actors = getAllActors();
+const actorImages = getFirstImages('actor');
 const orientations = getAllOrientations();
 
 const types = [...new Set(actors.map(a => a.type))].sort();
@@ -69,6 +70,7 @@ const maturities = ['Idea', 'Early', 'Active', 'Established'];
     <div class="card-grid card-grid--2">
       {actors.map(actor => {
         const color = actor.orientation_code ? ORIENTATION_COLORS[actor.orientation_code] || '#71717a' : '#71717a';
+        const img = actorImages.get(actor.id);
         return (
           <a
             href={`/actors/${actor.id}`}
@@ -85,6 +87,14 @@ const maturities = ['Idea', 'Early', 'Active', 'Established'];
             `}
             x-transition
           >
+            {img && (
+              <img
+                src={`/images/actors/${img.filename}`}
+                alt={img.alt_text || actor.name}
+                class="card__thumb"
+                loading="lazy"
+              />
+            )}
             <div style={`display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem`}>
               <span style={`width:4px;height:4px;border-radius:50%;background:${color};flex-shrink:0`}></span>
               <span class="badge badge--type">{actor.type}</span>

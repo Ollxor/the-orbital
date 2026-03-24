@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
-import { getAllOrientations, getOrientationCategories, getStats, getActor, ORIENTATION_COLORS } from '../lib/db';
+import { getAllOrientations, getOrientationCategories, getStats, getActor, ORIENTATION_COLORS, ORIENTATION_DISPLAY_NAMES, ORIENTATION_CARD_COLORS, ORIENTATION_EMOJIS, ORIENTATION_SHORT_DESCRIPTIONS } from '../lib/db';
 
 const news = await getCollection('news');
 const sortedNews = news
@@ -36,7 +36,30 @@ function formatDate(date: Date): string {
 }
 ---
 <Base title="Feed" currentPath="/">
-  <div class="stats-bar reveal reveal-2">
+  <section class="overview-header reveal reveal-2">
+    <h1 class="overview-header__title">THE OVERVIEW</h1>
+    <p class="overview-header__subtitle">Prototyping Our Way Towards Paradise</p>
+    <p class="overview-header__description">
+      A living map of the people, organisations, and movements
+      already building the future of planetary governance —
+      through ecology, technology, play, ritual, and democratic innovation.
+    </p>
+    <p class="overview-header__tagline">Four orientations. One emerging pattern.</p>
+
+    <div class="orientation-cards">
+      {['GARDEN', 'SPACESHIP', 'TEMPLE', 'ASSEMBLY'].map(code => (
+        <a href={`/orientations/${code}`} class="orientation-card" style={`background: ${ORIENTATION_CARD_COLORS[code]}`}>
+          <span class="orientation-card__emoji">{ORIENTATION_EMOJIS[code]}</span>
+          <span class="orientation-card__name">{ORIENTATION_DISPLAY_NAMES[code]}</span>
+          <span class="orientation-card__desc">{ORIENTATION_SHORT_DESCRIPTIONS[code]}</span>
+        </a>
+      ))}
+    </div>
+
+    <a href="#feed" class="overview-header__skip">Skip to feed &darr;</a>
+  </section>
+
+  <div id="feed" class="stats-bar reveal reveal-2">
     <a href="/actors" class="stat stat--link">
       <span class="stat__number">{stats.actors}</span>
       <span class="stat__label">Actors</span>
@@ -44,10 +67,6 @@ function formatDate(date: Date): string {
     <a href="/projects" class="stat stat--link">
       <span class="stat__number">{stats.projects}</span>
       <span class="stat__label">Projects</span>
-    </a>
-    <a href="/people" class="stat stat--link">
-      <span class="stat__number">{stats.people}</span>
-      <span class="stat__label">People</span>
     </a>
     <a href="/events" class="stat stat--link">
       <span class="stat__number">{stats.events}</span>
@@ -85,6 +104,9 @@ function formatDate(date: Date): string {
               <a href={`/news/${story.id}`}>{story.data.title}</a>
             </h2>
             <p class="news-card__summary">{story.data.summary}</p>
+            {story.data.whyItMatters && (
+              <p class="news-card__why">Why this matters &rarr; {story.data.whyItMatters}</p>
+            )}
             <div class="news-card__tags">
               {actorLinks.map(actor => (
                 <a href={`/actors/${actor.id}`} class="chip">

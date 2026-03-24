@@ -404,6 +404,24 @@ export function getProjectImages(projectId: number): Image[] {
   return getEntityImages('project', projectId);
 }
 
+export function getFirstImages(entityType: string): Map<number, Image> {
+  const db = getDb();
+  const rows = db.prepare(`
+    SELECT i.* FROM images i
+    INNER JOIN (
+      SELECT entity_id, MIN(sort_order * 1000000 + id) AS pick
+      FROM images
+      WHERE entity_type = ? AND sort_order < 999
+      GROUP BY entity_id
+    ) best ON best.entity_id = i.entity_id
+      AND (i.sort_order * 1000000 + i.id) = best.pick
+    WHERE i.entity_type = ?
+  `).all(entityType, entityType) as Image[];
+  const map = new Map<number, Image>();
+  for (const row of rows) map.set(row.entity_id, row);
+  return map;
+}
+
 // ─── Source queries ──────────────────────────────────────
 
 export function getAllSources(): Source[] {
@@ -859,6 +877,34 @@ export const ORIENTATION_COLORS: Record<string, string> = {
   SPACESHIP: '#6b7f8f',
   TEMPLE: '#8f7b6b',
   ASSEMBLY: '#7b6b8f',
+};
+
+export const ORIENTATION_DISPLAY_NAMES: Record<string, string> = {
+  GARDEN: 'Garden of Eden',
+  SPACESHIP: 'Spaceship Earth',
+  TEMPLE: 'Eleusinian Mysteries',
+  ASSEMBLY: 'General Assembly of Earth',
+};
+
+export const ORIENTATION_CARD_COLORS: Record<string, string> = {
+  GARDEN: '#D5E8D4',
+  SPACESHIP: '#DAE8FC',
+  TEMPLE: '#E1D5E7',
+  ASSEMBLY: '#FFF2CC',
+};
+
+export const ORIENTATION_EMOJIS: Record<string, string> = {
+  GARDEN: '\u{1F331}',
+  SPACESHIP: '\u{1F680}',
+  TEMPLE: '\u{1F52E}',
+  ASSEMBLY: '\u{1F30D}',
+};
+
+export const ORIENTATION_SHORT_DESCRIPTIONS: Record<string, string> = {
+  GARDEN: 'Living systems, land stewardship, regenerative economics, indigenous knowledge.',
+  SPACESHIP: 'Technology, infrastructure, data, AI, governance tools, alternative ownership.',
+  TEMPLE: 'Transformative games, ritual, experiential futures, festival culture, the psychology of awe.',
+  ASSEMBLY: 'Global governance innovation, participatory democracy, rights of nature, climate justice.',
 };
 
 export const ORIENTATION_DESCRIPTIONS: Record<string, string> = {

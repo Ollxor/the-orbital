@@ -412,7 +412,7 @@ TONE & STYLE (match these reference articles exactly):
 - Analytical but warm, never corporate. Write like an informed colleague sharing what matters.
 - Use em dashes for parenthetical asides — they're part of the voice.
 - Always connect the news to broader themes: planetary governance, ecological stewardship, democratic innovation, transformative practice.
-- Where relevant, note connections to The Garden's thesis: that governance systems must be felt and tested, not merely debated.
+- Where relevant, note connections to The Overview's thesis: that governance systems must be felt and tested, not merely debated.
 - Be concise: 2-4 paragraphs, no filler. Every sentence should earn its place.
 - Name specific facts, numbers, places. Avoid vague generalities.
 - Do NOT be promotional or breathless. Maintain critical distance while showing genuine interest.
@@ -466,8 +466,8 @@ AVOID logos, infographics, headshots, screenshots, charts, or generic stock imag
 If none of the images are suitable as hero photography, set "bestImageIndex" to null."""
         page_images = valid_images  # use filtered list for index resolution
 
-    prompt = f"""You are a news editor for a planetary governance research project called "The Garden".
-Rewrite this news article in The Garden's editorial voice and pick the best hero image.
+    prompt = f"""You are a news editor for a planetary governance research project called "The Overview".
+Rewrite this news article in The Overview's editorial voice and pick the best hero image.
 
 {TONE_GUIDE}
 
@@ -482,10 +482,11 @@ ARTICLE CONTENT:
 {image_list_text}
 
 Return a JSON object with these fields:
-- "title": A clear, concise headline in The Garden's voice (max 100 chars)
+- "title": A clear, concise headline in The Overview's voice (max 100 chars)
 - "date": Publication date as YYYY-MM-DD (use {datetime.now().strftime('%Y-%m-%d')} if unknown)
 - "summary": 2-3 sentence summary connecting this to planetary governance themes (max 300 chars)
-- "body": 2-4 paragraphs rewritten in The Garden's editorial voice. Not a summary — a proper rewrite. Include key facts, quotes if notable, and connect to broader themes.
+- "whyItMatters": One sentence (max 200 chars) connecting this story to the larger pattern of planetary governance. This is the editorial voice of The Overview — the thing that turns a news aggregator into a publication with a perspective. Examples: "Regenerative agriculture only scales when the financial architecture supports the people doing the work." or "Governance that shows up in a shopping mall becomes culture."
+- "body": 2-4 paragraphs rewritten in The Overview's editorial voice. Not a summary — a proper rewrite. Include key facts, quotes if notable, and connect to broader themes.
 - "tags": Array of 2-5 lowercase keyword tags (e.g. governance, climate, funding, nordic, research, democratic-innovation, governance-tech, rights-of-nature)
 - "imageAlt": Descriptive alt text for the chosen hero image (max 120 chars)
 - "bestImageIndex": 1-based index of the best hero image from the candidates, or null if none are suitable
@@ -508,6 +509,8 @@ Return ONLY valid JSON, no markdown fences."""
             max_tokens=1500,
             messages=[{"role": "user", "content": blocks}],
         )
+        if not response.content:
+            raise ValueError("Empty response from Claude")
         text = response.content[0].text.strip()
         text = _strip_markdown_fences(text)
         return json.loads(text)
@@ -534,19 +537,19 @@ Return ONLY valid JSON, no markdown fences."""
 
     try:
         result = _call_claude_with_retry(content_blocks)
-    except anthropic.APIError as e:
-        # Likely an image URL Claude couldn't fetch — retry without images
+    except (anthropic.APIError, ValueError) as e:
+        # Likely an image URL Claude couldn't fetch or empty response — retry without images
         if valid_images:
-            print(f"      Retrying without images (API error: {e})")
+            print(f"      Retrying without images ({e})")
             text_only = [b for b in content_blocks if b.get("type") == "text"]
             try:
                 result = _call_claude_with_retry(text_only)
                 result["bestImageIndex"] = None
-            except (anthropic.APIError, json.JSONDecodeError) as e2:
+            except (anthropic.APIError, ValueError, json.JSONDecodeError) as e2:
                 print(f"    CLAUDE ERROR (retry): {e2}")
                 return None
         else:
-            print(f"    CLAUDE API ERROR: {e}")
+            print(f"    CLAUDE ERROR: {e}")
             return None
     except json.JSONDecodeError as e:
         print(f"    JSON PARSE ERROR (after retry): {e}")
@@ -585,7 +588,7 @@ def judge_featured(client, article, image_path):
     media_type = {"jpg": "image/jpeg", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",
                   ".png": "image/png", ".webp": "image/webp", ".gif": "image/gif"}.get(ext, "image/jpeg")
 
-    prompt = f"""You are the visual editor for The Garden, a planetary governance research publication.
+    prompt = f"""You are the visual editor for The Overview, a planetary governance research publication.
 
 ARTICLE TITLE: {article.get('title', '')}
 ARTICLE SUMMARY: {article.get('summary', '')}
@@ -661,9 +664,9 @@ def save_article(article, actor_ids, project_ids):
         print(f"      Featured: {featured}")
 
     # Build frontmatter
-    title_escaped = article["title"].replace('"', "'")
-    summary_escaped = article.get("summary", "").replace('"', "'")
-    image_alt = article.get("imageAlt", "").replace('"', "'")
+    title_escaped = (article.get("title") or "").replace('"', "'")
+    summary_escaped = (article.get("summary") or "").replace('"', "'")
+    image_alt = (article.get("imageAlt") or "").replace('"', "'")
     tags = article.get("tags", ["landscape"])
     sources = []
     if article.get("source_url"):
@@ -672,6 +675,8 @@ def save_article(article, actor_ids, project_ids):
             "url": article["source_url"],
         })
 
+    why_it_matters = (article.get("whyItMatters") or "").replace('"', "'")
+
     lines = [
         "---",
         f'title: "{title_escaped}"',
@@ -679,6 +684,8 @@ def save_article(article, actor_ids, project_ids):
         f'summary: "{summary_escaped}"',
         f"featured: {'true' if featured else 'false'}",
     ]
+    if why_it_matters:
+        lines.append(f'whyItMatters: "{why_it_matters}"')
     if image_path:
         lines.append(f"image: {image_path}")
     if image_alt:
@@ -804,6 +811,22 @@ def crawl_feeds(conn, cur, limit=None):
     total_saved = 0
     existing = existing_news_slugs()
 
+    # Build set of source URLs already in existing articles to prevent re-crawling
+    existing_source_urls = set()
+    for slug in existing:
+        md_path = os.path.join(NEWS_DIR, f"{slug}.md")
+        try:
+            with open(md_path) as f:
+                for line in f:
+                    if line.strip().startswith("url:"):
+                        url_val = line.split("url:", 1)[1].strip().strip('"').strip("'")
+                        if url_val:
+                            existing_source_urls.add(url_val)
+                    if line.strip() == "---" and existing_source_urls:
+                        break  # past frontmatter
+        except Exception:
+            pass
+
     for feed_info in feeds:
         print(f"\n  [{feed_info['title'] or feed_info['url']}]")
         feed_title, entries = parse_feed(feed_info["url"])
@@ -832,10 +855,15 @@ def crawl_feeds(conn, cur, limit=None):
         print(f"    {len(recent)} recent entries, extracting with Claude...")
 
         for entry in recent:
-            # Quick duplicate check by slug
+            # Duplicate check: source URL
+            if entry.get("url") and entry["url"] in existing_source_urls:
+                print(f"    SKIP (source URL exists): {entry['title'][:60]}")
+                continue
+
+            # Duplicate check: slug
             slug = slugify(entry["title"])
             if slug in existing:
-                print(f"    SKIP existing: {slug}")
+                print(f"    SKIP (slug exists): {slug}")
                 continue
 
             print(f"    > {entry['title'][:70]}")
@@ -858,6 +886,8 @@ def crawl_feeds(conn, cur, limit=None):
             if filepath:
                 total_saved += 1
                 existing.add(slugify(article["title"]))
+                if entry.get("url"):
+                    existing_source_urls.add(entry["url"])
 
             # Rate limit: be kind to the API
             time.sleep(1)
@@ -884,7 +914,7 @@ def main():
     parser.add_argument("--limit", type=int, default=None, help="Limit number of feeds to crawl")
     args = parser.parse_args()
 
-    conn = sqlite3.connect(DB)
+    conn = sqlite3.connect(DB, timeout=30)
     conn.execute("PRAGMA foreign_keys = ON")
     cur = conn.cursor()
 

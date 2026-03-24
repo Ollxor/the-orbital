@@ -3,17 +3,21 @@ interface Props {
   title: string;
   description?: string;
   currentPath?: string;
+  noindex?: boolean;
 }
-const { title, description, currentPath } = Astro.props;
+const { title, description, currentPath, noindex } = Astro.props;
+
+const defaultDescription = 'A living map of the movements building planetary governance — through ecology, technology, play, ritual, and democratic innovation.';
 
 const navItems = [
   { href: '/', label: 'Feed' },
+  { href: '/about', label: 'About' },
   { href: '/actors', label: 'Actors' },
   { href: '/projects', label: 'Projects' },
-  { href: '/people', label: 'People' },
   { href: '/events', label: 'Events' },
   { href: '/tags', label: 'Tags' },
   { href: '/graph', label: 'Graph' },
+  { href: '/join', label: 'Join' },
 ];
 
 import '../styles/global.css';
@@ -23,8 +27,12 @@ import '../styles/global.css';
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content={description || 'The Garden — Planetary governance research landscape'} />
-  <title>{title} · The Garden</title>
+  <meta name="description" content={description || defaultDescription} />
+  {noindex && <meta name="robots" content="noindex" />}
+  <meta property="og:title" content={`${title} · The Overview`} />
+  <meta property="og:description" content={description || defaultDescription} />
+  <meta property="og:site_name" content="The Overview" />
+  <title>{title} · The Overview</title>
   <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"
     integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz"
     crossorigin="anonymous"></script>
@@ -33,7 +41,7 @@ import '../styles/global.css';
   <div class="site-wrapper">
     <header class="site-header reveal reveal-1">
       <div class="site-header__inner">
-        <a href="/" class="site-title">The Garden <span>Landscape</span></a>
+        <a href="/" class="site-title">The Overview</a>
         <nav class="site-nav">
           {navItems.map(item => (
             <a
@@ -53,8 +61,8 @@ import '../styles/global.css';
 
     <footer class="site-footer">
       <div class="site-footer__inner">
-        <p>The Garden — Planetary Governance Research</p>
-        <p>Landscape Database</p>
+        <p>The Overview — Prototyping Our Way Towards Paradise</p>
+        <p><a href="/about">About</a></p>
       </div>
     </footer>
   </div>

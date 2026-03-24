@@ -43,6 +43,9 @@ function formatDate(date: Date): string {
           <a href={`/news/${story.id}`}>{story.data.title}</a>
         </h2>
         <p class="news-card__summary">{story.data.summary}</p>
+        {story.data.whyItMatters && (
+          <p class="news-card__why">Why this matters &rarr; {story.data.whyItMatters}</p>
+        )}
         <div class="news-card__tags">
           {actorLinks.map(actor => (
             <a href={`/actors/${actor.id}`} class="chip">

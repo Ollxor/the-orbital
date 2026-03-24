@@ -22,7 +22,7 @@ garden-crawler/
 ├── briefs/             # Generated research prompts (Step 0 output)
 ├── garden.db           # SQLite database (created by seed_from_excel.py)
 ├── garden_landscape_map.xlsx  # Source Excel with categories, seed actors, people map
-├── .env.local          # BRAVE_API_KEY, GEMINI_API_KEY (not in git)
+├── .env.local          # BRAVE_API_KEY, GEMINI_API_KEY, ANTHROPIC_API_KEY (not in git)
 ├── schema.sql          # DB schema reference
 ├── seed_from_excel.py  # Seed DB from Excel (run once)
 ├── research.py         # Step 0: generate research briefs from DB gaps
@@ -31,6 +31,11 @@ garden-crawler/
 ├── merge_chunks.py     # Deduplicate + commit chunk extractions to DB
 ├── step_c_search.py    # Step C: search phrases via brave-cli
 ├── step_c_evaluate.py  # Step C: evaluate + commit search results
+├── collect_news.py     # News collection via Gemini Deep Research
+├── crawl_feeds.py      # RSS/Atom feed crawler with Claude Sonnet extraction
+├── crawl.sh            # Crawl feeds (wrapper script)
+├── deploy.sh           # Build + deploy to Cloudflare Pages
+├── web/                # Astro static site (The Garden Landscape)
 └── README.md
 ```
 
@@ -189,6 +194,43 @@ For each source where `last_fetch IS NULL`: fetch URL, extract actors/projects/p
 ### Step E — Monitor (Budgeted)
 
 Re-search stale phrases, re-fetch monitored sources, flow new findings back through Steps C/D.
+
+## News Feed Crawler
+
+Crawls RSS/Atom feeds from tracked actors and projects, uses Claude Sonnet to rewrite articles in The Garden's editorial voice, extracts hero images via vision, and judges whether articles should be featured on the front page.
+
+### Scripts
+
+```bash
+./crawl.sh                      # Crawl all known feeds
+./crawl.sh --limit 10           # Crawl 10 feeds
+./crawl.sh --discover           # Discover new feeds first, then crawl
+./crawl.sh --discover --limit 5 # Discover + crawl with limit
+
+./deploy.sh                     # Build Astro site + deploy to Cloudflare Pages
+```
+
+### How it works
+
+1. **Feed discovery** — scans actor websites for RSS/Atom `<link>` tags, probes common feed paths
+2. **Feed parsing** — fetches entries via `feedparser`, filters to last 90 days
+3. **Article extraction** — fetches full article page, extracts all candidate images, sends text + images to Claude Sonnet vision
+4. **Editorial rewrite** — Claude rewrites the article in The Garden's voice (analytical, warm, em dashes, connects to governance themes)
+5. **Image selection** — Claude picks the best hero image from the article page (prefers landscapes, documentary photography, nature — avoids logos, infographics, headshots)
+6. **Featured judgment** — second Claude call with the actual downloaded image to judge if both visual quality and editorial significance warrant front-page placement
+7. **Output** — saves as Astro-compatible markdown in `web/src/content/news/` with frontmatter (title, date, summary, featured, image, actors, projects, tags, sources)
+
+### Env vars
+
+```
+ANTHROPIC_API_KEY=sk-ant-...    # Required for Claude Sonnet extraction
+BRAVE_API_KEY=...               # Used for feed discovery (optional)
+GEMINI_API_KEY=...              # Used by collect_news.py (Gemini Deep Research)
+```
+
+### Deployment
+
+Static site hosted on **Cloudflare Pages** at `garden-news.pages.dev`. The build reads `garden.db` (SQLite) at build time for actor/project data. After crawling, run `./deploy.sh` to rebuild and push.
 
 ## Orientation Classification Guide
 

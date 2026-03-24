@@ -1,0 +1,257 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Join the Map" currentPath="/join">
+  <div style="max-width: var(--content-width); margin: 0 auto; padding: var(--sp-8) 0 var(--sp-24);">
+    <div class="section-heading reveal reveal-2">Join the Map</div>
+    <p style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--charcoal-soft); line-height: 1.6; margin-bottom: var(--sp-12); max-width: 38rem;">
+      If you are working on planetary governance — through ecology, technology, ritual, democracy, or something we have not yet named — we would like to know about it.
+    </p>
+
+    <div
+      x-data="{
+        form: {
+          name: '',
+          email: '',
+          organisation: '',
+          description: '',
+          orientations: [],
+          location: '',
+          link: '',
+          referral: '',
+          website_url: ''
+        },
+        loading: false,
+        success: false,
+        error: '',
+        charCount: 0,
+        async submit() {
+          this.error = '';
+          this.loading = true;
+          try {
+            const res = await fetch('/api/join', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(this.form)
+            });
+            const data = await res.json();
+            if (!res.ok || data.error) {
+              this.error = data.error || 'Something went wrong. Please try again.';
+            } else {
+              this.success = true;
+            }
+          } catch (e) {
+            this.error = 'Could not reach the server. Please try again later.';
+          } finally {
+            this.loading = false;
+          }
+        }
+      }"
+    >
+      <!-- Success message -->
+      <div
+        x-show="success"
+        x-cloak
+        style="background: var(--green-mist); border: 1px solid var(--green); border-radius: 6px; padding: var(--sp-6); margin-bottom: var(--sp-8);"
+      >
+        <p style="font-family: var(--font-display); font-size: var(--text-md); color: var(--green-deep); margin: 0;">
+          Thanks! Your submission will be reviewed by our team before appearing on the map.
+        </p>
+      </div>
+
+      <!-- Error message -->
+      <div
+        x-show="error"
+        x-cloak
+        style="background: rgba(180, 60, 60, 0.06); border: 1px solid rgba(180, 60, 60, 0.3); border-radius: 6px; padding: var(--sp-4) var(--sp-6); margin-bottom: var(--sp-6);"
+      >
+        <p x-text="error" style="font-size: var(--text-sm); color: #8b3a3a; margin: 0;"></p>
+      </div>
+
+      <!-- Form -->
+      <form
+        x-show="!success"
+        @submit.prevent="submit"
+        style="display: flex; flex-direction: column; gap: var(--sp-6);"
+      >
+        <!-- Honeypot -->
+        <div style="display: none;" aria-hidden="true">
+          <label for="website_url">Website URL</label>
+          <input type="text" id="website_url" name="website_url" x-model="form.website_url" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <!-- Name -->
+        <div>
+          <label for="join-name" style="display: block; font-size: var(--text-sm); font-weight: 500; color: var(--charcoal); margin-bottom: var(--sp-2);">
+            Name <span style="color: var(--green);">*</span>
+          </label>
+          <input
+            type="text"
+            id="join-name"
+            x-model="form.name"
+            required
+            style="width: 100%; padding: var(--sp-3) var(--sp-4); font-family: var(--font-body); font-size: var(--text-base); color: var(--charcoal); background: var(--white); border: var(--border-light); border-radius: 4px; outline: none; transition: border-color var(--duration-fast) var(--ease-out);"
+            onfocus="this.style.borderColor='var(--green)'"
+            onblur="this.style.borderColor=''"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="join-email" style="display: block; font-size: var(--text-sm); font-weight: 500; color: var(--charcoal); margin-bottom: var(--sp-2);">
+            Email <span style="color: var(--green);">*</span>
+          </label>
+          <input
+            type="email"
+            id="join-email"
+            x-model="form.email"
+            required
+            style="width: 100%; padding: var(--sp-3) var(--sp-4); font-family: var(--font-body); font-size: var(--text-base); color: var(--charcoal); background: var(--white); border: var(--border-light); border-radius: 4px; outline: none; transition: border-color var(--duration-fast) var(--ease-out);"
+            onfocus="this.style.borderColor='var(--green)'"
+            onblur="this.style.borderColor=''"
+          />
+        </div>
+
+        <!-- Organisation -->
+        <div>
+          <label for="join-org" style="display: block; font-size: var(--text-sm); font-weight: 500; color: var(--charcoal); margin-bottom: var(--sp-2);">
+            Organisation
+          </label>
+          <input
+            type="text"
+            id="join-org"
+            x-model="form.organisation"
+            style="width: 100%; padding: var(--sp-3) var(--sp-4); font-family: var(--font-body); font-size: var(--text-base); color: var(--charcoal); background: var(--white); border: var(--border-light); border-radius: 4px; outline: none; transition: border-color var(--duration-fast) var(--ease-out);"
+            onfocus="this.style.borderColor='var(--green)'"
+            onblur="this.style.borderColor=''"
+          />
+        </div>
+
+        <!-- What are you working on? -->
+        <div>
+          <label for="join-desc" style="display: block; font-size: var(--text-sm); font-weight: 500; color: var(--charcoal); margin-bottom: var(--sp-2);">
+            What are you working on? <span style="color: var(--green);">*</span>
+          </label>
+          <textarea
+            id="join-desc"
+            x-model="form.description"
+            required
+            maxlength="280"
+            rows="3"
+            @input="charCount = form.description.length"
+            style="width: 100%; padding: var(--sp-3) var(--sp-4); font-family: var(--font-body); font-size: var(--text-base); color: var(--charcoal); background: var(--white); border: var(--border-light); border-radius: 4px; outline: none; resize: vertical; transition: border-color var(--duration-fast) var(--ease-out);"
+            onfocus="this.style.borderColor='var(--green)'"
+            onblur="this.style.borderColor=''"
+          ></textarea>
+          <div style="text-align: right; font-size: var(--text-xs); color: var(--zinc); margin-top: var(--sp-1);">
+            <span x-text="charCount"></span> / 280
+          </div>
+        </div>
+
+        <!-- Orientations -->
+        <fieldset style="border: none; padding: 0;">
+          <legend style="font-size: var(--text-sm); font-weight: 500; color: var(--charcoal); margin-bottom: var(--sp-3);">
+            Which orientation(s) resonate with you?
+          </legend>
+          <div style="display: flex; flex-direction: column; gap: var(--sp-3);">
+            <label style="display: flex; align-items: center; gap: var(--sp-3); font-size: var(--text-sm); color: var(--charcoal-soft); cursor: pointer;">
+              <input type="checkbox" value="garden-of-eden" x-model="form.orientations" style="accent-color: var(--orient-garden); width: 16px; height: 16px;" />
+              <span style="display: inline-flex; align-items: center; gap: var(--sp-2);">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--orient-garden); flex-shrink: 0;"></span>
+                Garden of Eden
+              </span>
+            </label>
+            <label style="display: flex; align-items: center; gap: var(--sp-3); font-size: var(--text-sm); color: var(--charcoal-soft); cursor: pointer;">
+              <input type="checkbox" value="spaceship-earth" x-model="form.orientations" style="accent-color: var(--orient-spaceship); width: 16px; height: 16px;" />
+              <span style="display: inline-flex; align-items: center; gap: var(--sp-2);">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--orient-spaceship); flex-shrink: 0;"></span>
+                Spaceship Earth
+              </span>
+            </label>
+            <label style="display: flex; align-items: center; gap: var(--sp-3); font-size: var(--text-sm); color: var(--charcoal-soft); cursor: pointer;">
+              <input type="checkbox" value="eleusinian-mysteries" x-model="form.orientations" style="accent-color: var(--orient-temple); width: 16px; height: 16px;" />
+              <span style="display: inline-flex; align-items: center; gap: var(--sp-2);">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--orient-temple); flex-shrink: 0;"></span>
+                Eleusinian Mysteries
+              </span>
+            </label>
+            <label style="display: flex; align-items: center; gap: var(--sp-3); font-size: var(--text-sm); color: var(--charcoal-soft); cursor: pointer;">
+              <input type="checkbox" value="general-assembly" x-model="form.orientations" style="accent-color: var(--orient-assembly); width: 16px; height: 16px;" />
+              <span style="display: inline-flex; align-items: center; gap: var(--sp-2);">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--orient-assembly); flex-shrink: 0;"></span>
+                General Assembly of Earth
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Location -->
+        <div>
+          <label for="join-location" style="display: block; font-size: var(--text-sm); font-weight: 500; color: var(--charcoal); margin-bottom: var(--sp-2);">
+            Location — city / country <span style="color: var(--green);">*</span>
+          </label>
+          <input
+            type="text"
+            id="join-location"
+            x-model="form.location"
+            required
+            placeholder="e.g. Stockholm, Sweden"
+            style="width: 100%; padding: var(--sp-3) var(--sp-4); font-family: var(--font-body); font-size: var(--text-base); color: var(--charcoal); background: var(--white); border: var(--border-light); border-radius: 4px; outline: none; transition: border-color var(--duration-fast) var(--ease-out);"
+            onfocus="this.style.borderColor='var(--green)'"
+            onblur="this.style.borderColor=''"
+          />
+        </div>
+
+        <!-- Website or social link -->
+        <div>
+          <label for="join-link" style="display: block; font-size: var(--text-sm); font-weight: 500; color: var(--charcoal); margin-bottom: var(--sp-2);">
+            Website or social link
+          </label>
+          <input
+            type="url"
+            id="join-link"
+            x-model="form.link"
+            placeholder="https://"
+            style="width: 100%; padding: var(--sp-3) var(--sp-4); font-family: var(--font-body); font-size: var(--text-base); color: var(--charcoal); background: var(--white); border: var(--border-light); border-radius: 4px; outline: none; transition: border-color var(--duration-fast) var(--ease-out);"
+            onfocus="this.style.borderColor='var(--green)'"
+            onblur="this.style.borderColor=''"
+          />
+        </div>
+
+        <!-- How did you find The Overview? -->
+        <div>
+          <label for="join-referral" style="display: block; font-size: var(--text-sm); font-weight: 500; color: var(--charcoal); margin-bottom: var(--sp-2);">
+            How did you find The Overview?
+          </label>
+          <textarea
+            id="join-referral"
+            x-model="form.referral"
+            rows="2"
+            style="width: 100%; padding: var(--sp-3) var(--sp-4); font-family: var(--font-body); font-size: var(--text-base); color: var(--charcoal); background: var(--white); border: var(--border-light); border-radius: 4px; outline: none; resize: vertical; transition: border-color var(--duration-fast) var(--ease-out);"
+            onfocus="this.style.borderColor='var(--green)'"
+            onblur="this.style.borderColor=''"
+          ></textarea>
+        </div>
+
+        <!-- Privacy note -->
+        <p style="font-size: var(--text-xs); color: var(--zinc); line-height: 1.5; max-width: 32rem;">
+          Your email is only used to contact you about your submission. It is never displayed publicly or shared.
+        </p>
+
+        <!-- Submit -->
+        <div>
+          <button
+            type="submit"
+            :disabled="loading"
+            style="display: inline-flex; align-items: center; gap: var(--sp-2); padding: var(--sp-3) var(--sp-8); font-family: var(--font-body); font-size: var(--text-sm); font-weight: 500; color: var(--white); background: var(--green); border: none; border-radius: 4px; cursor: pointer; transition: background var(--duration-fast) var(--ease-out);"
+            onmouseover="this.style.background='var(--green-deep)'"
+            onmouseout="this.style.background='var(--green)'"
+          >
+            <span x-show="!loading">Submit</span>
+            <span x-show="loading" x-cloak>Submitting...</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</Base>

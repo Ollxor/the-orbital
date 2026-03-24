@@ -25,7 +25,7 @@ const categorized = new Set(tiers);
 const uncategorized = people.filter(p => !p.relationship_tier || !categorized.has(p.relationship_tier));
 if (uncategorized.length > 0) grouped.set('Other', uncategorized);
 ---
-<Base title="People" currentPath="/people">
+<Base title="People" currentPath="/people" noindex={true}>
   <h1 class="page-title">People</h1>
   <p class="page-subtitle">
     Individuals connected to the landscape — researchers, practitioners, advisors, and collaborators

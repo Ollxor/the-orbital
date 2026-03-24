@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   THE GARDEN — Design System
+   THE OVERVIEW — Design System
    Scandinavian minimalism · Editorial warmth · Research depth
    ═══════════════════════════════════════════════════════ */
 
@@ -453,6 +453,17 @@ strong {
   font-size: var(--text-sm);
   color: var(--zinc);
   margin-bottom: var(--sp-3);
+}
+
+.card__thumb {
+  width: calc(100% + var(--sp-6) * 2);
+  margin-left: calc(-1 * var(--sp-6));
+  margin-right: calc(-1 * var(--sp-6));
+  margin-top: calc(-1 * var(--sp-6));
+  margin-bottom: 0.75rem;
+  height: 140px;
+  object-fit: cover;
+  display: block;
 }
 
 .card__description {
@@ -1274,6 +1285,270 @@ strong {
   .dossier-header__title {
     font-size: var(--text-2xl);
   }
+}
+
+/* ─── Overview Header ─────────────────────────────────── */
+
+.overview-header {
+  text-align: center;
+  padding: var(--sp-16) 0 var(--sp-12);
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.overview-header__title {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--zinc);
+  margin-bottom: var(--sp-3);
+}
+
+.overview-header__subtitle {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+  margin-bottom: var(--sp-6);
+}
+
+.overview-header__description {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  line-height: 1.7;
+  color: var(--charcoal-soft);
+  max-width: 38rem;
+  margin: 0 auto var(--sp-4);
+}
+
+.overview-header__tagline {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--zinc);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--sp-10);
+}
+
+/* ─── Orientation Cards ───────────────────────────────── */
+
+.orientation-cards {
+  display: flex;
+  gap: var(--sp-4);
+  justify-content: center;
+  margin-bottom: var(--sp-6);
+}
+
+.orientation-card {
+  flex: 1;
+  max-width: 14rem;
+  padding: var(--sp-5) var(--sp-4);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--charcoal);
+  transition: transform var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.orientation-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.orientation-card__emoji {
+  font-size: var(--text-xl);
+}
+
+.orientation-card__name {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.orientation-card__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--charcoal-soft);
+}
+
+@media (max-width: 48rem) {
+  .orientation-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .orientation-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .overview-header {
+    padding: var(--sp-10) 0 var(--sp-8);
+  }
+
+  .overview-header__subtitle {
+    font-size: var(--text-2xl);
+  }
+}
+
+.overview-header__skip {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--zinc-light);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.overview-header__skip:hover {
+  color: var(--zinc);
+}
+
+/* ─── Why This Matters ────────────────────────────────── */
+
+.news-card__why {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--zinc);
+  font-style: italic;
+  margin-top: var(--sp-2);
+}
+
+/* ─── Join Form ───────────────────────────────────────── */
+
+.join-form {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.join-form__field {
+  margin-bottom: var(--sp-6);
+}
+
+.join-form__label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: var(--sp-2);
+}
+
+.join-form__hint {
+  font-weight: 400;
+  color: var(--zinc);
+  font-size: var(--text-xs);
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="url"],
+.join-form textarea {
+  width: 100%;
+  padding: var(--sp-3) var(--sp-4);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--charcoal);
+  background: var(--white);
+  border: var(--border-light);
+  border-radius: 0.375rem;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.join-form input:focus,
+.join-form textarea:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.join-form textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+.join-form__checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+.join-form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.join-form__checkbox input[type="checkbox"] {
+  accent-color: var(--green);
+}
+
+.join-form__submit {
+  display: inline-block;
+  padding: var(--sp-3) var(--sp-8);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--white);
+  background: var(--green);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.join-form__submit:hover {
+  background: var(--green-deep);
+}
+
+.join-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.join-form__privacy {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--zinc);
+  line-height: 1.5;
+  margin-top: var(--sp-4);
+}
+
+.join-form__char-count {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--zinc-light);
+  text-align: right;
+  margin-top: var(--sp-1);
+}
+
+.join-form__message {
+  padding: var(--sp-4) var(--sp-6);
+  border-radius: 0.375rem;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  margin-bottom: var(--sp-6);
+}
+
+.join-form__message--success {
+  background: var(--green-mist);
+  color: var(--green-deep);
+}
+
+.join-form__message--error {
+  background: rgba(220, 38, 38, 0.08);
+  color: #991b1b;
 }
 
 /* ─── Print ───────────────────────────────────────────── */

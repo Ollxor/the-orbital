@@ -14,6 +14,7 @@ const news = defineCollection({
     actors: z.array(z.number()).default([]),
     projects: z.array(z.number()).default([]),
     tags: z.array(z.string()).default([]),
+    whyItMatters: z.string().optional(),
     sources: z.array(z.object({
       title: z.string(),
       url: z.string().url(),

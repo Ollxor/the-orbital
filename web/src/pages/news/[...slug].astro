@@ -42,6 +42,9 @@ function formatDate(date: Date): string {
       <p style="font-family:var(--font-display);font-size:var(--text-md);line-height:1.7;color:var(--charcoal-soft);font-style:italic">
         {entry.data.summary}
       </p>
+      {entry.data.whyItMatters && (
+        <p class="news-card__why" style="margin-top:var(--sp-4)">Why this matters &rarr; {entry.data.whyItMatters}</p>
+      )}
     </header>
 
     <div class="reveal reveal-2" style="font-family:var(--font-display);font-size:var(--text-base);line-height:1.85;color:var(--charcoal-soft);margin-bottom:var(--sp-12)">

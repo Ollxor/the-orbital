@@ -2,8 +2,10 @@
 import Base from '../../layouts/Base.astro';
 import {
   getAllOrientations, getOrientation, getOrientationCategories, getOrientationActors,
-  ORIENTATION_COLORS, ORIENTATION_DESCRIPTIONS,
+  getFirstImages, ORIENTATION_COLORS, ORIENTATION_DESCRIPTIONS,
 } from '../../lib/db';
+
+const actorImages = getFirstImages('actor');
 
 export function getStaticPaths() {
   const orientations = getAllOrientations();
@@ -71,28 +73,39 @@ for (const cat of categories) {
   <div class="section reveal reveal-3">
     <div class="section-heading">Actors · {actors.length}</div>
     <div class="card-grid card-grid--2">
-      {actors.map(actor => (
-        <a href={`/actors/${actor.id}`} class="card card--link">
-          <div style={`display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem`}>
-            <span class="badge badge--type">{actor.type}</span>
-            <div class="relevance" style="margin-left:auto">
-              {[1,2,3,4,5].map(n => (
-                <span class={`relevance__bar ${n <= actor.relevance_score ? 'relevance__bar--filled' : ''}`}
-                  style="width:10px;height:2px"></span>
-              ))}
+      {actors.map(actor => {
+        const img = actorImages.get(actor.id);
+        return (
+          <a href={`/actors/${actor.id}`} class="card card--link">
+            {img && (
+              <img
+                src={`/images/actors/${img.filename}`}
+                alt={img.alt_text || actor.name}
+                class="card__image"
+                loading="lazy"
+              />
+            )}
+            <div style={`display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem`}>
+              <span class="badge badge--type">{actor.type}</span>
+              <div class="relevance" style="margin-left:auto">
+                {[1,2,3,4,5].map(n => (
+                  <span class={`relevance__bar ${n <= actor.relevance_score ? 'relevance__bar--filled' : ''}`}
+                    style="width:10px;height:2px"></span>
+                ))}
+              </div>
             </div>
-          </div>
-          <div class="card__title">{actor.name}</div>
-          <div class="card__meta">
-            {actor.location && <span>{actor.location}</span>}
-            {actor.scale && <span> · {actor.scale}</span>}
-            {actor.maturity && <span> · {actor.maturity}</span>}
-          </div>
-          {actor.description && (
-            <p class="card__description">{actor.description}</p>
-          )}
-        </a>
-      ))}
+            <div class="card__title">{actor.name}</div>
+            <div class="card__meta">
+              {actor.location && <span>{actor.location}</span>}
+              {actor.scale && <span> · {actor.scale}</span>}
+              {actor.maturity && <span> · {actor.maturity}</span>}
+            </div>
+            {actor.description && (
+              <p class="card__description">{actor.description}</p>
+            )}
+          </a>
+        );
+      })}
     </div>
   </div>
 </Base>

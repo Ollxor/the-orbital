@@ -36,6 +36,44 @@ import '../styles/global.css';
   <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"
     integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz"
     crossorigin="anonymous"></script>
+  <script is:inline>
+    function reactionBar(slug) {
+      return {
+        slug: slug,
+        counts: { garden: 0, spaceship: 0, temple: 0, assembly: 0 },
+        reacted: { garden: false, spaceship: false, temple: false, assembly: false },
+        async load() {
+          // Load saved reactions from localStorage
+          const saved = localStorage.getItem('reactions:' + this.slug);
+          if (saved) {
+            try { this.reacted = JSON.parse(saved); } catch(e) {}
+          }
+          // Fetch counts from API
+          try {
+            const res = await fetch('/api/reactions?slug=' + encodeURIComponent(this.slug));
+            if (res.ok) this.counts = await res.json();
+          } catch(e) {}
+        },
+        async react(orientation) {
+          if (this.reacted[orientation]) return;
+          this.reacted[orientation] = true;
+          this.counts[orientation]++;
+          localStorage.setItem('reactions:' + this.slug, JSON.stringify(this.reacted));
+          try {
+            const res = await fetch('/api/reactions', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ slug: this.slug, orientation: orientation })
+            });
+            if (res.ok) {
+              const updated = await res.json();
+              this.counts = updated;
+            }
+          } catch(e) {}
+        }
+      };
+    }
+  </script>
 </head>
 <body>
   <div class="site-wrapper">

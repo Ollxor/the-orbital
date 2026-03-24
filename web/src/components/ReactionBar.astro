@@ -1,0 +1,64 @@
+---
+interface Props {
+  slug: string;
+  expanded?: boolean;
+}
+const { slug, expanded = false } = Astro.props;
+---
+<div
+  class={`reaction-bar ${expanded ? 'reaction-bar--expanded' : ''}`}
+  x-data={`reactionBar('${slug}')`}
+  x-init="load()"
+>
+  <button
+    class="reaction-btn"
+    :class="{ 'reaction-btn--active': reacted.garden }"
+    @click="react('garden')"
+    :disabled="reacted.garden"
+    title="Garden of Eden"
+    style="--reaction-color: #D5E8D4; --reaction-color-deep: #6b8f71"
+  >
+    <span class="reaction-btn__emoji">🌱</span>
+    {expanded && <span class="reaction-btn__label">Garden of Eden</span>}
+    <span class="reaction-btn__count" x-show="counts.garden > 0" x-text="counts.garden"></span>
+  </button>
+
+  <button
+    class="reaction-btn"
+    :class="{ 'reaction-btn--active': reacted.spaceship }"
+    @click="react('spaceship')"
+    :disabled="reacted.spaceship"
+    title="Spaceship Earth"
+    style="--reaction-color: #DAE8FC; --reaction-color-deep: #6b7f8f"
+  >
+    <span class="reaction-btn__emoji">🚀</span>
+    {expanded && <span class="reaction-btn__label">Spaceship Earth</span>}
+    <span class="reaction-btn__count" x-show="counts.spaceship > 0" x-text="counts.spaceship"></span>
+  </button>
+
+  <button
+    class="reaction-btn"
+    :class="{ 'reaction-btn--active': reacted.temple }"
+    @click="react('temple')"
+    :disabled="reacted.temple"
+    title="Eleusinian Mysteries"
+    style="--reaction-color: #E1D5E7; --reaction-color-deep: #8f7b6b"
+  >
+    <span class="reaction-btn__emoji">🔮</span>
+    {expanded && <span class="reaction-btn__label">Eleusinian Mysteries</span>}
+    <span class="reaction-btn__count" x-show="counts.temple > 0" x-text="counts.temple"></span>
+  </button>
+
+  <button
+    class="reaction-btn"
+    :class="{ 'reaction-btn--active': reacted.assembly }"
+    @click="react('assembly')"
+    :disabled="reacted.assembly"
+    title="General Assembly of Earth"
+    style="--reaction-color: #FFF2CC; --reaction-color-deep: #7b6b8f"
+  >
+    <span class="reaction-btn__emoji">🌍</span>
+    {expanded && <span class="reaction-btn__label">General Assembly</span>}
+    <span class="reaction-btn__count" x-show="counts.assembly > 0" x-text="counts.assembly"></span>
+  </button>
+</div>

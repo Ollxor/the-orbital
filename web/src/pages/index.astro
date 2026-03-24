@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import ReactionBar from '../components/ReactionBar.astro';
 import { getCollection } from 'astro:content';
 import { getAllOrientations, getOrientationCategories, getStats, getActor, ORIENTATION_COLORS, ORIENTATION_DISPLAY_NAMES, ORIENTATION_CARD_COLORS, ORIENTATION_EMOJIS, ORIENTATION_SHORT_DESCRIPTIONS } from '../lib/db';
 
@@ -117,6 +118,7 @@ function formatDate(date: Date): string {
                 <a href={`/tags/${tag}`} class="chip">{tag}</a>
               ))}
             </div>
+            <ReactionBar slug={story.id} />
           </article>
         );
       })}

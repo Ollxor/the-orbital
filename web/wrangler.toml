@@ -1,0 +1,10 @@
+name = "theoverview"
+pages_build_output_dir = "dist"
+
+[[kv_namespaces]]
+binding = "SUBMISSIONS"
+id = "c877e47057564ba393f1b3dc27f1dd60"
+
+[[kv_namespaces]]
+binding = "REACTIONS"
+id = "bdc9bd18d7b348febea38f91c4951c3f"

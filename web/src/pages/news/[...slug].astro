@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import ReactionBar from '../../components/ReactionBar.astro';
 import { getCollection, render } from 'astro:content';
 import { getActor, getProject, ORIENTATION_COLORS } from '../../lib/db';
 
@@ -77,6 +78,10 @@ function formatDate(date: Date): string {
         </div>
       </div>
     )}
+
+    <div class="reveal reveal-4" style="margin-bottom:var(--sp-8)">
+      <ReactionBar slug={entry.id} expanded={true} />
+    </div>
 
     {(linkedActors.length > 0 || linkedProjects.length > 0) && (
       <footer class="reveal reveal-4" style="padding-top:var(--sp-8);border-top:var(--border-subtle)">

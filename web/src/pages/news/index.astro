@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import ReactionBar from '../../components/ReactionBar.astro';
 import { getCollection } from 'astro:content';
 import { getActor } from '../../lib/db';
 
@@ -56,6 +57,7 @@ function formatDate(date: Date): string {
             <a href={`/tags/${tag}`} class="chip">{tag}</a>
           ))}
         </div>
+        <ReactionBar slug={story.id} />
       </article>
     );
   })}

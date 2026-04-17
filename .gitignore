@@ -26,6 +26,7 @@ node_modules/
 # Build output
 web/dist/
 web/.astro/
+web/.wrangler/
 
 # Large output files
 step_c_results.json

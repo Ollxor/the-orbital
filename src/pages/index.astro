@@ -1,0 +1,265 @@
+---
+import Base from '../layouts/Base.astro';
+import newsData from '../data/news.json';
+import actorsData from '../data/actors.json';
+import projectsData from '../data/projects.json';
+import eventsData from '../data/events.json';
+
+const news = [...newsData].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const actorCount = actorsData.length;
+const projectCount = projectsData.length;
+const eventCount = eventsData.length;
+
+const orientationLabels: Record<string, string> = {
+  GARDEN: 'The Garden',
+  SPACESHIP: 'Spaceship Earth',
+  MYSTERIES: 'The Mysteries',
+  ASSEMBLY: 'The Assemblies',
+};
+
+const iconMap: Record<string, string> = {
+  GARDEN: 'Icons2-01.svg',
+  SPACESHIP: 'Icons2-04.svg',
+  MYSTERIES: 'Icons2-03.svg',
+  ASSEMBLY: 'Icons2-02.svg',
+};
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+const actorMap = Object.fromEntries(actorsData.map(a => [a.slug, a]));
+const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
+---
+
+<Base>
+  <div class="container">
+
+    <div class="filter-bar" id="filter-bar">
+      {orientations.map(key => (
+        <button class="filter-btn active" data-orientation={key} aria-pressed="true">
+          <img src={`/assets/${iconMap[key]}`} alt={orientationLabels[key]} class="filter-icon" />
+          <span class="filter-label">{orientationLabels[key]}</span>
+        </button>
+      ))}
+    </div>
+
+    <p class="stats-bar">
+      <span>{actorCount} actors</span>
+      <span class="sep">·</span>
+      <span>{projectCount} projects</span>
+      <span class="sep">·</span>
+      <span>{eventCount} events</span>
+    </p>
+
+    <section class="feed">
+      <h2 class="feed-heading">From the Field</h2>
+
+      {news.map((story) => (
+        <article class="news-card" data-orientations={story.orientations.join(',')}>
+          <div class="card-image-wrap">
+            <img
+              src={story.image}
+              alt={story.imageAlt}
+              class="card-image"
+              loading="lazy"
+              onerror="this.closest('.card-image-wrap').style.display='none'"
+            />
+          </div>
+          <div class="card-body">
+            <time class="card-date">{formatDate(story.date)}</time>
+            <h3 class="card-title">
+              <a href={`/news/${story.slug}`}>{story.title}</a>
+            </h3>
+            <p class="card-summary">{story.summary}</p>
+            <p class="card-insight">
+              <span class="insight-label">Why this matters →</span>
+              {story.insight}
+            </p>
+            <div class="card-meta">
+              {story.actors.map(slug => actorMap[slug] && (
+                <a href={`/actors#${slug}`} class="card-actor">{actorMap[slug].name}</a>
+              ))}
+              <div class="tags">
+                {story.tags.map(tag => (
+                  <span class="tag">{tag.replace(/-/g, '\u00a0')}</span>
+                ))}
+              </div>
+            </div>
+            <div class="card-reactions" data-story={story.slug}>
+              {orientations.map(key => (
+                <button class="reaction-btn" data-orientation={key} aria-label={`Tag as ${orientationLabels[key]}`}>
+                  <img src={`/assets/${iconMap[key]}`} alt="" class="reaction-icon" />
+                  <span class="reaction-count"></span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </section>
+
+  </div>
+</Base>
+
+<style>
+.filter-bar {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: .875rem 1rem;
+  background: var(--filter-bg);
+  border-radius: 8px;
+  margin-bottom: .75rem;
+}
+.filter-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: 1;
+  transition: transform .15s, opacity .15s;
+}
+.filter-btn:hover { transform: scale(1.1); }
+.filter-btn:not(.active) { opacity: .3; }
+.filter-icon { width: 30px; height: 30px; object-fit: contain; }
+.filter-label { font-size: .6875rem; color: var(--text-3); text-align: center; white-space: nowrap; }
+
+.stats-bar {
+  font-size: .75rem;
+  color: var(--text-3);
+  margin-bottom: 2rem;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+.sep { color: var(--border); }
+
+.feed-heading {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1.5rem;
+}
+
+.news-card {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  transition: opacity .2s;
+}
+.news-card.hidden { opacity: .25; }
+
+.card-image-wrap { margin-bottom: .875rem; }
+.card-image { width: 100%; max-height: 340px; object-fit: cover; border-radius: 4px; }
+
+.card-date { display: block; font-size: .8125rem; color: var(--text-3); margin-bottom: .4rem; }
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-bottom: .625rem;
+}
+.card-title a { text-decoration: none; }
+.card-title a:hover { text-decoration: underline; }
+
+.card-summary { font-size: .9375rem; color: #333; line-height: 1.65; margin-bottom: .625rem; }
+
+.card-insight { font-size: .875rem; color: #888; font-style: italic; line-height: 1.5; margin-bottom: .875rem; }
+.insight-label { font-style: normal; font-weight: 600; color: var(--text-3); margin-right: .375rem; font-size: .8125rem; }
+
+.card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-bottom: .875rem; }
+.card-actor { font-size: .8125rem; font-weight: 500; color: var(--text-2); text-decoration: none; }
+.card-actor:hover { color: var(--text); }
+
+.card-reactions {
+  display: flex;
+  gap: 1rem;
+  padding-top: .75rem;
+  border-top: 1px solid var(--border);
+}
+.reaction-btn {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: .45;
+  transition: opacity .15s;
+}
+.reaction-btn:hover { opacity: .8; }
+.reaction-btn.reacted { opacity: 1; }
+.reaction-icon { width: 18px; height: 18px; object-fit: contain; }
+.reaction-count { font-size: .75rem; color: var(--text-2); min-width: 1ch; }
+</style>
+
+<script>
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.news-card');
+
+function getActive() {
+  const active = new Set();
+  filterBtns.forEach(btn => { if (btn.classList.contains('active')) active.add(btn.dataset.orientation); });
+  return active;
+}
+
+function applyFilter() {
+  const active = getActive();
+  cards.forEach(card => {
+    const orientations = (card.dataset.orientations || '').split(',');
+    card.classList.toggle('hidden', !orientations.some(o => active.has(o)));
+  });
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+    if (getActive().size === 0) filterBtns.forEach(b => { b.classList.add('active'); b.setAttribute('aria-pressed', 'true'); });
+    applyFilter();
+  });
+});
+
+// Reactions
+const STORAGE_KEY = 'orbital_reactions';
+let reactions = {};
+try { reactions = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch {}
+
+document.querySelectorAll('.card-reactions').forEach(container => {
+  const story = container.dataset.story;
+  if (!reactions[story]) reactions[story] = {};
+  const reacted = JSON.parse(localStorage.getItem('orbital_reacted') || '{}');
+
+  container.querySelectorAll('.reaction-btn').forEach(btn => {
+    const orientation = btn.dataset.orientation;
+    const countEl = btn.querySelector('.reaction-count');
+    const count = reactions[story][orientation] || 0;
+    if (count > 0) countEl.textContent = count;
+    if (reacted[story] && reacted[story][orientation]) btn.classList.add('reacted');
+
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('reacted')) return;
+      reactions[story][orientation] = (reactions[story][orientation] || 0) + 1;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(reactions));
+      if (!reacted[story]) reacted[story] = {};
+      reacted[story][orientation] = true;
+      localStorage.setItem('orbital_reacted', JSON.stringify(reacted));
+      countEl.textContent = reactions[story][orientation];
+      btn.classList.add('reacted');
+    });
+  });
+});
+</script>

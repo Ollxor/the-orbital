@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import projectsData from '../data/projects.json';
+
+const iconMap: Record<string, string> = {
+  GARDEN: 'Icons2-01.svg',
+  SPACESHIP: 'Icons2-04.svg',
+  MYSTERIES: 'Icons2-03.svg',
+  ASSEMBLY: 'Icons2-02.svg',
+};
+
+const orientationLabels: Record<string, string> = {
+  GARDEN: 'The Garden',
+  SPACESHIP: 'Spaceship Earth',
+  MYSTERIES: 'The Mysteries',
+  ASSEMBLY: 'The Assemblies',
+};
+
+const statusLabel: Record<string, string> = {
+  active: 'Active',
+  planned: 'Planned',
+  completed: 'Completed',
+};
+---
+
+<Base title="Projects — The Orbital">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">Projects</h1>
+      <p class="page-desc">Specific initiatives and experiments at the frontier of planetary governance.</p>
+    </div>
+
+    <div class="projects-list">
+      {projectsData.map(project => (
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <h3 class="project-name">
+                <a href={project.url} target="_blank" rel="noopener">{project.name}</a>
+              </h3>
+              <span class={`status-badge status-${project.status}`}>{statusLabel[project.status]}</span>
+            </div>
+            <div class="project-icons">
+              {project.orientations.map(o => (
+                <img src={`/assets/${iconMap[o]}`} alt={orientationLabels[o]} class="project-icon" title={orientationLabels[o]} />
+              ))}
+            </div>
+          </div>
+          <p class="project-desc">{project.description}</p>
+          <div class="tags">
+            {project.tags.map(tag => <span class="tag">{tag.replace(/-/g, '\u00a0')}</span>)}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Base>
+
+<style>
+.page-header { padding: 2rem 0 1.5rem; }
+.page-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: normal; margin-bottom: .375rem; }
+.page-desc { font-size: .9375rem; color: var(--text-2); }
+
+.projects-list { display: flex; flex-direction: column; gap: 1px; }
+
+.project-card {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: .625rem; }
+.project-name { font-family: var(--font-serif); font-size: 1.2rem; font-weight: normal; display: inline; margin-right: .5rem; }
+.project-name a { text-decoration: none; }
+.project-name a:hover { text-decoration: underline; }
+
+.status-badge {
+  display: inline-block;
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: .125rem .5rem;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+.status-active { background: #e8f5e9; color: #2e7d32; }
+.status-planned { background: #fff8e1; color: #f57f17; }
+.status-completed { background: var(--filter-bg); color: var(--text-3); }
+
+.project-icons { display: flex; gap: .25rem; flex-shrink: 0; }
+.project-icon { width: 22px; height: 22px; object-fit: contain; }
+.project-desc { font-size: .9375rem; color: var(--text-2); line-height: 1.6; margin-bottom: .625rem; }
+</style>

@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Graph — The Orbital">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">Graph</h1>
+      <p class="page-desc">A visual map of connections between actors, projects, and events.</p>
+    </div>
+    <div class="placeholder">
+      <p>The relationship graph is coming in a future version.</p>
+      <p>It will show how actors, projects, and events connect across the four orientations — making the emerging pattern visible at a glance.</p>
+      <p>In the meantime, browse <a href="/actors">Actors</a>, <a href="/projects">Projects</a>, and <a href="/events">Events</a>.</p>
+    </div>
+  </div>
+</Base>
+
+<style>
+.page-header { padding: 2rem 0 1.5rem; }
+.page-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: normal; margin-bottom: .375rem; }
+.page-desc { font-size: .9375rem; color: var(--text-2); }
+.placeholder {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-2);
+  line-height: 1.8;
+}
+.placeholder p { margin-bottom: .75rem; }
+.placeholder a { color: var(--text); }
+</style>

@@ -1,0 +1,178 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Join — The Orbital">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">Join the Map</h1>
+      <p class="page-desc">Working on something that belongs here? Tell us about it.</p>
+    </div>
+
+    <div class="join-layout">
+      <form
+        class="join-form"
+        id="join-form"
+        action="https://formspree.io/f/xgorkjlp"
+        method="POST"
+      >
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="field">
+          <label for="name">Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+          <p class="field-note">Your email is only used to contact you about your submission. It is never displayed publicly or shared.</p>
+        </div>
+
+        <div class="field">
+          <label for="organisation">Organisation <span class="optional">(optional)</span></label>
+          <input type="text" id="organisation" name="organisation" autocomplete="organization" />
+        </div>
+
+        <div class="field">
+          <label for="what">What are you working on? <span class="required">*</span></label>
+          <textarea id="what" name="what" required maxlength="280" rows="4" placeholder="In 280 characters or fewer…"></textarea>
+          <p class="char-count" id="char-count">0 / 280</p>
+        </div>
+
+        <div class="field">
+          <label>Which orientations resonate with your work? <span class="required">*</span></label>
+          <div class="checkboxes">
+            <label class="checkbox-label">
+              <input type="checkbox" name="orientations" value="GARDEN" />
+              <span>The Garden</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="orientations" value="SPACESHIP" />
+              <span>Spaceship Earth</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="orientations" value="MYSTERIES" />
+              <span>The Mysteries</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="orientations" value="ASSEMBLY" />
+              <span>The Assemblies</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="location">Location (city / country) <span class="required">*</span></label>
+          <input type="text" id="location" name="location" required placeholder="e.g. Stockholm, Sweden" />
+        </div>
+
+        <div class="field">
+          <label for="website">Website or social link <span class="optional">(optional)</span></label>
+          <input type="url" id="website" name="website" autocomplete="url" placeholder="https://" />
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="submit-btn">Send submission</button>
+        </div>
+      </form>
+
+      <div class="join-success" id="join-success" style="display:none">
+        <h2>Thanks!</h2>
+        <p>Your submission will be reviewed by our team before appearing on the map.</p>
+        <a href="/">← Back to the feed</a>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+.page-header { padding: 2rem 0 1.5rem; }
+.page-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: normal; margin-bottom: .375rem; }
+.page-desc { font-size: .9375rem; color: var(--text-2); }
+
+.join-layout { max-width: 520px; }
+
+.join-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.field { display: flex; flex-direction: column; gap: .375rem; }
+.field label { font-size: .9rem; font-weight: 600; color: var(--text); }
+.required { color: #c0392b; font-weight: normal; }
+.optional { color: var(--text-3); font-weight: normal; font-size: .8125rem; }
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="url"],
+.field textarea {
+  padding: .5rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  font-size: .9375rem;
+  font-family: var(--font-sans);
+  color: var(--text);
+  outline: none;
+  transition: border-color .15s;
+}
+.field input:focus, .field textarea:focus { border-color: var(--text-2); }
+.field textarea { resize: vertical; }
+
+.field-note { font-size: .8125rem; color: var(--text-3); line-height: 1.5; }
+.char-count { font-size: .8125rem; color: var(--text-3); text-align: right; }
+
+.checkboxes { display: flex; flex-direction: column; gap: .5rem; margin-top: .25rem; }
+.checkbox-label { display: flex; align-items: center; gap: .5rem; font-size: .9375rem; font-weight: normal; cursor: pointer; }
+.checkbox-label input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+
+.submit-row { margin-top: .5rem; }
+.submit-btn {
+  padding: .625rem 1.5rem;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 6px;
+  font-size: .9375rem;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: opacity .15s;
+}
+.submit-btn:hover { opacity: .85; }
+
+.join-success {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: center;
+}
+.join-success h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: normal; margin-bottom: .75rem; }
+.join-success p { color: var(--text-2); margin-bottom: 1rem; }
+.join-success a { color: var(--text); }
+</style>
+
+<script>
+const textarea = document.getElementById('what') as HTMLTextAreaElement;
+const charCount = document.getElementById('char-count');
+textarea?.addEventListener('input', () => {
+  if (charCount) charCount.textContent = `${textarea.value.length} / 280`;
+});
+
+const form = document.getElementById('join-form') as HTMLFormElement;
+const success = document.getElementById('join-success');
+
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+  try {
+    const res = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+    if (res.ok) {
+      form.style.display = 'none';
+      if (success) success.style.display = 'block';
+    } else {
+      alert('Something went wrong. Please try again or email us directly.');
+    }
+  } catch {
+    alert('Something went wrong. Please try again.');
+  }
+});
+</script>

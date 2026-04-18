@@ -1,0 +1,174 @@
+---
+import Base from '../layouts/Base.astro';
+import actorsData from '../data/actors.json';
+
+const orientationLabels: Record<string, string> = {
+  GARDEN: 'The Garden',
+  SPACESHIP: 'Spaceship Earth',
+  MYSTERIES: 'The Mysteries',
+  ASSEMBLY: 'The Assemblies',
+};
+
+const iconMap: Record<string, string> = {
+  GARDEN: 'Icons2-01.svg',
+  SPACESHIP: 'Icons2-04.svg',
+  MYSTERIES: 'Icons2-03.svg',
+  ASSEMBLY: 'Icons2-02.svg',
+};
+
+const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
+---
+
+<Base title="Actors — The Orbital">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">Actors</h1>
+      <p class="page-desc">Organisations, networks, and initiatives building pieces of the planetary governance movement.</p>
+    </div>
+
+    <div class="filter-bar" id="filter-bar">
+      {orientations.map(key => (
+        <button class="filter-btn active" data-orientation={key} aria-pressed="true">
+          <img src={`/assets/${iconMap[key]}`} alt={orientationLabels[key]} class="filter-icon" />
+          <span class="filter-label">{orientationLabels[key]}</span>
+        </button>
+      ))}
+    </div>
+
+    <div class="search-row">
+      <input type="search" id="actor-search" placeholder="Search actors…" class="search-input" />
+      <span class="actor-count" id="actor-count">{actorsData.length} actors</span>
+    </div>
+
+    <div class="actors-grid" id="actors-grid">
+      {actorsData.map(actor => (
+        <div
+          class="actor-card"
+          id={actor.slug}
+          data-orientations={actor.orientations.join(',')}
+          data-name={actor.name.toLowerCase()}
+        >
+          <div class="actor-header">
+            <h3 class="actor-name">
+              <a href={actor.website} target="_blank" rel="noopener">{actor.name}</a>
+            </h3>
+            <div class="actor-orientations">
+              {actor.orientations.map(o => (
+                <img src={`/assets/${iconMap[o]}`} alt={orientationLabels[o]} class="actor-orient-icon" title={orientationLabels[o]} />
+              ))}
+            </div>
+          </div>
+          <p class="actor-desc">{actor.description}</p>
+          {actor.location && <p class="actor-location">{actor.location}</p>}
+          <div class="tags">
+            {actor.tags.map(tag => <span class="tag">{tag.replace(/-/g, '\u00a0')}</span>)}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="no-results" id="no-results" style="display:none">No actors match your current filters.</p>
+  </div>
+</Base>
+
+<style>
+.page-header { padding: 2rem 0 1.5rem; }
+.page-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: normal; margin-bottom: .375rem; }
+.page-desc { font-size: .9375rem; color: var(--text-2); }
+
+.filter-bar {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: .875rem 1rem;
+  background: var(--filter-bg);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.filter-btn { display: flex; flex-direction: column; align-items: center; gap: .3rem; background: none; border: none; cursor: pointer; padding: 0; opacity: 1; transition: transform .15s, opacity .15s; }
+.filter-btn:hover { transform: scale(1.1); }
+.filter-btn:not(.active) { opacity: .3; }
+.filter-icon { width: 28px; height: 28px; object-fit: contain; }
+.filter-label { font-size: .6875rem; color: var(--text-3); white-space: nowrap; }
+
+.search-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
+.search-input {
+  flex: 1;
+  max-width: 320px;
+  padding: .4375rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  font-size: .875rem;
+  color: var(--text);
+  outline: none;
+}
+.search-input:focus { border-color: var(--text-2); }
+.actor-count { font-size: .8125rem; color: var(--text-3); }
+
+.actors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+@media (max-width: 580px) { .actors-grid { grid-template-columns: 1fr; } }
+
+.actor-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  transition: opacity .2s;
+}
+.actor-card.hidden { display: none; }
+.actor-header { display: flex; justify-content: space-between; align-items: flex-start; gap: .5rem; margin-bottom: .5rem; }
+.actor-name { font-size: 1rem; font-weight: 600; line-height: 1.3; }
+.actor-name a { text-decoration: none; }
+.actor-name a:hover { text-decoration: underline; }
+.actor-orientations { display: flex; gap: .25rem; flex-shrink: 0; }
+.actor-orient-icon { width: 20px; height: 20px; object-fit: contain; }
+.actor-desc { font-size: .875rem; color: var(--text-2); line-height: 1.55; margin-bottom: .5rem; }
+.actor-location { font-size: .75rem; color: var(--text-3); margin-bottom: .5rem; }
+.no-results { color: var(--text-3); font-size: .9375rem; padding: 2rem 0; }
+</style>
+
+<script>
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.actor-card');
+const searchInput = document.getElementById('actor-search');
+const countEl = document.getElementById('actor-count');
+const noResults = document.getElementById('no-results');
+
+function updateVisibility() {
+  const active = new Set();
+  filterBtns.forEach(b => { if (b.classList.contains('active')) active.add(b.dataset.orientation); });
+  const query = (searchInput?.value || '').toLowerCase();
+  let visible = 0;
+
+  cards.forEach(card => {
+    const orientations = (card.dataset.orientations || '').split(',');
+    const name = card.dataset.name || '';
+    const matchFilter = orientations.some(o => active.has(o));
+    const matchSearch = !query || name.includes(query);
+    const show = matchFilter && matchSearch;
+    card.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+
+  if (countEl) countEl.textContent = `${visible} actor${visible !== 1 ? 's' : ''}`;
+  if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+    const active = new Set();
+    filterBtns.forEach(b => { if (b.classList.contains('active')) active.add(b.dataset.orientation); });
+    if (active.size === 0) filterBtns.forEach(b => { b.classList.add('active'); b.setAttribute('aria-pressed', 'true'); });
+    updateVisibility();
+  });
+});
+
+searchInput?.addEventListener('input', updateVisibility);
+</script>

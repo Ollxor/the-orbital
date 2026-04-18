@@ -1,0 +1,96 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Contact — The Orbital">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">Contact</h1>
+      <p class="page-desc">Questions, tips, or just want to say hello?</p>
+    </div>
+
+    <div class="contact-layout">
+      <form
+        class="contact-form"
+        id="contact-form"
+        action="https://formspree.io/f/xgorkjlp"
+        method="POST"
+      >
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="field">
+          <label for="name">Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+
+        <div class="field">
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea id="message" name="message" required rows="6"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send message</button>
+      </form>
+
+      <div class="contact-success" id="contact-success" style="display:none">
+        <h2>Message sent!</h2>
+        <p>We'll get back to you soon.</p>
+        <a href="/">← Back to the feed</a>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+.page-header { padding: 2rem 0 1.5rem; }
+.page-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: normal; margin-bottom: .375rem; }
+.page-desc { font-size: .9375rem; color: var(--text-2); }
+.contact-layout { max-width: 480px; }
+.contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+.field { display: flex; flex-direction: column; gap: .375rem; }
+.field label { font-size: .9rem; font-weight: 600; }
+.required { color: #c0392b; font-weight: normal; }
+.field input, .field textarea {
+  padding: .5rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  font-size: .9375rem;
+  font-family: var(--font-sans);
+  color: var(--text);
+  outline: none;
+}
+.field input:focus, .field textarea:focus { border-color: var(--text-2); }
+.field textarea { resize: vertical; }
+.submit-btn {
+  padding: .625rem 1.5rem;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 6px;
+  font-size: .9375rem;
+  cursor: pointer;
+  transition: opacity .15s;
+  align-self: flex-start;
+}
+.submit-btn:hover { opacity: .85; }
+.contact-success { padding: 2rem; border: 1px solid var(--border); border-radius: 8px; text-align: center; }
+.contact-success h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: normal; margin-bottom: .75rem; }
+.contact-success p { color: var(--text-2); margin-bottom: 1rem; }
+.contact-success a { color: var(--text); }
+</style>
+
+<script>
+const form = document.getElementById('contact-form') as HTMLFormElement;
+const success = document.getElementById('contact-success');
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+  if (res.ok) { form.style.display = 'none'; if (success) success.style.display = 'block'; }
+  else alert('Something went wrong. Please try again.');
+});
+</script>

@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "nordic-larp-talks-2026",
+    "name": "Nordic Larp Talks 2026",
+    "dates": "October 2026",
+    "location": "Copenhagen, Denmark",
+    "description": "Annual conference bringing together the world's leading practitioners of Nordic larp to discuss the art form's social and political potential.",
+    "actors": ["nordic-larp"],
+    "orientations": ["MYSTERIES"],
+    "tags": ["larp", "conference", "transformative-games"],
+    "url": "https://nordiclarp.org/talks"
+  },
+  {
+    "slug": "degrowth-conference-2026",
+    "name": "Degrowth Conference 2026",
+    "dates": "September 2026",
+    "location": "Barcelona, Spain",
+    "description": "International academic and activist conference on post-growth economics and alternative development pathways.",
+    "actors": ["wellbeing-economy-alliance", "doughnut-economics-action-lab"],
+    "orientations": ["GARDEN", "ASSEMBLY"],
+    "tags": ["degrowth", "regenerative-economics", "conference"],
+    "url": "https://degrowth.net"
+  },
+  {
+    "slug": "global-assembly-climate-2026",
+    "name": "Global Citizens' Assembly on Biodiversity",
+    "dates": "November 2026",
+    "location": "Remote / International",
+    "description": "Second Global Assembly, bringing together randomly selected citizens from around the world to deliberate on biodiversity loss.",
+    "actors": ["global-assembly", "sortition-foundation"],
+    "orientations": ["ASSEMBLY"],
+    "tags": ["citizens-assembly", "biodiversity", "global-governance"],
+    "url": "https://globalassembly.org"
+  },
+  {
+    "slug": "refi-summit-2026",
+    "name": "ReFi Summit 2026",
+    "dates": "June 2026",
+    "location": "Lisbon, Portugal",
+    "description": "Annual gathering of regenerative finance practitioners building web3 infrastructure for ecological restoration.",
+    "actors": ["refi-dao"],
+    "orientations": ["SPACESHIP", "GARDEN"],
+    "tags": ["regenerative-finance", "web3", "summit"],
+    "url": "https://www.refidao.com"
+  },
+  {
+    "slug": "rights-of-nature-symposium-2026",
+    "name": "Rights of Nature World Symposium",
+    "dates": "April 2026",
+    "location": "Quito, Ecuador",
+    "description": "Gathering of legal scholars, indigenous rights advocates, and environmental lawyers advancing rights of nature frameworks globally.",
+    "actors": ["rights-of-nature-tribunal", "earth-law-center"],
+    "orientations": ["GARDEN", "ASSEMBLY"],
+    "tags": ["rights-of-nature", "symposium", "legal-personhood"],
+    "url": "https://www.rightsofnaturetribunal.org"
+  },
+  {
+    "slug": "radicalxchange-2026",
+    "name": "RadicalxChange Conference 2026",
+    "dates": "July 2026",
+    "location": "Detroit, USA",
+    "description": "Conference exploring new political economies at the intersection of technology, design, and democratic innovation.",
+    "actors": ["radicalxchange"],
+    "orientations": ["SPACESHIP", "ASSEMBLY"],
+    "tags": ["governance-technology", "conference", "democratic-innovation"],
+    "url": "https://www.radicalxchange.org"
+  }
+]

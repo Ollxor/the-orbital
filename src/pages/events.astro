@@ -1,0 +1,83 @@
+---
+import Base from '../layouts/Base.astro';
+import eventsData from '../data/events.json';
+
+const iconMap: Record<string, string> = {
+  GARDEN: 'Icons2-01.svg',
+  SPACESHIP: 'Icons2-04.svg',
+  MYSTERIES: 'Icons2-03.svg',
+  ASSEMBLY: 'Icons2-02.svg',
+};
+
+const orientationLabels: Record<string, string> = {
+  GARDEN: 'The Garden',
+  SPACESHIP: 'Spaceship Earth',
+  MYSTERIES: 'The Mysteries',
+  ASSEMBLY: 'The Assemblies',
+};
+---
+
+<Base title="Events — The Orbital">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">Events</h1>
+      <p class="page-desc">Gatherings, conferences, and experiments shaping the planetary governance movement.</p>
+    </div>
+
+    <div class="events-list">
+      {eventsData.map(event => (
+        <div class="event-card">
+          <div class="event-meta">
+            <span class="event-dates">{event.dates}</span>
+            <span class="event-location">{event.location}</span>
+          </div>
+          <div class="event-main">
+            <div>
+              <h3 class="event-name">
+                <a href={event.url} target="_blank" rel="noopener">{event.name}</a>
+              </h3>
+              <p class="event-desc">{event.description}</p>
+              <div class="tags">
+                {event.tags.map(tag => <span class="tag">{tag.replace(/-/g, '\u00a0')}</span>)}
+              </div>
+            </div>
+            <div class="event-icons">
+              {event.orientations.map(o => (
+                <img src={`/assets/${iconMap[o]}`} alt={orientationLabels[o]} class="event-icon" title={orientationLabels[o]} />
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Base>
+
+<style>
+.page-header { padding: 2rem 0 1.5rem; }
+.page-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: normal; margin-bottom: .375rem; }
+.page-desc { font-size: .9375rem; color: var(--text-2); }
+
+.events-list { display: flex; flex-direction: column; }
+
+.event-card { padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+
+.event-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: .8125rem;
+  color: var(--text-3);
+  margin-bottom: .5rem;
+}
+.event-location::before { content: '·'; margin-right: .5rem; }
+
+.event-main { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+
+.event-name { font-family: var(--font-serif); font-size: 1.2rem; font-weight: normal; margin-bottom: .5rem; }
+.event-name a { text-decoration: none; }
+.event-name a:hover { text-decoration: underline; }
+
+.event-desc { font-size: .9375rem; color: var(--text-2); line-height: 1.6; margin-bottom: .625rem; }
+.event-icons { display: flex; gap: .25rem; flex-shrink: 0; margin-top: .25rem; }
+.event-icon { width: 22px; height: 22px; object-fit: contain; }
+</style>

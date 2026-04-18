@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "earth-law-center",
+    "name": "Earth Law Center",
+    "description": "Developing legal frameworks to protect rivers, forests, and ecosystems through rights of nature.",
+    "actors": ["rights-of-nature-tribunal"],
+    "orientations": ["GARDEN", "ASSEMBLY"],
+    "tags": ["rights-of-nature", "legal-personhood", "environmental-law"],
+    "status": "active",
+    "url": "https://www.earthlawcenter.org"
+  },
+  {
+    "slug": "democratic-cities",
+    "name": "Democratic Cities",
+    "description": "Network of cities implementing participatory democracy tools — from citizens' assemblies to participatory budgeting.",
+    "actors": ["participatory-budgeting-project"],
+    "orientations": ["ASSEMBLY"],
+    "tags": ["participatory-democracy", "urban-governance", "democratic-innovation"],
+    "status": "active",
+    "url": "https://www.democratic.city"
+  },
+  {
+    "slug": "digital-twin-earth",
+    "name": "Destination Earth",
+    "description": "EU initiative to build a digital twin of Earth for climate modelling and disaster preparedness.",
+    "actors": [],
+    "orientations": ["SPACESHIP"],
+    "tags": ["digital-twin", "climate-modelling", "planetary-systems"],
+    "status": "active",
+    "url": "https://destination-earth.eu"
+  },
+  {
+    "slug": "commons-transition",
+    "name": "Commons Transition",
+    "description": "Policy framework and practical guides for transitioning toward commons-based peer production economies.",
+    "actors": ["commons-network"],
+    "orientations": ["SPACESHIP", "ASSEMBLY"],
+    "tags": ["commons", "peer-production", "policy"],
+    "status": "active",
+    "url": "https://commonstransition.org"
+  },
+  {
+    "slug": "the-long-game",
+    "name": "The Long Game Megagame",
+    "description": "Large-scale simulation game where 200+ players govern a future Earth facing climate and geopolitical crises.",
+    "actors": ["transformative-play-initiative"],
+    "orientations": ["MYSTERIES", "ASSEMBLY"],
+    "tags": ["megagame", "governance-simulation", "experiential-futures"],
+    "status": "planned",
+    "url": "https://nordiclarp.org"
+  },
+  {
+    "slug": "biocultural-diversity-index",
+    "name": "Biocultural Diversity Index",
+    "description": "Framework for measuring and protecting the intersection of biological and cultural diversity worldwide.",
+    "actors": ["gaia-foundation", "indigenous-terra-madre"],
+    "orientations": ["GARDEN"],
+    "tags": ["biocultural-diversity", "indigenous-knowledge", "measurement"],
+    "status": "active",
+    "url": "https://www.gaiafoundation.org"
+  },
+  {
+    "slug": "liquid-democracy-tools",
+    "name": "Liquid Democracy Infrastructure",
+    "description": "Open-source tools enabling fluid delegation of votes, allowing anyone to be a delegate or delegate to experts.",
+    "actors": ["metagovernance-project"],
+    "orientations": ["SPACESHIP", "ASSEMBLY"],
+    "tags": ["liquid-democracy", "digital-governance", "open-source"],
+    "status": "active",
+    "url": "https://metagov.org"
+  },
+  {
+    "slug": "regenerative-land-trust",
+    "name": "Regenerative Land Trust Network",
+    "description": "Network of land trusts using legal and financial structures to protect land for regenerative stewardship in perpetuity.",
+    "actors": ["gaia-foundation"],
+    "orientations": ["GARDEN"],
+    "tags": ["land-stewardship", "commons", "regenerative-economics"],
+    "status": "active",
+    "url": "https://www.gaiafoundation.org"
+  }
+]

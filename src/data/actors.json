@@ -1,0 +1,200 @@
+[
+  {
+    "slug": "democracy-without-borders",
+    "name": "Democracy Without Borders",
+    "description": "Global campaign for democratic world governance and stronger international institutions.",
+    "website": "https://www.democracywithoutborders.org",
+    "orientations": ["ASSEMBLY"],
+    "tags": ["governance", "democratic-innovation", "global-institutions"],
+    "location": "Berlin, Germany"
+  },
+  {
+    "slug": "rewilding-europe",
+    "name": "Rewilding Europe",
+    "description": "Making Europe a wilder place by restoring natural processes and creating space for wildlife.",
+    "website": "https://www.rewildingeurope.com",
+    "orientations": ["GARDEN"],
+    "tags": ["rewilding", "biodiversity", "land-stewardship"],
+    "location": "Nijmegen, Netherlands"
+  },
+  {
+    "slug": "radicalxchange",
+    "name": "RadicalxChange Foundation",
+    "description": "Building next-generation political economies through technology, design, and social innovation.",
+    "website": "https://www.radicalxchange.org",
+    "orientations": ["SPACESHIP", "ASSEMBLY"],
+    "tags": ["governance-technology", "alternative-ownership", "democratic-innovation"],
+    "location": "Detroit, USA"
+  },
+  {
+    "slug": "kiss-the-ground",
+    "name": "Kiss the Ground",
+    "description": "Inspiring regeneration of the planet's soils through advocacy, media, and farmer training.",
+    "website": "https://kisstheground.com",
+    "orientations": ["GARDEN"],
+    "tags": ["regenerative-agriculture", "soil", "food-systems"],
+    "location": "Los Angeles, USA"
+  },
+  {
+    "slug": "purpose-foundation",
+    "name": "Purpose Foundation",
+    "description": "Spreading steward-ownership as an alternative to traditional corporate ownership structures.",
+    "website": "https://purpose-economy.org",
+    "orientations": ["SPACESHIP", "ASSEMBLY"],
+    "tags": ["steward-ownership", "alternative-ownership", "commons"],
+    "location": "Berlin, Germany"
+  },
+  {
+    "slug": "transformative-play-initiative",
+    "name": "Transformative Play Initiative",
+    "description": "Research group at Uppsala University studying how play and games can drive social transformation.",
+    "website": "https://www.it.uu.se/research/group/tpi",
+    "orientations": ["MYSTERIES"],
+    "tags": ["larp", "transformative-games", "experiential-futures"],
+    "location": "Uppsala, Sweden"
+  },
+  {
+    "slug": "sortition-foundation",
+    "name": "Sortition Foundation",
+    "description": "Promoting the use of sortition — random selection — as a democratic tool for citizens' assemblies.",
+    "website": "https://www.sortitionfoundation.org",
+    "orientations": ["ASSEMBLY"],
+    "tags": ["citizens-assembly", "sortition", "participatory-democracy"],
+    "location": "Bristol, UK"
+  },
+  {
+    "slug": "gaia-foundation",
+    "name": "Gaia Foundation",
+    "description": "Strengthening indigenous and local communities in defending their rights to land, seeds, and territories.",
+    "website": "https://www.gaiafoundation.org",
+    "orientations": ["GARDEN"],
+    "tags": ["indigenous-knowledge", "land-rights", "food-sovereignty"],
+    "location": "London, UK"
+  },
+  {
+    "slug": "metagovernance-project",
+    "name": "Metagovernance Project",
+    "description": "Developing standards and tools for decentralised governance of online communities and DAOs.",
+    "website": "https://metagov.org",
+    "orientations": ["SPACESHIP", "ASSEMBLY"],
+    "tags": ["digital-governance", "dao", "decentralised-governance"],
+    "location": "Remote / USA"
+  },
+  {
+    "slug": "burning-man-project",
+    "name": "Burning Man Project",
+    "description": "Annual gathering and year-round community practising radical self-expression, gifting, and civic responsibility.",
+    "website": "https://burningman.org",
+    "orientations": ["MYSTERIES"],
+    "tags": ["festival-culture", "community-building", "experiential"],
+    "location": "Nevada, USA"
+  },
+  {
+    "slug": "rights-of-nature-tribunal",
+    "name": "International Rights of Nature Tribunal",
+    "description": "Independent tribunal that hears cases on behalf of ecosystems, species, and the rights of nature.",
+    "website": "https://www.rightsofnaturetribunal.org",
+    "orientations": ["GARDEN", "ASSEMBLY"],
+    "tags": ["rights-of-nature", "legal-personhood", "climate-justice"],
+    "location": "International"
+  },
+  {
+    "slug": "doughnut-economics-action-lab",
+    "name": "Doughnut Economics Action Lab",
+    "description": "Turning Kate Raworth's doughnut economics framework into real-world practice for cities and communities.",
+    "website": "https://doughnuteconomics.org",
+    "orientations": ["SPACESHIP", "GARDEN"],
+    "tags": ["regenerative-economics", "doughnut-economics", "urban-governance"],
+    "location": "Oxford, UK"
+  },
+  {
+    "slug": "nordic-larp",
+    "name": "Nordic Larp Community",
+    "description": "International community advancing Nordic-style larp as an art form for social exploration and transformation.",
+    "website": "https://nordiclarp.org",
+    "orientations": ["MYSTERIES"],
+    "tags": ["larp", "transformative-games", "social-change"],
+    "location": "Scandinavia / International"
+  },
+  {
+    "slug": "participatory-budgeting-project",
+    "name": "Participatory Budgeting Project",
+    "description": "Helping communities directly decide how to spend public money through democratic participatory processes.",
+    "website": "https://www.participatorybudgeting.org",
+    "orientations": ["ASSEMBLY"],
+    "tags": ["participatory-budgeting", "participatory-democracy", "local-governance"],
+    "location": "New York, USA"
+  },
+  {
+    "slug": "refi-dao",
+    "name": "ReFi DAO",
+    "description": "Global community building regenerative finance infrastructure on web3 for climate and ecological action.",
+    "website": "https://www.refidao.com",
+    "orientations": ["SPACESHIP", "GARDEN"],
+    "tags": ["regenerative-finance", "web3", "climate-finance"],
+    "location": "Remote / International"
+  },
+  {
+    "slug": "indigenous-terra-madre",
+    "name": "Indigenous Terra Madre",
+    "description": "Network of indigenous food communities protecting biocultural diversity and traditional food systems worldwide.",
+    "website": "https://www.indigenousterramadre.org",
+    "orientations": ["GARDEN"],
+    "tags": ["indigenous-knowledge", "food-sovereignty", "biocultural-diversity"],
+    "location": "International"
+  },
+  {
+    "slug": "bellingcat",
+    "name": "Bellingcat",
+    "description": "Open-source intelligence collective using digital tools and citizen journalism for accountability and truth.",
+    "website": "https://www.bellingcat.com",
+    "orientations": ["SPACESHIP"],
+    "tags": ["citizen-science", "data-sovereignty", "open-source-intelligence"],
+    "location": "Remote / International"
+  },
+  {
+    "slug": "commons-network",
+    "name": "Commons Network",
+    "description": "European think tank and advocacy organisation promoting the commons as foundation for democratic society.",
+    "website": "https://www.commonsnetwork.org",
+    "orientations": ["ASSEMBLY", "SPACESHIP"],
+    "tags": ["commons", "digital-rights", "democratic-innovation"],
+    "location": "Brussels, Belgium"
+  },
+  {
+    "slug": "wellbeing-economy-alliance",
+    "name": "Wellbeing Economy Alliance",
+    "description": "Coalition of organisations, movements, and individuals working towards a wellbeing economy.",
+    "website": "https://weall.org",
+    "orientations": ["ASSEMBLY", "GARDEN"],
+    "tags": ["wellbeing-economy", "regenerative-economics", "policy-innovation"],
+    "location": "Edinburgh, UK"
+  },
+  {
+    "slug": "global-assembly",
+    "name": "Global Assembly",
+    "description": "Pioneering a new form of global democratic participation, starting with the first Global Assembly on the Climate and Ecological Crisis.",
+    "website": "https://globalassembly.org",
+    "orientations": ["ASSEMBLY"],
+    "tags": ["citizens-assembly", "global-governance", "climate-democracy"],
+    "location": "International"
+  },
+  {
+    "slug": "terra0",
+    "name": "terra0",
+    "description": "Research and art project exploring how ecosystems could own and manage themselves using smart contracts.",
+    "website": "https://terra0.org",
+    "orientations": ["SPACESHIP", "GARDEN"],
+    "tags": ["rights-of-nature", "smart-contracts", "dao"],
+    "location": "Berlin, Germany"
+  },
+  {
+    "slug": "school-of-system-change",
+    "name": "School of System Change",
+    "description": "Developing system change practitioners equipped to navigate complex social challenges.",
+    "website": "https://www.schoolofsystemchange.org",
+    "orientations": ["ASSEMBLY", "MYSTERIES"],
+    "tags": ["systems-thinking", "capacity-building", "social-change"],
+    "location": "London, UK"
+  }
+]

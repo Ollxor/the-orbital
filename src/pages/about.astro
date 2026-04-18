@@ -1,0 +1,171 @@
+---
+import Base from '../layouts/Base.astro';
+
+const orientations = [
+  {
+    key: 'GARDEN',
+    icon: '/assets/Icons2-01.svg',
+    name: 'The Garden',
+    description: 'Living systems, land stewardship, regenerative economics, indigenous knowledge, food, soil, water, biodiversity. Those who organise around tending what exists. The garden is cultivation, patience, deep roots.',
+  },
+  {
+    key: 'SPACESHIP',
+    icon: '/assets/Icons2-04.svg',
+    name: 'Spaceship Earth',
+    description: 'Technology, infrastructure, data, AI, governance tools, alternative ownership, systems thinking, spatial web, digital twins. Those who organise around building what doesn\'t yet exist. The spaceship is precision, interconnection, forward motion.',
+  },
+  {
+    key: 'MYSTERIES',
+    icon: '/assets/Icons2-03.svg',
+    name: 'The Mysteries',
+    description: 'Transformative games, ritual, experiential futures, festival culture, performance, consciousness, the psychology of awe. Those who organise around meaning, transformation, and embodied experience. The mysteries are what cannot be written down — only lived.',
+  },
+  {
+    key: 'ASSEMBLY',
+    icon: '/assets/Icons2-02.svg',
+    name: 'The Assemblies',
+    description: 'Global governance innovation, participatory democracy, rights of nature, climate justice, citizens\' assemblies, long-termism. The cross-cutting frame where the other three orientations meet. Where ecology, technology, and culture become governance.',
+  },
+];
+---
+
+<Base title="About — The Orbital">
+  <div class="container about-page">
+
+    <header class="about-header">
+      <h1>The Orbital</h1>
+      <p class="about-tagline">Tracking the emergent movement for planetary systems governance.</p>
+    </header>
+
+    <div class="about-intro">
+      <p>The Orbital maps the emerging movement of people, organisations, and initiatives building new systems for how humanity governs itself and its relationship with the living planet.</p>
+      <p>We track work across ecology, technology, democratic innovation, and transformative culture — not as separate fields, but as parts of one emerging pattern. The pattern becomes visible when you see them together.</p>
+      <p>The name comes from the vantage point of orbit — the perspective shift astronauts describe when seeing Earth from space. No borders visible, no nations, just one living system. We believe that shift in perception is possible on the ground, and that it's already happening across thousands of initiatives worldwide.</p>
+      <p>The Orbital exists to make that pattern visible.</p>
+    </div>
+
+    <section class="about-section">
+      <h2>The Four Orientations</h2>
+      <p class="section-intro">The landscape organises around four broad orientations. These aren't rigid categories — they're lenses. Most people and organisations carry more than one.</p>
+
+      <div class="orientations-grid">
+        {orientations.map(o => (
+          <div class="orientation-card">
+            <img src={o.icon} alt={o.name} class="orientation-icon" />
+            <h3>{o.name}</h3>
+            <p>{o.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>The Puzzle Pieces</h2>
+      <p class="section-intro">We are tracking a convergence of developments that have never existed simultaneously before:</p>
+
+      <div class="puzzle-pieces">
+        <div class="puzzle-item">
+          <h3>Technology &amp; Infrastructure</h3>
+          <p>AI and machine learning for planetary-scale modelling. Digital twins simulating Earth systems. The spatial web giving physical spaces digital identities with embedded rights and permissions. Smart contracts making complex agreements accessible to anyone with a device. Sensor networks giving ecosystems a measurable voice. Open source protocols for transparent governance.</p>
+        </div>
+        <div class="puzzle-item">
+          <h3>Governance &amp; Political Innovation</h3>
+          <p>Decentralised governance structures. Participatory budgeting. Rights of nature and legal personhood for ecosystems. Citizens' assemblies and sortition. Polycentric governance. Liquid democracy. Peer-to-peer decision making enhanced by AI.</p>
+        </div>
+        <div class="puzzle-item">
+          <h3>Economic Models</h3>
+          <p>Regenerative finance. Nature-based currencies pegged to ecosystem health. Steward ownership. Commons governance. Doughnut economics. Gift economy. Universal basic income connected to ecological stewardship.</p>
+        </div>
+        <div class="puzzle-item">
+          <h3>Methods &amp; Experience</h3>
+          <p>LARP and megagames for governance prototyping. Experiential futures and design fiction. Gamification of democratic processes. Transformative game design. Ritual and ceremony design. Participatory festival culture. Immersive theatre.</p>
+        </div>
+        <div class="puzzle-item">
+          <h3>Knowledge &amp; Philosophy</h3>
+          <p>Earth's ecosystems as a 3.8-billion-year library of survival and thriving strategies — readable for the first time through AI and sensor technology. Biomimicry applied to governance. The Overview Effect as cognitive shift. Sensing and awareness as connective tissue between human and planetary intelligence.</p>
+        </div>
+      </div>
+
+      <p class="puzzle-coda">These puzzle pieces are being assembled by hundreds of organisations worldwide. The Orbital tracks them.</p>
+    </section>
+
+    <section class="about-section">
+      <h2>The Project</h2>
+      <p>The Orbital is part of a larger initiative to prototype planetary governance through play, simulation, and embodied experience.</p>
+      <p>The premise: we now have all the puzzle pieces for a fundamentally different way of organising human civilisation. What we lack is a way to feel how they work together.</p>
+      <p>This initiative is building prototype gatherings where participants live inside a future society — making real decisions, trading in simulated economies, experiencing consequences — and carrying that embodied knowledge home.</p>
+      <p>The first prototype is planned for 2027 in Sweden.</p>
+      <p><em>Manifesto: coming soon.</em></p>
+      <p class="project-motto">Prototyping our way towards paradise.</p>
+    </section>
+
+    <section class="about-section about-contact">
+      <h2>Contact</h2>
+      <p>The Orbital is maintained by Olle Bjerkås, <a href="https://kindship.ai/" target="_blank" rel="noopener">Martin Källström (Kindship)</a>, and collaborators.</p>
+      <p><a href="/contact">Send a message</a> · <a href="https://ollebjerkas.se" target="_blank" rel="noopener">ollebjerkas.se</a> · <a href="https://kindship.ai/" target="_blank" rel="noopener">kindship.ai</a></p>
+    </section>
+
+  </div>
+</Base>
+
+<style>
+.about-page { padding-top: 2.5rem; }
+
+.about-header { margin-bottom: 1.5rem; }
+.about-header h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: .05em;
+  margin-bottom: .375rem;
+}
+.about-tagline { font-size: 1rem; color: var(--text-2); }
+
+.about-intro {
+  border-left: 2px solid var(--border);
+  padding-left: 1.25rem;
+  margin-bottom: 3rem;
+}
+.about-intro p { margin-bottom: 1rem; line-height: 1.75; color: #333; }
+.about-intro p:last-child { margin-bottom: 0; }
+
+.about-section { margin-bottom: 3rem; }
+.about-section h2 {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+.section-intro { color: var(--text-2); margin-bottom: 1.5rem; line-height: 1.7; }
+
+.orientations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 600px) { .orientations-grid { grid-template-columns: 1fr; } }
+
+.orientation-card { display: flex; flex-direction: column; gap: .5rem; }
+.orientation-icon { width: 72px; height: 72px; object-fit: contain; }
+.orientation-card h3 { font-family: var(--font-serif); font-size: 1.125rem; font-weight: normal; }
+.orientation-card p { font-size: .9rem; color: var(--text-2); line-height: 1.7; }
+
+.puzzle-pieces { margin: 1.5rem 0; }
+.puzzle-item { margin-bottom: 1.5rem; }
+.puzzle-item h3 { font-size: .9375rem; font-weight: 600; margin-bottom: .375rem; }
+.puzzle-item p { font-size: .9rem; color: var(--text-2); line-height: 1.7; }
+.puzzle-coda { color: var(--text-2); font-style: italic; margin-top: 1.5rem; }
+
+.about-section p { margin-bottom: 1rem; line-height: 1.75; color: #333; }
+.about-section p:last-child { margin-bottom: 0; }
+
+.project-motto { font-family: var(--font-serif); font-style: italic; color: var(--text-2) !important; }
+
+.about-contact a { color: var(--text); }
+</style>

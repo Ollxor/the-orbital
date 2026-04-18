@@ -43,11 +43,8 @@ const currentPath = Astro.url.pathname;
   <!-- Masthead -->
   <header class="masthead">
     <a href="/" class="masthead-brand">
-      <img src="/assets/orbital_logo_4_v2a.png" alt="" class="masthead-logo" />
-      <div class="masthead-text">
-        <span class="masthead-title">THE ORBITAL</span>
-        <span class="masthead-tagline">Tracking the emergent movement for planetary systems governance</span>
-      </div>
+      <span class="masthead-title">THE ORBITAL</span>
+      <span class="masthead-tagline">Tracking the emergent movement for planetary systems governance</span>
     </a>
   </header>
 
@@ -132,38 +129,31 @@ const currentPath = Astro.url.pathname;
   }
   .masthead-brand {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.25rem;
+    gap: .5rem;
     text-decoration: none;
     max-width: var(--max-w);
     margin: 0 auto;
   }
-  .masthead-logo {
-    height: 72px;
-    width: auto;
-    flex-shrink: 0;
-  }
-  .masthead-text {
-    display: flex;
-    flex-direction: column;
-    gap: .375rem;
-  }
   .masthead-title {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2.75rem;
+    font-size: 3.5rem;
     font-weight: 600;
-    letter-spacing: .18em;
+    letter-spacing: .22em;
     color: var(--text);
     line-height: 1;
+    text-align: center;
   }
   .masthead-tagline {
     font-family: 'Source Serif 4', Georgia, serif;
     font-size: .9375rem;
     font-weight: 300;
     color: var(--text-2);
-    letter-spacing: .03em;
+    letter-spacing: .04em;
     font-style: italic;
+    text-align: center;
   }
 
   /* ── Main nav ── */
@@ -213,8 +203,7 @@ const currentPath = Astro.url.pathname;
   .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
 
   @media (max-width: 640px) {
-    .masthead-logo { height: 52px; }
-    .masthead-title { font-size: 1.875rem; letter-spacing: .12em; }
+    .masthead-title { font-size: 2.25rem; letter-spacing: .14em; }
     .masthead-tagline { font-size: .8125rem; }
     .util-date { display: none; }
 

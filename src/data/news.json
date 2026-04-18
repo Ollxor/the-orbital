@@ -1,197 +1,334 @@
 [
-  {
-    "slug": "river-reuss-referendum",
-    "title": "River Reuss Heads to Referendum",
-    "date": "2026-03-19",
-    "image": "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
-    "imageAlt": "River flowing through a green valley",
-    "summary": "A citizen initiative in Lucerne canton has gathered 5,460 signatures to grant legal personhood to the River Reuss, triggering a mandatory referendum. If passed, the river would gain the right to flow freely and be defended in court by appointed guardians.",
-    "insight": "If a Swiss canton can grant legal personhood to a river through direct democracy, the question shifts from whether to how fast.",
-    "actors": ["rights-of-nature-tribunal"],
-    "tags": ["rights-of-nature", "governance", "switzerland"],
-    "orientations": ["GARDEN", "ASSEMBLY"],
-    "sourceUrl": "https://www.democracywithoutborders.org"
-  },
-  {
-    "slug": "kiss-the-ground-grant",
-    "title": "Kiss the Ground Secures $12M to Scale Regenerative Farmer Training",
-    "date": "2026-03-12",
-    "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80",
-    "imageAlt": "Farmer holding healthy dark soil in their hands",
-    "summary": "Kiss the Ground has secured $12 million in new funding to expand its regenerative agriculture training programme to 10,000 farmers across the American West. The grant comes from a coalition of philanthropies focused on soil health as a climate solution.",
-    "insight": "Regenerative agriculture only scales when the financial architecture supports the people doing the work — the same design challenge governance faces at every level.",
-    "actors": ["kiss-the-ground"],
-    "tags": ["regenerative-agriculture", "soil", "food-systems", "funding"],
-    "orientations": ["GARDEN"],
-    "sourceUrl": "https://kisstheground.com"
-  },
-  {
-    "slug": "metagov-standards",
-    "title": "Metagovernance Project Releases Open Governance Standards for DAOs",
-    "date": "2026-03-08",
-    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-    "imageAlt": "Abstract glowing network of connected nodes",
-    "summary": "The Metagovernance Project has published version 2.0 of its Community Rule framework — a machine-readable standard for describing governance rules in decentralised organisations. Over 200 DAOs have already adopted the standard.",
-    "insight": "Governance is only as legible as the language it's written in. A shared grammar for rules makes comparison, learning, and accountability possible at scale.",
-    "actors": ["metagovernance-project"],
-    "tags": ["digital-governance", "dao", "open-standards"],
-    "orientations": ["SPACESHIP", "ASSEMBLY"],
-    "sourceUrl": "https://metagov.org"
-  },
-  {
-    "slug": "lule-transition-exhibition",
-    "title": "Luleå Installs Permanent Climate Governance Exhibition in Shopping Centre",
-    "date": "2026-02-28",
-    "image": "https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?w=800&q=80",
-    "imageAlt": "People engaging with an interactive public exhibition",
-    "summary": "The Swedish city of Luleå has installed a permanent interactive exhibition on climate transition in its main shopping centre, reaching 40,000 visitors per month. The exhibition invites residents to participate in ongoing climate planning decisions.",
-    "insight": "Governance that hides in policy documents stays abstract. Governance that shows up in a shopping mall becomes culture.",
-    "actors": [],
-    "tags": ["urban-governance", "climate-communication", "participatory-democracy", "sweden"],
-    "orientations": ["ASSEMBLY", "MYSTERIES"],
-    "sourceUrl": "https://www.lulea.se"
-  },
-  {
-    "slug": "refi-dao-tropical-forests",
-    "title": "ReFi DAO Pilots Nature-Backed Currency in Amazon Communities",
-    "date": "2026-02-22",
-    "image": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80",
-    "imageAlt": "Dense tropical forest canopy seen from below",
-    "summary": "ReFi DAO's latest pilot in the Peruvian Amazon has issued a community currency backed by verified forest carbon and biodiversity credits, circulating among 12 villages. Early results show a 30% increase in forest stewardship activities.",
-    "insight": "When the value of money is literally tied to the health of the forest, economic incentives and ecological health become the same thing.",
-    "actors": ["refi-dao"],
-    "tags": ["regenerative-finance", "nature-based-currency", "indigenous-communities"],
-    "orientations": ["SPACESHIP", "GARDEN"],
-    "sourceUrl": "https://www.refidao.com"
-  },
-  {
-    "slug": "global-assembly-biodiversity",
-    "title": "Second Global Citizens' Assembly Announced — Focus on Biodiversity",
-    "date": "2026-02-15",
-    "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80",
-    "imageAlt": "People seated in a circular deliberative assembly",
-    "summary": "Building on the success of the first Global Assembly on the Climate Crisis, organisers have announced a second gathering to deliberate on biodiversity loss. 100 randomly selected citizens from 150 countries will participate over six months in 2026.",
-    "insight": "Randomly selected citizens consistently make better long-term decisions than elected officials — because they have no election to win.",
-    "actors": ["global-assembly", "sortition-foundation"],
-    "tags": ["citizens-assembly", "biodiversity", "sortition"],
-    "orientations": ["ASSEMBLY"],
-    "sourceUrl": "https://globalassembly.org"
-  },
-  {
-    "slug": "terra0-ecosystem-dao",
-    "title": "terra0 Launches First Self-Owning Forest in Germany",
-    "date": "2026-02-10",
-    "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
-    "imageAlt": "Sunlight filtering through tall forest trees",
-    "summary": "Berlin-based art and research project terra0 has established the first legally recognised forest governed by a decentralised autonomous organisation in Brandenburg, Germany. The forest now issues its own tokens representing rights to its timber harvest.",
-    "insight": "An ecosystem that can own itself and make financial decisions about its own resources is not a metaphor. It is a governance innovation.",
-    "actors": ["terra0"],
-    "tags": ["rights-of-nature", "dao", "smart-contracts", "germany"],
-    "orientations": ["SPACESHIP", "GARDEN"],
-    "sourceUrl": "https://terra0.org"
-  },
-  {
-    "slug": "nordic-larp-governance",
-    "title": "Nordic Larp Community Runs Governance Simulation for EU Parliament Staff",
-    "date": "2026-01-30",
-    "image": "https://images.unsplash.com/photo-1580213560739-0be9c0e1e65f?w=800&q=80",
-    "imageAlt": "People engaged in an immersive roleplay scenario",
-    "summary": "The Nordic larp community ran a three-day governance simulation for 45 European Parliament staff members, exploring alternative decision-making structures through immersive roleplay. Participants reported significantly shifted perspectives on institutional design.",
-    "insight": "You cannot think your way into a new relationship with power. You have to play your way into it.",
-    "actors": ["nordic-larp", "transformative-play-initiative"],
-    "tags": ["larp", "governance-simulation", "european-parliament"],
-    "orientations": ["MYSTERIES", "ASSEMBLY"],
-    "sourceUrl": "https://nordiclarp.org"
-  },
-  {
-    "slug": "purpose-steward-ownership",
-    "title": "Purpose Foundation Reports 300% Growth in Steward-Owned Companies",
-    "date": "2026-01-22",
-    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
-    "imageAlt": "People collaborating around a table in an open workspace",
-    "summary": "Purpose Foundation's annual report shows steward-owned companies — where control stays with employees and cannot be sold — have grown 300% since 2020. The model is gaining traction particularly in Germany, Denmark, and the UK.",
-    "insight": "Steward ownership is what happens when you ask: what if the company existed to serve its purpose, not to be sold?",
-    "actors": ["purpose-foundation"],
-    "tags": ["steward-ownership", "alternative-ownership", "commons"],
-    "orientations": ["SPACESHIP"],
-    "sourceUrl": "https://purpose-economy.org"
-  },
-  {
-    "slug": "doughnut-amsterdam",
-    "title": "Amsterdam Embeds Doughnut Economics into City Budget",
-    "date": "2026-01-15",
-    "image": "https://images.unsplash.com/photo-1576485375217-d6a95e34d043?w=800&q=80",
-    "imageAlt": "Amsterdam canal with bicycles and historic buildings",
-    "summary": "Amsterdam has become the first major city to formally integrate Doughnut Economics metrics into its annual budget process, requiring each department to demonstrate that spending respects both social foundations and ecological ceilings.",
-    "insight": "The doughnut is no longer a metaphor in Amsterdam. It is a budget line.",
-    "actors": ["doughnut-economics-action-lab"],
-    "tags": ["doughnut-economics", "urban-governance", "regenerative-economics"],
-    "orientations": ["ASSEMBLY", "SPACESHIP"],
-    "sourceUrl": "https://doughnuteconomics.org"
-  },
-  {
-    "slug": "gaia-seed-library",
-    "title": "Gaia Foundation Expands Indigenous Seed Library Network to 40 Countries",
-    "date": "2026-01-08",
-    "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80",
-    "imageAlt": "Colourful seeds and grains in traditional woven baskets",
-    "summary": "The Gaia Foundation has expanded its network of community seed libraries — protecting traditional crop varieties — to 40 countries across Africa, Latin America, and Asia. The network now safeguards over 2,000 seed varieties at risk of commercial replacement.",
-    "insight": "Food sovereignty begins with who controls the seeds. A network of community seed libraries is a form of distributed governance over the foundation of life.",
-    "actors": ["gaia-foundation", "indigenous-terra-madre"],
-    "tags": ["food-sovereignty", "indigenous-knowledge", "biodiversity"],
-    "orientations": ["GARDEN"],
-    "sourceUrl": "https://www.gaiafoundation.org"
-  },
-  {
-    "slug": "destination-earth-launch",
-    "title": "EU Launches Second Phase of Digital Twin Earth Initiative",
-    "date": "2025-12-18",
-    "image": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=800&q=80",
-    "imageAlt": "Earth seen from space against a black sky",
-    "summary": "The European Union has launched the second phase of Destination Earth, its initiative to build a comprehensive digital twin of the planet. The new phase focuses on modelling tipping points and enabling real-time policy simulation at planetary scale.",
-    "insight": "A working model of Earth is not just a scientific tool. It is a governance tool — the first time human institutions could simulate consequences before acting.",
-    "actors": [],
-    "tags": ["digital-twin", "climate-modelling", "EU"],
-    "orientations": ["SPACESHIP"],
-    "sourceUrl": "https://destination-earth.eu"
-  },
-  {
-    "slug": "rewilding-scotland",
-    "title": "Scotland's Rewilding Charter Signed by 150 Landowners",
-    "date": "2025-12-10",
-    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-    "imageAlt": "Scottish highland landscape with misty mountains",
-    "summary": "A landmark Scottish Rewilding Charter has been signed by 150 landowners covering 1.2 million acres, committing to restore native woodland, wetland, and peatland across the Scottish Highlands. It is the largest voluntary rewilding commitment in European history.",
-    "insight": "Rewilding at this scale requires not just ecological knowledge but a new politics of land — one where landowners see themselves as stewards rather than owners.",
-    "actors": ["rewilding-europe"],
-    "tags": ["rewilding", "land-stewardship", "scotland", "biodiversity"],
-    "orientations": ["GARDEN"],
-    "sourceUrl": "https://www.rewildingeurope.com"
-  },
-  {
-    "slug": "sortition-uk-inquiry",
-    "title": "UK Parliament Recommends Permanent Citizens' Assembly for Climate",
-    "date": "2025-12-05",
-    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
-    "imageAlt": "People in a formal deliberative meeting setting",
-    "summary": "A House of Commons inquiry has recommended establishing a permanent, randomly selected Citizens' Assembly with formal advisory powers over UK climate policy. The recommendation follows the success of the 2020 Climate Assembly UK.",
-    "insight": "Moving from one-off assemblies to a permanent democratic body would fundamentally change how climate policy is made — and who gets to make it.",
-    "actors": ["sortition-foundation", "global-assembly"],
-    "tags": ["citizens-assembly", "climate-policy", "democratic-innovation", "UK"],
-    "orientations": ["ASSEMBLY"],
-    "sourceUrl": "https://www.sortitionfoundation.org"
-  },
-  {
-    "slug": "commons-network-digital-rights",
-    "title": "Commons Network Wins EU Recognition for Digital Commons Framework",
-    "date": "2025-11-28",
-    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
-    "imageAlt": "Glowing digital earth with network connections",
-    "summary": "The Commons Network's framework for treating digital infrastructure as a public commons has been formally acknowledged in EU digital policy guidance, opening the door for public funding of open-source governance tools.",
-    "insight": "When digital infrastructure is owned as a commons rather than a commodity, the governance of that infrastructure becomes a matter of collective self-determination.",
-    "actors": ["commons-network"],
-    "tags": ["commons", "digital-rights", "EU-policy"],
-    "orientations": ["SPACESHIP", "ASSEMBLY"],
-    "sourceUrl": "https://www.commonsnetwork.org"
-  }
+    {
+        "slug":  "river-reuss-referendum",
+        "title":  "River Reuss Heads to Referendum",
+        "date":  "2026-03-19",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "A citizen initiative in Lucerne canton has gathered 5,460 signatures to grant legal personhood to the River Reuss, triggering a mandatory referendum. If passed, the river would gain the right to flow freely and be defended in court by appointed guardians.",
+        "insight":  "If a Swiss canton can grant legal personhood to a river through direct democracy, the question shifts from whether to how fast.",
+        "actors":  [
+                       "rights-of-nature-tribunal"
+                   ],
+        "tags":  [
+                     "rights-of-nature",
+                     "governance",
+                     "switzerland"
+                 ],
+        "orientations":  [
+                             "GARDEN",
+                             "ASSEMBLY"
+                         ],
+        "sourceUrl":  "https://www.democracywithoutborders.org"
+    },
+    {
+        "slug":  "kiss-the-ground-grant",
+        "title":  "Kiss the Ground Secures $12M to Scale Regenerative Farmer Training",
+        "date":  "2026-03-12",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "Kiss the Ground has secured $12 million in new funding to expand its regenerative agriculture training programme to 10,000 farmers across the American West. The grant comes from a coalition of philanthropies focused on soil health as a climate solution.",
+        "insight":  "Regenerative agriculture only scales when the financial architecture supports the people doing the work — the same design challenge governance faces at every level.",
+        "actors":  [
+                       "kiss-the-ground"
+                   ],
+        "tags":  [
+                     "regenerative-agriculture",
+                     "soil",
+                     "food-systems",
+                     "funding"
+                 ],
+        "orientations":  [
+                             "GARDEN"
+                         ],
+        "sourceUrl":  "https://kisstheground.com"
+    },
+    {
+        "slug":  "metagov-standards",
+        "title":  "Metagovernance Project Releases Open Governance Standards for DAOs",
+        "date":  "2026-03-08",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "The Metagovernance Project has published version 2.0 of its Community Rule framework — a machine-readable standard for describing governance rules in decentralised organisations. Over 200 DAOs have already adopted the standard.",
+        "insight":  "Governance is only as legible as the language it\u0027s written in. A shared grammar for rules makes comparison, learning, and accountability possible at scale.",
+        "actors":  [
+                       "metagovernance-project"
+                   ],
+        "tags":  [
+                     "digital-governance",
+                     "dao",
+                     "open-standards"
+                 ],
+        "orientations":  [
+                             "SPACESHIP",
+                             "ASSEMBLY"
+                         ],
+        "sourceUrl":  "https://metagov.org"
+    },
+    {
+        "slug":  "lule-transition-exhibition",
+        "title":  "Luleå Installs Permanent Climate Governance Exhibition in Shopping Centre",
+        "date":  "2026-02-28",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "The Swedish city of Luleå has installed a permanent interactive exhibition on climate transition in its main shopping centre, reaching 40,000 visitors per month. The exhibition invites residents to participate in ongoing climate planning decisions.",
+        "insight":  "Governance that hides in policy documents stays abstract. Governance that shows up in a shopping mall becomes culture.",
+        "actors":  [
+
+                   ],
+        "tags":  [
+                     "urban-governance",
+                     "climate-communication",
+                     "participatory-democracy",
+                     "sweden"
+                 ],
+        "orientations":  [
+                             "ASSEMBLY",
+                             "MYSTERIES"
+                         ],
+        "sourceUrl":  "https://www.lulea.se"
+    },
+    {
+        "slug":  "refi-dao-tropical-forests",
+        "title":  "ReFi DAO Pilots Nature-Backed Currency in Amazon Communities",
+        "date":  "2026-02-22",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "ReFi DAO\u0027s latest pilot in the Peruvian Amazon has issued a community currency backed by verified forest carbon and biodiversity credits, circulating among 12 villages. Early results show a 30% increase in forest stewardship activities.",
+        "insight":  "When the value of money is literally tied to the health of the forest, economic incentives and ecological health become the same thing.",
+        "actors":  [
+                       "refi-dao"
+                   ],
+        "tags":  [
+                     "regenerative-finance",
+                     "nature-based-currency",
+                     "indigenous-communities"
+                 ],
+        "orientations":  [
+                             "SPACESHIP",
+                             "GARDEN"
+                         ],
+        "sourceUrl":  "https://www.refidao.com"
+    },
+    {
+        "slug":  "global-assembly-biodiversity",
+        "title":  "Second Global Citizens\u0027 Assembly Announced — Focus on Biodiversity",
+        "date":  "2026-02-15",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "Building on the success of the first Global Assembly on the Climate Crisis, organisers have announced a second gathering to deliberate on biodiversity loss. 100 randomly selected citizens from 150 countries will participate over six months in 2026.",
+        "insight":  "Randomly selected citizens consistently make better long-term decisions than elected officials — because they have no election to win.",
+        "actors":  [
+                       "global-assembly",
+                       "sortition-foundation"
+                   ],
+        "tags":  [
+                     "citizens-assembly",
+                     "biodiversity",
+                     "sortition"
+                 ],
+        "orientations":  [
+                             "ASSEMBLY"
+                         ],
+        "sourceUrl":  "https://globalassembly.org"
+    },
+    {
+        "slug":  "terra0-ecosystem-dao",
+        "title":  "terra0 Launches First Self-Owning Forest in Germany",
+        "date":  "2026-02-10",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "Berlin-based art and research project terra0 has established the first legally recognised forest governed by a decentralised autonomous organisation in Brandenburg, Germany. The forest now issues its own tokens representing rights to its timber harvest.",
+        "insight":  "An ecosystem that can own itself and make financial decisions about its own resources is not a metaphor. It is a governance innovation.",
+        "actors":  [
+                       "terra0"
+                   ],
+        "tags":  [
+                     "rights-of-nature",
+                     "dao",
+                     "smart-contracts",
+                     "germany"
+                 ],
+        "orientations":  [
+                             "SPACESHIP",
+                             "GARDEN"
+                         ],
+        "sourceUrl":  "https://terra0.org"
+    },
+    {
+        "slug":  "nordic-larp-governance",
+        "title":  "Nordic Larp Community Runs Governance Simulation for EU Parliament Staff",
+        "date":  "2026-01-30",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "The Nordic larp community ran a three-day governance simulation for 45 European Parliament staff members, exploring alternative decision-making structures through immersive roleplay. Participants reported significantly shifted perspectives on institutional design.",
+        "insight":  "You cannot think your way into a new relationship with power. You have to play your way into it.",
+        "actors":  [
+                       "nordic-larp",
+                       "transformative-play-initiative"
+                   ],
+        "tags":  [
+                     "larp",
+                     "governance-simulation",
+                     "european-parliament"
+                 ],
+        "orientations":  [
+                             "MYSTERIES",
+                             "ASSEMBLY"
+                         ],
+        "sourceUrl":  "https://nordiclarp.org"
+    },
+    {
+        "slug":  "purpose-steward-ownership",
+        "title":  "Purpose Foundation Reports 300% Growth in Steward-Owned Companies",
+        "date":  "2026-01-22",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "Purpose Foundation\u0027s annual report shows steward-owned companies — where control stays with employees and cannot be sold — have grown 300% since 2020. The model is gaining traction particularly in Germany, Denmark, and the UK.",
+        "insight":  "Steward ownership is what happens when you ask: what if the company existed to serve its purpose, not to be sold?",
+        "actors":  [
+                       "purpose-foundation"
+                   ],
+        "tags":  [
+                     "steward-ownership",
+                     "alternative-ownership",
+                     "commons"
+                 ],
+        "orientations":  [
+                             "SPACESHIP"
+                         ],
+        "sourceUrl":  "https://purpose-economy.org"
+    },
+    {
+        "slug":  "doughnut-amsterdam",
+        "title":  "Amsterdam Embeds Doughnut Economics into City Budget",
+        "date":  "2026-01-15",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "Amsterdam has become the first major city to formally integrate Doughnut Economics metrics into its annual budget process, requiring each department to demonstrate that spending respects both social foundations and ecological ceilings.",
+        "insight":  "The doughnut is no longer a metaphor in Amsterdam. It is a budget line.",
+        "actors":  [
+                       "doughnut-economics-action-lab"
+                   ],
+        "tags":  [
+                     "doughnut-economics",
+                     "urban-governance",
+                     "regenerative-economics"
+                 ],
+        "orientations":  [
+                             "ASSEMBLY",
+                             "SPACESHIP"
+                         ],
+        "sourceUrl":  "https://doughnuteconomics.org"
+    },
+    {
+        "slug":  "gaia-seed-library",
+        "title":  "Gaia Foundation Expands Indigenous Seed Library Network to 40 Countries",
+        "date":  "2026-01-08",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "The Gaia Foundation has expanded its network of community seed libraries — protecting traditional crop varieties — to 40 countries across Africa, Latin America, and Asia. The network now safeguards over 2,000 seed varieties at risk of commercial replacement.",
+        "insight":  "Food sovereignty begins with who controls the seeds. A network of community seed libraries is a form of distributed governance over the foundation of life.",
+        "actors":  [
+                       "gaia-foundation",
+                       "indigenous-terra-madre"
+                   ],
+        "tags":  [
+                     "food-sovereignty",
+                     "indigenous-knowledge",
+                     "biodiversity"
+                 ],
+        "orientations":  [
+                             "GARDEN"
+                         ],
+        "sourceUrl":  "https://www.gaiafoundation.org"
+    },
+    {
+        "slug":  "destination-earth-launch",
+        "title":  "EU Launches Second Phase of Digital Twin Earth Initiative",
+        "date":  "2025-12-18",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "The European Union has launched the second phase of Destination Earth, its initiative to build a comprehensive digital twin of the planet. The new phase focuses on modelling tipping points and enabling real-time policy simulation at planetary scale.",
+        "insight":  "A working model of Earth is not just a scientific tool. It is a governance tool — the first time human institutions could simulate consequences before acting.",
+        "actors":  [
+
+                   ],
+        "tags":  [
+                     "digital-twin",
+                     "climate-modelling",
+                     "EU"
+                 ],
+        "orientations":  [
+                             "SPACESHIP"
+                         ],
+        "sourceUrl":  "https://destination-earth.eu"
+    },
+    {
+        "slug":  "rewilding-scotland",
+        "title":  "Scotland\u0027s Rewilding Charter Signed by 150 Landowners",
+        "date":  "2025-12-10",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "A landmark Scottish Rewilding Charter has been signed by 150 landowners covering 1.2 million acres, committing to restore native woodland, wetland, and peatland across the Scottish Highlands. It is the largest voluntary rewilding commitment in European history.",
+        "insight":  "Rewilding at this scale requires not just ecological knowledge but a new politics of land — one where landowners see themselves as stewards rather than owners.",
+        "actors":  [
+                       "rewilding-europe"
+                   ],
+        "tags":  [
+                     "rewilding",
+                     "land-stewardship",
+                     "scotland",
+                     "biodiversity"
+                 ],
+        "orientations":  [
+                             "GARDEN"
+                         ],
+        "sourceUrl":  "https://www.rewildingeurope.com"
+    },
+    {
+        "slug":  "sortition-uk-inquiry",
+        "title":  "UK Parliament Recommends Permanent Citizens\u0027 Assembly for Climate",
+        "date":  "2025-12-05",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "A House of Commons inquiry has recommended establishing a permanent, randomly selected Citizens\u0027 Assembly with formal advisory powers over UK climate policy. The recommendation follows the success of the 2020 Climate Assembly UK.",
+        "insight":  "Moving from one-off assemblies to a permanent democratic body would fundamentally change how climate policy is made — and who gets to make it.",
+        "actors":  [
+                       "sortition-foundation",
+                       "global-assembly"
+                   ],
+        "tags":  [
+                     "citizens-assembly",
+                     "climate-policy",
+                     "democratic-innovation",
+                     "UK"
+                 ],
+        "orientations":  [
+                             "ASSEMBLY"
+                         ],
+        "sourceUrl":  "https://www.sortitionfoundation.org"
+    },
+    {
+        "slug":  "commons-network-digital-rights",
+        "title":  "Commons Network Wins EU Recognition for Digital Commons Framework",
+        "date":  "2025-11-28",
+        "image":  "",
+        "imageAlt":  "",
+        "summary":  "The Commons Network\u0027s framework for treating digital infrastructure as a public commons has been formally acknowledged in EU digital policy guidance, opening the door for public funding of open-source governance tools.",
+        "insight":  "When digital infrastructure is owned as a commons rather than a commodity, the governance of that infrastructure becomes a matter of collective self-determination.",
+        "actors":  [
+                       "commons-network"
+                   ],
+        "tags":  [
+                     "commons",
+                     "digital-rights",
+                     "EU-policy"
+                 ],
+        "orientations":  [
+                             "SPACESHIP",
+                             "ASSEMBLY"
+                         ],
+        "sourceUrl":  "https://www.commonsnetwork.org"
+    }
 ]

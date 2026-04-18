@@ -57,19 +57,17 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
 
       {news.map((story) => (
         <article class="news-card" data-orientations={story.orientations.join(',')}>
-          <div class="card-image-wrap">
-            <img
-              src={story.image}
-              alt={story.imageAlt}
-              class="card-image"
-              loading="lazy"
-              onerror="this.closest('.card-image-wrap').style.display='none'"
-            />
-          </div>
+          {story.image && (
+            <div class="card-image-wrap">
+              <a href={story.sourceUrl} target="_blank" rel="noopener">
+                <img src={story.image} alt={story.imageAlt} class="card-image" loading="lazy" onerror="this.closest('.card-image-wrap').style.display='none'" />
+              </a>
+            </div>
+          )}
           <div class="card-body">
             <time class="card-date">{formatDate(story.date)}</time>
             <h3 class="card-title">
-              <a href={`/news/${story.slug}`}>{story.title}</a>
+              <a href={story.sourceUrl} target="_blank" rel="noopener">{story.title}</a>
             </h3>
             <p class="card-summary">{story.summary}</p>
             <p class="card-insight">

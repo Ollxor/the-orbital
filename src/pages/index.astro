@@ -67,7 +67,7 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
           <div class="card-body">
             <time class="card-date">{formatDate(story.date)}</time>
             <h3 class="card-title">
-              <a href={story.sourceUrl} target="_blank" rel="noopener">{story.title}</a>
+              <a href={`/news/${story.slug}`}>{story.title}</a>
             </h3>
             <p class="card-summary">{story.summary}</p>
             <p class="card-insight">

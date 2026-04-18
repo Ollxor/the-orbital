@@ -1,0 +1,278 @@
+---
+import Base from '../../layouts/Base.astro';
+import newsData from '../../data/news.json';
+import actorsData from '../../data/actors.json';
+
+export function getStaticPaths() {
+  return newsData.map(story => ({ params: { slug: story.slug } }));
+}
+
+const { slug } = Astro.params;
+const story = newsData.find(s => s.slug === slug)!;
+const actorMap = Object.fromEntries(actorsData.map(a => [a.slug, a]));
+
+const orientationLabels: Record<string, string> = {
+  GARDEN: 'The Garden',
+  SPACESHIP: 'Spaceship Earth',
+  MYSTERIES: 'The Mysteries',
+  ASSEMBLY: 'The Assemblies',
+};
+const iconMap: Record<string, string> = {
+  GARDEN: 'Icons2-01.svg',
+  SPACESHIP: 'Icons2-04.svg',
+  MYSTERIES: 'Icons2-03.svg',
+  ASSEMBLY: 'Icons2-02.svg',
+};
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+const relatedStories = newsData
+  .filter(s => s.slug !== slug && s.orientations.some(o => story.orientations.includes(o)))
+  .slice(0, 3);
+---
+
+<Base title={`${story.title} — The Orbital`} description={story.summary}>
+  <div class="container">
+    <div class="story-wrap">
+
+      <div class="story-meta-top">
+        <div class="story-orientations">
+          {story.orientations.map(o => (
+            <span class="orient-chip">
+              <img src={`/assets/${iconMap[o]}`} alt="" class="orient-icon" />
+              {orientationLabels[o]}
+            </span>
+          ))}
+        </div>
+        <time class="story-date">{formatDate(story.date)}</time>
+      </div>
+
+      <h1 class="story-title">{story.title}</h1>
+
+      {story.image && (
+        <div class="story-image-wrap">
+          <img src={story.image} alt={story.imageAlt} class="story-image" />
+        </div>
+      )}
+
+      <p class="story-summary">{story.summary}</p>
+
+      <blockquote class="story-insight">
+        <span class="insight-label">Why this matters →</span>
+        {story.insight}
+      </blockquote>
+
+      <div class="story-footer">
+        <a href={story.sourceUrl} target="_blank" rel="noopener" class="source-link">
+          Read the original source ↗
+        </a>
+
+        {story.actors.length > 0 && (
+          <div class="story-actors">
+            <span class="actors-label">Related actors:</span>
+            {story.actors.map(s => actorMap[s] && (
+              <a href={`/actors#${s}`} class="actor-link">{actorMap[s].name}</a>
+            ))}
+          </div>
+        )}
+
+        <div class="story-tags">
+          {story.tags.map(tag => (
+            <span class="tag">{tag.replace(/-/g, '\u00a0')}</span>
+          ))}
+        </div>
+      </div>
+
+      <div class="story-reactions" data-story={story.slug}>
+        <p class="reactions-label">How do you see this story?</p>
+        <div class="reactions-row">
+          {(['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const).map(key => (
+            <button class="reaction-btn" data-orientation={key} aria-label={`Tag as ${orientationLabels[key]}`}>
+              <img src={`/assets/${iconMap[key]}`} alt="" class="reaction-icon" />
+              <span class="reaction-name">{orientationLabels[key]}</span>
+              <span class="reaction-count"></span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+    {relatedStories.length > 0 && (
+      <aside class="related">
+        <h2 class="related-heading">Related stories</h2>
+        {relatedStories.map(s => (
+          <div class="related-card">
+            <time class="related-date">{formatDate(s.date)}</time>
+            <a href={`/news/${s.slug}`} class="related-title">{s.title}</a>
+          </div>
+        ))}
+      </aside>
+    )}
+
+    <a href="/" class="back-link">← Back to feed</a>
+  </div>
+</Base>
+
+<style>
+.container { padding-top: 2rem; }
+
+.story-wrap { max-width: var(--max-w); margin: 0 auto; }
+
+.story-meta-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-bottom: 1.25rem;
+}
+.story-orientations { display: flex; gap: .5rem; flex-wrap: wrap; }
+.orient-chip {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  font-size: .75rem;
+  color: var(--text-2);
+  background: var(--filter-bg);
+  padding: .2rem .6rem .2rem .4rem;
+  border-radius: 999px;
+}
+.orient-icon { width: 16px; height: 16px; object-fit: contain; }
+.story-date { font-size: .8125rem; color: var(--text-3); }
+
+.story-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+  letter-spacing: -.01em;
+}
+
+.story-image-wrap { margin-bottom: 1.5rem; }
+.story-image { width: 100%; max-height: 420px; object-fit: cover; border-radius: 4px; }
+
+.story-summary {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.story-insight {
+  border-left: 3px solid var(--border);
+  padding: .75rem 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.insight-label {
+  font-style: normal;
+  font-weight: 700;
+  font-size: .8125rem;
+  color: var(--text-3);
+  display: block;
+  margin-bottom: .25rem;
+  letter-spacing: .04em;
+}
+
+.story-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.source-link {
+  display: inline-block;
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.source-link:hover { text-decoration: underline; }
+
+.story-actors { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; margin-bottom: .75rem; font-size: .875rem; }
+.actors-label { color: var(--text-3); font-size: .8125rem; }
+.actor-link { color: var(--text-2); text-decoration: none; font-weight: 500; }
+.actor-link:hover { color: var(--text); }
+.story-tags { margin-top: .5rem; display: flex; flex-wrap: wrap; gap: .375rem; }
+
+.story-reactions {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.reactions-label { font-size: .8125rem; color: var(--text-3); margin-bottom: .75rem; }
+.reactions-row { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.reaction-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .75rem 1rem;
+  cursor: pointer;
+  opacity: .6;
+  transition: opacity .15s, border-color .15s;
+  min-width: 80px;
+}
+.reaction-btn:hover { opacity: .9; border-color: var(--text-2); }
+.reaction-btn.reacted { opacity: 1; border-color: var(--text); }
+.reaction-icon { width: 32px; height: 32px; object-fit: contain; }
+.reaction-name { font-size: .6875rem; color: var(--text-2); text-align: center; }
+.reaction-count { font-size: .875rem; font-weight: 600; color: var(--text); min-height: 1.2em; }
+
+.related { max-width: var(--max-w); margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid var(--border); }
+.related-heading { font-size: .6875rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); margin-bottom: 1.25rem; }
+.related-card { padding: .875rem 0; border-bottom: 1px solid var(--border); }
+.related-date { display: block; font-size: .75rem; color: var(--text-3); margin-bottom: .25rem; }
+.related-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.0625rem; font-weight: 400; text-decoration: none; color: var(--text); line-height: 1.35; }
+.related-title:hover { text-decoration: underline; }
+
+.back-link { display: inline-block; margin-top: 2.5rem; font-size: .875rem; color: var(--text-2); text-decoration: none; max-width: var(--max-w); margin-left: auto; margin-right: auto; }
+.back-link:hover { color: var(--text); }
+
+@media (max-width: 600px) {
+  .story-title { font-size: 1.625rem; }
+  .story-summary { font-size: 1rem; }
+  .reactions-row { gap: .75rem; }
+  .reaction-btn { min-width: 68px; padding: .625rem .75rem; }
+}
+</style>
+
+<script>
+const STORAGE_KEY = 'orbital_reactions';
+const REACTED_KEY = 'orbital_reacted';
+let reactions: Record<string, Record<string, number>> = {};
+let reacted: Record<string, Record<string, boolean>> = {};
+try { reactions = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch {}
+try { reacted = JSON.parse(localStorage.getItem(REACTED_KEY) || '{}'); } catch {}
+
+const container = document.querySelector('.story-reactions') as HTMLElement;
+const story = container?.dataset.story;
+if (story) {
+  if (!reactions[story]) reactions[story] = {};
+  container.querySelectorAll('.reaction-btn').forEach(btn => {
+    const el = btn as HTMLButtonElement;
+    const o = el.dataset.orientation!;
+    const countEl = el.querySelector('.reaction-count')!;
+    const count = reactions[story][o] || 0;
+    if (count > 0) countEl.textContent = String(count);
+    if (reacted[story]?.[o]) el.classList.add('reacted');
+
+    el.addEventListener('click', () => {
+      if (el.classList.contains('reacted')) return;
+      reactions[story][o] = (reactions[story][o] || 0) + 1;
+      if (!reacted[story]) reacted[story] = {};
+      reacted[story][o] = true;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(reactions));
+      localStorage.setItem(REACTED_KEY, JSON.stringify(reacted));
+      countEl.textContent = String(reactions[story][o]);
+      el.classList.add('reacted');
+    });
+  });
+}
+</script>

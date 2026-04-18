@@ -1,425 +1,1988 @@
 [
-    {
-        "slug": "africa-regenerative-food-sovereignty",
-        "title": "Across Africa, Farmers Adopt Regenerative Practices to Secure Food Sovereignty",
-        "date": "2026-04-17",
-        "image": "",
-        "imageAlt": "",
-        "summary": "With geopolitical shocks threatening to spike fertiliser prices in low-income countries, farmers in Kenya, Burkina Faso, and Mali are scaling up green manure techniques and community savings groups to build locally governed food systems. The USDA launched a $700 million Regenerative Agriculture Pilot Program in December 2025, signalling a parallel shift at the policy level.",
-        "insight": "When external supply chains collapse, locally governed food systems built on soil biology and community finance become the only resilient alternative — a live demonstration that planetary health and community autonomy are the same project.",
-        "actors": ["kiss-the-ground"],
-        "tags": ["food-sovereignty", "regenerative-agriculture", "africa", "community-finance"],
-        "orientations": ["GARDEN"],
-        "sourceUrl": "https://www.resilience.org/stories/2026-04-17/across-africa-farmers-are-adopting-regenerative-agricultural-practices-that-support-food-sovereignty-amid-global-instability/"
-    },
-    {
-        "slug": "indigenous-land-rights-unpfii-2026",
-        "title": "Indigenous Peoples Challenge 30x30 Conservation at UN Forum",
-        "date": "2026-04-15",
-        "image": "",
-        "imageAlt": "",
-        "summary": "At the UN Permanent Forum on Indigenous Issues 2026, Indigenous Peoples Rights International challenged 'fortress conservation' models that displace communities while claiming to protect biodiversity. Panellists argued that Indigenous peoples manage roughly 20% of the world's land and consistently show lower deforestation rates than state or corporate managers — yet are routinely excluded under the Kunming-Montreal Global Biodiversity Framework's 30x30 targets.",
-        "insight": "The 30x30 biodiversity agenda will only succeed if co-governed by the peoples who have stewarded those lands for generations — making Indigenous land rights the decisive variable in whether global targets translate into living ecosystems or just lines on paper.",
-        "actors": ["gaia-foundation", "indigenous-terra-madre"],
-        "tags": ["indigenous-land-rights", "biodiversity", "30x30", "conservation"],
-        "orientations": ["GARDEN", "ASSEMBLY"],
-        "sourceUrl": "https://iprights.org/2026/04/15/land-rights-for-better-conservation-outcomes/"
-    },
-    {
-        "slug": "larpocracy-democratic-spaces",
-        "title": "EU Bets €33M on Larp Festivals as Democratic Infrastructure",
-        "date": "2026-01-29",
-        "image": "",
-        "imageAlt": "",
-        "summary": "The EU Horizon-funded Larpocracy project — involving Uppsala University and partners across Europe — has published research arguing that larp festivals are 'cultural institutions' and sites of a democratic public sphere. The project will test this by designing a model larp festival in Poland in summer 2026, explicitly as a space for building deliberative and democratic capacity, including with marginalised communities in Brazil and Poland.",
-        "insight": "If the lived encounter of larp can reliably build deliberative capacity and democratic values — and the EU is betting €33 million on that hypothesis — then immersive play becomes one of the most scalable tools for civic renewal.",
-        "actors": ["nordic-larp", "transformative-play-initiative"],
-        "tags": ["larp", "deliberative-democracy", "experiential-futures", "EU"],
-        "orientations": ["MYSTERIES", "ASSEMBLY"],
-        "sourceUrl": "https://zenodo.org/records/18419410"
-    },
-    {
-        "slug": "rights-of-nature-tribunal-ecocide-2026",
-        "title": "Rights of Nature Tribunal Declares Fossil Fuels a Pattern of Ecocide",
-        "date": "2026-03-22",
-        "image": "",
-        "imageAlt": "",
-        "summary": "On World Water Day, the International Rights of Nature Tribunal released the judgment of its 6th session, declaring that the expansion of fossil fuels and large-scale mining constitutes 'a systemic pattern of violations of the Rights of Nature, amounting to ecocide.' The judgment synthesised 24 cases from across the Americas, Europe, Africa, and Asia, and introduced the concept of 'green colonialism' — extraction in the name of the energy transition that intensifies pressure on ecosystems in the Global South.",
-        "insight": "A tribunal-level ruling framing ecocide as a systemic pattern — not isolated incidents — establishes the legal and moral vocabulary for future binding international instruments, and a scaffolding for planetary rights-based governance is assembling faster than most observers expected.",
-        "actors": ["rights-of-nature-tribunal"],
-        "tags": ["rights-of-nature", "ecocide", "climate-justice", "green-colonialism"],
-        "orientations": ["ASSEMBLY", "GARDEN"],
-        "sourceUrl": "https://www.rightsofnaturetribunal.org/6th-international-tribunal-judgment/"
-    },
-    {
-        "slug": "citidem-transnational-assembly-bologna",
-        "title": "First Transnational European Citizens' Assembly Convenes in Bologna",
-        "date": "2026-04-27",
-        "image": "",
-        "imageAlt": "",
-        "summary": "The EU-funded CitiDem project is holding a Transnational European Citizens' Assembly in Bologna — one of two cross-border assemblies bookending local ones in 8 EU member states. Topics include disinformation, climate justice, diversity, workers' rights, and youth empowerment. The project aims to produce cross-border deliberative recommendations and bridge citizens directly with EU policymakers.",
-        "insight": "A genuinely transnational citizens' assembly — with participants from 8 countries deliberating on climate, migration, and democracy simultaneously — is a prototype for the kind of planetary governance body that can make legitimate collective decisions without a world government.",
-        "actors": ["sortition-foundation", "global-assembly"],
-        "tags": ["citizens-assembly", "transnational-governance", "deliberative-democracy", "EU"],
-        "orientations": ["ASSEMBLY"],
-        "sourceUrl": "https://citizenstakeover.eu/citidem/"
-    },
-    {
-        "slug": "platform-cooperativism-state-digital",
-        "title": "Brazil, South Korea and Kerala Are Building Democratic Public Platforms",
-        "date": "2026-02-28",
-        "image": "",
-        "imageAlt": "",
-        "summary": "The Platform Cooperativism Consortium published analysis of how governments in Brazil, South Korea, and Kerala have launched state-owned apps and public-cooperative hybrid platforms to counter monopoly platform capitalism. The central question: under what conditions can public or cooperative digital platforms achieve both economic durability and democratic governance?",
-        "insight": "As digital infrastructure becomes the nervous system of economic life, who owns and governs it is as consequential as who owns land — making platform cooperativism a direct analog to commons-based governance at planetary scale.",
-        "actors": ["commons-network", "metagovernance-project"],
-        "tags": ["platform-cooperativism", "digital-commons", "infrastructure-sovereignty", "cooperative-governance"],
-        "orientations": ["SPACESHIP"],
-        "sourceUrl": "https://platform.coop/blog/when-the-state-goes-digital/"
-    },
-    {
-        "slug": "dao-governance-ostrom-principles",
-        "title": "Research Finds DAOs Reproduce Inequality — and Points to Fixes",
-        "date": "2025-05-16",
-        "image": "",
-        "imageAlt": "",
-        "summary": "Researchers from Hult International Business School and École des ponts ParisTech found that token-weighted voting in DAOs produces plutocracy, with voter participation averaging just 0.79% in some cases. Applying Elinor Ostrom's design principles for commons governance, they propose quadratic voting, reputation-based systems, and Soulbound Tokens as remedies. Case studies include MakerDAO, KlimaDAO, and FairCoop.",
-        "insight": "Regenerative finance tools will reproduce the inequalities they claim to solve unless their governance architecture is deliberately designed around inclusion — Ostrom's framework for fisheries and forests turns out to be exactly the right lens for digital commons too.",
-        "actors": ["refi-dao", "metagovernance-project"],
-        "tags": ["dao", "digital-commons", "regenerative-finance", "ostrom"],
-        "orientations": ["SPACESHIP"],
-        "sourceUrl": "https://www.frontiersin.org/journals/blockchain/articles/10.3389/fbloc.2025.1538227/full"
-    },
-    {
-        "slug":  "river-reuss-referendum",
-        "title":  "River Reuss Heads to Referendum",
-        "date":  "2026-03-19",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "A citizen initiative in Lucerne canton has gathered 5,460 signatures to grant legal personhood to the River Reuss, triggering a mandatory referendum. If passed, the river would gain the right to flow freely and be defended in court by appointed guardians.",
-        "insight":  "If a Swiss canton can grant legal personhood to a river through direct democracy, the question shifts from whether to how fast.",
-        "actors":  [
-                       "rights-of-nature-tribunal"
-                   ],
-        "tags":  [
-                     "rights-of-nature",
-                     "governance",
-                     "switzerland"
-                 ],
-        "orientations":  [
-                             "GARDEN",
-                             "ASSEMBLY"
-                         ],
-        "sourceUrl":  "https://www.democracywithoutborders.org"
-    },
-    {
-        "slug":  "kiss-the-ground-grant",
-        "title":  "Kiss the Ground Secures $12M to Scale Regenerative Farmer Training",
-        "date":  "2026-03-12",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "Kiss the Ground has secured $12 million in new funding to expand its regenerative agriculture training programme to 10,000 farmers across the American West. The grant comes from a coalition of philanthropies focused on soil health as a climate solution.",
-        "insight":  "Regenerative agriculture only scales when the financial architecture supports the people doing the work — the same design challenge governance faces at every level.",
-        "actors":  [
-                       "kiss-the-ground"
-                   ],
-        "tags":  [
-                     "regenerative-agriculture",
-                     "soil",
-                     "food-systems",
-                     "funding"
-                 ],
-        "orientations":  [
-                             "GARDEN"
-                         ],
-        "sourceUrl":  "https://kisstheground.com"
-    },
-    {
-        "slug":  "metagov-standards",
-        "title":  "Metagovernance Project Releases Open Governance Standards for DAOs",
-        "date":  "2026-03-08",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "The Metagovernance Project has published version 2.0 of its Community Rule framework — a machine-readable standard for describing governance rules in decentralised organisations. Over 200 DAOs have already adopted the standard.",
-        "insight":  "Governance is only as legible as the language it\u0027s written in. A shared grammar for rules makes comparison, learning, and accountability possible at scale.",
-        "actors":  [
-                       "metagovernance-project"
-                   ],
-        "tags":  [
-                     "digital-governance",
-                     "dao",
-                     "open-standards"
-                 ],
-        "orientations":  [
-                             "SPACESHIP",
-                             "ASSEMBLY"
-                         ],
-        "sourceUrl":  "https://metagov.org"
-    },
-    {
-        "slug":  "lule-transition-exhibition",
-        "title":  "Luleå Installs Permanent Climate Governance Exhibition in Shopping Centre",
-        "date":  "2026-02-28",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "The Swedish city of Luleå has installed a permanent interactive exhibition on climate transition in its main shopping centre, reaching 40,000 visitors per month. The exhibition invites residents to participate in ongoing climate planning decisions.",
-        "insight":  "Governance that hides in policy documents stays abstract. Governance that shows up in a shopping mall becomes culture.",
-        "actors":  [
-
-                   ],
-        "tags":  [
-                     "urban-governance",
-                     "climate-communication",
-                     "participatory-democracy",
-                     "sweden"
-                 ],
-        "orientations":  [
-                             "ASSEMBLY",
-                             "MYSTERIES"
-                         ],
-        "sourceUrl":  "https://www.lulea.se"
-    },
-    {
-        "slug":  "refi-dao-tropical-forests",
-        "title":  "ReFi DAO Pilots Nature-Backed Currency in Amazon Communities",
-        "date":  "2026-02-22",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "ReFi DAO\u0027s latest pilot in the Peruvian Amazon has issued a community currency backed by verified forest carbon and biodiversity credits, circulating among 12 villages. Early results show a 30% increase in forest stewardship activities.",
-        "insight":  "When the value of money is literally tied to the health of the forest, economic incentives and ecological health become the same thing.",
-        "actors":  [
-                       "refi-dao"
-                   ],
-        "tags":  [
-                     "regenerative-finance",
-                     "nature-based-currency",
-                     "indigenous-communities"
-                 ],
-        "orientations":  [
-                             "SPACESHIP",
-                             "GARDEN"
-                         ],
-        "sourceUrl":  "https://www.refidao.com"
-    },
-    {
-        "slug":  "global-assembly-biodiversity",
-        "title":  "Second Global Citizens\u0027 Assembly Announced — Focus on Biodiversity",
-        "date":  "2026-02-15",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "Building on the success of the first Global Assembly on the Climate Crisis, organisers have announced a second gathering to deliberate on biodiversity loss. 100 randomly selected citizens from 150 countries will participate over six months in 2026.",
-        "insight":  "Randomly selected citizens consistently make better long-term decisions than elected officials — because they have no election to win.",
-        "actors":  [
-                       "global-assembly",
-                       "sortition-foundation"
-                   ],
-        "tags":  [
-                     "citizens-assembly",
-                     "biodiversity",
-                     "sortition"
-                 ],
-        "orientations":  [
-                             "ASSEMBLY"
-                         ],
-        "sourceUrl":  "https://globalassembly.org"
-    },
-    {
-        "slug":  "terra0-ecosystem-dao",
-        "title":  "terra0 Launches First Self-Owning Forest in Germany",
-        "date":  "2026-02-10",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "Berlin-based art and research project terra0 has established the first legally recognised forest governed by a decentralised autonomous organisation in Brandenburg, Germany. The forest now issues its own tokens representing rights to its timber harvest.",
-        "insight":  "An ecosystem that can own itself and make financial decisions about its own resources is not a metaphor. It is a governance innovation.",
-        "actors":  [
-                       "terra0"
-                   ],
-        "tags":  [
-                     "rights-of-nature",
-                     "dao",
-                     "smart-contracts",
-                     "germany"
-                 ],
-        "orientations":  [
-                             "SPACESHIP",
-                             "GARDEN"
-                         ],
-        "sourceUrl":  "https://terra0.org"
-    },
-    {
-        "slug":  "nordic-larp-governance",
-        "title":  "Nordic Larp Community Runs Governance Simulation for EU Parliament Staff",
-        "date":  "2026-01-30",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "The Nordic larp community ran a three-day governance simulation for 45 European Parliament staff members, exploring alternative decision-making structures through immersive roleplay. Participants reported significantly shifted perspectives on institutional design.",
-        "insight":  "You cannot think your way into a new relationship with power. You have to play your way into it.",
-        "actors":  [
-                       "nordic-larp",
-                       "transformative-play-initiative"
-                   ],
-        "tags":  [
-                     "larp",
-                     "governance-simulation",
-                     "european-parliament"
-                 ],
-        "orientations":  [
-                             "MYSTERIES",
-                             "ASSEMBLY"
-                         ],
-        "sourceUrl":  "https://nordiclarp.org"
-    },
-    {
-        "slug":  "purpose-steward-ownership",
-        "title":  "Purpose Foundation Reports 300% Growth in Steward-Owned Companies",
-        "date":  "2026-01-22",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "Purpose Foundation\u0027s annual report shows steward-owned companies — where control stays with employees and cannot be sold — have grown 300% since 2020. The model is gaining traction particularly in Germany, Denmark, and the UK.",
-        "insight":  "Steward ownership is what happens when you ask: what if the company existed to serve its purpose, not to be sold?",
-        "actors":  [
-                       "purpose-foundation"
-                   ],
-        "tags":  [
-                     "steward-ownership",
-                     "alternative-ownership",
-                     "commons"
-                 ],
-        "orientations":  [
-                             "SPACESHIP"
-                         ],
-        "sourceUrl":  "https://purpose-economy.org"
-    },
-    {
-        "slug":  "doughnut-amsterdam",
-        "title":  "Amsterdam Embeds Doughnut Economics into City Budget",
-        "date":  "2026-01-15",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "Amsterdam has become the first major city to formally integrate Doughnut Economics metrics into its annual budget process, requiring each department to demonstrate that spending respects both social foundations and ecological ceilings.",
-        "insight":  "The doughnut is no longer a metaphor in Amsterdam. It is a budget line.",
-        "actors":  [
-                       "doughnut-economics-action-lab"
-                   ],
-        "tags":  [
-                     "doughnut-economics",
-                     "urban-governance",
-                     "regenerative-economics"
-                 ],
-        "orientations":  [
-                             "ASSEMBLY",
-                             "SPACESHIP"
-                         ],
-        "sourceUrl":  "https://doughnuteconomics.org"
-    },
-    {
-        "slug":  "gaia-seed-library",
-        "title":  "Gaia Foundation Expands Indigenous Seed Library Network to 40 Countries",
-        "date":  "2026-01-08",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "The Gaia Foundation has expanded its network of community seed libraries — protecting traditional crop varieties — to 40 countries across Africa, Latin America, and Asia. The network now safeguards over 2,000 seed varieties at risk of commercial replacement.",
-        "insight":  "Food sovereignty begins with who controls the seeds. A network of community seed libraries is a form of distributed governance over the foundation of life.",
-        "actors":  [
-                       "gaia-foundation",
-                       "indigenous-terra-madre"
-                   ],
-        "tags":  [
-                     "food-sovereignty",
-                     "indigenous-knowledge",
-                     "biodiversity"
-                 ],
-        "orientations":  [
-                             "GARDEN"
-                         ],
-        "sourceUrl":  "https://www.gaiafoundation.org"
-    },
-    {
-        "slug":  "destination-earth-launch",
-        "title":  "EU Launches Second Phase of Digital Twin Earth Initiative",
-        "date":  "2025-12-18",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "The European Union has launched the second phase of Destination Earth, its initiative to build a comprehensive digital twin of the planet. The new phase focuses on modelling tipping points and enabling real-time policy simulation at planetary scale.",
-        "insight":  "A working model of Earth is not just a scientific tool. It is a governance tool — the first time human institutions could simulate consequences before acting.",
-        "actors":  [
-
-                   ],
-        "tags":  [
-                     "digital-twin",
-                     "climate-modelling",
-                     "EU"
-                 ],
-        "orientations":  [
-                             "SPACESHIP"
-                         ],
-        "sourceUrl":  "https://destination-earth.eu"
-    },
-    {
-        "slug":  "rewilding-scotland",
-        "title":  "Scotland\u0027s Rewilding Charter Signed by 150 Landowners",
-        "date":  "2025-12-10",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "A landmark Scottish Rewilding Charter has been signed by 150 landowners covering 1.2 million acres, committing to restore native woodland, wetland, and peatland across the Scottish Highlands. It is the largest voluntary rewilding commitment in European history.",
-        "insight":  "Rewilding at this scale requires not just ecological knowledge but a new politics of land — one where landowners see themselves as stewards rather than owners.",
-        "actors":  [
-                       "rewilding-europe"
-                   ],
-        "tags":  [
-                     "rewilding",
-                     "land-stewardship",
-                     "scotland",
-                     "biodiversity"
-                 ],
-        "orientations":  [
-                             "GARDEN"
-                         ],
-        "sourceUrl":  "https://www.rewildingeurope.com"
-    },
-    {
-        "slug":  "sortition-uk-inquiry",
-        "title":  "UK Parliament Recommends Permanent Citizens\u0027 Assembly for Climate",
-        "date":  "2025-12-05",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "A House of Commons inquiry has recommended establishing a permanent, randomly selected Citizens\u0027 Assembly with formal advisory powers over UK climate policy. The recommendation follows the success of the 2020 Climate Assembly UK.",
-        "insight":  "Moving from one-off assemblies to a permanent democratic body would fundamentally change how climate policy is made — and who gets to make it.",
-        "actors":  [
-                       "sortition-foundation",
-                       "global-assembly"
-                   ],
-        "tags":  [
-                     "citizens-assembly",
-                     "climate-policy",
-                     "democratic-innovation",
-                     "UK"
-                 ],
-        "orientations":  [
-                             "ASSEMBLY"
-                         ],
-        "sourceUrl":  "https://www.sortitionfoundation.org"
-    },
-    {
-        "slug":  "commons-network-digital-rights",
-        "title":  "Commons Network Wins EU Recognition for Digital Commons Framework",
-        "date":  "2025-11-28",
-        "image":  "",
-        "imageAlt":  "",
-        "summary":  "The Commons Network\u0027s framework for treating digital infrastructure as a public commons has been formally acknowledged in EU digital policy guidance, opening the door for public funding of open-source governance tools.",
-        "insight":  "When digital infrastructure is owned as a commons rather than a commodity, the governance of that infrastructure becomes a matter of collective self-determination.",
-        "actors":  [
-                       "commons-network"
-                   ],
-        "tags":  [
-                     "commons",
-                     "digital-rights",
-                     "EU-policy"
-                 ],
-        "orientations":  [
-                             "SPACESHIP",
-                             "ASSEMBLY"
-                         ],
-        "sourceUrl":  "https://www.commonsnetwork.org"
-    }
+  {
+    "slug": "three-minute-videos-shift-democratic-understanding-across-33-countries-2026-03-23",
+    "title": "Three-minute videos shift democratic understanding across 33 countries",
+    "date": "2026-03-23",
+    "image": "/images/news/three-minute-videos-shift-democratic-understanding-across-33-countries-2026-03-23.jpg",
+    "imageAlt": "Students in navy uniforms sit on a bench with smartphones, a soccer ball at their feet",
+    "summary": "A large-scale experiment finds that brief online videos explaining democratic principles — rights, checks and balances, accountability — measurably strengthen support for democracy and reduce acceptance of authoritarian alternatives, even among the politically disengaged.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "democratic-innovation",
+      "governance",
+      "research",
+      "digital-tools",
+      "civic-education"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://www.democracywithoutborders.org/41702/online-democracy-education-can-work-new-evidence-shows/"
+  },
+  {
+    "slug": "trump-ai-policy-framework-overrides-local-consent-on-data-center-expansion",
+    "title": "Trump AI Policy Framework Overrides Local Consent on Data Center Expansion",
+    "date": "2026-03-20",
+    "image": "/images/news/trump-ai-policy-framework-overrides-local-consent-on-data-center-expansion.jpg",
+    "imageAlt": "KD Chavez, executive director of Climate Justice Alliance, in black turtleneck against colorful abstract background",
+    "summary": "New federal AI policy fast-tracks data center permits while stripping local governments of oversight — a test case for whether infrastructure governance flows from communities or concentrates upward with federal and corporate power.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "climate",
+      "democratic-innovation",
+      "infrastructure",
+      "environmental-justice"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://climatejusticealliance.org/ai-policy-framework/"
+  },
+  {
+    "slug": "can-ecological-collapse-be-undone-chinas-yangtze-experiment-offers-an-answer",
+    "title": "Can ecological collapse be undone? China's Yangtze experiment offers an answer",
+    "date": "2026-03-19",
+    "image": "",
+    "imageAlt": "Aerial view of the Yangtze River winding through terraced landscape",
+    "summary": "A decade-long commercial fishing ban across the Yangtze basin — affecting an area the size of Mexico — shows early signs of reversing biodiversity loss. The scale of intervention required reveals what ecological restoration actually demands.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "ecological-stewardship",
+      "governance",
+      "biodiversity",
+      "restoration",
+      "china"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://futureearth.org/can-ecological-collapse-be-undone-china-is-making-a-bold-move-on-the-yangtze-river/"
+  },
+  {
+    "slug": "kiss-the-ground-grants-500k-to-215-farms-shifting-73000-acres-to-regeneration",
+    "title": "Kiss the Ground Grants $500K to 215 Farms, Shifting 73,000 Acres to Regeneration",
+    "date": "2026-03-19",
+    "image": "/images/news/kiss-the-ground-grants-500k-to-215-farms-shifting-73000-acres-to-regeneration.jpg",
+    "imageAlt": "Four farmers standing beside mulched garden beds with forest backdrop in Cazadero, California",
+    "summary": "Direct grants to small-scale farmers reduced transition risk for regenerative practices across 73,000 US acres in 2025. Now the work shifts from capital deployment to storytelling — connecting eaters to the human systems behind soil governance.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "regenerative-agriculture",
+      "funding",
+      "land-stewardship",
+      "ecological-governance",
+      "farmer-grants"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://kisstheground.com/ktg-farmer-grant-update/"
+  },
+  {
+    "slug": "the-bioplastics-trade-off-climate-gains-biodiversity-losses",
+    "title": "The Bioplastics Trade-off: Climate Gains, Biodiversity Losses",
+    "date": "2026-03-19",
+    "image": "",
+    "imageAlt": "Agricultural landscape showing crop cultivation for bioplastic feedstock production",
+    "summary": "New lifecycle analysis reveals bioplastics reduce carbon but harm ecosystems more than fossil alternatives — a material governance challenge where the only path to climate targets involves reducing demand itself.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "ecological-stewardship",
+      "climate",
+      "material-governance",
+      "biodiversity",
+      "demand-reduction"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://futureearth.org/theres-no-such-thing-as-a-free-polymer-the-tradeoff-at-the-heart-of-bioplastics/"
+  },
+  {
+    "slug": "water-governance-standard-launches-in-tokyo-with-emphasis-on-felt-practice",
+    "title": "Water governance standard launches in Tokyo with emphasis on felt practice",
+    "date": "2026-03-19",
+    "image": "/images/news/water-governance-standard-launches-in-tokyo-with-emphasis-on-felt-practice.jpg",
+    "imageAlt": "Attendees gather for group photo at AWS Standard 3.0 launch in Tokyo",
+    "summary": "The Alliance for Water Stewardship released Version 3.0 of its certification standard at Suntory's Tokyo headquarters, bringing stakeholder engagement and catchment-level planning to corporate water management across the Asia-Pacific region.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "water",
+      "corporate-governance",
+      "japan",
+      "standards",
+      "ecological-stewardship"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://a4ws.org/updates/aws-standard-v3-japan-launch/"
+  },
+  {
+    "slug": "carceral-education-as-social-innovation-stephanie-fanfans-research",
+    "title": "Carceral Education as Social Innovation: Stephanie Fanfan's Research",
+    "date": "2026-03-18",
+    "image": "/images/news/carceral-education-as-social-innovation-stephanie-fanfans-research.jpg",
+    "imageAlt": "Stephanie Fanfan, PhD researcher studying carceral education and justice capital",
+    "summary": "A PhD student at Learning Planet Institute examines how education within prisons shapes justice capital and institutional recognition — testing whether carceral systems can transform or merely replicate inequality.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "research",
+      "social-innovation",
+      "education",
+      "justice",
+      "governance"
+    ],
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.learningplanetinstitute.org/fr/news/interview-of-stephanie-fanfan-phd-student-at-the-fire-doctoral-school/"
+  },
+  {
+    "slug": "energynet-and-the-governance-of-local-power",
+    "title": "EnergyNet and the Governance of Local Power",
+    "date": "2026-03-18",
+    "image": "/images/news/energynet-and-the-governance-of-local-power.png",
+    "imageAlt": "Illustrated figures and infrastructure representing local energy systems with solar panels and transmission towers",
+    "summary": "Viable Cities explores how local energy systems can reshape urban climate action — not just as infrastructure, but as participatory governance. The EnergyNet model, tested in Lund, treats energy as a coordinated system involving households, property owners, and municipalities.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "energy",
+      "governance",
+      "nordic",
+      "democratic-innovation",
+      "climate"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://viablecities.se/energynet-och-framtidens-lokala-energisystem/"
+  },
+  {
+    "slug": "global-democracy-returns-to-1978-levels-as-autocratization-accelerates",
+    "title": "Global democracy returns to 1978 levels as autocratization accelerates",
+    "date": "2026-03-18",
+    "image": "/images/news/global-democracy-returns-to-1978-levels-as-autocratization-accelerates.jpg",
+    "imageAlt": "Protester holds sign reading 'Presidents Are Not Kings' at demonstration in urban street",
+    "summary": "V-Dem's annual assessment finds 74% of humanity now lives under autocracy, with 44 countries actively autocratizing. The US loses liberal democracy status as freedom of expression and legislative constraints deteriorate worldwide.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "democracy",
+      "governance",
+      "autocracy",
+      "democratic-innovation",
+      "research"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://www.democracywithoutborders.org/41651/v-dem-report-finds-global-democracy-is-back-at-1978-levels/"
+  },
+  {
+    "slug": "phage-research-as-governance-practice-learning-from-living-systems",
+    "title": "Phage research as governance practice: learning from living systems",
+    "date": "2026-03-18",
+    "image": "/images/news/phage-research-as-governance-practice-learning-from-living-systems.jpg",
+    "imageAlt": "Portrait of Milena Milovanović, PhD researcher studying bacteriophage systems at FIRE Doctoral School",
+    "summary": "A doctoral researcher at FIRE examines bacteriophages to understand life's fundamental coupling of form and function — a question with implications for how we design adaptive, living governance systems.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "research",
+      "learning-planet",
+      "systems-thinking",
+      "education"
+    ],
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://www.learningplanetinstitute.org/fr/news/interview-of-milena-milovanovic-phd-student-at-the-fire-doctoral-school/"
+  },
+  {
+    "slug": "portrait-chloé-anna-höllerer-enters-fires-doctoral-cohort",
+    "title": "Portrait: Chloé Anna Höllerer enters FIRE's doctoral cohort",
+    "date": "2026-03-18",
+    "image": "/images/news/portrait-chloé-anna-höllerer-enters-fires-doctoral-cohort.jpg",
+    "imageAlt": "Chloé Anna Höllerer, first-year PhD student at FIRE Doctoral School",
+    "summary": "A new PhD student joins the FIRE Doctoral School at Learning Planet Institute, bringing a background in agronomy and molecular biology to questions of research and learning systems. Another researcher entering the work of governance experimentation.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "research",
+      "learning",
+      "doctoral-education",
+      "institutional-design"
+    ],
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://www.learningplanetinstitute.org/fr/news/interview-of-chloe-anna-hollerer-phd-student-at-the-fire-doctoral-school/"
+  },
+  {
+    "slug": "water-stewardship-standard-revised-to-meet-catchment-scale-governance-demands",
+    "title": "Water stewardship standard revised to meet catchment-scale governance demands",
+    "date": "2026-03-18",
+    "image": "/images/news/water-stewardship-standard-revised-to-meet-catchment-scale-governance-demands.png",
+    "imageAlt": "Aerial view of winding river through green landscape illustrating watershed governance at catchment scale",
+    "summary": "The Alliance for Water Stewardship releases Version 3.0 of its certification framework, refining how corporations engage with watershed governance beyond efficiency metrics — a shift toward catchment-scale accountability as water becomes boardroom risk.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "water",
+      "governance",
+      "corporate-accountability",
+      "ecological-stewardship",
+      "certification"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://a4ws.org/updates/aws-unveils-global-water-stewardship-standard-v3/"
+  },
+  {
+    "slug": "small-states-strength-in-numbers-rebuilding-human-rights-multilateralism",
+    "title": "Small states, strength in numbers: rebuilding human rights multilateralism",
+    "date": "2026-03-17",
+    "image": "/images/news/small-states-strength-in-numbers-rebuilding-human-rights-multilateralism.jpg",
+    "imageAlt": "Speaker at World Economic Forum Davos podium addressing audience, blue branding visible",
+    "summary": "As great powers fragment the UN human rights system, a coalition of 90 countries — half from the global south — is testing whether one-country-one-vote can still anchor planetary governance in shared rules rather than fortress politics.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "human-rights",
+      "multilateralism",
+      "un-system",
+      "democratic-innovation"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.democracywithoutborders.org/41635/great-powers-will-not-save-human-rights-the-rest-of-us-must/"
+  },
+  {
+    "slug": "rewilding-as-governance-in-ukraines-danube-delta",
+    "title": "Rewilding as governance in Ukraine's Danube Delta",
+    "date": "2026-03-16",
+    "image": "/images/news/rewilding-as-governance-in-ukraines-danube-delta.jpg",
+    "imageAlt": "Water buffalo grazing in wetland grasses of Ukraine's Danube Delta rewilding area",
+    "summary": "A new documentary shows how rewilding in Ukraine's Danube Delta operates as both ecological restoration and social healing — restoring natural processes while offering veterans and communities a lived practice of renewal amid war.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rewilding",
+      "ecological-stewardship",
+      "ukraine",
+      "community-practice",
+      "veterans"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://rewildingeurope.com/news/new-documentary-reveals-the-healing-power-of-rewilding-in-ukraines-danube-delta/"
+  },
+  {
+    "slug": "tharakas-river-of-life-eco-cultural-mapping-as-governance-practice",
+    "title": "Tharaka's River of Life: eco-cultural mapping as governance practice",
+    "date": "2026-03-16",
+    "image": "/images/news/tharakas-river-of-life-eco-cultural-mapping-as-governance-practice.jpg",
+    "imageAlt": "Tharaka spiritual leader in ceremonial headdress sits in dugout canoe by riverbank, Kenya",
+    "summary": "The Tharaka community in Kenya adapts Amazonian mapping methods to create Life Plans — participatory governance tools that weave seed sovereignty, sacred site protection, and customary law into a holistic vision of territorial stewardship.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "governance",
+      "indigenous-knowledge",
+      "territorial-stewardship",
+      "participatory-mapping"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://gaiafoundation.org/this-is-our-river-of-life/"
+  },
+  {
+    "slug": "two-rewilding-initiatives-join-pan-european-network-expanding-into-greece-and-tü",
+    "title": "Two rewilding initiatives join pan-European network, expanding into Greece and Türkiye",
+    "date": "2026-03-16",
+    "image": "/images/news/two-rewilding-initiatives-join-pan-european-network-expanding-into-greece-and-tü.jpg",
+    "imageAlt": "Brown bear wearing tracking collar in green scrubland, part of CALLISTO coexistence monitoring",
+    "summary": "The European Rewilding Network adds CALLISTO and Marine Rewilding Türkiye to its roster of over 100 initiatives — one focused on human-carnivore coexistence, the other on coastal ecosystem recovery. Both embed local communities in restoration governance.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rewilding",
+      "coexistence",
+      "marine-governance",
+      "community-stewardship",
+      "ecological-restoration"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://rewildingeurope.com/news/the-european-rewilding-network-expands-into-turkiye-and-greece/"
+  },
+  {
+    "slug": "global-challenges-governance-prize-2026",
+    "title": "Global Challenges Foundation opens 2026 call for governance reform proposals",
+    "date": "2026-03-15",
+    "image": "",
+    "imageAlt": "",
+    "summary": "The Swedish foundation behind the New Shape Prize has announced a new round of funding for proposals that address gaps in planetary-scale governance. This cycle emphasises prototyping over theory — a shift that aligns closely with The Garden's approach.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "funding",
+      "nordic"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://globalchallenges.org/about/"
+  },
+  {
+    "slug": "decommodifying-land-in-philadelphia-governance-from-the-ground-up",
+    "title": "Decommodifying land in Philadelphia — governance from the ground up",
+    "date": "2026-03-13",
+    "image": "",
+    "imageAlt": "Row houses in an urban neighborhood with mixed commercial and residential buildings",
+    "summary": "Community land trusts in Kensington and beyond are testing whether neighborhoods can govern their own futures against displacement. It's hyperlocal democratic innovation with a clear thesis: ownership structures are governance structures.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "democratic-innovation",
+      "governance",
+      "land-stewardship",
+      "urban-systems",
+      "community-ownership"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://groundedsolutions.org/can-you-decommodify-real-estate/"
+  },
+  {
+    "slug": "agroecology-europe-seeks-administration-officer-to-anchor-european-food-transiti",
+    "title": "Agroecology Europe seeks administration officer to anchor European food transition",
+    "date": "2026-03-12",
+    "image": "/images/news/agroecology-europe-seeks-administration-officer-to-anchor-european-food-transiti.png",
+    "imageAlt": "Agroecology Europe logo on green background with hiring announcement",
+    "summary": "The Brussels-based network coordinating Europe's agroecological transition is hiring operations capacity — a quiet signal of organizational maturity in a movement linking farmers, researchers, and activists across borders.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "agroecology",
+      "europe",
+      "governance",
+      "food-systems",
+      "organizational-infrastructure"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.agroecology-europe.org/we-are-hiring-agroecology-europe-is-looking-for-an-administration-finance-officer/"
+  },
+  {
+    "slug": "nestlé-certifies-all-bottling-sites-under-aws-standard-but-what-counts-as-stewar",
+    "title": "Nestlé certifies all bottling sites under AWS Standard — but what counts as stewardship?",
+    "date": "2026-03-12",
+    "image": "/images/news/nestlé-certifies-all-bottling-sites-under-aws-standard-but-what-counts-as-stewar.jpg",
+    "imageAlt": "Aerial view of forested watershed with river running through valley",
+    "summary": "Nestlé's achievement of AWS certification across 39 bottling sites raises deeper questions about how corporations govern shared water resources — and whether certification frameworks can transform extraction into genuine stewardship.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "water",
+      "stewardship",
+      "corporate-governance",
+      "certification",
+      "commons"
+    ],
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP"
+    ],
+    "sourceUrl": "https://a4ws.org/updates/aws-member-spotlight-nestle/"
+  },
+  {
+    "slug": "tanzania-trains-public-officials-in-water-stewardship-as-dar-es-salaam-rations-s",
+    "title": "Tanzania trains public officials in water stewardship as Dar es Salaam rations supply",
+    "date": "2026-03-12",
+    "image": "/images/news/tanzania-trains-public-officials-in-water-stewardship-as-dar-es-salaam-rations-s.jpg",
+    "imageAlt": "Participants in a training session discussing water stewardship in Tanzania",
+    "summary": "As drought forces weekly water rationing in Dar es Salaam, Tanzania launches water stewardship training for 30+ public officials — an experiment in building trust-based governance between state agencies and private actors around shared catchments.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "water",
+      "governance",
+      "africa",
+      "capacity-building",
+      "ecological-stewardship"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://a4ws.org/updates/strengthening-water-stewardship-capacity-in-tanzanias-public-sector/"
+  },
+  {
+    "slug": "us-senate-passes-housing-act-centering-shared-equity-models",
+    "title": "U.S. Senate Passes Housing Act Centering Shared Equity Models",
+    "date": "2026-03-12",
+    "image": "",
+    "imageAlt": "Community land trust housing development with shared green space",
+    "summary": "Bipartisan legislation elevates community land trusts and shared equity programs to federal policy — testing whether ownership models that prioritize stewardship over speculation can operate at scale.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "housing",
+      "democratic-innovation",
+      "governance",
+      "shared-equity",
+      "land-stewardship"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://groundedsolutions.org/grounded-solutions-network-applauds-senate-passage-of-the-21st-century-road-to-housing-act/"
+  },
+  {
+    "slug": "testing-resilience-infrastructure-in-cities-rebuilt-from-disaster",
+    "title": "Testing Resilience Infrastructure in Cities Rebuilt from Disaster",
+    "date": "2026-03-10",
+    "image": "/images/news/testing-resilience-infrastructure-in-cities-rebuilt-from-disaster.jpg",
+    "imageAlt": "Research team gathered at traditional Japanese building during Tokyo project kickoff",
+    "summary": "A three-year transnational project examines how nature-based infrastructure performs in post-disaster cities across Japan, Sweden, and Poland — treating urban recovery as a testing ground for ecological governance under stress.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "urban-governance",
+      "nature-based-solutions",
+      "disaster-recovery",
+      "civic-ecology",
+      "research"
+    ],
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://futureearth.org/global-project-advances-nature-based-urban-resilience/"
+  },
+  {
+    "slug": "rewilding-loan-tests-whether-nature-recovery-can-anchor-rural-economies",
+    "title": "Rewilding loan tests whether nature recovery can anchor rural economies",
+    "date": "2026-03-09",
+    "image": "/images/news/rewilding-loan-tests-whether-nature-recovery-can-anchor-rural-economies.jpg",
+    "imageAlt": "Three people view terraced vineyards and rolling hills in Portugal's Greater Côa Valley from a dirt road",
+    "summary": "A €40,000 loan from Rewilding Europe Capital enables a Portuguese nature tourism company to expand accommodation in the Greater Côa Valley — testing whether financial tools can align ecological restoration with economic viability in depopulating rural regions.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rewilding",
+      "ecological-finance",
+      "rural-governance",
+      "portugal",
+      "nature-based-economies"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://rewildingeurope.com/news/rewilding-loan-drives-nature-based-tourism-growth-in-the-greater-coa-valley/"
+  },
+  {
+    "slug": "testing-governance-in-soil-herbs-certification-and-practiced-resilience",
+    "title": "Testing governance in soil: herbs, certification, and practiced resilience",
+    "date": "2026-03-09",
+    "image": "/images/news/testing-governance-in-soil-herbs-certification-and-practiced-resilience.png",
+    "imageAlt": "Text logo reading '11 with Evan' in dark gray sans-serif font against white background",
+    "summary": "Kyle Bliffert's journey through the supplement industry traces a shift from theoretical wellness to practiced ecological stewardship. At Gaia Herbs' 270-acre Regenerative Organic Certified farm, governance becomes tangible — tested by hurricanes and fire alike.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "ecological-stewardship",
+      "certification",
+      "regenerative-agriculture",
+      "resilience",
+      "practiced-governance"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://kisstheground.com/11-with-evan-kyle-bliffert/"
+  },
+  {
+    "slug": "metagov-interoperable-governance",
+    "title": "Metagov publishes framework for interoperable governance across digital and physical spaces",
+    "date": "2026-03-08",
+    "image": "",
+    "imageAlt": "",
+    "summary": "The research collective has released a working paper proposing standards for governance tool interoperability — enabling rules and processes to flow between online communities, DAOs, and physical assemblies.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance-tech",
+      "research",
+      "interoperability"
+    ],
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://metagov.org"
+  },
+  {
+    "slug": "democracy-without-borders-releases-brochure-on-global-cooperation",
+    "title": "Democracy Without Borders releases brochure on global cooperation",
+    "date": "2026-03-06",
+    "image": "/images/news/democracy-without-borders-releases-brochure-on-global-cooperation.jpg",
+    "imageAlt": "Bronze sculpture of a revolver with its barrel tied in a knot, displayed outside the UN building",
+    "summary": "Democracy Without Borders has published a new brochure examining pathways to reimagine global cooperation. The resource synthesizes emerging proposals for multilateral reform and democratic participation beyond borders.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "democracy",
+      "governance",
+      "multilateralism",
+      "democratic-innovation"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.democracywithoutborders.org/41317/brochure-reimagining-global-cooperation/"
+  },
+  {
+    "slug": "agroecology-europe-seeks-communicator-to-bridge-research-and-political-practice",
+    "title": "Agroecology Europe seeks communicator to bridge research and political practice",
+    "date": "2026-03-05",
+    "image": "/images/news/agroecology-europe-seeks-communicator-to-bridge-research-and-political-practice.png",
+    "imageAlt": "Agroecology Europe logo with blue and green leaf-like circular design on yellow background",
+    "summary": "The Brussels-based network — 200 members spanning farmers, academics, and activists — is hiring a communications officer to strengthen its work placing agroecological transition on Europe's governance agenda.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "agroecology",
+      "governance",
+      "europe",
+      "food-systems",
+      "ecological-stewardship"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.agroecology-europe.org/agroecology-europe-is-hiring-were-looking-for-a-communication-press-officer/"
+  },
+  {
+    "slug": "new-jerseys-pb-seeds-program-shows-how-advocacy-training-spreads-democratic-prac",
+    "title": "New Jersey's PB Seeds program shows how advocacy training spreads democratic practice",
+    "date": "2026-03-05",
+    "image": "/images/news/new-jerseys-pb-seeds-program-shows-how-advocacy-training-spreads-democratic-prac.jpg",
+    "imageAlt": "Diverse group of PB Seeds participants gathered around table in working session with papers and materials",
+    "summary": "A structured cohort model for participatory budgeting advocacy is generating new processes across New Jersey — including youth-led climate budgeting in Newark. Evaluations reveal what participants need to become effective democratic innovators.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "democratic-innovation",
+      "governance",
+      "participatory-budgeting",
+      "civic-infrastructure",
+      "advocacy"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.participatorybudgeting.org/pb-seeds-eval/"
+  },
+  {
+    "slug": "a-new-index-sorts-regimes-by-how-power-actually-works",
+    "title": "A New Index Sorts Regimes by How Power Actually Works",
+    "date": "2026-03-03",
+    "image": "/images/news/a-new-index-sorts-regimes-by-how-power-actually-works.jpg",
+    "imageAlt": "Presentation slide showing 'Tyranny Tracker Coming Soon' at Oslo Freedom Forum event",
+    "summary": "The Human Rights Foundation's Tyranny Tracker distinguishes democracies from hybrid and authoritarian regimes using qualitative thresholds — not aggregated scores — to capture the moment when democratic systems break down.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "democratic-innovation",
+      "accountability",
+      "indicators"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.democracywithoutborders.org/40940/new-tyranny-tracker-maps-the-worlds-authoritarian-regimes/"
+  },
+  {
+    "slug": "us-congress-considers-its-largest-housing-bill-in-decades",
+    "title": "U.S. Congress Considers Its Largest Housing Bill in Decades",
+    "date": "2026-03-03",
+    "image": "/images/news/us-congress-considers-its-largest-housing-bill-in-decades.png",
+    "imageAlt": "",
+    "summary": "The Senate is weighing the 21st Century ROAD to Housing Act, which would expand community land trusts and shared equity models — governance experiments that treat housing as stewardship rather than speculation.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "housing",
+      "governance",
+      "democratic-innovation",
+      "community-land-trusts",
+      "policy"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://groundedsolutions.org/paving-the-road-to-housing-for-the-21st-century/"
+  },
+  {
+    "slug": "climate-justice-alliance-links-militarism-to-climate-crisis-in-iran-strike-state",
+    "title": "Climate Justice Alliance Links Militarism to Climate Crisis in Iran Strike Statement",
+    "date": "2026-02-28",
+    "image": "/images/news/climate-justice-alliance-links-militarism-to-climate-crisis-in-iran-strike-state.jpg",
+    "imageAlt": "Illustrated poster showing firearms entangled in flowering vines and birds, reading 'Divest from wars, invest in a regenerative future'",
+    "summary": "As U.S. and Israeli forces strike Iran, the Climate Justice Alliance frames military action as ecological governance failure — the U.S. military remains the world's largest institutional emitter while resource extraction drives geopolitical conflict.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "climate",
+      "militarism",
+      "resource-extraction",
+      "frontline-communities",
+      "ecological-governance"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://climatejusticealliance.org/cja-opposes-war-on-iran/"
+  },
+  {
+    "slug": "agroecologys-quiet-spread-across-33-european-countries",
+    "title": "Agroecology's quiet spread across 33 European countries",
+    "date": "2026-02-26",
+    "image": "/images/news/agroecologys-quiet-spread-across-33-european-countries.jpg",
+    "imageAlt": "Horses grazing along a rural road bordered by green pastures and forest in Europe",
+    "summary": "A five-year mapping project documents hundreds of agroecological initiatives across Europe — from farming practices to living labs — showing how food system transformation happens through distributed experimentation rather than top-down policy.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "agroecology",
+      "food-systems",
+      "distributed-governance",
+      "europe",
+      "transformative-practice"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.agroecology-europe.org/the-silent-revolution-agroecology-is-reshaping-agriculture/"
+  },
+  {
+    "slug": "corruption-perceptions-worsen-as-civic-space-contracts-worldwide",
+    "title": "Corruption perceptions worsen as civic space contracts worldwide",
+    "date": "2026-02-26",
+    "image": "/images/news/corruption-perceptions-worsen-as-civic-space-contracts-worldwide.jpg",
+    "imageAlt": "Protesters holding banners and flags at a large street demonstration demanding anti-corruption action",
+    "summary": "Transparency International reports global corruption perceptions have fallen to their lowest level in over a decade, with shrinking civic space a common factor in declining scores. The trend reveals how governance legitimacy depends on openness.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "corruption",
+      "civic-space",
+      "accountability",
+      "democratic-innovation"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.democracywithoutborders.org/40659/corruption-perceptions-worsen-globally-as-civic-space-shrinks/"
+  },
+  {
+    "slug": "scottish-rewilding-lodge-joins-pan-european-practitioner-network",
+    "title": "Scottish rewilding lodge joins pan-European practitioner network",
+    "date": "2026-02-26",
+    "image": "/images/news/scottish-rewilding-lodge-joins-pan-european-practitioner-network.jpg",
+    "imageAlt": "Aerial view of Ballintean Mountain Lodge courtyard surrounded by autumn forest and Highland mountains",
+    "summary": "Ballintean Mountain Lodge, a 30-year rewilding experiment in the Cairngorms, joins the European Rewilding Network — a move that underscores how ecological restoration increasingly operates through distributed governance: peer learning, knowledge exchange, and practice-led networks rather than top-down mandates.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rewilding",
+      "ecological-governance",
+      "networks",
+      "scotland",
+      "practice-led"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://rewildingeurope.com/news/scottish-rewilding-lodge-joins-the-european-rewilding-network/"
+  },
+  {
+    "slug": "three-climate-justice-groups-challenge-epas-erosion-of-tribal-and-state-water-au",
+    "title": "Three Climate Justice Groups Challenge EPA's Erosion of Tribal and State Water Authority",
+    "date": "2026-02-26",
+    "image": "",
+    "imageAlt": "River or stream flowing through landscape, representing watershed governance",
+    "summary": "A joint comment letter opposes EPA proposals that would weaken Section 401 of the Clean Water Act — the mechanism that allows states and Tribal Nations to condition or deny federal permits based on water quality standards.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "water",
+      "governance",
+      "indigenous-sovereignty",
+      "environmental-justice",
+      "regulatory-rollback"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://climatejusticealliance.org/cwasection401/"
+  },
+  {
+    "slug": "warren-merkley-bill-targets-tax-breaks-for-corporate-landlords",
+    "title": "Warren, Merkley bill targets tax breaks for corporate landlords",
+    "date": "2026-02-26",
+    "image": "/images/news/warren-merkley-bill-targets-tax-breaks-for-corporate-landlords.jpg",
+    "imageAlt": "Multi-unit residential housing with front porches and fencing in suburban development",
+    "summary": "Senate Democrats propose ending tax benefits for firms that own 450,000 single-family homes and 2.2 million apartments — treating housing as extractive asset class rather than commons. A test of whether governance can reclaim shelter from financialization.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "housing",
+      "democratic-innovation",
+      "commons",
+      "financialization"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "SPACESHIP"
+    ],
+    "sourceUrl": "https://groundedsolutions.org/sens-warren-merkley-introduce-bill-to-end-tax-breaks-for-corporate-home-buyers/"
+  },
+  {
+    "slug": "gaia-foundation-seeks-regional-coordinators-for-uk-seed-sovereignty-network-2026-02-25",
+    "title": "Gaia Foundation Seeks Regional Coordinators for UK Seed Sovereignty Network",
+    "date": "2026-02-25",
+    "image": "/images/news/gaia-foundation-seeks-regional-coordinators-for-uk-seed-sovereignty-network-2026-02-25.jpg",
+    "imageAlt": "Group of seed sovereignty practitioners gathered in garden setting with buildings and autumn trees",
+    "summary": "Two new coordinators will work across southern and western England to strengthen grassroots seed networks — governance infrastructure for food systems that roots sovereignty in regional practice and Indigenous knowledge.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "seed-sovereignty",
+      "agroecology",
+      "indigenous-knowledge",
+      "food-systems",
+      "uk"
+    ],
+    "orientations": [
+      "GARDEN",
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://gaiafoundation.org/join-the-gaia-team-were-hiring-two-seed-sovereignty-coordinators/"
+  },
+  {
+    "slug": "gen-z-protests-erupt-globally-but-their-political-direction-remains-uncertain",
+    "title": "Gen-Z protests erupt globally — but their political direction remains uncertain",
+    "date": "2026-02-25",
+    "image": "/images/news/gen-z-protests-erupt-globally-but-their-political-direction-remains-uncertain.jpg",
+    "imageAlt": "Youth protesters gather in street demonstration, some seated, some standing, waving national flag",
+    "summary": "Youth-led uprisings across 11+ countries share grievances about inequality and corruption, but don't point toward a clear democratic renewal. The question isn't whether young people can mobilize — it's whether existing governance systems can absorb their demands.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "democratic-innovation",
+      "governance",
+      "youth-movements",
+      "populism",
+      "institutional-design"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.democracywithoutborders.org/40621/youth-protests-are-spreading-but-their-direction-is-often-unclear/"
+  },
+  {
+    "slug": "massachusetts-defends-inclusionary-zoning-as-fifth-amendment-suits-spread",
+    "title": "Massachusetts defends inclusionary zoning as Fifth Amendment suits spread",
+    "date": "2026-02-24",
+    "image": "",
+    "imageAlt": "Residential buildings on a tree-lined urban street in Cambridge, Massachusetts",
+    "summary": "A developer's constitutional challenge to Cambridge's affordable housing rules could reshape how 1,000+ U.S. inclusionary zoning policies function — testing whether local governance can require shared stewardship of urban space.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "democratic-innovation",
+      "urban-planning",
+      "legal"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://groundedsolutions.org/cambridges-inclusionary-zoning-laws-will-be-defended-by-attorney-general/"
+  },
+  {
+    "slug": "östersund-tests-governance-through-material-reuse-and-saves-10-million-kronor",
+    "title": "Östersund tests governance through material reuse — and saves 10 million kronor",
+    "date": "2026-02-23",
+    "image": "/images/news/östersund-tests-governance-through-material-reuse-and-saves-10-million-kronor.jpg",
+    "imageAlt": "Interior of Materialbanken showing shelves of colorful reused materials and craft supplies",
+    "summary": "A Swedish municipality embeds circular economy into budget processes and public institutions, treating reuse not as a side project but as core governance infrastructure. The results: 250 tons of CO2 avoided, millions saved, and a model others can copy.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "circular-economy",
+      "municipal-governance",
+      "climate",
+      "nordic",
+      "democratic-innovation"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.linkedin.com/pulse/vinst-för-både-kassa-och-klimat-när-östersund-storsatsar-bbfyf/?trackingId=Y7e6fQxgTe%2B252E9awi%2Bmg%3D%3D#new_tab"
+  },
+  {
+    "slug": "rights-of-nature-tribunal-2026",
+    "title": "Fifth International Rights of Nature Tribunal convenes with expanded mandate",
+    "date": "2026-02-22",
+    "image": "",
+    "imageAlt": "",
+    "summary": "The Global Alliance for the Rights of Nature has convened its fifth tribunal, this time with an expanded mandate covering ocean governance and AI-mediated environmental harm — territory that bridges Garden and Spaceship orientations.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "governance",
+      "tribunal"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.garn.org"
+  },
+  {
+    "slug": "eurip-opens-applications-for-interdisciplinary-research-on-planetary-challenges",
+    "title": "EURIP opens applications for interdisciplinary research on planetary challenges",
+    "date": "2026-02-20",
+    "image": "/images/news/eurip-opens-applications-for-interdisciplinary-research-on-planetary-challenges.webp",
+    "imageAlt": "Group discussion in modern collaborative space with participants seated on floor cushions",
+    "summary": "Learning Planet Institute's Graduate School in Paris seeks students willing to cross disciplinary boundaries to address systemic challenges — a model that tests whether academic structures can adapt to planetary-scale problems.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "education",
+      "interdisciplinary",
+      "learning-planet",
+      "paris",
+      "research"
+    ],
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://www.learningplanetinstitute.org/fr/news/les-candidatures-2026-pour-rejoindre-la-graduate-school-eurip-sont-ouvertes/"
+  },
+  {
+    "slug": "forests-as-rain-makers-governance-beyond-biodiversity",
+    "title": "Forests as rain-makers: governance beyond biodiversity",
+    "date": "2026-02-20",
+    "image": "",
+    "imageAlt": "Dense forest canopy showing the vegetation that generates terrestrial evaporation and rainfall",
+    "summary": "New satellite research reveals that 40% of corn and 60% of wheat depend on land-based rainfall — unstable moisture from forests, wetlands, and soil that agricultural expansion is actively destroying.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "ecological-stewardship",
+      "planetary-governance",
+      "hydrological-systems",
+      "agriculture",
+      "research"
+    ],
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://futureearth.org/protecting-forests-is-not-just-about-biodiversity-it-is-now-about-protecting-rain/"
+  },
+  {
+    "slug": "paul-hawken-on-curiosity-soil-and-fire-triggered-succession",
+    "title": "Paul Hawken on Curiosity, Soil, and Fire-Triggered Succession",
+    "date": "2026-02-20",
+    "image": "/images/news/paul-hawken-on-curiosity-soil-and-fire-triggered-succession.png",
+    "imageAlt": "White text reading '11 WITH Evan' on dark background, interview series branding",
+    "summary": "The author of Regeneration and founder of Project Drawdown reflects on what regenerative agriculture actually means — not as branding exercise, but as practice that must be felt, verified, and embodied through direct relationship with land and living systems.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "regenerative-agriculture",
+      "ecological-stewardship",
+      "transformative-practice",
+      "soil",
+      "climate"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://kisstheground.com/11-with-evan-paul-hawken/"
+  },
+  {
+    "slug": "the-perverse-arithmetic-of-coral-reef-recovery",
+    "title": "The perverse arithmetic of coral reef recovery",
+    "date": "2026-02-20",
+    "image": "",
+    "imageAlt": "Coral reef ecosystem with fish, representing potential food security and marine governance challenges",
+    "summary": "Coral reefs could sustainably yield 9,000 additional meals per square kilometer — but only if communities dependent on fishing accept decades of reduced catch. A stark example of governance as temporal negotiation.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "ecological-stewardship",
+      "governance",
+      "ocean",
+      "food-systems",
+      "climate"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://futureearth.org/the-perverse-dilemma-of-reef-recovery-less-fish-now-more-food-later/"
+  },
+  {
+    "slug": "what-makes-a-rewilding-image-worth-seeing-and-judging",
+    "title": "What makes a rewilding image worth seeing — and judging",
+    "date": "2026-02-19",
+    "image": "/images/news/what-makes-a-rewilding-image-worth-seeing-and-judging.jpg",
+    "imageAlt": "Photographer in dry suit holding large Atlantic sturgeon in shallow river water",
+    "summary": "As the Rewilding Europe Award deadline approaches, photographer Jon A. Juárez reflects on what makes rewilding imagery matter: not just aesthetics, but the governance relationships between people, science, and returning ecosystems.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rewilding",
+      "europe",
+      "ecological-stewardship",
+      "photography",
+      "species-restoration"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://rewildingeurope.com/blog/im-drawn-to-images-that-capture-coexistence-resilience-and-real-impact/"
+  },
+  {
+    "slug": "digital-twins-of-earth-testing-governance-before-the-crisis-arrives-2026-02-18",
+    "title": "Digital Twins of Earth: Testing Governance Before the Crisis Arrives",
+    "date": "2026-02-18",
+    "image": "/images/news/digital-twins-of-earth-testing-governance-before-the-crisis-arrives-2026-02-18.png",
+    "imageAlt": "Landslide probability map of Italy showing risk zones in purple and orange based on precipitation data",
+    "summary": "ESA's Digital Twin Earth program creates real-time planetary simulations — not just to model floods or fire, but to stress-test governance responses before disaster strikes. It's scenario planning made operational, fed by satellite data and constrained by physics.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance-tech",
+      "climate",
+      "earth-observation",
+      "simulation",
+      "european-space"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://futureearth.org/how-digital-twins-help-us-better-understand-earth/"
+  },
+  {
+    "slug": "pastoralists-as-land-stewards-mobility-tenure-and-rangeland-governance",
+    "title": "Pastoralists as Land Stewards: Mobility, Tenure, and Rangeland Governance",
+    "date": "2026-02-18",
+    "image": "/images/news/pastoralists-as-land-stewards-mobility-tenure-and-rangeland-governance.jpg",
+    "imageAlt": "Shepherd in red vest tending mixed flock of sheep across golden rangeland with mountains beyond",
+    "summary": "A coalition webinar ahead of UNCCD COP17 reframes pastoralism as regenerative governance — not degradation driver. The challenge: translating centuries of mobile land stewardship into policy that recognizes rights to territory and movement, not just plots.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "land-rights",
+      "agroecology",
+      "indigenous-governance",
+      "climate",
+      "unccd"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://agroecology-coalition.org/agroecology-land-pastoralists-at-the-frontline-of-combating-desertification/"
+  },
+  {
+    "slug": "three-reports-link-extreme-wealth-concentration-to-democratic-erosion",
+    "title": "Three reports link extreme wealth concentration to democratic erosion",
+    "date": "2026-02-18",
+    "image": "/images/news/three-reports-link-extreme-wealth-concentration-to-democratic-erosion.jpg",
+    "imageAlt": "Aerial view showing stark contrast between wealthy neighborhood and dense informal settlement",
+    "summary": "New assessments from Oxfam, a G20 expert committee, and the World Inequality Lab find billionaire wealth has grown 81% since 2020 while democratic institutions weaken — evidence that governance systems cannot be separated from economic architecture.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "democracy",
+      "inequality",
+      "institutions"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.democracywithoutborders.org/40592/extreme-wealth-inequality-is-threatening-democracy-reports-warn/"
+  },
+  {
+    "slug": "housing-network-expands-capacity-through-nonprofit-learning-partnership",
+    "title": "Housing Network Expands Capacity Through Nonprofit Learning Partnership",
+    "date": "2026-02-17",
+    "image": "",
+    "imageAlt": "Community members collaborating at a table with documents and planning materials",
+    "summary": "Grounded Solutions Network sponsors Nonprofit Quarterly's Leading Edge program, connecting community land trusts and housing justice organizations with management training amid federal funding pressures — infrastructure for the infrastructure.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "housing",
+      "capacity-building",
+      "nonprofit-governance",
+      "equity",
+      "community-land-trusts"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://groundedsolutions.org/grounded-solutions-network-announces-2026-leading-edge-sponsorship-with-nonprofit-quarterly-to-expand-learning-and-equity-driven-impact/"
+  },
+  {
+    "slug": "housing-network-joins-npq-to-strengthen-nonprofit-governance-infrastructure",
+    "title": "Housing Network Joins NPQ to Strengthen Nonprofit Governance Infrastructure",
+    "date": "2026-02-17",
+    "image": "",
+    "imageAlt": "Professionals collaborating in workshop or meeting setting",
+    "summary": "Grounded Solutions Network partners with Nonprofit Quarterly to give housing justice organizations access to governance training and peer networks — recognizing that transformative systems work requires strengthened organizational capacity.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "democratic-innovation",
+      "housing",
+      "nonprofit",
+      "capacity-building"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://groundedsolutions.org/expanding-impact-through-npqs-leading-edge-partnership/"
+  },
+  {
+    "slug": "lake-kartal-wetland-governance-tested-at-wars-edge",
+    "title": "Lake Kartal: wetland governance tested at war's edge",
+    "date": "2026-02-17",
+    "image": "/images/news/lake-kartal-wetland-governance-tested-at-wars-edge.jpg",
+    "imageAlt": "Aerial view of Lake Kartal in Ukraine's Danube Delta, showing reconnected waterways and floodplain",
+    "summary": "In Ukraine's Danube Delta, six years of restoration has reconnected 18,000 hectares of floodplain to the river — a reminder that ecological governance means reshaping flows, not just protecting boundaries, even under the strain of invasion.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "ecological-stewardship",
+      "restoration",
+      "ukraine",
+      "wetlands",
+      "transformative-practice"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://rewildingeurope.com/news/the-rise-of-lake-kartal-a-wetland-rewilding-showcase/"
+  },
+  {
+    "slug": "françois-taddei-on-building-a-learning-planet-2026-02-13",
+    "title": "François Taddei on Building a Learning Planet",
+    "date": "2026-02-13",
+    "image": "/images/news/françois-taddei-on-building-a-learning-planet-2026-02-13.jpg",
+    "imageAlt": "Podcast cover art showing lightning bolt logo and text 'Courant Alternatif' over blurred background",
+    "summary": "The Learning Planet Institute's co-founder joins a podcast exploring educational models as governance infrastructure — treating learning not as preparation for citizenship but as citizenship itself.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "education",
+      "democratic-innovation",
+      "learning",
+      "governance"
+    ],
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.learningplanetinstitute.org/fr/news/courant-alternatif-podcast/"
+  },
+  {
+    "slug": "ipbes-report-maps-the-7-trillion-gap-between-economic-growth-and-ecological-real",
+    "title": "IPBES Report Maps the $7 Trillion Gap Between Economic Growth and Ecological Reality",
+    "date": "2026-02-13",
+    "image": "/images/news/ipbes-report-maps-the-7-trillion-gap-between-economic-growth-and-ecological-real.jpg",
+    "imageAlt": "IPBES Chair at the Manchester plenary session with nameplate and presentation screen showing February 2026 date",
+    "summary": "The first fast-track business-biodiversity assessment reveals a stark asymmetry: $7.3 trillion in nature-harming flows versus $220 billion for restoration — a gap that threatens economic stability and requires governance innovation at the intersection of markets and ecosystems.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "biodiversity",
+      "governance",
+      "economic-systems",
+      "planetary-boundaries",
+      "ipbes"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://futureearth.org/ipbes-12th-plenary-launch-of-the-landmark-business-and-biodiversity-report/"
+  },
+  {
+    "slug": "what-makes-a-rewilding-image-powerful-a-photographers-lens-on-conservation-story",
+    "title": "What makes a rewilding image powerful? A photographer's lens on conservation storytelling",
+    "date": "2026-02-13",
+    "image": "/images/news/what-makes-a-rewilding-image-powerful-a-photographers-lens-on-conservation-story.jpg",
+    "imageAlt": "Photographer framing shot with hands, woman with glasses centered through finger frame",
+    "summary": "As Europe's wildlife photography competition opens submissions, judge Viktoria Pezzei argues for images that show human hands in ecological work — not pristine wilderness, but the lived practice of restoration.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "ecological-stewardship",
+      "storytelling",
+      "restoration",
+      "democratic-innovation",
+      "embodied-practice"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://rewildingeurope.com/blog/im-looking-for-photographs-that-dive-below-the-surface-and-truly-tell-a-story/"
+  },
+  {
+    "slug": "coexistence-guidance-equips-european-mayors-to-govern-alongside-returning-wildli",
+    "title": "Coexistence guidance equips European mayors to govern alongside returning wildlife",
+    "date": "2026-02-12",
+    "image": "/images/news/coexistence-guidance-equips-european-mayors-to-govern-alongside-returning-wildli.jpg",
+    "imageAlt": "Shepherd with walking stick and goat on mountainside, overlooking valley with village below",
+    "summary": "A new toolkit launched by Rewilding Europe offers municipal leaders practical frameworks for human-wildlife coexistence — recognizing local governance as the crucial layer where ecological recovery becomes lived experience.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rewilding",
+      "governance",
+      "coexistence",
+      "municipal-leadership",
+      "ecological-stewardship"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://rewildingeurope.com/news/successful-coexistence-guidance-launch-shows-readiness-to-live-with-wildlife/"
+  },
+  {
+    "slug": "epa-revokes-endangerment-finding-as-justice-networks-mobilize-resistance",
+    "title": "EPA Revokes Endangerment Finding as Justice Networks Mobilize Resistance",
+    "date": "2026-02-12",
+    "image": "",
+    "imageAlt": "Coalition members at environmental justice rally with signs demanding EPA accountability",
+    "summary": "The Trump EPA's revocation of the 2009 Endangerment Finding — the scientific basis for climate regulation — triggers coordinated resistance from environmental justice networks representing millions of frontline communities.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "climate",
+      "governance",
+      "environmental-justice",
+      "regulation",
+      "resistance"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://climatejusticealliance.org/epa-revokes-endangerment-finding/"
+  },
+  {
+    "slug": "habitat-seattle-doubles-down-on-community-land-trusts-and-debt-remediation",
+    "title": "Habitat Seattle doubles down on community land trusts and debt remediation",
+    "date": "2026-02-12",
+    "image": "/images/news/habitat-seattle-doubles-down-on-community-land-trusts-and-debt-remediation.jpg",
+    "imageAlt": "Habitat for Humanity Seattle staff gathered together on a residential construction build day",
+    "summary": "A Habitat affiliate in Washington state has pioneered a debt remediation program while scaling community land trust homeownership — testing new mechanisms for equitable access to housing that lasts generations.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "housing",
+      "community-land-trusts",
+      "democratic-innovation",
+      "equity",
+      "urban-governance"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://groundedsolutions.org/february-2026-grounded-solutions-network-member-spotlight/"
+  },
+  {
+    "slug": "youth-governance-at-the-un-from-symbolic-participation-to-structural-influence",
+    "title": "Youth governance at the UN: from symbolic participation to structural influence",
+    "date": "2026-02-12",
+    "image": "/images/news/youth-governance-at-the-un-from-symbolic-participation-to-structural-influence.webp",
+    "imageAlt": "United Nations Youth Office logo with UN emblem on gradient background",
+    "summary": "Student delegates at a UN Youth Office dialogue explore what meaningful participation looks like — not merely consultation, but structural influence in institutional decision-making. The event tested frameworks for youth engagement as governance practice.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "democratic-innovation",
+      "youth",
+      "united-nations",
+      "institutional-design"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.learningplanetinstitute.org/fr/news/from-commitment-to-influence-meaningful-youth-participation-at-the-un-youth-compass-dialogue/"
+  },
+  {
+    "slug": "youth-governance-at-the-un-from-symbolic-presence-to-structural-voice",
+    "title": "Youth governance at the UN: from symbolic presence to structural voice",
+    "date": "2026-02-12",
+    "image": "/images/news/youth-governance-at-the-un-from-symbolic-presence-to-structural-voice.webp",
+    "imageAlt": "Large diverse group of young participants gathered for UN Youth Compass dialogue with virtual attendees on screen",
+    "summary": "The UN Youth Compass dialogue tested whether intergenerational governance can move beyond consultation theater. Student participants assessed what meaningful engagement actually requires — not just seats at tables, but power to reshape them.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "un",
+      "youth",
+      "democratic-innovation",
+      "intergenerational"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.learningplanetinstitute.org/fr/news/from-commitment-to-influence-meaningful-youth-participation-at-the-un-youth-compass-dialogue-2/"
+  },
+  {
+    "slug": "sweden-expands-city-climate-coalition-beyond-pilot-group",
+    "title": "Sweden expands city climate coalition beyond pilot group",
+    "date": "2026-02-11",
+    "image": "",
+    "imageAlt": "Swedish city street with mixed historic and modern buildings",
+    "summary": "Viable Cities opens new call to expand beyond its 48-city Climate Neutral Cities 2030 initiative. The expansion tests whether collaborative governance models can scale — a recurring question in transition practice.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "climate",
+      "governance",
+      "nordic",
+      "urban",
+      "democratic-innovation"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://viablecities.se/ny-utlysning-for-snabbare-klimatomstallning-i-kraften-av-manga/"
+  },
+  {
+    "slug": "the-work-of-re-membering-communities-attune-to-the-rhythms-of-land",
+    "title": "The Work of Re-membering: Communities Attune to the Rhythms of Land",
+    "date": "2026-02-11",
+    "image": "/images/news/the-work-of-re-membering-communities-attune-to-the-rhythms-of-land.jpg",
+    "imageAlt": "Three generations gather under shade, drawing and mapping together with colored pencils",
+    "summary": "From Kenyan clans reviving biocultural knowledge to Antarctic rights advocacy, communities worldwide are rekindling what Thomas Berry called the 'Great Conversation' — governance as relationship, not extraction.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "earth-jurisprudence",
+      "indigenous-governance",
+      "ecological-stewardship",
+      "legal-innovation"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://gaiafoundation.org/ej-update-feb-2026/"
+  },
+  {
+    "slug": "normandys-prele-initiative-joins-european-rewilding-network",
+    "title": "Normandy's PRELE initiative joins European rewilding network",
+    "date": "2026-02-10",
+    "image": "/images/news/normandys-prele-initiative-joins-european-rewilding-network.jpg",
+    "imageAlt": "Muddy woodland path winds through dense green undergrowth and bare trees in Normandy forest",
+    "summary": "A regional French programme letting forests and wetlands recover without human interference joins a network of 105 rewilding initiatives — advancing a governance model where ecosystems manage themselves.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rewilding",
+      "france",
+      "ecological-governance",
+      "libre-evolution",
+      "rights-of-nature"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://rewildingeurope.com/news/french-flagship-libre-evolution-rewilding-initiative-joins-the-european-rewilding-network/"
+  },
+  {
+    "slug": "hope-as-educational-infrastructure",
+    "title": "Hope as Educational Infrastructure",
+    "date": "2026-02-09",
+    "image": "/images/news/hope-as-educational-infrastructure.jpg",
+    "imageAlt": "",
+    "summary": "François Taddei frames hope not as sentiment but as educational architecture — a necessary foundation for governance systems that must adapt to planetary-scale challenges while remaining rooted in human capacity for learning.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "education",
+      "transformative-practice",
+      "democratic-innovation",
+      "learning"
+    ],
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.learningplanetinstitute.org/fr/news/education-futures-podcast/"
+  },
+  {
+    "slug": "philadelphia-neighborhood-tests-perpetual-trust-as-anti-displacement-tool",
+    "title": "Philadelphia neighborhood tests perpetual trust as anti-displacement tool",
+    "date": "2026-02-08",
+    "image": "",
+    "imageAlt": "Commercial storefront on Kensington Avenue with community mural visible",
+    "summary": "The Kensington Corridor Trust removes 30+ properties from speculative markets through a perpetual purpose trust governed by 32,000 local residents — testing whether collective ownership can anchor neighborhoods against displacement.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "democratic-innovation",
+      "governance",
+      "urban",
+      "commons",
+      "economic-justice"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "SPACESHIP"
+    ],
+    "sourceUrl": "https://groundedsolutions.org/kensington-corridor-trust-demonstrates-neighborhood-led-revival-without-displacement/"
+  },
+  {
+    "slug": "agroecology-versus-regenerative-agriculture-a-question-of-power",
+    "title": "Agroecology versus Regenerative Agriculture: A Question of Power",
+    "date": "2026-02-06",
+    "image": "/images/news/agroecology-versus-regenerative-agriculture-a-question-of-power.jpg",
+    "imageAlt": "Red and pink poppies bloom in a polytunnel greenhouse at Einion's Garden, Wales",
+    "summary": "Belgian-Welsh farmer Ann Owen argues that regenerative agriculture serves corporate interests while agroecology builds practitioner power. The distinction matters: one treats farming as optimization, the other as transformative practice rooted in social and ecological balance.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "agroecology",
+      "food-systems",
+      "democratic-innovation",
+      "ecological-stewardship",
+      "transformative-practice"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.agroecology-europe.org/agroecology-versus-regenerative-agriculture-a-farmers-perspective/"
+  },
+  {
+    "slug": "unesco-launches-climate-learning-experience-linking-purpose-discovery-to-collect",
+    "title": "UNESCO launches climate learning experience linking purpose discovery to collective action",
+    "date": "2026-02-06",
+    "image": "/images/news/unesco-launches-climate-learning-experience-linking-purpose-discovery-to-collect.webp",
+    "imageAlt": "UNESCO logo on light blue gradient background",
+    "summary": "MOOD — Meaningful Open Opportunities for Discovery — brings 100+ participants into a UN-certified learning experience that frames climate action as both personal exploration and governance practice, testing how structured discovery might scale.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "climate",
+      "learning",
+      "unesco",
+      "collective-action",
+      "capacity-building"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.learningplanetinstitute.org/fr/news/unesco-global-skills-academy-supports-the-launch-of-the-meaningful-open-opportunities-for-discovery/"
+  },
+  {
+    "slug": "two-risk-reports-map-a-fracturing-governance-landscape",
+    "title": "Two risk reports map a fracturing governance landscape",
+    "date": "2026-02-05",
+    "image": "/images/news/two-risk-reports-map-a-fracturing-governance-landscape.jpg",
+    "imageAlt": "Helicopter with water bucket silhouetted against massive wildfire flames and smoke",
+    "summary": "The Global Challenges Foundation and World Economic Forum release assessments showing seven of nine planetary boundaries breached, rising geoeconomic confrontation, and institutional erosion — all pointing to what GCF calls the need for governance that recognizes 'planetary commons cannot be negotiated with.'",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "climate",
+      "planetary-boundaries",
+      "risk",
+      "multilateralism"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.democracywithoutborders.org/40493/risk-reports-outline-rising-global-confrontation-and-uncertainty/"
+  },
+  {
+    "slug": "ukrainian-universities-as-test-sites-for-climate-resilient-reconstruction",
+    "title": "Ukrainian Universities as Test Sites for Climate-Resilient Reconstruction",
+    "date": "2026-02-04",
+    "image": "/images/news/ukrainian-universities-as-test-sites-for-climate-resilient-reconstruction.jpg",
+    "imageAlt": "Video conference screen showing UVICITIES Transition Lab Forum II presentation with participants",
+    "summary": "UniCities transitions from project to partnership, positioning Ukrainian universities as laboratories for integrated climate transition and post-war recovery — a model for resilience-centered governance under extreme constraint.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "climate",
+      "democratic-innovation",
+      "governance",
+      "resilience",
+      "universities"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://viablecities.se/unlocking-the-transformative-potential-of-ukrainian-universities/"
+  },
+  {
+    "slug": "when-global-cooperation-fails-to-deliver-solidarity-declines-with-it",
+    "title": "When global cooperation fails to deliver, solidarity declines with it",
+    "date": "2026-02-02",
+    "image": "/images/news/when-global-cooperation-fails-to-deliver-solidarity-declines-with-it.jpg",
+    "imageAlt": "Aerial view of pedestrians crossing a zebra crossing, showing diverse people moving in different directions",
+    "summary": "New polling across 31 countries shows falling support for international institutions — not because people reject cooperation, but because they don't see it working. The gap reveals something fundamental about governance at any scale.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "democratic-innovation",
+      "global-solidarity",
+      "inequality",
+      "institutions"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.democracywithoutborders.org/40434/survey-global-solidarity-depends-on-cooperation-that-delivers/"
+  },
+  {
+    "slug": "ethaka-mozambique-testing-agroforestry-as-governance-infrastructure",
+    "title": "ETHAKA Mozambique: Testing Agroforestry as Governance Infrastructure",
+    "date": "2026-01-30",
+    "image": "/images/news/ethaka-mozambique-testing-agroforestry-as-governance-infrastructure.jpg",
+    "imageAlt": "Three people tending soil in an agroforestry plot with banana trees and mixed crops, Mozambique",
+    "summary": "A 3.5-year project in Mozambique embedded agroforestry systems into public institutions and rural communities — showing how regenerative agriculture becomes a form of governance when it restructures land use, diet, and policy in tandem.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "agroecology",
+      "mozambique",
+      "climate",
+      "governance",
+      "food-systems"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://agroecology-coalition.org/ethaka-mozambique/"
+  },
+  {
+    "slug": "not-only-larp-european-parliament",
+    "title": "Not Only Larp brings governance simulation to the European Parliament",
+    "date": "2026-01-30",
+    "image": "",
+    "imageAlt": "",
+    "summary": "The Italian design studio ran a three-day political LARP inside the European Parliament, with MEPs and citizens role-playing a planetary governance crisis. The event drew attention to experiential methods for democratic innovation.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "larp",
+      "governance-simulation",
+      "europe",
+      "democratic-innovation"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://notonlylarp.com"
+  },
+  {
+    "slug": "migrant-justice-as-climate-practice-communities-organize-against-displacement",
+    "title": "Migrant Justice as Climate Practice: Communities Organize Against Displacement",
+    "date": "2026-01-29",
+    "image": "/images/news/migrant-justice-as-climate-practice-communities-organize-against-displacement.webp",
+    "imageAlt": "Father lifts joyful child at sunset over green hills and water, with text 'Justice for Migrants'",
+    "summary": "The Climate Justice Alliance frames immigration enforcement as inseparable from climate displacement, calling for mutual aid networks and direct action as federal raids intensify across the U.S.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "climate",
+      "migration",
+      "justice",
+      "mutual-aid",
+      "abolition"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://climatejusticealliance.org/migrant-justice-is-climate-justice/"
+  },
+  {
+    "slug": "the-federal-home-loan-banks-as-infrastructure-for-shared-ownership",
+    "title": "The Federal Home Loan Banks as Infrastructure for Shared Ownership",
+    "date": "2026-01-29",
+    "image": "/images/news/the-federal-home-loan-banks-as-infrastructure-for-shared-ownership.png",
+    "imageAlt": "Chart showing U.S. Census Bureau data on housing patterns across Federal Home Loan Bank regions",
+    "summary": "Eleven regional cooperative banks allocate billions for affordable housing through mandated programs — including community land trusts. A case study in how existing financial infrastructure can be steered toward stewardship models.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "housing",
+      "cooperative-models",
+      "funding",
+      "stewardship",
+      "democratic-innovation"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://groundedsolutions.org/federal-home-loan-banks-funding-sources-for-shared-equity-homeownership/"
+  },
+  {
+    "slug": "ai-for-sustainability-finds-its-test-ground-in-taipei",
+    "title": "AI for Sustainability Finds Its Test Ground in Taipei",
+    "date": "2026-01-28",
+    "image": "/images/news/ai-for-sustainability-finds-its-test-ground-in-taipei.jpg",
+    "imageAlt": "Conference participants at ICAISS2025 holding organizational signs and sustainability symbols in auditorium",
+    "summary": "Researchers, policymakers, and industry practitioners gathered in Taipei to explore how artificial intelligence can serve planetary resilience — examining not just technical potential but governance frameworks for equitable deployment.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "ai",
+      "climate",
+      "governance-tech",
+      "taiwan",
+      "democratic-innovation"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://futureearth.org/global-researchers-rally-around-ai-for-sustainability-in-taipei/"
+  },
+  {
+    "slug": "how-communication-work-gets-done-an-internship-at-viable-cities",
+    "title": "How communication work gets done: an internship at Viable Cities",
+    "date": "2026-01-28",
+    "image": "/images/news/how-communication-work-gets-done-an-internship-at-viable-cities.jpg",
+    "imageAlt": "Four people sitting around a conference table with laptops, one person holding up a star-shaped object",
+    "summary": "Vendela Karlsson spent autumn 2025 embedded in Viable Cities' communications team, translating urban climate transition work into accessible formats. A small case study in how governance initiatives become legible — and who does that work.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "communication",
+      "urban-transition",
+      "viable-cities",
+      "information-design",
+      "nordic"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://viablecities.se/vendela-praktiserade-kommunikation-hos-viable-cities/"
+  },
+  {
+    "slug": "learning-planet-academy-pivots-education-from-excellence-to-planetary-service",
+    "title": "Learning Planet Academy pivots education from excellence to planetary service",
+    "date": "2026-01-28",
+    "image": "/images/news/learning-planet-academy-pivots-education-from-excellence-to-planetary-service.webp",
+    "imageAlt": "Audience members raising hands during interactive session in bright modern learning space",
+    "summary": "The Learning Planet Institute launches a new academy designed to move beyond traditional credentials toward co-constructed learning pathways that address climate urgency and ecological anxiety — a pedagogical experiment in governance education.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "education",
+      "planetary-governance",
+      "democratic-innovation",
+      "transformative-practice",
+      "youth"
+    ],
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.learningplanetinstitute.org/fr/news/learning-planet-academy/"
+  },
+  {
+    "slug": "mariestad-testing-governance-through-climate-investment-data",
+    "title": "Mariestad: Testing governance through climate investment data",
+    "date": "2026-01-28",
+    "image": "/images/news/mariestad-testing-governance-through-climate-investment-data.jpg",
+    "imageAlt": "Two people discussing map of Mariestad at outdoor information booth with bicycle visible",
+    "summary": "A Swedish mid-sized city maps who pays for climate transition and who benefits — finding that while citizens and industry carry costs, the municipality's role is creating conditions for transformation, not funding it.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "climate",
+      "governance",
+      "sweden",
+      "democratic-innovation",
+      "municipal"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.linkedin.com/pulse/mariestad-regional-samverkan-en-nyckel-i-klimatomställningen-fwe4f/?trackingId=7besphw7Qs2ZM3cnzmlkFw%3D%3D#new_tab"
+  },
+  {
+    "slug": "viable-cities-opens-internships-in-climate-communications",
+    "title": "Viable Cities opens internships in climate communications",
+    "date": "2026-01-28",
+    "image": "/images/news/viable-cities-opens-internships-in-climate-communications.jpg",
+    "imageAlt": "Four people in an office pointing upward at a starfish decoration, laptops and coffee on table",
+    "summary": "Sweden's Viable Cities seeks communications interns to help 29 cities navigate climate neutrality transitions. The work touches a persistent challenge: how to make systemic change legible and compelling to publics who must ultimately enact it.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "climate",
+      "nordic",
+      "communications",
+      "urban-governance",
+      "capacity-building"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://viablecities.se/praktisera-pa-viable-cities/"
+  },
+  {
+    "slug": "river-reuss-heads-to-referendum-switzerland-tests-legal-rights-for-water",
+    "title": "River Reuss Heads to Referendum: Switzerland Tests Legal Rights for Water",
+    "date": "2026-01-27",
+    "image": "/images/news/river-reuss-heads-to-referendum-switzerland-tests-legal-rights-for-water.png",
+    "imageAlt": "Reuss Initiative members hold blue flags reading 'JA' outside Lucerne parliamentary building",
+    "summary": "A citizen initiative in Lucerne canton has gathered 5,460 signatures to grant legal personhood to the River Reuss — launching a constitutional process that will test whether democratic systems can recognize nature as a rights-bearing entity.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "democratic-innovation",
+      "switzerland",
+      "governance",
+      "rivers"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.garn.org/reuss-initiative/"
+  },
+  {
+    "slug": "fish-inspired-filter-captures-99-of-microplastics-without-clogging",
+    "title": "Fish-inspired filter captures 99% of microplastics without clogging",
+    "date": "2026-01-23",
+    "image": "",
+    "imageAlt": "Close-up of fish gills showing the intricate filtering structures that inspired the microplastic filter design",
+    "summary": "Researchers at Bonn University developed a self-cleaning filter modeled on fish gills that captures microplastics from washing machines — addressing a governance gap where household infrastructure meets ocean pollution.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "ecological-stewardship",
+      "biomimicry",
+      "microplastics",
+      "infrastructure",
+      "research"
+    ],
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://futureearth.org/humble-fish-inspire-self-cleaning-microplastic-filter/"
+  },
+  {
+    "slug": "one-scientist-1460-rice-varieties-and-the-architecture-of-food-sovereignty",
+    "title": "One scientist, 1,460 rice varieties, and the architecture of food sovereignty",
+    "date": "2026-01-23",
+    "image": "/images/news/one-scientist-1460-rice-varieties-and-the-architecture-of-food-sovereignty.jpg",
+    "imageAlt": "Hands holding golden indigenous rice grains — part of Dr Debal Deb's 1,460-variety seed bank",
+    "summary": "Dr Debal Deb has spent 30 years conserving indigenous rice from remote Indian tribes — an act of ecological stewardship that doubles as governance practice, returning seed sovereignty to farmers after decades of corporate monoculture.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "food-sovereignty",
+      "ecological-stewardship",
+      "indigenous-knowledge",
+      "biodiversity",
+      "governance"
+    ],
+    "orientations": [
+      "GARDEN",
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://gaiafoundation.org/the-last-harvest/"
+  },
+  {
+    "slug": "sinking-carbon-a-proposal-to-store-boreal-wood-in-the-arctic-seafloor",
+    "title": "Sinking Carbon: A Proposal to Store Boreal Wood in the Arctic Seafloor",
+    "date": "2026-01-23",
+    "image": "",
+    "imageAlt": "Conceptual visualization of timber submerged in dark Arctic waters",
+    "summary": "Researchers propose harvesting boreal forest timber and sinking it in the oxygen-poor Arctic Ocean — a carbon removal method that sidesteps infrastructure costs but raises questions about who governs such planetary-scale interventions.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "climate",
+      "arctic",
+      "carbon-removal",
+      "ecological-stewardship",
+      "governance"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://futureearth.org/a-radical-carbon-removal-proposal-in-the-arctic/"
+  },
+  {
+    "slug": "european-bison-return-to-the-iberian-highlands-and-to-the-policy-question",
+    "title": "European bison return to the Iberian Highlands — and to the policy question",
+    "date": "2026-01-21",
+    "image": "/images/news/european-bison-return-to-the-iberian-highlands-and-to-the-policy-question.jpg",
+    "imageAlt": "European bison standing in snowy landscape, facing camera directly",
+    "summary": "Nine European bison have been released in Spain's Iberian Highlands as part of a cross-European study testing how keystone species can restore degraded landscapes — and whether rewilding can offer viable development pathways for depopulating rural communities.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rewilding",
+      "ecological-stewardship",
+      "keystone-species",
+      "rural-development",
+      "governance-experiment"
+    ],
+    "orientations": [
+      "GARDEN"
+    ],
+    "sourceUrl": "https://rewildingeurope.com/news/european-bison-arrive-in-the-iberian-highlands-for-the-first-time/"
+  },
+  {
+    "slug": "luleås-transition-exhibition-governance-as-public-pedagogy",
+    "title": "Luleå's transition exhibition: governance as public pedagogy",
+    "date": "2026-01-21",
+    "image": "/images/news/luleås-transition-exhibition-governance-as-public-pedagogy.jpg",
+    "imageAlt": "Visitors explore climate transition exhibition in Luleå shopping center, January 2026",
+    "summary": "A Swedish industrial city places climate transition in a shopping mall — treating governance not as policy abstraction but as something residents encounter while buying groceries. The experiment tests whether municipal legitimacy can be built through visibility.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "democratic-innovation",
+      "climate",
+      "nordic",
+      "governance",
+      "public-engagement"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.linkedin.com/pulse/luleå-way-för-engagemang-och-stolthet-kring-omställningen-8r78f/?trackingId=9iy4AGbXR523PX4JMO2YyQ%3D%3D#new_tab"
+  },
+  {
+    "slug": "eu-mercosur-a-test-case-for-whether-agroecology-can-move-from-niche-to-policy",
+    "title": "EU-Mercosur: a test case for whether agroecology can move from niche to policy",
+    "date": "2026-01-15",
+    "image": "/images/news/eu-mercosur-a-test-case-for-whether-agroecology-can-move-from-niche-to-policy.png",
+    "imageAlt": "Cattle grazing among rocks and olive trees in a Mediterranean agroecological landscape",
+    "summary": "As the EU-Mercosur trade agreement advances despite farmer protests, Agroecology Europe argues both continents must accelerate agroecological policy — not as alternative, but as systemic governance strategy for food, climate, and rural resilience.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "agroecology",
+      "trade",
+      "food-systems",
+      "eu",
+      "governance"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.agroecology-europe.org/press-release-eu-mercosur-time-to-accelerate-agroecoloy/"
+  },
+  {
+    "slug": "18-groups-challenge-epas-narrowing-of-clean-water-protections",
+    "title": "18 Groups Challenge EPA's Narrowing of Clean Water Protections",
+    "date": "2026-01-13",
+    "image": "",
+    "imageAlt": "Wetland ecosystem with standing water and vegetation",
+    "summary": "Climate Justice Alliance and 17 EJ organizations oppose EPA's proposed redefinition of protected waters — a case study in how regulatory rollbacks shift environmental harm to frontline communities while weakening federal accountability.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "governance",
+      "environmental-justice",
+      "regulation",
+      "accountability",
+      "water"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://climatejusticealliance.org/cja-submits-public-letter-with-17-ej-organizations-to-oppose-more-handouts-to-polluting-industries/"
+  },
+  {
+    "slug": "us-withdraws-from-65-international-bodies-including-all-climate-frameworks",
+    "title": "US Withdraws from 65+ International Bodies — Including All Climate Frameworks",
+    "date": "2026-01-09",
+    "image": "",
+    "imageAlt": "Empty seats in an international conference hall representing absent participation in global governance",
+    "summary": "The Trump administration withdrew from the UNFCCC and 65+ other international bodies, making the US the only nation outside the foundational climate treaty. A stress test for multilateral governance in an age of unilateral retreat.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "climate",
+      "governance",
+      "multilateralism",
+      "indigenous-rights",
+      "accountability"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://climatejusticealliance.org/cja-condemns-trumps-move-to-pull-the-us-out-of-international-bodies/"
+  },
+  {
+    "slug": "garn-opens-internships-in-rights-of-nature-movement-infrastructure",
+    "title": "GARN Opens Internships in Rights of Nature Movement Infrastructure",
+    "date": "2026-01-06",
+    "image": "/images/news/garn-opens-internships-in-rights-of-nature-movement-infrastructure.png",
+    "imageAlt": "Illustration of bee and flowers in a jar with text listing GARN internship areas",
+    "summary": "The Global Alliance for the Rights of Nature seeks interns across communications, tribunal support, and organizing — roles that build the operational capacity behind legal ecosystems protection and governance experimentation.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "governance",
+      "internships",
+      "legal-innovation",
+      "ecuador"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.garn.org/internships-open/"
+  },
+  {
+    "slug": "climate-justice-alliance-maps-data-center-impacts-trains-ground-organizers",
+    "title": "Climate Justice Alliance maps data center impacts, trains ground organizers",
+    "date": "2026-01-05",
+    "image": "",
+    "imageAlt": "Industrial infrastructure and community organizing materials",
+    "summary": "A frontline coalition created resources on AI infrastructure's environmental costs and trained 10 organizers in Memphis to challenge data center development — governance as ground-level strategy, not abstract policy.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "climate",
+      "governance",
+      "environmental-justice",
+      "infrastructure",
+      "community-organizing"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://climatejusticealliance.org/ai-data-centers/"
+  },
+  {
+    "slug": "five-years-of-agroforestry-practice-in-costa-rica-jungle-projects-farmer-first-m",
+    "title": "Five Years of Agroforestry Practice in Costa Rica: Jungle Project's Farmer-First Model",
+    "date": "2025-12-29",
+    "image": "/images/news/five-years-of-agroforestry-practice-in-costa-rica-jungle-projects-farmer-first-m.png",
+    "imageAlt": "Five-year data table showing growth in family farms, training sessions, participants, and plants established",
+    "summary": "Over 20 hectares and 18,000 plants later, Jungle Project demonstrates how governance begins with land stewardship — training 22 farmers in regenerative agroforestry while building the market infrastructure to sustain it.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "agroforestry",
+      "costa-rica",
+      "regenerative-agriculture",
+      "land-stewardship",
+      "ecological-governance"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://kisstheground.com/jungle-project/"
+  },
+  {
+    "slug": "agroecology-europes-year-of-movement-building-amid-collapse-and-commitment",
+    "title": "Agroecology Europe's Year of Movement-Building Amid Collapse and Commitment",
+    "date": "2025-12-23",
+    "image": "/images/news/agroecology-europes-year-of-movement-building-amid-collapse-and-commitment.png",
+    "imageAlt": "Frost-covered winter landscape with bare trees and golden sunrise, representing seasonal transition",
+    "summary": "As political systems retreat from environmental pledges, Europe's agroecology network grows to 450+ youth members and convenes gatherings that bridge science, practice, and policy — testing governance models that treat food systems as living democratic experiments.",
+    "insight": "",
+    "actors": [],
+    "tags": [
+      "agroecology",
+      "food-systems",
+      "democratic-innovation",
+      "youth-movements",
+      "governance"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.agroecology-europe.org/agroecology-europe-newsletter-winter-2025/"
+  }
 ]

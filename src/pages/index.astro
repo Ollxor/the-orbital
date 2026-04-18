@@ -59,7 +59,7 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
         <article class="news-card" data-orientations={story.orientations.join(',')}>
           {story.image && (
             <div class="card-image-wrap">
-              <a href={story.sourceUrl} target="_blank" rel="noopener">
+              <a href={`/news/${story.slug}`}>
                 <img src={story.image} alt={story.imageAlt} class="card-image" loading="lazy" onerror="this.closest('.card-image-wrap').style.display='none'" />
               </a>
             </div>
@@ -70,10 +70,18 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
               <a href={`/news/${story.slug}`}>{story.title}</a>
             </h3>
             <p class="card-summary">{story.summary}</p>
-            <p class="card-insight">
-              <span class="insight-label">Why this matters →</span>
-              {story.insight}
-            </p>
+            {story.body && (
+              <div class="card-excerpt">
+                {story.body.split('\n\n').slice(0, 2).map((p: string) => <p>{p}</p>)}
+              </div>
+            )}
+            {story.insight && (
+              <p class="card-insight">
+                <span class="insight-label">Why this matters →</span>
+                {story.insight}
+              </p>
+            )}
+            <a href={`/news/${story.slug}`} class="card-readmore">Continue reading →</a>
             <div class="card-meta">
               {story.actors.map(slug => actorMap[slug] && (
                 <a href={`/actors#${slug}`} class="card-actor">{actorMap[slug].name}</a>
@@ -172,10 +180,16 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
 .card-title a { text-decoration: none; }
 .card-title a:hover { text-decoration: underline; }
 
-.card-summary { font-size: .9375rem; color: #333; line-height: 1.65; margin-bottom: .625rem; }
+.card-summary { font-size: .9375rem; color: #333; line-height: 1.65; margin-bottom: .75rem; font-weight: 500; }
+
+.card-excerpt { margin-bottom: .75rem; }
+.card-excerpt p { font-size: .9375rem; color: #555; line-height: 1.7; margin-bottom: .625rem; font-family: 'Source Serif 4', Georgia, serif; font-weight: 300; }
 
 .card-insight { font-size: .875rem; color: #888; font-style: italic; line-height: 1.5; margin-bottom: .875rem; }
 .insight-label { font-style: normal; font-weight: 600; color: var(--text-3); margin-right: .375rem; font-size: .8125rem; }
+
+.card-readmore { display: inline-block; font-size: .8125rem; font-weight: 600; color: var(--text-2); text-decoration: none; margin-bottom: .875rem; letter-spacing: .02em; }
+.card-readmore:hover { color: var(--text); }
 
 .card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-bottom: .875rem; }
 .card-actor { font-size: .8125rem; font-weight: 500; color: var(--text-2); text-decoration: none; }

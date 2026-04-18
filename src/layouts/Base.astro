@@ -29,18 +29,6 @@ const currentPath = Astro.url.pathname;
 </head>
 <body>
 
-  <!-- Utility bar -->
-  <div class="util-bar">
-    <div class="util-inner">
-      <span class="util-date" id="util-date"></span>
-      <nav class="util-nav">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/join" class="util-join">Join the map →</a>
-      </nav>
-    </div>
-  </div>
-
   <!-- Masthead -->
   <header class="masthead">
     <a href="/" class="masthead-brand">
@@ -58,6 +46,9 @@ const currentPath = Astro.url.pathname;
         <a href="/projects" class={currentPath.startsWith('/projects') ? 'active' : ''}>Projects</a>
         <a href="/events" class={currentPath.startsWith('/events') ? 'active' : ''}>Events</a>
         <a href="/graph" class={currentPath.startsWith('/graph') ? 'active' : ''}>Graph</a>
+        <a href="/about" class={currentPath.startsWith('/about') ? 'active' : ''}>About</a>
+        <a href="/contact" class={currentPath.startsWith('/contact') ? 'active' : ''}>Contact</a>
+        <a href="/join" class="nav-join">Join →</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -89,39 +80,12 @@ const currentPath = Astro.url.pathname;
     const toggle = document.getElementById('nav-toggle');
     const nav = document.getElementById('main-nav');
     toggle?.addEventListener('click', () => nav?.classList.toggle('open'));
-
-    // Set date in util bar
-    const dateEl = document.getElementById('util-date');
-    if (dateEl) {
-      dateEl.textContent = new Date().toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-    }
   </script>
 </body>
 </html>
 
 <style is:global>
   @import '../styles/global.css';
-
-  /* ── Utility bar ── */
-  .util-bar {
-    background: var(--text);
-    color: #ccc;
-    font-size: .75rem;
-    border-bottom: 1px solid #333;
-  }
-  .util-inner {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: .4rem 1.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .util-date { color: #999; letter-spacing: .02em; }
-  .util-nav { display: flex; gap: 1.25rem; align-items: center; }
-  .util-nav a { color: #bbb; text-decoration: none; }
-  .util-nav a:hover { color: #fff; }
-  .util-join { color: #e8e0d0 !important; font-weight: 500; }
 
   /* ── Masthead ── */
   .masthead {
@@ -191,6 +155,7 @@ const currentPath = Astro.url.pathname;
   }
   .nav-links a:hover { color: var(--text); }
   .nav-links a.active { color: var(--text); border-bottom-color: var(--text); }
+  .nav-join { color: var(--text) !important; font-weight: 600 !important; }
 
   .nav-toggle {
     display: none;
@@ -206,7 +171,6 @@ const currentPath = Astro.url.pathname;
   @media (max-width: 640px) {
     .masthead-title { font-size: 2.25rem; letter-spacing: .14em; }
     .masthead-tagline { font-size: .8125rem; }
-    .util-date { display: none; }
 
     .nav-toggle { display: flex; }
     .nav-links {

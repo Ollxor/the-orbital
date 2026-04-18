@@ -7,7 +7,9 @@
     "imageAlt": "Students in navy uniforms sit on a bench with smartphones, a soccer ball at their feet",
     "summary": "A large-scale experiment finds that brief online videos explaining democratic principles — rights, checks and balances, accountability — measurably strengthen support for democracy and reduce acceptance of authoritarian alternatives, even among the politically disengaged.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "democracy-without-borders"
+    ],
     "tags": [
       "democratic-innovation",
       "governance",
@@ -29,7 +31,9 @@
     "imageAlt": "KD Chavez, executive director of Climate Justice Alliance, in black turtleneck against colorful abstract background",
     "summary": "New federal AI policy fast-tracks data center permits while stripping local governments of oversight — a test case for whether infrastructure governance flows from communities or concentrates upward with federal and corporate power.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "climate-justice-alliance"
+    ],
     "tags": [
       "governance",
       "climate",
@@ -51,7 +55,9 @@
     "imageAlt": "Aerial view of the Yangtze River winding through terraced landscape",
     "summary": "A decade-long commercial fishing ban across the Yangtze basin — affecting an area the size of Mexico — shows early signs of reversing biodiversity loss. The scale of intervention required reveals what ecological restoration actually demands.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "future-earth"
+    ],
     "tags": [
       "ecological-stewardship",
       "governance",
@@ -73,7 +79,9 @@
     "imageAlt": "Four farmers standing beside mulched garden beds with forest backdrop in Cazadero, California",
     "summary": "Direct grants to small-scale farmers reduced transition risk for regenerative practices across 73,000 US acres in 2025. Now the work shifts from capital deployment to storytelling — connecting eaters to the human systems behind soil governance.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "kiss-the-ground"
+    ],
     "tags": [
       "regenerative-agriculture",
       "funding",
@@ -94,7 +102,9 @@
     "imageAlt": "Agricultural landscape showing crop cultivation for bioplastic feedstock production",
     "summary": "New lifecycle analysis reveals bioplastics reduce carbon but harm ecosystems more than fossil alternatives — a material governance challenge where the only path to climate targets involves reducing demand itself.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "future-earth"
+    ],
     "tags": [
       "ecological-stewardship",
       "climate",
@@ -115,7 +125,9 @@
     "imageAlt": "Attendees gather for group photo at AWS Standard 3.0 launch in Tokyo",
     "summary": "The Alliance for Water Stewardship released Version 3.0 of its certification standard at Suntory's Tokyo headquarters, bringing stakeholder engagement and catchment-level planning to corporate water management across the Asia-Pacific region.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "alliance-for-water-stewardship"
+    ],
     "tags": [
       "water",
       "corporate-governance",
@@ -136,7 +148,9 @@
     "imageAlt": "Stephanie Fanfan, PhD researcher studying carceral education and justice capital",
     "summary": "A PhD student at Learning Planet Institute examines how education within prisons shapes justice capital and institutional recognition — testing whether carceral systems can transform or merely replicate inequality.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "learning-planet-institute"
+    ],
     "tags": [
       "research",
       "social-innovation",
@@ -158,7 +172,9 @@
     "imageAlt": "Illustrated figures and infrastructure representing local energy systems with solar panels and transmission towers",
     "summary": "Viable Cities explores how local energy systems can reshape urban climate action — not just as infrastructure, but as participatory governance. The EnergyNet model, tested in Lund, treats energy as a coordinated system involving households, property owners, and municipalities.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "viable-cities"
+    ],
     "tags": [
       "energy",
       "governance",
@@ -181,7 +197,9 @@
     "imageAlt": "Protester holds sign reading 'Presidents Are Not Kings' at demonstration in urban street",
     "summary": "V-Dem's annual assessment finds 74% of humanity now lives under autocracy, with 44 countries actively autocratizing. The US loses liberal democracy status as freedom of expression and legislative constraints deteriorate worldwide.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "democracy-without-borders"
+    ],
     "tags": [
       "democracy",
       "governance",
@@ -203,7 +221,9 @@
     "imageAlt": "Portrait of Milena Milovanović, PhD researcher studying bacteriophage systems at FIRE Doctoral School",
     "summary": "A doctoral researcher at FIRE examines bacteriophages to understand life's fundamental coupling of form and function — a question with implications for how we design adaptive, living governance systems.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "learning-planet-institute"
+    ],
     "tags": [
       "research",
       "learning-planet",
@@ -223,7 +243,9 @@
     "imageAlt": "Chloé Anna Höllerer, first-year PhD student at FIRE Doctoral School",
     "summary": "A new PhD student joins the FIRE Doctoral School at Learning Planet Institute, bringing a background in agronomy and molecular biology to questions of research and learning systems. Another researcher entering the work of governance experimentation.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "learning-planet-institute"
+    ],
     "tags": [
       "research",
       "learning",
@@ -243,7 +265,9 @@
     "imageAlt": "Aerial view of winding river through green landscape illustrating watershed governance at catchment scale",
     "summary": "The Alliance for Water Stewardship releases Version 3.0 of its certification framework, refining how corporations engage with watershed governance beyond efficiency metrics — a shift toward catchment-scale accountability as water becomes boardroom risk.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "alliance-for-water-stewardship"
+    ],
     "tags": [
       "water",
       "governance",
@@ -265,7 +289,9 @@
     "imageAlt": "Speaker at World Economic Forum Davos podium addressing audience, blue branding visible",
     "summary": "As great powers fragment the UN human rights system, a coalition of 90 countries — half from the global south — is testing whether one-country-one-vote can still anchor planetary governance in shared rules rather than fortress politics.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "democracy-without-borders"
+    ],
     "tags": [
       "governance",
       "human-rights",
@@ -286,7 +312,9 @@
     "imageAlt": "Water buffalo grazing in wetland grasses of Ukraine's Danube Delta rewilding area",
     "summary": "A new documentary shows how rewilding in Ukraine's Danube Delta operates as both ecological restoration and social healing — restoring natural processes while offering veterans and communities a lived practice of renewal amid war.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "rewilding-europe"
+    ],
     "tags": [
       "rewilding",
       "ecological-stewardship",
@@ -307,7 +335,9 @@
     "imageAlt": "Tharaka spiritual leader in ceremonial headdress sits in dugout canoe by riverbank, Kenya",
     "summary": "The Tharaka community in Kenya adapts Amazonian mapping methods to create Life Plans — participatory governance tools that weave seed sovereignty, sacred site protection, and customary law into a holistic vision of territorial stewardship.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "gaia-foundation"
+    ],
     "tags": [
       "rights-of-nature",
       "governance",
@@ -330,7 +360,9 @@
     "imageAlt": "Brown bear wearing tracking collar in green scrubland, part of CALLISTO coexistence monitoring",
     "summary": "The European Rewilding Network adds CALLISTO and Marine Rewilding Türkiye to its roster of over 100 initiatives — one focused on human-carnivore coexistence, the other on coastal ecosystem recovery. Both embed local communities in restoration governance.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "rewilding-europe"
+    ],
     "tags": [
       "rewilding",
       "coexistence",
@@ -351,7 +383,9 @@
     "imageAlt": "",
     "summary": "The Swedish foundation behind the New Shape Prize has announced a new round of funding for proposals that address gaps in planetary-scale governance. This cycle emphasises prototyping over theory — a shift that aligns closely with The Garden's approach.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "global-challenges-foundation"
+    ],
     "tags": [
       "governance",
       "funding",
@@ -370,7 +404,9 @@
     "imageAlt": "Row houses in an urban neighborhood with mixed commercial and residential buildings",
     "summary": "Community land trusts in Kensington and beyond are testing whether neighborhoods can govern their own futures against displacement. It's hyperlocal democratic innovation with a clear thesis: ownership structures are governance structures.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "grounded-solutions-network"
+    ],
     "tags": [
       "democratic-innovation",
       "governance",
@@ -391,7 +427,9 @@
     "imageAlt": "Agroecology Europe logo on green background with hiring announcement",
     "summary": "The Brussels-based network coordinating Europe's agroecological transition is hiring operations capacity — a quiet signal of organizational maturity in a movement linking farmers, researchers, and activists across borders.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "agroecology-europe"
+    ],
     "tags": [
       "agroecology",
       "europe",
@@ -413,7 +451,9 @@
     "imageAlt": "Aerial view of forested watershed with river running through valley",
     "summary": "Nestlé's achievement of AWS certification across 39 bottling sites raises deeper questions about how corporations govern shared water resources — and whether certification frameworks can transform extraction into genuine stewardship.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "alliance-for-water-stewardship"
+    ],
     "tags": [
       "water",
       "stewardship",
@@ -435,7 +475,9 @@
     "imageAlt": "Participants in a training session discussing water stewardship in Tanzania",
     "summary": "As drought forces weekly water rationing in Dar es Salaam, Tanzania launches water stewardship training for 30+ public officials — an experiment in building trust-based governance between state agencies and private actors around shared catchments.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "alliance-for-water-stewardship"
+    ],
     "tags": [
       "water",
       "governance",
@@ -457,7 +499,9 @@
     "imageAlt": "Community land trust housing development with shared green space",
     "summary": "Bipartisan legislation elevates community land trusts and shared equity programs to federal policy — testing whether ownership models that prioritize stewardship over speculation can operate at scale.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "grounded-solutions-network"
+    ],
     "tags": [
       "housing",
       "democratic-innovation",
@@ -478,7 +522,9 @@
     "imageAlt": "Research team gathered at traditional Japanese building during Tokyo project kickoff",
     "summary": "A three-year transnational project examines how nature-based infrastructure performs in post-disaster cities across Japan, Sweden, and Poland — treating urban recovery as a testing ground for ecological governance under stress.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "future-earth"
+    ],
     "tags": [
       "urban-governance",
       "nature-based-solutions",
@@ -499,7 +545,9 @@
     "imageAlt": "Three people view terraced vineyards and rolling hills in Portugal's Greater Côa Valley from a dirt road",
     "summary": "A €40,000 loan from Rewilding Europe Capital enables a Portuguese nature tourism company to expand accommodation in the Greater Côa Valley — testing whether financial tools can align ecological restoration with economic viability in depopulating rural regions.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "rewilding-europe"
+    ],
     "tags": [
       "rewilding",
       "ecological-finance",
@@ -520,7 +568,9 @@
     "imageAlt": "Text logo reading '11 with Evan' in dark gray sans-serif font against white background",
     "summary": "Kyle Bliffert's journey through the supplement industry traces a shift from theoretical wellness to practiced ecological stewardship. At Gaia Herbs' 270-acre Regenerative Organic Certified farm, governance becomes tangible — tested by hurricanes and fire alike.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "kiss-the-ground"
+    ],
     "tags": [
       "ecological-stewardship",
       "certification",
@@ -541,7 +591,9 @@
     "imageAlt": "",
     "summary": "The research collective has released a working paper proposing standards for governance tool interoperability — enabling rules and processes to flow between online communities, DAOs, and physical assemblies.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "metagov"
+    ],
     "tags": [
       "governance-tech",
       "research",
@@ -560,7 +612,9 @@
     "imageAlt": "Bronze sculpture of a revolver with its barrel tied in a knot, displayed outside the UN building",
     "summary": "Democracy Without Borders has published a new brochure examining pathways to reimagine global cooperation. The resource synthesizes emerging proposals for multilateral reform and democratic participation beyond borders.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "democracy-without-borders"
+    ],
     "tags": [
       "democracy",
       "governance",
@@ -580,7 +634,9 @@
     "imageAlt": "Agroecology Europe logo with blue and green leaf-like circular design on yellow background",
     "summary": "The Brussels-based network — 200 members spanning farmers, academics, and activists — is hiring a communications officer to strengthen its work placing agroecological transition on Europe's governance agenda.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "agroecology-europe"
+    ],
     "tags": [
       "agroecology",
       "governance",
@@ -602,7 +658,9 @@
     "imageAlt": "Diverse group of PB Seeds participants gathered around table in working session with papers and materials",
     "summary": "A structured cohort model for participatory budgeting advocacy is generating new processes across New Jersey — including youth-led climate budgeting in Newark. Evaluations reveal what participants need to become effective democratic innovators.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "participatory-budgeting-project"
+    ],
     "tags": [
       "democratic-innovation",
       "governance",
@@ -623,7 +681,9 @@
     "imageAlt": "Presentation slide showing 'Tyranny Tracker Coming Soon' at Oslo Freedom Forum event",
     "summary": "The Human Rights Foundation's Tyranny Tracker distinguishes democracies from hybrid and authoritarian regimes using qualitative thresholds — not aggregated scores — to capture the moment when democratic systems break down.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "democracy-without-borders"
+    ],
     "tags": [
       "governance",
       "democratic-innovation",
@@ -643,7 +703,9 @@
     "imageAlt": "",
     "summary": "The Senate is weighing the 21st Century ROAD to Housing Act, which would expand community land trusts and shared equity models — governance experiments that treat housing as stewardship rather than speculation.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "grounded-solutions-network"
+    ],
     "tags": [
       "housing",
       "governance",
@@ -664,7 +726,9 @@
     "imageAlt": "Illustrated poster showing firearms entangled in flowering vines and birds, reading 'Divest from wars, invest in a regenerative future'",
     "summary": "As U.S. and Israeli forces strike Iran, the Climate Justice Alliance frames military action as ecological governance failure — the U.S. military remains the world's largest institutional emitter while resource extraction drives geopolitical conflict.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "climate-justice-alliance"
+    ],
     "tags": [
       "climate",
       "militarism",
@@ -685,7 +749,9 @@
     "imageAlt": "Horses grazing along a rural road bordered by green pastures and forest in Europe",
     "summary": "A five-year mapping project documents hundreds of agroecological initiatives across Europe — from farming practices to living labs — showing how food system transformation happens through distributed experimentation rather than top-down policy.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "agroecology-europe"
+    ],
     "tags": [
       "agroecology",
       "food-systems",
@@ -706,7 +772,9 @@
     "imageAlt": "Protesters holding banners and flags at a large street demonstration demanding anti-corruption action",
     "summary": "Transparency International reports global corruption perceptions have fallen to their lowest level in over a decade, with shrinking civic space a common factor in declining scores. The trend reveals how governance legitimacy depends on openness.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "democracy-without-borders"
+    ],
     "tags": [
       "governance",
       "corruption",
@@ -727,7 +795,9 @@
     "imageAlt": "Aerial view of Ballintean Mountain Lodge courtyard surrounded by autumn forest and Highland mountains",
     "summary": "Ballintean Mountain Lodge, a 30-year rewilding experiment in the Cairngorms, joins the European Rewilding Network — a move that underscores how ecological restoration increasingly operates through distributed governance: peer learning, knowledge exchange, and practice-led networks rather than top-down mandates.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "rewilding-europe"
+    ],
     "tags": [
       "rewilding",
       "ecological-governance",
@@ -748,7 +818,9 @@
     "imageAlt": "River or stream flowing through landscape, representing watershed governance",
     "summary": "A joint comment letter opposes EPA proposals that would weaken Section 401 of the Clean Water Act — the mechanism that allows states and Tribal Nations to condition or deny federal permits based on water quality standards.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "climate-justice-alliance"
+    ],
     "tags": [
       "water",
       "governance",
@@ -770,7 +842,9 @@
     "imageAlt": "Multi-unit residential housing with front porches and fencing in suburban development",
     "summary": "Senate Democrats propose ending tax benefits for firms that own 450,000 single-family homes and 2.2 million apartments — treating housing as extractive asset class rather than commons. A test of whether governance can reclaim shelter from financialization.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "grounded-solutions-network"
+    ],
     "tags": [
       "governance",
       "housing",
@@ -792,7 +866,9 @@
     "imageAlt": "Group of seed sovereignty practitioners gathered in garden setting with buildings and autumn trees",
     "summary": "Two new coordinators will work across southern and western England to strengthen grassroots seed networks — governance infrastructure for food systems that roots sovereignty in regional practice and Indigenous knowledge.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "gaia-foundation"
+    ],
     "tags": [
       "seed-sovereignty",
       "agroecology",
@@ -814,7 +890,9 @@
     "imageAlt": "Youth protesters gather in street demonstration, some seated, some standing, waving national flag",
     "summary": "Youth-led uprisings across 11+ countries share grievances about inequality and corruption, but don't point toward a clear democratic renewal. The question isn't whether young people can mobilize — it's whether existing governance systems can absorb their demands.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "democracy-without-borders"
+    ],
     "tags": [
       "democratic-innovation",
       "governance",
@@ -835,7 +913,9 @@
     "imageAlt": "Residential buildings on a tree-lined urban street in Cambridge, Massachusetts",
     "summary": "A developer's constitutional challenge to Cambridge's affordable housing rules could reshape how 1,000+ U.S. inclusionary zoning policies function — testing whether local governance can require shared stewardship of urban space.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "grounded-solutions-network"
+    ],
     "tags": [
       "governance",
       "democratic-innovation",
@@ -855,7 +935,9 @@
     "imageAlt": "Interior of Materialbanken showing shelves of colorful reused materials and craft supplies",
     "summary": "A Swedish municipality embeds circular economy into budget processes and public institutions, treating reuse not as a side project but as core governance infrastructure. The results: 250 tons of CO2 avoided, millions saved, and a model others can copy.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "viable-cities"
+    ],
     "tags": [
       "circular-economy",
       "municipal-governance",
@@ -877,7 +959,9 @@
     "imageAlt": "",
     "summary": "The Global Alliance for the Rights of Nature has convened its fifth tribunal, this time with an expanded mandate covering ocean governance and AI-mediated environmental harm — territory that bridges Garden and Spaceship orientations.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "global-alliance-for-the-rights-of-nature"
+    ],
     "tags": [
       "rights-of-nature",
       "governance",
@@ -897,7 +981,9 @@
     "imageAlt": "Group discussion in modern collaborative space with participants seated on floor cushions",
     "summary": "Learning Planet Institute's Graduate School in Paris seeks students willing to cross disciplinary boundaries to address systemic challenges — a model that tests whether academic structures can adapt to planetary-scale problems.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "learning-planet-institute"
+    ],
     "tags": [
       "education",
       "interdisciplinary",
@@ -918,7 +1004,9 @@
     "imageAlt": "Dense forest canopy showing the vegetation that generates terrestrial evaporation and rainfall",
     "summary": "New satellite research reveals that 40% of corn and 60% of wheat depend on land-based rainfall — unstable moisture from forests, wetlands, and soil that agricultural expansion is actively destroying.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "future-earth"
+    ],
     "tags": [
       "ecological-stewardship",
       "planetary-governance",
@@ -939,7 +1027,9 @@
     "imageAlt": "White text reading '11 WITH Evan' on dark background, interview series branding",
     "summary": "The author of Regeneration and founder of Project Drawdown reflects on what regenerative agriculture actually means — not as branding exercise, but as practice that must be felt, verified, and embodied through direct relationship with land and living systems.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "kiss-the-ground"
+    ],
     "tags": [
       "regenerative-agriculture",
       "ecological-stewardship",
@@ -960,7 +1050,9 @@
     "imageAlt": "Coral reef ecosystem with fish, representing potential food security and marine governance challenges",
     "summary": "Coral reefs could sustainably yield 9,000 additional meals per square kilometer — but only if communities dependent on fishing accept decades of reduced catch. A stark example of governance as temporal negotiation.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "future-earth"
+    ],
     "tags": [
       "ecological-stewardship",
       "governance",
@@ -982,7 +1074,9 @@
     "imageAlt": "Photographer in dry suit holding large Atlantic sturgeon in shallow river water",
     "summary": "As the Rewilding Europe Award deadline approaches, photographer Jon A. Juárez reflects on what makes rewilding imagery matter: not just aesthetics, but the governance relationships between people, science, and returning ecosystems.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "rewilding-europe"
+    ],
     "tags": [
       "rewilding",
       "europe",
@@ -1003,7 +1097,9 @@
     "imageAlt": "Landslide probability map of Italy showing risk zones in purple and orange based on precipitation data",
     "summary": "ESA's Digital Twin Earth program creates real-time planetary simulations — not just to model floods or fire, but to stress-test governance responses before disaster strikes. It's scenario planning made operational, fed by satellite data and constrained by physics.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "future-earth"
+    ],
     "tags": [
       "governance-tech",
       "climate",
@@ -1024,7 +1120,9 @@
     "imageAlt": "Shepherd in red vest tending mixed flock of sheep across golden rangeland with mountains beyond",
     "summary": "A coalition webinar ahead of UNCCD COP17 reframes pastoralism as regenerative governance — not degradation driver. The challenge: translating centuries of mobile land stewardship into policy that recognizes rights to territory and movement, not just plots.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "agroecology-coalition"
+    ],
     "tags": [
       "land-rights",
       "agroecology",
@@ -1045,7 +1143,9 @@
     "imageAlt": "Aerial view showing stark contrast between wealthy neighborhood and dense informal settlement",
     "summary": "New assessments from Oxfam, a G20 expert committee, and the World Inequality Lab find billionaire wealth has grown 81% since 2020 while democratic institutions weaken — evidence that governance systems cannot be separated from economic architecture.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "democracy-without-borders"
+    ],
     "tags": [
       "governance",
       "democracy",
@@ -1065,7 +1165,9 @@
     "imageAlt": "Community members collaborating at a table with documents and planning materials",
     "summary": "Grounded Solutions Network sponsors Nonprofit Quarterly's Leading Edge program, connecting community land trusts and housing justice organizations with management training amid federal funding pressures — infrastructure for the infrastructure.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "grounded-solutions-network"
+    ],
     "tags": [
       "housing",
       "capacity-building",
@@ -1086,7 +1188,9 @@
     "imageAlt": "Professionals collaborating in workshop or meeting setting",
     "summary": "Grounded Solutions Network partners with Nonprofit Quarterly to give housing justice organizations access to governance training and peer networks — recognizing that transformative systems work requires strengthened organizational capacity.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "grounded-solutions-network"
+    ],
     "tags": [
       "governance",
       "democratic-innovation",
@@ -1107,7 +1211,9 @@
     "imageAlt": "Aerial view of Lake Kartal in Ukraine's Danube Delta, showing reconnected waterways and floodplain",
     "summary": "In Ukraine's Danube Delta, six years of restoration has reconnected 18,000 hectares of floodplain to the river — a reminder that ecological governance means reshaping flows, not just protecting boundaries, even under the strain of invasion.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "rewilding-europe"
+    ],
     "tags": [
       "ecological-stewardship",
       "restoration",
@@ -1128,7 +1234,9 @@
     "imageAlt": "Podcast cover art showing lightning bolt logo and text 'Courant Alternatif' over blurred background",
     "summary": "The Learning Planet Institute's co-founder joins a podcast exploring educational models as governance infrastructure — treating learning not as preparation for citizenship but as citizenship itself.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "learning-planet-institute"
+    ],
     "tags": [
       "education",
       "democratic-innovation",
@@ -1149,7 +1257,9 @@
     "imageAlt": "IPBES Chair at the Manchester plenary session with nameplate and presentation screen showing February 2026 date",
     "summary": "The first fast-track business-biodiversity assessment reveals a stark asymmetry: $7.3 trillion in nature-harming flows versus $220 billion for restoration — a gap that threatens economic stability and requires governance innovation at the intersection of markets and ecosystems.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "future-earth"
+    ],
     "tags": [
       "biodiversity",
       "governance",
@@ -1171,7 +1281,9 @@
     "imageAlt": "Photographer framing shot with hands, woman with glasses centered through finger frame",
     "summary": "As Europe's wildlife photography competition opens submissions, judge Viktoria Pezzei argues for images that show human hands in ecological work — not pristine wilderness, but the lived practice of restoration.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "rewilding-europe"
+    ],
     "tags": [
       "ecological-stewardship",
       "storytelling",
@@ -1193,7 +1305,9 @@
     "imageAlt": "Shepherd with walking stick and goat on mountainside, overlooking valley with village below",
     "summary": "A new toolkit launched by Rewilding Europe offers municipal leaders practical frameworks for human-wildlife coexistence — recognizing local governance as the crucial layer where ecological recovery becomes lived experience.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "rewilding-europe"
+    ],
     "tags": [
       "rewilding",
       "governance",
@@ -1215,7 +1329,9 @@
     "imageAlt": "Coalition members at environmental justice rally with signs demanding EPA accountability",
     "summary": "The Trump EPA's revocation of the 2009 Endangerment Finding — the scientific basis for climate regulation — triggers coordinated resistance from environmental justice networks representing millions of frontline communities.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "climate-justice-alliance"
+    ],
     "tags": [
       "climate",
       "governance",
@@ -1237,7 +1353,9 @@
     "imageAlt": "Habitat for Humanity Seattle staff gathered together on a residential construction build day",
     "summary": "A Habitat affiliate in Washington state has pioneered a debt remediation program while scaling community land trust homeownership — testing new mechanisms for equitable access to housing that lasts generations.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "grounded-solutions-network"
+    ],
     "tags": [
       "housing",
       "community-land-trusts",
@@ -1258,7 +1376,9 @@
     "imageAlt": "United Nations Youth Office logo with UN emblem on gradient background",
     "summary": "Student delegates at a UN Youth Office dialogue explore what meaningful participation looks like — not merely consultation, but structural influence in institutional decision-making. The event tested frameworks for youth engagement as governance practice.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "learning-planet-institute"
+    ],
     "tags": [
       "governance",
       "democratic-innovation",
@@ -1279,7 +1399,9 @@
     "imageAlt": "Large diverse group of young participants gathered for UN Youth Compass dialogue with virtual attendees on screen",
     "summary": "The UN Youth Compass dialogue tested whether intergenerational governance can move beyond consultation theater. Student participants assessed what meaningful engagement actually requires — not just seats at tables, but power to reshape them.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "learning-planet-institute"
+    ],
     "tags": [
       "governance",
       "un",
@@ -1300,7 +1422,9 @@
     "imageAlt": "Swedish city street with mixed historic and modern buildings",
     "summary": "Viable Cities opens new call to expand beyond its 48-city Climate Neutral Cities 2030 initiative. The expansion tests whether collaborative governance models can scale — a recurring question in transition practice.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "viable-cities"
+    ],
     "tags": [
       "climate",
       "governance",
@@ -1322,7 +1446,9 @@
     "imageAlt": "Three generations gather under shade, drawing and mapping together with colored pencils",
     "summary": "From Kenyan clans reviving biocultural knowledge to Antarctic rights advocacy, communities worldwide are rekindling what Thomas Berry called the 'Great Conversation' — governance as relationship, not extraction.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "gaia-foundation"
+    ],
     "tags": [
       "rights-of-nature",
       "earth-jurisprudence",
@@ -1343,7 +1469,9 @@
     "imageAlt": "Muddy woodland path winds through dense green undergrowth and bare trees in Normandy forest",
     "summary": "A regional French programme letting forests and wetlands recover without human interference joins a network of 105 rewilding initiatives — advancing a governance model where ecosystems manage themselves.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "rewilding-europe"
+    ],
     "tags": [
       "rewilding",
       "france",
@@ -1364,7 +1492,9 @@
     "imageAlt": "",
     "summary": "François Taddei frames hope not as sentiment but as educational architecture — a necessary foundation for governance systems that must adapt to planetary-scale challenges while remaining rooted in human capacity for learning.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "learning-planet-institute"
+    ],
     "tags": [
       "education",
       "transformative-practice",
@@ -1385,7 +1515,9 @@
     "imageAlt": "Commercial storefront on Kensington Avenue with community mural visible",
     "summary": "The Kensington Corridor Trust removes 30+ properties from speculative markets through a perpetual purpose trust governed by 32,000 local residents — testing whether collective ownership can anchor neighborhoods against displacement.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "grounded-solutions-network"
+    ],
     "tags": [
       "democratic-innovation",
       "governance",
@@ -1407,7 +1539,9 @@
     "imageAlt": "Red and pink poppies bloom in a polytunnel greenhouse at Einion's Garden, Wales",
     "summary": "Belgian-Welsh farmer Ann Owen argues that regenerative agriculture serves corporate interests while agroecology builds practitioner power. The distinction matters: one treats farming as optimization, the other as transformative practice rooted in social and ecological balance.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "agroecology-europe"
+    ],
     "tags": [
       "agroecology",
       "food-systems",
@@ -1429,7 +1563,9 @@
     "imageAlt": "UNESCO logo on light blue gradient background",
     "summary": "MOOD — Meaningful Open Opportunities for Discovery — brings 100+ participants into a UN-certified learning experience that frames climate action as both personal exploration and governance practice, testing how structured discovery might scale.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "learning-planet-institute"
+    ],
     "tags": [
       "climate",
       "learning",
@@ -1450,7 +1586,9 @@
     "imageAlt": "Helicopter with water bucket silhouetted against massive wildfire flames and smoke",
     "summary": "The Global Challenges Foundation and World Economic Forum release assessments showing seven of nine planetary boundaries breached, rising geoeconomic confrontation, and institutional erosion — all pointing to what GCF calls the need for governance that recognizes 'planetary commons cannot be negotiated with.'",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "democracy-without-borders"
+    ],
     "tags": [
       "governance",
       "climate",
@@ -1472,7 +1610,9 @@
     "imageAlt": "Video conference screen showing UVICITIES Transition Lab Forum II presentation with participants",
     "summary": "UniCities transitions from project to partnership, positioning Ukrainian universities as laboratories for integrated climate transition and post-war recovery — a model for resilience-centered governance under extreme constraint.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "viable-cities"
+    ],
     "tags": [
       "climate",
       "democratic-innovation",
@@ -1494,7 +1634,9 @@
     "imageAlt": "Aerial view of pedestrians crossing a zebra crossing, showing diverse people moving in different directions",
     "summary": "New polling across 31 countries shows falling support for international institutions — not because people reject cooperation, but because they don't see it working. The gap reveals something fundamental about governance at any scale.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "democracy-without-borders"
+    ],
     "tags": [
       "governance",
       "democratic-innovation",
@@ -1515,7 +1657,9 @@
     "imageAlt": "Three people tending soil in an agroforestry plot with banana trees and mixed crops, Mozambique",
     "summary": "A 3.5-year project in Mozambique embedded agroforestry systems into public institutions and rural communities — showing how regenerative agriculture becomes a form of governance when it restructures land use, diet, and policy in tandem.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "agroecology-coalition"
+    ],
     "tags": [
       "agroecology",
       "mozambique",
@@ -1537,7 +1681,9 @@
     "imageAlt": "",
     "summary": "The Italian design studio ran a three-day political LARP inside the European Parliament, with MEPs and citizens role-playing a planetary governance crisis. The event drew attention to experiential methods for democratic innovation.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "not-only-larp"
+    ],
     "tags": [
       "larp",
       "governance-simulation",
@@ -1557,7 +1703,9 @@
     "imageAlt": "Father lifts joyful child at sunset over green hills and water, with text 'Justice for Migrants'",
     "summary": "The Climate Justice Alliance frames immigration enforcement as inseparable from climate displacement, calling for mutual aid networks and direct action as federal raids intensify across the U.S.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "climate-justice-alliance"
+    ],
     "tags": [
       "climate",
       "migration",
@@ -1579,7 +1727,9 @@
     "imageAlt": "Chart showing U.S. Census Bureau data on housing patterns across Federal Home Loan Bank regions",
     "summary": "Eleven regional cooperative banks allocate billions for affordable housing through mandated programs — including community land trusts. A case study in how existing financial infrastructure can be steered toward stewardship models.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "grounded-solutions-network"
+    ],
     "tags": [
       "housing",
       "cooperative-models",
@@ -1600,7 +1750,9 @@
     "imageAlt": "Conference participants at ICAISS2025 holding organizational signs and sustainability symbols in auditorium",
     "summary": "Researchers, policymakers, and industry practitioners gathered in Taipei to explore how artificial intelligence can serve planetary resilience — examining not just technical potential but governance frameworks for equitable deployment.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "future-earth"
+    ],
     "tags": [
       "ai",
       "climate",
@@ -1623,7 +1775,9 @@
     "imageAlt": "Four people sitting around a conference table with laptops, one person holding up a star-shaped object",
     "summary": "Vendela Karlsson spent autumn 2025 embedded in Viable Cities' communications team, translating urban climate transition work into accessible formats. A small case study in how governance initiatives become legible — and who does that work.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "viable-cities"
+    ],
     "tags": [
       "communication",
       "urban-transition",
@@ -1644,7 +1798,9 @@
     "imageAlt": "Audience members raising hands during interactive session in bright modern learning space",
     "summary": "The Learning Planet Institute launches a new academy designed to move beyond traditional credentials toward co-constructed learning pathways that address climate urgency and ecological anxiety — a pedagogical experiment in governance education.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "learning-planet-institute"
+    ],
     "tags": [
       "education",
       "planetary-governance",
@@ -1666,7 +1822,9 @@
     "imageAlt": "Two people discussing map of Mariestad at outdoor information booth with bicycle visible",
     "summary": "A Swedish mid-sized city maps who pays for climate transition and who benefits — finding that while citizens and industry carry costs, the municipality's role is creating conditions for transformation, not funding it.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "viable-cities"
+    ],
     "tags": [
       "climate",
       "governance",
@@ -1688,7 +1846,9 @@
     "imageAlt": "Four people in an office pointing upward at a starfish decoration, laptops and coffee on table",
     "summary": "Sweden's Viable Cities seeks communications interns to help 29 cities navigate climate neutrality transitions. The work touches a persistent challenge: how to make systemic change legible and compelling to publics who must ultimately enact it.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "viable-cities"
+    ],
     "tags": [
       "climate",
       "nordic",
@@ -1709,7 +1869,9 @@
     "imageAlt": "Reuss Initiative members hold blue flags reading 'JA' outside Lucerne parliamentary building",
     "summary": "A citizen initiative in Lucerne canton has gathered 5,460 signatures to grant legal personhood to the River Reuss — launching a constitutional process that will test whether democratic systems can recognize nature as a rights-bearing entity.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "global-alliance-for-the-rights-of-nature"
+    ],
     "tags": [
       "rights-of-nature",
       "democratic-innovation",
@@ -1731,7 +1893,9 @@
     "imageAlt": "Close-up of fish gills showing the intricate filtering structures that inspired the microplastic filter design",
     "summary": "Researchers at Bonn University developed a self-cleaning filter modeled on fish gills that captures microplastics from washing machines — addressing a governance gap where household infrastructure meets ocean pollution.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "future-earth"
+    ],
     "tags": [
       "ecological-stewardship",
       "biomimicry",
@@ -1752,7 +1916,9 @@
     "imageAlt": "Hands holding golden indigenous rice grains — part of Dr Debal Deb's 1,460-variety seed bank",
     "summary": "Dr Debal Deb has spent 30 years conserving indigenous rice from remote Indian tribes — an act of ecological stewardship that doubles as governance practice, returning seed sovereignty to farmers after decades of corporate monoculture.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "gaia-foundation"
+    ],
     "tags": [
       "food-sovereignty",
       "ecological-stewardship",
@@ -1775,7 +1941,9 @@
     "imageAlt": "Conceptual visualization of timber submerged in dark Arctic waters",
     "summary": "Researchers propose harvesting boreal forest timber and sinking it in the oxygen-poor Arctic Ocean — a carbon removal method that sidesteps infrastructure costs but raises questions about who governs such planetary-scale interventions.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "future-earth"
+    ],
     "tags": [
       "climate",
       "arctic",
@@ -1797,7 +1965,9 @@
     "imageAlt": "European bison standing in snowy landscape, facing camera directly",
     "summary": "Nine European bison have been released in Spain's Iberian Highlands as part of a cross-European study testing how keystone species can restore degraded landscapes — and whether rewilding can offer viable development pathways for depopulating rural communities.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "rewilding-europe"
+    ],
     "tags": [
       "rewilding",
       "ecological-stewardship",
@@ -1818,7 +1988,9 @@
     "imageAlt": "Visitors explore climate transition exhibition in Luleå shopping center, January 2026",
     "summary": "A Swedish industrial city places climate transition in a shopping mall — treating governance not as policy abstraction but as something residents encounter while buying groceries. The experiment tests whether municipal legitimacy can be built through visibility.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "viable-cities"
+    ],
     "tags": [
       "democratic-innovation",
       "climate",
@@ -1840,7 +2012,9 @@
     "imageAlt": "Cattle grazing among rocks and olive trees in a Mediterranean agroecological landscape",
     "summary": "As the EU-Mercosur trade agreement advances despite farmer protests, Agroecology Europe argues both continents must accelerate agroecological policy — not as alternative, but as systemic governance strategy for food, climate, and rural resilience.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "agroecology-europe"
+    ],
     "tags": [
       "agroecology",
       "trade",
@@ -1862,7 +2036,9 @@
     "imageAlt": "Wetland ecosystem with standing water and vegetation",
     "summary": "Climate Justice Alliance and 17 EJ organizations oppose EPA's proposed redefinition of protected waters — a case study in how regulatory rollbacks shift environmental harm to frontline communities while weakening federal accountability.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "climate-justice-alliance"
+    ],
     "tags": [
       "governance",
       "environmental-justice",
@@ -1884,7 +2060,9 @@
     "imageAlt": "Empty seats in an international conference hall representing absent participation in global governance",
     "summary": "The Trump administration withdrew from the UNFCCC and 65+ other international bodies, making the US the only nation outside the foundational climate treaty. A stress test for multilateral governance in an age of unilateral retreat.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "climate-justice-alliance"
+    ],
     "tags": [
       "climate",
       "governance",
@@ -1906,7 +2084,9 @@
     "imageAlt": "Illustration of bee and flowers in a jar with text listing GARN internship areas",
     "summary": "The Global Alliance for the Rights of Nature seeks interns across communications, tribunal support, and organizing — roles that build the operational capacity behind legal ecosystems protection and governance experimentation.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "global-alliance-for-the-rights-of-nature"
+    ],
     "tags": [
       "rights-of-nature",
       "governance",
@@ -1928,7 +2108,9 @@
     "imageAlt": "Industrial infrastructure and community organizing materials",
     "summary": "A frontline coalition created resources on AI infrastructure's environmental costs and trained 10 organizers in Memphis to challenge data center development — governance as ground-level strategy, not abstract policy.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "climate-justice-alliance"
+    ],
     "tags": [
       "climate",
       "governance",
@@ -1950,7 +2132,9 @@
     "imageAlt": "Five-year data table showing growth in family farms, training sessions, participants, and plants established",
     "summary": "Over 20 hectares and 18,000 plants later, Jungle Project demonstrates how governance begins with land stewardship — training 22 farmers in regenerative agroforestry while building the market infrastructure to sustain it.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "kiss-the-ground"
+    ],
     "tags": [
       "agroforestry",
       "costa-rica",
@@ -1971,7 +2155,9 @@
     "imageAlt": "Frost-covered winter landscape with bare trees and golden sunrise, representing seasonal transition",
     "summary": "As political systems retreat from environmental pledges, Europe's agroecology network grows to 450+ youth members and convenes gatherings that bridge science, practice, and policy — testing governance models that treat food systems as living democratic experiments.",
     "insight": "",
-    "actors": [],
+    "actors": [
+      "agroecology-europe"
+    ],
     "tags": [
       "agroecology",
       "food-systems",

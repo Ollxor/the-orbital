@@ -1,200 +1,2565 @@
 [
   {
+    "id": 35,
+    "slug": "agenda-gotsch",
+    "name": "Agenda Gotsch",
+    "type": "NGO",
+    "description": "Syntropic farming education and practice platform founded by Ernst Gotsch, promoting regenerative agroforestry systems through training, demonstration farms, and a global practitioner network.",
+    "website": "https://agendagotsch.com",
+    "location": "Brazil / Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "nature-based",
+      "ecological-governance",
+      "platform",
+      "ai",
+      "civil-society",
+      "agroforestry",
+      "network",
+      "global",
+      "education",
+      "regenerative",
+      "regenerative-agriculture"
+    ],
+    "image": "/images/actors/agenda-gotsch-ernst.jpg",
+    "imageAlt": "Ernst Götsch in his syntropic agroforestry farm"
+  },
+  {
+    "id": 38,
+    "slug": "agroecology-coalition",
+    "name": "Agroecology Coalition",
+    "type": "Network",
+    "description": "Global multi-stakeholder coalition of governments, research institutions, civil society and private sector actors advocating food system transformation through agroecology's 13 core principles.",
+    "website": "https://agroecology-coalition.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "coalition",
+      "network",
+      "nature-based",
+      "global",
+      "ecological-governance",
+      "regenerative-agriculture",
+      "research"
+    ],
+    "image": "/images/actors/agroecology-coalition-planting.jpg",
+    "imageAlt": "Community members planting crops using agroecological methods"
+  },
+  {
+    "id": 37,
+    "slug": "agroecology-europe",
+    "name": "Agroecology Europe",
+    "type": "Network",
+    "description": "European association advancing agroecology through transdisciplinary research, farmer-to-farmer knowledge exchange, and policy engagement across the EU.",
+    "website": "https://www.agroecology-europe.org",
+    "location": "Europe",
+    "scale": "Regional",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "policy",
+      "network",
+      "nature-based",
+      "ecological-governance",
+      "europe",
+      "regenerative-agriculture",
+      "research"
+    ],
+    "image": "/images/actors/agroecology-europe-letter.jpg",
+    "imageAlt": "Barcelona Letter on agroecology in Europe"
+  },
+  {
+    "id": 44,
+    "slug": "alliance-for-water-stewardship",
+    "name": "Alliance for Water Stewardship",
+    "type": "Network",
+    "description": "Global multi-stakeholder network operating the International Water Stewardship Standard, engaging industry, civil society and governments in collective water governance.",
+    "website": "https://a4ws.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "stewardship",
+      "water-ocean-stewardship",
+      "network",
+      "nature-based",
+      "global",
+      "governance",
+      "ecological-governance"
+    ],
+    "image": "/images/actors/aws-hero.jpg",
+    "imageAlt": "Alliance for Water Stewardship standard launch promotional imagery"
+  },
+  {
+    "id": 78,
+    "slug": "arbonics",
+    "name": "Arbonics",
+    "type": "Company",
+    "description": "Estonian-Nordic forest carbon credit platform using satellite imagery and AI-driven growth models for transparent monitoring, reporting and verification (MRV) of forest carbon projects. Launched in Sweden 2025 via Treebula partnership.",
+    "website": "https://www.arbonics.com",
+    "location": "Estonia / Sweden",
+    "scale": "Regional",
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP"
+    ],
+    "tags": [],
+    "image": "/images/actors/arbonics-forest.jpg",
+    "imageAlt": "Dense forest landscape monitored by Arbonics platform"
+  },
+  {
+    "id": 101,
+    "slug": "balticwaters",
+    "name": "BalticWaters",
+    "type": "NGO",
+    "description": "Specialized environmental foundation focused on ecological restoration and preservation of the Baltic Sea, bridging scientific theory and practical implementation through research, policy advocacy, and knowledge dissemination.",
+    "website": "https://balticwaters.org",
+    "location": "Stockholm, Sweden",
+    "scale": "Regional",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "baltic-sea",
+      "marine",
+      "sweden",
+      "nordic",
+      "fish-research",
+      "ecological-restoration"
+    ],
+    "image": "/images/actors/balticwaters-cod.jpg",
+    "imageAlt": "Cod research publication by BalticWaters foundation"
+  },
+  {
+    "id": 62,
+    "slug": "beckley-foundation",
+    "name": "Beckley Foundation",
+    "type": "Research",
+    "description": "UK-based research foundation pioneering scientific research into psychedelics and consciousness, while advocating evidence-based drug policy reform globally.",
+    "website": "https://www.beckleyfoundation.org",
+    "location": "UK",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "policy",
+      "global",
+      "transformative-practice",
+      "consciousness",
+      "experiential",
+      "europe",
+      "psychedelic-consciousness-research",
+      "research"
+    ],
+    "image": "/images/actors/beckley-galaxy.jpg",
+    "imageAlt": "Cosmic galaxy visualization representing consciousness research"
+  },
+  {
+    "id": 80,
+    "slug": "blockchain-for-climate-foundation",
+    "name": "Blockchain for Climate Foundation",
+    "type": "NGO",
+    "description": "Canadian foundation bridging blockchain technology with UNFCCC climate policy, convening governments, NGOs and Indigenous leaders to explore transparent and interoperable carbon accounting infrastructure.",
+    "website": "https://www.blockchainforclimate.org",
+    "location": "Canada",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "tags": [],
+    "image": "/images/actors/blockchain-climate-hero.jpg",
+    "imageAlt": "Blockchain for Climate Foundation visual identity"
+  },
+  {
+    "id": 22,
+    "slug": "buckminster-fuller-institute",
+    "name": "Buckminster Fuller Institute",
+    "type": "NGO",
+    "description": "World Game legacy. Design science challenges. Funding possibility.",
+    "website": "https://www.bfi.org",
+    "location": "USA / Global",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "civil-society",
+      "transformative-practice",
+      "global",
+      "experiential",
+      "funding",
+      "megagames-civilisational-simulation"
+    ],
+    "image": "/images/actors/bfi-montreal-dome.jpg",
+    "imageAlt": "Inside the Montreal geodesic dome"
+  },
+  {
+    "id": 29,
+    "slug": "c40-cities",
+    "name": "C40 Cities",
+    "type": "Government",
+    "description": "Cities as real climate governance actors. Mayors > nations.",
+    "website": "https://www.c40.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "institutional-design",
+      "ai-for-planetary-governance",
+      "democratic-innovation",
+      "global",
+      "public-sector",
+      "governance",
+      "climate"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 45,
+    "slug": "capital-institute",
+    "name": "Capital Institute",
+    "type": "Research",
+    "description": "Think tank developing the theory and practice of regenerative economics, publishing the '8 Principles of a Regenerative Economy' framework and the Finance for a Regenerative World paper series.",
+    "website": "https://capitalinstitute.org",
+    "location": "USA",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "nature-based",
+      "ecological-governance",
+      "research",
+      "global",
+      "regenerative",
+      "nature-based-economies"
+    ],
+    "image": "/images/actors/capital-launch.jpg",
+    "imageAlt": "Regenerative Economics book launch"
+  },
+  {
+    "id": 67,
+    "slug": "centre-for-international-governance-innovation",
+    "name": "Centre for International Governance Innovation",
+    "type": "Research",
+    "description": "Canadian think tank conducting research on international governance, digital economy, and global security, with focus on reforming multilateral institutions for contemporary challenges.",
+    "website": "https://www.cigionline.org",
+    "location": "Canada",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "institutional-design",
+      "global-governance-innovation",
+      "democratic-innovation",
+      "global",
+      "governance",
+      "research"
+    ],
+    "image": "/images/actors/cigi-hero.jpg",
+    "imageAlt": "CIGI campus and research centre"
+  },
+  {
+    "id": 102,
+    "slug": "citizen-os",
+    "name": "Citizen OS",
+    "type": "NGO",
+    "description": "Estonian civic tech non-profit developing a free, open-source digital participation platform for participatory democracy. Founded in 2015 from environmental activism movements, enables communities to discuss, deliberate, and vote on decisions.",
+    "website": "https://citizenos.com",
+    "location": "Estonia",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "civic-tech",
+      "open-source",
+      "digital-democracy",
+      "estonia",
+      "nordic",
+      "participation-platform",
+      "voting"
+    ],
+    "image": "/images/actors/citizenos-event1.jpg",
+    "imageAlt": "Citizen OS community participation event"
+  },
+  {
+    "id": 103,
+    "slug": "civic-tech-sweden",
+    "name": "Civic Tech Sweden",
+    "type": "Network",
+    "description": "Decentralized network of individuals, organizations, and public sector entities leveraging digital technology for public benefit. Closely intertwined with Open Knowledge Sweden.",
+    "website": "https://civictech.se",
+    "location": "Sweden",
+    "scale": "National",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "civic-tech",
+      "open-data",
+      "sweden",
+      "nordic",
+      "hackathons",
+      "transparency",
+      "freedom-of-information"
+    ],
+    "image": "/images/actors/civictech-banner.jpg",
+    "imageAlt": "Civic Tech Sweden community meetup and collaboration"
+  },
+  {
+    "id": 81,
+    "slug": "climate-action-data-trust",
+    "name": "Climate Action Data Trust",
+    "type": "Network",
+    "description": "Multi-stakeholder initiative providing open, blockchain-based metadata infrastructure to prevent double counting of carbon credits across registries, linking Verra, Gold Standard and national registries through interoperable data layers.",
+    "website": "https://climateactiondata.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "tags": [],
+    "image": "/images/actors/cad-banner.jpg",
+    "imageAlt": "Climate Action Data Trust homepage banner"
+  },
+  {
+    "id": 85,
+    "slug": "climate-interactive",
+    "name": "Climate Interactive",
+    "type": "NGO",
+    "description": "MIT-affiliated nonprofit running the World Climate Simulation — a role-playing negotiation game putting participants in a fictitious UN climate summit, backed by the En-ROADS systems dynamics model providing real-time feedback on policy choices. Used in 100+ countries.",
+    "website": "https://www.climateinteractive.org",
+    "location": "USA",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 74,
+    "slug": "climate-justice-alliance",
+    "name": "Climate Justice Alliance",
+    "type": "Network",
+    "description": "US-based coalition of 90+ frontline community organisations and support groups building a just transition away from extractive systems through community-led governance and regenerative economies.",
+    "website": "https://climatejusticealliance.org",
+    "location": "USA",
+    "scale": "National",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "institutional-design",
+      "regenerative",
+      "democratic-innovation",
+      "network",
+      "coalition",
+      "governance",
+      "climate",
+      "climate-justice-global-south-leadership"
+    ],
+    "image": "/images/actors/cja-logo.jpg",
+    "imageAlt": "Climate Justice Alliance logo and branding"
+  },
+  {
+    "id": 5,
+    "slug": "climate-trace",
+    "name": "Climate TRACE",
+    "type": "NGO",
+    "description": "AI + satellite global emissions monitoring. Al Gore-backed.",
+    "website": "https://climatetrace.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "civil-society",
+      "ai-for-planetary-governance",
+      "nature-based",
+      "ecological-governance",
+      "global",
+      "ai",
+      "open-earth-data-satellite-intelligence",
+      "climate"
+    ],
+    "image": "/images/actors/climatetrace-emissions.jpg",
+    "imageAlt": "Industrial emissions visualization from satellite data"
+  },
+  {
+    "id": 100,
+    "slug": "coalition-clean-baltic",
+    "name": "Coalition Clean Baltic",
+    "type": "NGO",
+    "description": "Politically independent non-profit network uniting 28 environmental organizations across 11 Baltic Sea countries. Won Nordic Council Nature and Environment Prize for model approach to uniting environmental bodies across geopolitical divides.",
+    "website": "https://www.ccb.se",
+    "location": "Uppsala, Sweden (Secretariat) / Baltic Region",
+    "scale": "Regional",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "baltic-sea",
+      "marine",
+      "transnational",
+      "sweden",
+      "nordic",
+      "eu-policy",
+      "eutrophication"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 34,
+    "slug": "curve-labs",
+    "name": "Curve Labs",
+    "type": "Company",
+    "description": "Web3 development lab building institutional ReFi technology. Core technical partner for Kolektivo Framework and tokenised ecological assets.",
+    "website": "https://www.curvelabs.eu/",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "enterprise",
+      "art",
+      "global",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/curvelabs-polis.jpg",
+    "imageAlt": "Artistic visualization of digital governance systems"
+  },
+  {
+    "id": 11,
+    "slug": "dark-matter-labs",
+    "name": "Dark Matter Labs",
+    "type": "Company",
+    "description": "Smart covenants, redesigning 21st century institutions.",
+    "website": "https://darkmatterlabs.org",
+    "location": "UK / EU",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "enterprise",
+      "art",
+      "global",
+      "europe",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/darkmatter-matrix1.jpg",
+    "imageAlt": "Dark Matter Labs systems mapping"
+  },
+  {
+    "id": 25,
     "slug": "democracy-without-borders",
     "name": "Democracy Without Borders",
-    "description": "Global campaign for democratic world governance and stronger international institutions.",
+    "type": "NGO",
+    "description": "Campaigning for UN Parliamentary Assembly. Global direct democracy.",
     "website": "https://www.democracywithoutborders.org",
-    "orientations": ["ASSEMBLY"],
-    "tags": ["governance", "democratic-innovation", "global-institutions"],
-    "location": "Berlin, Germany"
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "institutional-design",
+      "civil-society",
+      "democracy",
+      "democratic-innovation",
+      "global",
+      "ai",
+      "participatory-democracy-movements"
+    ],
+    "image": "/images/actors/dwb-parliament.jpg",
+    "imageAlt": "World parliament concept"
   },
   {
-    "slug": "rewilding-europe",
-    "name": "Rewilding Europe",
-    "description": "Making Europe a wilder place by restoring natural processes and creating space for wildlife.",
-    "website": "https://www.rewildingeurope.com",
-    "orientations": ["GARDEN"],
-    "tags": ["rewilding", "biodiversity", "land-stewardship"],
-    "location": "Nijmegen, Netherlands"
+    "id": 106,
+    "slug": "demokrati-garage",
+    "name": "Demokrati Garage",
+    "type": "NGO",
+    "description": "Independent NGO and physical gathering place in Copenhagen functioning as a DIY workshop and development platform for democratic innovation. Co-founded by leadership of We Do Democracy.",
+    "website": "https://demokratigarage.dk",
+    "location": "Copenhagen, Denmark",
+    "scale": "Local",
+    "orientations": [
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "tags": [
+      "democratic-innovation",
+      "denmark",
+      "copenhagen",
+      "civic-space",
+      "diy",
+      "experiential",
+      "nordic"
+    ],
+    "image": "/images/actors/demokratigarage-event.jpg",
+    "imageAlt": "Community event at Demokrati Garage"
   },
   {
-    "slug": "radicalxchange",
-    "name": "RadicalxChange Foundation",
-    "description": "Building next-generation political economies through technology, design, and social innovation.",
-    "website": "https://www.radicalxchange.org",
-    "orientations": ["SPACESHIP", "ASSEMBLY"],
-    "tags": ["governance-technology", "alternative-ownership", "democratic-innovation"],
-    "location": "Detroit, USA"
+    "id": 95,
+    "slug": "demos-helsinki",
+    "name": "Demos Helsinki",
+    "type": "Research",
+    "description": "Independent think tank and policy institute focusing on societal transformation, foresight, and long-term governance. Bridges foresight frameworks and practical policymaking.",
+    "website": "https://demoshelsinki.fi",
+    "location": "Helsinki, Finland",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "think-tank",
+      "foresight",
+      "futures",
+      "intergenerational-justice",
+      "finland",
+      "nordic",
+      "anticipatory-governance"
+    ],
+    "image": "/images/actors/demos-helsinki-og.jpg",
+    "imageAlt": "Demos Helsinki team and organization visual"
   },
   {
-    "slug": "kiss-the-ground",
-    "name": "Kiss the Ground",
-    "description": "Inspiring regeneration of the planet's soils through advocacy, media, and farmer training.",
-    "website": "https://kisstheground.com",
-    "orientations": ["GARDEN"],
-    "tags": ["regenerative-agriculture", "soil", "food-systems"],
-    "location": "Los Angeles, USA"
+    "id": 9,
+    "slug": "destination-earth-destine",
+    "name": "Destination Earth (DestinE)",
+    "type": "Government",
+    "description": "EU initiative: high-precision digital model of Earth by 2030.",
+    "website": "https://destination-earth.eu",
+    "location": "EU",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "digital-twins-earth-modelling",
+      "art",
+      "global",
+      "public-sector",
+      "europe",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/destine-hero.jpg",
+    "imageAlt": "Destination Earth digital twin"
   },
   {
-    "slug": "purpose-foundation",
-    "name": "Purpose Foundation",
-    "description": "Spreading steward-ownership as an alternative to traditional corporate ownership structures.",
-    "website": "https://purpose-economy.org",
-    "orientations": ["SPACESHIP", "ASSEMBLY"],
-    "tags": ["steward-ownership", "alternative-ownership", "commons"],
-    "location": "Berlin, Germany"
+    "id": 104,
+    "slug": "digidem-lab",
+    "name": "Digidem Lab",
+    "type": "Company",
+    "description": "Swedish worker-owned cooperative specializing in design and development of methodologies for political and democratic innovation. Executed the historic Swedish Citizens' Assembly on Climate in 2024.",
+    "website": "",
+    "location": "Sweden",
+    "scale": "Regional",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "worker-cooperative",
+      "digital-democracy",
+      "deliberative-democracy",
+      "sweden",
+      "nordic",
+      "citizens-assemblies",
+      "hybrid-governance"
+    ],
+    "image": "/images/actors/digidemlab-workshop.jpg",
+    "imageAlt": "Digidem Lab workshop on digital democratic participation"
   },
   {
-    "slug": "transformative-play-initiative",
-    "name": "Transformative Play Initiative",
-    "description": "Research group at Uppsala University studying how play and games can drive social transformation.",
-    "website": "https://www.it.uu.se/research/group/tpi",
-    "orientations": ["MYSTERIES"],
-    "tags": ["larp", "transformative-games", "experiential-futures"],
-    "location": "Uppsala, Sweden"
+    "id": 47,
+    "slug": "earth-law-center",
+    "name": "Earth Law Center",
+    "type": "NGO",
+    "description": "Legal advocacy organisation advancing rights of nature through drafting legislation, supporting court cases, and developing the Universal Declaration of River Rights.",
+    "website": "https://www.earthlawcenter.org",
+    "location": "USA / Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "civil-society",
+      "advocacy",
+      "rights-of-nature",
+      "art",
+      "nature-based",
+      "ecological-governance",
+      "global"
+    ],
+    "image": "/images/actors/earthlaw-frontpage.jpg",
+    "imageAlt": "Nature landscape representing rights of nature legal framework"
   },
   {
-    "slug": "sortition-foundation",
-    "name": "Sortition Foundation",
-    "description": "Promoting the use of sortition — random selection — as a democratic tool for citizens' assemblies.",
-    "website": "https://www.sortitionfoundation.org",
-    "orientations": ["ASSEMBLY"],
-    "tags": ["citizens-assembly", "sortition", "participatory-democracy"],
-    "location": "Bristol, UK"
+    "id": 27,
+    "slug": "earth-system-governance-project",
+    "name": "Earth System Governance Project",
+    "type": "Research",
+    "description": "Largest social science network on governance and global environmental change.",
+    "website": "https://www.earthsystemgovernance.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "art",
+      "research",
+      "institutional-design",
+      "governance",
+      "digital-twins-earth-modelling",
+      "ai-for-planetary-governance",
+      "democratic-innovation",
+      "network",
+      "global"
+    ],
+    "image": "/images/actors/esg-urban.jpg",
+    "imageAlt": "Aerial view of urban landscape from above"
   },
   {
+    "id": 41,
+    "slug": "ecosystem-restoration-communities",
+    "name": "Ecosystem Restoration Communities",
+    "type": "Movement",
+    "description": "Global movement building community-led ecosystem restoration projects from Brazil to Morocco, connecting local action with the UN Decade on Ecosystem Restoration.",
+    "website": "https://www.ecosystemrestorationcommunities.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "movement",
+      "biodiversity-ecosystem-restoration",
+      "nature-based",
+      "ecological-governance",
+      "global",
+      "ecosystem",
+      "restoration"
+    ],
+    "image": "/images/actors/erc-guatemala.jpg",
+    "imageAlt": "Contour lines in a restoration project in Guatemala"
+  },
+  {
+    "id": 19,
+    "slug": "electionville",
+    "name": "Electionville",
+    "type": "Company",
+    "description": "Max Valentin's democracy board game. Tested in Zambia with real mayors.",
+    "website": "https://sharingsweden.se",
+    "location": "Sweden / Zambia",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "democracy",
+      "enterprise",
+      "nordic",
+      "transformative-practice",
+      "global",
+      "experiential",
+      "sweden"
+    ],
+    "image": "/images/actors/sharingsweden-globe.jpg",
+    "imageAlt": "Globe of Earth highlighting Sweden and sharing culture"
+  },
+  {
+    "id": 77,
+    "slug": "elysium-life",
+    "name": "Elysium Life",
+    "type": "Company",
+    "description": "Immersive theatre experience in Stockholm disguised as a transcendence clinic. Visitors surrender phones, don robes, and undergo a multi-step experiential journey blending salon aesthetics with mythological narrative. Founded by the character Hades.",
+    "website": "https://elysiumlife.se",
+    "location": "Stockholm, Sweden",
+    "scale": "Local",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "enterprise",
+      "nordic",
+      "sweden",
+      "transformative-practice",
+      "experiential",
+      "immersive"
+    ],
+    "image": "/images/actors/elysium-salon.jpg",
+    "imageAlt": "Elysium Clinic salon"
+  },
+  {
+    "id": 18,
+    "slug": "fabel",
+    "name": "Fabel",
+    "type": "Company",
+    "description": "Max Valentin. Storytelling, narrative design. Potential core team.",
+    "website": "https://www.fabelentertainment.com",
+    "location": "Sweden",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "enterprise",
+      "nordic",
+      "transformative-practice",
+      "global",
+      "experiential",
+      "sweden"
+    ],
+    "image": "/images/actors/fabel-hero.jpg",
+    "imageAlt": "Fabel Entertainment creative workspace and team"
+  },
+  {
+    "id": 98,
+    "slug": "fjallbete",
+    "name": "Fjallbete",
+    "type": "Network",
+    "description": "Pioneering Swedish farm and learning site serving as official Savory Hub in Sweden. Over two decades of holistic management practices for soil regeneration. Driving force behind Nordic Network for Regenerative Agriculture.",
+    "website": "",
+    "location": "Sweden",
+    "scale": "Regional",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "regenerative-agriculture",
+      "holistic-management",
+      "savory-hub",
+      "sweden",
+      "nordic",
+      "soil-health",
+      "grazing"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 99,
+    "slug": "foodprint-nordic",
+    "name": "Foodprint Nordic",
+    "type": "NGO",
+    "description": "Environmental non-profit dedicated to facilitating food system transition by directing funds and resources toward regenerative farming projects in the Nordic region. Launched Top 50 Farmers initiative.",
+    "website": "https://www.foodprintnordic.org",
+    "location": "Denmark / Pan-Nordic",
+    "scale": "Regional",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "regenerative-agriculture",
+      "food-systems",
+      "denmark",
+      "nordic",
+      "impact-investing",
+      "farmer-network"
+    ],
+    "image": "/images/actors/foodprint-nordic-food.jpg",
+    "imageAlt": "Food system photography from Foodprint Nordic"
+  },
+  {
+    "id": 8,
+    "slug": "future-earth",
+    "name": "Future Earth",
+    "type": "Research",
+    "description": "Global sustainability research platform. Erik Pihl background.",
+    "website": "https://futureearth.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "art",
+      "nature-based",
+      "ecological-governance",
+      "platform",
+      "ai",
+      "sustainability",
+      "global",
+      "research"
+    ],
+    "image": "/images/actors/futureearth-hero.jpg",
+    "imageAlt": "Future Earth global research"
+  },
+  {
+    "id": 70,
+    "slug": "future-generations-commissioner-for-wales",
+    "name": "Future Generations Commissioner for Wales",
+    "type": "Government",
+    "description": "Statutory body established by the Well-being of Future Generations Act, the world's first independent commissioner mandated to advocate for the interests of future generations in government decisions.",
+    "website": "https://futuregenerations.wales",
+    "location": "Wales / UK",
+    "scale": "National",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "aligned-vision",
+      "institutional-design",
+      "democratic-innovation",
+      "long-termism-future-generations",
+      "public-sector",
+      "europe"
+    ],
+    "image": "/images/actors/fgw-artwork.jpg",
+    "imageAlt": "Artwork for Future Generations report"
+  },
+  {
+    "id": 55,
+    "slug": "gaia-ai",
+    "name": "Gaia AI",
+    "type": "Company",
+    "description": "AI-powered forest management platform providing satellite-derived insights on forest health, carbon stocks, and biodiversity metrics to support data-driven conservation decisions.",
+    "website": "https://www.gaia-ai.eco",
+    "location": "UK",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "tags": [
+      "data",
+      "biodiversity",
+      "platform",
+      "open-earth-data-satellite-intelligence",
+      "ai",
+      "ai-for-planetary-governance",
+      "systems-thinking",
+      "conservation",
+      "enterprise",
+      "global",
+      "europe",
+      "technology"
+    ],
+    "image": "/images/actors/gaia-ai-hero.jpg",
+    "imageAlt": "Gaia AI satellite and remote sensing technology visualization"
+  },
+  {
+    "id": 48,
     "slug": "gaia-foundation",
     "name": "Gaia Foundation",
-    "description": "Strengthening indigenous and local communities in defending their rights to land, seeds, and territories.",
-    "website": "https://www.gaiafoundation.org",
-    "orientations": ["GARDEN"],
-    "tags": ["indigenous-knowledge", "land-rights", "food-sovereignty"],
-    "location": "London, UK"
+    "type": "NGO",
+    "description": "UK-based foundation advancing earth jurisprudence, seed sovereignty, and community ecological governance across Africa and South America. Pioneers of the 'earth jurisprudence' legal-philosophical framework.",
+    "website": "https://gaiafoundation.org",
+    "location": "UK / Africa / South America",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "art",
+      "nature-based",
+      "ecological-governance",
+      "ai",
+      "rights-of-nature",
+      "governance",
+      "indigenous-land-stewardship",
+      "africa",
+      "civil-society",
+      "global",
+      "europe"
+    ],
+    "image": "/images/actors/gaia-soil-sistars.jpg",
+    "imageAlt": "Soil Sistars session at Love Land community gathering"
   },
   {
-    "slug": "metagovernance-project",
-    "name": "Metagovernance Project",
-    "description": "Developing standards and tools for decentralised governance of online communities and DAOs.",
-    "website": "https://metagov.org",
-    "orientations": ["SPACESHIP", "ASSEMBLY"],
-    "tags": ["digital-governance", "dao", "decentralised-governance"],
-    "location": "Remote / USA"
+    "id": 46,
+    "slug": "global-alliance-for-the-rights-of-nature",
+    "name": "Global Alliance for the Rights of Nature",
+    "type": "Network",
+    "description": "International network advancing rights of nature through legal frameworks, hosting International Rights of Nature Tribunals, and supporting community-led campaigns for ecosystem legal personhood.",
+    "website": "https://www.garn.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "network",
+      "nature-based",
+      "global",
+      "ai",
+      "ecological-governance",
+      "ecosystem",
+      "aligned-vision"
+    ],
+    "image": "/images/actors/garn-banner.jpg",
+    "imageAlt": "Rights of Nature visual identity"
   },
   {
-    "slug": "burning-man-project",
-    "name": "Burning Man Project",
-    "description": "Annual gathering and year-round community practising radical self-expression, gifting, and civic responsibility.",
-    "website": "https://burningman.org",
-    "orientations": ["MYSTERIES"],
-    "tags": ["festival-culture", "community-building", "experiential"],
-    "location": "Nevada, USA"
-  },
-  {
-    "slug": "rights-of-nature-tribunal",
-    "name": "International Rights of Nature Tribunal",
-    "description": "Independent tribunal that hears cases on behalf of ecosystems, species, and the rights of nature.",
-    "website": "https://www.rightsofnaturetribunal.org",
-    "orientations": ["GARDEN", "ASSEMBLY"],
-    "tags": ["rights-of-nature", "legal-personhood", "climate-justice"],
-    "location": "International"
-  },
-  {
-    "slug": "doughnut-economics-action-lab",
-    "name": "Doughnut Economics Action Lab",
-    "description": "Turning Kate Raworth's doughnut economics framework into real-world practice for cities and communities.",
-    "website": "https://doughnuteconomics.org",
-    "orientations": ["SPACESHIP", "GARDEN"],
-    "tags": ["regenerative-economics", "doughnut-economics", "urban-governance"],
-    "location": "Oxford, UK"
-  },
-  {
-    "slug": "nordic-larp",
-    "name": "Nordic Larp Community",
-    "description": "International community advancing Nordic-style larp as an art form for social exploration and transformation.",
-    "website": "https://nordiclarp.org",
-    "orientations": ["MYSTERIES"],
-    "tags": ["larp", "transformative-games", "social-change"],
-    "location": "Scandinavia / International"
-  },
-  {
-    "slug": "participatory-budgeting-project",
-    "name": "Participatory Budgeting Project",
-    "description": "Helping communities directly decide how to spend public money through democratic participatory processes.",
-    "website": "https://www.participatorybudgeting.org",
-    "orientations": ["ASSEMBLY"],
-    "tags": ["participatory-budgeting", "participatory-democracy", "local-governance"],
-    "location": "New York, USA"
-  },
-  {
-    "slug": "refi-dao",
-    "name": "ReFi DAO",
-    "description": "Global community building regenerative finance infrastructure on web3 for climate and ecological action.",
-    "website": "https://www.refidao.com",
-    "orientations": ["SPACESHIP", "GARDEN"],
-    "tags": ["regenerative-finance", "web3", "climate-finance"],
-    "location": "Remote / International"
-  },
-  {
-    "slug": "indigenous-terra-madre",
-    "name": "Indigenous Terra Madre",
-    "description": "Network of indigenous food communities protecting biocultural diversity and traditional food systems worldwide.",
-    "website": "https://www.indigenousterramadre.org",
-    "orientations": ["GARDEN"],
-    "tags": ["indigenous-knowledge", "food-sovereignty", "biocultural-diversity"],
-    "location": "International"
-  },
-  {
-    "slug": "bellingcat",
-    "name": "Bellingcat",
-    "description": "Open-source intelligence collective using digital tools and citizen journalism for accountability and truth.",
-    "website": "https://www.bellingcat.com",
-    "orientations": ["SPACESHIP"],
-    "tags": ["citizen-science", "data-sovereignty", "open-source-intelligence"],
-    "location": "Remote / International"
-  },
-  {
-    "slug": "commons-network",
-    "name": "Commons Network",
-    "description": "European think tank and advocacy organisation promoting the commons as foundation for democratic society.",
-    "website": "https://www.commonsnetwork.org",
-    "orientations": ["ASSEMBLY", "SPACESHIP"],
-    "tags": ["commons", "digital-rights", "democratic-innovation"],
-    "location": "Brussels, Belgium"
-  },
-  {
-    "slug": "wellbeing-economy-alliance",
-    "name": "Wellbeing Economy Alliance",
-    "description": "Coalition of organisations, movements, and individuals working towards a wellbeing economy.",
-    "website": "https://weall.org",
-    "orientations": ["ASSEMBLY", "GARDEN"],
-    "tags": ["wellbeing-economy", "regenerative-economics", "policy-innovation"],
-    "location": "Edinburgh, UK"
-  },
-  {
+    "id": 89,
     "slug": "global-assembly",
     "name": "Global Assembly",
-    "description": "Pioneering a new form of global democratic participation, starting with the first Global Assembly on the Climate and Ecological Crisis.",
+    "type": "Movement",
+    "description": "The world's first global citizens' assembly, bringing together randomly selected people from across the world to deliberate on the climate and ecological crisis. Presented the People's Declaration at COP26 in 2021.",
     "website": "https://globalassembly.org",
-    "orientations": ["ASSEMBLY"],
-    "tags": ["citizens-assembly", "global-governance", "climate-democracy"],
-    "location": "International"
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "tags": [],
+    "image": "/images/actors/global-assembly-grandmother.jpg",
+    "imageAlt": "Elderly woman representing intergenerational global voices"
   },
   {
-    "slug": "terra0",
-    "name": "terra0",
-    "description": "Research and art project exploring how ecosystems could own and manage themselves using smart contracts.",
-    "website": "https://terra0.org",
-    "orientations": ["SPACESHIP", "GARDEN"],
-    "tags": ["rights-of-nature", "smart-contracts", "dao"],
-    "location": "Berlin, Germany"
+    "id": 72,
+    "slug": "global-challenges-foundation",
+    "name": "Global Challenges Foundation",
+    "type": "NGO",
+    "description": "Swedish foundation offering major prizes for global governance reform proposals, funding research on existential risks and planetary commons, and building networks for institutional innovation.",
+    "website": "https://globalchallenges.org",
+    "location": "Sweden",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "nordic",
+      "aligned-vision",
+      "funding",
+      "research",
+      "institutional-design",
+      "civil-society",
+      "global-governance-innovation",
+      "democratic-innovation",
+      "network",
+      "global",
+      "governance",
+      "commons",
+      "sweden"
+    ],
+    "image": "/images/actors/gcf-report.jpg",
+    "imageAlt": "Global Threats to Planetary Resilience report cover"
   },
   {
-    "slug": "school-of-system-change",
-    "name": "School of System Change",
-    "description": "Developing system change practitioners equipped to navigate complex social challenges.",
-    "website": "https://www.schoolofsystemchange.org",
-    "orientations": ["ASSEMBLY", "MYSTERIES"],
-    "tags": ["systems-thinking", "capacity-building", "social-change"],
-    "location": "London, UK"
+    "id": 66,
+    "slug": "global-governance-innovation-network",
+    "name": "Global Governance Innovation Network",
+    "type": "Research",
+    "description": "International research network hosted by the Stimson Center, producing annual Global Governance Innovation Reports and connecting researchers working on multilateral system reform.",
+    "website": "https://ggin.stimson.org",
+    "location": "USA / Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "institutional-design",
+      "global-governance-innovation",
+      "democratic-innovation",
+      "network",
+      "global",
+      "governance",
+      "research"
+    ],
+    "image": "/images/actors/ggin-event.jpg",
+    "imageAlt": "GGIN event bringing together governance researchers"
+  },
+  {
+    "id": 40,
+    "slug": "global-rewilding-alliance",
+    "name": "Global Rewilding Alliance",
+    "type": "Network",
+    "description": "International alliance coordinating rewilding efforts across continents, advocating for rewilding as climate policy and bridging biodiversity and climate agendas.",
+    "website": "https://globalrewilding.earth",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "nature-based",
+      "ecological-governance",
+      "rewilding",
+      "policy",
+      "biodiversity",
+      "biodiversity-ecosystem-restoration",
+      "climate",
+      "network",
+      "global"
+    ],
+    "image": "/images/actors/rewilding-oryx.jpg",
+    "imageAlt": "Scimitar-horned oryx reintroduced to the Sahel"
+  },
+  {
+    "id": 26,
+    "slug": "global-sustainability-jam",
+    "name": "Global Sustainability Jam",
+    "type": "Network",
+    "description": "Decentralised simultaneous design events worldwide. Olle was co-initiator.",
+    "website": "https://www.globaljams.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "institutional-design",
+      "decentralised",
+      "democratic-innovation",
+      "network",
+      "global",
+      "ai",
+      "sustainability"
+    ],
+    "image": "/images/actors/global-jams-workshop1.jpg",
+    "imageAlt": "Participants collaborating at a Global Sustainability Jam event"
+  },
+  {
+    "id": 88,
+    "slug": "governance-futures",
+    "name": "Governance Futures",
+    "type": "NGO",
+    "description": "Organisation creating experiential and world-building workshops that engage communities in radical imagination about governance futures, using art, illustration, and comic books to envision equitable decision-making.",
+    "website": "https://governancefutures.org",
+    "location": "USA",
+    "scale": "National",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [],
+    "image": "/images/actors/governance-futures-hero.jpg",
+    "imageAlt": "Governance Futures hero imagery and visual identity"
+  },
+  {
+    "id": 43,
+    "slug": "grounded-solutions-network",
+    "name": "Grounded Solutions Network",
+    "type": "Network",
+    "description": "National network supporting community land trusts and shared equity housing, advancing community ownership models that keep land in common stewardship.",
+    "website": "https://groundedsolutions.org",
+    "location": "USA",
+    "scale": "National",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "community-land-trusts-commons",
+      "stewardship",
+      "network",
+      "nature-based",
+      "ecological-governance"
+    ],
+    "image": "/images/actors/grounded-housing.jpg",
+    "imageAlt": "Community land trust housing in urban neighborhood"
+  },
+  {
+    "id": 13,
+    "slug": "hypha-dao",
+    "name": "Hypha DAO",
+    "type": "Company",
+    "description": "Human-centric decentralised organisation tools for regenerative projects.",
+    "website": "https://dao.hypha.earth",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "enterprise",
+      "decentralised",
+      "global",
+      "regenerative",
+      "dao",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/hypha-space.jpg",
+    "imageAlt": "Hypha DAO platform interface for decentralized organization building"
+  },
+  {
+    "id": 42,
+    "slug": "iied-biocultural-heritage",
+    "name": "IIED Biocultural Heritage",
+    "type": "Research",
+    "description": "International Institute for Environment and Development research programme on biocultural heritage, bridging indigenous knowledge systems, biodiversity conservation, and community rights.",
+    "website": "https://biocultural.iied.org",
+    "location": "UK / Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "nature-based",
+      "ecological-governance",
+      "research",
+      "conservation",
+      "biodiversity",
+      "indigenous-land-stewardship",
+      "indigenous",
+      "global",
+      "europe"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 96,
+    "slug": "institute-for-futures-studies",
+    "name": "Institute for Futures Studies",
+    "type": "Research",
+    "description": "Interdisciplinary research organization investigating long-term societal threats and living conditions of future generations, focusing on climate ethics, sustainable development, and social dilemmas.",
+    "website": "https://www.iffs.se",
+    "location": "Stockholm, Sweden",
+    "scale": "National",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "futures-studies",
+      "climate-ethics",
+      "sweden",
+      "nordic",
+      "research",
+      "intergenerational"
+    ],
+    "image": "/images/actors/iffs-democracy.jpg",
+    "imageAlt": "Researcher studying digital democracy at IFFS"
+  },
+  {
+    "id": 64,
+    "slug": "institute-for-the-future",
+    "name": "Institute for the Future",
+    "type": "Research",
+    "description": "50+ year old futures research institute running experiential futures training, foresight research, and large-scale public forecasting exercises combining gameplay with futures thinking.",
+    "website": "https://www.iftf.org",
+    "location": "USA",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "experiential-futures-design-fiction",
+      "transformative-practice",
+      "global",
+      "ai",
+      "experiential",
+      "research"
+    ],
+    "image": "/images/actors/iftf-event.jpg",
+    "imageAlt": "IFTF foresight event with participants engaged in futures thinking"
+  },
+  {
+    "id": 90,
+    "slug": "knoca",
+    "name": "KNOCA",
+    "type": "Network",
+    "description": "EU-funded Knowledge Network on Climate Assemblies, connecting organisers, researchers, and policymakers working on climate citizens' assemblies across Europe.",
+    "website": "https://www.knoca.eu",
+    "location": "Europe",
+    "scale": "Regional",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [],
+    "image": "/images/actors/knoca-conference.jpg",
+    "imageAlt": "European deliberative democracy conference participants"
+  },
+  {
+    "id": 32,
+    "slug": "kate-raworth-doughnut-economics",
+    "name": "Kate Raworth / Doughnut Economics",
+    "type": "Research",
+    "description": "Economy with social floor and ecological ceiling. Framework for the Assembly.",
+    "website": "https://www.kateraworth.com",
+    "location": "Global / Amsterdam",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "research",
+      "institutional-design",
+      "democratic-innovation",
+      "global",
+      "nature-based-economies"
+    ],
+    "image": "/images/actors/raworth-doughnut.jpg",
+    "imageAlt": "Doughnut Economics visual framework"
+  },
+  {
+    "id": 76,
+    "slug": "kindship",
+    "name": "Kindship",
+    "type": "Company",
+    "description": "AI platform building autonomous agents for mission-driven individuals and teams. Agents hold direction over time, act independently, remember context, and produce real-world outputs — designed for changemakers, sensemakers, and collaborative projects.",
+    "website": "https://kindship.ai",
+    "location": "Sweden",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "enterprise",
+      "nordic",
+      "platform",
+      "global",
+      "ai",
+      "sweden",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/kindship-og.jpg",
+    "imageAlt": "Kindship AI platform"
+  },
+  {
+    "id": 36,
+    "slug": "kiss-the-ground",
+    "name": "Kiss the Ground",
+    "type": "NGO",
+    "description": "Soil health advocacy NGO producing documentary films, running farmer training programmes, and building public awareness of regenerative agriculture as a climate solution.",
+    "website": "https://kisstheground.com",
+    "location": "USA",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "advocacy",
+      "nature-based",
+      "ecological-governance",
+      "ai",
+      "climate",
+      "civil-society",
+      "global",
+      "regenerative",
+      "regenerative-agriculture"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 14,
+    "slug": "kolektivo",
+    "name": "Kolektivo",
+    "type": "Company",
+    "description": "Local network states using nature-based currencies for UBI.",
+    "website": "https://www.kolektivo.network",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "enterprise",
+      "network",
+      "global",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/kolektivo-community.jpg",
+    "imageAlt": "Kolektivo community in Curacao"
+  },
+  {
+    "id": 75,
+    "slug": "learning-planet-institute",
+    "name": "Learning Planet Institute",
+    "type": "Research",
+    "description": "Paris-based institute developing educational approaches for planetary citizenship, running futures learning labs on anticipatory governance and connecting education with sustainability transformation.",
+    "website": "https://www.learningplanetinstitute.org",
+    "location": "France",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "tags": [
+      "ai",
+      "research",
+      "institutional-design",
+      "governance",
+      "sustainability",
+      "education-for-planetary-citizenship",
+      "democratic-innovation",
+      "global",
+      "education",
+      "europe"
+    ],
+    "image": "/images/actors/lpi-youth.jpg",
+    "imageAlt": "Youth engagement at Learning Planet"
+  },
+  {
+    "id": 87,
+    "slug": "link-ping-university-climate-change-megagame",
+    "name": "Linköping University Climate Change Megagame",
+    "type": "Research",
+    "description": "Swedish academic megagame project at Linköping University simulating regional climate transformation 2020-2100, using SMHI forecast data to create participatory governance simulations.",
+    "website": "https://liu.se/en/research/climate-change-megagame",
+    "location": "Sweden",
+    "scale": "Local",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [],
+    "image": "/images/actors/liu-megagame1.jpg",
+    "imageAlt": "Climate change megagame session at Linköping University"
+  },
+  {
+    "id": 52,
+    "slug": "liquid-democracy-e-v",
+    "name": "Liquid Democracy e.V.",
+    "type": "NGO",
+    "description": "Berlin-based nonprofit developing open-source digital participation tools including Adhocracy, enabling liquid democracy and deliberative processes for governments and civil society.",
+    "website": "https://liqd.net",
+    "location": "Germany",
+    "scale": "Regional",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "art",
+      "europe",
+      "aligned-vision",
+      "systems-thinking",
+      "civil-society",
+      "deliberative",
+      "democracy",
+      "liquid-democracy",
+      "participatory-democracy-movements",
+      "decentralised-governance-tech",
+      "open-source",
+      "technology"
+    ],
+    "image": "/images/actors/liqd-banner.jpg",
+    "imageAlt": "Liquid Democracy organization banner and visual identity"
+  },
+  {
+    "id": 23,
+    "slug": "long-now-foundation",
+    "name": "Long Now Foundation",
+    "type": "NGO",
+    "description": "10,000-year clock. Long-term thinking. Stewart Brand.",
+    "website": "https://longnow.org",
+    "location": "USA",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "art",
+      "transformative-practice",
+      "experiential",
+      "civil-society",
+      "global"
+    ],
+    "image": "/images/actors/longnow-hero.jpg",
+    "imageAlt": "Long Now Foundation hero image"
+  },
+  {
+    "id": 24,
+    "slug": "martin-ericsson",
+    "name": "Martin Ericsson",
+    "type": "Person",
+    "description": "Vampire: The Masquerade lead. Nordic LARP pioneer. International Emmy.",
+    "website": "https://martineriksson.com",
+    "location": "Sweden",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "transformative-game-design-larp",
+      "nordic",
+      "art",
+      "global",
+      "transformative-practice",
+      "larp",
+      "experiential",
+      "sweden"
+    ],
+    "image": "/images/actors/martin-ericsson-speaking.jpg",
+    "imageAlt": "Martin Ericsson speaking at a conference"
+  },
+  {
+    "id": 58,
+    "slug": "megagame-assembly",
+    "name": "Megagame Assembly",
+    "type": "Network",
+    "description": "International community hub for megagame design and play, connecting designers and organisers of large-scale multi-player simulation games that blend strategy, diplomacy, and governance.",
+    "website": "https://www.megagameassembly.com",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "events",
+      "network",
+      "transformative-practice",
+      "global",
+      "governance",
+      "experiential",
+      "megagames-civilisational-simulation"
+    ],
+    "image": "/images/actors/megagame-assembly-event.jpg",
+    "imageAlt": "Players engaged in a large-scale megagame event"
+  },
+  {
+    "id": 59,
+    "slug": "megagame-coalition",
+    "name": "Megagame Coalition",
+    "type": "Network",
+    "description": "US-based network of megagame organisers collaborating on large-scale simulation game design, production, and community building across North America.",
+    "website": "https://megagamecoalition.com",
+    "location": "USA",
+    "scale": "National",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "transformative-practice",
+      "experiential",
+      "megagames-civilisational-simulation",
+      "coalition",
+      "network"
+    ],
+    "image": "/images/actors/megagame-coalition-event.jpg",
+    "imageAlt": "Megagame event with players gathered around tables"
+  },
+  {
+    "id": 54,
+    "slug": "metagov",
+    "name": "Metagov",
+    "type": "Research",
+    "description": "Research collective studying and building interoperable governance tools for online communities, exploring governance games and tool experimentation across digital and physical spaces.",
+    "website": "https://metagov.org",
+    "location": "USA / Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "MYSTERIES"
+    ],
+    "tags": [
+      "transformative-game-design-larp",
+      "aligned-vision",
+      "global",
+      "governance",
+      "decentralised-governance-tech",
+      "systems-thinking",
+      "technology",
+      "research"
+    ],
+    "image": "/images/actors/metagov-globe.jpg",
+    "imageAlt": "Metagov dithered globe graphic"
+  },
+  {
+    "id": 7,
+    "slug": "naturskyddsf-reningen",
+    "name": "Naturskyddsföreningen",
+    "type": "NGO",
+    "description": "Swedish Society for Nature Conservation. Erik Pihl connection.",
+    "website": "https://www.naturskyddsforeningen.se",
+    "location": "Sweden",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "civil-society",
+      "conservation",
+      "nordic",
+      "nature-based",
+      "ecological-governance",
+      "global",
+      "sweden"
+    ],
+    "image": "/images/actors/naturskyddsforeningen-nature.jpg",
+    "imageAlt": "Sweeping Swedish landscape with forests and mountains"
+  },
+  {
+    "id": 105,
+    "slug": "nordic-blockchain-alliance",
+    "name": "Nordic Blockchain Alliance",
+    "type": "Network",
+    "description": "Cross-border initiative funded by Nordic Innovation exploring joint Nordic blockchain ecosystem, targeting lifestyle and design industries for circular business model transition and European Product Passport compliance.",
+    "website": "https://www.nordicinnovation.org/programs/nordic-blockchain-alliance",
+    "location": "Pan-Nordic (Finland, Norway, Sweden, Denmark)",
+    "scale": "Regional",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "blockchain",
+      "nordic",
+      "circular-economy",
+      "supply-chain",
+      "product-passports",
+      "sme",
+      "decentralized-ledger"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 107,
+    "slug": "nordic-deliberation",
+    "name": "Nordic Deliberation",
+    "type": "Network",
+    "description": "Coalition of four leading democracy organizations across Scandinavia: We Do Democracy (Denmark), Sitra (Finland), Digidem Lab (Sweden), and SoCentral (Norway). Accelerating the deliberative wave across the Nordic region.",
+    "website": "https://www.wedodemocracy.com/program/nordic-deliberation",
+    "location": "Pan-Nordic",
+    "scale": "Regional",
+    "orientations": [
+      "ASSEMBLY",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "deliberative-democracy",
+      "nordic",
+      "pan-nordic",
+      "citizens-assemblies",
+      "transnational",
+      "democratic-resilience"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 57,
+    "slug": "not-only-larp",
+    "name": "Not Only Larp",
+    "type": "Company",
+    "description": "Italian design studio creating immersive LARP experiences explicitly for social change, running large-scale educational and political LARPs across Europe.",
+    "website": "https://notonlylarp.com",
+    "location": "Italy",
+    "scale": "Regional",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "transformative-practice",
+      "aligned-vision",
+      "experiential",
+      "events",
+      "immersive",
+      "larp",
+      "enterprise",
+      "education",
+      "europe",
+      "transformative-game-design-larp"
+    ],
+    "image": "/images/actors/nol-event1.jpg",
+    "imageAlt": "Large-scale political LARP event"
+  },
+  {
+    "id": 49,
+    "slug": "open-data-cube",
+    "name": "Open Data Cube",
+    "type": "Research",
+    "description": "Open-source geospatial data management and analysis platform enabling governments and researchers to process and analyse satellite earth observation data at national scale.",
+    "website": "https://www.opendatacube.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "data",
+      "art",
+      "platform",
+      "open-earth-data-satellite-intelligence",
+      "systems-thinking",
+      "research",
+      "global",
+      "open-source",
+      "technology"
+    ],
+    "image": "/images/actors/odc-satellite.jpg",
+    "imageAlt": "Satellite imagery of Earth surface from Open Data Cube"
+  },
+  {
+    "id": 1,
+    "slug": "openearth-foundation",
+    "name": "OpenEarth Foundation",
+    "type": "NGO",
+    "description": "Martin Wainstein's org. Spatial mesh, earth data, active inference.",
+    "website": "https://www.openearth.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "data",
+      "art",
+      "nature-based",
+      "ecological-governance",
+      "ai",
+      "open-earth-data-satellite-intelligence",
+      "ai-for-planetary-governance",
+      "civil-society",
+      "spatial-web-iot-infrastructure",
+      "global"
+    ],
+    "image": "/images/actors/openearth-hero.jpg",
+    "imageAlt": "Earth visualization by OpenEarth"
+  },
+  {
+    "id": 86,
+    "slug": "paxsims",
+    "name": "PAXsims",
+    "type": "Network",
+    "description": "Community hub and publication devoted to peace, conflict, humanitarian, and development simulations and serious games for education, training, and policy analysis.",
+    "website": "https://paxsims.wordpress.com",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [],
+    "image": "/images/actors/paxsims-connections.jpg",
+    "imageAlt": "Connections North simulation and gaming event"
+  },
+  {
+    "id": 53,
+    "slug": "participatory-budgeting-project",
+    "name": "Participatory Budgeting Project",
+    "type": "NGO",
+    "description": "Leading US organisation advancing participatory budgeting as a democratic practice, having supported over 400 PB processes and helped allocate hundreds of millions in public funds through direct citizen decision-making.",
+    "website": "https://www.participatorybudgeting.org",
+    "location": "USA",
+    "scale": "National",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "civil-society",
+      "participatory",
+      "art",
+      "participatory-democracy-movements",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/pbp-community.jpg",
+    "imageAlt": "Community members engaging in participatory budgeting process"
+  },
+  {
+    "id": 69,
+    "slug": "people-powered",
+    "name": "People Powered",
+    "type": "Network",
+    "description": "Global hub for participatory democracy connecting practitioners and governments, hosting the Public Participation and Deliberative Democracy Festival, and providing tools and guides for democratic innovation.",
+    "website": "https://www.peoplepowered.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "participatory",
+      "art",
+      "institutional-design",
+      "deliberative",
+      "democracy",
+      "democratic-innovation",
+      "network",
+      "global",
+      "participatory-democracy-movements",
+      "events",
+      "festival"
+    ],
+    "image": "/images/actors/people-powered-hero.jpg",
+    "imageAlt": "People Powered organization promotional image"
+  },
+  {
+    "id": 2,
+    "slug": "planetary-guardians-spiralweb",
+    "name": "Planetary Guardians / SpiralWeb",
+    "type": "NGO",
+    "description": "Engberg's flow architecture for land stewards. Three-stream model, Ostrom-based.",
+    "website": "https://www.planetaryguardians.org",
+    "location": "DK / UG / MA / PK",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "community-land-trusts-commons",
+      "digital-twins-earth-modelling",
+      "nature-based",
+      "ecological-governance",
+      "civil-society",
+      "global"
+    ],
+    "image": "/images/actors/planetary-guardians-social.jpg",
+    "imageAlt": "Planetary Guardians visual identity showing Earth from space"
+  },
+  {
+    "id": 73,
+    "slug": "planetary-health-alliance",
+    "name": "Planetary Health Alliance",
+    "type": "Network",
+    "description": "Global consortium of 400+ universities, NGOs, and government entities advancing planetary health — the interdisciplinary framework linking human health outcomes to planetary ecosystem changes.",
+    "website": "https://planetaryhealthalliance.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "institutional-design",
+      "democratic-innovation",
+      "network",
+      "global",
+      "planetary-health-one-health",
+      "ecosystem"
+    ],
+    "image": "/images/actors/pha-video.jpg",
+    "imageAlt": "Promise of Planetary Health video still"
+  },
+  {
+    "id": 83,
+    "slug": "plurality-institute",
+    "name": "Plurality Institute",
+    "type": "Research",
+    "description": "Research institute founded by Glen Weyl advancing plural technology — collaborative tools for cooperation across difference, including quadratic voting/funding, plural money, and decentralised identity systems.",
+    "website": "https://glenweyl.com",
+    "location": "USA / Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [],
+    "image": "/images/actors/plurality-cover.jpg",
+    "imageAlt": "Cover of the Plurality book by Glen Weyl and collaborators"
+  },
+  {
+    "id": 30,
+    "slug": "polis",
+    "name": "Polis",
+    "type": "Company",
+    "description": "Structured large-scale conversation finding genuine consensus. Used in Taiwan.",
+    "website": "https://pol.is",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "institutional-design",
+      "enterprise",
+      "democratic-innovation",
+      "global",
+      "ai"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 31,
+    "slug": "pro-human-ai-declaration",
+    "name": "Pro-Human AI Declaration",
+    "type": "Movement",
+    "description": "Coalition asserting AI should serve humans. humanstatement.org.",
+    "website": "https://humanstatement.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "institutional-design",
+      "movement",
+      "democratic-innovation",
+      "coalition",
+      "global",
+      "ai"
+    ],
+    "image": "/images/actors/humanstatement-og.jpg",
+    "imageAlt": "Pro-Human AI Declaration branding and campaign imagery"
+  },
+  {
+    "id": 20,
+    "slug": "prototopia",
+    "name": "Prototopia",
+    "type": "Network",
+    "description": "Joel Lindefors, Mathias, Olle. Prototyping culture.",
+    "website": "https://www.prototopia.eu",
+    "location": "Sweden",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "nordic",
+      "network",
+      "transformative-practice",
+      "global",
+      "experiential",
+      "sweden"
+    ],
+    "image": "/images/actors/prototopia-hero.jpg",
+    "imageAlt": "Prototopia futures festival"
+  },
+  {
+    "id": 16,
+    "slug": "purpose-foundation",
+    "name": "Purpose Foundation",
+    "type": "NGO",
+    "description": "Steward-ownership models. Anti-extraction corporate design.",
+    "website": "https://www.purpose-us.com",
+    "location": "Germany / Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "civil-society",
+      "community-land-trusts-commons",
+      "steward-ownership-alternative-corporate-models",
+      "global",
+      "europe",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/purpose-steward.jpg",
+    "imageAlt": "Steward ownership illustration"
+  },
+  {
+    "id": 12,
+    "slug": "radicalxchange",
+    "name": "RadicalxChange",
+    "type": "NGO",
+    "description": "Glen Weyl. Quadratic voting, plural management, new democracy tools.",
+    "website": "https://www.radicalxchange.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "civil-society",
+      "democracy",
+      "global",
+      "decentralised-governance-tech",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/rxc-mydata.jpg",
+    "imageAlt": "RadicalxChange MyData collaboration"
+  },
+  {
+    "id": 6,
+    "slug": "rainforest-connection-rfcx",
+    "name": "Rainforest Connection (RFCx)",
+    "type": "Company",
+    "description": "Bioacoustic sensors for forest biodiversity monitoring.",
+    "website": "https://rfcx.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "enterprise",
+      "bioacoustics-ecosystem-sensing",
+      "biodiversity",
+      "nature-based",
+      "ecological-governance",
+      "global",
+      "ai"
+    ],
+    "image": "/images/actors/rfcx-hero.jpg",
+    "imageAlt": "Rainforest canopy with acoustic monitoring technology"
+  },
+  {
+    "id": 82,
+    "slug": "refi-dao",
+    "name": "ReFi DAO",
+    "type": "Network",
+    "description": "Global regenerative finance community hub providing media, research, builder cohorts, and ecosystem mapping connecting ReFi projects across blockchain and ecological domains.",
+    "website": "https://blog.refidao.com",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "tags": [],
+    "image": "/images/actors/refidao-hero.jpg",
+    "imageAlt": "ReFi DAO visual identity and branding"
+  },
+  {
+    "id": 79,
+    "slug": "regen-civics-alliance",
+    "name": "Regen Civics Alliance",
+    "type": "Network",
+    "description": "Global decentralised alliance of place-based pilot projects supporting regenerative community development, using web3 governance tools (via SEEDS) to coordinate local food forests, ecovillages, and cooperative land projects.",
+    "website": "https://explore.joinseeds.earth/regenerative-civics-alliance/alliance-overview",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 4,
+    "slug": "regen-network",
+    "name": "Regen Network",
+    "type": "Company",
+    "description": "Blockchain-verified soil health and carbon sequestration tokens.",
+    "website": "https://www.regen.network",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "nature-based",
+      "ecological-governance",
+      "ai",
+      "global",
+      "enterprise",
+      "network",
+      "blockchain",
+      "blockchain-regenerative-finance-refi",
+      "regenerative-agriculture"
+    ],
+    "image": "/images/actors/regen-amazon.jpg",
+    "imageAlt": "Amazon Sacred Headwaters"
+  },
+  {
+    "id": 39,
+    "slug": "rewilding-europe",
+    "name": "Rewilding Europe",
+    "type": "NGO",
+    "description": "Pan-European rewilding initiative operating across 10+ landscapes, reintroducing wildlife, supporting nature-based economies, and running the European Rewilding Network connecting 100+ local initiatives.",
+    "website": "https://rewildingeurope.com",
+    "location": "Europe",
+    "scale": "Regional",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "civil-society",
+      "biodiversity-ecosystem-restoration",
+      "nature-based",
+      "ecological-governance",
+      "network",
+      "rewilding",
+      "europe",
+      "nature-based-economies"
+    ],
+    "image": "/images/actors/rewild-event.jpg",
+    "imageAlt": "European Rewilding event in Greater Coa Valley"
+  },
+  {
+    "id": 97,
+    "slug": "rewilding-sweden",
+    "name": "Rewilding Sweden",
+    "type": "NGO",
+    "description": "Non-profit organization and official Swedish partner of Rewilding Europe, focused on restoring and rewilding the vast natural landscapes of northern Sweden including the Nordic Taiga demonstration area of over 3 million hectares.",
+    "website": "https://rewilding-sweden.com",
+    "location": "Umea, Sweden / Swedish Lapland",
+    "scale": "National",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "rewilding",
+      "sweden",
+      "nordic",
+      "taiga",
+      "river-restoration",
+      "sami",
+      "indigenous",
+      "old-growth-forest"
+    ],
+    "image": "/images/actors/rewilding-sweden-landscape.jpg",
+    "imageAlt": "Swedish wilderness landscape being rewilded"
+  },
+  {
+    "id": 92,
+    "slug": "rights-of-nature-sweden",
+    "name": "Rights of Nature Sweden",
+    "type": "NGO",
+    "description": "Non-profit advocating for recognition of nature's inherent rights within Swedish law, part of global movement for Earth jurisprudence. Also known as Naturens Rattigheter.",
+    "website": "https://naturensrattigheter.se",
+    "location": "Sweden",
+    "scale": "National",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "ecocide",
+      "legal-reform",
+      "sweden",
+      "nordic",
+      "constitutional-amendment"
+    ],
+    "image": "/images/actors/naturensrattigheter-hero.jpg",
+    "imageAlt": "Rights of Nature Sweden campaign visual"
+  },
+  {
+    "id": 61,
+    "slug": "ritual-design-lab",
+    "name": "Ritual Design Lab",
+    "type": "Research",
+    "description": "Research and design practice developing methodologies for creating contemporary secular rituals, providing toolkits and frameworks for bringing meaning into experience and service design.",
+    "website": "https://www.ritualdesignlab.org",
+    "location": "USA",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "ritual-ceremony-design",
+      "ritual",
+      "transformative-practice",
+      "global",
+      "experiential",
+      "research"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 91,
+    "slug": "saami-council",
+    "name": "Saami Council",
+    "type": "NGO",
+    "description": "Voluntary NGO promoting Sami rights and interests across Norway, Sweden, Finland, and Russia. Permanent participant in the Arctic Council representing over 100,000 Sami people.",
+    "website": "https://www.saamicouncil.net",
+    "location": "Karasjok, Norway / Sapmi (Regional)",
+    "scale": "Regional",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "indigenous",
+      "sami",
+      "arctic",
+      "governance",
+      "rights-of-nature",
+      "green-colonialism",
+      "nordic"
+    ],
+    "image": "/images/actors/saami-landscape1.jpg",
+    "imageAlt": "Arctic landscape in Arvidsjaur showing Sami traditional territory"
+  },
+  {
+    "id": 50,
+    "slug": "single-earth",
+    "name": "Single.Earth",
+    "type": "Company",
+    "description": "Estonian startup creating nature-backed digital tokens (MERIT) that represent verified ecosystem services, building an economic system where preserving nature is more profitable than destroying it.",
+    "website": "https://www.single.earth",
+    "location": "Estonia",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "tags": [
+      "enterprise",
+      "art",
+      "global",
+      "blockchain-regenerative-finance-refi",
+      "ecosystem",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/single-earth-forest.jpg",
+    "imageAlt": "Dense forest canopy viewed from above"
+  },
+  {
+    "id": 94,
+    "slug": "sitra",
+    "name": "Sitra",
+    "type": "Government",
+    "description": "Independent public fund in Finland promoting democracy, participation, and sustainability. Primary catalyst for the deliberative wave in Finland, funding large-scale citizens' panels and assemblies.",
+    "website": "https://www.sitra.fi",
+    "location": "Helsinki, Finland",
+    "scale": "National",
+    "orientations": [
+      "ASSEMBLY",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "deliberative-democracy",
+      "citizens-panels",
+      "finland",
+      "nordic",
+      "innovation-fund",
+      "ai-moderation"
+    ],
+    "image": "/images/actors/sitra-hero.jpg",
+    "imageAlt": "Sitra Finnish innovation fund visual identity"
+  },
+  {
+    "id": 108,
+    "slug": "socentral",
+    "name": "SoCentral",
+    "type": "Company",
+    "description": "Norwegian organization and partner in the Nordic Deliberation network, contributing to the pan-Nordic deliberative democracy initiative.",
+    "website": "",
+    "location": "Norway",
+    "scale": "National",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "social-innovation",
+      "norway",
+      "nordic",
+      "deliberative-democracy"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 84,
+    "slug": "sociocracy-for-all",
+    "name": "Sociocracy For All",
+    "type": "NGO",
+    "description": "Global nonprofit providing open-source training, resources, and community for sociocratic (consent-based) governance, supporting cooperatives, communities, and organisations in implementing distributed decision-making.",
+    "website": "https://www.sociocracyforall.org",
+    "location": "USA / Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 68,
+    "slug": "sortition-foundation",
+    "name": "Sortition Foundation",
+    "type": "NGO",
+    "description": "UK-based organisation promoting and running citizens' assemblies selected by sortition (random selection), having facilitated over 100 stratified random selections for democratic bodies.",
+    "website": "https://www.sortitionfoundation.org",
+    "location": "UK",
+    "scale": "National",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "institutional-design",
+      "civil-society",
+      "democratic-innovation",
+      "aligned-vision",
+      "participatory-democracy-movements",
+      "sortition",
+      "europe"
+    ],
+    "image": "/images/actors/sortition-assembly.jpg",
+    "imageAlt": "Citizens assembly selected by sortition"
+  },
+  {
+    "id": 10,
+    "slug": "spatial-web-foundation-verses-ai",
+    "name": "Spatial Web Foundation / Verses AI",
+    "type": "Company",
+    "description": "HSML — making physical space programmable with digital rules.",
+    "website": "https://thespatialweb.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "enterprise",
+      "spatial-web-iot-infrastructure",
+      "global",
+      "ai",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/spatial-web-report.jpg",
+    "imageAlt": "Cover of the Future of Global AI Governance report"
+  },
+  {
+    "id": 56,
+    "slug": "steward-ownership",
+    "name": "Steward Ownership",
+    "type": "Network",
+    "description": "Knowledge platform and network promoting steward-ownership as an alternative corporate model where companies are self-owned, profits serve purpose, and control stays with active stewards rather than passive investors.",
+    "website": "https://steward-ownership.com",
+    "location": "Europe",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "network",
+      "platform",
+      "global",
+      "steward-ownership-alternative-corporate-models",
+      "europe",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/steward-hero.jpg",
+    "imageAlt": "Steward Ownership visual identity and community"
+  },
+  {
+    "id": 15,
+    "slug": "strawbees",
+    "name": "Strawbees",
+    "type": "Company",
+    "description": "Erik Thorstensson. Accessible construction/prototyping tools. Potential core team.",
+    "website": "https://strawbees.com",
+    "location": "Sweden",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP"
+    ],
+    "tags": [
+      "enterprise",
+      "nordic",
+      "global",
+      "sweden",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/strawbees-classroom.jpg",
+    "imageAlt": "Students building with Strawbees"
+  },
+  {
+    "id": 63,
+    "slug": "superflux",
+    "name": "Superflux",
+    "type": "Company",
+    "description": "Award-winning speculative design studio creating immersive installations and experiential futures that make abstract challenges like climate change tangible through embodied experience.",
+    "website": "https://superflux.in",
+    "location": "UK / India",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "transformative-practice",
+      "aligned-vision",
+      "experiential",
+      "experiential-futures-design-fiction",
+      "immersive",
+      "climate",
+      "enterprise",
+      "global",
+      "europe"
+    ],
+    "image": "/images/actors/superflux-ikea.jpg",
+    "imageAlt": "Superflux IKEA Action Speaks NY2050 installation"
+  },
+  {
+    "id": 71,
+    "slug": "the-new-institute",
+    "name": "THE NEW INSTITUTE",
+    "type": "Research",
+    "description": "Hamburg-based institute running a dedicated Planetary Governance programme bringing together researchers, practitioners, and artists to develop new frameworks for governing planetary challenges.",
+    "website": "https://thenew.institute",
+    "location": "Germany",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "tags": [
+      "art",
+      "aligned-vision",
+      "research",
+      "institutional-design",
+      "global-governance-innovation",
+      "governance",
+      "democratic-innovation",
+      "global",
+      "europe"
+    ],
+    "image": "/images/actors/tni-seeds.jpg",
+    "imageAlt": "THE NEW INSTITUTE Seeds programme"
+  },
+  {
+    "id": 21,
+    "slug": "the-borderland",
+    "name": "The Borderland",
+    "type": "Movement",
+    "description": "Swedish regional Burn. Co-founded by Olle. Gift economy, participation.",
+    "website": "https://borderlands.2k.com",
+    "location": "Sweden",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "movement",
+      "festival-burn-culture",
+      "nordic",
+      "art",
+      "transformative-practice",
+      "global",
+      "experiential",
+      "sweden"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 65,
+    "slug": "theatre-of-the-oppressed-nyc",
+    "name": "Theatre of the Oppressed NYC",
+    "type": "NGO",
+    "description": "New York-based community organisation using Augusto Boal's Theatre of the Oppressed methods for civic engagement, running participatory theatre workshops that explore governance and social justice through embodied performance.",
+    "website": "https://www.tonyc.nyc",
+    "location": "USA",
+    "scale": "Local",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "civil-society",
+      "arts-performance-for-social-change",
+      "participatory",
+      "art",
+      "performance",
+      "transformative-practice",
+      "governance",
+      "experiential"
+    ],
+    "image": "/images/actors/tonyc-performance1.jpg",
+    "imageAlt": "Theatre of the Oppressed performance engaging audience participation"
+  },
+  {
+    "id": 51,
+    "slug": "toucan-protocol",
+    "name": "Toucan Protocol",
+    "type": "Company",
+    "description": "Web3 infrastructure bringing carbon credits on-chain, enabling transparent and programmable carbon markets through tokenisation of verified environmental assets.",
+    "website": "https://blog.toucan.earth",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "tags": [
+      "enterprise",
+      "blockchain-regenerative-finance-refi",
+      "global",
+      "ai",
+      "systems-thinking",
+      "technology"
+    ],
+    "image": "/images/actors/toucan-bg.jpg",
+    "imageAlt": "Toucan Protocol visual identity and branding"
+  },
+  {
+    "id": 17,
+    "slug": "transformative-play-initiative-uppsala",
+    "name": "Transformative Play Initiative (Uppsala)",
+    "type": "Research",
+    "description": "Bowman, Waern et al. LARP + democratic deliberation research.",
+    "website": "https://www.uu.se",
+    "location": "Sweden (Gotland)",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "transformative-game-design-larp",
+      "nordic",
+      "global",
+      "transformative-practice",
+      "larp",
+      "experiential",
+      "sweden",
+      "research"
+    ],
+    "image": "/images/actors/uppsala-gamedesign1.jpg",
+    "imageAlt": "Students at Uppsala University Department of Game Design"
+  },
+  {
+    "id": 33,
+    "slug": "viable-cities",
+    "name": "Viable Cities",
+    "type": "Government",
+    "description": "Swedish strategic innovation programme for climate-neutral cities by 2030. Collaborates with Dark Matter Labs on System Demonstrators in Lund and Stockholm.",
+    "website": "https://www.viablecities.se/",
+    "location": "Sweden",
+    "scale": "National",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "nordic",
+      "systems-thinking",
+      "public-sector",
+      "sweden",
+      "climate",
+      "technology"
+    ],
+    "image": "/images/actors/viable-cities-climate.jpg",
+    "imageAlt": "Viable Cities climate contract visualization in urban setting"
+  },
+  {
+    "id": 93,
+    "slug": "we-do-democracy",
+    "name": "We Do Democracy",
+    "type": "Company",
+    "description": "Leading Nordic consulting agency and social enterprise specializing in deliberative democracy, democratic innovation, and citizens' assemblies. Founding partner of Nordic Deliberation.",
+    "website": "https://www.wedodemocracy.com",
+    "location": "Copenhagen, Denmark",
+    "scale": "Regional",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "deliberative-democracy",
+      "citizens-assemblies",
+      "sortition",
+      "denmark",
+      "nordic",
+      "social-enterprise"
+    ],
+    "image": "/images/actors/wedodemocracy-logo.jpg",
+    "imageAlt": "We Do Democracy visual identity and branding"
+  },
+  {
+    "id": 60,
+    "slug": "world-game-workshop",
+    "name": "World Game Workshop",
+    "type": "NGO",
+    "description": "Organisation continuing Buckminster Fuller's World Game vision, running collaborative planetary resource simulation workshops that challenge participants to 'make the world work for 100% of humanity'.",
+    "website": "https://worldgameworkshop.org",
+    "location": "USA",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "art",
+      "transformative-practice",
+      "aligned-vision",
+      "experiential",
+      "megagames-civilisational-simulation",
+      "civil-society",
+      "global"
+    ],
+    "image": "/images/actors/wgw-fuller-seminar.jpg",
+    "imageAlt": "Buckminster Fuller leading the World Game seminar"
+  },
+  {
+    "id": 28,
+    "slug": "world-social-forum",
+    "name": "World Social Forum",
+    "type": "Movement",
+    "description": "Running since 2001. Decentralised, no HQ, no president. Messy but alive.",
+    "website": "https://www.foranewwsf.org",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "institutional-design",
+      "movement",
+      "decentralised",
+      "democratic-innovation",
+      "global"
+    ],
+    "image": "/images/actors/wsf-gathering.jpg",
+    "imageAlt": "Participants at a World Social Forum gathering holding banners"
+  },
+  {
+    "id": 3,
+    "slug": "rth",
+    "name": "ÆRTH",
+    "type": "Company",
+    "description": "Planetary AI digital twin using blockchain and remote sensing.",
+    "website": "https://www.aerth.live",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "digital-twins-earth-modelling",
+      "enterprise",
+      "nature-based",
+      "ecological-governance",
+      "blockchain",
+      "ai",
+      "global",
+      "digital-twin"
+    ],
+    "image": "/images/actors/aerth-reef.jpg",
+    "imageAlt": "Underwater reef ecosystem monitored by ÆRTH platform"
   }
 ]

@@ -96,30 +96,95 @@ for (const e of eventsData) {
 
 .hint { color: var(--text-3); font-size: .875rem; padding: 1rem 0; }
 
-.results { display: flex; flex-direction: column; }
-.result {
-  padding: .875rem 0;
-  border-bottom: 1px solid var(--border);
-}
-.result .kind {
-  display: inline-block;
-  font-size: .625rem;
+.group-heading {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
   font-weight: 700;
-  letter-spacing: .1em;
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--text-3);
-  margin-right: .5rem;
+  margin: 1.75rem 0 .75rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--border);
 }
-.result .kind.news { color: var(--spaceship); }
-.result .kind.actor { color: var(--garden); }
-.result .kind.project { color: var(--mysteries); }
-.result .kind.event { color: var(--assemblies); }
-.result-title { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.35; }
-.result-title a { text-decoration: none; }
-.result-title a:hover { text-decoration: underline; }
-.result-meta { font-size: .75rem; color: var(--text-3); margin-top: .125rem; }
-.result-snippet { font-size: .875rem; color: var(--text-2); line-height: 1.55; margin-top: .25rem; }
-.result mark { background: #fff3b0; color: inherit; padding: 0 .1em; }
+.group-heading .group-count { color: var(--text-3); font-weight: 400; margin-left: .25rem; }
+
+.results { display: flex; flex-direction: column; gap: .25rem; }
+
+.result {
+  display: grid;
+  grid-template-columns: 8px 1fr;
+  gap: .875rem;
+  padding: 1rem 1rem 1rem .25rem;
+  border-radius: 6px;
+  transition: background .12s;
+}
+.result:hover { background: var(--filter-bg); }
+.result-accent { border-radius: 2px; background: var(--text-3); }
+.result.news    .result-accent { background: var(--spaceship); }
+.result.actor   .result-accent { background: var(--garden); }
+.result.project .result-accent { background: var(--mysteries); }
+.result.event   .result-accent { background: var(--assemblies); }
+
+.result-head { display: flex; align-items: baseline; gap: .625rem; flex-wrap: wrap; margin-bottom: .25rem; }
+.result-kind {
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .15rem .5rem;
+  border-radius: 999px;
+  background: var(--filter-bg);
+  color: var(--text-2);
+  flex-shrink: 0;
+}
+.result.news    .result-kind { background: #e4edf5; color: var(--spaceship); }
+.result.actor   .result-kind { background: #e7f1ea; color: var(--garden); }
+.result.project .result-kind { background: #ece4f3; color: var(--mysteries); }
+.result.event   .result-kind { background: #f5ecd8; color: var(--assemblies); }
+
+.result-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text);
+  flex: 1;
+  min-width: 0;
+}
+.result-title a { text-decoration: none; color: inherit; }
+.result-title a:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+
+.result-meta {
+  font-size: .75rem;
+  color: var(--text-3);
+  margin-bottom: .375rem;
+}
+.result-snippet {
+  font-size: .875rem;
+  color: var(--text-2);
+  line-height: 1.6;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 300;
+}
+.result mark {
+  background: rgba(255, 221, 0, .35);
+  color: inherit;
+  padding: 0 .15em;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+.summary-bar {
+  font-size: .8125rem;
+  color: var(--text-3);
+  padding: .75rem 0;
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+.summary-bar .sep { color: var(--border); }
+.summary-bar strong { color: var(--text-2); font-weight: 600; }
 </style>
 
 <script>
@@ -155,6 +220,28 @@ for (const e of eventsData) {
     return s;
   }
 
+  const kindLabel: Record<string, string> = { news: 'News', actor: 'Actors', project: 'Projects', event: 'Events' };
+  const kindOrder = ['news', 'actor', 'project', 'event'];
+
+  function resultHtml(item: Item, q: string) {
+    const external = item.kind === 'event' ? ' target="_blank" rel="noopener"' : '';
+    const snippetHtml = item.text ? `<div class="result-snippet">${highlight(snippet(item.text, q), q)}</div>` : '';
+    const metaHtml = item.meta ? `<div class="result-meta">${escapeHtml(item.meta)}</div>` : '';
+    return `
+      <div class="result ${item.kind}">
+        <div class="result-accent"></div>
+        <div class="result-body">
+          <div class="result-head">
+            <span class="result-kind">${kindLabel[item.kind] || item.kind}</span>
+            <h3 class="result-title"><a href="${item.url}"${external}>${highlight(item.title, q)}</a></h3>
+          </div>
+          ${metaHtml}
+          ${snippetHtml}
+        </div>
+      </div>
+    `;
+  }
+
   function render() {
     const q = input.value.trim();
     if (q.length < 2) {
@@ -177,7 +264,7 @@ for (const e of eventsData) {
       scored.push({ item: it, score });
     }
     scored.sort((a, b) => b.score - a.score);
-    const top = scored.slice(0, 80);
+    const top = scored.slice(0, 120);
     if (top.length === 0) {
       hint.style.display = 'block';
       hint.textContent = `No results for "${q}".`;
@@ -185,14 +272,29 @@ for (const e of eventsData) {
       return;
     }
     hint.style.display = 'none';
-    results.innerHTML = top.map(({ item }) => `
-      <div class="result">
-        <span class="kind ${item.kind}">${item.kind}</span>
-        <span class="result-title"><a href="${item.url}"${item.kind === 'event' ? ' target="_blank" rel="noopener"' : ''}>${highlight(item.title, q)}</a></span>
-        ${item.meta ? `<div class="result-meta">${escapeHtml(item.meta)}</div>` : ''}
-        <div class="result-snippet">${highlight(snippet(item.text, q), q)}</div>
-      </div>
-    `).join('');
+
+    // Group by kind, preserving score order within each group
+    const grouped: Record<string, Item[]> = {};
+    for (const { item } of top) {
+      (grouped[item.kind] ||= []).push(item);
+    }
+
+    const summaryParts: string[] = [];
+    for (const k of kindOrder) {
+      if (grouped[k]?.length) summaryParts.push(`<span><strong>${grouped[k].length}</strong> ${kindLabel[k].toLowerCase()}</span>`);
+    }
+    const summaryBar = `<div class="summary-bar">${summaryParts.join('<span class="sep">·</span>')}</div>`;
+
+    const sections = kindOrder
+      .filter(k => grouped[k]?.length)
+      .map(k => {
+        const items = grouped[k];
+        const body = items.map(it => resultHtml(it, q)).join('');
+        return `<h2 class="group-heading">${kindLabel[k]} <span class="group-count">(${items.length})</span></h2><div class="results">${body}</div>`;
+      })
+      .join('');
+
+    results.innerHTML = summaryBar + sections;
   }
 
   input.addEventListener('input', render);

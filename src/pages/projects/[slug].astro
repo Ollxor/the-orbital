@@ -1,0 +1,136 @@
+---
+import Base from '../../layouts/Base.astro';
+import projectsData from '../../data/projects.json';
+import actorsData from '../../data/actors.json';
+import newsData from '../../data/news.json';
+
+export function getStaticPaths() {
+  return projectsData.map(p => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const project = projectsData.find(p => p.slug === slug)!;
+const actorMap = Object.fromEntries(actorsData.map(a => [a.slug, a]));
+
+const orientationLabels: Record<string, string> = {
+  GARDEN: 'The Garden',
+  SPACESHIP: 'Spaceship Earth',
+  MYSTERIES: 'The Mysteries',
+  ASSEMBLY: 'The Assemblies',
+};
+const iconMap: Record<string, string> = {
+  GARDEN: 'Icons2-01.svg',
+  SPACESHIP: 'Icons2-04.svg',
+  MYSTERIES: 'Icons2-03.svg',
+  ASSEMBLY: 'Icons2-02.svg',
+};
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+// News that mentions any of this project's actors
+const relatedNews = project.actors?.length
+  ? newsData
+      .filter(n => n.actors?.some((a: string) => project.actors.includes(a)))
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 10)
+  : [];
+---
+
+<Base title={`${project.name} — The Orbital`} description={project.description}>
+  <div class="container">
+    <div class="project-wrap">
+
+      <div class="project-header-top">
+        <p class="project-eyebrow">Project{project.stage ? ` · ${project.stage}` : ''}{project.geography ? ` · ${project.geography}` : ''}</p>
+        <h1 class="project-title">{project.name}</h1>
+        <div class="project-orient-row">
+          {project.orientations.map(o => (
+            <span class="orient-chip">
+              <img src={`/assets/${iconMap[o]}`} alt="" class="orient-icon" />
+              {orientationLabels[o]}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <p class="project-desc">{project.description}</p>
+
+      <div class="project-meta">
+        {project.website && <a href={project.website} target="_blank" rel="noopener" class="website-link">Visit website ↗</a>}
+      </div>
+
+      {project.tags?.length > 0 && (
+        <div class="tags tags-row">
+          {project.tags.map((tag: string) => <a href={`/tags/${tag}`} class="tag">{tag.replace(/-/g, '\u00a0')}</a>)}
+        </div>
+      )}
+
+      {project.actors?.length > 0 && (
+        <section>
+          <h2 class="section-heading">Actors involved</h2>
+          <div class="actor-links">
+            {project.actors.map((s: string) => actorMap[s] && (
+              <a href={`/actors/${s}`} class="actor-link">{actorMap[s].name}</a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {relatedNews.length > 0 && (
+        <section>
+          <h2 class="section-heading">Related news <span class="count">({relatedNews.length})</span></h2>
+          {relatedNews.map(s => (
+            <article class="item">
+              <time class="item-date">{formatDate(s.date)}</time>
+              <h3 class="item-title"><a href={`/news/${s.slug}`}>{s.title}</a></h3>
+              <p class="item-desc">{s.summary}</p>
+            </article>
+          ))}
+        </section>
+      )}
+
+      <a href="/projects" class="back-link">← All projects</a>
+    </div>
+  </div>
+</Base>
+
+<style>
+.project-wrap { max-width: var(--max-w); margin: 0 auto; padding-top: 2rem; }
+
+.project-header-top { padding-bottom: 1.25rem; border-bottom: 3px double var(--border); margin-bottom: 1.25rem; }
+.project-eyebrow { font-family: var(--font-sans); font-size: .6875rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); margin-bottom: .5rem; }
+.project-title { font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; font-weight: 400; line-height: 1.2; margin-bottom: .75rem; }
+.project-orient-row { display: flex; flex-wrap: wrap; gap: .4rem; }
+
+.orient-chip { display: inline-flex; align-items: center; gap: .3rem; font-size: .75rem; color: var(--text-2); background: var(--filter-bg); padding: .2rem .6rem .2rem .4rem; border-radius: 999px; }
+.orient-icon { width: 16px; height: 16px; object-fit: contain; }
+
+.project-desc { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.0625rem; line-height: 1.75; color: #333; margin-bottom: 1rem; font-weight: 300; }
+.project-meta { margin-bottom: 1rem; }
+.website-link { color: var(--text); font-weight: 600; text-decoration: none; font-size: .9375rem; }
+.website-link:hover { text-decoration: underline; }
+
+.tags-row { margin-bottom: 1.5rem; }
+
+.section-heading {
+  font-family: var(--font-sans); font-size: .6875rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--text-3); margin: 2rem 0 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border);
+}
+.section-heading .count { color: var(--text-3); font-weight: 400; margin-left: .25rem; }
+
+.actor-links { display: flex; flex-wrap: wrap; gap: .5rem .875rem; }
+.actor-link { font-size: .875rem; color: var(--text-2); text-decoration: none; font-weight: 500; }
+.actor-link:hover { color: var(--text); text-decoration: underline; }
+
+.item { padding: .875rem 0; border-bottom: 1px solid var(--border); }
+.item-date { display: block; font-size: .75rem; color: var(--text-3); margin-bottom: .25rem; }
+.item-title { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.35; margin-bottom: .25rem; }
+.item-title a { text-decoration: none; }
+.item-title a:hover { text-decoration: underline; }
+.item-desc { font-size: .875rem; color: var(--text-2); line-height: 1.55; }
+
+.back-link { display: inline-block; margin-top: 2rem; font-size: .875rem; color: var(--text-2); text-decoration: none; }
+.back-link:hover { color: var(--text); }
+</style>

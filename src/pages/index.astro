@@ -10,6 +10,23 @@ const actorCount = actorsData.length;
 const projectCount = projectsData.length;
 const eventCount = eventsData.length;
 
+// Group news by YYYY-MM for month headings
+function monthKey(dateStr: string) {
+  return dateStr.slice(0, 7);
+}
+function monthLabel(key: string) {
+  const [y, m] = key.split('-');
+  const d = new Date(Number(y), Number(m) - 1, 1);
+  return d.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+}
+const groupedNews: { key: string; label: string; stories: typeof news }[] = [];
+for (const story of news) {
+  const key = monthKey(story.date);
+  const last = groupedNews[groupedNews.length - 1];
+  if (last && last.key === key) last.stories.push(story);
+  else groupedNews.push({ key, label: monthLabel(key), stories: [story] });
+}
+
 const orientationLabels: Record<string, string> = {
   GARDEN: 'The Garden',
   SPACESHIP: 'Spaceship Earth',
@@ -55,7 +72,10 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
     <section class="feed">
       <h2 class="feed-heading">From the Field</h2>
 
-      {news.map((story) => (
+      {groupedNews.map(group => (
+        <>
+        <h3 class="feed-month" id={`m-${group.key}`}>{group.label} <span class="month-count">({group.stories.length})</span></h3>
+        {group.stories.map((story) => (
         <article class="news-card" data-orientations={story.orientations.join(',')}>
           {story.image && (
             <div class="card-image-wrap">
@@ -84,11 +104,11 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
             <a href={`/news/${story.slug}`} class="card-readmore">Continue reading →</a>
             <div class="card-meta">
               {story.actors.map(slug => actorMap[slug] && (
-                <a href={`/actors#${slug}`} class="card-actor">{actorMap[slug].name}</a>
+                <a href={`/actors/${slug}`} class="card-actor">{actorMap[slug].name}</a>
               ))}
               <div class="tags">
                 {story.tags.map(tag => (
-                  <span class="tag">{tag.replace(/-/g, '\u00a0')}</span>
+                  <a href={`/tags/${tag}`} class="tag">{tag.replace(/-/g, '\u00a0')}</a>
                 ))}
               </div>
             </div>
@@ -102,6 +122,8 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
             </div>
           </div>
         </article>
+        ))}
+        </>
       ))}
     </section>
 
@@ -155,6 +177,18 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
   color: var(--text-3);
   margin-bottom: 1.5rem;
 }
+.feed-month {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--text-2);
+  margin: 1.5rem 0 1.25rem;
+  padding-bottom: .375rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: .01em;
+}
+.feed-month:first-of-type { margin-top: .5rem; }
+.month-count { font-size: .75rem; color: var(--text-3); font-family: var(--font-sans); margin-left: .25rem; }
 
 .news-card {
   border-bottom: 1px solid var(--border);

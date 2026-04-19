@@ -1,33 +1,210 @@
 ---
 import Base from '../layouts/Base.astro';
+import actorsData from '../data/actors.json';
+import newsData from '../data/news.json';
+import projectsData from '../data/projects.json';
+
+// Build graph data
+type Node = { id: string; label: string; kind: string; orient: string; url: string };
+type Edge = { source: string; target: string };
+
+const nodes: Node[] = [];
+const edges: Edge[] = [];
+const primaryOrient = (os: string[]) => os?.[0] || 'UNKNOWN';
+
+for (const a of actorsData) {
+  nodes.push({ id: `a:${a.slug}`, label: a.name, kind: 'actor', orient: primaryOrient(a.orientations), url: `/actors/${a.slug}` });
+}
+for (const n of newsData) {
+  nodes.push({ id: `n:${n.slug}`, label: n.title, kind: 'news', orient: primaryOrient(n.orientations), url: `/news/${n.slug}` });
+  for (const slug of (n.actors || [])) {
+    if (actorsData.find(a => a.slug === slug)) {
+      edges.push({ source: `n:${n.slug}`, target: `a:${slug}` });
+    }
+  }
+}
+for (const p of projectsData) {
+  nodes.push({ id: `p:${p.slug}`, label: p.name, kind: 'project', orient: primaryOrient(p.orientations), url: `/projects/${p.slug}` });
+  for (const slug of (p.actors || [])) {
+    if (actorsData.find(a => a.slug === slug)) {
+      edges.push({ source: `p:${p.slug}`, target: `a:${slug}` });
+    }
+  }
+}
 ---
 
 <Base title="Graph — The Orbital">
   <div class="container">
     <div class="page-header">
       <h1 class="page-title">Graph</h1>
-      <p class="page-desc">A visual map of connections between actors, projects, and events.</p>
+      <p class="page-desc">A visual map of actors, news, and projects and the connections between them. Click a node to open it.</p>
     </div>
-    <div class="placeholder">
-      <p>The relationship graph is coming in a future version.</p>
-      <p>It will show how actors, projects, and events connect across the four orientations — making the emerging pattern visible at a glance.</p>
-      <p>In the meantime, browse <a href="/actors">Actors</a>, <a href="/projects">Projects</a>, and <a href="/events">Events</a>.</p>
+
+    <div class="graph-controls">
+      <label><input type="checkbox" data-kind="actor" checked /> Actors <span class="legend actor"></span></label>
+      <label><input type="checkbox" data-kind="news" checked /> News <span class="legend news"></span></label>
+      <label><input type="checkbox" data-kind="project" checked /> Projects <span class="legend project"></span></label>
+      <button id="relayout">Re-layout</button>
     </div>
+
+    <div class="orient-legend">
+      <span><span class="dot" style="background:#4a7c59"></span>Garden</span>
+      <span><span class="dot" style="background:#2a6496"></span>Spaceship</span>
+      <span><span class="dot" style="background:#7b5ea7"></span>Mysteries</span>
+      <span><span class="dot" style="background:#b8860b"></span>Assemblies</span>
+    </div>
+
+    <div id="cy"></div>
+    <p class="graph-note" id="graph-note"></p>
   </div>
 </Base>
 
+<script id="graph-nodes" type="application/json" set:html={JSON.stringify(nodes)}></script>
+<script id="graph-edges" type="application/json" set:html={JSON.stringify(edges)}></script>
+
 <style>
-.page-header { padding: 2rem 0 1.5rem; }
+.page-header { padding: 2rem 0 1rem; }
 .page-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: normal; margin-bottom: .375rem; }
 .page-desc { font-size: .9375rem; color: var(--text-2); }
-.placeholder {
-  border: 1px dashed var(--border);
-  border-radius: 8px;
-  padding: 3rem;
-  text-align: center;
-  color: var(--text-2);
-  line-height: 1.8;
+
+.graph-controls { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; margin: 1rem 0 .5rem; font-size: .8125rem; color: var(--text-2); }
+.graph-controls label { display: inline-flex; align-items: center; gap: .25rem; cursor: pointer; user-select: none; }
+.graph-controls .legend { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-left: .25rem; }
+.graph-controls .legend.actor { background: #4a7c59; }
+.graph-controls .legend.news { background: #2a6496; border-radius: 2px; }
+.graph-controls .legend.project { background: #7b5ea7; border-radius: 2px; transform: rotate(45deg); }
+.graph-controls button {
+  background: none; border: 1px solid var(--border); border-radius: 6px; padding: .25rem .75rem;
+  font-size: .75rem; cursor: pointer; color: var(--text-2); margin-left: auto;
 }
-.placeholder p { margin-bottom: .75rem; }
-.placeholder a { color: var(--text); }
+.graph-controls button:hover { border-color: var(--text-2); color: var(--text); }
+
+.orient-legend { display: flex; gap: 1rem; font-size: .75rem; color: var(--text-3); margin-bottom: .75rem; flex-wrap: wrap; }
+.orient-legend span { display: inline-flex; align-items: center; gap: .3rem; }
+.orient-legend .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+
+#cy {
+  width: 100%;
+  height: 70vh;
+  min-height: 500px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fdfdfb;
+}
+.graph-note { font-size: .75rem; color: var(--text-3); margin-top: .5rem; }
 </style>
+
+<script>
+  const nodes = JSON.parse(document.getElementById('graph-nodes')!.textContent || '[]');
+  const edges = JSON.parse(document.getElementById('graph-edges')!.textContent || '[]');
+
+  const orientColor: Record<string, string> = {
+    GARDEN: '#4a7c59',
+    SPACESHIP: '#2a6496',
+    MYSTERIES: '#7b5ea7',
+    ASSEMBLY: '#b8860b',
+    UNKNOWN: '#bbbbbb',
+  };
+
+  // Load cytoscape from CDN
+  const script = document.createElement('script');
+  script.src = 'https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js';
+  script.onload = () => init();
+  document.head.appendChild(script);
+
+  let cy: any;
+  const note = document.getElementById('graph-note')!;
+
+  function kindShape(kind: string) {
+    return kind === 'actor' ? 'ellipse' : kind === 'news' ? 'round-rectangle' : 'diamond';
+  }
+
+  function buildElements() {
+    const checkedKinds = new Set<string>();
+    document.querySelectorAll('.graph-controls input').forEach((el: any) => {
+      if (el.checked) checkedKinds.add(el.dataset.kind);
+    });
+    const visibleNodes = nodes.filter((n: any) => checkedKinds.has(n.kind));
+    const visibleIds = new Set(visibleNodes.map((n: any) => n.id));
+    const visibleEdges = edges.filter((e: any) => visibleIds.has(e.source) && visibleIds.has(e.target));
+
+    // Drop isolated nodes for cleaner view
+    const connected = new Set<string>();
+    for (const e of visibleEdges) { connected.add(e.source); connected.add(e.target); }
+    const finalNodes = visibleNodes.filter((n: any) => connected.has(n.id) || n.kind === 'actor');
+
+    note.textContent = `${finalNodes.length} nodes · ${visibleEdges.length} connections`;
+
+    return [
+      ...finalNodes.map((n: any) => ({
+        data: { id: n.id, label: n.label, kind: n.kind, orient: n.orient, url: n.url },
+      })),
+      ...visibleEdges.map((e: any, i: number) => ({
+        data: { id: `e${i}`, source: e.source, target: e.target },
+      })),
+    ];
+  }
+
+  function init() {
+    const cytoscape = (window as any).cytoscape;
+    cy = cytoscape({
+      container: document.getElementById('cy'),
+      elements: buildElements(),
+      style: [
+        {
+          selector: 'node',
+          style: {
+            'background-color': (ele: any) => orientColor[ele.data('orient')] || '#999',
+            'label': 'data(label)',
+            'font-size': 9,
+            'color': '#444',
+            'text-wrap': 'ellipsis',
+            'text-max-width': 90,
+            'text-valign': 'bottom',
+            'text-margin-y': 3,
+            'width': (ele: any) => ele.data('kind') === 'actor' ? 14 : 10,
+            'height': (ele: any) => ele.data('kind') === 'actor' ? 14 : 10,
+            'shape': (ele: any) => kindShape(ele.data('kind')),
+            'border-width': 1,
+            'border-color': '#fff',
+          },
+        },
+        {
+          selector: 'node:selected',
+          style: { 'border-color': '#1a1a1a', 'border-width': 2, 'font-size': 11, 'font-weight': 'bold' },
+        },
+        {
+          selector: 'edge',
+          style: {
+            'width': .75,
+            'line-color': '#d0d0d0',
+            'curve-style': 'straight',
+            'opacity': .6,
+          },
+        },
+      ],
+      layout: { name: 'cose', animate: false, padding: 20, nodeRepulsion: 4000, idealEdgeLength: 60 } as any,
+      wheelSensitivity: .2,
+      minZoom: .1,
+      maxZoom: 3,
+    });
+
+    cy.on('tap', 'node', (evt: any) => {
+      const url = evt.target.data('url');
+      if (url) window.location.href = url;
+    });
+  }
+
+  document.querySelectorAll('.graph-controls input').forEach(el => {
+    el.addEventListener('change', () => {
+      if (!cy) return;
+      cy.elements().remove();
+      cy.add(buildElements());
+      cy.layout({ name: 'cose', animate: false, padding: 20, nodeRepulsion: 4000, idealEdgeLength: 60 } as any).run();
+    });
+  });
+  document.getElementById('relayout')?.addEventListener('click', () => {
+    if (!cy) return;
+    cy.layout({ name: 'cose', animate: true, padding: 20, nodeRepulsion: 4000, idealEdgeLength: 60 } as any).run();
+  });
+</script>

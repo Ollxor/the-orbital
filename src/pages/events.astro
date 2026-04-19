@@ -15,6 +15,31 @@ const orientationLabels: Record<string, string> = {
   MYSTERIES: 'The Mysteries',
   ASSEMBLY: 'The Assemblies',
 };
+
+function formatDateRange(start: string, end: string) {
+  if (!start) return '';
+  const s = new Date(start);
+  const opts: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'short', year: 'numeric' };
+  const sStr = s.toLocaleDateString('en-GB', opts);
+  if (!end || end === start) return sStr;
+  const e = new Date(end);
+  // Same month+year → "12–14 Nov 2026"
+  if (s.getFullYear() === e.getFullYear() && s.getMonth() === e.getMonth()) {
+    return `${s.getDate()}–${e.getDate()} ${s.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}`;
+  }
+  return `${sStr} – ${e.toLocaleDateString('en-GB', opts)}`;
+}
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+const todayIso = today.toISOString().slice(0, 10);
+
+const upcoming = eventsData
+  .filter(e => e.date_start && e.date_start >= todayIso)
+  .sort((a, b) => a.date_start.localeCompare(b.date_start));
+const past = eventsData
+  .filter(e => !e.date_start || e.date_start < todayIso)
+  .sort((a, b) => (b.date_start || '').localeCompare(a.date_start || ''));
 ---
 
 <Base title="Events — The Orbital">
@@ -24,32 +49,70 @@ const orientationLabels: Record<string, string> = {
       <p class="page-desc">Gatherings, conferences, and experiments shaping the planetary governance movement.</p>
     </div>
 
-    <div class="events-list">
-      {eventsData.map(event => (
-        <div class="event-card">
-          <div class="event-meta">
-            <span class="event-dates">{event.dates}</span>
-            <span class="event-location">{event.location}</span>
-          </div>
-          <div class="event-main">
-            <div>
-              <h3 class="event-name">
-                <a href={event.url} target="_blank" rel="noopener">{event.name}</a>
-              </h3>
-              <p class="event-desc">{event.description}</p>
-              <div class="tags">
-                {event.tags.map(tag => <span class="tag">{tag.replace(/-/g, '\u00a0')}</span>)}
+    {upcoming.length > 0 && (
+      <section>
+        <h2 class="section-heading">Upcoming <span class="count">({upcoming.length})</span></h2>
+        <div class="events-list">
+          {upcoming.map(event => (
+            <div class="event-card">
+              <div class="event-meta">
+                <span class="event-dates">{formatDateRange(event.date_start, event.date_end)}</span>
+                {event.location && <span class="event-location">{event.location}</span>}
+              </div>
+              <div class="event-main">
+                <div>
+                  <h3 class="event-name">
+                    <a href={event.website} target="_blank" rel="noopener">{event.name}</a>
+                  </h3>
+                  <p class="event-desc">{event.description}</p>
+                  {event.relevance_note && <p class="event-relevance"><em>{event.relevance_note}</em></p>}
+                  <div class="tags">
+                    {event.tags.map(tag => <a href={`/tags/${tag}`} class="tag">{tag.replace(/-/g, '\u00a0')}</a>)}
+                  </div>
+                </div>
+                <div class="event-icons">
+                  {event.orientations.map(o => (
+                    <img src={`/assets/${iconMap[o]}`} alt={orientationLabels[o]} class="event-icon" title={orientationLabels[o]} />
+                  ))}
+                </div>
               </div>
             </div>
-            <div class="event-icons">
-              {event.orientations.map(o => (
-                <img src={`/assets/${iconMap[o]}`} alt={orientationLabels[o]} class="event-icon" title={orientationLabels[o]} />
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </section>
+    )}
+
+    {past.length > 0 && (
+      <section class="past-section">
+        <h2 class="section-heading">Past <span class="count">({past.length})</span></h2>
+        <div class="events-list past">
+          {past.map(event => (
+            <div class="event-card">
+              <div class="event-meta">
+                <span class="event-dates">{formatDateRange(event.date_start, event.date_end)}</span>
+                {event.location && <span class="event-location">{event.location}</span>}
+              </div>
+              <div class="event-main">
+                <div>
+                  <h3 class="event-name">
+                    <a href={event.website} target="_blank" rel="noopener">{event.name}</a>
+                  </h3>
+                  <p class="event-desc">{event.description}</p>
+                  <div class="tags">
+                    {event.tags.map(tag => <a href={`/tags/${tag}`} class="tag">{tag.replace(/-/g, '\u00a0')}</a>)}
+                  </div>
+                </div>
+                <div class="event-icons">
+                  {event.orientations.map(o => (
+                    <img src={`/assets/${iconMap[o]}`} alt={orientationLabels[o]} class="event-icon" title={orientationLabels[o]} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
   </div>
 </Base>
 
@@ -58,7 +121,21 @@ const orientationLabels: Record<string, string> = {
 .page-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: normal; margin-bottom: .375rem; }
 .page-desc { font-size: .9375rem; color: var(--text-2); }
 
+.section-heading {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin: 1.75rem 0 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+.section-heading .count { color: var(--text-3); font-weight: 400; margin-left: .25rem; }
+
 .events-list { display: flex; flex-direction: column; }
+.events-list.past .event-card { opacity: .75; }
 
 .event-card { padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
 
@@ -77,7 +154,8 @@ const orientationLabels: Record<string, string> = {
 .event-name a { text-decoration: none; }
 .event-name a:hover { text-decoration: underline; }
 
-.event-desc { font-size: .9375rem; color: var(--text-2); line-height: 1.6; margin-bottom: .625rem; }
+.event-desc { font-size: .9375rem; color: var(--text-2); line-height: 1.6; margin-bottom: .375rem; }
+.event-relevance { font-size: .8125rem; color: var(--text-3); line-height: 1.55; margin-bottom: .625rem; }
 .event-icons { display: flex; gap: .25rem; flex-shrink: 0; margin-top: .25rem; }
 .event-icon { width: 22px; height: 22px; object-fit: contain; }
 </style>

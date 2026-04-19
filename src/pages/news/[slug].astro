@@ -83,14 +83,14 @@ const relatedStories = newsData
           <div class="story-actors">
             <span class="actors-label">Related actors:</span>
             {story.actors.map(s => actorMap[s] && (
-              <a href={`/actors#${s}`} class="actor-link">{actorMap[s].name}</a>
+              <a href={`/actors/${s}`} class="actor-link">{actorMap[s].name}</a>
             ))}
           </div>
         )}
 
         <div class="story-tags">
           {story.tags.map(tag => (
-            <span class="tag">{tag.replace(/-/g, '\u00a0')}</span>
+            <a href={`/tags/${tag}`} class="tag">{tag.replace(/-/g, '\u00a0')}</a>
           ))}
         </div>
       </div>

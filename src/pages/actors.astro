@@ -50,7 +50,7 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
         >
           <div class="actor-header">
             <h3 class="actor-name">
-              <a href={actor.website} target="_blank" rel="noopener">{actor.name}</a>
+              <a href={`/actors/${actor.slug}`}>{actor.name}</a>
             </h3>
             <div class="actor-orientations">
               {actor.orientations.map(o => (
@@ -61,7 +61,7 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
           <p class="actor-desc">{actor.description}</p>
           {actor.location && <p class="actor-location">{actor.location}</p>}
           <div class="tags">
-            {actor.tags.map(tag => <span class="tag">{tag.replace(/-/g, '\u00a0')}</span>)}
+            {actor.tags.map(tag => <a href={`/tags/${tag}`} class="tag">{tag.replace(/-/g, '\u00a0')}</a>)}
           </div>
         </div>
       ))}

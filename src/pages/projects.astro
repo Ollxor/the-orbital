@@ -16,11 +16,13 @@ const orientationLabels: Record<string, string> = {
   ASSEMBLY: 'The Assemblies',
 };
 
-const statusLabel: Record<string, string> = {
-  active: 'Active',
-  planned: 'Planned',
-  completed: 'Completed',
-};
+function stageClass(stage: string) {
+  const s = (stage || '').toLowerCase();
+  if (s.includes('active')) return 'status-active';
+  if (s.includes('plan')) return 'status-planned';
+  if (s.includes('complete') || s.includes('done')) return 'status-completed';
+  return 'status-other';
+}
 ---
 
 <Base title="Projects — The Orbital">
@@ -34,11 +36,11 @@ const statusLabel: Record<string, string> = {
       {projectsData.map(project => (
         <div class="project-card">
           <div class="project-header">
-            <div>
+            <div class="project-title-block">
               <h3 class="project-name">
-                <a href={project.url} target="_blank" rel="noopener">{project.name}</a>
+                <a href={`/projects/${project.slug}`}>{project.name}</a>
               </h3>
-              <span class={`status-badge status-${project.status}`}>{statusLabel[project.status]}</span>
+              {project.stage && <span class={`status-badge ${stageClass(project.stage)}`}>{project.stage}</span>}
             </div>
             <div class="project-icons">
               {project.orientations.map(o => (
@@ -47,8 +49,9 @@ const statusLabel: Record<string, string> = {
             </div>
           </div>
           <p class="project-desc">{project.description}</p>
+          {project.geography && <p class="project-geo">{project.geography}</p>}
           <div class="tags">
-            {project.tags.map(tag => <span class="tag">{tag.replace(/-/g, '\u00a0')}</span>)}
+            {project.tags.map(tag => <a href={`/tags/${tag}`} class="tag">{tag.replace(/-/g, '\u00a0')}</a>)}
           </div>
         </div>
       ))}
@@ -63,13 +66,11 @@ const statusLabel: Record<string, string> = {
 
 .projects-list { display: flex; flex-direction: column; gap: 1px; }
 
-.project-card {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border);
-}
+.project-card { padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
 
 .project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: .625rem; }
-.project-name { font-family: var(--font-serif); font-size: 1.2rem; font-weight: normal; display: inline; margin-right: .5rem; }
+.project-title-block { display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap; }
+.project-name { font-family: var(--font-serif); font-size: 1.2rem; font-weight: normal; }
 .project-name a { text-decoration: none; }
 .project-name a:hover { text-decoration: underline; }
 
@@ -86,8 +87,10 @@ const statusLabel: Record<string, string> = {
 .status-active { background: #e8f5e9; color: #2e7d32; }
 .status-planned { background: #fff8e1; color: #f57f17; }
 .status-completed { background: var(--filter-bg); color: var(--text-3); }
+.status-other { background: var(--filter-bg); color: var(--text-3); }
 
 .project-icons { display: flex; gap: .25rem; flex-shrink: 0; }
 .project-icon { width: 22px; height: 22px; object-fit: contain; }
-.project-desc { font-size: .9375rem; color: var(--text-2); line-height: 1.6; margin-bottom: .625rem; }
+.project-desc { font-size: .9375rem; color: var(--text-2); line-height: 1.6; margin-bottom: .25rem; }
+.project-geo { font-size: .75rem; color: var(--text-3); margin-bottom: .375rem; }
 </style>

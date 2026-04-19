@@ -1,0 +1,205 @@
+---
+import Base from '../layouts/Base.astro';
+import newsData from '../data/news.json';
+import actorsData from '../data/actors.json';
+import projectsData from '../data/projects.json';
+import eventsData from '../data/events.json';
+
+// Build a flat search index
+type IndexItem = { kind: string; url: string; title: string; text: string; meta?: string };
+const index: IndexItem[] = [];
+
+for (const n of newsData) {
+  index.push({
+    kind: 'news',
+    url: `/news/${n.slug}`,
+    title: n.title,
+    text: `${n.summary || ''} ${(n.tags || []).join(' ')}`,
+    meta: new Date(n.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }),
+  });
+}
+for (const a of actorsData) {
+  index.push({
+    kind: 'actor',
+    url: `/actors/${a.slug}`,
+    title: a.name,
+    text: `${a.description || ''} ${(a.tags || []).join(' ')} ${a.location || ''}`,
+    meta: a.type || '',
+  });
+}
+for (const p of projectsData) {
+  index.push({
+    kind: 'project',
+    url: `/projects/${p.slug}`,
+    title: p.name,
+    text: `${p.description || ''} ${(p.tags || []).join(' ')} ${p.geography || ''}`,
+    meta: p.stage || '',
+  });
+}
+for (const e of eventsData) {
+  index.push({
+    kind: 'event',
+    url: e.website || '#',
+    title: e.name,
+    text: `${e.description || ''} ${(e.tags || []).join(' ')} ${e.location || ''}`,
+    meta: e.date_start ? new Date(e.date_start).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '',
+  });
+}
+---
+
+<Base title="Search — The Orbital">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">Search</h1>
+      <p class="page-desc">Search across news, actors, projects, and events.</p>
+    </div>
+
+    <div class="search-box">
+      <input type="search" id="q" placeholder="Try 'assembly', 'ocean', 'Taiwan'…" autofocus autocomplete="off" />
+      <div class="facets" id="facets">
+        <label><input type="checkbox" value="news" checked /> News</label>
+        <label><input type="checkbox" value="actor" checked /> Actors</label>
+        <label><input type="checkbox" value="project" checked /> Projects</label>
+        <label><input type="checkbox" value="event" checked /> Events</label>
+      </div>
+    </div>
+
+    <p class="hint" id="hint">Type at least 2 characters…</p>
+    <div class="results" id="results"></div>
+  </div>
+</Base>
+
+<script id="search-index" type="application/json" set:html={JSON.stringify(index)}></script>
+
+<style>
+.page-header { padding: 2rem 0 1rem; }
+.page-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: normal; margin-bottom: .375rem; }
+.page-desc { font-size: .9375rem; color: var(--text-2); }
+
+.search-box { margin: 1rem 0 1.5rem; }
+#q {
+  width: 100%;
+  padding: .75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+  font-family: inherit;
+}
+#q:focus { border-color: var(--text-2); }
+
+.facets { display: flex; gap: 1.25rem; margin-top: .75rem; flex-wrap: wrap; }
+.facets label { font-size: .8125rem; color: var(--text-2); cursor: pointer; user-select: none; }
+.facets input { margin-right: .25rem; vertical-align: middle; }
+
+.hint { color: var(--text-3); font-size: .875rem; padding: 1rem 0; }
+
+.results { display: flex; flex-direction: column; }
+.result {
+  padding: .875rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.result .kind {
+  display: inline-block;
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-right: .5rem;
+}
+.result .kind.news { color: var(--spaceship); }
+.result .kind.actor { color: var(--garden); }
+.result .kind.project { color: var(--mysteries); }
+.result .kind.event { color: var(--assemblies); }
+.result-title { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.35; }
+.result-title a { text-decoration: none; }
+.result-title a:hover { text-decoration: underline; }
+.result-meta { font-size: .75rem; color: var(--text-3); margin-top: .125rem; }
+.result-snippet { font-size: .875rem; color: var(--text-2); line-height: 1.55; margin-top: .25rem; }
+.result mark { background: #fff3b0; color: inherit; padding: 0 .1em; }
+</style>
+
+<script>
+  type Item = { kind: string; url: string; title: string; text: string; meta?: string };
+  const raw = document.getElementById('search-index')!.textContent || '[]';
+  const items: Item[] = JSON.parse(raw);
+  const input = document.getElementById('q') as HTMLInputElement;
+  const results = document.getElementById('results')!;
+  const hint = document.getElementById('hint')!;
+  const facets = document.querySelectorAll('#facets input') as NodeListOf<HTMLInputElement>;
+
+  function escapeHtml(s: string) {
+    return s.replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]!));
+  }
+  function highlight(s: string, q: string) {
+    if (!q) return escapeHtml(s);
+    const re = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    return escapeHtml(s).replace(re, '<mark>$1</mark>');
+  }
+  function snippet(text: string, q: string, len = 160) {
+    if (!text) return '';
+    const lower = text.toLowerCase();
+    const i = lower.indexOf(q.toLowerCase());
+    if (i < 0) return text.slice(0, len) + (text.length > len ? '…' : '');
+    const start = Math.max(0, i - 40);
+    const end = Math.min(text.length, i + q.length + 120);
+    return (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '');
+  }
+
+  function activeKinds() {
+    const s = new Set<string>();
+    facets.forEach(f => { if (f.checked) s.add(f.value); });
+    return s;
+  }
+
+  function render() {
+    const q = input.value.trim();
+    if (q.length < 2) {
+      hint.style.display = 'block';
+      hint.textContent = 'Type at least 2 characters…';
+      results.innerHTML = '';
+      return;
+    }
+    const kinds = activeKinds();
+    const ql = q.toLowerCase();
+    const scored: { item: Item; score: number }[] = [];
+    for (const it of items) {
+      if (!kinds.has(it.kind)) continue;
+      const titleIdx = it.title.toLowerCase().indexOf(ql);
+      const textIdx = it.text.toLowerCase().indexOf(ql);
+      if (titleIdx < 0 && textIdx < 0) continue;
+      let score = 0;
+      if (titleIdx >= 0) score += 100 - titleIdx;
+      if (textIdx >= 0) score += 20;
+      scored.push({ item: it, score });
+    }
+    scored.sort((a, b) => b.score - a.score);
+    const top = scored.slice(0, 80);
+    if (top.length === 0) {
+      hint.style.display = 'block';
+      hint.textContent = `No results for "${q}".`;
+      results.innerHTML = '';
+      return;
+    }
+    hint.style.display = 'none';
+    results.innerHTML = top.map(({ item }) => `
+      <div class="result">
+        <span class="kind ${item.kind}">${item.kind}</span>
+        <span class="result-title"><a href="${item.url}"${item.kind === 'event' ? ' target="_blank" rel="noopener"' : ''}>${highlight(item.title, q)}</a></span>
+        ${item.meta ? `<div class="result-meta">${escapeHtml(item.meta)}</div>` : ''}
+        <div class="result-snippet">${highlight(snippet(item.text, q), q)}</div>
+      </div>
+    `).join('');
+  }
+
+  input.addEventListener('input', render);
+  facets.forEach(f => f.addEventListener('change', render));
+
+  // Honor ?q= in URL
+  const params = new URLSearchParams(location.search);
+  const initial = params.get('q');
+  if (initial) { input.value = initial; render(); }
+</script>

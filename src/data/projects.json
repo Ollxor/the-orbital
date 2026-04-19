@@ -21,6 +21,30 @@
     "imageAlt": "Future Earth global sustainability research"
   },
   {
+    "slug": "858-project",
+    "name": "858 Project",
+    "description": "A campaign by the Sortition Foundation to replace the UK House of Lords with a House of Citizens — 858 randomly selected members of the public who reflect the full diversity of the British population. Part of a wider push to embed sortition into formal democratic institutions.",
+    "website": "https://www.sortitionfoundation.org/858",
+    "geography": "United Kingdom",
+    "stage": "Active",
+    "actors": [
+      "sortition-foundation"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "democracy",
+      "sortition",
+      "governance-reform",
+      "law",
+      "participatory"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 30
+  },
+  {
     "id": 4,
     "slug": "aerth-planetary-ai",
     "name": "AERTH Planetary AI",
@@ -43,6 +67,31 @@
     ],
     "image": "/images/projects/aerth-planet.jpg",
     "imageAlt": "Planetary landscape monitored by AERTH AI"
+  },
+  {
+    "slug": "amsterdam-doughnut",
+    "name": "Amsterdam City Doughnut",
+    "description": "A collaboration between the City of Amsterdam and Doughnut Economics Action Lab to apply doughnut thinking to urban policy. Amsterdam became the first city to officially adopt the doughnut framework as a lens for post-COVID recovery planning, committing to meet residents' social needs without overshooting ecological limits.",
+    "website": "https://doughnuteconomics.org/tools-and-stories/11",
+    "geography": "Amsterdam, Netherlands",
+    "stage": "Active",
+    "actors": [
+      "doughnut-economics-action-lab"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "cities",
+      "regenerative",
+      "economics",
+      "governance",
+      "policy"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 32
   },
   {
     "id": 7,
@@ -197,6 +246,30 @@
     ],
     "image": "/images/projects/verses-arc.jpg",
     "imageAlt": "ARC AGI benchmark visualization"
+  },
+  {
+    "id": 28,
+    "slug": "handlingar-se",
+    "name": "handlingar.se",
+    "description": "Open-source Freedom of Information platform that automates and publishes requests for public documents from Swedish authorities",
+    "website": "https://handlingar.se",
+    "geography": "Sweden",
+    "stage": "deployed",
+    "actors": [
+      "civic-tech-sweden"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "open-source",
+      "freedom-of-information",
+      "transparency",
+      "sweden"
+    ],
+    "image": "",
+    "imageAlt": ""
   },
   {
     "id": 15,
@@ -360,43 +433,6 @@
     "imageAlt": "RadicalxChange MyData collaboration"
   },
   {
-    "id": 9,
-    "slug": "rfcx-arbimon-platform",
-    "name": "RFCx Arbimon Platform",
-    "description": "Web console platform for long-term biodiversity monitoring using CNNs for species identification from acoustic data. Developed with Microsoft AI for Good.",
-    "website": "https://rfcx.org/",
-    "geography": "Global",
-    "stage": "Active",
-    "actors": [],
-    "orientations": [],
-    "tags": [
-      "data",
-      "biodiversity",
-      "platform",
-      "global",
-      "ai"
-    ],
-    "image": "/images/projects/rfcx-landscape.jpg",
-    "imageAlt": "Natural landscape monitored by Arbimon biodiversity platform"
-  },
-  {
-    "id": 8,
-    "slug": "rfcx-guardian-system",
-    "name": "RFCx Guardian System",
-    "description": "Autonomous solar-powered listening devices made from recycled smartphones, installed in rainforest canopies to detect chainsaws, gunshots, and vehicles in real-time for anti-poaching and anti-logging.",
-    "website": "https://rfcx.org/",
-    "geography": "Ecuador, Peru, Cameroon, Panama, Indonesia",
-    "stage": "Active",
-    "actors": [],
-    "orientations": [],
-    "tags": [
-      "ai",
-      "art"
-    ],
-    "image": "/images/projects/rfcx-hero.jpg",
-    "imageAlt": "Rainforest canopy with Guardian acoustic monitoring system"
-  },
-  {
     "id": 20,
     "slug": "regen-civics-alliance",
     "name": "Regen Civics Alliance",
@@ -433,6 +469,43 @@
     ],
     "image": "/images/projects/regen-ledger.jpg",
     "imageAlt": "Regen Ledger blockchain visualization"
+  },
+  {
+    "id": 9,
+    "slug": "rfcx-arbimon-platform",
+    "name": "RFCx Arbimon Platform",
+    "description": "Web console platform for long-term biodiversity monitoring using CNNs for species identification from acoustic data. Developed with Microsoft AI for Good.",
+    "website": "https://rfcx.org/",
+    "geography": "Global",
+    "stage": "Active",
+    "actors": [],
+    "orientations": [],
+    "tags": [
+      "data",
+      "biodiversity",
+      "platform",
+      "global",
+      "ai"
+    ],
+    "image": "/images/projects/rfcx-landscape.jpg",
+    "imageAlt": "Natural landscape monitored by Arbimon biodiversity platform"
+  },
+  {
+    "id": 8,
+    "slug": "rfcx-guardian-system",
+    "name": "RFCx Guardian System",
+    "description": "Autonomous solar-powered listening devices made from recycled smartphones, installed in rainforest canopies to detect chainsaws, gunshots, and vehicles in real-time for anti-poaching and anti-logging.",
+    "website": "https://rfcx.org/",
+    "geography": "Ecuador, Peru, Cameroon, Panama, Indonesia",
+    "stage": "Active",
+    "actors": [],
+    "orientations": [],
+    "tags": [
+      "ai",
+      "art"
+    ],
+    "image": "/images/projects/rfcx-hero.jpg",
+    "imageAlt": "Rainforest canopy with Guardian acoustic monitoring system"
   },
   {
     "id": 19,
@@ -563,27 +636,29 @@
     "imageAlt": ""
   },
   {
-    "id": 28,
-    "slug": "handlingar-se",
-    "name": "handlingar.se",
-    "description": "Open-source Freedom of Information platform that automates and publishes requests for public documents from Swedish authorities",
-    "website": "https://handlingar.se",
-    "geography": "Sweden",
-    "stage": "deployed",
+    "slug": "vtaiwan",
+    "name": "vTaiwan",
+    "description": "An open consultation platform developed by the g0v civic tech community that combines online deliberation (using Polis for structured opinion mapping) with offline assemblies to bring citizens and government together on contested policy issues. Has influenced legislation on Uber regulation, online alcohol sales, and AI governance in Taiwan.",
+    "website": "https://vtaiwan.tw/",
+    "geography": "Taiwan",
+    "stage": "Active",
     "actors": [
-      "civic-tech-sweden"
+      "g0v"
     ],
     "orientations": [
       "SPACESHIP",
       "ASSEMBLY"
     ],
     "tags": [
-      "open-source",
-      "freedom-of-information",
-      "transparency",
-      "sweden"
+      "digital",
+      "democracy",
+      "deliberation",
+      "platform",
+      "civic-tech",
+      "participatory"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "id": 31
   }
 ]

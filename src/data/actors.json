@@ -1,5 +1,30 @@
 [
   {
+    "id": 3,
+    "slug": "rth",
+    "name": "ÆRTH",
+    "type": "Company",
+    "description": "Planetary AI digital twin using blockchain and remote sensing.",
+    "website": "https://www.aerth.live",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "digital-twins-earth-modelling",
+      "enterprise",
+      "nature-based",
+      "ecological-governance",
+      "blockchain",
+      "ai",
+      "global",
+      "digital-twin"
+    ],
+    "image": "/images/actors/aerth-reef.jpg",
+    "imageAlt": "Underwater reef ecosystem monitored by ÆRTH platform"
+  },
+  {
     "id": 35,
     "slug": "agenda-gotsch",
     "name": "Agenda Gotsch",
@@ -415,6 +440,30 @@
     "imageAlt": "Industrial emissions visualization from satellite data"
   },
   {
+    "slug": "co-intelligence-institute",
+    "name": "Co-Intelligence Institute",
+    "type": "Research",
+    "description": "Founded by Tom Atlee in 1996 to research and support the emergence of collective wisdom in groups and societies. Developed the theory of co-intelligence, the citizen deliberative council model, and the Wise Democracy Pattern Language. Works at the intersection of group process, dialogue, and democratic theory to ask how humanity can become collectively wise enough to handle its challenges.",
+    "website": "https://www.co-intelligence.org/",
+    "location": "USA",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "tags": [
+      "democracy",
+      "deliberation",
+      "collective-intelligence",
+      "participatory",
+      "knowledge",
+      "governance"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 115
+  },
+  {
     "id": 100,
     "slug": "coalition-clean-baltic",
     "name": "Coalition Clean Baltic",
@@ -607,6 +656,30 @@
     "imageAlt": "Digidem Lab workshop on digital democratic participation"
   },
   {
+    "slug": "doughnut-economics-action-lab",
+    "name": "Doughnut Economics Action Lab",
+    "type": "NGO",
+    "description": "Co-founded by economist Kate Raworth, DEAL supports practitioners worldwide in translating doughnut economics from radical idea to transformative action. Works with ~50 cities and regions on local doughnut approaches — redesigning economies to meet social needs within planetary boundaries.",
+    "website": "https://doughnuteconomics.org/",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "regenerative",
+      "economics",
+      "governance",
+      "cities",
+      "planetary-boundaries",
+      "commons"
+    ],
+    "image": "https://doughnuteconomics.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MjA1MDIsInB1ciI6ImJsb2JfaWQifX0=--2e62304064fac6808a9b99effe80f124bb5460b6/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOls4MTUsODE1XSwibG9hZGVyIjp7InBhZ2UiOm51bGx9fSwicHVyIjoidmFyaWF0aW9uIn19--edb45250fae8a2cb322224a5cb12a81541df7b00/Doughnut_v3-classic.png",
+    "imageAlt": "The Doughnut of social and planetary boundaries",
+    "id": 109
+  },
+  {
     "id": 47,
     "slug": "earth-law-center",
     "name": "Earth Law Center",
@@ -656,6 +729,29 @@
     ],
     "image": "/images/actors/esg-urban.jpg",
     "imageAlt": "Aerial view of urban landscape from above"
+  },
+  {
+    "slug": "ecocentric-earth",
+    "name": "Ecocentric.earth",
+    "type": "Consultancy",
+    "description": "A whole-system planetary governance consultancy that helps governments and institutions redesign constitutions, policies, and decision-making frameworks to account for the rights of nature, future generations, and the living commons. Operates as a non-hierarchical co-stewardship collective. Applies permaculture, indigenous land stewardship, and digital commons perspectives.",
+    "website": "https://ecocentric.earth/",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "governance",
+      "commons",
+      "indigenous-knowledge",
+      "policy"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 112
   },
   {
     "id": 41,
@@ -847,6 +943,30 @@
     ],
     "image": "/images/actors/fgw-artwork.jpg",
     "imageAlt": "Artwork for Future Generations report"
+  },
+  {
+    "slug": "g0v",
+    "name": "g0v (gov-zero)",
+    "type": "Community",
+    "description": "A Taiwanese civic tech community that forks government — reimagining official infrastructure with open, participatory alternatives. Founded in 2012, g0v projects include vTaiwan (digital deliberation platform), the open-source budget transparency tool, and dozens of civic data initiatives. A model for citizen-led digital democracy.",
+    "website": "https://g0v.tw/",
+    "location": "Taiwan",
+    "scale": "National",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "civic-tech",
+      "digital",
+      "democracy",
+      "open-source",
+      "participatory",
+      "platform"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 111
   },
   {
     "id": 55,
@@ -1056,6 +1176,32 @@
     "imageAlt": "Participants collaborating at a Global Sustainability Jam event"
   },
   {
+    "slug": "global-tapestry-of-alternatives",
+    "name": "Global Tapestry of Alternatives",
+    "type": "Network",
+    "description": "A network of networks initiated in 2019, emerging from India's Vikalp Sangam (Alternatives Confluence) to create solidarity and strategic alliances among radical transformation movements worldwide. Coordinated by Ashish Kothari and colleagues, it maps and connects alternatives to dominant development paradigms — from agroecology and commons governance to autonomous indigenous communities — across regions and themes.",
+    "website": "https://globaltapestryofalternatives.org/",
+    "location": "Global (coordination: India)",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "tags": [
+      "commons",
+      "governance",
+      "ecology",
+      "indigenous-knowledge",
+      "organizing",
+      "food-sovereignty",
+      "pluriverse"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 116
+  },
+  {
     "id": 88,
     "slug": "governance-futures",
     "name": "Governance Futures",
@@ -1195,22 +1341,6 @@
     "imageAlt": "IFTF foresight event with participants engaged in futures thinking"
   },
   {
-    "id": 90,
-    "slug": "knoca",
-    "name": "KNOCA",
-    "type": "Network",
-    "description": "EU-funded Knowledge Network on Climate Assemblies, connecting organisers, researchers, and policymakers working on climate citizens' assemblies across Europe.",
-    "website": "https://www.knoca.eu",
-    "location": "Europe",
-    "scale": "Regional",
-    "orientations": [
-      "ASSEMBLY"
-    ],
-    "tags": [],
-    "image": "/images/actors/knoca-conference.jpg",
-    "imageAlt": "European deliberative democracy conference participants"
-  },
-  {
     "id": 32,
     "slug": "kate-raworth-doughnut-economics",
     "name": "Kate Raworth / Doughnut Economics",
@@ -1282,6 +1412,22 @@
     ],
     "image": "",
     "imageAlt": ""
+  },
+  {
+    "id": 90,
+    "slug": "knoca",
+    "name": "KNOCA",
+    "type": "Network",
+    "description": "EU-funded Knowledge Network on Climate Assemblies, connecting organisers, researchers, and policymakers working on climate citizens' assemblies across Europe.",
+    "website": "https://www.knoca.eu",
+    "location": "Europe",
+    "scale": "Regional",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [],
+    "image": "/images/actors/knoca-conference.jpg",
+    "imageAlt": "European deliberative democracy conference participants"
   },
   {
     "id": 14,
@@ -1501,6 +1647,31 @@
     "imageAlt": "Metagov dithered globe graphic"
   },
   {
+    "slug": "movement-generation",
+    "name": "Movement Generation Justice & Ecology Project",
+    "type": "NGO",
+    "description": "A US nonprofit collective rooted in the wisdom of frontline communities, working toward the liberation and restoration of land, labour, and culture through ecological justice. Developed the Resilience-Based Organizing model and the Just Transition framework (co-created with Climate Justice Alliance). Holds the principle that \"if we're not prepared to govern, we're not prepared to win.\"",
+    "website": "https://movementgeneration.org/",
+    "location": "Oakland, USA",
+    "scale": "National",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "climate",
+      "justice",
+      "ecology",
+      "organizing",
+      "governance",
+      "land-rights",
+      "indigenous-knowledge"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 114
+  },
+  {
     "id": 7,
     "slug": "naturskyddsf-reningen",
     "name": "Naturskyddsföreningen",
@@ -1523,6 +1694,30 @@
     ],
     "image": "/images/actors/naturskyddsforeningen-nature.jpg",
     "imageAlt": "Sweeping Swedish landscape with forests and mountains"
+  },
+  {
+    "slug": "new-economy-network-australia",
+    "name": "New Economy Network Australia",
+    "type": "Network",
+    "description": "A national cooperative network of organisations and individuals working to build a fair, sustainable, and democratic economy in Australia. Connects community energy, cooperative housing, ethical finance, regenerative food systems, and local circular economies through sectoral hubs. Has operated for a decade as a model of networked economic transformation.",
+    "website": "https://www.neweconomy.org.au/",
+    "location": "Australia",
+    "scale": "National",
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "economics",
+      "cooperative",
+      "commons",
+      "food-systems",
+      "energy",
+      "organizing"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 113
   },
   {
     "id": 105,
@@ -1654,21 +1849,29 @@
     "imageAlt": "Earth visualization by OpenEarth"
   },
   {
-    "id": 86,
-    "slug": "paxsims",
-    "name": "PAXsims",
-    "type": "Network",
-    "description": "Community hub and publication devoted to peace, conflict, humanitarian, and development simulations and serious games for education, training, and policy analysis.",
-    "website": "https://paxsims.wordpress.com",
-    "location": "Global",
+    "slug": "p2p-foundation",
+    "name": "P2P Foundation",
+    "type": "Research",
+    "description": "A global research and advocacy network founded by Michel Bauwens in 2005, dedicated to commons-oriented peer-to-peer dynamics across society, economy, and governance. Maintains an 8,000-page wiki on peer production, commons governance, and open-source alternatives. Provides theoretical grounding for platform cooperativism, digital commons, and post-capitalist transition.",
+    "website": "https://p2pfoundation.net/",
+    "location": "Amsterdam, Netherlands / Global",
     "scale": "Global",
     "orientations": [
-      "MYSTERIES",
+      "SPACESHIP",
       "ASSEMBLY"
     ],
-    "tags": [],
-    "image": "/images/actors/paxsims-connections.jpg",
-    "imageAlt": "Connections North simulation and gaming event"
+    "tags": [
+      "commons",
+      "digital",
+      "cooperative",
+      "governance",
+      "open-source",
+      "economics",
+      "platform"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 118
   },
   {
     "id": 53,
@@ -1693,6 +1896,23 @@
     ],
     "image": "/images/actors/pbp-community.jpg",
     "imageAlt": "Community members engaging in participatory budgeting process"
+  },
+  {
+    "id": 86,
+    "slug": "paxsims",
+    "name": "PAXsims",
+    "type": "Network",
+    "description": "Community hub and publication devoted to peace, conflict, humanitarian, and development simulations and serious games for education, training, and policy analysis.",
+    "website": "https://paxsims.wordpress.com",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [],
+    "image": "/images/actors/paxsims-connections.jpg",
+    "imageAlt": "Connections North simulation and gaming event"
   },
   {
     "id": 69,
@@ -1877,6 +2097,32 @@
     ],
     "image": "/images/actors/purpose-steward.jpg",
     "imageAlt": "Steward ownership illustration"
+  },
+  {
+    "slug": "radical-ecological-democracy",
+    "name": "Radical Ecological Democracy",
+    "type": "Network",
+    "description": "A framework and network coordinated by Ashish Kothari (founding member of Kalpavriksh) advocating for governance rooted in ecological integrity, direct participation, equity, and the rights of nature. Argues that meaningful transformation requires links between grassroots alternatives and peoples' global assemblies, and challenges the assumption that a single universal governance framework can serve a pluriverse of peoples and ecologies.",
+    "website": "https://radicalecologicaldemocracy.org/",
+    "location": "India / Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "tags": [
+      "ecology",
+      "democracy",
+      "rights-of-nature",
+      "indigenous-knowledge",
+      "governance",
+      "commons",
+      "pluriverse"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 119
   },
   {
     "id": 12,
@@ -2317,6 +2563,31 @@
     "imageAlt": "Superflux IKEA Action Speaks NY2050 installation"
   },
   {
+    "id": 21,
+    "slug": "the-borderland",
+    "name": "The Borderland",
+    "type": "Movement",
+    "description": "Swedish regional Burn. Co-founded by Olle. Gift economy, participation.",
+    "website": "https://borderlands.2k.com",
+    "location": "Sweden",
+    "scale": "Global",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "movement",
+      "festival-burn-culture",
+      "nordic",
+      "art",
+      "transformative-practice",
+      "global",
+      "experiential",
+      "sweden"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  {
     "id": 71,
     "slug": "the-new-institute",
     "name": "THE NEW INSTITUTE",
@@ -2342,31 +2613,6 @@
     ],
     "image": "/images/actors/tni-seeds.jpg",
     "imageAlt": "THE NEW INSTITUTE Seeds programme"
-  },
-  {
-    "id": 21,
-    "slug": "the-borderland",
-    "name": "The Borderland",
-    "type": "Movement",
-    "description": "Swedish regional Burn. Co-founded by Olle. Gift economy, participation.",
-    "website": "https://borderlands.2k.com",
-    "location": "Sweden",
-    "scale": "Global",
-    "orientations": [
-      "MYSTERIES"
-    ],
-    "tags": [
-      "movement",
-      "festival-burn-culture",
-      "nordic",
-      "art",
-      "transformative-practice",
-      "global",
-      "experiential",
-      "sweden"
-    ],
-    "image": "",
-    "imageAlt": ""
   },
   {
     "id": 65,
@@ -2444,6 +2690,31 @@
     "imageAlt": "Students at Uppsala University Department of Game Design"
   },
   {
+    "slug": "transition-network",
+    "name": "Transition Network",
+    "type": "Network",
+    "description": "A global network of community-led initiatives — Transition Towns — working toward local ecological resilience and low-carbon economies. Founded by Rob Hopkins in Totnes, UK in 2007, the movement has spread to thousands of communities worldwide. Known for bottom-up, imagination-led approaches to community transformation that address climate, economy, and social connection simultaneously.",
+    "website": "https://transitionnetwork.org/",
+    "location": "Totnes, UK / Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "resilience",
+      "climate",
+      "commons",
+      "organizing",
+      "food-systems",
+      "energy",
+      "culture"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 117
+  },
+  {
     "id": 33,
     "slug": "viable-cities",
     "name": "Viable Cities",
@@ -2491,6 +2762,30 @@
     "imageAlt": "We Do Democracy visual identity and branding"
   },
   {
+    "slug": "wellbeing-economy-alliance",
+    "name": "Wellbeing Economy Alliance",
+    "type": "Network",
+    "description": "A global collaboration of over 350 organisations, alliances, and movements working to transform economies so they deliver shared wellbeing for people and planet. Runs the Wellbeing Economy Governments (WEGo) partnership connecting Scotland, Iceland, Wales, Finland, and New Zealand.",
+    "website": "https://weall.org/",
+    "location": "UK / Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "economics",
+      "wellbeing",
+      "governance",
+      "policy",
+      "commons",
+      "regenerative"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 110
+  },
+  {
     "id": 60,
     "slug": "world-game-workshop",
     "name": "World Game Workshop",
@@ -2536,30 +2831,5 @@
     ],
     "image": "/images/actors/wsf-gathering.jpg",
     "imageAlt": "Participants at a World Social Forum gathering holding banners"
-  },
-  {
-    "id": 3,
-    "slug": "rth",
-    "name": "ÆRTH",
-    "type": "Company",
-    "description": "Planetary AI digital twin using blockchain and remote sensing.",
-    "website": "https://www.aerth.live",
-    "location": "Global",
-    "scale": "Global",
-    "orientations": [
-      "GARDEN"
-    ],
-    "tags": [
-      "digital-twins-earth-modelling",
-      "enterprise",
-      "nature-based",
-      "ecological-governance",
-      "blockchain",
-      "ai",
-      "global",
-      "digital-twin"
-    ],
-    "image": "/images/actors/aerth-reef.jpg",
-    "imageAlt": "Underwater reef ecosystem monitored by ÆRTH platform"
   }
 ]

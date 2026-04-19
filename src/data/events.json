@@ -1872,5 +1872,63 @@
     "tags": [],
     "image": "",
     "imageAlt": ""
+  },
+  {
+    "slug": "earth-system-governance-bath-2026",
+    "name": "Earth System Governance Conference 2026",
+    "type": "Conference",
+    "series": "Earth System Governance",
+    "location": "Bath, UK",
+    "date_start": "2026-09-01",
+    "date_end": "2026-09-04",
+    "recurrence": "annual",
+    "website": "https://www.earthsystemgovernance.org/2026-bath/",
+    "description": "Annual conference of the Earth System Governance Project, themed \"Building just and sustainable futures for planetary integrity.\" Brings together researchers, policymakers, and practitioners working on the governance of Earth system change.",
+    "relevance_note": "Core gathering for academic and policy community around planetary governance.",
+    "actors": [],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "governance",
+      "climate",
+      "ecology",
+      "policy",
+      "research"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 92
+  },
+  {
+    "slug": "oidp-2026-krakow",
+    "name": "OIDP 2026 — International Observatory on Participatory Democracy",
+    "type": "Conference",
+    "series": "OIDP",
+    "edition": "25",
+    "location": "Kraków, Poland",
+    "date_start": "2026-09-21",
+    "date_end": "2026-09-23",
+    "recurrence": "annual",
+    "website": "https://www.peoplepowered.org/events-content/oidp-2026",
+    "description": "25th annual OIDP conference under the theme \"Hope and renewal in the face of a global crisis of democracy.\" Addresses polarisation, climate change, migration, and the declining trust in democratic institutions through practitioner exchange across cities and regions.",
+    "relevance_note": "The central practitioner conference for participatory democracy globally.",
+    "actors": [
+      "people-powered"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "democracy",
+      "participatory",
+      "governance",
+      "deliberation",
+      "organizing"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "id": 93
   }
 ]

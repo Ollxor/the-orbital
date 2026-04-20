@@ -6,15 +6,16 @@
   --text:      #1a1a1a;
   --text-2:    #666666;
   --text-3:    #999999;
-  --border:    #eeeeee;
-  --filter-bg: #f5f5f3;
+  --border:    #e8e8e6;
+  --filter-bg: #f4f4f2;
 
   --garden:    #4a7c59;
   --spaceship: #2a6496;
   --mysteries: #7b5ea7;
   --assemblies:#b8860b;
 
-  --max-w: 700px;
+  --max-w:     720px;
+  --max-w-wide:960px;
   --font-serif: Georgia, 'Times New Roman', serif;
   --font-sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }

@@ -69,11 +69,12 @@ const currentPath = Astro.url.pathname;
         <span class="footer-logo-text">THE ORBITAL</span>
       </div>
       <p class="footer-tagline">Tracking the emergent movement for planetary systems governance.</p>
-      <p class="footer-credits">
-        <span class="footer-links">
-          <a href="/about">About</a> · <a href="/contact">Contact</a>
-        </span>
-      </p>
+      <div class="footer-links footer-credits">
+        <a href="/about">About</a>
+        <a href="/manifesto">Manifesto</a>
+        <a href="/library">Library</a>
+        <a href="/contact">Contact</a>
+      </div>
     </div>
   </footer>
 
@@ -90,27 +91,25 @@ const currentPath = Astro.url.pathname;
 
   /* ── Masthead ── */
   .masthead {
-    border-bottom: 3px double var(--border);
-    padding: 2rem 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding: 2.25rem 1.25rem 1.75rem;
+    text-align: center;
   }
   .masthead-brand {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: .5rem;
     text-decoration: none;
-    max-width: var(--max-w);
-    margin: 0 auto;
   }
+  .masthead-brand:hover { text-decoration: none; }
   .masthead-title {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 3.5rem;
+    font-size: 3.75rem;
     font-weight: 600;
-    letter-spacing: .22em;
+    letter-spacing: .25em;
     color: var(--text);
     line-height: 1;
-    text-align: center;
   }
   .masthead-tagline {
     font-family: 'Source Serif 4', Georgia, serif;
@@ -119,7 +118,6 @@ const currentPath = Astro.url.pathname;
     color: var(--text-2);
     letter-spacing: .04em;
     font-style: italic;
-    text-align: center;
   }
 
   /* ── Main nav ── */
@@ -131,32 +129,41 @@ const currentPath = Astro.url.pathname;
     z-index: 100;
   }
   .main-nav-inner {
-    max-width: var(--max-w);
+    max-width: var(--max-w-wide);
     margin: 0 auto;
     padding: 0 1.25rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: stretch;
+    justify-content: center;
   }
   .nav-links {
     display: flex;
     gap: 0;
+    align-items: stretch;
   }
   .nav-links a {
-    display: block;
-    padding: .625rem 1rem;
-    font-size: .8125rem;
-    font-weight: 500;
-    letter-spacing: .04em;
+    display: flex;
+    align-items: center;
+    padding: .5rem .65rem;
+    font-size: .6875rem;
+    font-weight: 600;
+    letter-spacing: .07em;
     text-transform: uppercase;
-    color: var(--text-2);
+    color: var(--text-3);
     text-decoration: none;
     border-bottom: 2px solid transparent;
+    white-space: nowrap;
     transition: color .15s, border-color .15s;
   }
-  .nav-links a:hover { color: var(--text); }
+  .nav-links a:hover { color: var(--text); text-decoration: none; }
   .nav-links a.active { color: var(--text); border-bottom-color: var(--text); }
-  .nav-join { color: var(--text) !important; font-weight: 600 !important; }
+  .nav-join {
+    color: var(--text) !important;
+    font-weight: 700 !important;
+    margin-left: .25rem;
+    border-left: 1px solid var(--border);
+    padding-left: .875rem !important;
+  }
 
   .nav-toggle {
     display: none;
@@ -166,14 +173,16 @@ const currentPath = Astro.url.pathname;
     border: none;
     cursor: pointer;
     padding: .5rem 0;
+    margin-left: auto;
   }
-  .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
+  .nav-toggle span { display: block; width: 20px; height: 2px; background: var(--text); border-radius: 2px; }
 
-  @media (max-width: 640px) {
+  @media (max-width: 760px) {
     .masthead-title { font-size: 2.25rem; letter-spacing: .14em; }
     .masthead-tagline { font-size: .8125rem; }
 
     .nav-toggle { display: flex; }
+    .main-nav-inner { justify-content: space-between; }
     .nav-links {
       display: none;
       position: absolute;
@@ -183,28 +192,29 @@ const currentPath = Astro.url.pathname;
       background: var(--bg);
       border-bottom: 1px solid var(--border);
       flex-direction: column;
-      padding: .5rem 0;
+      padding: .375rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,.06);
     }
     .main-nav.open .nav-links { display: flex; }
-    .nav-links a { padding: .6rem 1.25rem; border-bottom: none; }
+    .nav-links a { padding: .6rem 1.25rem; border-bottom: none; font-size: .8rem; }
+    .nav-join { border-left: none; margin-left: 0; padding-left: 1.25rem !important; }
   }
 
   /* ── Footer ── */
   .site-footer {
-    border-top: 3px double var(--border);
-    padding: 2.5rem 0;
+    border-top: 1px solid var(--border);
+    padding: 3rem 0 2.5rem;
     margin-top: 5rem;
-    color: var(--text-3);
   }
-  .footer-inner { display: flex; flex-direction: column; align-items: center; gap: .875rem; text-align: center; }
+  .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
   .footer-logo { display: flex; align-items: center; gap: .5rem; }
-  .footer-logo-img { height: 28px; width: auto; opacity: .6; }
-  .footer-logo-text { font-family: 'Playfair Display', Georgia, serif; font-size: .9rem; letter-spacing: .12em; color: var(--text-2); }
-  .footer-tagline { font-size: .8125rem; color: var(--text-3); }
-  .footer-credits { font-size: .8125rem; color: var(--text-3); line-height: 1.7; }
-  .footer-credits a { color: var(--text-3); }
+  .footer-logo-img { height: 26px; width: auto; opacity: .45; }
+  .footer-logo-text { font-family: 'Playfair Display', Georgia, serif; font-size: .875rem; letter-spacing: .15em; color: var(--text-3); }
+  .footer-tagline { font-size: .8125rem; color: var(--text-3); font-style: italic; }
+  .footer-credits { font-size: .8125rem; color: var(--text-3); line-height: 1.9; }
+  .footer-credits a { color: var(--text-3); text-decoration: none; }
   .footer-credits a:hover { color: var(--text-2); }
-  .footer-links { display: block; margin-top: .25rem; }
+  .footer-links { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; }
 
   main { padding-bottom: 2rem; }
 </style>

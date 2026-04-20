@@ -20,10 +20,27 @@ assembly where people collectively shape the future — gamified, pervasive,
 real.
 
 ### Four orientations (lenses on content)
-- **GARDEN** — ecological regeneration, rights of nature, land, food, biodiversity
-- **SPACESHIP** — systems thinking, planetary boundaries, climate science, tech
-- **MYSTERIES** — culture, spirituality, indigenous knowledge, inner transformation
-- **ASSEMBLY** — governance, democracy, citizen assemblies, legal frameworks
+
+Assign one or more. Most content has a primary orientation + 1 secondary. Rarely
+three. Almost never all four — that's usually a sign of being too generous.
+
+| Orientation | Core question | Examples |
+|-------------|---------------|---------|
+| **GARDEN** | How do we tend living systems? | Agroecology, rewilding, rights of nature, soil, food sovereignty, biodiversity, indigenous land practice |
+| **SPACESHIP** | How do we build and model the systems? | AI, digital twins, satellite monitoring, blockchain governance, open data protocols, climate modelling, civic tech |
+| **MYSTERIES** | How do we transform culture and consciousness? | LARP, megagames, ritual design, experiential futures, festival culture, theatre, ceremony, inner work |
+| **ASSEMBLY** | How do we decide together? | Citizens assemblies, deliberative democracy, sortition, rights of nature legal frameworks, global governance, commons |
+
+**Assignment rules:**
+- An org doing satellite monitoring of forests → SPACESHIP primary, GARDEN secondary
+- A citizens assembly process → ASSEMBLY primary; add GARDEN/SPACESHIP if the topic is ecological/tech
+- A LARP about governance → MYSTERIES primary, ASSEMBLY secondary
+- "Spaceship Earth" thinking (Buckminster Fuller, systems) → SPACESHIP, not MYSTERIES
+- Climate science research → SPACESHIP, GARDEN (not ASSEMBLY unless it's governance-focused)
+- Rights of nature legal work → GARDEN, ASSEMBLY (legal framework = Assembly)
+- Regenerative farming → GARDEN only, unless it has policy angle (add ASSEMBLY)
+- Digital democracy tools → SPACESHIP, ASSEMBLY
+- Indigenous knowledge holders → GARDEN, MYSTERIES (not Assembly unless they're doing governance advocacy)
 
 ---
 

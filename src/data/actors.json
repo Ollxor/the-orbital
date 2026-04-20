@@ -9,6 +9,7 @@
     "location": "Global",
     "scale": "Global",
     "orientations": [
+      "SPACESHIP",
       "GARDEN"
     ],
     "tags": [
@@ -223,6 +224,7 @@
     "location": "USA / Global",
     "scale": "Global",
     "orientations": [
+      "SPACESHIP",
       "MYSTERIES"
     ],
     "tags": [
@@ -433,6 +435,7 @@
     "location": "Global",
     "scale": "Global",
     "orientations": [
+      "SPACESHIP",
       "GARDEN"
     ],
     "tags": [
@@ -932,6 +935,7 @@
     "location": "Global",
     "scale": "Global",
     "orientations": [
+      "ASSEMBLY",
       "GARDEN"
     ],
     "tags": [
@@ -1402,7 +1406,8 @@
     "location": "Sweden",
     "scale": "Global",
     "orientations": [
-      "SPACESHIP"
+      "SPACESHIP",
+      "ASSEMBLY"
     ],
     "tags": [
       "enterprise",
@@ -1861,6 +1866,7 @@
     "location": "Global",
     "scale": "Global",
     "orientations": [
+      "SPACESHIP",
       "GARDEN"
     ],
     "tags": [
@@ -2091,7 +2097,8 @@
     "location": "Sweden",
     "scale": "Global",
     "orientations": [
-      "MYSTERIES"
+      "MYSTERIES",
+      "ASSEMBLY"
     ],
     "tags": [
       "nordic",
@@ -2114,6 +2121,7 @@
     "location": "Germany / Global",
     "scale": "Global",
     "orientations": [
+      "ASSEMBLY",
       "SPACESHIP"
     ],
     "tags": [
@@ -2187,6 +2195,7 @@
     "location": "Global",
     "scale": "Global",
     "orientations": [
+      "SPACESHIP",
       "GARDEN"
     ],
     "tags": [

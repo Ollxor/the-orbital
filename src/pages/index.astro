@@ -86,12 +86,18 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
         <h3 class="feed-month" id={`m-${group.key}`}>{group.label} <span class="month-count">({group.stories.length})</span></h3>
         {group.stories.map((story) => (
         <article class="news-card" data-orientations={story.orientations.join(',')}>
-          <div class={`card-image-wrap${story.image ? '' : ' card-placeholder'}`} data-orient={story.orientations[0] || 'GARDEN'}>
+          <div class={`card-image-wrap${story.image ? '' : ' card-placeholder'}${(story as any).kind === 'video' ? ' card-video' : ''}`} data-orient={story.orientations[0] || 'GARDEN'}>
             <a href={`/news/${story.slug}`}>
               {story.image ? (
                 <img src={story.image} alt={story.imageAlt} class="card-image" loading="lazy" onerror="this.parentElement.parentElement.classList.add('card-placeholder'); this.remove();" />
               ) : (
                 <img src={`/assets/${iconMap[story.orientations[0] || 'GARDEN']}`} alt="" class="placeholder-icon" />
+              )}
+              {(story as any).kind === 'video' && (
+                <div class="video-play-overlay" aria-hidden="true">
+                  <span class="video-play-btn">▶</span>
+                  <span class="video-badge">Video</span>
+                </div>
               )}
             </a>
           </div>
@@ -231,6 +237,39 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
 .card-placeholder[data-orient="MYSTERIES"] { background: linear-gradient(135deg, #ece4f3 0%, #cbb9de 100%); }
 .card-placeholder[data-orient="ASSEMBLY"]  { background: linear-gradient(135deg, #f5ecd8 0%, #e3ceab 100%); }
 .placeholder-icon { width: 72px; height: 72px; object-fit: contain; opacity: .75; position: relative; z-index: 1; }
+
+/* Video card overlay */
+.card-video { position: relative; }
+.card-video .card-image { max-height: 240px; }
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background: rgba(0,0,0,.25);
+  border-radius: 4px;
+  transition: background .2s;
+}
+.card-video a:hover .video-play-overlay { background: rgba(0,0,0,.38); }
+.video-play-btn {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,.5);
+  line-height: 1;
+}
+.video-badge {
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(0,0,0,.45);
+  padding: .15rem .5rem;
+  border-radius: 999px;
+}
 
 .card-date { display: block; font-size: .8125rem; color: var(--text-3); margin-bottom: .4rem; }
 

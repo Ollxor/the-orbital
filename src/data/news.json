@@ -1,5 +1,79 @@
 [
   {
+    "slug": "rockstrom-10-years-transform-future-humanity",
+    "kind": "video",
+    "videoId": "8Sl28fkrozE",
+    "title": "10 Years to Transform the Future of Humanity — or Destabilise the Planet",
+    "date": "2026-04-20",
+    "image": "https://img.youtube.com/vi/8Sl28fkrozE/maxresdefault.jpg",
+    "imageAlt": "Johan Rockström speaking at TED about planetary boundaries",
+    "summary": "Planetary scientist Johan Rockström lays out the maths: we have roughly until 2030 to fundamentally redirect civilisation away from the tipping points that make climate disruption self-reinforcing and irreversible.",
+    "body": "",
+    "insight": "The window for avoiding compounding planetary tipping points is not measured in generations — it is measured in the decisions made before 2030.",
+    "actors": [],
+    "tags": [
+      "planetary-boundaries",
+      "climate",
+      "tipping-points",
+      "science",
+      "governance"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=8Sl28fkrozE"
+  },
+  {
+    "slug": "citizens-assembly-save-planet-tedx-duvic-paoli",
+    "kind": "video",
+    "videoId": "vz9Lwueu7Hg",
+    "title": "Will Citizens' Assemblies Save the Planet?",
+    "date": "2026-04-20",
+    "image": "https://img.youtube.com/vi/vz9Lwueu7Hg/maxresdefault.jpg",
+    "imageAlt": "TEDx speaker discussing citizens assemblies and climate",
+    "summary": "Leslie Anne Duvic Paoli makes the case at TEDxModena that randomly selected citizens' assemblies — freed from electoral pressures — are uniquely capable of recommending bold, science-aligned climate policy that elected governments cannot.",
+    "body": "",
+    "insight": "Where elections reward short-termism, assemblies create space for long-term reasoning — which may be exactly the institutional innovation climate policy requires.",
+    "actors": [],
+    "tags": [
+      "citizens-assembly",
+      "democracy",
+      "climate",
+      "deliberation",
+      "governance"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=vz9Lwueu7Hg"
+  },
+  {
+    "slug": "rights-of-nature-necessary-tomorrows-documentary",
+    "kind": "video",
+    "videoId": "KmTq9PdwBoI",
+    "title": "The Rights of Nature — Necessary Tomorrows",
+    "date": "2026-04-20",
+    "image": "https://img.youtube.com/vi/KmTq9PdwBoI/maxresdefault.jpg",
+    "imageAlt": "Documentary still: legal personhood for rivers and forests",
+    "summary": "Sci-fi author Christopher Brown follows the growing legal movement that grants rights to rivers, forests, and ecosystems — a direct challenge to four centuries of law treating nature as property to be owned.",
+    "body": "",
+    "insight": "Legal personhood for ecosystems is no longer theoretical: communities are already wielding it in court against extractive industries.",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "legal",
+      "ecology",
+      "commons",
+      "indigenous-knowledge"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=KmTq9PdwBoI"
+  },
+  {
     "slug": "africa-regenerative-farmers-food-sovereignty-global-instability-2026",
     "title": "Across Africa, Farmers Are Building Food Sovereignty Through Regenerative Practice",
     "date": "2026-04-17",

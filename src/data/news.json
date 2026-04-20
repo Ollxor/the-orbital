@@ -1,5 +1,184 @@
 [
   {
+    "slug": "global-citizens-assembly-food-systems-climate-2026",
+    "title": "Rethinking How We Feed the World: Insights from the Global Citizens' Assembly",
+    "date": "2026-04-22",
+    "image": "https://www.eedama.org/wp-content/uploads/image-1.png",
+    "imageAlt": "Participants in the Global Citizens Assembly on food systems",
+    "summary": "A 105-person Global Citizens' Assembly representing humanity's demographic spread deliberated on food systems and climate change over three months — and reached strong consensus (70%+ agreement) that the solution requires systemic reform, not individual behaviour change.",
+    "body": "",
+    "insight": "When a genuine cross-section of humanity deliberates on food — not activists, not lobbyists — they overwhelmingly conclude the same thing: the system itself must change.",
+    "actors": [],
+    "tags": [
+      "citizens-assembly",
+      "food-systems",
+      "climate",
+      "governance",
+      "deliberation",
+      "global"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.eedama.org/rethinking-how-we-feed-the-world-insights-from-the-global-citizens-assembly/"
+  },
+  {
+    "slug": "goldman-prize-yuvelis-morales-magdalena-river-colombia-fracking",
+    "title": "Rights of Nature Defender Wins Goldman Prize for Protecting Colombia's Magdalena River",
+    "date": "2026-04-20",
+    "image": "",
+    "imageAlt": "Yuvelis Morales Blanco, Goldman Prize winner and rights of nature defender",
+    "summary": "At 24, Yuvelis Morales Blanco became one of the youngest Goldman Prize winners for co-founding Aguawil and organising her Afro-Colombian fishing community to successfully block fracking on the Magdalena River — ultimately contributing to Colombia's nationwide fracking moratorium.",
+    "body": "",
+    "insight": "She achieved in years what decades of policy advocacy had not — by treating the river as life itself rather than as a resource, and by organising at the scale where power actually lived.",
+    "actors": [
+      "global-alliance-for-the-rights-of-nature"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "colombia",
+      "climate-justice",
+      "indigenous-rights",
+      "activism",
+      "legal"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://insideclimatenews.org/news/20042026/rights-of-nature-defender-yuvelis-morales-blanco-goldman-prize/"
+  },
+  {
+    "slug": "rethinking-place-in-nature-means-rethinking-the-law",
+    "title": "Rethinking Our Place in Nature Means Rethinking the Law",
+    "date": "2026-04-14",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-billsalazar-27010821-scaled.jpg",
+    "imageAlt": "Natural landscape representing the case for ecocentric legal frameworks",
+    "summary": "Erika Schelby argues that the crisis of environmental law is philosophical before it is technical: as long as nature is legally property, no regulation can fundamentally protect it. Granting legal personhood to ecosystems — drawing on both Indigenous jurisprudence and scientific evidence — changes who can sue and on whose behalf.",
+    "body": "",
+    "insight": "The Atrato River (Colombia) and Ganges (India) cases reveal the same lesson: legal personhood is only the first step — it requires institutions and communities capable of wielding it.",
+    "actors": [
+      "earth-law-center",
+      "global-alliance-for-the-rights-of-nature"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "legal",
+      "governance",
+      "indigenous-knowledge",
+      "ecology",
+      "ecocentric"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-14/rethinking-our-place-in-nature-means-rethinking-the-law/"
+  },
+  {
+    "slug": "growing-push-legal-rights-nature-global-movement-2026",
+    "title": "The Growing Push to Grant Legal Rights to Nature",
+    "date": "2026-04-13",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-yogendras31-18215095-scaled.jpg",
+    "imageAlt": "River ecosystem representing the global rights of nature movement",
+    "summary": "From Ecuador's 2008 constitutional recognition of Pachamama to Bangladesh declaring all 700 of its rivers living entities with legal rights, the global movement to grant legal personhood to natural systems is accelerating — and scientists are now helping make it enforceable.",
+    "body": "",
+    "insight": "The map of jurisdictions granting rights to nature has doubled in five years — the question is no longer whether, but how fast it becomes the global legal norm.",
+    "actors": [
+      "global-alliance-for-the-rights-of-nature",
+      "earth-law-center"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "legal",
+      "governance",
+      "indigenous-rights",
+      "ecology",
+      "international-law"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-13/how-countries-are-granting-legal-rights-to-nature/"
+  },
+  {
+    "slug": "agroecology-malawi-political-barriers-green-revolution-part-2",
+    "title": "Agroecology in Malawi: Why the Green Revolution's Grip Persists Despite Its Failures",
+    "date": "2026-04-07",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/farmers-Malawi.jpg",
+    "imageAlt": "Farmers in Malawi practising agroecological methods",
+    "summary": "Thomas Shivers examines why Malawi's agricultural policy remains locked into industrial monoculture despite growing evidence for agroecology — arguing the barriers are not technical but political: institutions that fund development prefer solutions that preserve their own power.",
+    "body": "",
+    "insight": "Food system transformation is blocked at the policy level precisely because the actors with money and influence benefit from keeping it industrial — understanding this is the prerequisite for changing it.",
+    "actors": [
+      "agroecology-coalition"
+    ],
+    "tags": [
+      "agroecology",
+      "food-sovereignty",
+      "malawi",
+      "africa",
+      "political-economy",
+      "degrowth",
+      "food-systems"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-07/the-restorative-promise-of-agroecology-farming-for-sovereignty-and-resilience-in-malawi-part-2/"
+  },
+  {
+    "slug": "climate-cracks-spreading-system-cant-hold-rupert-read-2026",
+    "title": "Climate Cracks Are Spreading — and Even the System Knows It Can't Hold",
+    "date": "2026-04-06",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-oscar-sanchez197-19894925-scaled.jpg",
+    "imageAlt": "Cracked dry earth symbolising ecological and institutional breakdown",
+    "summary": "Rupert Read documents how suppressed government reports across multiple countries already project food security failures by 2030 and potential ecosystem collapse — yet mainstream media barely covers them and financial markets ignore them entirely.",
+    "body": "",
+    "insight": "When the system's own intelligence assessments acknowledge it cannot hold, and that intelligence is suppressed rather than acted on, the response must come from communities — not institutions.",
+    "actors": [],
+    "tags": [
+      "climate",
+      "governance",
+      "collapse",
+      "polycrisis",
+      "systems",
+      "resilience"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-06/climate-cracks-are-spreading-and-even-the-system-knows-it-cant-hold/"
+  },
+  {
+    "slug": "democracy-tested-citizen-assemblies-can-help-rafitoson-ted",
+    "kind": "video",
+    "videoId": "hHYe3O7_TUA",
+    "title": "Democracy Is Being Tested. Citizen Assemblies Can Help",
+    "date": "2024-11-01",
+    "image": "https://img.youtube.com/vi/hHYe3O7_TUA/maxresdefault.jpg",
+    "imageAlt": "Ketakandriana Rafitoson speaking at TED about citizen assemblies and democracy",
+    "summary": "Ketakandriana Rafitoson — democracy advocate from Madagascar — argues at TED that citizen assemblies, by bringing ordinary people into direct participation, can revive democratic legitimacy at precisely the moment autocratisation is accelerating globally.",
+    "body": "",
+    "insight": "At a time when formal democracy is retreating in more countries than it is advancing, assemblies of randomly selected citizens may be the most resilient democratic institution we can build.",
+    "actors": [],
+    "tags": [
+      "citizens-assembly",
+      "democracy",
+      "deliberation",
+      "governance",
+      "autocratisation"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=hHYe3O7_TUA"
+  },
+  {
     "slug": "rockstrom-10-years-transform-future-humanity",
     "kind": "video",
     "videoId": "8Sl28fkrozE",

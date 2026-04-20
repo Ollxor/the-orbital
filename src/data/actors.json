@@ -75,7 +75,10 @@
       "research"
     ],
     "image": "/images/actors/agroecology-coalition-planting.jpg",
-    "imageAlt": "Community members planting crops using agroecological methods"
+    "imageAlt": "Community members planting crops using agroecological methods",
+    "founded": "2020",
+    "lastActive": "2026",
+    "fundingDisclosure": "EU, Gates Foundation, CGIAR member funders"
   },
   {
     "id": 37,
@@ -255,7 +258,10 @@
       "climate"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "founded": "2005",
+    "lastActive": "2026",
+    "fundingDisclosure": "Bloomberg Philanthropies, member cities, philanthropy"
   },
   {
     "id": 45,
@@ -279,7 +285,10 @@
       "nature-based-economies"
     ],
     "image": "/images/actors/capital-launch.jpg",
-    "imageAlt": "Regenerative Economics book launch"
+    "imageAlt": "Regenerative Economics book launch",
+    "founded": "2010",
+    "lastActive": "2024",
+    "fundingDisclosure": "Foundation grants, individual donors; limited public disclosure"
   },
   {
     "id": 67,
@@ -531,7 +540,10 @@
       "technology"
     ],
     "image": "/images/actors/darkmatter-matrix1.jpg",
-    "imageAlt": "Dark Matter Labs systems mapping"
+    "imageAlt": "Dark Matter Labs systems mapping",
+    "founded": "2018",
+    "lastActive": "2026",
+    "fundingDisclosure": "EU Horizon, Bloomberg Philanthropies, project fees"
   },
   {
     "id": 25,
@@ -555,7 +567,10 @@
       "participatory-democracy-movements"
     ],
     "image": "/images/actors/dwb-parliament.jpg",
-    "imageAlt": "World parliament concept"
+    "imageAlt": "World parliament concept",
+    "founded": "2016",
+    "lastActive": "2026",
+    "fundingDisclosure": "Member-supported, foundation grants"
   },
   {
     "id": 106,
@@ -604,7 +619,10 @@
       "anticipatory-governance"
     ],
     "image": "/images/actors/demos-helsinki-og.jpg",
-    "imageAlt": "Demos Helsinki team and organization visual"
+    "imageAlt": "Demos Helsinki team and organization visual",
+    "founded": "2005",
+    "lastActive": "2026",
+    "fundingDisclosure": "EU projects, Nordic Council, Finnish government"
   },
   {
     "id": 9,
@@ -677,7 +695,10 @@
     ],
     "image": "https://doughnuteconomics.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MjA1MDIsInB1ciI6ImJsb2JfaWQifX0=--2e62304064fac6808a9b99effe80f124bb5460b6/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOls4MTUsODE1XSwibG9hZGVyIjp7InBhZ2UiOm51bGx9fSwicHVyIjoidmFyaWF0aW9uIn19--edb45250fae8a2cb322224a5cb12a81541df7b00/Doughnut_v3-classic.png",
     "imageAlt": "The Doughnut of social and planetary boundaries",
-    "id": 109
+    "id": 109,
+    "founded": "2019",
+    "lastActive": "2026",
+    "fundingDisclosure": "Foundation grants, membership, consulting"
   },
   {
     "id": 47,
@@ -702,7 +723,10 @@
       "global"
     ],
     "image": "/images/actors/earthlaw-frontpage.jpg",
-    "imageAlt": "Nature landscape representing rights of nature legal framework"
+    "imageAlt": "Nature landscape representing rights of nature legal framework",
+    "founded": "2008",
+    "lastActive": "2026",
+    "fundingDisclosure": "Foundation grants, individual donors"
   },
   {
     "id": 27,
@@ -728,7 +752,10 @@
       "global"
     ],
     "image": "/images/actors/esg-urban.jpg",
-    "imageAlt": "Aerial view of urban landscape from above"
+    "imageAlt": "Aerial view of urban landscape from above",
+    "founded": "2009",
+    "lastActive": "2026",
+    "fundingDisclosure": "Academic institutions, Netherlands Organisation for Scientific Research"
   },
   {
     "slug": "ecocentric-earth",
@@ -918,7 +945,10 @@
       "research"
     ],
     "image": "/images/actors/futureearth-hero.jpg",
-    "imageAlt": "Future Earth global research"
+    "imageAlt": "Future Earth global research",
+    "founded": "2012",
+    "lastActive": "2026",
+    "fundingDisclosure": "ICSU, ISSC, UN Environment, national funders"
   },
   {
     "id": 70,

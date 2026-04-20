@@ -1,0 +1,152 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Manifesto — The Orbital" description="The Orbital manifesto is being written. Coming soon.">
+  <div class="container">
+    <div class="manifesto-wrap">
+
+      <div class="manifesto-header">
+        <p class="eyebrow">Manifesto</p>
+        <h1>The Garden</h1>
+        <p class="subhead">A text is being written.</p>
+      </div>
+
+      <div class="placeholder-body">
+        <p>
+          This manifesto is currently being revised. What appears here is a commitment,
+          not a finished thing.
+        </p>
+        <p>
+          It will attempt to describe what we are tracking, and why it matters — written
+          with more fire than the <a href="/about">About page</a>, and more honesty than
+          most mission statements.
+        </p>
+        <p>
+          It will acknowledge that this view of the world comes from a particular place,
+          carries particular assumptions, and needs fact-checking against reality.
+          We will try to be clear about what we know, what we believe, and what we hope.
+        </p>
+
+        <div class="placeholder-horizon">
+          <span class="horizon-line"></span>
+          <span class="horizon-text">coming soon</span>
+          <span class="horizon-line"></span>
+        </div>
+
+        <blockquote class="placeholder-teaser">
+          "Eden has never existed. But the conditions for something like it have always
+          been latent in the living world — waiting for a species intelligent enough to
+          stop destroying them, and wise enough to tend them instead."
+        </blockquote>
+
+        <p class="teaser-note">
+          — draft fragment, Manifesto V2
+        </p>
+      </div>
+
+      <div class="manifesto-nav">
+        <a href="/about" class="nav-link">← About The Orbital</a>
+        <a href="/library" class="nav-link">Governance Library →</a>
+      </div>
+
+    </div>
+  </div>
+</Base>
+
+<style>
+.manifesto-wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+.manifesto-header {
+  border-bottom: 3px double var(--border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: .5rem;
+}
+.manifesto-header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: .5rem;
+}
+.subhead {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.0625rem;
+  color: var(--text-2);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.placeholder-body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: #444;
+}
+.placeholder-body p { margin-bottom: 1.25rem; }
+.placeholder-body a { color: var(--text); }
+
+.placeholder-horizon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem 0;
+  color: var(--text-3);
+  font-size: .75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.horizon-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.placeholder-teaser {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.65;
+  color: #333;
+  border-left: 3px solid var(--border);
+  padding-left: 1.25rem;
+  margin: 0 0 .75rem;
+}
+
+.teaser-note {
+  font-size: .8125rem;
+  color: var(--text-3);
+  font-style: italic;
+  padding-left: calc(1.25rem + 3px);
+  margin-bottom: 0;
+}
+
+.manifesto-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.nav-link {
+  font-size: .875rem;
+  color: var(--text-2);
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-link:hover { color: var(--text); }
+</style>

@@ -1,0 +1,500 @@
+---
+import Base from '../layouts/Base.astro';
+
+const categories = [
+  {
+    id: 'voting',
+    title: 'Voting & Election Systems',
+    color: '#2a6496',
+    orient: 'ASSEMBLY',
+    tools: [
+      {
+        name: 'Single Transferable Vote (STV)',
+        scale: 'Medium–large groups (20–500+)',
+        use: 'Electing a multi-seat council',
+        how: 'Voters rank candidates. A quota (Droop) determines the threshold to win a seat. Surplus votes and eliminated candidates\' votes transfer according to preferences. Proportional representation emerges naturally.',
+        note: 'Teaches coalition-building. Minority positions win representation.',
+      },
+      {
+        name: 'Approval Voting',
+        scale: 'Any',
+        use: 'Quick decisions with many options',
+        how: 'Vote for as many candidates as you approve of. Most approvals wins.',
+        note: 'Dead simple. No spoiler effect. Good for rapid field-narrowing.',
+      },
+      {
+        name: 'Quadratic Voting',
+        scale: 'Medium groups (10–200)',
+        use: 'Resource allocation, budget priorities',
+        how: 'Each player gets a pool of voice credits. Spreading votes across issues or concentrating them — each additional vote on the same issue costs quadratically more. Reveals intensity of preference.',
+        note: 'Forces trade-offs between breadth and depth of conviction.',
+      },
+      {
+        name: 'Ranked-Choice / Instant Runoff',
+        scale: 'Any',
+        use: 'Single-winner elections',
+        how: 'Rank candidates. Lowest eliminated, votes transfer. Repeat until majority.',
+        note: 'Simpler than STV for single-leader elections.',
+      },
+      {
+        name: 'Score / Range Voting',
+        scale: 'Any',
+        use: 'Rating proposals or candidates on a scale',
+        how: 'Rate each option 0–5 (or 0–10). Highest average score wins.',
+        note: 'Good for evaluating qualitative things — art proposals, mission priorities, trustworthiness.',
+      },
+      {
+        name: 'Liquid Democracy / Delegative Voting',
+        scale: 'Any (especially ongoing governance)',
+        use: 'Persistent representation with flexible delegation',
+        how: 'Vote directly on any issue, or delegate your vote to someone you trust — who can further delegate. Delegation is revocable at any time.',
+        note: 'Models real trust networks. Creates emergent leaders without formal elections.',
+      },
+      {
+        name: 'Sortition (Random Selection)',
+        scale: 'Large groups',
+        use: 'Forming citizen assemblies, juries, councils',
+        how: 'Representatives are chosen by lottery from the eligible population.',
+        note: 'Radically egalitarian. Removes campaigning entirely.',
+      },
+      {
+        name: 'Conviction Voting',
+        scale: 'Medium–large, ongoing',
+        use: 'Continuous funding allocation',
+        how: 'You stake tokens on proposals over time. The longer you stake, the more "conviction" accumulates. Proposals pass when conviction crosses a threshold.',
+        note: 'Rewards sustained commitment over hype.',
+      },
+    ],
+  },
+  {
+    id: 'deliberation',
+    title: 'Deliberation & Consensus',
+    color: '#4a7c59',
+    orient: 'ASSEMBLY',
+    tools: [
+      {
+        name: 'Consent-Based Decision Making (Sociocracy)',
+        scale: 'Small–medium groups (3–30)',
+        use: 'Policy decisions, working group governance',
+        how: 'A proposal passes unless someone has a "paramount objection" — not "I prefer something else" but "this will cause harm." Objections are integrated into improved proposals.',
+        note: 'Fast and inclusive. Teaches the difference between preference and objection.',
+      },
+      {
+        name: 'Consensus Process (Formal)',
+        scale: 'Small–medium (5–40)',
+        use: 'High-stakes decisions requiring full buy-in',
+        how: 'Discussion → proposal → check for concerns → address concerns → check for blocks → consensus or stand-aside. Hand signals (thumbs up/sideways/down, or twinkle fingers).',
+        note: 'The hand signals alone are powerful. People physically embody agreement.',
+      },
+      {
+        name: 'Fist-to-Five',
+        scale: 'Any',
+        use: 'Quick temperature check on a proposal',
+        how: 'Everyone holds up 0–5 fingers. 5 = fully support, 3 = can live with it, 1 = serious concerns, 0 (fist) = block.',
+        note: 'Instant, visual, no tech needed. Use before and after deliberation to show opinion shift.',
+      },
+      {
+        name: 'Fishbowl Discussion',
+        scale: 'Medium–large (20–200)',
+        use: 'Structured dialogue on contested issues',
+        how: 'A small circle (4–6 chairs) discusses. Outer ring listens. One chair is always empty — anyone from the outer ring can sit in it to join, but then someone else must leave.',
+        note: 'Beautiful spatial mechanic. Self-regulating. Prevents domination by loud voices.',
+      },
+      {
+        name: 'Talking Circle / Council',
+        scale: 'Small–medium (5–30)',
+        use: 'Deep listening, conflict resolution, ceremony',
+        how: 'A talking piece passes around the circle. Only the holder speaks. No cross-talk, no rebuttals — only witnessing.',
+        note: 'Indigenous governance wisdom. Slows everything down in the best way.',
+      },
+      {
+        name: 'Deliberative Polling',
+        scale: 'Large (50–500+)',
+        use: 'Informed collective opinion on complex issues',
+        how: 'Poll → provide balanced briefing materials → facilitated small-group discussion → poll again. Measure opinion shift.',
+        note: 'Shows how minds change with better information. The before/after data is powerful.',
+      },
+      {
+        name: 'Open Space Technology',
+        scale: 'Medium–large (20–2000)',
+        use: 'Self-organising conferences, agenda setting',
+        how: 'No preset agenda. Participants propose sessions, post them on a wall, self-organize into groups. "Law of Two Feet" — if you\'re not learning or contributing, move on.',
+        note: 'Already native to festival and unconference culture. Players set the day\'s agenda each morning.',
+      },
+    ],
+  },
+  {
+    id: 'resources',
+    title: 'Resource Allocation & Economics',
+    color: '#b8860b',
+    orient: 'ASSEMBLY',
+    tools: [
+      {
+        name: 'Participatory Budgeting',
+        scale: 'Medium–large',
+        use: 'Deciding how to spend a shared pool',
+        how: 'Community members propose projects, develop budgets, then vote on which get funded. Usually with a fixed pot.',
+        note: 'Core Assemblies mechanic. A planetary council allocates resources across proposals.',
+      },
+      {
+        name: 'Commons Management (Ostrom\'s Principles)',
+        scale: 'Any group sharing a resource',
+        use: 'Managing shared resources without tragedy',
+        how: 'Elinor Ostrom\'s 8 principles: clear boundaries, proportional costs/benefits, collective-choice arrangements, monitoring, graduated sanctions, conflict resolution, local autonomy, nested governance.',
+        note: 'Players learn the principles by applying them to shared commons: water, energy, land.',
+      },
+      {
+        name: 'Gift Economy Circles',
+        scale: 'Small–medium (5–50)',
+        use: 'Non-monetary exchange, community bonding',
+        how: 'Participants offer skills, objects, or time without expectation of direct return. Surplus circulates.',
+        note: 'Natural Garden faction practice. Contrast with market-based allocation.',
+      },
+      {
+        name: 'Prediction Markets',
+        scale: 'Any',
+        use: 'Forecasting, collective intelligence',
+        how: 'Players buy/sell shares in outcomes ("Will the dam hold?"). Prices reflect collective probability estimates.',
+        note: 'Gamifies information aggregation. Rewards paying attention to what\'s actually happening.',
+      },
+      {
+        name: 'Futarchy',
+        scale: 'Large',
+        use: 'Policy selection via markets',
+        how: '"Vote on values, bet on beliefs." The community votes on goals, then prediction markets determine which policies best achieve those goals.',
+        note: 'Advanced Spaceship Earth mechanic. Deeply weird and fascinating.',
+      },
+    ],
+  },
+  {
+    id: 'small-group',
+    title: 'Small-Group & Tribal',
+    color: '#7b5ea7',
+    orient: 'MYSTERIES',
+    tools: [
+      {
+        name: 'Roles Rotation / Circle Governance',
+        scale: 'Small (3–15)',
+        use: 'Running a working group without hierarchy',
+        how: 'Roles (facilitator, note-taker, timekeeper, vibes-checker) rotate each meeting. No permanent leaders.',
+        note: 'Teaches that leadership is a function, not an identity.',
+      },
+      {
+        name: 'Do-ocracy',
+        scale: 'Any',
+        use: 'Action-biased self-organisation',
+        how: 'If you want something done, do it. If you do it, you\'re in charge of it. No permission needed.',
+        note: 'Already Burning Man DNA. Interesting to put in explicit tension with other systems.',
+      },
+      {
+        name: 'Advice Process',
+        scale: 'Small–large',
+        use: 'Decentralised decision-making',
+        how: 'Anyone can make any decision, but must first seek advice from (a) people affected and (b) people with expertise. Not consensus — the decider still decides.',
+        note: 'Fast, empowering, but demands accountability.',
+      },
+      {
+        name: 'Council of Elders / Wisdom Council',
+        scale: 'Community-wide',
+        use: 'Long-term perspective, conflict resolution',
+        how: 'A small rotating group serves as advisors and mediators. Not executive power — advisory and moral authority only.',
+        note: 'A counterbalance to populist voting dynamics.',
+      },
+      {
+        name: 'Peacemaking Circle (Restorative Justice)',
+        scale: 'Small (3–20)',
+        use: 'Harm repair, conflict between people or factions',
+        how: 'Harmed party, responsible party, and community members sit in circle with a facilitator. Focus on understanding harm, taking responsibility, and agreeing on repair — not punishment.',
+        note: 'Essential for when conflict gets real. Transforms disputes into story.',
+      },
+    ],
+  },
+  {
+    id: 'digital',
+    title: 'Digital-Native & Experimental',
+    color: '#2a6496',
+    orient: 'SPACESHIP',
+    tools: [
+      {
+        name: 'Holographic Consensus',
+        scale: 'Any (digital)',
+        use: 'Scalable governance for large decentralised groups',
+        how: 'Proposals can be made by anyone. Predictors stake tokens on whether the group would approve. Only contested proposals go to full vote.',
+        note: 'Efficient for high-volume decisions. The prediction layer filters noise.',
+      },
+      {
+        name: 'Retroactive Public Goods Funding',
+        scale: 'Community-wide',
+        use: 'Rewarding contributions after the fact',
+        how: 'Instead of funding proposals upfront, evaluate what was actually valuable after a period and reward it retroactively.',
+        note: 'Flips incentives. People focus on doing good work rather than writing good proposals.',
+      },
+      {
+        name: 'Polis (Computational Democracy)',
+        scale: 'Large (50–10,000+)',
+        use: 'Finding consensus in polarised groups',
+        how: 'Participants submit short statements and vote agree/disagree on others\' statements. Machine learning clusters opinion groups and surfaces statements with cross-group consensus.',
+        note: 'Used by Audrey Tang for vTaiwan. Surfaces surprising agreements between factions.',
+      },
+      {
+        name: 'Coordi-nation (Signal-based coordination)',
+        scale: 'Any',
+        use: 'Emergent coordination without central planning',
+        how: 'Players signal intentions on a shared board or map. Self-organisation happens through visible information.',
+        note: 'Low-overhead. Makes collective intelligence visible.',
+      },
+    ],
+  },
+  {
+    id: 'meta',
+    title: 'Meta-Systems & Constitutional',
+    color: '#4a7c59',
+    orient: 'ASSEMBLY',
+    tools: [
+      {
+        name: 'Constitutional Convention',
+        scale: 'Whole community',
+        use: 'Establishing the rules of governance itself',
+        how: 'Delegates draft a foundational charter. Ratification by the broader body.',
+        note: 'Could be the climactic event — building a planetary constitution using whichever systems participants have learned.',
+      },
+      {
+        name: 'Subsidiarity Principle',
+        scale: 'Multi-level',
+        use: 'Deciding what gets decided where',
+        how: 'Decisions should be made at the most local level capable of handling them. Only escalate upward when necessary.',
+        note: 'Architectural principle for the whole governance stack: personal → team → faction → council → planetary assembly.',
+      },
+      {
+        name: 'Two-House / Bicameral System',
+        scale: 'Large',
+        use: 'Balancing representation models',
+        how: 'One chamber represents people proportionally, another represents groups (factions, regions) equally. Both must agree.',
+        note: 'Ensures small groups aren\'t steamrolled.',
+      },
+      {
+        name: 'Rotating Facilitation with Mandate',
+        scale: 'Medium',
+        use: 'Time-limited executive authority',
+        how: 'A facilitator is empowered for a fixed short term with a specific mandate. Must report back. Cannot self-extend.',
+        note: 'Safe way to experiment with concentrated power. The mandate expires — what happened?',
+      },
+    ],
+  },
+];
+---
+
+<Base title="Governance Library — The Orbital" description="A modular toolkit of governance systems — voting methods, deliberation processes, resource allocation mechanisms — drawn from global democratic innovation and collective intelligence research.">
+  <div class="container">
+    <div class="library-wrap">
+
+      <div class="library-header">
+        <p class="eyebrow">Governance Library</p>
+        <h1>Tools for Collective Decision-Making</h1>
+        <p class="library-intro">
+          A modular toolkit of governance systems — from voting methods and deliberation
+          processes to resource allocation mechanisms and constitutional frameworks.
+          Drawn from democratic innovation, commons research, indigenous practice, and
+          digital-native experimentation.
+        </p>
+        <p class="library-intro">
+          These are building blocks. They can be combined, modified, and nested.
+          The wisdom comes from knowing which tool fits which situation.
+        </p>
+
+        <div class="library-nav">
+          {categories.map(cat => (
+            <a href={`#${cat.id}`} class="cat-link" style={`--cat-color: ${cat.color}`}>{cat.title}</a>
+          ))}
+        </div>
+      </div>
+
+      {categories.map(cat => (
+        <section class="cat-section" id={cat.id}>
+          <div class="cat-header" style={`border-left-color: ${cat.color}`}>
+            <h2 class="cat-title">{cat.title}</h2>
+            <span class="cat-count">{cat.tools.length} methods</span>
+          </div>
+
+          <div class="tools-grid">
+            {cat.tools.map(tool => (
+              <div class="tool-card" style={`--tool-color: ${cat.color}`}>
+                <h3 class="tool-name">{tool.name}</h3>
+                <div class="tool-meta">
+                  <span class="tool-scale">Scale: {tool.scale}</span>
+                  <span class="tool-use">Use: {tool.use}</span>
+                </div>
+                <p class="tool-how">{tool.how}</p>
+                <p class="tool-note">→ {tool.note}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <div class="library-footer">
+        <p>This is a living document. Systems can be combined, modified, and nested into larger governance architectures.</p>
+        <div class="footer-links">
+          <a href="/about" class="footer-link">← About The Orbital</a>
+          <a href="/manifesto" class="footer-link">Manifesto →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</Base>
+
+<style>
+.library-wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.library-header {
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 3px double var(--border);
+}
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: .5rem;
+}
+.library-header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.library-intro {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.0625rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #444;
+  margin-bottom: .875rem;
+}
+
+.library-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: 1.5rem;
+}
+.cat-link {
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .25rem .65rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--cat-color);
+  color: var(--cat-color);
+  text-decoration: none;
+  transition: background .15s, color .15s;
+}
+.cat-link:hover { background: var(--cat-color); color: #fff; }
+
+.cat-section {
+  margin-bottom: 3.5rem;
+}
+.cat-header {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  border-left: 4px solid currentColor;
+  padding-left: .75rem;
+  margin-bottom: 1.5rem;
+}
+.cat-title {
+  font-family: var(--font-sans);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+.cat-count {
+  font-size: .6875rem;
+  color: var(--text-3);
+}
+
+.tools-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tool-card {
+  background: var(--bg);
+  padding: 1.25rem 1.375rem;
+  border-left: 3px solid var(--tool-color);
+  transition: background .15s;
+}
+.tool-card:hover { background: var(--filter-bg); }
+
+.tool-name {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  margin-bottom: .5rem;
+  color: var(--text);
+}
+
+.tool-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: .5rem;
+}
+.tool-scale,
+.tool-use {
+  font-size: .75rem;
+  color: var(--text-3);
+  font-family: var(--font-sans);
+}
+.tool-scale::before { content: '⇔ '; }
+.tool-use::before { content: '◎ '; }
+
+.tool-how {
+  font-size: .9rem;
+  line-height: 1.65;
+  color: #555;
+  margin-bottom: .5rem;
+}
+
+.tool-note {
+  font-size: .8125rem;
+  color: var(--text-2);
+  font-style: italic;
+  margin: 0;
+}
+
+.library-footer {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-2);
+  font-size: .9375rem;
+  font-style: italic;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+}
+.footer-link {
+  font-size: .875rem;
+  color: var(--text-2);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+}
+.footer-link:hover { color: var(--text); }
+</style>

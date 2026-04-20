@@ -95,8 +95,29 @@ const orientations = [
       <p>The premise: we now have all the puzzle pieces for a fundamentally different way of organising human civilisation. What we lack is a way to feel how they work together.</p>
       <p>This initiative is building prototype gatherings where participants live inside a future society — making real decisions, trading in simulated economies, experiencing consequences — and carrying that embodied knowledge home.</p>
       <p>The first prototype is planned for 2027 in Sweden.</p>
-      <p><em>Manifesto: coming soon.</em></p>
+      <p><a href="/manifesto" class="manifesto-link">Read the manifesto →</a></p>
       <p class="project-motto">Prototyping our way towards paradise.</p>
+    </section>
+
+    <section class="about-section about-subscribe">
+      <h2>Stay in the loop</h2>
+      <p class="subscribe-desc">Occasional updates when significant things happen in the movement. No noise.</p>
+      <!-- Email list form — swap action URL for your provider (Buttondown, Mailchimp, etc.) -->
+      <form class="subscribe-form" action="#" method="POST" onsubmit="handleSubscribe(event)">
+        <input type="hidden" name="tag" value="orbital" />
+        <div class="subscribe-row">
+          <input
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+            class="subscribe-input"
+            aria-label="Email address"
+          />
+          <button type="submit" class="subscribe-btn">Subscribe</button>
+        </div>
+        <p class="subscribe-note" id="subscribe-feedback" aria-live="polite"></p>
+      </form>
     </section>
 
     <section class="about-section about-contact">
@@ -170,4 +191,52 @@ const orientations = [
 .project-motto { font-family: var(--font-serif); font-style: italic; color: var(--text-2) !important; }
 
 .about-contact a { color: var(--text); }
+
+.manifesto-link { color: var(--text); font-weight: 600; }
+
+.subscribe-desc { color: var(--text-2); margin-bottom: 1rem; }
+.subscribe-form { margin-top: .25rem; }
+.subscribe-row { display: flex; gap: .5rem; flex-wrap: wrap; }
+.subscribe-input {
+  flex: 1;
+  min-width: 180px;
+  padding: .5rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: .9375rem;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+}
+.subscribe-input:focus { border-color: var(--text-2); }
+.subscribe-btn {
+  padding: .5rem 1.125rem;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 4px;
+  font-size: .875rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: opacity .15s;
+}
+.subscribe-btn:hover { opacity: .8; }
+.subscribe-note { font-size: .8125rem; color: var(--text-3); margin-top: .5rem; min-height: 1.2em; }
 </style>
+
+<script>
+function handleSubscribe(e: Event) {
+  e.preventDefault();
+  const form = e.target as HTMLFormElement;
+  const email = (form.querySelector('input[type="email"]') as HTMLInputElement).value;
+  const feedback = document.getElementById('subscribe-feedback');
+  // TODO: Replace this block with your actual form submission endpoint
+  // e.g. fetch('https://buttondown.email/api/emails/embed-subscribe/YOUR_HANDLE', { ... })
+  if (feedback) {
+    feedback.textContent = `✓ Got it — we'll be in touch at ${email}.`;
+  }
+  form.reset();
+}
+</script>

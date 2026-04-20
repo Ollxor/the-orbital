@@ -60,6 +60,29 @@ const relatedEvents = eventsData.filter(e => e.actors?.includes(slug!));
         {actor.location && <span class="actor-loc">{actor.location}</span>}
       </div>
 
+      {((actor as any).founded || (actor as any).lastActive || (actor as any).fundingDisclosure) && (
+        <div class="credibility-row">
+          {(actor as any).founded && (
+            <div class="cred-item">
+              <span class="cred-label">Founded</span>
+              <span class="cred-value">{(actor as any).founded}</span>
+            </div>
+          )}
+          {(actor as any).lastActive && (
+            <div class="cred-item">
+              <span class="cred-label">Active</span>
+              <span class="cred-value">{(actor as any).lastActive}</span>
+            </div>
+          )}
+          {(actor as any).fundingDisclosure && (
+            <div class="cred-item cred-item--wide">
+              <span class="cred-label">Funding</span>
+              <span class="cred-value">{(actor as any).fundingDisclosure}</span>
+            </div>
+          )}
+        </div>
+      )}
+
       {actor.tags?.length > 0 && (
         <div class="tags tags-row">
           {actor.tags.map((tag: string) => <a href={`/tags/${tag}`} class="tag">{tag.replace(/-/g, '\u00a0')}</a>)}
@@ -137,6 +160,35 @@ const relatedEvents = eventsData.filter(e => e.actors?.includes(slug!));
 .actor-loc { color: var(--text-3); font-size: .8125rem; }
 
 .tags-row { margin-bottom: 1.5rem; }
+
+.credibility-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  margin-bottom: 1.25rem;
+  padding: .75rem 1rem;
+  background: var(--filter-bg);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+.cred-item {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+.cred-item--wide { flex: 1; min-width: 180px; }
+.cred-label {
+  font-family: var(--font-sans);
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.cred-value {
+  font-size: .875rem;
+  color: var(--text-2);
+}
 
 .section-heading {
   font-family: var(--font-sans);

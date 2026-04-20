@@ -89,7 +89,7 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
           <div class={`card-image-wrap${story.image ? '' : ' card-placeholder'}${(story as any).kind === 'video' ? ' card-video' : ''}`} data-orient={story.orientations[0] || 'GARDEN'}>
             <a href={`/news/${story.slug}`}>
               {story.image ? (
-                <img src={story.image} alt={story.imageAlt} class="card-image" loading="lazy" onerror="this.parentElement.parentElement.classList.add('card-placeholder'); this.remove();" />
+                <img src={story.image} alt={story.imageAlt} class="card-image" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.parentElement.classList.add('card-placeholder'); this.remove();" />
               ) : (
                 <img src={`/assets/${iconMap[story.orientations[0] || 'GARDEN']}`} alt="" class="placeholder-icon" />
               )}

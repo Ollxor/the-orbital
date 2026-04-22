@@ -25,3 +25,9 @@ pnpm-debug.log*
 
 # Private project documents — kept locally for AI context, never pushed to public repo
 docs/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example

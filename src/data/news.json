@@ -1,5 +1,51 @@
 [
   {
+    "slug": "yuvelis-morales-rights-of-nature-goldman-prize",
+    "title": "Yuvelis Morales: 2026 Goldman Prize Winner for defending the Rights of Nature",
+    "date": "2026-04-22",
+    "image": "https://www.garn.org/wp-content/uploads/2026/04/2.png",
+    "imageAlt": "Yuvelis Morales: 2026 Goldman Prize Winner for defending the Rights of Nature",
+    "summary": "Yuvelis Morales wins 2026 Goldman Prize for defending rights of nature, recognizing frontline environmental advocacy that centers ecological personhood and non-human legal standing.",
+    "body": "",
+    "insight": "Goldman Prize visibility for rights-of-nature work signals mainstream legitimacy for legal frameworks that subordinate human economic interests to ecosystem integrity — a governance paradigm shift.",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "legal-frameworks",
+      "environmental-justice",
+      "goldman-prize",
+      "ecological-advocacy"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.garn.org/yuvelis-morales/"
+  },
+  {
+    "slug": "australia-food-system-shocks-resilience",
+    "title": "These shocks to Australia’s food system won’t be the last. Will it learn in time for the next one?",
+    "date": "2026-04-22",
+    "image": "https://images.theconversation.com/files/730930/original/file-20260420-63-vkaf6v.jpg?ixlib=rb-4.1.0&amp;rect=0%2C389%2C3635%2C1817&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
+    "imageAlt": "These shocks to Australia’s food system won’t be the last. Will it learn in time for the next one?",
+    "summary": "Australia's food system faces repeated shocks from geopolitical disruption and climate volatility; the article examines whether institutional learning can build resilience before the next crisis hits.",
+    "body": "",
+    "insight": "Food system vulnerability reveals how planetary governance must integrate supply chain sovereignty with ecological stewardship—requiring both local regeneration (GARDEN) and systems mapping (SPACESHIP) rather than relying on open sea lanes alone.",
+    "actors": [],
+    "tags": [
+      "food-sovereignty",
+      "supply-chain-resilience",
+      "climate-shocks",
+      "systems-learning"
+    ],
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://theconversation.com/these-shocks-to-australias-food-system-wont-be-the-last-will-it-learn-in-time-for-the-next-one-281007"
+  },
+  {
     "slug": "forests-natural-flood-defences-new-research-2026",
     "title": "How Forests Act as Natural Flood Defences: New Research Shows Trees Can Slash Flood Risk",
     "date": "2026-04-20",
@@ -9,8 +55,18 @@
     "body": "",
     "insight": "When forests are proven to protect against the largest floods, not just moderate ones, the case for protection moves from ecological to economic — and becomes much harder for governments to ignore.",
     "actors": [],
-    "tags": ["forests", "flooding", "climate-adaptation", "ecology", "research", "hydrology"],
-    "orientations": ["GARDEN", "SPACESHIP"],
+    "tags": [
+      "forests",
+      "flooding",
+      "climate-adaptation",
+      "ecology",
+      "research",
+      "hydrology"
+    ],
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP"
+    ],
     "sourceUrl": "https://www.resilience.org/stories/2026-04-20/how-forests-act-as-natural-flood-defences-new-research-shows-trees-can-slash-flood-risk/"
   },
   {
@@ -23,8 +79,19 @@
     "body": "",
     "insight": "The climate and governance movement spends enormous energy on information; Knorr suggests the real barrier is neurological, not informational — and that changes what effective strategy looks like.",
     "actors": [],
-    "tags": ["polycrisis", "climate", "psychology", "resilience", "nervous-system", "systems", "collapse"],
-    "orientations": ["SPACESHIP", "MYSTERIES"],
+    "tags": [
+      "polycrisis",
+      "climate",
+      "psychology",
+      "resilience",
+      "nervous-system",
+      "systems",
+      "collapse"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "MYSTERIES"
+    ],
     "sourceUrl": "https://www.resilience.org/stories/2026-04-20/how-to-stay-sane-in-a-burning-world-the-four-neural-states-of-the-polycrisis/"
   },
   {
@@ -37,8 +104,18 @@
     "body": "",
     "insight": "Who belongs in the climate movement is also a question of who gets to shape the planetary future — and ideological exclusion has governance costs that show up in electoral losses and surrendered ground.",
     "actors": [],
-    "tags": ["climate-movement", "pluralism", "strategy", "far-right", "politics", "governance"],
-    "orientations": ["ASSEMBLY", "MYSTERIES"],
+    "tags": [
+      "climate-movement",
+      "pluralism",
+      "strategy",
+      "far-right",
+      "politics",
+      "governance"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
     "sourceUrl": "https://www.resilience.org/stories/2026-04-14/without-pluralism-within-the-climate-movement-we-risk-handing-the-future-to-the-far-right/"
   },
   {
@@ -50,9 +127,22 @@
     "summary": "From Ecuador's 2008 Pachamama framework to Peru's 2024 recognition of stingless bees as legal subjects, over 150 laws across 30+ countries now grant ecosystems and species legal personhood — making it possible for advocates to speak in court on nature's behalf. The movement is accelerating fastest where Indigenous jurisprudence already treats nature as a subject rather than an object.",
     "body": "",
     "insight": "When nature has legal standing, the question shifts from 'can we afford to protect it?' to 'can we justify the harm?' — and that changes both policy and power.",
-    "actors": ["global-alliance-for-the-rights-of-nature", "earth-law-center"],
-    "tags": ["rights-of-nature", "legal", "indigenous-rights", "ecology", "international-law", "governance"],
-    "orientations": ["GARDEN", "ASSEMBLY"],
+    "actors": [
+      "global-alliance-for-the-rights-of-nature",
+      "earth-law-center"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "legal",
+      "indigenous-rights",
+      "ecology",
+      "international-law",
+      "governance"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
     "sourceUrl": "https://www.independent.com/2026/04/02/nature-is-gaining-legal-rights/"
   },
   {
@@ -64,9 +154,23 @@
     "summary": "A newly launched Marine Ecosystems Community of Practice unites coastal restoration initiatives across the Philippines, Kenya, and Egypt — showing that community-led, cross-regional coordination can dramatically cut the cost of ocean restoration while achieving better outcomes than top-down approaches. The model embeds ocean-based livelihoods as a structural part of conservation rather than an afterthought.",
     "body": "",
     "insight": "Community-driven marine restoration is building the governance infrastructure for ocean commons at precisely the moment state-led conservation is retreating — and proving it can do more with less.",
-    "actors": ["ecosystem-restoration-communities"],
-    "tags": ["ocean", "marine", "restoration", "community", "commons", "governance", "philippines", "kenya"],
-    "orientations": ["GARDEN", "ASSEMBLY"],
+    "actors": [
+      "ecosystem-restoration-communities"
+    ],
+    "tags": [
+      "ocean",
+      "marine",
+      "restoration",
+      "community",
+      "commons",
+      "governance",
+      "philippines",
+      "kenya"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
     "sourceUrl": "https://www.resilience.org/stories/2026-04-03/a-new-wave-of-collaboration-for-our-oceans/"
   },
   {

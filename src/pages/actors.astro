@@ -17,6 +17,16 @@ const iconMap: Record<string, string> = {
 };
 
 const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
+
+function getLogo(website: string): string {
+  if (!website) return '';
+  try {
+    const url = new URL(website);
+    return `https://logo.clearbit.com/${url.hostname}`;
+  } catch {
+    return '';
+  }
+}
 ---
 
 <Base title="Actors — The Orbital">
@@ -49,6 +59,15 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
           data-name={actor.name.toLowerCase()}
         >
           <div class="actor-header">
+            {getLogo(actor.website) && (
+              <img
+                src={getLogo(actor.website)}
+                alt={`${actor.name} logo`}
+                class="actor-logo"
+                referrerpolicy="no-referrer"
+                onerror="this.style.display='none'"
+              />
+            )}
             <h3 class="actor-name">
               <a href={`/actors/${actor.slug}`}>{actor.name}</a>
             </h3>
@@ -121,11 +140,19 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
   transition: opacity .2s;
 }
 .actor-card.hidden { display: none; }
-.actor-header { display: flex; justify-content: space-between; align-items: flex-start; gap: .5rem; margin-bottom: .5rem; }
-.actor-name { font-size: 1rem; font-weight: 600; line-height: 1.3; }
+.actor-header { display: flex; align-items: center; gap: .625rem; margin-bottom: .5rem; }
+.actor-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: transparent;
+}
+.actor-name { font-size: 1rem; font-weight: 600; line-height: 1.3; flex: 1; min-width: 0; }
 .actor-name a { text-decoration: none; }
 .actor-name a:hover { text-decoration: underline; }
-.actor-orientations { display: flex; gap: .25rem; flex-shrink: 0; }
+.actor-orientations { display: flex; gap: .25rem; flex-shrink: 0; margin-left: auto; }
 .actor-orient-icon { width: 20px; height: 20px; object-fit: contain; }
 .actor-desc { font-size: .875rem; color: var(--text-2); line-height: 1.55; margin-bottom: .5rem; }
 .actor-location { font-size: .75rem; color: var(--text-3); margin-bottom: .5rem; }

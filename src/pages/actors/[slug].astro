@@ -12,6 +12,16 @@ export function getStaticPaths() {
 const { slug } = Astro.params;
 const actor = actorsData.find(a => a.slug === slug)!;
 
+function getLogo(website: string): string {
+  if (!website) return '';
+  try {
+    const url = new URL(website);
+    return `https://logo.clearbit.com/${url.hostname}`;
+  } catch {
+    return '';
+  }
+};
+
 const orientationLabels: Record<string, string> = {
   GARDEN: 'The Garden',
   SPACESHIP: 'Spaceship Earth',
@@ -41,8 +51,21 @@ const relatedEvents = eventsData.filter(e => e.actors?.includes(slug!));
     <div class="actor-wrap">
 
       <div class="actor-header-top">
-        <p class="actor-eyebrow">{actor.type || 'Actor'}{actor.scale ? ` · ${actor.scale}` : ''}</p>
-        <h1 class="actor-title">{actor.name}</h1>
+        <div class="actor-title-row">
+          {getLogo(actor.website) && (
+            <img
+              src={getLogo(actor.website)}
+              alt={`${actor.name} logo`}
+              class="actor-logo"
+              referrerpolicy="no-referrer"
+              onerror="this.style.display='none'"
+            />
+          )}
+          <div>
+            <p class="actor-eyebrow">{actor.type || 'Actor'}{actor.scale ? ` · ${actor.scale}` : ''}</p>
+            <h1 class="actor-title">{actor.name}</h1>
+          </div>
+        </div>
         <div class="actor-orient-row">
           {actor.orientations.map(o => (
             <span class="orient-chip">
@@ -53,7 +76,7 @@ const relatedEvents = eventsData.filter(e => e.actors?.includes(slug!));
         </div>
       </div>
 
-      <p class="actor-desc">{actor.description}</p>
+      <p class="actor-desc">{(actor as any).about || actor.description}</p>
 
       <div class="actor-meta">
         {actor.website && <a href={actor.website} target="_blank" rel="noopener" class="website-link">Visit website ↗</a>}
@@ -136,8 +159,19 @@ const relatedEvents = eventsData.filter(e => e.actors?.includes(slug!));
 .actor-wrap { max-width: var(--max-w); margin: 0 auto; padding-top: 2rem; }
 
 .actor-header-top { padding-bottom: 1.25rem; border-bottom: 3px double var(--border); margin-bottom: 1.25rem; }
-.actor-eyebrow { font-family: var(--font-sans); font-size: .6875rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); margin-bottom: .5rem; }
-.actor-title { font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; font-weight: 400; line-height: 1.2; margin-bottom: .75rem; }
+.actor-title-row { display: flex; align-items: center; gap: 1rem; margin-bottom: .75rem; }
+.actor-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  padding: 4px;
+  background: #fff;
+}
+.actor-eyebrow { font-family: var(--font-sans); font-size: .6875rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); margin-bottom: .3rem; }
+.actor-title { font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; font-weight: 400; line-height: 1.2; margin-bottom: 0; }
 .actor-orient-row { display: flex; flex-wrap: wrap; gap: .4rem; }
 
 .orient-chip {

@@ -2,8 +2,8 @@ name: Daily Feed Update
 
 on:
   schedule:
-    # 07:00 UTC daily — catches overnight articles from US/Europe/Global
-    - cron: '0 7 * * *'
+    # 05:00 UTC = 07:00 CEST (summer) / 06:00 CET (winter) — Sweden local morning
+    - cron: '0 5 * * *'
   workflow_dispatch:
     # Allow manual trigger from GitHub Actions tab (useful for testing)
 

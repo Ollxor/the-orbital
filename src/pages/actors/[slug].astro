@@ -16,7 +16,7 @@ function getLogo(website: string): string {
   if (!website) return '';
   try {
     const url = new URL(website);
-    return `https://logo.clearbit.com/${url.hostname}`;
+    return `https://icons.duckduckgo.com/ip3/${url.hostname}.ico`;
   } catch {
     return '';
   }

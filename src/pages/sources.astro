@@ -1,0 +1,141 @@
+---
+import Base from '../layouts/Base.astro';
+
+const sources = [
+  {
+    category: 'News & Media',
+    items: [
+      { name: 'Carbon Brief', url: 'https://www.carbonbrief.org', description: 'Detailed coverage of climate science and policy.' },
+      { name: 'The Guardian – Environment', url: 'https://www.theguardian.com/environment', description: 'Broad coverage of ecology, climate, and environmental governance.' },
+      { name: 'Rest of World', url: 'https://restofworld.org', description: 'Technology and its impact on the Global South.' },
+      { name: 'Democracy Now', url: 'https://www.democracynow.org', description: 'Independent news with a systems-change lens.' },
+      { name: 'Resilience', url: 'https://www.resilience.org', description: 'Transition, post-growth, and community resilience perspectives.' },
+      { name: 'openDemocracy', url: 'https://www.opendemocracy.net', description: 'Democratic innovation, power, and global governance.' },
+    ],
+  },
+  {
+    category: 'Research & Think Tanks',
+    items: [
+      { name: 'Stockholm Resilience Centre', url: 'https://www.stockholmresilience.org', description: 'Planetary boundaries, social-ecological systems research.' },
+      { name: 'Future of Life Institute', url: 'https://futureoflife.org', description: 'Existential risk, technology governance, and long-term policy.' },
+      { name: 'IPBES', url: 'https://www.ipbes.net', description: 'Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services.' },
+      { name: 'Democracy R&D', url: 'https://democracyrd.org', description: 'Network of democratic innovation practitioners and researchers.' },
+      { name: 'P2P Foundation', url: 'https://p2pfoundation.net', description: 'Commons, peer production, and alternative economics.' },
+      { name: 'Metabolic', url: 'https://metabolic.nl', description: 'Systems change, circular economy, and planetary boundaries.' },
+    ],
+  },
+  {
+    category: 'Networks & Aggregators',
+    items: [
+      { name: 'Systems Change Alliance', url: 'https://systemschangealliance.org', description: 'Network of organisations working on systems-level change.' },
+      { name: 'DEAL (Doughnut Economics)', url: 'https://doughnuteconomics.org', description: 'Community around doughnut economics and regenerative models.' },
+      { name: 'Ashoka', url: 'https://www.ashoka.org', description: 'Global network of social entrepreneurs.' },
+      { name: 'WeAll', url: 'https://weall.org', description: 'Wellbeing Economy Alliance — policy and advocacy network.' },
+    ],
+  },
+];
+---
+
+<Base title="Sources — The Orbital" description="The publications, research centres, and networks that inform The Orbital's coverage.">
+  <div class="container">
+    <div class="sources-wrap">
+      <h1 class="sources-title">Sources</h1>
+      <p class="sources-intro">The publications, research centres, and networks that inform The Orbital's daily feed and editorial direction. This list is illustrative rather than exhaustive — the field is large and growing.</p>
+
+      {sources.map(group => (
+        <section class="sources-section">
+          <h2 class="sources-heading">{group.category}</h2>
+          <div class="sources-list">
+            {group.items.map(item => (
+              <div class="source-item">
+                <a href={item.url} target="_blank" rel="noopener" class="source-name">{item.name} ↗</a>
+                <p class="source-desc">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <p class="sources-note">Missing a key source? <a href="/contact">Let us know.</a></p>
+    </div>
+  </div>
+</Base>
+
+<style>
+.sources-wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.sources-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+}
+
+.sources-intro {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--text-2);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+}
+
+.sources-section {
+  margin-bottom: 2.5rem;
+}
+
+.sources-heading {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.sources-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .875rem 2rem;
+}
+@media (max-width: 600px) { .sources-list { grid-template-columns: 1fr; } }
+
+.source-item {
+  padding: .75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.source-name {
+  display: block;
+  font-weight: 600;
+  font-size: .9375rem;
+  color: var(--text);
+  text-decoration: none;
+  margin-bottom: .25rem;
+}
+.source-name:hover { text-decoration: underline; }
+
+.source-desc {
+  font-size: .8125rem;
+  color: var(--text-3);
+  line-height: 1.55;
+}
+
+.sources-note {
+  margin-top: 2rem;
+  font-size: .875rem;
+  color: var(--text-3);
+  font-style: italic;
+}
+.sources-note a { color: var(--text-2); font-weight: 600; }
+.sources-note a:hover { text-decoration: underline; }
+</style>

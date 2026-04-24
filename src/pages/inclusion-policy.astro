@@ -1,0 +1,123 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Inclusion Policy — The Orbital" description="The Orbital's policy for which actors, projects, and events are included in the directory.">
+  <div class="container">
+    <div class="policy-wrap">
+      <h1 class="policy-title">Inclusion Policy</h1>
+      <p class="policy-intro">The Orbital tracks organisations, networks, initiatives, projects, and events that are contributing — in some meaningful way — to the broader movement for planetary systems governance. This page explains how we decide what to include.</p>
+
+      <section class="policy-section">
+        <h2>What we track</h2>
+        <p>We include actors and projects that are working at the intersection of planetary-scale challenges and systemic governance responses. This includes:</p>
+        <ul>
+          <li>Organisations working on ecological stewardship, Earth system science, or regenerative practice (<strong>The Garden</strong>)</li>
+          <li>Initiatives focused on technology governance, digital infrastructure, or techno-social systems (<strong>Spaceship Earth</strong>)</li>
+          <li>Networks exploring new forms of sense-making, meaning, ritual, or epistemic culture (<strong>The Mysteries</strong>)</li>
+          <li>Projects building new models of collective decision-making, democratic innovation, or participatory governance (<strong>The Assemblies</strong>)</li>
+        </ul>
+        <p>We also include actors that span several of these dimensions, or that serve as connective tissue between communities working on different parts of the puzzle.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>What we do not track</h2>
+        <p>We are not a general directory of NGOs, think tanks, or sustainability initiatives. We do not include actors whose work is primarily:</p>
+        <ul>
+          <li>Incremental reform within existing institutional frameworks without a systemic dimension</li>
+          <li>Single-issue advocacy without broader governance relevance</li>
+          <li>Commercial ventures, unless they have a specific and central governance or commons orientation</li>
+          <li>Explicitly anti-democratic, extractive, or ecologically harmful</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>Orientation tags</h2>
+        <p>Each actor is tagged with one or more orientations: <strong>The Garden</strong>, <strong>Spaceship Earth</strong>, <strong>The Mysteries</strong>, or <strong>The Assemblies</strong>. These are not rigid categories — they are lenses that help readers navigate the landscape. An actor can carry multiple orientations if their work genuinely spans them. We assign the primary orientation based on where the bulk of their work sits.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Curation and editorial judgement</h2>
+        <p>The Orbital is editorially curated. Inclusion is not automatic and does not imply endorsement of every aspect of an actor's work. We try to represent the field honestly, including actors we have reservations about where their presence is significant to the movement. We note concerns in descriptions where relevant.</p>
+        <p>If you believe an actor should be added, corrected, or removed, please <a href="/contact">get in touch</a>.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>News and events</h2>
+        <p>The daily feed aggregates news and events from across the movement. Articles are selected and summarised algorithmically and reviewed editorially. We aim to surface developments that are genuinely significant to the field, not just high-volume or well-resourced actors. Events are included if they bring together people working on planetary governance challenges in a substantive way.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>Errors and updates</h2>
+        <p>We maintain this directory on a best-effort basis. Actor profiles are updated when we become aware of significant changes. If you spot an error — factual, descriptive, or in how an actor is categorised — please <a href="/contact">let us know</a>.</p>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<style>
+.policy-wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.policy-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+}
+
+.policy-intro {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--text-2);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+}
+
+.policy-section {
+  margin-bottom: 2.25rem;
+}
+
+.policy-section h2 {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.policy-section p {
+  font-size: .9375rem;
+  line-height: 1.75;
+  color: var(--text-2);
+  margin-bottom: .875rem;
+}
+
+.policy-section ul {
+  margin: .5rem 0 .875rem 1.25rem;
+  padding: 0;
+}
+
+.policy-section li {
+  font-size: .9375rem;
+  line-height: 1.7;
+  color: var(--text-2);
+  margin-bottom: .375rem;
+}
+
+.policy-section a {
+  color: var(--text);
+  font-weight: 600;
+}
+.policy-section a:hover { text-decoration: underline; }
+</style>

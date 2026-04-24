@@ -24,7 +24,13 @@
       "digital-twin"
     ],
     "image": "/images/actors/aerth-reef.jpg",
-    "imageAlt": "Underwater reef ecosystem monitored by ÆRTH platform"
+    "imageAlt": "Underwater reef ecosystem monitored by ÆRTH platform",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 35,
@@ -53,7 +59,15 @@
       "regenerative-agriculture"
     ],
     "image": "/images/actors/agenda-gotsch-ernst.jpg",
-    "imageAlt": "Ernst Götsch in his syntropic agroforestry farm"
+    "imageAlt": "Ernst Götsch in his syntropic agroforestry farm",
+    "continent": "americas",
+    "subregion": "south-america",
+    "country": [
+      "BR"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 38,
@@ -82,7 +96,13 @@
     "imageAlt": "Community members planting crops using agroecological methods",
     "founded": "2020",
     "lastActive": "2026",
-    "fundingDisclosure": "EU, Gates Foundation, CGIAR member funders"
+    "fundingDisclosure": "EU, Gates Foundation, CGIAR member funders",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 37,
@@ -108,7 +128,13 @@
     ],
     "image": "/images/actors/agroecology-europe-letter.jpg",
     "imageAlt": "Barcelona Letter on agroecology in Europe",
-    "about": "Agroecology Europe bridges the gap between grassroots farming practice and European policy — connecting researchers, farmers, civil society, and policymakers around agroecology as both a scientific framework and a political project. By building transdisciplinary networks and advocating within EU agricultural policy processes, they work to shift the enormous subsidy and regulatory architecture of European farming toward ecological principles. In the planetary governance puzzle, they represent the GARDEN-ASSEMBLY interface applied to food systems at continental scale."
+    "about": "Agroecology Europe bridges the gap between grassroots farming practice and European policy — connecting researchers, farmers, civil society, and policymakers around agroecology as both a scientific framework and a political project. By building transdisciplinary networks and advocating within EU agricultural policy processes, they work to shift the enormous subsidy and regulatory architecture of European farming toward ecological principles. In the planetary governance puzzle, they represent the GARDEN-ASSEMBLY interface applied to food systems at continental scale.",
+    "continent": "europe",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 44,
@@ -134,7 +160,13 @@
     ],
     "image": "/images/actors/aws-hero.jpg",
     "imageAlt": "Alliance for Water Stewardship standard launch promotional imagery",
-    "about": "Water governance is one of the most pressing planetary challenges of the coming century — and the Alliance for Water Stewardship has developed the international infrastructure to address it. Their Water Stewardship Standard provides a framework through which industry, civil society, and government can collectively govern shared water resources at the catchment level. In the planetary governance context, they represent the ASSEMBLY orientation applied to one of Earth's most critical commons: demonstrating that multi-stakeholder governance of shared water systems is practically achievable."
+    "about": "Water governance is one of the most pressing planetary challenges of the coming century — and the Alliance for Water Stewardship has developed the international infrastructure to address it. Their Water Stewardship Standard provides a framework through which industry, civil society, and government can collectively govern shared water resources at the catchment level. In the planetary governance context, they represent the ASSEMBLY orientation applied to one of Earth's most critical commons: demonstrating that multi-stakeholder governance of shared water systems is practically achievable.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 78,
@@ -152,7 +184,18 @@
     "tags": [],
     "image": "/images/actors/arbonics-forest.jpg",
     "imageAlt": "Dense forest landscape monitored by Arbonics platform",
-    "about": "Arbonics addresses a foundational problem in forest carbon markets: the lack of reliable, verifiable, and transparent monitoring. By using satellite imagery and AI-driven growth models for MRV (monitoring, reporting, and verification), they provide the data infrastructure that allows forest carbon projects to be trusted by buyers, regulators, and communities. In the planetary governance puzzle, they represent the SPACESHIP-GARDEN interface: the technology layer that makes forest stewardship legible to financial and regulatory systems."
+    "about": "Arbonics addresses a foundational problem in forest carbon markets: the lack of reliable, verifiable, and transparent monitoring. By using satellite imagery and AI-driven growth models for MRV (monitoring, reporting, and verification), they provide the data infrastructure that allows forest carbon projects to be trusted by buyers, regulators, and communities. In the planetary governance puzzle, they represent the SPACESHIP-GARDEN interface: the technology layer that makes forest stewardship legible to financial and regulatory systems.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "EE",
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 101,
@@ -176,7 +219,17 @@
     ],
     "image": "/images/actors/balticwaters-cod.jpg",
     "imageAlt": "Cod research publication by BalticWaters foundation",
-    "about": "The Baltic Sea is one of the world's most stressed marine ecosystems — overdosed with nutrients, depleted of oxygen, contaminated with legacy pollutants — and BalticWaters is dedicated to its recovery. By bridging scientific research with policy advocacy and restoration practice across the countries sharing this enclosed sea, they embody the GARDEN-ASSEMBLY intersection: the conviction that ecological restoration requires both ecological knowledge and governance coordination among multiple nations with competing interests."
+    "about": "The Baltic Sea is one of the world's most stressed marine ecosystems — overdosed with nutrients, depleted of oxygen, contaminated with legacy pollutants — and BalticWaters is dedicated to its recovery. By bridging scientific research with policy advocacy and restoration practice across the countries sharing this enclosed sea, they embody the GARDEN-ASSEMBLY intersection: the conviction that ecological restoration requires both ecological knowledge and governance coordination among multiple nations with competing interests.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 62,
@@ -203,7 +256,15 @@
     ],
     "image": "/images/actors/beckley-galaxy.jpg",
     "imageAlt": "Cosmic galaxy visualization representing consciousness research",
-    "about": "The Beckley Foundation works at an unusual intersection of neuroscience, consciousness research, and policy reform — pioneering the scientific study of psychedelic-assisted therapy and advocating for evidence-based drug policy globally. In the planetary governance context, they represent the MYSTERIES orientation at its most scientifically grounded: the investigation of consciousness and inner transformation as dimensions of human potential that current legal and political frameworks unnecessarily constrain. Their work on altered states speaks to the inner ecology that may be as important as the outer."
+    "about": "The Beckley Foundation works at an unusual intersection of neuroscience, consciousness research, and policy reform — pioneering the scientific study of psychedelic-assisted therapy and advocating for evidence-based drug policy globally. In the planetary governance context, they represent the MYSTERIES orientation at its most scientifically grounded: the investigation of consciousness and inner transformation as dimensions of human potential that current legal and political frameworks unnecessarily constrain. Their work on altered states speaks to the inner ecology that may be as important as the outer.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "GB"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 80,
@@ -221,7 +282,15 @@
     "tags": [],
     "image": "/images/actors/blockchain-climate-hero.jpg",
     "imageAlt": "Blockchain for Climate Foundation visual identity",
-    "about": "The Blockchain for Climate Foundation works at the intersection of digital infrastructure and international climate policy — exploring how transparent, interoperable blockchain systems could transform the way carbon credits are tracked and traded under the UNFCCC framework. By convening governments, NGOs, and indigenous leaders around the technical design of carbon accounting systems, they address a critical governance bottleneck: the absence of reliable infrastructure for Article 6 carbon market cooperation. They represent the SPACESHIP-ASSEMBLY interface in climate finance."
+    "about": "The Blockchain for Climate Foundation works at the intersection of digital infrastructure and international climate policy — exploring how transparent, interoperable blockchain systems could transform the way carbon credits are tracked and traded under the UNFCCC framework. By convening governments, NGOs, and indigenous leaders around the technical design of carbon accounting systems, they address a critical governance bottleneck: the absence of reliable infrastructure for Article 6 carbon market cooperation. They represent the SPACESHIP-ASSEMBLY interface in climate finance.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "CA"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 22,
@@ -246,7 +315,15 @@
       "megagames-civilisational-simulation"
     ],
     "image": "/images/actors/bfi-montreal-dome.jpg",
-    "imageAlt": "Inside the Montreal geodesic dome"
+    "imageAlt": "Inside the Montreal geodesic dome",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 29,
@@ -274,7 +351,13 @@
     "imageAlt": "",
     "founded": "2005",
     "lastActive": "2026",
-    "fundingDisclosure": "Bloomberg Philanthropies, member cities, philanthropy"
+    "fundingDisclosure": "Bloomberg Philanthropies, member cities, philanthropy",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 45,
@@ -302,7 +385,15 @@
     "imageAlt": "Regenerative Economics book launch",
     "founded": "2010",
     "lastActive": "2024",
-    "fundingDisclosure": "Foundation grants, individual donors; limited public disclosure"
+    "fundingDisclosure": "Foundation grants, individual donors; limited public disclosure",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 67,
@@ -326,7 +417,15 @@
     ],
     "image": "/images/actors/cigi-hero.jpg",
     "imageAlt": "CIGI campus and research centre",
-    "about": "CIGI is one of the world's leading think tanks on the reform and renewal of global governance institutions. From AI governance to multilateral reform, digital economy regulation to global security architecture, their research addresses the structural inadequacy of current international institutions for contemporary planetary challenges. In the governance ecosystem, they represent the SPACESHIP-ASSEMBLY interface at its most institutionally focused: rigorous analysis of what needs to change in the architecture of global governance, and how."
+    "about": "CIGI is one of the world's leading think tanks on the reform and renewal of global governance institutions. From AI governance to multilateral reform, digital economy regulation to global security architecture, their research addresses the structural inadequacy of current international institutions for contemporary planetary challenges. In the governance ecosystem, they represent the SPACESHIP-ASSEMBLY interface at its most institutionally focused: rigorous analysis of what needs to change in the architecture of global governance, and how.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "CA"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 102,
@@ -352,7 +451,17 @@
     ],
     "image": "/images/actors/citizenos-event1.jpg",
     "imageAlt": "Citizen OS community participation event",
-    "about": "Citizen OS has built one of the world's most user-friendly open-source platforms for digital democracy — enabling communities, organisations, and governments to host structured deliberation, gather public input, and run participatory decision-making online. Born from Estonian civic activism, the platform has been adopted internationally and is freely available to any organisation that wants to use it. In the planetary governance context, they represent the SPACESHIP-ASSEMBLY interface at its most accessible: reducing the technical barrier to genuine digital participation."
+    "about": "Citizen OS has built one of the world's most user-friendly open-source platforms for digital democracy — enabling communities, organisations, and governments to host structured deliberation, gather public input, and run participatory decision-making online. Born from Estonian civic activism, the platform has been adopted internationally and is freely available to any organisation that wants to use it. In the planetary governance context, they represent the SPACESHIP-ASSEMBLY interface at its most accessible: reducing the technical barrier to genuine digital participation.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "EE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 103,
@@ -378,7 +487,17 @@
     ],
     "image": "/images/actors/civictech-banner.jpg",
     "imageAlt": "Civic Tech Sweden community meetup and collaboration",
-    "about": "Civic Tech Sweden builds the connective tissue between Sweden's democratic innovation community — linking the individuals, organisations, and public sector entities experimenting with technology as a tool for civic empowerment. By nurturing this network and sharing knowledge across sectors, they accelerate the adoption of participatory technologies in Swedish governance. In the planetary governance ecosystem, they represent the SPACESHIP-ASSEMBLY orientation applied locally: the conviction that digital tools should serve democratic values, and that a national community of practice is how that conviction gets implemented."
+    "about": "Civic Tech Sweden builds the connective tissue between Sweden's democratic innovation community — linking the individuals, organisations, and public sector entities experimenting with technology as a tool for civic empowerment. By nurturing this network and sharing knowledge across sectors, they accelerate the adoption of participatory technologies in Swedish governance. In the planetary governance ecosystem, they represent the SPACESHIP-ASSEMBLY orientation applied locally: the conviction that digital tools should serve democratic values, and that a national community of practice is how that conviction gets implemented.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 81,
@@ -396,7 +515,13 @@
     "tags": [],
     "image": "/images/actors/cad-banner.jpg",
     "imageAlt": "Climate Action Data Trust homepage banner",
-    "about": "The Climate Action Data Trust solves one of carbon market governance's most stubborn problems: double counting, where the same emissions reduction is claimed by multiple parties. By building open, blockchain-based metadata infrastructure that links registries like Verra and Gold Standard, the Trust creates a shared ledger that makes carbon claims auditable and trustworthy. In the planetary governance context, they represent the SPACESHIP-GARDEN interface at its most technical but most consequential: the data infrastructure without which carbon markets cannot function as credible climate governance tools."
+    "about": "The Climate Action Data Trust solves one of carbon market governance's most stubborn problems: double counting, where the same emissions reduction is claimed by multiple parties. By building open, blockchain-based metadata infrastructure that links registries like Verra and Gold Standard, the Trust creates a shared ledger that makes carbon claims auditable and trustworthy. In the planetary governance context, they represent the SPACESHIP-GARDEN interface at its most technical but most consequential: the data infrastructure without which carbon markets cannot function as credible climate governance tools.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 85,
@@ -414,7 +539,15 @@
     ],
     "tags": [],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 74,
@@ -441,7 +574,15 @@
     ],
     "image": "/images/actors/cja-logo.jpg",
     "imageAlt": "Climate Justice Alliance logo and branding",
-    "about": "The Climate Justice Alliance centres the voices of frontline communities — indigenous peoples, communities of colour, workers — in the climate transition, insisting that justice and ecology cannot be separated. Their Just Transition framework has become one of the most widely adopted models in the global climate movement, arguing that the shift to a regenerative economy must be led by those most harmed by the extractive economy. In the planetary governance puzzle, they represent the GARDEN-ASSEMBLY interface at its most politically radical: the claim that any planetary governance worth the name must be grounded in the experiences and leadership of those who have borne the costs of ecological destruction."
+    "about": "The Climate Justice Alliance centres the voices of frontline communities — indigenous peoples, communities of colour, workers — in the climate transition, insisting that justice and ecology cannot be separated. Their Just Transition framework has become one of the most widely adopted models in the global climate movement, arguing that the shift to a regenerative economy must be led by those most harmed by the extractive economy. In the planetary governance puzzle, they represent the GARDEN-ASSEMBLY interface at its most politically radical: the claim that any planetary governance worth the name must be grounded in the experiences and leadership of those who have borne the costs of ecological destruction.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 5,
@@ -468,7 +609,13 @@
       "climate"
     ],
     "image": "/images/actors/climatetrace-emissions.jpg",
-    "imageAlt": "Industrial emissions visualization from satellite data"
+    "imageAlt": "Industrial emissions visualization from satellite data",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "slug": "co-intelligence-institute",
@@ -493,7 +640,15 @@
     "image": "",
     "imageAlt": "",
     "id": 115,
-    "about": "The Co-Intelligence Institute has spent three decades researching one of the most important questions for planetary governance: how do human groups — and eventually, human civilisation as a whole — become collectively wise? Tom Atlee's work on citizen deliberative councils, co-intelligence, and the Wise Democracy Pattern Language provides both a theoretical framework and practical toolkit for designing governance systems that can access the distributed wisdom of whole communities. They represent the ASSEMBLY orientation at its most philosophical: a sustained inquiry into the conditions under which collective intelligence actually emerges."
+    "about": "The Co-Intelligence Institute has spent three decades researching one of the most important questions for planetary governance: how do human groups — and eventually, human civilisation as a whole — become collectively wise? Tom Atlee's work on citizen deliberative councils, co-intelligence, and the Wise Democracy Pattern Language provides both a theoretical framework and practical toolkit for designing governance systems that can access the distributed wisdom of whole communities. They represent the ASSEMBLY orientation at its most philosophical: a sustained inquiry into the conditions under which collective intelligence actually emerges.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 100,
@@ -519,7 +674,18 @@
     ],
     "image": "",
     "imageAlt": "",
-    "about": "Coalition Clean Baltic has spent decades building the civil society infrastructure for Baltic Sea governance — uniting environmental organisations from 11 countries into a coherent advocacy force that can hold governments and industries accountable. Winner of the Nordic Council's Nature and Environment Prize, they embody the GARDEN-ASSEMBLY intersection at the regional scale: demonstrating that environmental advocacy can bridge geopolitical divides and create genuine cross-border civil society power. They are a model for how regional commons can be governed when national interests diverge."
+    "about": "Coalition Clean Baltic has spent decades building the civil society infrastructure for Baltic Sea governance — uniting environmental organisations from 11 countries into a coherent advocacy force that can hold governments and industries accountable. Winner of the Nordic Council's Nature and Environment Prize, they embody the GARDEN-ASSEMBLY intersection at the regional scale: demonstrating that environmental advocacy can bridge geopolitical divides and create genuine cross-border civil society power. They are a model for how regional commons can be governed when national interests diverge.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic",
+      "Baltic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 34,
@@ -542,7 +708,13 @@
     ],
     "image": "/images/actors/curvelabs-polis.jpg",
     "imageAlt": "Artistic visualization of digital governance systems",
-    "about": "Curve Labs provides the technical infrastructure for the regenerative finance (ReFi) ecosystem — building the smart contracts, tokenomics designs, and Web3 governance tools that allow communities and projects to coordinate around ecological and social goals using blockchain. As core technical partner for projects like Kolektivo, they represent the SPACESHIP layer that makes the ReFi vision computationally real. In the planetary governance puzzle, they occupy the crucial engineering role: turning regenerative economic theory into functioning decentralised systems."
+    "about": "Curve Labs provides the technical infrastructure for the regenerative finance (ReFi) ecosystem — building the smart contracts, tokenomics designs, and Web3 governance tools that allow communities and projects to coordinate around ecological and social goals using blockchain. As core technical partner for projects like Kolektivo, they represent the SPACESHIP layer that makes the ReFi vision computationally real. In the planetary governance puzzle, they occupy the crucial engineering role: turning regenerative economic theory into functioning decentralised systems.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 11,
@@ -569,7 +741,15 @@
     "imageAlt": "Dark Matter Labs systems mapping",
     "founded": "2018",
     "lastActive": "2026",
-    "fundingDisclosure": "EU Horizon, Bloomberg Philanthropies, project fees"
+    "fundingDisclosure": "EU Horizon, Bloomberg Philanthropies, project fees",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "GB"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 25,
@@ -597,7 +777,13 @@
     "imageAlt": "World parliament concept",
     "founded": "2016",
     "lastActive": "2026",
-    "fundingDisclosure": "Member-supported, foundation grants"
+    "fundingDisclosure": "Member-supported, foundation grants",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 106,
@@ -623,7 +809,17 @@
     ],
     "image": "/images/actors/demokratigarage-event.jpg",
     "imageAlt": "Community event at Demokrati Garage",
-    "about": "Demokrati Garage is a physical home for democratic innovation in Copenhagen — a space where theorists, practitioners, activists, and curious citizens can meet, experiment, and build new approaches to collective decision-making. Connected to the broader Nordic deliberation ecosystem through its links with We Do Democracy, it operates as a DIY laboratory for democracy: the kind of space where the next generation of democratic practices gets prototyped before it scales. They represent the ASSEMBLY orientation at its most experimental and welcoming."
+    "about": "Demokrati Garage is a physical home for democratic innovation in Copenhagen — a space where theorists, practitioners, activists, and curious citizens can meet, experiment, and build new approaches to collective decision-making. Connected to the broader Nordic deliberation ecosystem through its links with We Do Democracy, it operates as a DIY laboratory for democracy: the kind of space where the next generation of democratic practices gets prototyped before it scales. They represent the ASSEMBLY orientation at its most experimental and welcoming.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "DK"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 95,
@@ -651,7 +847,17 @@
     "founded": "2005",
     "lastActive": "2026",
     "fundingDisclosure": "EU projects, Nordic Council, Finnish government",
-    "about": "Demos Helsinki is Finland's leading think tank on societal transformation — combining foresight research, policy design, and systems thinking to help governments and organisations navigate the deep uncertainty of the 21st century. Their work on long-term governance, anticipatory policymaking, and the future of democracy contributes directly to the intellectual infrastructure of the planetary governance movement. In the puzzle, they represent the SPACESHIP-ASSEMBLY interface: rigorous analytical capacity in service of governance innovation for a world in rapid, complex transition."
+    "about": "Demos Helsinki is Finland's leading think tank on societal transformation — combining foresight research, policy design, and systems thinking to help governments and organisations navigate the deep uncertainty of the 21st century. Their work on long-term governance, anticipatory policymaking, and the future of democracy contributes directly to the intellectual infrastructure of the planetary governance movement. In the puzzle, they represent the SPACESHIP-ASSEMBLY interface: rigorous analytical capacity in service of governance innovation for a world in rapid, complex transition.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "FI"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 9,
@@ -676,7 +882,13 @@
       "technology"
     ],
     "image": "/images/actors/destine-hero.jpg",
-    "imageAlt": "Destination Earth digital twin"
+    "imageAlt": "Destination Earth digital twin",
+    "continent": "europe",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 104,
@@ -702,7 +914,17 @@
     ],
     "image": "/images/actors/digidemlab-workshop.jpg",
     "imageAlt": "Digidem Lab workshop on digital democratic participation",
-    "about": "Digidem Lab is Sweden's specialist in participatory democracy methodology — a worker-owned cooperative that designs and executes deliberative processes, including the landmark 2024 Swedish Citizens' Assembly on Climate. By combining technical expertise in digital participation tools with deep knowledge of deliberative methods, they provide the practical capacity to implement meaningful public participation at scale. In the planetary governance context, they represent the ASSEMBLY orientation made operational in the Nordic context: turning democratic theory into practice, one assembly at a time."
+    "about": "Digidem Lab is Sweden's specialist in participatory democracy methodology — a worker-owned cooperative that designs and executes deliberative processes, including the landmark 2024 Swedish Citizens' Assembly on Climate. By combining technical expertise in digital participation tools with deep knowledge of deliberative methods, they provide the practical capacity to implement meaningful public participation at scale. In the planetary governance context, they represent the ASSEMBLY orientation made operational in the Nordic context: turning democratic theory into practice, one assembly at a time.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "slug": "doughnut-economics-action-lab",
@@ -730,7 +952,13 @@
     "founded": "2019",
     "lastActive": "2026",
     "fundingDisclosure": "Foundation grants, membership, consulting",
-    "about": "DEAL translates Kate Raworth's Doughnut Economics from a compelling framework into practical governance reality — supporting cities like Amsterdam and Copenhagen in redesigning their economies around social foundations and planetary boundaries. By working with ~50 cities and regions to develop local Doughnut approaches, they demonstrate that a post-growth economic model is not just theoretically coherent but institutionally implementable. In the planetary governance puzzle, DEAL represents the ASSEMBLY-GARDEN interface: the practical work of embedding ecological limits into the economic governance of real places."
+    "about": "DEAL translates Kate Raworth's Doughnut Economics from a compelling framework into practical governance reality — supporting cities like Amsterdam and Copenhagen in redesigning their economies around social foundations and planetary boundaries. By working with ~50 cities and regions to develop local Doughnut approaches, they demonstrate that a post-growth economic model is not just theoretically coherent but institutionally implementable. In the planetary governance puzzle, DEAL represents the ASSEMBLY-GARDEN interface: the practical work of embedding ecological limits into the economic governance of real places.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 47,
@@ -759,7 +987,15 @@
     "founded": "2008",
     "lastActive": "2026",
     "fundingDisclosure": "Foundation grants, individual donors",
-    "about": "Earth Law Center works at the legal frontier of ecological governance — drafting rights of nature legislation, supporting court cases, and developing the Universal Declaration of River Rights. By creating the legal tools and arguments that establish ecosystems as rights-holders rather than resources, they are building the jurisprudential foundations for a legal system that treats the living world as deserving of protection in its own right. They represent the GARDEN-ASSEMBLY interface at its most legally precise: using law as a tool for planetary stewardship."
+    "about": "Earth Law Center works at the legal frontier of ecological governance — drafting rights of nature legislation, supporting court cases, and developing the Universal Declaration of River Rights. By creating the legal tools and arguments that establish ecosystems as rights-holders rather than resources, they are building the jurisprudential foundations for a legal system that treats the living world as deserving of protection in its own right. They represent the GARDEN-ASSEMBLY interface at its most legally precise: using law as a tool for planetary stewardship.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 27,
@@ -789,7 +1025,13 @@
     "founded": "2009",
     "lastActive": "2026",
     "fundingDisclosure": "Academic institutions, Netherlands Organisation for Scientific Research",
-    "about": "The Earth System Governance Project is the largest social science research network focused on the governance of global environmental change — connecting hundreds of scholars worldwide in a sustained inquiry into how humanity can govern the planet's life-support systems. Their research spans everything from international climate negotiations to local commons governance, providing the academic infrastructure that the planetary governance movement needs to build on solid empirical and theoretical ground. They represent the SPACESHIP-ASSEMBLY interface at its most scholarly: the sustained, global effort to understand governance as a planetary challenge."
+    "about": "The Earth System Governance Project is the largest social science research network focused on the governance of global environmental change — connecting hundreds of scholars worldwide in a sustained inquiry into how humanity can govern the planet's life-support systems. Their research spans everything from international climate negotiations to local commons governance, providing the academic infrastructure that the planetary governance movement needs to build on solid empirical and theoretical ground. They represent the SPACESHIP-ASSEMBLY interface at its most scholarly: the sustained, global effort to understand governance as a planetary challenge.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "slug": "ecocentric-earth",
@@ -813,7 +1055,13 @@
     "image": "",
     "imageAlt": "",
     "id": 112,
-    "about": "Ecocentric.earth works at the intersection of constitutional design and ecological governance — helping governments and institutions redesign decision-making frameworks to account for the rights of nature, future generations, and the living commons. Drawing on permaculture principles, indigenous land stewardship, and digital commons governance, they offer a whole-system approach to planetary governance reform. In the puzzle, they represent the GARDEN-ASSEMBLY intersection at its most structurally ambitious: changing the constitutional frameworks through which societies relate to the living world."
+    "about": "Ecocentric.earth works at the intersection of constitutional design and ecological governance — helping governments and institutions redesign decision-making frameworks to account for the rights of nature, future generations, and the living commons. Drawing on permaculture principles, indigenous land stewardship, and digital commons governance, they offer a whole-system approach to planetary governance reform. In the puzzle, they represent the GARDEN-ASSEMBLY intersection at its most structurally ambitious: changing the constitutional frameworks through which societies relate to the living world.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 41,
@@ -839,7 +1087,13 @@
     ],
     "image": "/images/actors/erc-guatemala.jpg",
     "imageAlt": "Contour lines in a restoration project in Guatemala",
-    "about": "Ecosystem Restoration Communities is building a global movement of community-led restoration projects — from reforestation in Brazil to dry-land recovery in Morocco — connecting local action with the UN Decade on Ecosystem Restoration and building the movement infrastructure that can scale it. By centering community ownership and leadership in restoration work, they embed ecological recovery in social recovery. In the planetary governance puzzle, they represent the GARDEN orientation at its most grassroots and most globally networked: the distributed, bottom-up restoration engine that complements top-down policy."
+    "about": "Ecosystem Restoration Communities is building a global movement of community-led restoration projects — from reforestation in Brazil to dry-land recovery in Morocco — connecting local action with the UN Decade on Ecosystem Restoration and building the movement infrastructure that can scale it. By centering community ownership and leadership in restoration work, they embed ecological recovery in social recovery. In the planetary governance puzzle, they represent the GARDEN orientation at its most grassroots and most globally networked: the distributed, bottom-up restoration engine that complements top-down policy.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 19,
@@ -864,7 +1118,18 @@
       "sweden"
     ],
     "image": "/images/actors/sharingsweden-globe.jpg",
-    "imageAlt": "Globe of Earth highlighting Sweden and sharing culture"
+    "imageAlt": "Globe of Earth highlighting Sweden and sharing culture",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE",
+      "ZM"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 77,
@@ -888,7 +1153,17 @@
     ],
     "image": "/images/actors/elysium-salon.jpg",
     "imageAlt": "Elysium Clinic salon",
-    "about": "Elysium Life creates immersive theatre experiences that use the form of a 'transcendence clinic' to invite participants into altered states of perception — blending salon aesthetics, mythology, and carefully designed ritual to create something between art installation and transformative ceremony. In the planetary governance context, they represent the MYSTERIES orientation at its most experiential: the exploration of inner states and altered consciousness as dimensions of the cultural transformation that systemic change requires. They point to the possibility that how we experience the world is as politically important as what we think about it."
+    "about": "Elysium Life creates immersive theatre experiences that use the form of a 'transcendence clinic' to invite participants into altered states of perception — blending salon aesthetics, mythology, and carefully designed ritual to create something between art installation and transformative ceremony. In the planetary governance context, they represent the MYSTERIES orientation at its most experiential: the exploration of inner states and altered consciousness as dimensions of the cultural transformation that systemic change requires. They point to the possibility that how we experience the world is as politically important as what we think about it.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 18,
@@ -912,7 +1187,17 @@
       "sweden"
     ],
     "image": "/images/actors/fabel-hero.jpg",
-    "imageAlt": "Fabel Entertainment creative workspace and team"
+    "imageAlt": "Fabel Entertainment creative workspace and team",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 98,
@@ -937,7 +1222,17 @@
     ],
     "image": "",
     "imageAlt": "",
-    "about": "Fjallbete is one of Sweden's most important living examples of holistic land management — a working farm that has practiced regenerative grazing and soil restoration for over two decades, serving as a Savory Hub and driving force behind the Nordic Network for Regenerative Agriculture. By combining practical farming with education and network-building, Fjallbete demonstrates at farm scale what the planetary transition to regenerative agriculture looks like in practice. They represent the GARDEN orientation at its most rooted: not a framework or a policy, but a living place where human and ecological health are being rebuilt together."
+    "about": "Fjallbete is one of Sweden's most important living examples of holistic land management — a working farm that has practiced regenerative grazing and soil restoration for over two decades, serving as a Savory Hub and driving force behind the Nordic Network for Regenerative Agriculture. By combining practical farming with education and network-building, Fjallbete demonstrates at farm scale what the planetary transition to regenerative agriculture looks like in practice. They represent the GARDEN orientation at its most rooted: not a framework or a policy, but a living place where human and ecological health are being rebuilt together.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 99,
@@ -961,7 +1256,17 @@
     ],
     "image": "/images/actors/foodprint-nordic-food.jpg",
     "imageAlt": "Food system photography from Foodprint Nordic",
-    "about": "Foodprint Nordic works to accelerate the transition to regenerative food systems in the Nordic region — directing resources toward regenerative farming projects and building public awareness through initiatives like the Top 50 Farmers programme. By connecting consumers, institutions, and farmers around shared values of ecological health and food sovereignty, they build the market and cultural infrastructure that regenerative agriculture needs to scale. In the planetary governance context, they represent the GARDEN-ASSEMBLY interface at the regional food system level: the political economy of what gets grown, how, and who decides."
+    "about": "Foodprint Nordic works to accelerate the transition to regenerative food systems in the Nordic region — directing resources toward regenerative farming projects and building public awareness through initiatives like the Top 50 Farmers programme. By connecting consumers, institutions, and farmers around shared values of ecological health and food sovereignty, they build the market and cultural infrastructure that regenerative agriculture needs to scale. In the planetary governance context, they represent the GARDEN-ASSEMBLY interface at the regional food system level: the political economy of what gets grown, how, and who decides.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "DK"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 8,
@@ -991,7 +1296,13 @@
     "imageAlt": "Future Earth global research",
     "founded": "2012",
     "lastActive": "2026",
-    "fundingDisclosure": "ICSU, ISSC, UN Environment, national funders"
+    "fundingDisclosure": "ICSU, ISSC, UN Environment, national funders",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 70,
@@ -1016,7 +1327,15 @@
     ],
     "image": "/images/actors/fgw-artwork.jpg",
     "imageAlt": "Artwork for Future Generations report",
-    "about": "Wales's Future Generations Commissioner is one of the most significant governance innovations of recent decades: a statutory officer with legal authority to hold Welsh public bodies accountable for the long-term wellbeing of future generations. Established by the Well-being of Future Generations Act (2015), this unique institution demonstrates that the structural bias toward short-termism in democratic governance can be corrected through institutional design. In the planetary governance puzzle, Wales's Commissioner represents the ASSEMBLY orientation applied to intergenerational justice: proof that future generations can be given a real voice in present decision-making."
+    "about": "Wales's Future Generations Commissioner is one of the most significant governance innovations of recent decades: a statutory officer with legal authority to hold Welsh public bodies accountable for the long-term wellbeing of future generations. Established by the Well-being of Future Generations Act (2015), this unique institution demonstrates that the structural bias toward short-termism in democratic governance can be corrected through institutional design. In the planetary governance puzzle, Wales's Commissioner represents the ASSEMBLY orientation applied to intergenerational justice: proof that future generations can be given a real voice in present decision-making.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "GB"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "slug": "g0v",
@@ -1041,7 +1360,15 @@
     "image": "",
     "imageAlt": "",
     "id": 111,
-    "about": "g0v (gov-zero) is one of the world's most creative civic technology communities — a Taiwanese collective that 'forks' government by building open, participatory alternatives to official digital infrastructure. Their projects, including the vTaiwan digital deliberation platform, have directly shaped national policy and inspired digital democracy movements globally. In the planetary governance context, g0v represents the SPACESHIP-ASSEMBLY intersection at its most inventive: the conviction that the digital infrastructure of governance should be publicly owned, openly auditable, and collaboratively built by the citizens who use it."
+    "about": "g0v (gov-zero) is one of the world's most creative civic technology communities — a Taiwanese collective that 'forks' government by building open, participatory alternatives to official digital infrastructure. Their projects, including the vTaiwan digital deliberation platform, have directly shaped national policy and inspired digital democracy movements globally. In the planetary governance context, g0v represents the SPACESHIP-ASSEMBLY intersection at its most inventive: the conviction that the digital infrastructure of governance should be publicly owned, openly auditable, and collaboratively built by the citizens who use it.",
+    "continent": "asia",
+    "subregion": "eastern-asia",
+    "country": [
+      "TW"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 55,
@@ -1072,7 +1399,15 @@
     ],
     "image": "/images/actors/gaia-ai-hero.jpg",
     "imageAlt": "Gaia AI satellite and remote sensing technology visualization",
-    "about": "Gaia AI provides the data intelligence layer for forest governance — using satellite imagery and AI to give land managers, governments, and investors accurate, real-time information about forest health, carbon stocks, and biodiversity. As carbon and biodiversity markets mature, the credibility of the ecological data they're built on becomes increasingly critical. Gaia AI represents the SPACESHIP-GARDEN interface: the remote sensing and machine learning infrastructure that makes forest stewardship legible to the governance systems — financial, regulatory, and democratic — that need to incentivise it."
+    "about": "Gaia AI provides the data intelligence layer for forest governance — using satellite imagery and AI to give land managers, governments, and investors accurate, real-time information about forest health, carbon stocks, and biodiversity. As carbon and biodiversity markets mature, the credibility of the ecological data they're built on becomes increasingly critical. Gaia AI represents the SPACESHIP-GARDEN interface: the remote sensing and machine learning infrastructure that makes forest stewardship legible to the governance systems — financial, regulatory, and democratic — that need to incentivise it.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "GB"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 48,
@@ -1102,7 +1437,15 @@
     ],
     "image": "/images/actors/gaia-soil-sistars.jpg",
     "imageAlt": "Soil Sistars session at Love Land community gathering",
-    "about": "The Gaia Foundation works at the intersection of earth jurisprudence, seed sovereignty, and community ecological governance — advancing a philosophy of law and governance that recognises the Earth as a living community of which humans are part, not masters. Their work across Africa and South America supports communities in asserting their rights to seeds, land, and self-determination against industrial agriculture and extractive industries. They represent the GARDEN-MYSTERIES-ASSEMBLY intersection: the integration of indigenous cosmology, ecological science, and legal advocacy into a coherent vision of how humanity might govern its relationship with the living world."
+    "about": "The Gaia Foundation works at the intersection of earth jurisprudence, seed sovereignty, and community ecological governance — advancing a philosophy of law and governance that recognises the Earth as a living community of which humans are part, not masters. Their work across Africa and South America supports communities in asserting their rights to seeds, land, and self-determination against industrial agriculture and extractive industries. They represent the GARDEN-MYSTERIES-ASSEMBLY intersection: the integration of indigenous cosmology, ecological science, and legal advocacy into a coherent vision of how humanity might govern its relationship with the living world.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [
+      "GB"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 46,
@@ -1129,7 +1472,13 @@
     ],
     "image": "/images/actors/garn-banner.jpg",
     "imageAlt": "Rights of Nature visual identity",
-    "about": "GARN (the Global Alliance for the Rights of Nature, distinct from GARN/rightsofnaturetribunal.org) is part of the global network building the legal infrastructure for ecosystems to be recognised as rights-holders. By hosting International Rights of Nature Tribunals and supporting community-led campaigns for ecosystem legal personhood, they are contributing to one of the most fundamental legal transformations in history: the shift from treating nature as property to treating it as a subject with inherent rights. They represent the GARDEN-ASSEMBLY interface at its most legally transformative."
+    "about": "GARN (the Global Alliance for the Rights of Nature, distinct from GARN/rightsofnaturetribunal.org) is part of the global network building the legal infrastructure for ecosystems to be recognised as rights-holders. By hosting International Rights of Nature Tribunals and supporting community-led campaigns for ecosystem legal personhood, they are contributing to one of the most fundamental legal transformations in history: the shift from treating nature as property to treating it as a subject with inherent rights. They represent the GARDEN-ASSEMBLY interface at its most legally transformative.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 89,
@@ -1147,7 +1496,13 @@
     "tags": [],
     "image": "/images/actors/global-assembly-grandmother.jpg",
     "imageAlt": "Elderly woman representing intergenerational global voices",
-    "about": "The Global Assembly was the first experiment in genuine planetary democratic representation — bringing together randomly selected people from every country in the world to deliberate on the climate and ecological crisis and produce a People's Declaration presented at COP26. While one event cannot replace the full architecture of planetary democratic governance, the Global Assembly proved that such an assembly is practically achievable and produces outputs of genuine political quality. In the governance puzzle, it represents both a proof of concept and a template: the ASSEMBLY orientation imagined at the planetary scale and actually attempted."
+    "about": "The Global Assembly was the first experiment in genuine planetary democratic representation — bringing together randomly selected people from every country in the world to deliberate on the climate and ecological crisis and produce a People's Declaration presented at COP26. While one event cannot replace the full architecture of planetary democratic governance, the Global Assembly proved that such an assembly is practically achievable and produces outputs of genuine political quality. In the governance puzzle, it represents both a proof of concept and a template: the ASSEMBLY orientation imagined at the planetary scale and actually attempted.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 72,
@@ -1178,7 +1533,17 @@
       "sweden"
     ],
     "image": "/images/actors/gcf-report.jpg",
-    "imageAlt": "Global Threats to Planetary Resilience report cover"
+    "imageAlt": "Global Threats to Planetary Resilience report cover",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 66,
@@ -1203,7 +1568,15 @@
     ],
     "image": "/images/actors/ggin-event.jpg",
     "imageAlt": "GGIN event bringing together governance researchers",
-    "about": "The Global Governance Innovation Network provides the intellectual infrastructure for reforming multilateral institutions — connecting researchers and practitioners working on the redesign of the UN system, international financial architecture, and global regulatory frameworks. Through its annual reports and convenings, GGIN builds the shared analytical vocabulary and political relationships that multilateral reform requires. In the planetary governance context, they represent the ASSEMBLY orientation at its most institutionally sophisticated: the sustained, expert effort to make global governance adequate to global challenges."
+    "about": "The Global Governance Innovation Network provides the intellectual infrastructure for reforming multilateral institutions — connecting researchers and practitioners working on the redesign of the UN system, international financial architecture, and global regulatory frameworks. Through its annual reports and convenings, GGIN builds the shared analytical vocabulary and political relationships that multilateral reform requires. In the planetary governance context, they represent the ASSEMBLY orientation at its most institutionally sophisticated: the sustained, expert effort to make global governance adequate to global challenges.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 40,
@@ -1231,7 +1604,13 @@
     ],
     "image": "/images/actors/rewilding-oryx.jpg",
     "imageAlt": "Scimitar-horned oryx reintroduced to the Sahel",
-    "about": "The Global Rewilding Alliance is the international architecture of the rewilding movement — coordinating rewilding efforts across continents and advocating for rewilding as both a climate policy and a biodiversity strategy. By bridging the biodiversity and climate agendas, they argue that ecological restoration is not a niche conservation concern but a core element of the planetary governance response. In the puzzle, they represent the GARDEN orientation at its most coordinated: the global infrastructure for connecting, scaling, and legitimising the rewilding revolution."
+    "about": "The Global Rewilding Alliance is the international architecture of the rewilding movement — coordinating rewilding efforts across continents and advocating for rewilding as both a climate policy and a biodiversity strategy. By bridging the biodiversity and climate agendas, they argue that ecological restoration is not a niche conservation concern but a core element of the planetary governance response. In the puzzle, they represent the GARDEN orientation at its most coordinated: the global infrastructure for connecting, scaling, and legitimising the rewilding revolution.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 26,
@@ -1256,7 +1635,13 @@
       "sustainability"
     ],
     "image": "/images/actors/global-jams-workshop1.jpg",
-    "imageAlt": "Participants collaborating at a Global Sustainability Jam event"
+    "imageAlt": "Participants collaborating at a Global Sustainability Jam event",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "slug": "global-tapestry-of-alternatives",
@@ -1283,7 +1668,15 @@
     "image": "",
     "imageAlt": "",
     "id": 116,
-    "about": "The Global Tapestry of Alternatives, coordinated by Ashish Kothari, is a radical mapping and solidarity project — connecting the thousands of communities worldwide that are already practicing alternatives to dominant development paradigms, from autonomous indigenous governance to commons-based agroecology to feminist cooperative economies. Rather than proposing a single alternative, it celebrates and connects the pluriverse of actually-existing alternatives. In the planetary governance context, it represents all four orientations in integration: the recognition that the planetary transition is not a single project but a vast, diverse, self-organising movement of people already building different worlds."
+    "about": "The Global Tapestry of Alternatives, coordinated by Ashish Kothari, is a radical mapping and solidarity project — connecting the thousands of communities worldwide that are already practicing alternatives to dominant development paradigms, from autonomous indigenous governance to commons-based agroecology to feminist cooperative economies. Rather than proposing a single alternative, it celebrates and connects the pluriverse of actually-existing alternatives. In the planetary governance context, it represents all four orientations in integration: the recognition that the planetary transition is not a single project but a vast, diverse, self-organising movement of people already building different worlds.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [
+      "IN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 88,
@@ -1301,7 +1694,15 @@
     "tags": [],
     "image": "/images/actors/governance-futures-hero.jpg",
     "imageAlt": "Governance Futures hero imagery and visual identity",
-    "about": "Governance Futures uses art, illustration, and experiential workshops to invite communities into radical imagination about democratic futures. By making governance tangible through comic books, visual storytelling, and collaborative world-building, they address a specific gap in the planetary governance movement: the difficulty of imagining genuinely different political arrangements when the existing ones feel so naturalised. They represent the MYSTERIES-ASSEMBLY intersection: cultural and artistic tools in service of democratic imagination, making it possible to want political change before you can plan it."
+    "about": "Governance Futures uses art, illustration, and experiential workshops to invite communities into radical imagination about democratic futures. By making governance tangible through comic books, visual storytelling, and collaborative world-building, they address a specific gap in the planetary governance movement: the difficulty of imagining genuinely different political arrangements when the existing ones feel so naturalised. They represent the MYSTERIES-ASSEMBLY intersection: cultural and artistic tools in service of democratic imagination, making it possible to want political change before you can plan it.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 43,
@@ -1325,7 +1726,15 @@
     ],
     "image": "/images/actors/grounded-housing.jpg",
     "imageAlt": "Community land trust housing in urban neighborhood",
-    "about": "Grounded Solutions Network works on one of the most fundamental questions of planetary governance at the local level: who owns the land, and under what terms? By supporting community land trusts and shared equity housing models, they build the commons-based ownership infrastructure that keeps land in community stewardship rather than financial speculation. In the planetary governance context, they represent the GARDEN-ASSEMBLY interface applied to urban and rural land: demonstrating that community ownership is a practical and scalable alternative to both state and market control of land."
+    "about": "Grounded Solutions Network works on one of the most fundamental questions of planetary governance at the local level: who owns the land, and under what terms? By supporting community land trusts and shared equity housing models, they build the commons-based ownership infrastructure that keeps land in community stewardship rather than financial speculation. In the planetary governance context, they represent the GARDEN-ASSEMBLY interface applied to urban and rural land: demonstrating that community ownership is a practical and scalable alternative to both state and market control of land.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 13,
@@ -1350,7 +1759,13 @@
     ],
     "image": "/images/actors/hypha-space.jpg",
     "imageAlt": "Hypha DAO platform interface for decentralized organization building",
-    "about": "Hypha DAO builds the human-centric organisational tools for the regenerative economy — providing decentralised governance infrastructure that allows communities, cooperatives, and mission-driven organisations to coordinate complex work without centralised management. By designing for human values rather than speculation, Hypha represents the ReFi ecosystem's attempt to make Web3 governance actually usable by the organisations that need it most. In the planetary governance puzzle, they occupy the SPACESHIP-ASSEMBLY interface: the practical governance technology that makes decentralised coordination operationally real."
+    "about": "Hypha DAO builds the human-centric organisational tools for the regenerative economy — providing decentralised governance infrastructure that allows communities, cooperatives, and mission-driven organisations to coordinate complex work without centralised management. By designing for human values rather than speculation, Hypha represents the ReFi ecosystem's attempt to make Web3 governance actually usable by the organisations that need it most. In the planetary governance puzzle, they occupy the SPACESHIP-ASSEMBLY interface: the practical governance technology that makes decentralised coordination operationally real.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 42,
@@ -1378,7 +1793,15 @@
     ],
     "image": "",
     "imageAlt": "",
-    "about": "IIED's Biocultural Heritage programme works at the intersection of biodiversity, indigenous knowledge, and community rights — recognising that the cultural practices and knowledge systems of indigenous and local communities are inseparable from the biological diversity they have co-created and stewarded. By researching and advocating for biocultural approaches in international conservation and development policy, they challenge the separation of nature and culture that has characterised mainstream conservation. They represent the GARDEN-MYSTERIES intersection: the recognition that ecological governance must honour the cultural knowledge that has sustained living landscapes."
+    "about": "IIED's Biocultural Heritage programme works at the intersection of biodiversity, indigenous knowledge, and community rights — recognising that the cultural practices and knowledge systems of indigenous and local communities are inseparable from the biological diversity they have co-created and stewarded. By researching and advocating for biocultural approaches in international conservation and development policy, they challenge the separation of nature and culture that has characterised mainstream conservation. They represent the GARDEN-MYSTERIES intersection: the recognition that ecological governance must honour the cultural knowledge that has sustained living landscapes.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "GB"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 96,
@@ -1403,7 +1826,17 @@
     ],
     "image": "/images/actors/iffs-democracy.jpg",
     "imageAlt": "Researcher studying digital democracy at IFFS",
-    "about": "The Institute for Futures Studies applies rigorous interdisciplinary research to the long-term challenges facing humanity — from climate ethics and intergenerational justice to sustainable development and social dilemmas. Based in Stockholm and connected to international networks, they provide the academic infrastructure for thinking seriously about governance on the timescales that ecological challenges require. In the planetary governance context, they represent the SPACESHIP-ASSEMBLY interface applied to deep time: the intellectual work of understanding what our obligations to the future are, and how present institutions can be redesigned to meet them."
+    "about": "The Institute for Futures Studies applies rigorous interdisciplinary research to the long-term challenges facing humanity — from climate ethics and intergenerational justice to sustainable development and social dilemmas. Based in Stockholm and connected to international networks, they provide the academic infrastructure for thinking seriously about governance on the timescales that ecological challenges require. In the planetary governance context, they represent the SPACESHIP-ASSEMBLY interface applied to deep time: the intellectual work of understanding what our obligations to the future are, and how present institutions can be redesigned to meet them.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 64,
@@ -1428,7 +1861,15 @@
     ],
     "image": "/images/actors/iftf-event.jpg",
     "imageAlt": "IFTF foresight event with participants engaged in futures thinking",
-    "about": "The Institute for the Future has spent over 50 years developing the practice of futures thinking — combining rigorous foresight research with innovative experiential futures tools that help organisations and communities navigate complex, rapidly changing landscapes. Their large-scale forecasting games and futures simulations have engaged millions of people in thinking seriously about long-term challenges. In the planetary governance context, they represent the MYSTERIES-SPACESHIP interface: using game design and experiential futures to cultivate the anticipatory imagination that governance for a complex, uncertain planet requires."
+    "about": "The Institute for the Future has spent over 50 years developing the practice of futures thinking — combining rigorous foresight research with innovative experiential futures tools that help organisations and communities navigate complex, rapidly changing landscapes. Their large-scale forecasting games and futures simulations have engaged millions of people in thinking seriously about long-term challenges. In the planetary governance context, they represent the MYSTERIES-SPACESHIP interface: using game design and experiential futures to cultivate the anticipatory imagination that governance for a complex, uncertain planet requires.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 32,
@@ -1451,7 +1892,15 @@
     ],
     "image": "/images/actors/raworth-doughnut.jpg",
     "imageAlt": "Doughnut Economics visual framework",
-    "about": "Kate Raworth's Doughnut model offers something rare in economics: a framework that is simultaneously rigorous, visual, and politically actionable. By defining a 'safe and just space for humanity' bounded by social foundations below and ecological ceilings above, it gives policymakers a north star that integrates social justice and ecological limits into a single governance metric. Her work has moved from academic provocation to practical policy in Amsterdam, Copenhagen, and beyond — demonstrating that better frameworks genuinely change decisions."
+    "about": "Kate Raworth's Doughnut model offers something rare in economics: a framework that is simultaneously rigorous, visual, and politically actionable. By defining a 'safe and just space for humanity' bounded by social foundations below and ecological ceilings above, it gives policymakers a north star that integrates social justice and ecological limits into a single governance metric. Her work has moved from academic provocation to practical policy in Amsterdam, Copenhagen, and beyond — demonstrating that better frameworks genuinely change decisions.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [
+      "NL"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 36,
@@ -1478,7 +1927,15 @@
     ],
     "image": "",
     "imageAlt": "",
-    "about": "Kiss the Ground has made soil health visible to millions through documentary filmmaking, farmer training, and popular advocacy — building the public understanding of regenerative agriculture as a climate solution that policy change requires. By making the science of soil carbon sequestration emotionally compelling and accessible, they address a critical bottleneck in the ecological transition: the gap between what the science says and what the public and policymakers prioritise. In the planetary governance puzzle, they represent the GARDEN-MYSTERIES interface: using storytelling and cultural change to build the political constituency for soil stewardship."
+    "about": "Kiss the Ground has made soil health visible to millions through documentary filmmaking, farmer training, and popular advocacy — building the public understanding of regenerative agriculture as a climate solution that policy change requires. By making the science of soil carbon sequestration emotionally compelling and accessible, they address a critical bottleneck in the ecological transition: the gap between what the science says and what the public and policymakers prioritise. In the planetary governance puzzle, they represent the GARDEN-MYSTERIES interface: using storytelling and cultural change to build the political constituency for soil stewardship.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 90,
@@ -1495,7 +1952,13 @@
     "tags": [],
     "image": "/images/actors/knoca-conference.jpg",
     "imageAlt": "European deliberative democracy conference participants",
-    "about": "KNOCA is the knowledge infrastructure for the European citizens' assembly movement — connecting organisers, researchers, and policymakers working on climate citizens' assemblies across EU member states. By building a shared knowledge base on what works, what doesn't, and what different national contexts require, KNOCA accelerates learning across the rapidly growing field. In the planetary governance context, they represent the ASSEMBLY orientation applied to its own development: the meta-infrastructure that helps deliberative democracy practitioners learn from each other and improve their practice."
+    "about": "KNOCA is the knowledge infrastructure for the European citizens' assembly movement — connecting organisers, researchers, and policymakers working on climate citizens' assemblies across EU member states. By building a shared knowledge base on what works, what doesn't, and what different national contexts require, KNOCA accelerates learning across the rapidly growing field. In the planetary governance context, they represent the ASSEMBLY orientation applied to its own development: the meta-infrastructure that helps deliberative democracy practitioners learn from each other and improve their practice.",
+    "continent": "europe",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 14,
@@ -1518,7 +1981,13 @@
       "technology"
     ],
     "image": "/images/actors/kolektivo-community.jpg",
-    "imageAlt": "Kolektivo community in Curacao"
+    "imageAlt": "Kolektivo community in Curacao",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 75,
@@ -1547,7 +2016,15 @@
     ],
     "image": "/images/actors/lpi-youth.jpg",
     "imageAlt": "Youth engagement at Learning Planet",
-    "about": "The Learning Planet Institute is building the education system for planetary citizenship — developing learning approaches that cultivate the knowledge, values, and capacities needed to navigate and co-create civilisational transformation. Their futures learning labs and anticipatory governance programmes work with young people and educators worldwide. In the planetary governance context, they represent the MYSTERIES-SPACESHIP interface applied to education: the conviction that the transition requires not just better governance systems but better-educated citizens who can participate meaningfully in them."
+    "about": "The Learning Planet Institute is building the education system for planetary citizenship — developing learning approaches that cultivate the knowledge, values, and capacities needed to navigate and co-create civilisational transformation. Their futures learning labs and anticipatory governance programmes work with young people and educators worldwide. In the planetary governance context, they represent the MYSTERIES-SPACESHIP interface applied to education: the conviction that the transition requires not just better governance systems but better-educated citizens who can participate meaningfully in them.",
+    "continent": "europe",
+    "subregion": "western-europe",
+    "country": [
+      "FR"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 87,
@@ -1565,7 +2042,17 @@
     "tags": [],
     "image": "/images/actors/liu-megagame1.jpg",
     "imageAlt": "Climate change megagame session at Linköping University",
-    "about": "Linköping University's Climate Change Megagame turns rigorous climate science into lived political experience — using real SMHI forecast data to simulate regional governance scenarios from 2020 to 2100, placing participants in the roles of decision-makers navigating the actual complexity of climate transition. By making the future tangible and political in a rigorous academic context, it demonstrates the potential of serious games as tools for both research and public engagement. They represent the MYSTERIES-SPACESHIP interface at its most academically grounded: using play to make science governable."
+    "about": "Linköping University's Climate Change Megagame turns rigorous climate science into lived political experience — using real SMHI forecast data to simulate regional governance scenarios from 2020 to 2100, placing participants in the roles of decision-makers navigating the actual complexity of climate transition. By making the future tangible and political in a rigorous academic context, it demonstrates the potential of serious games as tools for both research and public engagement. They represent the MYSTERIES-SPACESHIP interface at its most academically grounded: using play to make science governable.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 52,
@@ -1596,7 +2083,15 @@
     ],
     "image": "/images/actors/liqd-banner.jpg",
     "imageAlt": "Liquid Democracy organization banner and visual identity",
-    "about": "Liquid Democracy e.V. develops and deploys open-source digital participation tools — including the Adhocracy platform — that enable liquid democracy and structured deliberation for governments and civil society. Liquid democracy, which allows citizens to either vote directly or delegate their vote to trusted proxies on specific issues, offers a compelling model for scaling democratic participation without sacrificing depth. In the planetary governance context, Liquid Democracy represents the SPACESHIP-ASSEMBLY interface: technical innovation in service of democratic scalability."
+    "about": "Liquid Democracy e.V. develops and deploys open-source digital participation tools — including the Adhocracy platform — that enable liquid democracy and structured deliberation for governments and civil society. Liquid democracy, which allows citizens to either vote directly or delegate their vote to trusted proxies on specific issues, offers a compelling model for scaling democratic participation without sacrificing depth. In the planetary governance context, Liquid Democracy represents the SPACESHIP-ASSEMBLY interface: technical innovation in service of democratic scalability.",
+    "continent": "europe",
+    "subregion": "western-europe",
+    "country": [
+      "DE"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 23,
@@ -1619,7 +2114,15 @@
       "global"
     ],
     "image": "/images/actors/longnow-hero.jpg",
-    "imageAlt": "Long Now Foundation hero image"
+    "imageAlt": "Long Now Foundation hero image",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 24,
@@ -1645,7 +2148,17 @@
       "sweden"
     ],
     "image": "/images/actors/martin-ericsson-speaking.jpg",
-    "imageAlt": "Martin Ericsson speaking at a conference"
+    "imageAlt": "Martin Ericsson speaking at a conference",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 58,
@@ -1671,7 +2184,13 @@
     ],
     "image": "/images/actors/megagame-assembly-event.jpg",
     "imageAlt": "Players engaged in a large-scale megagame event",
-    "about": "Megagame Assembly is the international hub for megagame design and play — connecting the designers and organisers of large-scale multi-player simulation games that put dozens or hundreds of participants inside complex systems of diplomacy, governance, and resource management. Megagames are unique tools for building systemic intuition: by experiencing the dynamics of collective decision-making from the inside, players develop governance capacities that abstract learning cannot produce. They represent the MYSTERIES-ASSEMBLY intersection: play as a technology for building political imagination and collective intelligence."
+    "about": "Megagame Assembly is the international hub for megagame design and play — connecting the designers and organisers of large-scale multi-player simulation games that put dozens or hundreds of participants inside complex systems of diplomacy, governance, and resource management. Megagames are unique tools for building systemic intuition: by experiencing the dynamics of collective decision-making from the inside, players develop governance capacities that abstract learning cannot produce. They represent the MYSTERIES-ASSEMBLY intersection: play as a technology for building political imagination and collective intelligence.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 59,
@@ -1694,7 +2213,15 @@
     ],
     "image": "/images/actors/megagame-coalition-event.jpg",
     "imageAlt": "Megagame event with players gathered around tables",
-    "about": "The Megagame Coalition is the North American community of megagame practice — connecting designers and organisers across the continent who are using large-scale simulation gaming to explore governance, strategy, and collective decision-making. As megagames gain recognition as serious tools for education, training, and public engagement, the Coalition provides the community infrastructure that allows the field to develop and professionalise. They represent the MYSTERIES-ASSEMBLY orientation: the use of immersive play to build the governance capacities and political imagination that planetary challenges require."
+    "about": "The Megagame Coalition is the North American community of megagame practice — connecting designers and organisers across the continent who are using large-scale simulation gaming to explore governance, strategy, and collective decision-making. As megagames gain recognition as serious tools for education, training, and public engagement, the Coalition provides the community infrastructure that allows the field to develop and professionalise. They represent the MYSTERIES-ASSEMBLY orientation: the use of immersive play to build the governance capacities and political imagination that planetary challenges require.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 54,
@@ -1721,7 +2248,15 @@
       "research"
     ],
     "image": "/images/actors/metagov-globe.jpg",
-    "imageAlt": "Metagov dithered globe graphic"
+    "imageAlt": "Metagov dithered globe graphic",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "slug": "movement-generation",
@@ -1747,7 +2282,15 @@
     "image": "",
     "imageAlt": "",
     "id": 114,
-    "about": "Movement Generation is rooted in the wisdom of frontline communities — the people most directly harmed by extractive economic systems and ecological breakdown — and insists that any just transition must be led by them. Their Resilience-Based Organizing model and the Just Transition framework (co-created with the Climate Justice Alliance) have become foundational documents in the global climate justice movement. Their guiding principle — 'if we're not prepared to govern, we're not prepared to win' — captures the ASSEMBLY orientation at its most politically urgent: the insistence that movement-building and governance-building are inseparable."
+    "about": "Movement Generation is rooted in the wisdom of frontline communities — the people most directly harmed by extractive economic systems and ecological breakdown — and insists that any just transition must be led by them. Their Resilience-Based Organizing model and the Just Transition framework (co-created with the Climate Justice Alliance) have become foundational documents in the global climate justice movement. Their guiding principle — 'if we're not prepared to govern, we're not prepared to win' — captures the ASSEMBLY orientation at its most politically urgent: the insistence that movement-building and governance-building are inseparable.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 7,
@@ -1772,7 +2315,17 @@
     ],
     "image": "/images/actors/naturskyddsforeningen-nature.jpg",
     "imageAlt": "Sweeping Swedish landscape with forests and mountains",
-    "about": "With over 200,000 members, Naturskyddsföreningen (the Swedish Society for Nature Conservation) is one of the oldest and most influential environmental organisations in the Nordic region. It combines grassroots campaigning with policy expertise, making it a key actor in translating ecological science into political change at the national level. For the planetary governance movement, it represents the GARDEN orientation at its most embedded: a mass membership organisation with the legitimacy and longevity to hold governments accountable on ecological commitments."
+    "about": "With over 200,000 members, Naturskyddsföreningen (the Swedish Society for Nature Conservation) is one of the oldest and most influential environmental organisations in the Nordic region. It combines grassroots campaigning with policy expertise, making it a key actor in translating ecological science into political change at the national level. For the planetary governance movement, it represents the GARDEN orientation at its most embedded: a mass membership organisation with the legitimacy and longevity to hold governments accountable on ecological commitments.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "slug": "new-economy-network-australia",
@@ -1797,7 +2350,15 @@
     "image": "",
     "imageAlt": "",
     "id": 113,
-    "about": "The New Economy Network Australia is building the connective tissue for economic transformation in Australia — linking community energy cooperatives, ethical finance institutions, regenerative food systems, cooperative housing, and local circular economies into a national network with shared values and mutual support. By operating as a cooperative network rather than a traditional NGO, it embodies the alternative economics it advocates for. In the planetary governance context, they represent the ASSEMBLY-GARDEN interface applied to economic transition: demonstrating that a different economy is not only theoretically possible but practically under construction."
+    "about": "The New Economy Network Australia is building the connective tissue for economic transformation in Australia — linking community energy cooperatives, ethical finance institutions, regenerative food systems, cooperative housing, and local circular economies into a national network with shared values and mutual support. By operating as a cooperative network rather than a traditional NGO, it embodies the alternative economics it advocates for. In the planetary governance context, they represent the ASSEMBLY-GARDEN interface applied to economic transition: demonstrating that a different economy is not only theoretically possible but practically under construction.",
+    "continent": "oceania",
+    "subregion": "australia-and-new-zealand",
+    "country": [
+      "AU"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 105,
@@ -1822,7 +2383,20 @@
     ],
     "image": "",
     "imageAlt": "",
-    "about": "The Nordic Blockchain Alliance explores how blockchain technology can support the circular economy and sustainable supply chains in Nordic lifestyle and design industries — working on European Product Passport compliance and circular business model transition. While blockchain's most prominent applications have been financial speculation, the Nordic Blockchain Alliance focuses on governance applications: using distributed ledger technology to create transparency and accountability in supply chains. They represent the SPACESHIP orientation applied to industrial governance: digital infrastructure for circular economy accountability."
+    "about": "The Nordic Blockchain Alliance explores how blockchain technology can support the circular economy and sustainable supply chains in Nordic lifestyle and design industries — working on European Product Passport compliance and circular business model transition. While blockchain's most prominent applications have been financial speculation, the Nordic Blockchain Alliance focuses on governance applications: using distributed ledger technology to create transparency and accountability in supply chains. They represent the SPACESHIP orientation applied to industrial governance: digital infrastructure for circular economy accountability.",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "FI",
+      "NO",
+      "SE",
+      "DK"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 107,
@@ -1847,7 +2421,15 @@
       "democratic-resilience"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 57,
@@ -1876,7 +2458,15 @@
     ],
     "image": "/images/actors/nol-event1.jpg",
     "imageAlt": "Large-scale political LARP event",
-    "about": "Not Only Larp is an Italian design studio that has made social change through immersive gaming its explicit purpose — running large-scale educational and political LARPs across Europe that use the visceral, embodied logic of roleplay to engage participants with governance challenges, social justice themes, and political scenarios. By combining theatrical craft with genuine political intent, they demonstrate that LARP is not just entertainment but a serious tool for civic education and social transformation. They represent the MYSTERIES orientation at its most explicitly political: play as a vehicle for consciousness change."
+    "about": "Not Only Larp is an Italian design studio that has made social change through immersive gaming its explicit purpose — running large-scale educational and political LARPs across Europe that use the visceral, embodied logic of roleplay to engage participants with governance challenges, social justice themes, and political scenarios. By combining theatrical craft with genuine political intent, they demonstrate that LARP is not just entertainment but a serious tool for civic education and social transformation. They represent the MYSTERIES orientation at its most explicitly political: play as a vehicle for consciousness change.",
+    "continent": "europe",
+    "subregion": "southern-europe",
+    "country": [
+      "IT"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 49,
@@ -1903,7 +2493,13 @@
     ],
     "image": "/images/actors/odc-satellite.jpg",
     "imageAlt": "Satellite imagery of Earth surface from Open Data Cube",
-    "about": "The Open Data Cube is infrastructure for planetary vision — an open-source platform that enables governments and researchers to process and analyse satellite earth observation data at national and regional scale, turning the torrent of remote sensing data into actionable environmental intelligence. By making satellite data analysis accessible to the countries that need it most, it democratises the SPACESHIP capacity for planetary monitoring. In the governance context, the ODC represents the technical foundation for evidence-based ecological governance: the ability to see your land from space and act on what you learn."
+    "about": "The Open Data Cube is infrastructure for planetary vision — an open-source platform that enables governments and researchers to process and analyse satellite earth observation data at national and regional scale, turning the torrent of remote sensing data into actionable environmental intelligence. By making satellite data analysis accessible to the countries that need it most, it democratises the SPACESHIP capacity for planetary monitoring. In the governance context, the ODC represents the technical foundation for evidence-based ecological governance: the ability to see your land from space and act on what you learn.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 1,
@@ -1932,7 +2528,13 @@
     ],
     "image": "/images/actors/openearth-hero.jpg",
     "imageAlt": "Earth visualization by OpenEarth",
-    "about": "OpenEarth Foundation works on the often-invisible layer that makes planetary governance computationally possible: the open data infrastructure for tracking, verifying, and disclosing ecological information. From spatial mesh tools to active inference frameworks for biodiversity monitoring, their work creates the technical commons that cities, governments, and companies need to make credible environmental commitments. They represent the SPACESHIP at its most infrastructural — not building applications, but building the open protocols that all applications can build on."
+    "about": "OpenEarth Foundation works on the often-invisible layer that makes planetary governance computationally possible: the open data infrastructure for tracking, verifying, and disclosing ecological information. From spatial mesh tools to active inference frameworks for biodiversity monitoring, their work creates the technical commons that cities, governments, and companies need to make credible environmental commitments. They represent the SPACESHIP at its most infrastructural — not building applications, but building the open protocols that all applications can build on.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "slug": "p2p-foundation",
@@ -1958,7 +2560,15 @@
     "image": "",
     "imageAlt": "",
     "id": 118,
-    "about": "The P2P Foundation, founded by Michel Bauwens, has spent two decades building the theoretical and practical commons of peer-to-peer governance — maintaining a vast wiki of knowledge on commons governance, platform cooperativism, open-source production, and post-capitalist alternatives. Their concept of 'commons-based peer production' has influenced digital rights movements, cooperative economy practitioners, and governance innovators worldwide. In the planetary governance puzzle, the P2P Foundation represents the ASSEMBLY-SPACESHIP interface at its most intellectually generative: the sustained effort to understand and spread the governance principles that allow distributed communities to produce and steward shared resources."
+    "about": "The P2P Foundation, founded by Michel Bauwens, has spent two decades building the theoretical and practical commons of peer-to-peer governance — maintaining a vast wiki of knowledge on commons governance, platform cooperativism, open-source production, and post-capitalist alternatives. Their concept of 'commons-based peer production' has influenced digital rights movements, cooperative economy practitioners, and governance innovators worldwide. In the planetary governance puzzle, the P2P Foundation represents the ASSEMBLY-SPACESHIP interface at its most intellectually generative: the sustained effort to understand and spread the governance principles that allow distributed communities to produce and steward shared resources.",
+    "continent": "europe",
+    "subregion": "western-europe",
+    "country": [
+      "NL"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 53,
@@ -1983,7 +2593,15 @@
       "technology"
     ],
     "image": "/images/actors/pbp-community.jpg",
-    "imageAlt": "Community members engaging in participatory budgeting process"
+    "imageAlt": "Community members engaging in participatory budgeting process",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 86,
@@ -2001,7 +2619,13 @@
     "tags": [],
     "image": "/images/actors/paxsims-connections.jpg",
     "imageAlt": "Connections North simulation and gaming event",
-    "about": "PAXsims is the community hub and publication of record for peace, conflict, and development simulations — connecting the designers and users of serious games used in humanitarian training, policy analysis, and peacebuilding education worldwide. By documenting, critiquing, and connecting simulation practice across these fields, PAXsims builds the collective knowledge base of a field that uses play for some of the most consequential purposes imaginable. In the planetary governance context, they represent the MYSTERIES-ASSEMBLY intersection: the rigorous application of game design to the challenges of peace, governance, and collective decision-making under conditions of conflict."
+    "about": "PAXsims is the community hub and publication of record for peace, conflict, and development simulations — connecting the designers and users of serious games used in humanitarian training, policy analysis, and peacebuilding education worldwide. By documenting, critiquing, and connecting simulation practice across these fields, PAXsims builds the collective knowledge base of a field that uses play for some of the most consequential purposes imaginable. In the planetary governance context, they represent the MYSTERIES-ASSEMBLY intersection: the rigorous application of game design to the challenges of peace, governance, and collective decision-making under conditions of conflict.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 69,
@@ -2030,7 +2654,13 @@
     ],
     "image": "/images/actors/people-powered-hero.jpg",
     "imageAlt": "People Powered organization promotional image",
-    "about": "People Powered is the global hub for participatory democracy practice — connecting practitioners, governments, and researchers working on citizens' assemblies, participatory budgeting, and other forms of democratic innovation worldwide. Through their annual Public Participation and Deliberative Democracy Festival and practical toolkits, they build the global community of practice that allows democratic innovation to spread and improve. In the planetary governance ecosystem, People Powered represents the ASSEMBLY orientation at its most globally networked: the infrastructure for a worldwide movement toward deeper, more genuine democracy."
+    "about": "People Powered is the global hub for participatory democracy practice — connecting practitioners, governments, and researchers working on citizens' assemblies, participatory budgeting, and other forms of democratic innovation worldwide. Through their annual Public Participation and Deliberative Democracy Festival and practical toolkits, they build the global community of practice that allows democratic innovation to spread and improve. In the planetary governance ecosystem, People Powered represents the ASSEMBLY orientation at its most globally networked: the infrastructure for a worldwide movement toward deeper, more genuine democracy.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 2,
@@ -2054,7 +2684,18 @@
     ],
     "image": "/images/actors/planetary-guardians-social.jpg",
     "imageAlt": "Planetary Guardians visual identity showing Earth from space",
-    "about": "Planetary Guardians / SpiralWeb works on the governance architecture for those who live with and care for natural systems — developing frameworks that allow land stewards to coordinate collective management of shared ecosystems without either state control or market extraction. Drawing on Ostrom's work on the commons and pattern languages for ecological governance, their three-stream model integrates monitoring, deliberation, and adaptive management. They represent the GARDEN-ASSEMBLY bridge: the conviction that healthy land requires healthy governance, and that communities are often the most effective stewards when given the right tools and legitimate authority."
+    "about": "Planetary Guardians / SpiralWeb works on the governance architecture for those who live with and care for natural systems — developing frameworks that allow land stewards to coordinate collective management of shared ecosystems without either state control or market extraction. Drawing on Ostrom's work on the commons and pattern languages for ecological governance, their three-stream model integrates monitoring, deliberation, and adaptive management. They represent the GARDEN-ASSEMBLY bridge: the conviction that healthy land requires healthy governance, and that communities are often the most effective stewards when given the right tools and legitimate authority.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [
+      "DK",
+      "UG",
+      "MA",
+      "PK"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 73,
@@ -2079,7 +2720,13 @@
     ],
     "image": "/images/actors/pha-video.jpg",
     "imageAlt": "Promise of Planetary Health video still",
-    "about": "The Planetary Health Alliance is building the scientific and institutional infrastructure for planetary health — the interdisciplinary framework that treats human health as inseparable from the health of the ecosystems, climate systems, and ecological processes that sustain it. With 400+ universities, NGOs, and government partners, they represent the academic mainstream of the GARDEN-SPACESHIP interface: the epidemiological, ecological, and systems science that demonstrates, with medical rigour, why governing the planet's living systems is a matter of public health."
+    "about": "The Planetary Health Alliance is building the scientific and institutional infrastructure for planetary health — the interdisciplinary framework that treats human health as inseparable from the health of the ecosystems, climate systems, and ecological processes that sustain it. With 400+ universities, NGOs, and government partners, they represent the academic mainstream of the GARDEN-SPACESHIP interface: the epidemiological, ecological, and systems science that demonstrates, with medical rigour, why governing the planet's living systems is a matter of public health.",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 83,
@@ -2097,7 +2744,15 @@
     "tags": [],
     "image": "/images/actors/plurality-cover.jpg",
     "imageAlt": "Cover of the Plurality book by Glen Weyl and collaborators",
-    "about": "The Plurality Institute advances plural technology — collaborative tools for cooperation across difference — as an alternative to both centralised AI and fragmented individualism. Building on Glen Weyl's work on quadratic mechanisms, decentralised identity, and plural governance, the Institute develops the theoretical and technical foundations for digital systems that strengthen diverse, democratic communities rather than homogenising or polarising them. In the planetary governance context, they represent the SPACESHIP-ASSEMBLY interface at its most philosophically ambitious: the conviction that the architecture of digital systems encodes political values, and that building democratic technology requires rethinking those values from the ground up."
+    "about": "The Plurality Institute advances plural technology — collaborative tools for cooperation across difference — as an alternative to both centralised AI and fragmented individualism. Building on Glen Weyl's work on quadratic mechanisms, decentralised identity, and plural governance, the Institute develops the theoretical and technical foundations for digital systems that strengthen diverse, democratic communities rather than homogenising or polarising them. In the planetary governance context, they represent the SPACESHIP-ASSEMBLY interface at its most philosophically ambitious: the conviction that the architecture of digital systems encodes political values, and that building democratic technology requires rethinking those values from the ground up.",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 30,
@@ -2120,7 +2775,13 @@
       "ai"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 31,
@@ -2144,7 +2805,13 @@
       "ai"
     ],
     "image": "/images/actors/humanstatement-og.jpg",
-    "imageAlt": "Pro-Human AI Declaration branding and campaign imagery"
+    "imageAlt": "Pro-Human AI Declaration branding and campaign imagery",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 20,
@@ -2169,7 +2836,17 @@
       "sweden"
     ],
     "image": "/images/actors/prototopia-hero.jpg",
-    "imageAlt": "Prototopia futures festival"
+    "imageAlt": "Prototopia futures festival",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 16,
@@ -2195,7 +2872,15 @@
       "technology"
     ],
     "image": "/images/actors/purpose-steward.jpg",
-    "imageAlt": "Steward ownership illustration"
+    "imageAlt": "Steward ownership illustration",
+    "continent": "europe",
+    "subregion": "western-europe",
+    "country": [
+      "DE"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 119,
@@ -2222,7 +2907,15 @@
       "pluriverse"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "continent": "asia",
+    "subregion": "southern-asia",
+    "country": [
+      "IN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 12,
@@ -2246,7 +2939,13 @@
       "technology"
     ],
     "image": "/images/actors/rxc-mydata.jpg",
-    "imageAlt": "RadicalxChange MyData collaboration"
+    "imageAlt": "RadicalxChange MyData collaboration",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 6,
@@ -2272,7 +2971,13 @@
       "ai"
     ],
     "image": "/images/actors/rfcx-hero.jpg",
-    "imageAlt": "Rainforest canopy with acoustic monitoring technology"
+    "imageAlt": "Rainforest canopy with acoustic monitoring technology",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 82,
@@ -2290,7 +2995,13 @@
     ],
     "tags": [],
     "image": "/images/actors/refidao-hero.jpg",
-    "imageAlt": "ReFi DAO visual identity and branding"
+    "imageAlt": "ReFi DAO visual identity and branding",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 79,
@@ -2308,7 +3019,13 @@
     ],
     "tags": [],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 4,
@@ -2335,7 +3052,13 @@
       "regenerative-agriculture"
     ],
     "image": "/images/actors/regen-amazon.jpg",
-    "imageAlt": "Amazon Sacred Headwaters"
+    "imageAlt": "Amazon Sacred Headwaters",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 39,
@@ -2361,7 +3084,13 @@
       "nature-based-economies"
     ],
     "image": "/images/actors/rewild-event.jpg",
-    "imageAlt": "European Rewilding event in Greater Coa Valley"
+    "imageAlt": "European Rewilding event in Greater Coa Valley",
+    "continent": "europe",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 97,
@@ -2387,7 +3116,18 @@
       "old-growth-forest"
     ],
     "image": "/images/actors/rewilding-sweden-landscape.jpg",
-    "imageAlt": "Swedish wilderness landscape being rewilded"
+    "imageAlt": "Swedish wilderness landscape being rewilded",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic",
+      "Sapmi"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 92,
@@ -2412,7 +3152,17 @@
       "constitutional-amendment"
     ],
     "image": "/images/actors/naturensrattigheter-hero.jpg",
-    "imageAlt": "Rights of Nature Sweden campaign visual"
+    "imageAlt": "Rights of Nature Sweden campaign visual",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 61,
@@ -2436,7 +3186,15 @@
       "research"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 91,
@@ -2462,7 +3220,20 @@
       "nordic"
     ],
     "image": "/images/actors/saami-landscape1.jpg",
-    "imageAlt": "Arctic landscape in Arvidsjaur showing Sami traditional territory"
+    "imageAlt": "Arctic landscape in Arvidsjaur showing Sami traditional territory",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "NO"
+    ],
+    "bioregion": [
+      "Nordic",
+      "Sapmi"
+    ],
+    "peoples": [
+      "Sami"
+    ],
+    "languages": []
   },
   {
     "id": 50,
@@ -2488,7 +3259,17 @@
       "technology"
     ],
     "image": "/images/actors/single-earth-forest.jpg",
-    "imageAlt": "Dense forest canopy viewed from above"
+    "imageAlt": "Dense forest canopy viewed from above",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "EE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 94,
@@ -2513,7 +3294,17 @@
       "ai-moderation"
     ],
     "image": "/images/actors/sitra-hero.jpg",
-    "imageAlt": "Sitra Finnish innovation fund visual identity"
+    "imageAlt": "Sitra Finnish innovation fund visual identity",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "FI"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 108,
@@ -2535,7 +3326,17 @@
       "deliberative-democracy"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "NO"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 84,
@@ -2553,7 +3354,15 @@
     ],
     "tags": [],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 68,
@@ -2578,7 +3387,15 @@
       "europe"
     ],
     "image": "/images/actors/sortition-assembly.jpg",
-    "imageAlt": "Citizens assembly selected by sortition"
+    "imageAlt": "Citizens assembly selected by sortition",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "GB"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 10,
@@ -2602,7 +3419,13 @@
       "technology"
     ],
     "image": "/images/actors/spatial-web-report.jpg",
-    "imageAlt": "Cover of the Future of Global AI Governance report"
+    "imageAlt": "Cover of the Future of Global AI Governance report",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 56,
@@ -2628,7 +3451,13 @@
       "technology"
     ],
     "image": "/images/actors/steward-hero.jpg",
-    "imageAlt": "Steward Ownership visual identity and community"
+    "imageAlt": "Steward Ownership visual identity and community",
+    "continent": "europe",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 15,
@@ -2652,7 +3481,17 @@
       "technology"
     ],
     "image": "/images/actors/strawbees-classroom.jpg",
-    "imageAlt": "Students building with Strawbees"
+    "imageAlt": "Students building with Strawbees",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 63,
@@ -2680,7 +3519,16 @@
       "europe"
     ],
     "image": "/images/actors/superflux-ikea.jpg",
-    "imageAlt": "Superflux IKEA Action Speaks NY2050 installation"
+    "imageAlt": "Superflux IKEA Action Speaks NY2050 installation",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "GB",
+      "IN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 21,
@@ -2706,7 +3554,17 @@
       "sweden"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 71,
@@ -2734,7 +3592,15 @@
       "europe"
     ],
     "image": "/images/actors/tni-seeds.jpg",
-    "imageAlt": "THE NEW INSTITUTE Seeds programme"
+    "imageAlt": "THE NEW INSTITUTE Seeds programme",
+    "continent": "europe",
+    "subregion": "western-europe",
+    "country": [
+      "DE"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 65,
@@ -2761,7 +3627,15 @@
       "experiential"
     ],
     "image": "/images/actors/tonyc-performance1.jpg",
-    "imageAlt": "Theatre of the Oppressed performance engaging audience participation"
+    "imageAlt": "Theatre of the Oppressed performance engaging audience participation",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 51,
@@ -2786,7 +3660,13 @@
       "technology"
     ],
     "image": "/images/actors/toucan-bg.jpg",
-    "imageAlt": "Toucan Protocol visual identity and branding"
+    "imageAlt": "Toucan Protocol visual identity and branding",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 17,
@@ -2812,7 +3692,17 @@
       "research"
     ],
     "image": "/images/actors/uppsala-gamedesign1.jpg",
-    "imageAlt": "Students at Uppsala University Department of Game Design"
+    "imageAlt": "Students at Uppsala University Department of Game Design",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 117,
@@ -2838,7 +3728,15 @@
       "culture"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "GB"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 33,
@@ -2863,7 +3761,17 @@
       "technology"
     ],
     "image": "/images/actors/viable-cities-climate.jpg",
-    "imageAlt": "Viable Cities climate contract visualization in urban setting"
+    "imageAlt": "Viable Cities climate contract visualization in urban setting",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "SE"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 93,
@@ -2887,7 +3795,17 @@
       "social-enterprise"
     ],
     "image": "/images/actors/wedodemocracy-logo.jpg",
-    "imageAlt": "We Do Democracy visual identity and branding"
+    "imageAlt": "We Do Democracy visual identity and branding",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "DK"
+    ],
+    "bioregion": [
+      "Nordic"
+    ],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 110,
@@ -2912,7 +3830,15 @@
       "regenerative"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "continent": "europe",
+    "subregion": "northern-europe",
+    "country": [
+      "GB"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 60,
@@ -2938,7 +3864,15 @@
       "global"
     ],
     "image": "/images/actors/wgw-fuller-seminar.jpg",
-    "imageAlt": "Buckminster Fuller leading the World Game seminar"
+    "imageAlt": "Buckminster Fuller leading the World Game seminar",
+    "continent": "americas",
+    "subregion": "northern-america",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   },
   {
     "id": 28,
@@ -2961,6 +3895,12 @@
       "global"
     ],
     "image": "/images/actors/wsf-gathering.jpg",
-    "imageAlt": "Participants at a World Social Forum gathering holding banners"
+    "imageAlt": "Participants at a World Social Forum gathering holding banners",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
   }
 ]

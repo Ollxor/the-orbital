@@ -171,3 +171,55 @@ git -C 'D:/Dropbox/The Orbital/site' push origin main
 - **Cloudflare Pages** auto-deploys on push to main; takes ~60 seconds
 - **YouTube thumbnails** are free: `https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg`
 - Repo is **public** — never commit anything in `docs/`, credentials, or Olle's personal info
+
+---
+
+## Planned (not yet built)
+
+### Geographic filter — advanced facets
+
+The current filter bar has Continent, Scale, and Type. A second pass should add:
+
+- **Subregion** drilldown — appears once a continent is selected; subregions grouped by continent if multiple selected. Reference data is in `src/data/regions.json` and `src/content/regions.yaml`.
+- **Country** — searchable multi-select using ISO 3166-1 alpha-2 codes (now stored in `actor.country[]`).
+- **Bioregion** — searchable multi-select, populated from `actor.bioregion[]` tags.
+- **Tags** — existing freeform tags.
+
+These are in the `actors.json` schema already (`subregion`, `country`, `bioregion`); only the UI is missing.
+
+### Language filter
+
+`actor.languages[]` exists in schema (ISO 639-1 codes) but is empty for all actors and has no UI. A future pass should:
+- Backfill language data for existing actors
+- Add a language facet to the advanced filter bar
+
+### Regional scrapers — dedicated sub-phase
+
+Expanding actor coverage from underrepresented regions requires scrapers for directories maintained by people and organisations in those regions. Different challenges from European/North American directories:
+
+- Different naming conventions and transliteration (actors may appear under multiple names across languages and scripts)
+- Different organisational forms (cooperatives, self-organised federations, kinship-based networks) that may not fit the current `type` enum — expect to extend it
+- Different data quality (some directories are PDFs, wikis, social media networks)
+- Greater risk of miscategorisation without local knowledge — lower confidence threshold and default imports to `status: pending_review`
+
+**Initial source candidates** (verify before adding to any scraper):
+
+Africa: African Climate Foundation, Allied Climate Partners Africa, Shack/Slum Dwellers International (SDI), The Green Institute (Nigeria)
+
+Asia: Asia Foundation civil society mappings, ICSF (International Collective in Support of Fishworkers), SEWA (India) and affiliated networks, Grassroots Asia, Focus on the Global South
+
+Latin America & Caribbean: Fundación Avina, CEPAL civil society registries, ALAMES, Global Greengrants regional hubs
+
+Oceania & Pacific: Pacific Islands Climate Action Network (PICAN), Pacific Community (SPC), First Nations climate networks in Australia and Aotearoa
+
+### Indigenous network handling
+
+The `peoples` field enables Indigenous and First Nations networks to be indexed without forcing them into the nation-state `country` frame. A future editorial pass should:
+
+- Develop guidelines for when to use `peoples` vs `country` vs both
+- Consult with Indigenous contributors before publishing profiles of Indigenous networks (consent and framing matter; do not scrape these)
+- Consider whether Indigenous actors warrant a dedicated editorial pathway separate from bulk scraping
+
+### Filter URL compat
+
+Old `/actors?r=nordic` links no longer resolve (the `r=` region param was replaced by `c=` continent and `s=` scale in the geographic taxonomy migration). If inbound links need support, add a redirect or param-mapping shim at the Cloudflare level.

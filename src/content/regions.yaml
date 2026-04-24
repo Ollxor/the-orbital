@@ -1,0 +1,47 @@
+# The Orbital — Geographic Taxonomy
+# Canonical source for continent + subregion hierarchy (UN M49).
+# Imported at build time from src/data/regions.json (keep in sync).
+# "Global" is a scale, not a region — use continent: transnational for actors with no fixed geography.
+
+continents:
+  africa:
+    name: Africa
+    subregions:
+      northern-africa:    { name: Northern Africa }
+      sub-saharan-africa: { name: Sub-Saharan Africa }
+      eastern-africa:     { name: Eastern Africa }
+      middle-africa:      { name: Middle Africa }
+      southern-africa:    { name: Southern Africa }
+      western-africa:     { name: Western Africa }
+  americas:
+    name: Americas
+    subregions:
+      northern-america: { name: Northern America }
+      central-america:  { name: Central America }
+      caribbean:        { name: Caribbean }
+      south-america:    { name: South America }
+  asia:
+    name: Asia
+    subregions:
+      central-asia:       { name: Central Asia }
+      eastern-asia:       { name: Eastern Asia }
+      south-eastern-asia: { name: South-Eastern Asia }
+      southern-asia:      { name: Southern Asia }
+      western-asia:       { name: Western Asia }
+  europe:
+    name: Europe
+    subregions:
+      eastern-europe:  { name: Eastern Europe }
+      northern-europe: { name: Northern Europe }
+      southern-europe: { name: Southern Europe }
+      western-europe:  { name: Western Europe }
+  oceania:
+    name: Oceania
+    subregions:
+      australia-and-new-zealand: { name: Australia and New Zealand }
+      melanesia:                 { name: Melanesia }
+      micronesia:                { name: Micronesia }
+      polynesia:                 { name: Polynesia }
+  transnational:
+    name: Transnational
+    subregions: {}

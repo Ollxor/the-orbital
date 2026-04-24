@@ -14,7 +14,6 @@ const iconMap: Record<string, string> = {
   MYSTERIES:'Icons2-03.svg',
   ASSEMBLY: 'Icons2-02.svg',
 };
-// Primary orientation accent colours (match global.css vars)
 const accentMap: Record<string, string> = {
   GARDEN:   '#4a7c59',
   SPACESHIP:'#2a6496',
@@ -22,6 +21,26 @@ const accentMap: Record<string, string> = {
   ASSEMBLY: '#b8860b',
 };
 const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
+
+// ── Featured rotation queue ─────────────────────────────────────────────────
+// 12 sets × 3 slugs; JS picks week = floor(Date.now() / 7d) % 12
+// Each set spans all four orientations where possible.
+const featuredQueue: string[][] = [
+  ['rth',                        'global-assembly',              'gaia-foundation'],
+  ['dark-matter-labs',           'sortition-foundation',         'rewilding-europe'],
+  ['doughnut-economics-action-lab','polis',                      'long-now-foundation'],
+  ['regen-network',              'radicalxchange',               'theatre-of-the-oppressed-nyc'],
+  ['climate-trace',              'world-social-forum',           'the-borderland'],
+  ['beckley-foundation',         'p2p-foundation',               'ecosystem-restoration-communities'],
+  ['metagov',                    'earth-law-center',             'demos-helsinki'],
+  ['plurality-institute',        'transition-network',           'superflux'],
+  ['sitra',                      'global-rewilding-alliance',    'co-intelligence-institute'],
+  ['g0v',                        'climate-justice-alliance',     'ritual-design-lab'],
+  ['future-earth',               'steward-ownership',            'institute-for-futures-studies'],
+  ['refi-dao',                   'saami-council',                'global-tapestry-of-alternatives'],
+];
+
+const actorMap = Object.fromEntries(actorsData.map(a => [a.slug, a]));
 
 function getFavicon(website: string): string {
   if (!website) return '';
@@ -40,7 +59,7 @@ function getFavicon(website: string): string {
       <p class="actors-desc">Organisations, networks, and initiatives building pieces of the planetary governance movement.</p>
     </div>
 
-    <!-- Orientation filter — centred -->
+    <!-- Orientation filter -->
     <div class="filter-bar" id="filter-bar">
       {orientations.map(key => (
         <button class="filter-btn active" data-orientation={key} aria-pressed="true">
@@ -48,6 +67,50 @@ function getFavicon(website: string): string {
           <span class="filter-label">{orientationLabels[key]}</span>
         </button>
       ))}
+    </div>
+
+    <!-- Featured this week -->
+    <div class="featured-section" id="featured-section">
+      <div class="featured-header">
+        <span class="featured-label">Featured this week</span>
+      </div>
+      <div class="featured-grid" id="featured-grid">
+        {featuredQueue.map((set, setIdx) => (
+          set.map(slug => {
+            const actor = actorMap[slug];
+            if (!actor) return null;
+            const accent = accentMap[(actor as any).orientations[0]] ?? '#999';
+            const favicon = getFavicon((actor as any).website);
+            return (
+              <a
+                href={`/actors/${(actor as any).slug}`}
+                class="featured-card"
+                data-set={setIdx}
+                data-orientations={(actor as any).orientations.join(',')}
+                style={`--accent:${accent};display:none`}
+              >
+                <div class="card-orientations">
+                  {(actor as any).orientations.map((o: string) => (
+                    <img src={`/assets/${iconMap[o]}`} alt={orientationLabels[o]} class="card-orient-icon" title={orientationLabels[o]} />
+                  ))}
+                </div>
+                <div class="card-name-row">
+                  {favicon && (
+                    <img src={favicon} alt="" class="card-favicon" referrerpolicy="no-referrer" onerror="this.style.display='none'" loading="lazy" />
+                  )}
+                  <h3 class="card-name">{(actor as any).name}</h3>
+                </div>
+                <p class="card-desc featured-desc">{(actor as any).description}</p>
+                <div class="card-footer">
+                  {(actor as any).type && <span class="card-type">{(actor as any).type}</span>}
+                  {(actor as any).location && (actor as any).type && <span class="card-sep">·</span>}
+                  {(actor as any).location && <span class="card-loc">{(actor as any).location}</span>}
+                </div>
+              </a>
+            );
+          })
+        ))}
+      </div>
     </div>
 
     <!-- Search + count -->
@@ -71,37 +134,18 @@ function getFavicon(website: string): string {
             data-name={actor.name.toLowerCase()}
             style={`--accent:${accent}`}
           >
-            <!-- Orientation icons, top-right -->
             <div class="card-orientations">
               {actor.orientations.map(o => (
-                <img
-                  src={`/assets/${iconMap[o]}`}
-                  alt={orientationLabels[o]}
-                  class="card-orient-icon"
-                  title={orientationLabels[o]}
-                />
+                <img src={`/assets/${iconMap[o]}`} alt={orientationLabels[o]} class="card-orient-icon" title={orientationLabels[o]} />
               ))}
             </div>
-
-            <!-- Name row with favicon -->
             <div class="card-name-row">
               {favicon && (
-                <img
-                  src={favicon}
-                  alt=""
-                  class="card-favicon"
-                  referrerpolicy="no-referrer"
-                  onerror="this.style.display='none'"
-                  loading="lazy"
-                />
+                <img src={favicon} alt="" class="card-favicon" referrerpolicy="no-referrer" onerror="this.style.display='none'" loading="lazy" />
               )}
               <h3 class="card-name">{actor.name}</h3>
             </div>
-
-            <!-- Description -->
             <p class="card-desc">{actor.description}</p>
-
-            <!-- Footer: type · location -->
             <div class="card-footer">
               {actor.type && <span class="card-type">{actor.type}</span>}
               {actor.location && actor.type && <span class="card-sep">·</span>}
@@ -117,7 +161,7 @@ function getFavicon(website: string): string {
 </Base>
 
 <style>
-/* ── Page wrapper — wide, breaks out of 720px container ── */
+/* ── Page wrapper ── */
 .actors-page {
   max-width: 1300px;
   margin: 0 auto;
@@ -134,7 +178,7 @@ function getFavicon(website: string): string {
 }
 .actors-desc { font-size: .9375rem; color: var(--text-2); }
 
-/* ── Filter bar — centred ── */
+/* ── Filter bar ── */
 .filter-bar {
   display: flex;
   justify-content: center;
@@ -144,7 +188,7 @@ function getFavicon(website: string): string {
   padding: 1rem 1.5rem;
   background: var(--filter-bg);
   border-radius: 10px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
 }
 .filter-btn {
   display: flex;
@@ -162,6 +206,63 @@ function getFavicon(website: string): string {
 .filter-btn:not(.active) { opacity: .28; }
 .filter-icon { width: 32px; height: 32px; object-fit: contain; }
 .filter-label { font-size: .6875rem; color: var(--text-3); white-space: nowrap; letter-spacing: .04em; }
+
+/* ── Featured this week ── */
+.featured-section {
+  margin-bottom: 2rem;
+}
+.featured-header {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 1rem;
+}
+.featured-label {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.featured-header::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-3);
+  opacity: .5;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+@media (max-width: 900px) { .featured-grid { grid-template-columns: 1fr; } }
+
+/* Featured card — same base as actor-card but unclamped desc + slight highlight */
+.featured-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .875rem;
+  padding: 1.75rem 1.75rem 1.375rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+  border-left: 3px solid var(--accent, var(--border));
+  border-radius: 0 10px 10px 0;
+  background: color-mix(in srgb, var(--accent) 4%, var(--bg));
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+  cursor: pointer;
+}
+.featured-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,.1);
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+  text-decoration: none;
+}
 
 /* ── Search row ── */
 .search-row {
@@ -219,7 +320,7 @@ function getFavicon(website: string): string {
 }
 .actor-card.hidden { display: none; }
 
-/* ── Orientation icons — top right corner ── */
+/* ── Shared card elements ── */
 .card-orientations {
   position: absolute;
   top: 1.25rem;
@@ -229,12 +330,11 @@ function getFavicon(website: string): string {
 }
 .card-orient-icon { width: 20px; height: 20px; object-fit: contain; opacity: .85; }
 
-/* ── Name row ── */
 .card-name-row {
   display: flex;
   align-items: center;
   gap: .625rem;
-  padding-right: 3.5rem; /* avoid overlap with orientation icons */
+  padding-right: 3.5rem;
 }
 .card-favicon {
   width: 22px;
@@ -252,20 +352,23 @@ function getFavicon(website: string): string {
   color: var(--text);
 }
 
-/* ── Description ── */
 .card-desc {
   font-size: .875rem;
   line-height: 1.65;
   color: var(--text-2);
   flex: 1;
-  /* Clamp to 5 lines */
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+/* Featured cards show full description */
+.featured-desc {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  display: block;
+}
 
-/* ── Card footer ── */
 .card-footer {
   display: flex;
   align-items: center;
@@ -283,6 +386,23 @@ function getFavicon(website: string): string {
 </style>
 
 <script>
+// ── Featured rotation ────────────────────────────────────────────────────────
+const weeksSinceEpoch = Math.floor(Date.now() / (7 * 24 * 60 * 60 * 1000));
+const allFeaturedCards = document.querySelectorAll<HTMLElement>('.featured-card');
+const totalSets = featuredQueue();
+
+function featuredQueue(): number {
+  const sets = new Set<string>();
+  allFeaturedCards.forEach(c => sets.add(c.dataset.set!));
+  return sets.size;
+}
+
+const currentSet = String(weeksSinceEpoch % totalSets);
+allFeaturedCards.forEach(card => {
+  if (card.dataset.set === currentSet) card.style.display = 'flex';
+});
+
+// ── Filter + search ──────────────────────────────────────────────────────────
 const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
 const cards = document.querySelectorAll<HTMLElement>('.actor-card');
 const searchInput = document.getElementById('actor-search') as HTMLInputElement | null;
@@ -315,7 +435,6 @@ filterBtns.forEach(btn => {
     btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
     const active = new Set<string>();
     filterBtns.forEach(b => { if (b.classList.contains('active')) active.add(b.dataset.orientation!); });
-    // If all deselected, re-select all
     if (active.size === 0) filterBtns.forEach(b => { b.classList.add('active'); b.setAttribute('aria-pressed', 'true'); });
     updateVisibility();
   });

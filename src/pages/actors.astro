@@ -31,7 +31,7 @@ function normalizeType(t: string): string {
 }
 
 // ── Continent filter — counts from data, always show all ─────────────────────
-const CONTINENT_ORDER = ['africa','americas','asia','europe','oceania','transnational'] as const;
+const CONTINENT_ORDER = ['africa','north-america','latin-america','asia','europe','oceania','transnational'] as const;
 type Continent = typeof CONTINENT_ORDER[number];
 
 const continentCounts: Record<string, number> = {};

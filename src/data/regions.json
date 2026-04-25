@@ -1,11 +1,12 @@
 {
   "continents": {
-    "africa":        { "name": "Africa",        "subregions": { "northern-africa": "Northern Africa", "sub-saharan-africa": "Sub-Saharan Africa", "eastern-africa": "Eastern Africa", "middle-africa": "Middle Africa", "southern-africa": "Southern Africa", "western-africa": "Western Africa" } },
-    "americas":      { "name": "Americas",      "subregions": { "northern-america": "Northern America", "central-america": "Central America", "caribbean": "Caribbean", "south-america": "South America" } },
-    "asia":          { "name": "Asia",          "subregions": { "central-asia": "Central Asia", "eastern-asia": "Eastern Asia", "south-eastern-asia": "South-Eastern Asia", "southern-asia": "Southern Asia", "western-asia": "Western Asia" } },
-    "europe":        { "name": "Europe",        "subregions": { "eastern-europe": "Eastern Europe", "northern-europe": "Northern Europe", "southern-europe": "Southern Europe", "western-europe": "Western Europe" } },
-    "oceania":       { "name": "Oceania",       "subregions": { "australia-and-new-zealand": "Australia and New Zealand", "melanesia": "Melanesia", "micronesia": "Micronesia", "polynesia": "Polynesia" } },
-    "transnational": { "name": "Transnational", "subregions": {} }
+    "africa":        { "name": "Africa",           "subregions": { "northern-africa": "Northern Africa", "sub-saharan-africa": "Sub-Saharan Africa", "eastern-africa": "Eastern Africa", "middle-africa": "Middle Africa", "southern-africa": "Southern Africa", "western-africa": "Western Africa" } },
+    "north-america": { "name": "North America",    "subregions": { "northern-america": "Northern America" } },
+    "latin-america": { "name": "Latin America",    "subregions": { "central-america": "Central America", "caribbean": "Caribbean", "south-america": "South America" } },
+    "asia":          { "name": "Asia",             "subregions": { "central-asia": "Central Asia", "eastern-asia": "Eastern Asia", "south-eastern-asia": "South-Eastern Asia", "southern-asia": "Southern Asia", "western-asia": "Western Asia" } },
+    "europe":        { "name": "Europe",           "subregions": { "eastern-europe": "Eastern Europe", "northern-europe": "Northern Europe", "southern-europe": "Southern Europe", "western-europe": "Western Europe" } },
+    "oceania":       { "name": "Oceania",          "subregions": { "australia-and-new-zealand": "Australia and New Zealand", "melanesia": "Melanesia", "micronesia": "Micronesia", "polynesia": "Polynesia" } },
+    "transnational": { "name": "Transnational",    "subregions": {} }
   },
   "scales": ["local", "regional", "national", "continental", "global"]
 }

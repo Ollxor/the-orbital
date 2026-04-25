@@ -42,6 +42,14 @@ STATUS_ORDER.forEach(s => { statusCounts[s] = 0; });
 });
 
 const total = projectsData.length;
+
+function getFavicon(website: string): string {
+  if (!website) return '';
+  try {
+    const url = new URL(website);
+    return `https://icons.duckduckgo.com/ip3/${url.hostname}.ico`;
+  } catch { return ''; }
+}
 ---
 
 <Base title="Projects — The Orbital">
@@ -51,6 +59,17 @@ const total = projectsData.length;
       <h1 class="projects-title">Projects</h1>
       <p class="projects-desc">Specific initiatives and experiments at the frontier of planetary governance.</p>
     </div>
+
+    <!-- TODO(olle): editorial intro
+         Add a short paragraph here (2–4 sentences) contextualising the
+         projects index — what counts as a "project" vs an "actor", how
+         to read the status labels, and what the index covers.
+         Remove this comment and uncomment the block below when ready.
+
+    <div class="editorial-intro">
+      <p>…</p>
+    </div>
+    -->
 
     <!-- Filter bar -->
     <div class="filter-bar" id="filter-bar">
@@ -112,7 +131,12 @@ const total = projectsData.length;
                   {STATUS_LABEL[status] ?? status}
                 </span>
               </div>
-              <h3 class="card-name">{project.name}</h3>
+              <h3 class="card-name">
+                {getFavicon(project.website) && (
+                  <img src={getFavicon(project.website)} alt="" class="card-favicon" referrerpolicy="no-referrer" onerror="this.style.display='none'" loading="lazy" />
+                )}
+                {project.name}
+              </h3>
               <p class="card-desc">{project.description}</p>
               {project.geography && (
                 <p class="card-geo">
@@ -160,6 +184,15 @@ const total = projectsData.length;
   margin-bottom: .5rem;
 }
 .projects-desc { font-size: .9375rem; color: var(--text-2); }
+
+/* ── Editorial intro ── */
+.editorial-intro {
+  font-size: .9375rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: .5rem 0 1.5rem;
+  max-width: 680px;
+}
 
 /* ── Filter bar (orientations) ── */
 .filter-bar {
@@ -317,11 +350,22 @@ const total = projectsData.length;
   flex-shrink: 0;
 }
 .card-name {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.35;
   color: var(--text);
+}
+.card-favicon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  border-radius: 3px;
+  flex-shrink: 0;
+  opacity: .75;
 }
 .card-desc {
   font-size: .8125rem;

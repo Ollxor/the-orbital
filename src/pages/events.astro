@@ -64,6 +64,16 @@ const ALL_TYPES = Object.entries(typeFreq)
       <p class="page-desc">Gatherings, conferences, and experiments shaping the planetary governance movement.</p>
     </div>
 
+    <!-- TODO(olle): editorial intro
+         Add a short paragraph here contextualising the events index —
+         curation criteria, how to submit an event, what "relevance" means.
+         Remove this comment and uncomment the block below when ready.
+
+    <div class="editorial-intro">
+      <p>…</p>
+    </div>
+    -->
+
     <!-- Filter bar -->
     <div class="filter-bar" id="filter-bar">
       {orientations.map(key => (
@@ -193,6 +203,13 @@ const ALL_TYPES = Object.entries(typeFreq)
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem 2rem 4rem;
+}
+
+.editorial-intro {
+  font-size: .9375rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: .5rem 0 1.5rem;
 }
 
 .page-header { padding-bottom: 1rem; }

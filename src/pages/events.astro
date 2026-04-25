@@ -3,35 +3,40 @@ import Base from '../layouts/Base.astro';
 import eventsData from '../data/events.json';
 
 const iconMap: Record<string, string> = {
-  GARDEN: 'Icons2-01.svg',
+  GARDEN:    'Icons2-01.svg',
   SPACESHIP: 'Icons2-04.svg',
   MYSTERIES: 'Icons2-03.svg',
-  ASSEMBLY: 'Icons2-02.svg',
+  ASSEMBLY:  'Icons2-02.svg',
 };
-
 const orientationLabels: Record<string, string> = {
-  GARDEN: 'The Garden',
+  GARDEN:    'The Garden',
   SPACESHIP: 'Spaceship Earth',
   MYSTERIES: 'The Mysteries',
-  ASSEMBLY: 'The Assemblies',
+  ASSEMBLY:  'The Assemblies',
+};
+const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
+
+const FORMAT_LABEL: Record<string, string> = {
+  'in-person': 'In person',
+  'online':    'Online',
+  'hybrid':    'Hybrid',
 };
 
 function formatDateRange(start: string, end: string) {
   if (!start) return '';
-  const s = new Date(start);
-  const opts: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'short', year: 'numeric' };
+  const s = new Date(start + 'T12:00:00Z');
+  const opts: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' };
   const sStr = s.toLocaleDateString('en-GB', opts);
   if (!end || end === start) return sStr;
-  const e = new Date(end);
-  // Same month+year → "12–14 Nov 2026"
-  if (s.getFullYear() === e.getFullYear() && s.getMonth() === e.getMonth()) {
-    return `${s.getDate()}–${e.getDate()} ${s.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}`;
+  const e = new Date(end + 'T12:00:00Z');
+  if (s.getUTCFullYear() === e.getUTCFullYear() && s.getUTCMonth() === e.getUTCMonth()) {
+    return `${s.getUTCDate()}–${e.getUTCDate()} ${s.toLocaleDateString('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' })}`;
   }
   return `${sStr} – ${e.toLocaleDateString('en-GB', opts)}`;
 }
 
 const today = new Date();
-today.setHours(0, 0, 0, 0);
+today.setUTCHours(0, 0, 0, 0);
 const todayIso = today.toISOString().slice(0, 10);
 
 const upcoming = eventsData
@@ -40,30 +45,78 @@ const upcoming = eventsData
 const past = eventsData
   .filter(e => !e.date_start || e.date_start < todayIso)
   .sort((a, b) => (b.date_start || '').localeCompare(a.date_start || ''));
+
+// Type filter — collect all distinct types, sort by frequency
+const typeFreq: Record<string, number> = {};
+eventsData.forEach(e => {
+  const t = (e as any).type || '';
+  if (t) typeFreq[t] = (typeFreq[t] || 0) + 1;
+});
+const ALL_TYPES = Object.entries(typeFreq)
+  .sort((a, b) => b[1] - a[1])
+  .map(([t]) => t);
 ---
 
 <Base title="Events — The Orbital">
-  <div class="container">
+  <div class="events-page">
     <div class="page-header">
       <h1 class="page-title">Events</h1>
       <p class="page-desc">Gatherings, conferences, and experiments shaping the planetary governance movement.</p>
     </div>
 
+    <!-- Filter bar -->
+    <div class="filter-bar" id="filter-bar">
+      {orientations.map(key => (
+        <button class="filter-btn active" data-orientation={key} aria-pressed="true">
+          <img src={`/assets/${iconMap[key]}`} alt={orientationLabels[key]} class="filter-icon" />
+          <span class="filter-label">{orientationLabels[key]}</span>
+        </button>
+      ))}
+    </div>
+
+    <div class="secondary-filters" id="secondary-filters">
+      <div class="filter-row">
+        <span class="filter-row-label">Type</span>
+        <div class="filter-row-pills">
+          {ALL_TYPES.map(t => (
+            <button class="pill-btn active type-btn" data-type={t} aria-pressed="true">{t}</button>
+          ))}
+        </div>
+      </div>
+    </div>
+
     {upcoming.length > 0 && (
-      <section>
-        <h2 class="section-heading">Upcoming <span class="count">({upcoming.length})</span></h2>
-        <div class="events-list">
+      <section id="upcoming-section">
+        <h2 class="section-heading">
+          Upcoming <span class="count" id="upcoming-count">({upcoming.length})</span>
+        </h2>
+        <div class="events-list" id="upcoming-list">
           {upcoming.map(event => (
-            <div class="event-card">
+            <div
+              class="event-card"
+              data-orientations={(event.orientations ?? []).join(',')}
+              data-type={(event as any).type ?? ''}
+            >
               <div class="event-meta">
                 <span class="event-dates">{formatDateRange(event.date_start, event.date_end)}</span>
                 {event.location && <span class="event-location">{event.location}</span>}
               </div>
               <div class="event-main">
-                <div>
-                  <h3 class="event-name">
-                    <a href={event.website} target="_blank" rel="noopener">{event.name}</a>
-                  </h3>
+                <div class="event-content">
+                  <div class="event-title-row">
+                    <h3 class="event-name">
+                      {event.website
+                        ? <a href={event.website} target="_blank" rel="noopener">{event.name}</a>
+                        : event.name
+                      }
+                    </h3>
+                    <div class="event-badges">
+                      {(event as any).type && <span class="event-type-badge">{(event as any).type}</span>}
+                      {(event as any).format && FORMAT_LABEL[(event as any).format] && (
+                        <span class="event-format-badge">{FORMAT_LABEL[(event as any).format]}</span>
+                      )}
+                    </div>
+                  </div>
                   <p class="event-desc">{event.description}</p>
                   {event.relevance_note && <p class="event-relevance"><em>{event.relevance_note}</em></p>}
                   <div class="tags">
@@ -71,7 +124,7 @@ const past = eventsData
                   </div>
                 </div>
                 <div class="event-icons">
-                  {event.orientations.map(o => (
+                  {(event.orientations ?? []).map(o => (
                     <img src={`/assets/${iconMap[o]}`} alt={orientationLabels[o]} class="event-icon" title={orientationLabels[o]} />
                   ))}
                 </div>
@@ -83,27 +136,44 @@ const past = eventsData
     )}
 
     {past.length > 0 && (
-      <section class="past-section">
-        <h2 class="section-heading">Past <span class="count">({past.length})</span></h2>
-        <div class="events-list past">
+      <section class="past-section" id="past-section">
+        <h2 class="section-heading">
+          Past <span class="count" id="past-count">({past.length})</span>
+        </h2>
+        <div class="events-list past" id="past-list">
           {past.map(event => (
-            <div class="event-card">
+            <div
+              class="event-card"
+              data-orientations={(event.orientations ?? []).join(',')}
+              data-type={(event as any).type ?? ''}
+            >
               <div class="event-meta">
                 <span class="event-dates">{formatDateRange(event.date_start, event.date_end)}</span>
                 {event.location && <span class="event-location">{event.location}</span>}
               </div>
               <div class="event-main">
-                <div>
-                  <h3 class="event-name">
-                    <a href={event.website} target="_blank" rel="noopener">{event.name}</a>
-                  </h3>
+                <div class="event-content">
+                  <div class="event-title-row">
+                    <h3 class="event-name">
+                      {event.website
+                        ? <a href={event.website} target="_blank" rel="noopener">{event.name}</a>
+                        : event.name
+                      }
+                    </h3>
+                    <div class="event-badges">
+                      {(event as any).type && <span class="event-type-badge">{(event as any).type}</span>}
+                      {(event as any).format && FORMAT_LABEL[(event as any).format] && (
+                        <span class="event-format-badge">{FORMAT_LABEL[(event as any).format]}</span>
+                      )}
+                    </div>
+                  </div>
                   <p class="event-desc">{event.description}</p>
                   <div class="tags">
                     {event.tags.map(tag => <a href={`/tags/${tag}`} class="tag">{tag.replace(/-/g, '\u00a0')}</a>)}
                   </div>
                 </div>
                 <div class="event-icons">
-                  {event.orientations.map(o => (
+                  {(event.orientations ?? []).map(o => (
                     <img src={`/assets/${iconMap[o]}`} alt={orientationLabels[o]} class="event-icon" title={orientationLabels[o]} />
                   ))}
                 </div>
@@ -113,14 +183,95 @@ const past = eventsData
         </div>
       </section>
     )}
+
+    <p class="no-results" id="no-results" style="display:none">No events match your current filters.</p>
   </div>
 </Base>
 
 <style>
-.page-header { padding: 2rem 0 1.5rem; }
-.page-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: normal; margin-bottom: .375rem; }
+.events-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+}
+
+.page-header { padding-bottom: 1rem; }
+.page-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: .5rem;
+}
 .page-desc { font-size: .9375rem; color: var(--text-2); }
 
+/* ── Filter bar ── */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 1rem 1.5rem;
+  background: var(--filter-bg);
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid var(--border);
+}
+.filter-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: 1;
+  transition: transform .15s, opacity .15s;
+}
+.filter-btn:hover { transform: scale(1.08); }
+.filter-btn:not(.active) { opacity: .28; }
+.filter-icon { width: 32px; height: 32px; object-fit: contain; }
+.filter-label { font-size: .6875rem; color: var(--text-3); white-space: nowrap; letter-spacing: .04em; }
+
+.secondary-filters {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  padding: .75rem 1.25rem;
+  background: var(--filter-bg);
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 1.75rem;
+}
+.filter-row { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.filter-row-label {
+  font-family: var(--font-sans);
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  min-width: 36px;
+  flex-shrink: 0;
+}
+.filter-row-pills { display: flex; flex-wrap: wrap; gap: .3rem; }
+.pill-btn {
+  font-size: .6875rem;
+  font-weight: 500;
+  padding: .2rem .625rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text-3);
+  cursor: pointer;
+  transition: background .12s, color .12s, border-color .12s;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.pill-btn:hover { border-color: var(--text-2); color: var(--text-2); }
+.pill-btn.active { background: var(--text); color: var(--bg); border-color: var(--text); }
+.pill-btn.active:hover { opacity: .85; }
+
+/* ── Section headings ── */
 .section-heading {
   font-family: var(--font-sans);
   font-size: .6875rem;
@@ -132,12 +283,16 @@ const past = eventsData
   padding-bottom: .5rem;
   border-bottom: 1px solid var(--border);
 }
-.section-heading .count { color: var(--text-3); font-weight: 400; margin-left: .25rem; }
+.count { color: var(--text-3); font-weight: 400; margin-left: .25rem; }
 
 .events-list { display: flex; flex-direction: column; }
-.events-list.past .event-card { opacity: .75; }
+.events-list.past .event-card { opacity: .7; }
 
-.event-card { padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+.event-card {
+  padding: 1.375rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.event-card.hidden { display: none; }
 
 .event-meta {
   display: flex;
@@ -149,13 +304,170 @@ const past = eventsData
 .event-location::before { content: '·'; margin-right: .5rem; }
 
 .event-main { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+.event-content { flex: 1; min-width: 0; }
 
-.event-name { font-family: var(--font-serif); font-size: 1.2rem; font-weight: normal; margin-bottom: .5rem; }
-.event-name a { text-decoration: none; }
+.event-title-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: .5rem;
+}
+.event-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.event-name a { text-decoration: none; color: inherit; }
 .event-name a:hover { text-decoration: underline; }
+
+.event-badges { display: flex; gap: .35rem; align-items: center; flex-wrap: wrap; }
+.event-type-badge {
+  font-size: .625rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .125rem .5rem;
+  border-radius: 3px;
+  background: var(--filter-bg);
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+.event-format-badge {
+  font-size: .625rem;
+  font-weight: 500;
+  padding: .125rem .45rem;
+  border-radius: 3px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+  white-space: nowrap;
+}
 
 .event-desc { font-size: .9375rem; color: var(--text-2); line-height: 1.6; margin-bottom: .375rem; }
 .event-relevance { font-size: .8125rem; color: var(--text-3); line-height: 1.55; margin-bottom: .625rem; }
 .event-icons { display: flex; gap: .25rem; flex-shrink: 0; margin-top: .25rem; }
 .event-icon { width: 22px; height: 22px; object-fit: contain; }
+
+.no-results {
+  text-align: center;
+  padding: 3rem 0;
+  font-size: .9375rem;
+  color: var(--text-3);
+}
 </style>
+
+<script>
+const ORIENTATIONS = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'];
+let activeOrientations = new Set(ORIENTATIONS);
+let activeTypes = new Set<string>();
+
+// Init types from rendered pills
+document.querySelectorAll<HTMLElement>('.type-btn').forEach(b => {
+  activeTypes.add(b.dataset.type!);
+});
+
+function pushURL() {
+  const params = new URLSearchParams();
+  const missingO = ORIENTATIONS.filter(o => !activeOrientations.has(o));
+  if (missingO.length) params.set('o', [...activeOrientations].join(','));
+  const allTypes = [...document.querySelectorAll<HTMLElement>('.type-btn')].map(b => b.dataset.type!);
+  const missingT = allTypes.filter(t => !activeTypes.has(t));
+  if (missingT.length) params.set('t', [...activeTypes].join(','));
+  const qs = params.toString();
+  history.replaceState(null, '', qs ? '?' + qs : location.pathname);
+}
+
+function applyFilters() {
+  let upcomingVisible = 0;
+  let pastVisible = 0;
+
+  document.querySelectorAll<HTMLElement>('.event-card').forEach(card => {
+    const orientations = (card.dataset.orientations || '').split(',').filter(Boolean);
+    const type = card.dataset.type ?? '';
+    const passO = orientations.length === 0 || orientations.some(o => activeOrientations.has(o));
+    const passT = !type || activeTypes.has(type);
+    const show = passO && passT;
+    card.classList.toggle('hidden', !show);
+
+    const inUpcoming = !!card.closest('#upcoming-list');
+    if (show && inUpcoming) upcomingVisible++;
+    if (show && !inUpcoming) pastVisible++;
+  });
+
+  const uc = document.getElementById('upcoming-count');
+  const pc = document.getElementById('past-count');
+  const us = document.getElementById('upcoming-section');
+  const ps = document.getElementById('past-section');
+  if (uc) uc.textContent = `(${upcomingVisible})`;
+  if (pc) pc.textContent = `(${pastVisible})`;
+  if (us) (us as HTMLElement).style.display = upcomingVisible === 0 ? 'none' : '';
+  if (ps) (ps as HTMLElement).style.display = pastVisible === 0 ? 'none' : '';
+
+  const noResults = document.getElementById('no-results');
+  if (noResults) noResults.style.display = (upcomingVisible + pastVisible === 0) ? '' : 'none';
+}
+
+function syncButtons() {
+  document.querySelectorAll<HTMLElement>('.filter-btn[data-orientation]').forEach(btn => {
+    const active = activeOrientations.has(btn.dataset.orientation!);
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  document.querySelectorAll<HTMLElement>('.type-btn').forEach(btn => {
+    const active = activeTypes.has(btn.dataset.type!);
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+}
+
+// Init from URL
+(function initFromURL() {
+  const params = new URLSearchParams(location.search);
+  const o = params.get('o');
+  const t = params.get('t');
+  if (o) activeOrientations = new Set(o.split(',').filter(x => ORIENTATIONS.includes(x)));
+  if (t) {
+    const allTypes = [...document.querySelectorAll<HTMLElement>('.type-btn')].map(b => b.dataset.type!);
+    activeTypes = new Set(t.split(',').filter(x => allTypes.includes(x)));
+  }
+  syncButtons();
+  applyFilters();
+})();
+
+// Orientation buttons
+document.getElementById('filter-bar')!.addEventListener('click', e => {
+  const btn = (e.target as Element).closest<HTMLElement>('.filter-btn[data-orientation]');
+  if (!btn) return;
+  const key = btn.dataset.orientation!;
+  if (activeOrientations.has(key)) {
+    if (activeOrientations.size === 1) activeOrientations = new Set(ORIENTATIONS);
+    else activeOrientations.delete(key);
+  } else {
+    activeOrientations.add(key);
+  }
+  syncButtons();
+  applyFilters();
+  pushURL();
+});
+
+// Type buttons
+document.getElementById('secondary-filters')!.addEventListener('click', e => {
+  const btn = (e.target as Element).closest<HTMLElement>('.type-btn');
+  if (!btn) return;
+  const key = btn.dataset.type!;
+  if (activeTypes.has(key)) {
+    if (activeTypes.size === 1) {
+      document.querySelectorAll<HTMLElement>('.type-btn').forEach(b => activeTypes.add(b.dataset.type!));
+    } else {
+      activeTypes.delete(key);
+    }
+  } else {
+    activeTypes.add(key);
+  }
+  syncButtons();
+  applyFilters();
+  pushURL();
+});
+</script>

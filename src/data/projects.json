@@ -6,7 +6,6 @@
     "description": "Annual publication led by Future Earth Sweden Hub synthesising the most critical new findings in climate science. Led by Erik Pihl at Royal Swedish Academy of Sciences.",
     "website": "https://futureearth.org/",
     "geography": "Global (Sweden Hub)",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -18,7 +17,19 @@
       "climate"
     ],
     "image": "/images/projects/futureearth-hero.jpg",
-    "imageAlt": "Future Earth global sustainability research"
+    "imageAlt": "Future Earth global sustainability research",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "slug": "858-project",
@@ -26,7 +37,6 @@
     "description": "A campaign by the Sortition Foundation to replace the UK House of Lords with a House of Citizens — 858 randomly selected members of the public who reflect the full diversity of the British population. Part of a wider push to embed sortition into formal democratic institutions.",
     "website": "https://www.sortitionfoundation.org/858",
     "geography": "United Kingdom",
-    "stage": "Active",
     "actors": [
       "sortition-foundation"
     ],
@@ -42,7 +52,19 @@
     ],
     "image": "",
     "imageAlt": "",
-    "id": 30
+    "id": 30,
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 4,
@@ -51,7 +73,6 @@
     "description": "AI-driven predictive platform functioning as a dynamic digital twin of Earth. Connects on-ground research with satellite observations. Blockchain-secured data sharing with bounty system for scenario modelling.",
     "website": "https://www.aerth.live/",
     "geography": "Global (Switzerland-affiliated)",
-    "stage": "Early",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -66,7 +87,19 @@
       "europe"
     ],
     "image": "/images/projects/aerth-planet.jpg",
-    "imageAlt": "Planetary landscape monitored by AERTH AI"
+    "imageAlt": "Planetary landscape monitored by AERTH AI",
+    "status": "planned",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "slug": "amsterdam-doughnut",
@@ -74,7 +107,6 @@
     "description": "A collaboration between the City of Amsterdam and Doughnut Economics Action Lab to apply doughnut thinking to urban policy. Amsterdam became the first city to officially adopt the doughnut framework as a lens for post-COVID recovery planning, committing to meet residents' social needs without overshooting ecological limits.",
     "website": "https://doughnuteconomics.org/tools-and-stories/11",
     "geography": "Amsterdam, Netherlands",
-    "stage": "Active",
     "actors": [
       "doughnut-economics-action-lab"
     ],
@@ -91,7 +123,19 @@
     ],
     "image": "",
     "imageAlt": "",
-    "id": 32
+    "id": 32,
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 7,
@@ -100,7 +144,6 @@
     "description": "Indigenous-led conservation credit program in Brazil and Latin America, developed with Fundacion Pachamama and the Sharamentsa Achuar community.",
     "website": "https://www.regen.network/",
     "geography": "Brazil / Latin America",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -108,7 +151,19 @@
       "indigenous"
     ],
     "image": "/images/projects/regen-amazon.jpg",
-    "imageAlt": "Amazon Sacred Headwaters landscape"
+    "imageAlt": "Amazon Sacred Headwaters landscape",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 2,
@@ -117,7 +172,6 @@
     "description": "Machine learning platform analysing satellite imagery for GHG emissions, empowering lower-resource cities to track and reduce greenhouse gas emissions.",
     "website": "https://www.openearth.org/",
     "geography": "Global",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -125,7 +179,19 @@
       "platform"
     ],
     "image": "/images/projects/openearth-team.jpg",
-    "imageAlt": "OpenEarth Foundation team"
+    "imageAlt": "OpenEarth Foundation team",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 12,
@@ -134,7 +200,6 @@
     "description": "Multidecadal climate simulation digital twin built by ECMWF as part of EU Destination Earth initiative. Allows interactive testing of adaptation strategies.",
     "website": "https://destination-earth.eu/",
     "geography": "European Union",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -144,7 +209,19 @@
       "climate"
     ],
     "image": "/images/projects/destine-hero.jpg",
-    "imageAlt": "Destination Earth digital twin of the planet"
+    "imageAlt": "Destination Earth digital twin of the planet",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 13,
@@ -153,7 +230,6 @@
     "description": "High-resolution weather forecasting digital twin for floods and droughts, built by ECMWF.",
     "website": "https://destination-earth.eu/",
     "geography": "European Union",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -161,7 +237,19 @@
       "europe"
     ],
     "image": "/images/projects/destine-twins.jpg",
-    "imageAlt": "Climate digital twin visualization"
+    "imageAlt": "Climate digital twin visualization",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 23,
@@ -170,7 +258,6 @@
     "description": "Immersive theatre experience in Stockholm disguised as a transcendence clinic. Visitors surrender phones, don robes, and undergo a multi-step experiential journey exploring beauty, transformation, and escapism. Created by a character called Hades. Frames beauty as a right, not a luxury — blending salon aesthetics with mythological narrative.",
     "website": "https://elysiumlife.se",
     "geography": "Stockholm, Sweden",
-    "stage": "Active",
     "actors": [
       "elysium-life"
     ],
@@ -183,7 +270,19 @@
       "nordic"
     ],
     "image": "/images/projects/elysium-salon.jpg",
-    "imageAlt": "Elysium Clinic salon interior"
+    "imageAlt": "Elysium Clinic salon interior",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 11,
@@ -192,7 +291,6 @@
     "description": "Reports translating complex climate data into actionable insights for halving global emissions every decade.",
     "website": "https://futureearth.org/",
     "geography": "Global",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -201,7 +299,19 @@
       "climate"
     ],
     "image": "/images/projects/futureearth-hero.jpg",
-    "imageAlt": "Future Earth research platform"
+    "imageAlt": "Future Earth research platform",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 25,
@@ -210,7 +320,6 @@
     "description": "Landmark deliberative democratic experiment bringing over 600 randomly selected Finns to deliberate on citizens' initiatives using Deliberative Poll methodology",
     "website": "",
     "geography": "Finland",
-    "stage": "deployed",
     "actors": [
       "sitra"
     ],
@@ -225,7 +334,19 @@
       "deliberative-poll"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 14,
@@ -234,7 +355,6 @@
     "description": "AI platform using active inference (Karl Friston's Free Energy Principle) to create context-aware AI systems. Demonstrated cross-platform digital twin interoperability with NASA JPL for lunar rover simulation.",
     "website": "https://www.verses.ai/",
     "geography": "Global (HQ Vancouver, BC)",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -245,7 +365,19 @@
       "interoperability"
     ],
     "image": "/images/projects/verses-arc.jpg",
-    "imageAlt": "ARC AGI benchmark visualization"
+    "imageAlt": "ARC AGI benchmark visualization",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 28,
@@ -254,7 +386,6 @@
     "description": "Open-source Freedom of Information platform that automates and publishes requests for public documents from Swedish authorities",
     "website": "https://handlingar.se",
     "geography": "Sweden",
-    "stage": "deployed",
     "actors": [
       "civic-tech-sweden"
     ],
@@ -269,7 +400,19 @@
       "sweden"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 15,
@@ -278,14 +421,25 @@
     "description": "Open IEEE standards for the Spatial Web including HSML (Hyperspatial Modeling Language) and HSTP (Hyperspatial Transaction Protocol). Standardized May 2025. Makes physical space programmable.",
     "website": "https://www.verses.ai/",
     "geography": "Global",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
       "global"
     ],
     "image": "/images/projects/verses-finance.jpg",
-    "imageAlt": "VERSES AI system visualization for spatial computing"
+    "imageAlt": "VERSES AI system visualization for spatial computing",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 21,
@@ -294,7 +448,6 @@
     "description": "Island-scale pilot implementing CuraDAI local stablecoin, tokenised food forests, and ecological UBI. Participants earn CuraDAI by contributing to social and ecological projects like beach cleanups and planting food forests.",
     "website": "https://www.kolektivo.network/",
     "geography": "Curacao",
-    "stage": "Active",
     "actors": [
       "curve-labs"
     ],
@@ -306,7 +459,19 @@
       "art"
     ],
     "image": "/images/projects/kolektivo-community.jpg",
-    "imageAlt": "Kolektivo community members in Curacao"
+    "imageAlt": "Kolektivo community members in Curacao",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 5,
@@ -315,7 +480,6 @@
     "description": "Digital twin of Ningaloo Reef developed with UWA Oceans Institute and NASA JPL. Flagship demonstration of AERTH platform.",
     "website": "https://www.aerth.live/",
     "geography": "Australia",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -323,7 +487,19 @@
       "platform"
     ],
     "image": "/images/projects/aerth-reef.jpg",
-    "imageAlt": "Ningaloo Reef underwater ecosystem"
+    "imageAlt": "Ningaloo Reef underwater ecosystem",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 24,
@@ -332,7 +508,6 @@
     "description": "Pan-Nordic alliance of four democracy organizations aimed at scaling deliberative democracy across the Nordic countries",
     "website": "https://www.wedodemocracy.com/program/nordic-deliberation",
     "geography": "Pan-Nordic (Denmark, Finland, Sweden, Norway)",
-    "stage": "pilot",
     "actors": [
       "we-do-democracy",
       "sitra",
@@ -350,7 +525,19 @@
       "pan-nordic"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 26,
@@ -359,7 +546,6 @@
     "description": "Peer-to-peer learning network among farmers, sheepherders, and agricultural professionals across the Nordic region, advocating for practices that increase soil fertility, carbon sequestration, and active microbiology",
     "website": "",
     "geography": "Pan-Nordic",
-    "stage": "deployed",
     "actors": [
       "fjallbete"
     ],
@@ -374,7 +560,19 @@
       "carbon-sequestration"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 1,
@@ -383,7 +581,6 @@
     "description": "Nested carbon accounting system with high verifiability to enable actions limiting global warming to 1.5C. Federated data commons incorporating subnational data into global commons.",
     "website": "https://www.openearth.org/",
     "geography": "Global",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -393,7 +590,19 @@
       "climate"
     ],
     "image": "/images/projects/openclimate-dashboard.jpg",
-    "imageAlt": "OpenClimate dashboard interface"
+    "imageAlt": "OpenClimate dashboard interface",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 3,
@@ -402,7 +611,6 @@
     "description": "Ostrom-based regenerative governance protocol for landscape-scale ecological stewardship. Base unit is 10m2 pixel of land. Constitutional kernel frozen February 2026.",
     "website": "https://spiralweb.earth/",
     "geography": "Denmark / Uganda / Morocco / Pakistan",
-    "stage": "Early",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -413,7 +621,19 @@
       "governance"
     ],
     "image": "/images/projects/planetary-guardians-social.jpg",
-    "imageAlt": "Planetary Guardians Protocol visual identity"
+    "imageAlt": "Planetary Guardians Protocol visual identity",
+    "status": "planned",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 18,
@@ -422,7 +642,6 @@
     "description": "Mathematical voting tool where voters allocate voice credits quadratically to issues they care about. Proven in Taiwanese Presidential Hackathon and Colorado state budget allocations.",
     "website": "https://www.radicalxchange.org/",
     "geography": "Global",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -430,7 +649,19 @@
       "ai"
     ],
     "image": "/images/projects/rxc-mydata.jpg",
-    "imageAlt": "RadicalxChange MyData collaboration"
+    "imageAlt": "RadicalxChange MyData collaboration",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 20,
@@ -439,7 +670,6 @@
     "description": "Alliance piloting 13 place-based regenerative development projects globally (eco-villages, food forests) equipped with Hypha DAO tools for local governance and cooperative business models.",
     "website": "https://regenliving.eco/",
     "geography": "Global (13 pilot sites)",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -450,7 +680,19 @@
       "cooperative"
     ],
     "image": "/images/projects/regenliving-paris.jpg",
-    "imageAlt": "Regen Living Paris gathering"
+    "imageAlt": "Regen Living Paris gathering",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 6,
@@ -459,7 +701,6 @@
     "description": "Domain-specific public Cosmos blockchain for ecological regeneration. Supports ecological crediting protocols, ecocredit trading, and AI-driven measurement with peer-reviewed Ecological State Protocols.",
     "website": "https://www.regen.network/",
     "geography": "Global",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -468,7 +709,19 @@
       "global"
     ],
     "image": "/images/projects/regen-ledger.jpg",
-    "imageAlt": "Regen Ledger blockchain visualization"
+    "imageAlt": "Regen Ledger blockchain visualization",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 9,
@@ -477,7 +730,6 @@
     "description": "Web console platform for long-term biodiversity monitoring using CNNs for species identification from acoustic data. Developed with Microsoft AI for Good.",
     "website": "https://rfcx.org/",
     "geography": "Global",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -488,7 +740,19 @@
       "ai"
     ],
     "image": "/images/projects/rfcx-landscape.jpg",
-    "imageAlt": "Natural landscape monitored by Arbimon biodiversity platform"
+    "imageAlt": "Natural landscape monitored by Arbimon biodiversity platform",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 8,
@@ -497,7 +761,6 @@
     "description": "Autonomous solar-powered listening devices made from recycled smartphones, installed in rainforest canopies to detect chainsaws, gunshots, and vehicles in real-time for anti-poaching and anti-logging.",
     "website": "https://rfcx.org/",
     "geography": "Ecuador, Peru, Cameroon, Panama, Indonesia",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -505,7 +768,19 @@
       "art"
     ],
     "image": "/images/projects/rfcx-hero.jpg",
-    "imageAlt": "Rainforest canopy with Guardian acoustic monitoring system"
+    "imageAlt": "Rainforest canopy with Guardian acoustic monitoring system",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 19,
@@ -514,7 +789,6 @@
     "description": "Regenerative currency ecosystem on Telos blockchain. Evolved into Hypha DAO Organization-in-a-Box solutions.",
     "website": "https://hypha.earth/",
     "geography": "Global",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -526,7 +800,19 @@
       "ecosystem"
     ],
     "image": "/images/projects/hypha-space.jpg",
-    "imageAlt": "Hypha platform supporting SEEDS regenerative economy"
+    "imageAlt": "Hypha platform supporting SEEDS regenerative economy",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 17,
@@ -535,7 +821,6 @@
     "description": "Alternative property configuration enabling nature to buy ownerless land for ecosystem preservation. Part of Dark Matter Labs' Property & Beyond lab.",
     "website": "https://darkmatterlabs.property/",
     "geography": "Global",
-    "stage": "Early",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -544,7 +829,19 @@
       "art"
     ],
     "image": "/images/projects/darkmatter-property1.jpg",
-    "imageAlt": "Dark Matter Labs property and nature trust visualization"
+    "imageAlt": "Dark Matter Labs property and nature trust visualization",
+    "status": "planned",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 16,
@@ -553,7 +850,6 @@
     "description": "Platform leveraging smart contracts and distributed ledgers to democratise public investment and recapture land value uplift generated by sustainable infrastructure. Developed with EIT Climate-KIC.",
     "website": "https://darkmatterlabs.org/",
     "geography": "UK / EU",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -564,7 +860,19 @@
       "climate"
     ],
     "image": "/images/projects/darkmatter-matrix1.jpg",
-    "imageAlt": "Dark Matter Labs system mapping"
+    "imageAlt": "Dark Matter Labs system mapping",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 22,
@@ -573,7 +881,6 @@
     "description": "Educational programme aligning with UN SDGs, challenging students to design wind turbines, hurricane-resistant architecture, and assistive medical devices using physical prototyping tools.",
     "website": "https://strawbees.com/",
     "geography": "Global (Sweden-based)",
-    "stage": "Active",
     "actors": [],
     "orientations": [],
     "tags": [
@@ -585,7 +892,19 @@
       "sustainability"
     ],
     "image": "/images/projects/strawbees-classroom.jpg",
-    "imageAlt": "Students building with Strawbees in classroom"
+    "imageAlt": "Students building with Strawbees in classroom",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 29,
@@ -594,7 +913,6 @@
     "description": "Historic national climate assembly (Medborgarrad om klimatet) convened spring 2024 to generate policy proposals on reducing national greenhouse gas emissions through nine hybrid meetings",
     "website": "",
     "geography": "Sweden",
-    "stage": "deployed",
     "actors": [
       "digidem-lab"
     ],
@@ -610,7 +928,19 @@
       "hybrid"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "id": 27,
@@ -619,7 +949,6 @@
     "description": "Platform placing regenerative farmers at center of food value chain, connecting them with investors, markets, and peer-mentoring networks through storytelling to shift cultural perceptions around food production",
     "website": "",
     "geography": "Nordic / European",
-    "stage": "deployed",
     "actors": [
       "foodprint-nordic"
     ],
@@ -633,7 +962,19 @@
       "storytelling"
     ],
     "image": "",
-    "imageAlt": ""
+    "imageAlt": "",
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   },
   {
     "slug": "vtaiwan",
@@ -641,7 +982,6 @@
     "description": "An open consultation platform developed by the g0v civic tech community that combines online deliberation (using Polis for structured opinion mapping) with offline assemblies to bring citizens and government together on contested policy issues. Has influenced legislation on Uber regulation, online alcohol sales, and AI governance in Taiwan.",
     "website": "https://vtaiwan.tw/",
     "geography": "Taiwan",
-    "stage": "Active",
     "actors": [
       "g0v"
     ],
@@ -659,6 +999,18 @@
     ],
     "image": "",
     "imageAlt": "",
-    "id": 31
+    "id": 31,
+    "status": "active",
+    "project_type": "",
+    "openness": "",
+    "start_date": "",
+    "end_date": "",
+    "continent": "",
+    "subregion": "",
+    "country": [],
+    "scale": "",
+    "bioregion": [],
+    "peoples": [],
+    "linked_events": []
   }
 ]

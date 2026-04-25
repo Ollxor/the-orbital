@@ -26,6 +26,9 @@ pnpm-debug.log*
 # Private project documents — kept locally for AI context, never pushed to public repo
 docs/
 
+# scraper review files (local only — reviewed before import)
+scripts/review/*.json
+
 # wrangler files
 .wrangler
 .dev.vars*

@@ -1,5 +1,100 @@
 [
   {
+    "slug": "chernobyl-exclusion-zone-biodiversity-invasion",
+    "title": "Chernobyl’s exclusion zone is a beacon of biodiversity – but it faces new threats from Russia’s invasion",
+    "date": "2026-04-24",
+    "image": "https://images.theconversation.com/files/731698/original/file-20260413-57-32f42l.jpg?ixlib=rb-4.1.0&amp;rect=0%2C511%2C3648%2C1824&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
+    "imageAlt": "Chernobyl’s exclusion zone is a beacon of biodiversity – but it faces new threats from Russia’s invasion",
+    "summary": "Chernobyl's 30-year exclusion zone has evolved into Europe's largest nature reserve, demonstrating how absence of human industrial activity allows ecosystems to regenerate despite radiation—but Russia's invasion threatens its ecological integrity.",
+    "body": "",
+    "insight": "When militarized landscapes override ecological preservation, it reveals the fragility of de facto wilderness protection and the need for legal rights-of-nature frameworks that supersede geopolitical conflict.",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "rewilding",
+      "biodiversity-recovery",
+      "ecological-conflict",
+      "nature-reserves",
+      "geopolitics"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://theconversation.com/chernobyls-exclusion-zone-is-a-beacon-of-biodiversity-but-it-faces-new-threats-from-russias-invasion-281270"
+  },
+  {
+    "slug": "uk-climate-resilience-systemic-shocks",
+    "title": "The UK can’t debate its way out of climate impacts. It needs a Plan B now",
+    "date": "2026-04-22",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-markusspiske-2990650-scaled.jpg",
+    "imageAlt": "The UK can’t debate its way out of climate impacts. It needs a Plan B now",
+    "summary": "UK faces intensifying climate and biodiversity impacts with inadequate preparation for systemic shocks; argues resilience-building must replace prolonged consensus-seeking on long-term solutions.",
+    "body": "",
+    "insight": "Prioritizing adaptive resilience over delayed deliberation reshapes how governance systems must respond to polycrisis—shifting from aspirational policy to rapid institutional adaptation.",
+    "actors": [],
+    "tags": [
+      "climate-resilience",
+      "systemic-shocks",
+      "uk-governance",
+      "biodiversity-collapse",
+      "adaptive-capacity"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-22/the-uk-cant-debate-its-way-out-of-climate-impacts-it-needs-a-plan-b-now/"
+  },
+  {
+    "slug": "hajar-tazi-weaving-ecosystems-resilience",
+    "title": "In the Rising Tide, Episode 2. Hajar Tazi: Weaving Our Way Back Home",
+    "date": "2026-04-21",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/ITRT-Ep2-Hajar-Tazi-Featured-Image.jpg",
+    "imageAlt": "In the Rising Tide, Episode 2. Hajar Tazi: Weaving Our Way Back Home",
+    "summary": "Moroccan storyteller and ecosystem weaver Hajar Tazi connects organizations like Shareable and Gaia Education to build resilient communities through narrative and network-weaving across regenerative movements.",
+    "body": "",
+    "insight": "Network-weaving and storytelling across fragmented regenerative initiatives creates the connective tissue needed for distributed planetary governance to function as an integrated whole.",
+    "actors": [],
+    "tags": [
+      "storytelling-narrative",
+      "ecosystem-weaving",
+      "resilience-networks",
+      "community-connection",
+      "cultural-regeneration",
+      "indigenous-knowledge"
+    ],
+    "orientations": [
+      "MYSTERIES",
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-21/in-the-rising-tide-episode-2-hajar-tazi-weaving-our-way-back-home/"
+  },
+  {
+    "slug": "beyond-growth-wellbeing-economy-collapse",
+    "title": "Beyond Growth: Building a wellbeing economy can help us avoid collapse",
+    "date": "2026-04-20",
+    "image": "https://www.resilience.org/wp-content/uploads/2024/12/pexels-melquizedeque-7231275-scaled.jpg",
+    "imageAlt": "Beyond Growth: Building a wellbeing economy can help us avoid collapse",
+    "summary": "Econometrician Gaya Herrington argues for replacing GDP growth with a \"wellbeing economy\" that redirects innovation, work, and policy toward human flourishing and healthy ecosystems within planetary boundaries.",
+    "body": "",
+    "insight": "Shifting the core metric of economic success from growth to wellbeing is foundational to redesigning governance systems — it changes which policies get funded, which innovations get prioritized, and how we measure progress at every scale from local to global.",
+    "actors": [],
+    "tags": [
+      "wellbeing-economy",
+      "degrowth",
+      "economic-transition",
+      "policy-design",
+      "beyond-gdp"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-20/beyond-growth-the-promise-of-a-wellbeing-economy/"
+  },
+  {
     "slug": "indigenous-council-rights-of-nature-unpfii",
     "title": "Centering Indigenous Voices: Reflections from GARN’s Indigenous Council Gathering at UNPFII 2026",
     "date": "2026-04-22",

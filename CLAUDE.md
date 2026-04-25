@@ -64,9 +64,9 @@ from Dropbox. Key files:
 
 All content lives in `src/data/`:
 - `news.json` — articles + videos (see schema below)
-- `actors.json` — organisations, initiatives, people
-- `projects.json` — active projects
-- `events.json` — upcoming/recent events
+- `actors.json` — organisations, initiatives, people (140+)
+- `projects.json` — active projects (32)
+- `events.json` — upcoming/recent events (93+)
 
 ---
 
@@ -148,6 +148,8 @@ thumbnail as `image`, write summary + insight describing what the video argues.
 If a new org, initiative, or event comes up in the articles, consider adding
 it to `actors.json` / `projects.json` / `events.json`.
 
+For **events**, prefer the scraper workflow (see below) over manual entry.
+
 ### 4. Build and verify
 
 ```
@@ -159,6 +161,161 @@ Check for TypeScript errors. Commit:
 git -C 'D:/Dropbox/The Orbital/site' add src/data/
 git -C 'D:/Dropbox/The Orbital/site' commit -m "feed: add N articles + M videos (YYYY-MM-DD)"
 git -C 'D:/Dropbox/The Orbital/site' push origin main
+```
+
+---
+
+## Projects schema
+
+Key fields in `projects.json`:
+
+```json
+{
+  "slug": "unique-kebab-case-id",
+  "name": "...",
+  "description": "...",
+  "website": "https://...",
+  "geography": "free-text location string (legacy, kept for display)",
+  "status": "active",       // active | completed | planned | paused | archived
+  "project_type": "",       // campaign | platform | research | coalition | infrastructure | other
+  "openness": "",           // open | closed | members-only | public-private
+  "start_date": "",         // YYYY-MM-DD or YYYY
+  "end_date": "",           // YYYY-MM-DD, YYYY, or ""
+  "actors": ["slug"],       // actor slugs involved
+  "orientations": ["GARDEN"],
+  "tags": [],
+  "image": "",
+  "imageAlt": "",
+  // Geographic fields (same taxonomy as actors — fill in manually):
+  "continent": "",
+  "subregion": "",
+  "country": [],
+  "scale": "",
+  "bioregion": [],
+  "peoples": [],
+  "linked_events": []       // event slugs
+}
+```
+
+## Events schema
+
+Key fields in `events.json`:
+
+```json
+{
+  "slug": "unique-kebab-case-id",
+  "name": "...",
+  "description": "...",
+  "date_start": "YYYY-MM-DD",
+  "date_end": "YYYY-MM-DD",
+  "location": "City, Country",
+  "website": "https://...",
+  "type": "Conference",     // Conference | Summit | Webinar | Forum | Workshop |
+                            // Symposium | Assembly | Festival | LARP | Other
+  "format": "",             // in-person | online | hybrid
+  "cost": "",               // free | paid | sliding-scale
+  "languages": [],          // ISO 639-1 codes
+  "actors": ["slug"],
+  "orientations": ["ASSEMBLY"],
+  "tags": [],
+  "image": "",
+  "imageAlt": "",
+  "relevance_note": "",     // one sentence on why this matters
+  "series": "",             // parent series name if recurring
+  "edition": "",            // e.g. "12th"
+  "recurrence": "",         // e.g. "annual"
+  // Geographic fields (same taxonomy as actors):
+  "continent": "",
+  "subregion": "",
+  "country": [],
+  "scale": "",
+  "bioregion": [],
+  "peoples": [],
+  "linked_projects": []     // project slugs
+}
+```
+
+---
+
+## Events scraper
+
+Automated event discovery. Run periodically (weekly or before a feed update).
+
+### Workflow
+
+```
+# 1. Fetch from all configured sources, deduplicate, write review file
+node scripts/scrape-events.mjs
+
+# Optional flags:
+#   --dry-run              print summary only, no file written
+#   --source=garn          run only one source (partial name match)
+#   --future-only=false    include past events too
+
+# 2. Open the review file: scripts/review/events-YYYY-MM-DD.json
+#    - Remove events that don't belong
+#    - Fill in: orientations, tags, actors, relevance_note, scale
+#    - Improve any names/descriptions that scraped poorly
+
+# 3. Import approved events into events.json
+node scripts/import-events.mjs scripts/review/events-2026-04-25.json
+
+# 4. Build + commit
+npm run build
+git -C 'D:/Dropbox/The Orbital/site' add src/data/events.json
+git -C 'D:/Dropbox/The Orbital/site' commit -m "events: import N events from scraper (YYYY-MM-DD)"
+git -C 'D:/Dropbox/The Orbital/site' push origin main
+```
+
+### Configured sources
+
+| File | Source | Method | Notes |
+|------|--------|--------|-------|
+| `scrapers/garn.mjs` | GARN (Rights of Nature) | WordPress REST API | garn.org/events |
+| `scrapers/ical.mjs` → `metagovSeminars` | Metagov Seminars | iCal | researchseminars.org/seminar/Metagov/ics |
+
+### Adding a new source
+
+**iCal feed** (easiest — many orgs have these):
+```js
+// in scrapers/ical.mjs, add:
+export const myOrg = icalFeed(
+  'https://example.org/events.ics',
+  'My Org',
+  ['ASSEMBLY'],   // default orientations if inference fails
+);
+// then import and add to SCRAPERS[] in scrape-events.mjs
+```
+
+**Luma calendar** (needs API key or iCal subscription URL):
+- Luma's programmatic API now requires an API key
+- Find the iCal URL: Luma calendar → Settings → Subscribe → copy `.ics` link
+- Then use `icalFeed()` as above
+- Or: get an API key and use the `lumaCalendar()` factory in `scrapers/luma.mjs`
+
+**Other HTML sources**: copy `scrapers/_template.mjs`, implement `scrape()`.
+
+---
+
+## Relationship helper (link.mjs)
+
+Wire up actors ↔ projects ↔ events from the CLI without editing JSON by hand:
+
+```
+# Link an actor to a project
+node scripts/link.mjs --actor=sortition-foundation --project=858-project
+
+# Link a project to an event (writes both directions simultaneously)
+node scripts/link.mjs --project=vtaiwan --event=civic-tech-summit-2025
+
+# All three at once
+node scripts/link.mjs --actor=g0v --project=vtaiwan --event=civic-tech-summit-2025
+
+# Remove a link
+node scripts/link.mjs --unlink --actor=sortition-foundation --project=858-project
+
+# Preview without writing
+node scripts/link.mjs --dry-run --project=vtaiwan --event=civic-tech-summit-2025
 ```
 
 ---

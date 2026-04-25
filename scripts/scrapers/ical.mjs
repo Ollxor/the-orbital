@@ -60,17 +60,24 @@ function parseIcal(text) {
       return toIsoDate(stripped);
     }
 
-    const summary  = decode(prop('SUMMARY'));
-    const dtstart  = parseDate(prop('DTSTART'));
-    const dtend    = parseDate(prop('DTEND'));
-    const location = decode(prop('LOCATION'));
-    const url      = prop('URL');
-    const desc     = decode(stripHtml(prop('DESCRIPTION')));
-    const uid      = prop('UID');
+    const summary     = decode(prop('SUMMARY'));
+    const dtstart     = parseDate(prop('DTSTART'));
+    const dtend       = parseDate(prop('DTEND'));
+    const location    = decode(prop('LOCATION'));
+    const url         = prop('URL');
+    const rawDesc     = prop('DESCRIPTION');
+    const desc        = decode(stripHtml(rawDesc)).slice(0, 600).trim();
+    const uid         = prop('UID');
 
     if (!summary || !dtstart) continue;
 
-    events.push({ summary, dtstart, dtend, location, url, desc, uid });
+    // Try to extract a talk title from description HTML.
+    // researchseminars.org format: "Title: <a href="...">Talk Title</a>\nby Speaker..."
+    // Fall back to summary if nothing is found.
+    const titleMatch = rawDesc.match(/Title:\s*(?:<[^>]+>)?([^<\n\\]+)/i);
+    const talkTitle  = titleMatch ? decode(titleMatch[1].trim()) : null;
+
+    events.push({ summary, talkTitle, dtstart, dtend, location, url, desc, uid });
   }
 
   return events;
@@ -87,15 +94,17 @@ export function icalFeed(feedUrl, sourceLabel, defaultOrientations = []) {
       const parsed = parseIcal(text);
 
       return parsed.map(item => {
-        const orientations = inferOrientations(item.summary, item.desc);
+        // Use extracted talk title if available, otherwise fall back to SUMMARY
+        const name = item.talkTitle || item.summary;
+        const orientations = inferOrientations(name, item.desc);
         const { continent, subregion } = inferGeo(item.location, item.desc);
         const format = inferFormat(item.location, item.desc);
-        const type   = inferType(item.summary, item.desc);
+        const type   = inferType(name, item.desc);
 
         return {
           ...blankEvent(),
-          slug:        slugify(item.summary, item.dtstart),
-          name:        item.summary,
+          slug:        slugify(name, item.dtstart),
+          name,
           description: item.desc.slice(0, 400),
           date_start:  item.dtstart,
           date_end:    item.dtend,

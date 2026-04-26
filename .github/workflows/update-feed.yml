@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
 
     steps:
       - name: Checkout repo
@@ -43,39 +42,15 @@ jobs:
             echo "count=$COUNT" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Create pull request
+      - name: Commit and push to main
         if: steps.updater.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           DATE=$(date +%Y-%m-%d)
-          BRANCH="feed-update-${DATE}"
           COUNT=${{ steps.updater.outputs.count }}
 
           git config user.name "The Orbital Bot"
           git config user.email "bot@theorbital.net"
 
-          # Delete branch if it already exists (e.g. re-run on same day)
-          git push origin --delete "$BRANCH" 2>/dev/null || true
-
-          git checkout -b "$BRANCH"
           git add src/data/news.json
           git commit -m "feed: auto-add ${COUNT} article(s) (${DATE})"
-          git push origin "$BRANCH"
-
-          gh pr create \
-            --title "Feed update: ${COUNT} article(s) — ${DATE}" \
-            --body "$(cat <<'EOF'
-          Automated daily feed update from The Orbital bot.
-
-          **Before merging:**
-          - Check each article is genuinely relevant
-          - Spot-check orientation assignments (GARDEN / SPACESHIP / MYSTERIES / ASSEMBLY)
-          - Verify summaries are accurate and not too vague
-          - Add actor slugs manually if any key organisations appear
-
-          Cloudflare will auto-deploy ~60 seconds after merge.
-          EOF
-          )" \
-            --base main \
-            --head "$BRANCH"
+          git push origin main

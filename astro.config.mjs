@@ -1,6 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
+import cloudflare from '@astrojs/cloudflare';
+
 export default defineConfig({
   vite: {
     resolve: {
@@ -9,5 +11,7 @@ export default defineConfig({
         '@data': '/src/data',
       }
     }
-  }
+  },
+
+  adapter: cloudflare()
 });

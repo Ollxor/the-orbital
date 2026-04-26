@@ -48,13 +48,13 @@ function formatDate(dateStr: string) {
 function truncate(text: string, max: number) {
   if (!text) return '';
   if (text.length <= max) return text;
-  // Cut at last space before max
   const slice = text.slice(0, max);
   const lastSpace = slice.lastIndexOf(' ');
   return (lastSpace > max * 0.6 ? slice.slice(0, lastSpace) : slice) + '…';
 }
 
 const actorMap = Object.fromEntries(actorsData.map(a => [a.slug, a]));
+const newsMap   = Object.fromEntries(newsData.map(s => [s.slug, s]));
 const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
 ---
 
@@ -72,9 +72,9 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
 
     <p class="stats-bar">
       <span>{actorCount} actors</span>
-      <span class="sep">·</span>
+      <span class="sep">&middot;</span>
       <span>{projectCount} projects</span>
-      <span class="sep">·</span>
+      <span class="sep">&middot;</span>
       <span>{eventCount} events</span>
     </p>
 
@@ -85,55 +85,108 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
         <>
         <h3 class="feed-month" id={`m-${group.key}`}>{group.label} <span class="month-count">({group.stories.length})</span></h3>
         {group.stories.map((story) => (
-        <article class="news-card" data-orientations={story.orientations.join(',')}>
-          <div class={`card-image-wrap${story.image ? '' : ' card-placeholder'}${(story as any).kind === 'video' ? ' card-video' : ''}`} data-orient={story.orientations[0] || 'GARDEN'}>
-            <a href={`/news/${story.slug}`}>
-              {story.image ? (
-                <img src={story.image} alt={story.imageAlt} class="card-image" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.parentElement.classList.add('card-placeholder'); this.remove();" />
-              ) : (
-                <img src={`/assets/${iconMap[story.orientations[0] || 'GARDEN']}`} alt="" class="placeholder-icon" />
-              )}
-              {(story as any).kind === 'video' && (
-                <div class="video-play-overlay" aria-hidden="true">
-                  <span class="video-play-btn">▶</span>
-                  <span class="video-badge">Video</span>
+          (story as any).kind === 'digest' ? (
+
+            /* ── Weekly Orbital Dispatch card ── */
+            <article class="news-card digest-card" data-orientations={story.orientations.join(',')}>
+              <a href={`/news/${story.slug}`} class="digest-hero-link" aria-label={`Read ${story.title}`}>
+                <div class="digest-hero">
+                  <div class="digest-stars" aria-hidden="true"></div>
+                  <div class="orbit-container" aria-hidden="true">
+                    <div class="orbit-ring orbit-ring-3"></div>
+                    <div class="orbit-ring orbit-ring-2"></div>
+                    <div class="orbit-ring orbit-ring-1"></div>
+                    <div class="orbit-center"></div>
+                    <div class="orbit-arm orbit-arm-a"><div class="orbit-dot orbit-dot-a"></div></div>
+                    <div class="orbit-arm orbit-arm-b"><div class="orbit-dot orbit-dot-b"></div></div>
+                    <div class="orbit-arm orbit-arm-c"><div class="orbit-dot orbit-dot-c"></div></div>
+                  </div>
+                  <div class="digest-hero-footer">
+                    <span class="dispatch-badge">Orbital Dispatch</span>
+                    <span class="dispatch-issue">#{(story as any).issueNumber || '—'}</span>
+                  </div>
                 </div>
-              )}
-            </a>
-          </div>
-          <div class="card-body">
-            <time class="card-date">{formatDate(story.date)}</time>
-            <h3 class="card-title">
-              <a href={`/news/${story.slug}`}>{story.title}</a>
-            </h3>
-            <p class="card-summary">{truncate(story.summary, 140)}</p>
-            {story.insight && (
-              <p class="card-insight">
-                <span class="insight-label">Why this matters →</span>
-                {truncate(story.insight, 120)}
-              </p>
-            )}
-            <a href={`/news/${story.slug}`} class="card-readmore">Continue reading →</a>
-            <div class="card-meta">
-              {story.actors.map(slug => actorMap[slug] && (
-                <a href={`/actors/${slug}`} class="card-actor">{actorMap[slug].name}</a>
-              ))}
-              <div class="tags">
-                {story.tags.map(tag => (
-                  <a href={`/tags/${tag}`} class="tag">{tag.replace(/-/g, '\u00a0')}</a>
-                ))}
+              </a>
+              <div class="card-body">
+                <div class="digest-meta-row">
+                  <time class="card-date">{formatDate(story.date)}</time>
+                  {(story as any).storyCount && (
+                    <span class="digest-count">{(story as any).storyCount} stories this week</span>
+                  )}
+                </div>
+                <h3 class="card-title">
+                  <a href={`/news/${story.slug}`}>{story.title}</a>
+                </h3>
+                <p class="card-summary">{truncate(story.summary, 160)}</p>
+                {((story as any).highlightedSlugs || []).length > 0 && (
+                  <ul class="digest-bullets">
+                    {((story as any).highlightedSlugs as string[]).slice(0, 5).map((s: string) =>
+                      newsMap[s] && (
+                        <li class="digest-bullet">
+                          <a href={`/news/${s}`}>{(newsMap[s] as any).title}</a>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                )}
+                <a href={`/news/${story.slug}`} class="card-readmore dispatch-readmore">Read the full dispatch →</a>
               </div>
-            </div>
-            <div class="card-reactions" data-story={story.slug}>
-              {orientations.map(key => (
-                <button class="reaction-btn" data-orientation={key} aria-label={`Tag as ${orientationLabels[key]}`}>
-                  <img src={`/assets/${iconMap[key]}`} alt="" class="reaction-icon" />
-                  <span class="reaction-count"></span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </article>
+            </article>
+
+          ) : (
+
+            /* ── Standard news / video card ── */
+            <article class="news-card" data-orientations={story.orientations.join(',')}>
+              <div class={`card-image-wrap${story.image ? '' : ' card-placeholder'}${(story as any).kind === 'video' ? ' card-video' : ''}`} data-orient={story.orientations[0] || 'GARDEN'}>
+                <a href={`/news/${story.slug}`}>
+                  {story.image ? (
+                    <img src={story.image} alt={story.imageAlt} class="card-image" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.parentElement.classList.add('card-placeholder'); this.remove();" />
+                  ) : (
+                    <img src={`/assets/${iconMap[story.orientations[0] || 'GARDEN']}`} alt="" class="placeholder-icon" />
+                  )}
+                  {(story as any).kind === 'video' && (
+                    <div class="video-play-overlay" aria-hidden="true">
+                      <span class="video-play-btn">&#9654;</span>
+                      <span class="video-badge">Video</span>
+                    </div>
+                  )}
+                </a>
+              </div>
+              <div class="card-body">
+                <time class="card-date">{formatDate(story.date)}</time>
+                <h3 class="card-title">
+                  <a href={`/news/${story.slug}`}>{story.title}</a>
+                </h3>
+                <p class="card-summary">{truncate(story.summary, 140)}</p>
+                {story.insight && (
+                  <p class="card-insight">
+                    <span class="insight-label">Why this matters →</span>
+                    {truncate(story.insight, 120)}
+                  </p>
+                )}
+                <a href={`/news/${story.slug}`} class="card-readmore">Continue reading →</a>
+                <div class="card-meta">
+                  {story.actors.map(slug => actorMap[slug] && (
+                    <a href={`/actors/${slug}`} class="card-actor">{actorMap[slug].name}</a>
+                  ))}
+                  <div class="tags">
+                    {story.tags.map(tag => (
+                      <a href={`/tags/${tag}`} class="tag">{tag.replace(/-/g, ' ')}</a>
+                    ))}
+                  </div>
+                </div>
+                <div class="card-reactions" data-story={story.slug}>
+                  {orientations.map(key => (
+                    <button class="reaction-btn" data-orientation={key} aria-label={`Tag as ${orientationLabels[key]}`}>
+                      <img src={`/assets/${iconMap[key]}`} alt="" class="reaction-icon" />
+                      <span class="reaction-count"></span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </article>
+
+          )
         ))}
         </>
       ))}
@@ -214,10 +267,10 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
 }
 .news-card.hidden { opacity: .2; pointer-events: none; }
 
+/* ── Standard card image ── */
 .card-image-wrap { margin-bottom: 1rem; position: relative; border-radius: 5px; overflow: hidden; }
 .card-image { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
 
-/* Themed placeholder when no image is available */
 .card-placeholder {
   aspect-ratio: 16/9;
   display: flex;
@@ -241,89 +294,250 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
 .card-placeholder[data-orient="ASSEMBLY"]  { background: linear-gradient(135deg, #f5ead6 0%, #e1ccaa 100%); }
 .placeholder-icon { width: 64px; height: 64px; object-fit: contain; opacity: .6; position: relative; z-index: 1; }
 
-/* Video card overlay */
 .card-video { position: relative; }
 .video-play-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
-  background: rgba(0,0,0,.2);
-  transition: background .2s;
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: .5rem; background: rgba(0,0,0,.2); transition: background .2s;
 }
 .card-image-wrap:hover .video-play-overlay { background: rgba(0,0,0,.35); }
 .video-play-btn {
-  width: 52px;
-  height: 52px;
-  background: rgba(255,255,255,.92);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.375rem;
-  color: #1a1a1a;
-  padding-left: 3px; /* optical centering of ▶ */
+  width: 52px; height: 52px;
+  background: rgba(255,255,255,.92); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.375rem; color: #1a1a1a; padding-left: 3px;
   box-shadow: 0 2px 12px rgba(0,0,0,.25);
 }
 .video-badge {
-  font-size: .625rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: #fff;
-  background: rgba(0,0,0,.5);
-  padding: .15rem .55rem;
-  border-radius: 999px;
+  font-size: .625rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: #fff; background: rgba(0,0,0,.5); padding: .15rem .55rem; border-radius: 999px;
 }
 
+/* ── Card body shared ── */
 .card-date { display: block; font-size: .75rem; color: var(--text-3); margin-bottom: .375rem; letter-spacing: .02em; }
-
 .card-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.3125rem;
-  font-weight: 400;
-  line-height: 1.3;
-  margin-bottom: .625rem;
+  font-size: 1.3125rem; font-weight: 400; line-height: 1.3; margin-bottom: .625rem;
 }
 .card-title a { text-decoration: none; color: var(--text); }
 .card-title a:hover { text-decoration: underline; }
-
 .card-summary { font-size: .9375rem; color: #444; line-height: 1.65; margin-bottom: .75rem; }
-
 .card-insight { font-size: .875rem; color: var(--text-3); font-style: italic; line-height: 1.55; margin-bottom: .875rem; }
 .insight-label { font-style: normal; font-weight: 600; color: var(--text-3); margin-right: .375rem; font-size: .8125rem; }
-
 .card-readmore { display: inline-block; font-size: .8125rem; font-weight: 600; color: var(--text-2); text-decoration: none; margin-bottom: .875rem; letter-spacing: .02em; }
 .card-readmore:hover { color: var(--text); text-decoration: none; }
-
 .card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-bottom: .875rem; }
 .card-actor { font-size: .8125rem; font-weight: 500; color: var(--text-2); text-decoration: none; }
 .card-actor:hover { color: var(--text); }
-
-.card-reactions {
-  display: flex;
-  gap: 1rem;
-  padding-top: .75rem;
-  border-top: 1px solid var(--border);
-}
-.reaction-btn {
-  display: flex;
-  align-items: center;
-  gap: .3rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  opacity: .45;
-  transition: opacity .15s;
-}
+.card-reactions { display: flex; gap: 1rem; padding-top: .75rem; border-top: 1px solid var(--border); }
+.reaction-btn { display: flex; align-items: center; gap: .3rem; background: none; border: none; cursor: pointer; padding: 0; opacity: .45; transition: opacity .15s; }
 .reaction-btn:hover { opacity: .8; }
 .reaction-btn.reacted { opacity: 1; }
 .reaction-icon { width: 18px; height: 18px; object-fit: contain; }
 .reaction-count { font-size: .75rem; color: var(--text-2); min-width: 1ch; }
+
+/* ══════════════════════════════════════
+   DIGEST / ORBITAL DISPATCH CARD
+══════════════════════════════════════ */
+
+.digest-card {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2.25rem;
+  margin-bottom: 2.25rem;
+  position: relative;
+}
+/* Distinctive left accent line */
+.digest-card::before {
+  content: '';
+  position: absolute;
+  left: -1.25rem;
+  top: 0;
+  bottom: 2.25rem;
+  width: 2px;
+  background: linear-gradient(to bottom, #c4910a 0%, transparent 100%);
+  opacity: .5;
+}
+
+/* Hero area — dark cosmos with orbital animation */
+.digest-hero-link { display: block; text-decoration: none; }
+.digest-hero-link:hover .dispatch-badge { border-color: rgba(196,145,10,.9); color: #e0a820; }
+
+.digest-hero {
+  aspect-ratio: 16/9;
+  background: radial-gradient(ellipse at 38% 42%, #1b1636 0%, #0c1018 55%, #091510 100%);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+/* Scattered star field via background-image */
+.digest-stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle 1px at 12% 18%, rgba(255,255,255,.75) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 80% 12%, rgba(255,255,255,.55) 0%, transparent 1.5px),
+    radial-gradient(circle 1px at 47% 72%, rgba(255,255,255,.65) 0%, transparent 1px),
+    radial-gradient(circle 1px at 88% 58%, rgba(255,255,255,.4) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 22% 83%, rgba(255,255,255,.5) 0%, transparent 1.5px),
+    radial-gradient(circle 1px at 63% 32%, rgba(255,255,255,.6) 0%, transparent 1px),
+    radial-gradient(circle 1px at 92% 38%, rgba(255,255,255,.35) 0%, transparent 1px),
+    radial-gradient(circle 1px at 33% 52%, rgba(255,255,255,.45) 0%, transparent 1px),
+    radial-gradient(circle 1px at 55% 88%, rgba(255,255,255,.3) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 6% 60%, rgba(255,255,255,.4) 0%, transparent 1.5px),
+    radial-gradient(circle 1px at 74% 78%, rgba(255,255,255,.35) 0%, transparent 1px),
+    radial-gradient(circle 1px at 18% 42%, rgba(255,255,255,.25) 0%, transparent 1px);
+}
+
+/* Orbital ring system — centered */
+.orbit-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+.orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.orbit-ring-1 { width: 80px;  height: 80px;  border: 1px dashed rgba(255,255,255,.2); }
+.orbit-ring-2 { width: 148px; height: 148px; border: 1px dashed rgba(255,255,255,.13); }
+.orbit-ring-3 { width: 224px; height: 224px; border: 1px dotted rgba(255,255,255,.07); }
+
+.orbit-center {
+  position: absolute;
+  width: 9px; height: 9px;
+  background: rgba(255,255,255,.92);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 14px 5px rgba(255,255,255,.35);
+}
+
+/* Rotating arms + orbiting dots */
+.orbit-arm {
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 0;
+  transform-origin: 0 0;
+}
+.orbit-dot {
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Amber dot — middle ring, 18s */
+.orbit-arm-a { animation: orbit-spin 18s linear infinite; }
+.orbit-dot-a {
+  width: 7px; height: 7px;
+  background: #c4910a;
+  top: -3.5px;
+  left: 74px;
+  box-shadow: 0 0 10px 4px rgba(196,145,10,.65);
+}
+
+/* Purple dot — inner ring, 28s reverse */
+.orbit-arm-b { animation: orbit-spin 28s linear infinite reverse; }
+.orbit-dot-b {
+  width: 5px; height: 5px;
+  background: #9b7ec8;
+  top: -2.5px;
+  left: 40px;
+  box-shadow: 0 0 8px 3px rgba(123,94,167,.6);
+}
+
+/* Green dot — outer ring, 42s */
+.orbit-arm-c { animation: orbit-spin 42s linear infinite; }
+.orbit-dot-c {
+  width: 5px; height: 5px;
+  background: #4a9e6b;
+  top: -2.5px;
+  left: 112px;
+  box-shadow: 0 0 8px 3px rgba(74,126,89,.55);
+}
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Bottom overlay: badge + issue number */
+.digest-hero-footer {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: .625rem .875rem;
+  background: linear-gradient(to top, rgba(0,0,0,.72) 0%, transparent 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dispatch-badge {
+  font-family: var(--font-sans);
+  font-size: .5625rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #c4910a;
+  border: 1px solid rgba(196,145,10,.45);
+  padding: .22rem .6rem;
+  border-radius: 3px;
+  transition: border-color .2s, color .2s;
+}
+.dispatch-issue {
+  font-family: var(--font-sans);
+  font-size: .8125rem;
+  color: rgba(255,255,255,.5);
+  letter-spacing: .04em;
+}
+
+/* Digest card body */
+.digest-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .375rem;
+}
+.digest-count {
+  font-size: .6875rem;
+  color: var(--text-3);
+  letter-spacing: .04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Bullet list of featured stories */
+.digest-bullets {
+  list-style: none;
+  margin: .5rem 0 1rem;
+  padding: 0;
+  border-left: 2px solid rgba(196,145,10,.3);
+  padding-left: .875rem;
+}
+.digest-bullet {
+  font-size: .875rem;
+  line-height: 1.5;
+  margin-bottom: .3rem;
+  color: var(--text-2);
+}
+.digest-bullet::before {
+  content: '\25B8\00A0'; /* ▸ */
+  color: #c4910a;
+  font-size: .75rem;
+}
+.digest-bullet a { color: var(--text-2); text-decoration: none; }
+.digest-bullet a:hover { color: var(--text); text-decoration: underline; }
+
+.dispatch-readmore {
+  color: #8a6505;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.dispatch-readmore:hover { color: #5a4203; }
 </style>
 
 <script>

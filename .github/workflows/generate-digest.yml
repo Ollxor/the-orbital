@@ -1,0 +1,56 @@
+name: Weekly Digest
+
+on:
+  schedule:
+    # 07:30 UTC Monday = 09:30 CEST (summer) / 08:30 CET (winter)
+    # Runs 30 min after the daily feed update (05:00 UTC) to catch any Monday articles
+    - cron: '30 7 * * 1'
+  workflow_dispatch:
+    # Manual trigger from GitHub Actions tab (useful for testing)
+
+jobs:
+  generate-digest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Generate weekly digest
+        id: digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python scripts/generate_digest.py
+          if git diff --quiet src/data/news.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            SLUG=$(git diff src/data/news.json | grep '"slug"' | head -1 | sed 's/.*"slug": "\([^"]*\)".*/\1/')
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push to main
+        if: steps.digest.outputs.changed == 'true'
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          SLUG=${{ steps.digest.outputs.slug }}
+
+          git config user.name "The Orbital Bot"
+          git config user.email "bot@theorbital.net"
+
+          git add src/data/news.json
+          git commit -m "digest: weekly dispatch ${SLUG} (${DATE})"
+          git push origin main

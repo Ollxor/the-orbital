@@ -10,6 +10,12 @@ export function getStaticPaths() {
 const { slug } = Astro.params;
 const story = newsData.find(s => s.slug === slug)!;
 const actorMap = Object.fromEntries(actorsData.map(a => [a.slug, a]));
+const newsMap  = Object.fromEntries(newsData.map(s => [s.slug, s]));
+
+const isDigest = (story as any).kind === 'digest';
+const highlightedStories = isDigest
+  ? (((story as any).highlightedSlugs || []) as string[]).map(s => newsMap[s]).filter(Boolean)
+  : [];
 
 const orientationLabels: Record<string, string> = {
   GARDEN: 'The Garden',
@@ -51,7 +57,27 @@ const relatedStories = newsData
 
       <h1 class="story-title">{story.title}</h1>
 
-      {(story as any).kind === 'video' && (story as any).videoId ? (
+      {isDigest ? (
+        /* Digest hero — full orbital animation */
+        <div class="digest-story-hero">
+          <div class="digest-stars" aria-hidden="true"></div>
+          <div class="orbit-container" aria-hidden="true">
+            <div class="orbit-ring orbit-ring-4"></div>
+            <div class="orbit-ring orbit-ring-3"></div>
+            <div class="orbit-ring orbit-ring-2"></div>
+            <div class="orbit-ring orbit-ring-1"></div>
+            <div class="orbit-center"></div>
+            <div class="orbit-arm orbit-arm-a"><div class="orbit-dot orbit-dot-a"></div></div>
+            <div class="orbit-arm orbit-arm-b"><div class="orbit-dot orbit-dot-b"></div></div>
+            <div class="orbit-arm orbit-arm-c"><div class="orbit-dot orbit-dot-c"></div></div>
+            <div class="orbit-arm orbit-arm-d"><div class="orbit-dot orbit-dot-d"></div></div>
+          </div>
+          <div class="digest-story-label">
+            <span class="dispatch-badge-lg">Orbital Dispatch</span>
+            <span class="dispatch-meta">Issue #{(story as any).issueNumber || '—'} &nbsp;&middot;&nbsp; Week of {(story as any).weekStarting || story.date.slice(0,10)}</span>
+          </div>
+        </div>
+      ) : (story as any).kind === 'video' && (story as any).videoId ? (
         <div class="video-embed-wrap">
           <iframe
             class="video-embed"
@@ -86,10 +112,32 @@ const relatedStories = newsData
         </blockquote>
       )}
 
+      {/* Digest: highlighted story cards */}
+      {isDigest && highlightedStories.length > 0 && (
+        <div class="digest-featured">
+          <h2 class="digest-featured-heading">Stories from this week</h2>
+          {highlightedStories.map((s: any) => (
+            <div class="digest-featured-card">
+              <div class="digest-featured-orient">
+                {(s.orientations || []).map((o: string) => (
+                  <img src={`/assets/${iconMap[o]}`} alt={orientationLabels[o] || o} class="feat-orient-icon" />
+                ))}
+              </div>
+              <div class="digest-featured-body">
+                <a href={`/news/${s.slug}`} class="digest-featured-title">{s.title}</a>
+                {s.summary && <p class="digest-featured-summary">{s.summary}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
       <div class="story-footer">
-        <a href={story.sourceUrl} target="_blank" rel="noopener" class="source-link">
-          {(story as any).kind === 'video' ? 'Watch on YouTube ↗' : 'Read the original source ↗'}
-        </a>
+        {!isDigest && (
+          <a href={story.sourceUrl} target="_blank" rel="noopener" class="source-link">
+            {(story as any).kind === 'video' ? 'Watch on YouTube ↗' : 'Read the original source ↗'}
+          </a>
+        )}
 
         {story.actors.length > 0 && (
           <div class="story-actors">
@@ -275,6 +323,143 @@ const relatedStories = newsData
 .reaction-icon { width: 32px; height: 32px; object-fit: contain; }
 .reaction-name { font-size: .6875rem; color: var(--text-2); text-align: center; }
 .reaction-count { font-size: .875rem; font-weight: 600; color: var(--text); min-height: 1.2em; }
+
+/* ══ Digest detail page styles ══ */
+.digest-story-hero {
+  width: 100%;
+  height: 260px;
+  background: radial-gradient(ellipse at 38% 42%, #1b1636 0%, #0c1018 55%, #091510 100%);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.digest-stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle 1px at 10% 15%, rgba(255,255,255,.8) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 82% 10%, rgba(255,255,255,.6) 0%, transparent 1.5px),
+    radial-gradient(circle 1px at 48% 75%, rgba(255,255,255,.7) 0%, transparent 1px),
+    radial-gradient(circle 1px at 90% 55%, rgba(255,255,255,.45) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 20% 85%, rgba(255,255,255,.55) 0%, transparent 1.5px),
+    radial-gradient(circle 1px at 65% 30%, rgba(255,255,255,.65) 0%, transparent 1px),
+    radial-gradient(circle 1px at 94% 35%, rgba(255,255,255,.4) 0%, transparent 1px),
+    radial-gradient(circle 1px at 35% 50%, rgba(255,255,255,.5) 0%, transparent 1px),
+    radial-gradient(circle 1px at 57% 90%, rgba(255,255,255,.35) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 5% 62%, rgba(255,255,255,.45) 0%, transparent 1.5px),
+    radial-gradient(circle 1px at 76% 80%, rgba(255,255,255,.4) 0%, transparent 1px),
+    radial-gradient(circle 1px at 16% 40%, rgba(255,255,255,.3) 0%, transparent 1px),
+    radial-gradient(circle 1px at 42% 22%, rgba(255,255,255,.35) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 70% 48%, rgba(255,255,255,.25) 0%, transparent 1.5px);
+}
+.orbit-container {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 0; height: 0;
+}
+.orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.orbit-ring-1 { width: 80px;  height: 80px;  border: 1px dashed rgba(255,255,255,.22); }
+.orbit-ring-2 { width: 148px; height: 148px; border: 1px dashed rgba(255,255,255,.14); }
+.orbit-ring-3 { width: 224px; height: 224px; border: 1px dotted rgba(255,255,255,.09); }
+.orbit-ring-4 { width: 310px; height: 310px; border: 1px dotted rgba(255,255,255,.05); }
+.orbit-center {
+  position: absolute;
+  width: 10px; height: 10px;
+  background: rgba(255,255,255,.95);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 16px 6px rgba(255,255,255,.35);
+}
+.orbit-arm {
+  position: absolute; top: 0; left: 0;
+  width: 0; height: 0; transform-origin: 0 0;
+}
+.orbit-dot { position: absolute; border-radius: 50%; }
+.orbit-arm-a { animation: orbit-spin 18s linear infinite; }
+.orbit-dot-a { width: 7px; height: 7px; background: #c4910a; top: -3.5px; left: 74px; box-shadow: 0 0 10px 4px rgba(196,145,10,.65); }
+.orbit-arm-b { animation: orbit-spin 28s linear infinite reverse; }
+.orbit-dot-b { width: 5px; height: 5px; background: #9b7ec8; top: -2.5px; left: 40px; box-shadow: 0 0 8px 3px rgba(123,94,167,.6); }
+.orbit-arm-c { animation: orbit-spin 42s linear infinite; }
+.orbit-dot-c { width: 5px; height: 5px; background: #4a9e6b; top: -2.5px; left: 112px; box-shadow: 0 0 8px 3px rgba(74,126,89,.55); }
+.orbit-arm-d { animation: orbit-spin 60s linear infinite reverse; }
+.orbit-dot-d { width: 4px; height: 4px; background: #2a6496; top: -2px; left: 155px; box-shadow: 0 0 7px 2px rgba(42,100,150,.5); }
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.digest-story-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: .75rem 1.25rem;
+  background: linear-gradient(to top, rgba(0,0,0,.75) 0%, transparent 100%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.dispatch-badge-lg {
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #c4910a;
+  border: 1px solid rgba(196,145,10,.5);
+  padding: .25rem .75rem;
+  border-radius: 3px;
+}
+.dispatch-meta {
+  font-size: .8125rem;
+  color: rgba(255,255,255,.55);
+  letter-spacing: .02em;
+}
+
+/* Featured stories section */
+.digest-featured {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--filter-bg);
+  border-radius: 6px;
+  border-left: 3px solid rgba(196,145,10,.4);
+}
+.digest-featured-heading {
+  font-family: var(--font-sans);
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1.25rem;
+}
+.digest-featured-card {
+  display: flex;
+  gap: .75rem;
+  padding: .875rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.digest-featured-card:last-child { border-bottom: none; padding-bottom: 0; }
+.digest-featured-orient { display: flex; flex-direction: column; gap: .25rem; padding-top: .1rem; flex-shrink: 0; }
+.feat-orient-icon { width: 16px; height: 16px; object-fit: contain; opacity: .7; }
+.digest-featured-body { flex: 1; min-width: 0; }
+.digest-featured-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1.35;
+  display: block;
+  margin-bottom: .3rem;
+}
+.digest-featured-title:hover { text-decoration: underline; }
+.digest-featured-summary { font-size: .875rem; color: var(--text-2); line-height: 1.55; }
 
 .related { max-width: var(--max-w); margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid var(--border); }
 .related-heading { font-size: .6875rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); margin-bottom: 1.25rem; }

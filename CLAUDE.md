@@ -297,6 +297,49 @@ export const myOrg = icalFeed(
 
 ---
 
+## Regional actors — repeatable research workflow
+
+To expand actor coverage in underrepresented regions, use a research-then-import cycle. This is intentionally manual-review-gated — no auto-import.
+
+### Workflow
+
+```
+# 1. Research agent produces a staging file (see below for prompt template)
+#    Save output to: scripts/review/actors-YYYY-MM-DD.json
+
+# 2. Review the file:
+#    - Remove orgs that don't fit
+#    - Fix descriptions, tags, orientations
+#    - Fill in any blank fields you know
+
+# 3. Import approved actors
+node scripts/import-actors.mjs scripts/review/actors-2026-04-26.json
+
+# 4. Build + commit
+npm run build
+git -C 'D:/Dropbox/The Orbital/site' add src/data/actors.json
+git -C 'D:/Dropbox/The Orbital/site' commit -m "actors: add N orgs from [region] sweep (YYYY-MM-DD)"
+git -C 'D:/Dropbox/The Orbital/site' push origin main
+```
+
+### Research agent prompt template
+
+When asking Claude to research actors for a region, provide:
+- What The Orbital is and the four orientations (with examples from CLAUDE.md above)
+- The list of slugs already in actors.json for that region (run: `node -e "const a=JSON.parse(require('fs').readFileSync('src/data/actors.json','utf8')); console.log(a.filter(x=>x.continent==='africa').map(x=>x.slug).join(', '))"`)
+- The full schema (slug, name, type, description, about, website, location, scale, orientations, tags, continent, subregion, country[], bioregion[], peoples[], languages[])
+- Target: 10–15 orgs per region
+- Output: raw JSON array only
+
+### Current coverage (approximate)
+After each sweep, update these numbers:
+- Africa: 7 → 20 (sweep 2026-04-26: +13)
+- Asia: 8 → 20 (sweep 2026-04-26: +12)
+- Latin America: 6 → 20 (sweep 2026-04-26: +14)
+- Oceania: 4 → 16 (sweep 2026-04-26: +12)
+
+---
+
 ## Relationship helper (link.mjs)
 
 Wire up actors ↔ projects ↔ events from the CLI without editing JSON by hand:

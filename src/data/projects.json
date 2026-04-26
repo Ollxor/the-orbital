@@ -144,7 +144,9 @@
     "description": "Indigenous-led conservation credit program in Brazil and Latin America, developed with Fundacion Pachamama and the Sharamentsa Achuar community.",
     "website": "https://www.regen.network/",
     "geography": "Brazil / Latin America",
-    "actors": [],
+    "actors": [
+      "gaia-amazonas"
+    ],
     "orientations": [],
     "tags": [
       "conservation",
@@ -642,7 +644,9 @@
     "description": "Mathematical voting tool where voters allocate voice credits quadratically to issues they care about. Proven in Taiwanese Presidential Hackathon and Colorado state budget allocations.",
     "website": "https://www.radicalxchange.org/",
     "geography": "Global",
-    "actors": [],
+    "actors": [
+      "democracia-en-red"
+    ],
     "orientations": [],
     "tags": [
       "global",
@@ -730,7 +734,9 @@
     "description": "Web console platform for long-term biodiversity monitoring using CNNs for species identification from acoustic data. Developed with Microsoft AI for Good.",
     "website": "https://rfcx.org/",
     "geography": "Global",
-    "actors": [],
+    "actors": [
+      "instituto-socioambiental"
+    ],
     "orientations": [],
     "tags": [
       "data",
@@ -761,7 +767,9 @@
     "description": "Autonomous solar-powered listening devices made from recycled smartphones, installed in rainforest canopies to detect chainsaws, gunshots, and vehicles in real-time for anti-poaching and anti-logging.",
     "website": "https://rfcx.org/",
     "geography": "Ecuador, Peru, Cameroon, Panama, Indonesia",
-    "actors": [],
+    "actors": [
+      "instituto-socioambiental"
+    ],
     "orientations": [],
     "tags": [
       "ai",
@@ -821,7 +829,10 @@
     "description": "Alternative property configuration enabling nature to buy ownerless land for ecosystem preservation. Part of Dark Matter Labs' Property & Beyond lab.",
     "website": "https://darkmatterlabs.property/",
     "geography": "Global",
-    "actors": [],
+    "actors": [
+      "natural-justice",
+      "australian-earth-laws-alliance"
+    ],
     "orientations": [],
     "tags": [
       "global",
@@ -983,7 +994,8 @@
     "website": "https://vtaiwan.tw/",
     "geography": "Taiwan",
     "actors": [
-      "g0v"
+      "g0v",
+      "pdis-taiwan"
     ],
     "orientations": [
       "SPACESHIP",

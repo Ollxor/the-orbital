@@ -51,18 +51,18 @@ SCALE_ORDER.forEach(s => { scaleCounts[s] = 0; });
 
 // ── Featured rotation queue ──────────────────────────────────────────────────
 const featuredQueue: string[][] = [
-  ['rth',                        'global-assembly',              'gaia-foundation'],
-  ['dark-matter-labs',           'sortition-foundation',         'rewilding-europe'],
-  ['doughnut-economics-action-lab','polis',                      'long-now-foundation'],
-  ['regen-network',              'radicalxchange',               'theatre-of-the-oppressed-nyc'],
-  ['climate-trace',              'world-social-forum',           'the-borderland'],
-  ['beckley-foundation',         'p2p-foundation',               'ecosystem-restoration-communities'],
-  ['metagov',                    'earth-law-center',             'demos-helsinki'],
-  ['plurality-institute',        'transition-network',           'superflux'],
-  ['sitra',                      'global-rewilding-alliance',    'co-intelligence-institute'],
-  ['g0v',                        'climate-justice-alliance',     'ritual-design-lab'],
-  ['future-earth',               'steward-ownership',            'institute-for-futures-studies'],
-  ['refi-dao',                   'saami-council',                'global-tapestry-of-alternatives'],
+  ['rth',                        'global-assembly',              'gaia-foundation',                 'buckminster-fuller-institute'],
+  ['dark-matter-labs',           'sortition-foundation',         'rewilding-europe',                'governance-futures'],
+  ['doughnut-economics-action-lab','polis',                      'long-now-foundation',             'openearth-foundation'],
+  ['regen-network',              'radicalxchange',               'theatre-of-the-oppressed-nyc',    'wellbeing-economy-alliance'],
+  ['climate-trace',              'world-social-forum',           'the-borderland',                  'global-alliance-for-the-rights-of-nature'],
+  ['beckley-foundation',         'p2p-foundation',               'ecosystem-restoration-communities','code-for-africa'],
+  ['metagov',                    'earth-law-center',             'demos-helsinki',                  'people-powered'],
+  ['plurality-institute',        'transition-network',           'superflux',                       'la-via-campesina'],
+  ['sitra',                      'global-rewilding-alliance',    'co-intelligence-institute',       'viable-cities'],
+  ['g0v',                        'climate-justice-alliance',     'ritual-design-lab',               'movement-generation'],
+  ['future-earth',               'steward-ownership',            'institute-for-futures-studies',   'institute-for-the-future'],
+  ['refi-dao',                   'saami-council',                'global-tapestry-of-alternatives', 'democracy-without-borders'],
 ];
 const actorMap = Object.fromEntries((actorsData as any[]).map((a: any) => [a.slug, a]));
 
@@ -379,10 +379,11 @@ function getFavicon(website: string): string {
 }
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.75rem;
 }
-@media (max-width: 900px) { .featured-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .featured-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .featured-grid { grid-template-columns: 1fr; } }
 
 .featured-card {
   position: relative;

@@ -1,36 +1,231 @@
 [
   {
-    "id": 3,
-    "slug": "rth",
-    "name": "ÆRTH",
-    "type": "Company",
-    "description": "Planetary AI digital twin using blockchain and remote sensing.",
-    "about": "ÆRTH is building a living digital twin of Earth that combines satellite remote sensing, blockchain verification, and AI to model planetary systems in near-real time. As one of the most ambitious SPACESHIP projects in the ecosystem, it embodies the conviction that governing the Earth well requires seeing it whole — not as a collection of national datasets, but as a single interconnected system. If it delivers on its promise, ÆRTH could become foundational infrastructure for any serious planetary governance architecture.",
-    "website": "https://www.aerth.live",
-    "location": "Global",
-    "scale": "Global",
+    "slug": "350-pacific",
+    "name": "350 Pacific",
+    "type": "Movement",
+    "description": "Pacific hub of the global 350.org movement, building frontline climate justice campaigns across Pacific Island nations facing sea level rise and fossil fuel expansion.",
+    "about": "350 Pacific is the regional hub of 350.org operating across Pacific Island nations — the communities most acutely threatened by climate change despite contributing almost nothing to global emissions. The organisation coordinates grassroots campaigns and Pacific-led advocacy at international climate forums including COP negotiations, demanding loss and damage finance, an end to fossil fuel expansion, and recognition of climate-driven displacement. 350 Pacific amplifies the voices of Pacific youth, women, and frontline communities, connecting local organising with global solidarity campaigns. It runs community resilience programmes and works closely with Pacific civil society networks to build a just transition narrative rooted in Pacific values and sovereignty.",
+    "website": "https://350pacific.org",
+    "location": "Suva, Fiji",
+    "scale": "regional",
     "orientations": [
-      "SPACESHIP",
+      "ASSEMBLY",
       "GARDEN"
     ],
     "tags": [
-      "digital-twins-earth-modelling",
-      "enterprise",
-      "nature-based",
-      "ecological-governance",
-      "blockchain",
-      "ai",
-      "global",
-      "digital-twin"
+      "climate-justice",
+      "fossil-fuels",
+      "loss-and-damage",
+      "Pacific",
+      "frontline-communities"
     ],
-    "image": "/images/actors/aerth-reef.jpg",
-    "imageAlt": "Underwater reef ecosystem monitored by ÆRTH platform",
-    "continent": "transnational",
-    "subregion": null,
-    "country": [],
+    "continent": "oceania",
+    "subregion": "melanesia",
+    "country": [
+      "FJ"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
+  },
+  {
+    "slug": "accountability-lab-africa",
+    "name": "Accountability Lab Africa",
+    "type": "Network",
+    "description": "Translocal governance network operating across southern and eastern Africa, incubating civic leaders and digital tools for accountability, transparency, and participatory governance.",
+    "about": "Accountability Lab is a global translocal network making governance work for people by supporting active citizens, responsible leaders, and accountable institutions. In Africa, it operates through ALESA (Accountability Lab East and Southern Africa), with programs in Botswana, Kenya, Malawi, Namibia, South Africa, Tanzania, Zambia, and Zimbabwe. African programs include the Digital Governance Incubator supporting young changemakers using technology for civic participation, and the Climate Justice Incubator training young civic leaders on climate accountability. The Lab bridges civic engagement, digital governance, and accountability to build more transparent and participatory public institutions.",
+    "website": "https://accountabilitylab.org",
+    "location": "Cape Town, South Africa",
+    "scale": "continental",
+    "orientations": [
+      "ASSEMBLY",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "governance-accountability",
+      "civic-tech",
+      "digital-governance",
+      "climate-justice",
+      "youth-leadership"
+    ],
+    "continent": "africa",
+    "subregion": "sub-saharan-africa",
+    "country": [
+      "ZA",
+      "KE",
+      "ZW",
+      "MW",
+      "TZ",
+      "ZM",
+      "NG"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
+  },
+  {
+    "slug": "actionaid-india",
+    "name": "ActionAid Association India",
+    "type": "NGO",
+    "description": "National NGO working in solidarity with marginalised communities across 24 Indian states on women's rights, land, food sovereignty, and democratic participation.",
+    "about": "ActionAid Association has been working with poor and marginalised people in India since 1972, operating across 24 states and three union territories. The organisation works in solidarity with communities facing dispossession, gender-based violence, and exclusion, with particular focus on women's economic rights, land and natural resource rights, food sovereignty, and participation in democratic governance. ActionAid India's research and advocacy spans unpaid care work, climate justice, urban rights, and child protection. Recent impact data shows reach across 270 districts, 6,318 villages, and approximately 3.2 million people.",
+    "website": "https://www.actionaidindia.org",
+    "location": "Bengaluru, India",
+    "scale": "national",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "women-rights",
+      "land-rights",
+      "food-sovereignty",
+      "governance",
+      "community-organising"
+    ],
+    "continent": "asia",
+    "subregion": "southern-asia",
+    "country": [
+      "IN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "hi"
+    ]
+  },
+  {
+    "slug": "african-biodiversity-network",
+    "name": "African Biodiversity Network",
+    "type": "Network",
+    "description": "A Pan-African network defending seed sovereignty, indigenous food systems, and community rights against industrial agriculture and extractivism.",
+    "about": "The African Biodiversity Network (ABN) brings together individuals and organisations across 19 African countries to resist the erosion of agricultural biodiversity and the knowledge systems that sustain it. ABN works on seed sovereignty, opposition to GMOs in African food systems, agroecological alternatives to industrial farming, and the rights of smallholder farmers and pastoralists. It sits at the intersection of ecology and governance: who controls seeds controls food systems, and ABN insists that control belongs with communities, not corporations or states.",
+    "website": "https://africanbiodiversity.org",
+    "location": "Thika, Kenya / Pan-African",
+    "scale": "Continental",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "seed-sovereignty",
+      "agroecology",
+      "food-sovereignty",
+      "africa",
+      "indigenous-knowledge"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1999",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "africa",
+    "subregion": "eastern-africa",
+    "country": [
+      "KE"
+    ],
     "bioregion": [],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "african-climate-foundation",
+    "name": "African Climate Foundation",
+    "type": "Research",
+    "description": "An African-led foundation working at the nexus of climate change and developmental justice across the continent.",
+    "about": "The African Climate Foundation (ACF) is the first African-led strategic grant-maker and think-do tank working at the nexus of climate change and developmental justice. Founded in 2020 and based in Cape Town, ACF funds African-led solutions to the climate crisis and pushes for ambitious climate policy on the continent. It brings African voices and priorities into global climate governance conversations — particularly around just energy transition, climate finance access, and continental resilience — insisting that African communities must set the terms of their own transition.",
+    "website": "https://africanclimatefoundation.org",
+    "location": "Cape Town, South Africa",
+    "scale": "Continental",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "climate-policy",
+      "climate-finance",
+      "just-transition",
+      "africa"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "2020",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "africa",
+    "subregion": "southern-africa",
+    "country": [
+      "ZA"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "african-climate-reality-project",
+    "name": "African Climate Reality Project",
+    "type": "NGO",
+    "description": "Africa's branch of The Climate Reality Project, building a continent-wide network of active citizens to drive climate advocacy and accelerate the clean energy transition.",
+    "about": "Founded in 2014 in Johannesburg, the African Climate Reality Project (ACRP) serves as the African branch of Al Gore's global Climate Reality Project. The organisation builds capacity and coordinates volunteer Regional Coordinators across East, South, Central, and West Africa to mobilise communities around climate action. ACRP focuses on three main areas: climate literacy and public awareness, public finance advocacy, and international climate cooperation — including active engagement at COP summits. The organisation runs educational programs, publishes newsletters and podcasts, and maintains an active presence in pan-African climate policy spaces.",
+    "website": "https://climatereality.africa",
+    "location": "Johannesburg, South Africa",
+    "scale": "continental",
+    "orientations": [
+      "ASSEMBLY",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "climate-advocacy",
+      "climate-literacy",
+      "clean-energy",
+      "cop-engagement",
+      "citizen-mobilisation"
+    ],
+    "continent": "africa",
+    "subregion": "southern-africa",
+    "country": [
+      "ZA"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
+  },
+  {
+    "slug": "african-monitor",
+    "name": "African Monitor",
+    "type": "NGO",
+    "description": "Pan-African body monitoring development commitments and SDG delivery, amplifying African grassroots voices in the global development accountability agenda.",
+    "about": "Established in 2006 and headquartered in Cape Town, African Monitor is an independent pan-African organisation that monitors development commitments, delivery, and their impact on grassroots communities. The organisation works to ensure that citizens have the capacity, platforms, and opportunities to participate in decision-making processes around development and the Sustainable Development Goals. African Monitor produces People's Reports on SDG progress, runs gender equality initiatives, and co-chairs the Civil Society Forum on the New Development Bank. The organisation maintains a continental lens on accountability and participatory governance.",
+    "website": "https://www.africanmonitor.org",
+    "location": "Cape Town, South Africa",
+    "scale": "continental",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "governance-accountability",
+      "sdgs",
+      "development-monitoring",
+      "citizen-participation",
+      "civil-society"
+    ],
+    "continent": "africa",
+    "subregion": "southern-africa",
+    "country": [
+      "ZA"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
   },
   {
     "id": 35,
@@ -137,6 +332,103 @@
     "languages": []
   },
   {
+    "slug": "aipp-asia-indigenous-peoples-pact",
+    "name": "Asia Indigenous Peoples Pact (AIPP)",
+    "type": "Network",
+    "description": "Regional network of 46 indigenous peoples' organisations across 14 Asian countries defending land rights, cultural rights, and indigenous governance.",
+    "about": "Founded in 1992, the Asia Indigenous Peoples Pact (AIPP) is a regional network of indigenous peoples' movements across Asia, with 46 member organisations from 14 countries. AIPP works to promote and defend indigenous peoples' human rights, including land rights, territorial rights, and cultural rights. Programme areas span human rights campaigns and policy advocacy, regional capacity building, environment and climate, and indigenous women's rights. The organisation engages at national, regional, and international forums including the UN, advocating for indigenous-led governance frameworks. AIPP represents one of Asia's most significant platforms for indigenous self-determination and participation in governance.",
+    "website": "https://aippnet.org",
+    "location": "Chiang Mai, Thailand",
+    "scale": "regional",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "indigenous-rights",
+      "land-rights",
+      "governance",
+      "cultural-rights",
+      "advocacy"
+    ],
+    "continent": "asia",
+    "subregion": "south-eastern-asia",
+    "country": [
+      "TH"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
+  },
+  {
+    "slug": "aipwa-india",
+    "name": "All India Progressive Women's Association (AIPWA)",
+    "type": "Movement",
+    "description": "National women's movement across 21 Indian states fighting for land rights, natural resource commons, and women's representation in governance.",
+    "about": "The All India Progressive Women's Association (AIPWA) was founded in 1991 as a national mass organisation of women committed to equality, freedom, and structural transformation of society. Operating across 21 states, AIPWA mobilises women around violence, reproductive rights, caste discrimination, and economic justice. The organisation campaigns against the corporate plunder of land, forests, water, and other natural resources, and advocates for women's leadership in peasant organisations and local governance. AIPWA also supports women's political reservation in parliament and state assemblies, remaining a key force in grassroots democratic governance in India.",
+    "website": "https://aipwa.in",
+    "location": "India",
+    "scale": "national",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "women-rights",
+      "land-rights",
+      "commons",
+      "political-participation",
+      "grassroots"
+    ],
+    "continent": "asia",
+    "subregion": "southern-asia",
+    "country": [
+      "IN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "hi"
+    ]
+  },
+  {
+    "slug": "alliance-for-food-sovereignty-in-africa",
+    "name": "Alliance for Food Sovereignty in Africa (AFSA)",
+    "type": "Network",
+    "description": "Pan-African alliance of 48 member networks uniting farmers, pastoralists, and civil society to transform food systems through agroecology and food sovereignty.",
+    "about": "Founded in 2011 at COP17 in Durban, AFSA unites over 48 member alliances spanning 50 African countries and reaches more than 200 million people. The alliance works to influence policies and promote African-led solutions for food sovereignty, organizing around six thematic areas: agroecological transition, farmer-managed seed systems, land rights, women and youth empowerment, and climate resilience. AFSA advocates for a shift away from industrial agriculture toward regenerative, community-controlled food systems. Its secretariat is based in Kampala, Uganda.",
+    "website": "https://afsafrica.org",
+    "location": "Kampala, Uganda",
+    "scale": "continental",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "agroecology",
+      "food-sovereignty",
+      "seed-systems",
+      "land-rights",
+      "climate-resilience",
+      "smallholder-farmers"
+    ],
+    "continent": "africa",
+    "subregion": "eastern-africa",
+    "country": [
+      "UG"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "fr",
+      "sw"
+    ]
+  },
+  {
     "id": 44,
     "slug": "alliance-for-water-stewardship",
     "name": "Alliance for Water Stewardship",
@@ -169,6 +461,118 @@
     "languages": []
   },
   {
+    "slug": "amazon-watch",
+    "name": "Amazon Watch",
+    "type": "NGO",
+    "description": "Advocacy organisation partnering with Amazonian indigenous peoples to end oil extraction, stop mining, and secure territorial rights across four nations.",
+    "about": "Amazon Watch was founded in 1996 and works in close partnership with indigenous and environmental organisations across the Amazon Basin, particularly in Ecuador, Peru, Colombia, and Brazil. Its campaigns target corporate accountability, opposing extractive megaprojects that threaten indigenous territories and biodiversity. The organisation supports frontline communities through legal strategies, media amplification, and direct solidarity. Amazon Watch centres indigenous self-determination in all its work and is a prominent voice at the United Nations and in financial markets, pressuring banks and investors to withdraw from Amazon-destructive projects.",
+    "website": "https://amazonwatch.org",
+    "location": "Oakland, USA / Amazon Basin",
+    "scale": "continental",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "Amazon",
+      "indigenous-rights",
+      "oil-extraction",
+      "mining",
+      "corporate-accountability"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "EC",
+      "PE",
+      "CO",
+      "BR"
+    ],
+    "bioregion": [
+      "amazon"
+    ],
+    "peoples": [],
+    "languages": [
+      "en",
+      "es",
+      "pt"
+    ]
+  },
+  {
+    "slug": "ampb",
+    "name": "Alianza Mesoamericana de Pueblos y Bosques (AMPB)",
+    "type": "Network",
+    "description": "Alliance of Mesoamerican indigenous and local communities governing forested territories from Panama to Mexico, blending ancestral knowledge with territorial technology.",
+    "about": "The Alianza Mesoamericana de Pueblos y Bosques (AMPB) was founded in 2010 and brings together territorial authorities of indigenous peoples and local communities protecting Mesoamerica's largest forested areas — spanning from Panama through Costa Rica, Honduras, Guatemala, and Mexico. AMPB facilitates political coordination, territorial monitoring, and ancestral-knowledge preservation across this arc of critical ecosystems including forests, mangroves, and coastal zones. The alliance runs a Community Communications Academy to amplify indigenous voices and has integrated forest carbon governance, satellite monitoring, and traditional resource management into community-led territorial plans.",
+    "website": "https://www.alianzamesoamericana.org",
+    "location": "Mesoamerica (distributed)",
+    "scale": "continental",
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "indigenous-governance",
+      "forests",
+      "territorial-monitoring",
+      "Mesoamerica",
+      "community-rights"
+    ],
+    "continent": "latin-america",
+    "subregion": "central-america",
+    "country": [
+      "MX",
+      "GT",
+      "HN",
+      "CR",
+      "PA"
+    ],
+    "bioregion": [
+      "mesoamerican-forests"
+    ],
+    "peoples": [],
+    "languages": [
+      "es"
+    ]
+  },
+  {
+    "slug": "apib",
+    "name": "Articulação dos Povos Indígenas do Brasil (APIB)",
+    "type": "Movement",
+    "description": "Brazil's national indigenous peoples' coordinating body, leading land rights struggles, climate justice campaigns, and the annual Free Land Camp in Brasília.",
+    "about": "APIB (Articulação dos Povos Indígenas do Brasil) was founded in 2005 and coordinates Brazil's major regional indigenous organisations into a unified national movement. It leads the annual Acampamento Terra Livre (Free Land Camp) in Brasília, mobilising tens of thousands of indigenous people to demand territorial demarcation and rights protection from all branches of government. APIB is a central actor in climate justice internationally, fielding delegations to COP negotiations and launching the campaign 'The Answer Is Us' framing indigenous peoples as climate solutions. In 2025 the organisation celebrated its 20th anniversary and helped launch the Indigenous International Commission for COP-30 in Belém.",
+    "website": "https://apiboficial.org",
+    "location": "Brasília, Brazil",
+    "scale": "national",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "indigenous-rights",
+      "land-rights",
+      "climate-justice",
+      "Brazil",
+      "territorial-demarcation"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "BR"
+    ],
+    "bioregion": [
+      "amazon",
+      "cerrado",
+      "caatinga",
+      "atlantic-forest"
+    ],
+    "peoples": [],
+    "languages": [
+      "pt",
+      "en"
+    ]
+  },
+  {
     "id": 78,
     "slug": "arbonics",
     "name": "Arbonics",
@@ -196,6 +600,128 @@
     ],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "asia-democracy-network",
+    "name": "Asia Democracy Network (ADN)",
+    "type": "Network",
+    "description": "Seoul-based coalition of over 300 civil society organisations across 40+ Asian countries advancing democracy, human rights, and inclusive governance.",
+    "about": "The Asia Democracy Network (ADN) was launched in Seoul in 2013 with the aim to strengthen solidarity and a collective voice among Asian civil society engaged in democracy, human rights, and development. Today it is a coalition of over 300 organisations active in more than 40 countries across the continent. ADN promotes democratisation through flagship programmes including the Asia Democracy Chronicles, the Asia Democracy Academy, the Asia Youth Assembly, and annual Asia Democracy Forums. The organisation also conducts digital security training, capacity building, and advocacy at international forums, remaining one of the region's most significant platforms for civil society solidarity.",
+    "website": "https://adnasia.org",
+    "location": "Seoul, South Korea",
+    "scale": "continental",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "democracy",
+      "civil-society",
+      "human-rights",
+      "governance",
+      "advocacy"
+    ],
+    "continent": "asia",
+    "subregion": "eastern-asia",
+    "country": [
+      "KR"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
+  },
+  {
+    "slug": "australian-earth-laws-alliance",
+    "name": "Australian Earth Laws Alliance (AELA)",
+    "type": "NGO",
+    "description": "Australian organisation advancing rights of nature, ecological law, and Earth jurisprudence through education, advocacy, and legal reform campaigns.",
+    "about": "The Australian Earth Laws Alliance (AELA) is a not-for-profit organisation dedicated to transforming Australian law, governance, and culture to recognise and protect the rights of nature and the intrinsic value of the living world. AELA works across legal reform, community education, and international advocacy, advancing Earth jurisprudence as a framework for ecologically grounded law. The organisation produces practical resources for policymakers, lawyers, and communities, and runs national conferences and training programs on rights of nature, wild law, and ecological governance. AELA engages with Aboriginal and Torres Strait Islander legal traditions in developing rights of nature frameworks appropriate for Australian contexts.",
+    "website": "https://www.earthlaws.org.au",
+    "location": "Brisbane, Australia",
+    "scale": "national",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "ecological-law",
+      "Earth-jurisprudence",
+      "legal-reform",
+      "governance"
+    ],
+    "continent": "oceania",
+    "subregion": "australia-and-new-zealand",
+    "country": [
+      "AU"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
+  },
+  {
+    "slug": "australian-progress",
+    "name": "Australian Progress",
+    "type": "Network",
+    "description": "National network strengthening Australia's civil society capacity through organising training, leadership development, and progressive movement support.",
+    "about": "Australian Progress is a national network that builds the capacity of civil society organisations, community groups, and social movements across Australia. The organisation offers training in community organising, digital campaigning, leadership development, and movement strategy to help progressive organisations amplify their impact. Australian Progress convenes the annual Australian Community Organising Conference and runs specialised training programs on political listening, narrative strategy, and coalition building. It plays a connective role in Australia's civil society ecosystem, helping organisations across climate, social justice, and democracy movements to strengthen their organising and campaigning capabilities.",
+    "website": "https://australianprogress.org.au",
+    "location": "Melbourne, Australia",
+    "scale": "national",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "community-organising",
+      "civil-society",
+      "leadership",
+      "movement-building",
+      "campaigns"
+    ],
+    "continent": "oceania",
+    "subregion": "australia-and-new-zealand",
+    "country": [
+      "AU"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
+  },
+  {
+    "slug": "award-african-women-agricultural-research",
+    "name": "African Women in Agricultural Research and Development (AWARD)",
+    "type": "Network",
+    "description": "Fellowship program building a new generation of African women leaders driving gender-responsive, equitable agri-food system transformation across sub-Saharan Africa.",
+    "about": "African Women in Agricultural Research and Development (AWARD) is hosted by the World Agroforestry Centre at CIFOR-ICRAF in Nairobi, Kenya. AWARD invests in women's leadership across Africa's agricultural research and development sector, offering fellowship programs, leadership training, and institutional capacity-building to advance gender-responsive agri-food systems. The organisation strengthens institutions to adopt gender-responsive policies and supports research that integrates gender perspectives across the food system. AWARD works across sub-Saharan Africa and engages with continental research and policy networks.",
+    "website": "https://awardfellowships.org",
+    "location": "Nairobi, Kenya",
+    "scale": "continental",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "gender-justice",
+      "agricultural-research",
+      "women-leadership",
+      "food-systems",
+      "fellowship"
+    ],
+    "continent": "africa",
+    "subregion": "eastern-africa",
+    "country": [
+      "KE"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
   },
   {
     "id": 101,
@@ -265,6 +791,38 @@
     "bioregion": [],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "biowatch-south-africa",
+    "name": "Biowatch South Africa",
+    "type": "NGO",
+    "description": "Durban-based organisation promoting agroecology, food sovereignty, and seed diversity with smallholder farmers in southern Africa against the industrial food system.",
+    "about": "Founded in 1999 and headquartered in Durban, KwaZulu-Natal, Biowatch South Africa challenges the industrialised food system by advocating for agroecology, food sovereignty, and biodiverse, climate-resilient environments. The organisation works directly with smallholder farmers, supporting agroecological transitions and engaging policymakers on systemic food system change. Biowatch co-founded the Seed and Knowledge Initiative (SKI), a 16-organisation regional partnership focused on food sovereignty. Their work spans knowledge building, farmer support, policy advocacy, and movement building, with a strong focus on seed sovereignty and smallholder rights in South Africa and the broader region.",
+    "website": "https://biowatch.org.za",
+    "location": "Durban, South Africa",
+    "scale": "regional",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "agroecology",
+      "biodiversity",
+      "food-sovereignty",
+      "seed-systems",
+      "gmo-governance",
+      "smallholder-farmers"
+    ],
+    "continent": "africa",
+    "subregion": "southern-africa",
+    "country": [
+      "ZA"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
   },
   {
     "id": 80,
@@ -360,6 +918,42 @@
     "languages": []
   },
   {
+    "slug": "caoi",
+    "name": "Coordinadora Andina de Organizaciones Indígenas (CAOI)",
+    "type": "Network",
+    "description": "Andean coordination body representing indigenous peoples of Bolivia, Colombia, Ecuador, and Peru in international rights and climate governance arenas.",
+    "about": "CAOI was established at its founding congress in Cusco, Peru in 2006 to give Andean indigenous nations a unified voice in regional and global governance. It brings together grassroots organisations from Bolivia, Colombia, Ecuador, and Peru to advance indigenous rights, free prior and informed consent, and climate justice anchored in ancestral knowledge. CAOI engages actively at United Nations forums, COP climate conferences, and UN business and human rights processes, demanding that indigenous communities lead decisions affecting their territories. The organisation also advocates for indigenous women and girls and monitors violations by extractive industries across the Andes.",
+    "website": "https://caoicoordinadoraandina.org",
+    "location": "Cusco, Peru (rotating)",
+    "scale": "continental",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "indigenous-rights",
+      "Andes",
+      "FPIC",
+      "climate-justice",
+      "territorial-governance"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "BO",
+      "CO",
+      "EC",
+      "PE"
+    ],
+    "bioregion": [
+      "andes"
+    ],
+    "peoples": [],
+    "languages": [
+      "es"
+    ]
+  },
+  {
     "id": 45,
     "slug": "capital-institute",
     "name": "Capital Institute",
@@ -426,6 +1020,39 @@
     "bioregion": [],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "centre-science-environment-india",
+    "name": "Centre for Science and Environment (CSE)",
+    "type": "Research",
+    "description": "New Delhi think-tank practising knowledge-based activism on environment, climate, and development — and publisher of Down To Earth magazine since 1992.",
+    "about": "The Centre for Science and Environment (CSE) is a not-for-profit public interest research and advocacy organisation based in New Delhi, founded in 1980. CSE operates at the intersection of ecology, policy, and social justice, conducting research across air quality, water, climate change, sustainable food systems, biodiversity, renewable energy, and circular economy. It publishes Down To Earth, India's leading science and environment magazine. Through its Anil Agarwal Environment Training Institute, CSE trains government officials, NGOs, and community leaders in environmental governance. CSE remains a leading voice on ecological governance reform in the Global South.",
+    "website": "https://www.cseindia.org",
+    "location": "New Delhi, India",
+    "scale": "national",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "environmental-governance",
+      "climate",
+      "research",
+      "journalism",
+      "advocacy"
+    ],
+    "continent": "asia",
+    "subregion": "southern-asia",
+    "country": [
+      "IN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "hi",
+      "ml"
+    ]
   },
   {
     "id": 102,
@@ -498,6 +1125,38 @@
     ],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "claes",
+    "name": "Centro Latino Americano de Ecología Social (CLAES)",
+    "type": "Research",
+    "description": "Uruguayan think-tank pioneering social ecology, rights of nature, and Buen Vivir frameworks across Latin America since 1989.",
+    "about": "CLAES (Centro Latino Americano de Ecología Social) was founded in Montevideo in 1989 and has become a leading Latin American research and advocacy centre for ecological politics, social ecology, and alternative development models. It promotes rights of nature, degrowth, and Buen Vivir as frameworks for post-extractivist futures, producing influential publications through platforms such as ecologiasocial.com and ambiental.net. CLAES engages with indigenous communities, feminist ecology, and critical perspectives on technology and capitalism in the region. The organisation connects academic analysis with grassroots movements and policy debates across Latin America.",
+    "website": "https://ecologiasocial.com",
+    "location": "Montevideo, Uruguay",
+    "scale": "continental",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "social-ecology",
+      "rights-of-nature",
+      "Buen-Vivir",
+      "degrowth",
+      "political-ecology",
+      "extractivism"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "UY"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "es"
+    ]
   },
   {
     "id": 81,
@@ -618,6 +1277,37 @@
     "languages": []
   },
   {
+    "slug": "cloc-via-campesina",
+    "name": "CLOC – Vía Campesina",
+    "type": "Network",
+    "description": "Continental coordination of 84 peasant, indigenous, and Afro-descendant organisations in 18 Latin American countries, championing food sovereignty and agrarian reform.",
+    "about": "The Coordinadora Latinoamericana de Organizaciones del Campo (CLOC) is the Latin American and Caribbean regional expression of La Vía Campesina International, established at its first congress in Lima in 1994. It coordinates 84 member organisations across 18 countries representing peasant farmers, indigenous peoples, rural women, and Afro-descendant communities. CLOC campaigns for comprehensive agrarian reform, food sovereignty grounded in agroecology, and the defence of native seeds as common heritage. It integrates feminist and anti-racist politics into rural struggle through its women's commission and youth secretariat. The network publishes regular declarations on food systems, climate justice, and territorial rights from a distinctly anti-extractivist standpoint.",
+    "website": "https://cloc-viacampesina.net",
+    "location": "Latin America (distributed)",
+    "scale": "continental",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "food-sovereignty",
+      "agrarian-reform",
+      "agroecology",
+      "peasant-rights",
+      "seed-sovereignty",
+      "rural-feminism"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "es",
+      "pt"
+    ]
+  },
+  {
     "slug": "co-intelligence-institute",
     "name": "Co-Intelligence Institute",
     "type": "Research",
@@ -688,6 +1378,78 @@
     "languages": []
   },
   {
+    "slug": "code-for-africa",
+    "name": "Code for Africa",
+    "type": "Network",
+    "description": "Africa's largest civic tech and data journalism network, building open-data tools and digital democracy solutions across 26 countries.",
+    "about": "Code for Africa (CfA) is the continent's largest network of civic technology and data journalism labs, with teams in 26 countries. The organization builds digital democracy solutions that give citizens access to actionable information, from fact-checking tools to budget monitoring platforms. CfA manages major open infrastructure including openAFRICA and sourceAFRICA (the continent's largest open data portals), the sensors.AFRICA air quality monitoring network, and the africanDRONE network. Its secretariats are based in Nairobi, Cape Town, Lagos, and Dar es Salaam, and it actively incubates civic tech initiatives across the continent.",
+    "website": "https://codeforafrica.org",
+    "location": "Nairobi, Kenya",
+    "scale": "continental",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "civic-tech",
+      "open-data",
+      "data-journalism",
+      "digital-democracy",
+      "satellite-monitoring"
+    ],
+    "continent": "africa",
+    "subregion": "eastern-africa",
+    "country": [
+      "KE",
+      "ZA",
+      "NG",
+      "TZ"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "fr",
+      "sw"
+    ]
+  },
+  {
+    "slug": "coica",
+    "name": "COICA — Coordinator of Indigenous Organizations of the Amazon Basin",
+    "type": "Network",
+    "description": "The coordinating body of nine national Indigenous organisations representing peoples across the nine Amazonian countries in international governance and territorial defence.",
+    "about": "COICA (Coordinadora de las Organizaciones Indígenas de la Cuenca Amazónica) was founded in Lima in 1984 and is based in Quito. It represents the Indigenous federations of nine Amazonian nations in international governance processes. COICA has been central to establishing that Indigenous territorial rights are the most effective mechanism for Amazon conservation — a scientific and political argument the organisation has pressed for four decades. It advocates for free, prior and informed consent; legal recognition of ancestral territories; and protection of peoples living in voluntary isolation. As the Amazon approaches ecological tipping points, COICA's governance model becomes increasingly urgent.",
+    "website": "https://coicamazonia.org",
+    "location": "Quito, Ecuador",
+    "scale": "Continental",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "indigenous-rights",
+      "amazon",
+      "territorial-rights",
+      "fpic",
+      "latin-america"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1984",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "EC"
+    ],
+    "bioregion": [
+      "Amazonia"
+    ],
+    "peoples": [],
+    "languages": []
+  },
+  {
     "id": 34,
     "slug": "curve-labs",
     "name": "Curve Labs",
@@ -750,6 +1512,98 @@
     "bioregion": [],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "data-uruguay",
+    "name": "DATA Uruguay",
+    "type": "NGO",
+    "description": "Uruguayan civic-tech organisation building open-data tools, transparency platforms, and communities for informed democratic participation.",
+    "about": "DATA Uruguay is a civil society organisation based in Montevideo that develops civic technology powered by open data to strengthen democratic participation, government transparency, and digital rights. The team operates semi-voluntarily and publishes all code as free software on GitHub, ensuring tools are replicable by Latin American partners. Projects range from education information systems to electoral monitoring tools and open budget platforms. DATA Uruguay also organises regional events and networks connecting open-government practitioners across Latin America and the Caribbean. All outputs are published as open data or under Creative Commons licences.",
+    "website": "https://data.org.uy",
+    "location": "Montevideo, Uruguay",
+    "scale": "regional",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "civic-tech",
+      "open-data",
+      "transparency",
+      "digital-rights",
+      "open-government"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "UY"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "es"
+    ]
+  },
+  {
+    "slug": "democracia-en-red",
+    "name": "Democracia en Red",
+    "type": "NGO",
+    "description": "Buenos Aires civic-tech NGO building DemocraciaOS — open-source platforms for participatory budgeting, digital consultation, and collaborative lawmaking.",
+    "about": "Democracia en Red is a Buenos Aires-based NGO founded by activists, programmers, and social scientists to deepen democracy through civic technology. Its flagship product, DemocraciaOS, is one of the world's largest open-source platforms for government–citizen consultation, deployed at national legislative and municipal levels across Argentina, Colombia, and beyond. The platform enables participatory budgeting, crowdsourced lawmaking, public consultations, and government goal-tracking. Democracia en Red open-sources all code, publishes transparency reports, and runs workshops to build democratic innovation capacity across Latin America.",
+    "website": "https://democraciaenred.org",
+    "location": "Buenos Aires, Argentina",
+    "scale": "continental",
+    "orientations": [
+      "ASSEMBLY",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "civic-tech",
+      "participatory-democracy",
+      "open-source",
+      "DemocraciaOS",
+      "digital-governance"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "AR"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "es"
+    ]
+  },
+  {
+    "slug": "democracy-in-colour",
+    "name": "Democracy in Colour",
+    "type": "Movement",
+    "description": "Australian movement organisation building political power for people of colour through community organising, civic participation, and race-equity advocacy.",
+    "about": "Democracy in Colour is an Australian organisation that works to build the political power of people of colour and advance racial equity in Australian politics and democracy. The organisation engages in community organising, civic education, and direct advocacy to ensure that racially and culturally diverse communities have genuine voice and representation in democratic institutions. Democracy in Colour runs civic power building programs, produces research on structural racism in Australian politics, and campaigns for electoral and governance reforms that centre racial justice. The organisation is part of a global movement linking racial justice to democratic renewal.",
+    "website": "https://www.democracyincolour.org",
+    "location": "Melbourne, Australia",
+    "scale": "national",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "racial-justice",
+      "civic-power",
+      "democracy",
+      "community-organising",
+      "diversity"
+    ],
+    "continent": "oceania",
+    "subregion": "australia-and-new-zealand",
+    "country": [
+      "AU"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
   },
   {
     "id": 25,
@@ -1034,6 +1888,41 @@
     "languages": []
   },
   {
+    "slug": "earthlore-foundation",
+    "name": "EarthLore Foundation",
+    "type": "NGO",
+    "description": "Johannesburg-based NGO partnering with southern African communities to revive indigenous ecological knowledge, defend sacred lands, and strengthen community governance.",
+    "about": "EarthLore Foundation (formerly Mupo Foundation, established 2007) works with rural communities in southern Africa to accompany them in reviving traditional ecological knowledge, seed diversity, farming practices, and indigenous governance systems essential for climate resilience. The organisation uses Eco-Cultural Mapping — a participatory process that weaves together local knowledge, cultural practices, spiritual values, and history — to strengthen community ecological governance and land sovereignty. EarthLore also advocates against threats from mining and industrial exploitation of community lands, operating across South Africa and expanding into Zimbabwe.",
+    "website": "https://earthlorefoundation.org",
+    "location": "Johannesburg, South Africa",
+    "scale": "regional",
+    "orientations": [
+      "GARDEN",
+      "MYSTERIES"
+    ],
+    "tags": [
+      "indigenous-knowledge",
+      "sacred-lands",
+      "seed-sovereignty",
+      "eco-cultural-mapping",
+      "community-governance"
+    ],
+    "continent": "africa",
+    "subregion": "southern-africa",
+    "country": [
+      "ZA",
+      "ZW"
+    ],
+    "bioregion": [],
+    "peoples": [
+      "Venda",
+      "Akie"
+    ],
+    "languages": [
+      "en"
+    ]
+  },
+  {
     "slug": "ecocentric-earth",
     "name": "Ecocentric.earth",
     "type": "Consultancy",
@@ -1094,6 +1983,38 @@
     "bioregion": [],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "ekgaon-technologies",
+    "name": "Ekgaon Technologies",
+    "type": "Company",
+    "description": "New Delhi social enterprise deploying mobile and digital platforms to connect smallholder farmers, rural women's self-help groups, and villages to markets and financial services.",
+    "about": "Ekgaon Technologies, founded in 2002 and headquartered in New Delhi, is a social enterprise that reinvests profits toward its mission of serving underserved rural communities. The company operates the OneVillageOneWorld Network, connecting approximately 900,000 women and 300,000 farmers through mobile-enabled microfinance, direct-from-farm organic produce markets, and e-governance monitoring tools. Ekgaon has also developed solutions for tracking rural entitlement programmes like PDS and pension, reducing corruption through citizen-sourced data. With reach across more than one million rural households, Ekgaon represents a model of technology-enabled participatory governance in rural India.",
+    "website": "https://ekgaon.co.in",
+    "location": "New Delhi, India",
+    "scale": "national",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "civic-tech",
+      "rural-governance",
+      "digital-inclusion",
+      "microfinance",
+      "food-systems"
+    ],
+    "continent": "asia",
+    "subregion": "southern-asia",
+    "country": [
+      "IN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "hi"
+    ]
   },
   {
     "id": 19,
@@ -1166,6 +2087,38 @@
     "languages": []
   },
   {
+    "slug": "enda-tiers-monde",
+    "name": "Enda Tiers-Monde",
+    "type": "Network",
+    "description": "Dakar-based international network founded in 1972 working on environment, development, and social justice through 19 autonomous entities across 40 countries.",
+    "about": "Enda Tiers-Monde (Environment, Development and Action in the Third World) was founded in 1972 in Dakar, Senegal, by activists committed to development that respects the environment and pursues social justice. Today it is organised as a network of 19 autonomous member entities operating across approximately 40 countries in Africa, Asia, Latin America, and Europe, with its Executive Secretariat in Dakar. Enda's thematic priorities include urban ecology, food sovereignty, renewable energy, youth empowerment, women's economic empowerment, and ecological transition. The network connects grassroots communities with global environmental and development governance processes.",
+    "website": "https://endatiersmonde.org",
+    "location": "Dakar, Senegal",
+    "scale": "global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "urban-ecology",
+      "food-systems",
+      "ecological-transition",
+      "social-justice",
+      "women-empowerment"
+    ],
+    "continent": "africa",
+    "subregion": "western-africa",
+    "country": [
+      "SN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "fr",
+      "en"
+    ]
+  },
+  {
     "id": 18,
     "slug": "fabel",
     "name": "Fabel",
@@ -1196,6 +2149,40 @@
     "bioregion": [
       "Nordic"
     ],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "filac",
+    "name": "FILAC — Fund for the Development of Indigenous Peoples of Latin America",
+    "type": "Government",
+    "description": "An intergovernmental body where Indigenous peoples and governments share equal decision-making power, working to advance indigenous self-development across Latin America and the Caribbean.",
+    "about": "FILAC (Fondo para el Desarrollo de los Pueblos Indígenas de América Latina y el Caribe) was created by the Second Ibero-American Summit in 1992 with a governance structure that gives Indigenous peoples and governments equal representation — a rare model of shared sovereignty. It supports Indigenous self-development processes, promotes Buen Vivir / Vivir Bien as an alternative development framework, and works on indigenous languages, gender equality, and territorial rights. FILAC holds Permanent Observer status at the UN General Assembly. Its structure — co-governed by states and peoples on equal terms — embodies precisely the kind of plurinational governance design that planetary governance ultimately requires.",
+    "website": "https://filac.org",
+    "location": "La Paz, Bolivia",
+    "scale": "Continental",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "indigenous-rights",
+      "buen-vivir",
+      "latin-america",
+      "self-determination",
+      "governance"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1992",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "BO"
+    ],
+    "bioregion": [],
     "peoples": [],
     "languages": []
   },
@@ -1235,6 +2222,39 @@
     "languages": []
   },
   {
+    "slug": "focus-on-the-global-south",
+    "name": "Focus on the Global South",
+    "type": "Research",
+    "description": "A Bangkok-based policy institute developing alternatives to neoliberal globalisation, centred on the rights, knowledge, and self-determination of Southern peoples.",
+    "about": "Founded in 1995 at Chulalongkorn University in Bangkok, Focus on the Global South produces critical research and advocacy on trade, food sovereignty, militarism, and development from a perspective that centres Southern communities and their alternatives. Focus has been a persistent voice in WTO and World Bank negotiations, in anti-war movements, and in debates about food and energy systems. It works across Southeast Asia, South Asia, and the Pacific, and is particularly strong on the political economy of post-growth and commons-based development alternatives.",
+    "website": "https://focusweb.org",
+    "location": "Bangkok, Thailand",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "development-alternatives",
+      "food-sovereignty",
+      "global-south",
+      "political-economy"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1995",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "asia",
+    "subregion": "south-eastern-asia",
+    "country": [
+      "TH"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
     "id": 99,
     "slug": "foodprint-nordic",
     "name": "Foodprint Nordic",
@@ -1267,6 +2287,73 @@
     ],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "fundacion-avina",
+    "name": "Fundación Avina",
+    "type": "Network",
+    "description": "A Latin American philanthropic foundation building alliances between civil society, business, and government around democratic innovation, climate action, and just economies.",
+    "about": "Fundación Avina was founded in 1994 and is headquartered in Panama, with offices across Latin America. Over 30 years it has developed a distinctive collaborative model — brokering alliances, co-investing in shared strategies, and supporting social entrepreneurs to scale. Its current focus areas are democratic innovation, climate action, and just and regenerative economy. Avina is particularly strong on the collaborative infrastructure of systemic change: how do actors across sectors actually align around transformative goals? Its experience in Latin America makes it a key practitioner of multi-stakeholder governance at continental scale.",
+    "website": "https://avina.net",
+    "location": "Panama City, Panama / Latin America",
+    "scale": "Continental",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "philanthropy",
+      "latin-america",
+      "democratic-innovation",
+      "climate-action"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1994",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "latin-america",
+    "subregion": "central-america",
+    "country": [
+      "PA"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "fundacion-pachamama-ec",
+    "name": "Fundación Pachamama",
+    "type": "NGO",
+    "description": "Ecuadorian foundation advancing indigenous territorial rights, rights of nature, and Buen Vivir in the Amazonian Sacred Headwaters region.",
+    "about": "Fundación Pachamama is based in Quito, Ecuador, with over two decades of work supporting Amazonian indigenous communities in the protection of their territories from oil, gas, and mining extraction. The foundation works across four strategic areas: forests and territory, forest economies (bioenterprises and ecotourism), human and nature rights, and the Ikiama Nukuri programme. Its legal team won a landmark 2023 Constitutional Court ruling voiding a decree that would have expanded mining activity in indigenous territories. Fundación Pachamama played a pivotal role in establishing rights of nature in Ecuador's 2008 constitution and continues to apply that legal framework to protect Amazonian watersheds.",
+    "website": "https://www.pachamama.org.ec",
+    "location": "Quito, Ecuador",
+    "scale": "national",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "Amazon",
+      "indigenous-rights",
+      "Ecuador",
+      "Buen-Vivir",
+      "extractivism"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "EC"
+    ],
+    "bioregion": [
+      "amazon"
+    ],
+    "peoples": [],
+    "languages": [
+      "es"
+    ]
   },
   {
     "id": 8,
@@ -1408,6 +2495,39 @@
     "bioregion": [],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "gaia-amazonas",
+    "name": "Gaia Amazonas",
+    "type": "NGO",
+    "description": "Colombian foundation supporting indigenous territorial governance in the eastern Amazon through GIS tools, intercultural dialogue, and community capacity-building.",
+    "about": "Gaia Amazonas is a Bogotá-based foundation dedicated to strengthening indigenous autonomy and territorial governance across Colombia's eastern Amazon — over 25 million hectares encompassing the departments of Amazonas, Vaupés, and Guainía. It works with approximately 20 ethnic groups and 14 indigenous territories, providing geographic information systems, strategic communications, and leadership training. A recent milestone is the Gustavo Petro government's formalisation of the first eight Indigenous Territorial Entities (ETIs) in the Colombian Amazon, a constitutional reform Gaia Amazonas accompanied for decades. The foundation also facilitates South–South exchanges connecting Amazonian governance voices globally.",
+    "website": "https://gaiaamazonas.org",
+    "location": "Bogotá, Colombia",
+    "scale": "national",
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "indigenous-governance",
+      "Amazon",
+      "GIS",
+      "territorial-rights",
+      "Colombia"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "CO"
+    ],
+    "bioregion": [
+      "amazon"
+    ],
+    "peoples": [],
+    "languages": [
+      "es"
+    ]
   },
   {
     "id": 48,
@@ -1705,6 +2825,106 @@
     "languages": []
   },
   {
+    "slug": "grain",
+    "name": "GRAIN",
+    "type": "NGO",
+    "description": "International collective defending seed diversity and food sovereignty against corporate control, with deep research and campaign roots across Latin America.",
+    "about": "GRAIN is a small international NGO founded in 1990 that works to support small farmers and social movements in their struggles for community-controlled, biodiversity-based food systems. It has long-standing programs in Latin America, co-producing publications and campaigns with grassroots allies in Mexico, Central America, and the Andes. GRAIN monitors corporate land grabs, seed patents, and trade agreements threatening peasant agriculture, and documents threats to native maize, quinoa, and other crops. Its research feeds directly into advocacy at national legislatures and international forums. GRAIN operates without a traditional hierarchical structure, working through a distributed team and strong movement partnerships.",
+    "website": "https://grain.org",
+    "location": "Barcelona, Spain (Latin America programs)",
+    "scale": "global",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "seed-sovereignty",
+      "food-sovereignty",
+      "biodiversity",
+      "peasant-rights",
+      "corporate-accountability",
+      "land-rights"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "es",
+      "pt",
+      "en",
+      "fr"
+    ]
+  },
+  {
+    "slug": "great-green-wall-initiative",
+    "name": "Great Green Wall Initiative",
+    "type": "Government",
+    "description": "An African Union-led initiative to restore 100 million hectares of degraded land across the Sahel — an 8,000km mosaic of restored landscapes spanning the full width of Africa.",
+    "about": "Launched by the African Union in 2007, the Great Green Wall aims to restore degraded land, fight desertification, and improve food security and climate resilience across 22 countries from Senegal to Djibouti. Its goals include restoring 100 million hectares, sequestering 250 million tons of carbon, and creating 10 million green jobs by 2030. The initiative explicitly links ecological restoration with social stability and is a governance experiment requiring unprecedented coordination across sovereign states around a shared ecosystem. It is also a test of whether global climate finance can actually reach the communities on the frontline of climate disruption.",
+    "website": "https://thegreatgreenwall.org",
+    "location": "Sahel Region, Africa",
+    "scale": "Continental",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "restoration",
+      "desertification",
+      "sahel",
+      "africa",
+      "land-use"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "2007",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "africa",
+    "subregion": null,
+    "country": [],
+    "bioregion": [
+      "Sahel"
+    ],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "green-belt-movement",
+    "name": "Green Belt Movement",
+    "type": "NGO",
+    "description": "A Kenyan environmental NGO founded by Nobel laureate Wangari Maathai, linking tree planting to democratic culture, women's empowerment, and community governance.",
+    "about": "Founded by Wangari Maathai in 1977, the Green Belt Movement began as a grassroots response to environmental degradation — asking women to plant trees to restore degraded land. Over decades it became something far larger: a demonstration that ecological health, democratic governance, and women's empowerment are inseparable. Maathai won the Nobel Peace Prize in 2004. The movement has planted over 51 million trees and continues to work on reforestation, civic education, and the links between ecological and political freedom — a model that influenced environmental and democratic movements worldwide.",
+    "website": "https://greenbeltmovement.org",
+    "location": "Nairobi, Kenya",
+    "scale": "National",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "reforestation",
+      "women",
+      "civic-culture",
+      "africa",
+      "ecological-democracy"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1977",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "africa",
+    "subregion": "eastern-africa",
+    "country": [
+      "KE"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
     "id": 43,
     "slug": "grounded-solutions-network",
     "name": "Grounded Solutions Network",
@@ -1763,6 +2983,105 @@
     "continent": "transnational",
     "subregion": null,
     "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "ibon-international",
+    "name": "IBON International",
+    "type": "Research",
+    "description": "A Philippines-based development organisation building civil society capacity to advance sustainable development and challenge extractive globalisation in international governance.",
+    "about": "IBON International is the international arm of IBON Foundation, established in the Philippines in 1978 as a research and education organisation serving progressive civil society. It holds UN ECOSOC consultative status and works with civil society coalitions worldwide on development assistance, public finance, climate finance, and alternatives to neoliberal globalisation. IBON is particularly active in building Southern civil society capacity to engage in international processes where the voice of poor and marginalised communities is structurally underrepresented — including the UN climate process, the Global South civil society engagement with the OECD, and debates about technology transfer.",
+    "website": "https://iboninternational.org",
+    "location": "Manila, Philippines",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "development-finance",
+      "global-south",
+      "civil-society",
+      "philippines"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1978",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "asia",
+    "subregion": "south-eastern-asia",
+    "country": [
+      "PH"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "iclei-africa",
+    "name": "ICLEI Africa",
+    "type": "Network",
+    "description": "The African regional office of ICLEI – Local Governments for Sustainability, supporting African cities and municipalities in building low-carbon, resilient urban futures.",
+    "about": "ICLEI Africa is the regional node of the global ICLEI network for African municipalities and sub-national governments. It works with cities across the continent to embed climate resilience, sustainable urban planning, and low-emission development into local governance. African cities face accelerating urbanisation, climate risk, and severely constrained resources simultaneously — ICLEI Africa builds peer networks, tools, and political will for local governments to act collectively. It connects municipal action to national and international climate governance frameworks, including the UNFCCC and the African Union's Agenda 2063.",
+    "website": "https://africa.iclei.org",
+    "location": "Cape Town, South Africa",
+    "scale": "Continental",
+    "orientations": [
+      "ASSEMBLY",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "urban-governance",
+      "cities",
+      "climate-resilience",
+      "africa",
+      "local-government"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1995",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "africa",
+    "subregion": "southern-africa",
+    "country": [
+      "ZA"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "icsf",
+    "name": "ICSF — International Collective in Support of Fishworkers",
+    "type": "Network",
+    "description": "An international network defending the rights and livelihoods of small-scale fishing communities and ocean commons against industrial enclosure.",
+    "about": "The International Collective in Support of Fishworkers (ICSF) was founded in 1986 and is based in Chennai, India. It works on the governance of fisheries as a global commons: the rights of small-scale fishing communities, equitable access to coastal and ocean resources, and the threats posed by industrial fishing and aquaculture expansion. ICSF produces policy analysis, supports community advocacy, and connects fishing communities across Asia, Africa, and Latin America with international governance processes — including the FAO's Small-Scale Fisheries Guidelines, which ICSF helped shape over many years of engagement.",
+    "website": "https://icsf.net",
+    "location": "Chennai, India",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "fisheries",
+      "ocean-commons",
+      "coastal-communities",
+      "food-sovereignty"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1986",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "asia",
+    "subregion": "southern-asia",
+    "country": [
+      "IN"
+    ],
     "bioregion": [],
     "peoples": [],
     "languages": []
@@ -1872,6 +3191,78 @@
     "languages": []
   },
   {
+    "slug": "instituto-socioambiental",
+    "name": "Instituto Socioambiental (ISA)",
+    "type": "NGO",
+    "description": "Brazilian institute defending indigenous peoples and traditional communities through research, satellite monitoring, and advocacy across the Amazon and Atlantic Forest.",
+    "about": "Instituto Socioambiental (ISA) was founded in 1994 and is one of Brazil's leading organisations at the intersection of social and environmental rights. It operates across four priority territories — Rio Negro, Xingu, broader Amazônia, and Vale do Ribeira — combining satellite monitoring, legal advocacy, and community capacity-building. ISA publishes flagship platforms including the Socioambiental Map and the Indigenous Peoples in Brazil database, reference tools for researchers, journalists, and government. The organisation engages in policy advocacy to demarcate indigenous territories and prosecute illegal miners and loggers, and is a key voice ahead of COP-30 in Belém.",
+    "website": "https://www.socioambiental.org",
+    "location": "São Paulo, Brazil",
+    "scale": "national",
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "indigenous-rights",
+      "Amazon",
+      "satellite-monitoring",
+      "environmental-law",
+      "Brazil",
+      "deforestation"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "BR"
+    ],
+    "bioregion": [
+      "amazon",
+      "atlantic-forest"
+    ],
+    "peoples": [],
+    "languages": [
+      "pt",
+      "en"
+    ]
+  },
+  {
+    "slug": "ipam-amazonia",
+    "name": "IPAM Amazônia",
+    "type": "Research",
+    "description": "A Brazilian non-profit research and policy institute working on climate science, deforestation, and the governance of the Amazon and Cerrado biomes.",
+    "about": "Founded in 1995 in Belém, the Amazon Environmental Research Institute (IPAM) is one of Brazil's most significant independent research institutions for Amazonian science and policy. It produces scientific knowledge on deforestation, carbon stocks, fire, and land-use change, and translates that knowledge into policy engagement. IPAM works on three axes: low-carbon farming, protected territory governance, and sustainable family production. It makes the scientific and economic case that Amazon protection is compatible with — and necessary for — sustainable development, directly challenging the political economy of deforestation in Brazil.",
+    "website": "https://ipam.org.br",
+    "location": "Brasília, Brazil",
+    "scale": "National",
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "amazon",
+      "deforestation",
+      "climate-science",
+      "brazil",
+      "land-use"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1995",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "BR"
+    ],
+    "bioregion": [
+      "Amazonia"
+    ],
+    "peoples": [],
+    "languages": []
+  },
+  {
     "id": 32,
     "slug": "kate-raworth-doughnut-economics",
     "name": "Kate Raworth / Doughnut Economics",
@@ -1961,6 +3352,38 @@
     "languages": []
   },
   {
+    "slug": "koi-tu-centre-informed-futures",
+    "name": "Koi Tū: The Centre for Informed Futures",
+    "type": "Research",
+    "description": "University of Auckland research centre building public capacity to navigate complex long-term challenges through interdisciplinary futures research and public dialogue.",
+    "about": "Koi Tū: The Centre for Informed Futures is an independent research centre at the University of Auckland, founded by Professor Sir Peter Gluckman. The centre takes an interdisciplinary approach to complex long-term societal challenges — including climate, digital transformation, food systems, and social cohesion — through rigorous research, public engagement, and policy dialogue. Koi Tū (meaning 'stand tall' in te reo Māori) aims to build the public knowledge and institutional capacity needed to navigate complex global transitions. It convenes expert working groups, publishes accessible reports, and engages political leaders, civil society, and communities in forward-looking dialogue. The centre bridges Te Tiriti o Waitangi and Western knowledge frameworks in its work.",
+    "website": "https://informedfutures.org",
+    "location": "Auckland, New Zealand",
+    "scale": "national",
+    "orientations": [
+      "SPACESHIP",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "futures-research",
+      "public-policy",
+      "interdisciplinary",
+      "climate",
+      "digital-governance"
+    ],
+    "continent": "oceania",
+    "subregion": "australia-and-new-zealand",
+    "country": [
+      "NZ"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "mi"
+    ]
+  },
+  {
     "id": 14,
     "slug": "kolektivo",
     "name": "Kolektivo",
@@ -1985,6 +3408,40 @@
     "continent": "transnational",
     "subregion": null,
     "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "la-via-campesina",
+    "name": "La Via Campesina",
+    "type": "Movement",
+    "description": "The international peasant movement — a global alliance of small farmers, landless workers, indigenous peoples, and rural women that coined the concept of food sovereignty.",
+    "about": "La Via Campesina represents an estimated 200 million farmers, landless workers, rural women, and indigenous peoples across 81 countries. Founded in 1993, it coined the concept of food sovereignty — the right of peoples to define their own food and agriculture systems — which has become a foundational principle in international food politics. La Via Campesina campaigns against industrial agriculture, land grabbing, free trade agreements, and GMOs, while promoting agroecology, seed sovereignty, and land reform. It is one of the most significant examples in existence of transnational democratic governance: millions of people across the world coordinating around shared principles without a state.",
+    "website": "https://viacampesina.org",
+    "location": "Harare, Zimbabwe / Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "food-sovereignty",
+      "peasant-rights",
+      "agroecology",
+      "land-reform",
+      "seed-sovereignty"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1993",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [
+      "ZW"
+    ],
     "bioregion": [],
     "peoples": [],
     "languages": []
@@ -2123,6 +3580,40 @@
     "bioregion": [],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "mana-moana",
+    "name": "Mana Moana",
+    "type": "Movement",
+    "description": "Pacific-led environmental justice network weaving Indigenous ecological knowledge, ocean governance, and community sovereignty in Aotearoa and across the Pacific.",
+    "about": "Mana Moana is a Pacific-led environmental justice initiative that weaves together Indigenous ecological knowledge, ocean stewardship, and community-led governance across Aotearoa New Zealand and the wider Pacific. The network works to protect ocean environments and marine biodiversity through community protocols rooted in Pacific cultural values, connecting tikanga Māori, Pasifika customs, and contemporary environmental law. Mana Moana facilitates intergenerational knowledge transfer around ocean health and sustainable fishing, and advocates for Pacific community rights in marine spatial planning and blue economy governance processes. The initiative bridges Pacific diasporic communities in Aotearoa with island communities across Polynesia and Melanesia.",
+    "website": "https://www.manamoana.nz",
+    "location": "Auckland, New Zealand",
+    "scale": "regional",
+    "orientations": [
+      "GARDEN",
+      "MYSTERIES"
+    ],
+    "tags": [
+      "ocean-governance",
+      "indigenous-knowledge",
+      "marine-conservation",
+      "Pacific",
+      "Maori"
+    ],
+    "continent": "oceania",
+    "subregion": "polynesia",
+    "country": [
+      "NZ"
+    ],
+    "bioregion": [],
+    "peoples": [
+      "Maori"
+    ],
+    "languages": [
+      "en",
+      "mi"
+    ]
   },
   {
     "id": 24,
@@ -2293,6 +3784,76 @@
     "languages": []
   },
   {
+    "slug": "mst-brazil",
+    "name": "MST — Movimento dos Trabalhadores Rurais Sem Terra",
+    "type": "Movement",
+    "description": "Brazil's Landless Workers' Movement — one of the largest social movements in the world, organising landless rural families to occupy unused land, build agroecological settlements, and practise food sovereignty.",
+    "about": "The MST (Landless Workers' Movement) was formally founded in 1984 and has grown into one of the world's largest social movements, with hundreds of thousands of families in organised settlements. MST occupies large landholdings not fulfilling their social function under Brazilian law, negotiates land reform, and builds collective communities practising agroecology and food sovereignty. Settlements run their own schools, health systems, and cooperative enterprises — making MST one of the most ambitious experiments in democratic self-governance in the contemporary world. It is a central actor in the global food sovereignty movement and La Via Campesina.",
+    "website": "https://mst.org.br",
+    "location": "São Paulo, Brazil",
+    "scale": "National",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "land-reform",
+      "food-sovereignty",
+      "agroecology",
+      "brazil",
+      "cooperative"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1984",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "BR"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "natural-justice",
+    "name": "Natural Justice: Lawyers for Communities and the Environment",
+    "type": "NGO",
+    "description": "Environmental law organisation using legal advocacy to defend the rights of indigenous peoples and local communities across Africa to their land, knowledge, and environment.",
+    "about": "Natural Justice is a Cape Town-based environmental and human rights law organisation committed to harnessing the law to create healthy and safe living environments for African communities. The organisation works across Burkina Faso, Guinea Conakry, Kenya, Madagascar, Namibia, Nigeria, Senegal, and South Africa to support indigenous and local community participation in decisions affecting their lands and resources. Key programs include the Environmental Lawyers Collective for Africa (ELCA), community protocols for traditional knowledge protection, and advocacy on rights of nature legal frameworks. Natural Justice engages with international environmental law processes and provides technical guidance to governments and communities on climate and environmental governance.",
+    "website": "https://naturaljustice.org",
+    "location": "Cape Town, South Africa",
+    "scale": "continental",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "environmental-law",
+      "rights-of-nature",
+      "indigenous-rights",
+      "land-rights",
+      "climate-justice"
+    ],
+    "continent": "africa",
+    "subregion": "southern-africa",
+    "country": [
+      "ZA",
+      "KE",
+      "NG",
+      "SN",
+      "NA"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "fr"
+    ]
+  },
+  {
     "id": 7,
     "slug": "naturskyddsforeningen",
     "name": "Naturskyddsföreningen",
@@ -2359,6 +3920,37 @@
     "bioregion": [],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "ninti-one",
+    "name": "Ninti One",
+    "type": "Research",
+    "description": "Australian research and development organisation improving lives in remote and arid regions by working alongside Indigenous communities on governance, land management, and livelihoods.",
+    "about": "Ninti One Limited is an Australian not-for-profit research and development organisation that works with Indigenous and non-Indigenous communities, governments, and organisations across remote and arid Australia. The organisation focuses on practical research and implementation of innovations that improve wellbeing, governance, land and natural resource management, economic development, and cultural sustainability in remote regions. Ninti One's work spans education, digital inclusion, and community governance, with a particular emphasis on supporting Indigenous self-determination and community-led decision-making. It operates in some of Australia's most remote regions and works across the Northern Territory, South Australia, Western Australia, and Queensland.",
+    "website": "https://www.nintione.com.au",
+    "location": "Alice Springs, Australia",
+    "scale": "national",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "Indigenous-governance",
+      "remote-communities",
+      "land-management",
+      "community-development",
+      "arid-regions"
+    ],
+    "continent": "oceania",
+    "subregion": "australia-and-new-zealand",
+    "country": [
+      "AU"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
   },
   {
     "id": 105,
@@ -2571,6 +4163,204 @@
     "languages": []
   },
   {
+    "slug": "pachamama-alliance",
+    "name": "Pachamama Alliance",
+    "type": "NGO",
+    "description": "US–Ecuador partnership protecting Achuar rainforest territories and spreading regenerative worldviews through global education programs.",
+    "about": "Pachamama Alliance was born in 1995 after American philanthropists were invited by Achuar leaders to help defend the Ecuadorian Amazon from oil extraction. The organisation works at the intersection of indigenous land rights, ecosystem protection, and consciousness change. In Ecuador's Sacred Headwaters region it funds territorial monitoring, legal support, and community livelihoods. Globally, it runs award-winning online courses and Earth Listening Circles to shift the worldview driving ecological destruction. The alliance holds rights of nature as central to its vision and helped seed that legal concept in Ecuador's 2008 constitution.",
+    "website": "https://www.pachamama.org",
+    "location": "San Francisco, USA / Quito, Ecuador",
+    "scale": "global",
+    "orientations": [
+      "GARDEN",
+      "MYSTERIES"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "Amazon",
+      "indigenous-rights",
+      "consciousness",
+      "Ecuador"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "EC"
+    ],
+    "bioregion": [
+      "amazon"
+    ],
+    "peoples": [
+      "Achuar"
+    ],
+    "languages": [
+      "en",
+      "es"
+    ]
+  },
+  {
+    "slug": "pacific-community-spc",
+    "name": "Pacific Community (SPC)",
+    "type": "Government",
+    "description": "The principal intergovernmental scientific and technical organisation supporting development across the Pacific, providing data, analysis, and policy capacity to 26 Pacific nations and territories.",
+    "about": "The Pacific Community (SPC) was founded in 1947 and is the oldest and most comprehensive intergovernmental organisation in the Pacific. Based in Noumea, it serves 26 Pacific Island countries and territories with scientific and technical expertise across fisheries, public health, geoscience, social development, and ocean governance. SPC manages key Pacific data commons and supports member nations' capacity to participate in international governance processes. For small island states with limited institutional capacity, SPC is often the primary source of technical knowledge needed to govern complex ocean and climate systems. It is the backbone infrastructure of Pacific collective governance.",
+    "website": "https://spc.int",
+    "location": "Noumea, New Caledonia / Pacific Region",
+    "scale": "Regional",
+    "orientations": [
+      "ASSEMBLY",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "pacific",
+      "fisheries",
+      "ocean-governance",
+      "data",
+      "small-island-states"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1947",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "oceania",
+    "subregion": "melanesia",
+    "country": [
+      "NC"
+    ],
+    "bioregion": [
+      "Pacific Islands"
+    ],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "pacific-islanders-in-communications",
+    "name": "Pacific Islanders in Communications (PIC)",
+    "type": "NGO",
+    "description": "Honolulu-based media organisation supporting Pacific Islander storytelling through public media funding, training, and distribution across Oceania and the US.",
+    "about": "Pacific Islanders in Communications (PIC) is a national nonprofit media organisation based in Honolulu, Hawai'i, dedicated to supporting and developing Pacific Islander content and voices in the public media landscape. Founded in 1991, PIC funds documentary films and media projects by and about Pacific Islander peoples, distributes Pacific stories through public broadcasting and digital platforms, and provides professional development for Pacific media makers. PIC's work amplifies indigenous Pacific narratives, cultural knowledge, and language revitalisation. It builds media literacy and storytelling capacity within Pacific communities in Hawai'i, the US-affiliated Pacific Islands, and across Oceania, keeping Pacific knowledge and governance traditions visible globally.",
+    "website": "https://www.piccom.org",
+    "location": "Honolulu, Hawaii, USA",
+    "scale": "regional",
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "Pacific-media",
+      "indigenous-storytelling",
+      "cultural-sovereignty",
+      "documentary",
+      "language-revitalisation"
+    ],
+    "continent": "oceania",
+    "subregion": "polynesia",
+    "country": [
+      "US"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
+  },
+  {
+    "slug": "pacific-islands-development-forum",
+    "name": "Pacific Islands Development Forum (PIDF)",
+    "type": "Network",
+    "description": "Suva-based intergovernmental and multi-stakeholder forum championing green and inclusive development, climate action, and Blue Pacific identity.",
+    "about": "The Pacific Islands Development Forum (PIDF) is a multi-stakeholder regional body founded in 2013 and headquartered in Suva, Fiji. It brings together Pacific Island heads of state and government, civil society, the private sector, and development partners to advance the Green Pacific development agenda — an alternative model centred on ecological sustainability, inclusive growth, and Pacific cultural values. PIDF has been a key advocate for ambitious climate action, small island developing states' rights in international negotiations, and the Blue Pacific concept linking ocean governance to development and sovereignty. The forum hosts annual summits and thematic dialogues on climate, oceans, food systems, and digital governance.",
+    "website": "https://www.pidf.int",
+    "location": "Suva, Fiji",
+    "scale": "regional",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "Pacific-governance",
+      "climate-action",
+      "Blue-Pacific",
+      "SIDS",
+      "multi-stakeholder"
+    ],
+    "continent": "oceania",
+    "subregion": "melanesia",
+    "country": [
+      "FJ"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
+  },
+  {
+    "slug": "pacific-islands-roundtable-nature-conservation",
+    "name": "Pacific Islands Roundtable for Nature Conservation (PIRT)",
+    "type": "Network",
+    "description": "Regional partnership of Pacific environment ministries and NGOs coordinating nature conservation policy, biodiversity planning, and conservation financing across the Pacific.",
+    "about": "The Pacific Islands Roundtable for Nature Conservation (PIRT) is a collaborative regional platform bringing together Pacific Island governments, national NGOs, and regional conservation organisations to strengthen biodiversity conservation and sustainable development. PIRT facilitates knowledge sharing, capacity building, and policy coordination on topics including invasive species management, protected areas, biodiversity finance, and alignment with global frameworks such as the Kunming-Montreal Global Biodiversity Framework. The Roundtable supports national governments in developing biodiversity strategies and action plans and connects Pacific voices to international conservation negotiations. Secretariat functions are hosted by IUCN Oceania.",
+    "website": "https://iucn.org/our-union/commissions/group/iucn-ssc-pacific-islands-roundtable-nature-conservation",
+    "location": "Suva, Fiji",
+    "scale": "regional",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "biodiversity",
+      "conservation",
+      "Pacific",
+      "protected-areas",
+      "governance"
+    ],
+    "continent": "oceania",
+    "subregion": "melanesia",
+    "country": [
+      "FJ"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
+  },
+  {
+    "slug": "pan-african-climate-justice-alliance",
+    "name": "Pan African Climate Justice Alliance",
+    "type": "Network",
+    "description": "A consortium of over 2,000 civil society organisations across 54 African countries advancing climate justice from a people-centred, rights-based perspective.",
+    "about": "The Pan African Climate Justice Alliance (PACJA) is one of the largest civil society coalitions on the continent, bringing together grassroots groups, faith organisations, farmers, pastoralists, and NGOs around a shared demand for climate justice. Founded in 2008 in Johannesburg, PACJA is the principal African voice in international climate negotiations, insisting that communities least responsible for emissions must not bear the cost of adaptation. Its campaigns press both African governments and wealthy nations on finance, loss and damage, and the right to a just transition.",
+    "website": "https://pacja.org",
+    "location": "Johannesburg, South Africa / Pan-African",
+    "scale": "Continental",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "climate-justice",
+      "civil-society",
+      "africa",
+      "loss-and-damage"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "2008",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "africa",
+    "subregion": "southern-africa",
+    "country": [
+      "ZA"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
     "id": 53,
     "slug": "participatory-budgeting-project",
     "name": "Participatory Budgeting Project",
@@ -2628,6 +4418,38 @@
     "languages": []
   },
   {
+    "slug": "pdis-taiwan",
+    "name": "Public Digital Innovation Space (PDIS)",
+    "type": "Government",
+    "description": "Taiwan's government civic-tech unit pioneering open participation, collaborative policymaking, and digital deliberation — including the vTaiwan platform.",
+    "about": "The Public Digital Innovation Space (PDIS) is a unit within Taiwan's Executive Yuan that incubates public digital innovation and optimises government services through design thinking and collaborative engagement. PDIS runs vTaiwan, a digital deliberation platform that uses tools like Pol.is to crowdsource public opinion and build consensus on policy issues, enabling thousands of citizens to participate in governance processes. PDIS connects the public sector with civil society communities of practice, fosters open government principles, and is closely associated with former Digital Minister Audrey Tang. Its work represents one of Asia's most significant experiments in technology-enabled participatory governance.",
+    "website": "https://pdis.nat.gov.tw/en/",
+    "location": "Taipei, Taiwan",
+    "scale": "national",
+    "orientations": [
+      "ASSEMBLY",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "civic-tech",
+      "deliberative-democracy",
+      "open-government",
+      "digital-participation",
+      "vtaiwan"
+    ],
+    "continent": "asia",
+    "subregion": "eastern-asia",
+    "country": [
+      "TW"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "zh",
+      "en"
+    ]
+  },
+  {
     "id": 69,
     "slug": "people-powered",
     "name": "People Powered",
@@ -2659,6 +4481,147 @@
     "subregion": null,
     "country": [],
     "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "peoples-archive-rural-india",
+    "name": "People's Archive of Rural India (PARI)",
+    "type": "Other",
+    "description": "Multilingual journalism and knowledge commons documenting the lives, livelihoods, arts, and cultures of rural India across 15 languages.",
+    "about": "The People's Archive of Rural India (PARI) is a living digital repository dedicated to the everyday lives of rural India's 833 million people, who speak close to 800 languages and practise millions of livelihoods, arts, and traditions. PARI publishes journalism, photography, video, and documentary work in 15 Indian languages, making it one of the world's largest multilingual journalistic endeavours. The archive also hosts a free digital library of reports and rare books. PARI operates a network of Fellows embedded across India's roughly 100 regions, covering communities ignored by mainstream media. Through ground-level reporting, PARI functions as both a knowledge commons and a platform for rural voices in national and global governance conversations.",
+    "website": "https://ruralindiaonline.org",
+    "location": "India",
+    "scale": "national",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "knowledge-commons",
+      "journalism",
+      "rural",
+      "multilingual",
+      "indigenous-knowledge"
+    ],
+    "continent": "asia",
+    "subregion": "southern-asia",
+    "country": [
+      "IN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "hi",
+      "ta",
+      "te",
+      "ml",
+      "mr",
+      "bn",
+      "gu",
+      "pa",
+      "ur",
+      "or",
+      "kn",
+      "as"
+    ]
+  },
+  {
+    "slug": "per-capita-australia",
+    "name": "Per Capita Australia",
+    "type": "Research",
+    "description": "Independent progressive Australian think-tank advancing policy research on inequality, public services, climate, and democratic renewal.",
+    "about": "Per Capita is an independent, progressive Australian think-tank dedicated to renewing Australia's social contract through research and policy advocacy. Founded in 2007, the organisation produces evidence-based policy work on economic inequality, public investment, climate and energy transition, housing, aged care, and democratic reform. Per Capita engages policymakers, civil society, and the media to build public support for progressive policy change. It regularly publishes major reports on the wellbeing of ordinary Australians and the adequacy of democratic and social institutions. Per Capita is notable for its focus on democratic renewal and the conditions for participatory governance in a polarised era.",
+    "website": "https://percapita.org.au",
+    "location": "Melbourne, Australia",
+    "scale": "national",
+    "orientations": [
+      "ASSEMBLY",
+      "SPACESHIP"
+    ],
+    "tags": [
+      "policy-research",
+      "inequality",
+      "democratic-renewal",
+      "climate-policy",
+      "public-services"
+    ],
+    "continent": "oceania",
+    "subregion": "australia-and-new-zealand",
+    "country": [
+      "AU"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en"
+    ]
+  },
+  {
+    "slug": "philippine-open-government-partnership",
+    "name": "Philippine Open Government Partnership (PH-OGP)",
+    "type": "Government",
+    "description": "Philippines' national open government initiative institutionalising transparent budgeting, civic participation, and government-civil society dialogue.",
+    "about": "The Philippine Open Government Partnership (PH-OGP) is the Philippines' national platform for implementing OGP commitments, operating under the Department of Budget and Management. As a founding member of the global OGP since 2011, the Philippines has pioneered mechanisms including Dagyaw Regional Townhall Sessions, which institutionalise regional civic deliberation on budgetary and policy matters. PH-OGP serves as the main consultation platform of the Cabinet's Participatory Governance Cluster, bridging government and citizens through active public engagement. Recent commitments include budget transparency, CSO participation in local governance, and data literacy programmes.",
+    "website": "https://ogp.dbm.gov.ph",
+    "location": "Manila, Philippines",
+    "scale": "national",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "open-government",
+      "deliberative-democracy",
+      "budget-transparency",
+      "civic-participation",
+      "governance"
+    ],
+    "continent": "asia",
+    "subregion": "south-eastern-asia",
+    "country": [
+      "PH"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "fil"
+    ]
+  },
+  {
+    "slug": "pican",
+    "name": "PICAN — Pacific Islands Climate Action Network",
+    "type": "Network",
+    "description": "The regional civil society alliance of Pacific Island organisations advocating for climate justice and ambitious global action in international negotiations.",
+    "about": "The Pacific Islands Climate Action Network (PICAN) brings together over 190 civil society organisations across Pacific Island countries to amplify the Pacific voice in global climate governance. Established in 2013 and part of Climate Action Network International, PICAN coordinates national civil society nodes across Fiji, Samoa, Vanuatu, and beyond. The Pacific Islands are among the most vulnerable places on Earth to sea-level rise and climate disruption — PICAN turns that frontline experience into political advocacy, demanding loss and damage finance, rapid global decarbonisation, and recognition of climate-driven human rights. The movement's moral authority in climate negotiations is unmatched.",
+    "website": "https://pican.org",
+    "location": "Suva, Fiji / Pacific Region",
+    "scale": "Regional",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "climate-justice",
+      "pacific",
+      "sea-level-rise",
+      "loss-and-damage",
+      "small-island-states"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "2013",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "oceania",
+    "subregion": "melanesia",
+    "country": [
+      "FJ"
+    ],
+    "bioregion": [
+      "Pacific Islands"
+    ],
     "peoples": [],
     "languages": []
   },
@@ -2782,6 +4745,37 @@
     "bioregion": [],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "prakriti-foundation",
+    "name": "Prakriti Foundation",
+    "type": "NGO",
+    "description": "Chennai-based arts foundation curating performing arts, literature, and heritage festivals at the intersection of ecology, culture, and place-based community.",
+    "about": "Prakriti Foundation is a Chennai-based arts and culture NGO founded in 1998 by Ranvir Shah. The foundation curates and produces performing arts festivals and cultural events across theatre, contemporary dance, poetry, sacred music, and heritage. Prakriti believes in collaborating with artists and community to present unique and culturally resonant initiatives. Its programmes include major multi-disciplinary festivals that bring together artists, scholars, researchers, critics, poets, and filmmakers in serious dialogue with the arts. The foundation engages questions of place, cultural ecology, and the relationship between creative practice and living traditions.",
+    "website": "https://prakritifoundation.com",
+    "location": "Chennai, India",
+    "scale": "national",
+    "orientations": [
+      "MYSTERIES"
+    ],
+    "tags": [
+      "performing-arts",
+      "theatre",
+      "dance",
+      "poetry",
+      "cultural-ecology"
+    ],
+    "continent": "asia",
+    "subregion": "southern-asia",
+    "country": [
+      "IN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "ta"
+    ]
   },
   {
     "id": 31,
@@ -2978,6 +4972,84 @@
     "bioregion": [],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "recoftc",
+    "name": "RECOFTC – The Center for People and Forests",
+    "type": "NGO",
+    "description": "Bangkok-based centre advancing community forestry and social forestry rights across seven Asian countries through training, advocacy, and landscape governance.",
+    "about": "RECOFTC (Regional Community Forestry Training Center for Asia and the Pacific) was established in 1987 in Bangkok and has grown into an international organisation operating across Cambodia, Indonesia, Lao PDR, Myanmar, Nepal, Thailand, and Vietnam. The centre takes a long-term, landscape-based approach to supporting local communities in securing land and resource rights, halting deforestation, and fostering gender equity. Core focus areas include climate change adaptation, community governance and rights, sustainable livelihoods, and gender equality in forest management. In 2024, RECOFTC reached approximately 249,000 people across 329,000 hectares.",
+    "website": "https://www.recoftc.org",
+    "location": "Bangkok, Thailand",
+    "scale": "regional",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "community-forestry",
+      "land-rights",
+      "social-forestry",
+      "climate-adaptation",
+      "gender"
+    ],
+    "continent": "asia",
+    "subregion": "south-eastern-asia",
+    "country": [
+      "TH",
+      "KH",
+      "ID",
+      "LA",
+      "MM",
+      "NP",
+      "VN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "th",
+      "km",
+      "lo",
+      "my",
+      "ne",
+      "vi",
+      "id"
+    ]
+  },
+  {
+    "slug": "red-muqui",
+    "name": "Red Muqui",
+    "type": "Network",
+    "description": "Peruvian network defending community rights and sustainable development against large-scale mining, with regional nodes across northern, central, and southern Peru.",
+    "about": "Red Muqui is a Peruvian civil society network founded to defend the rights of communities affected by extractive mining and promote sustainable development alternatives. Operating from Lima with regional nodes in Muqui Norte, Muqui Centro, and Muqui Sur, it provides legal accompaniment, environmental monitoring, and policy advocacy to communities facing water contamination, land displacement, and criminalisation of protest. The network documents conflicts in key mining zones including Moquegua, Puno, and La Libertad and publishes regular research on socio-environmental impacts. Red Muqui engages in national policy processes to shift Peru's extractivist model.",
+    "website": "https://www.muqui.org",
+    "location": "Lima, Peru",
+    "scale": "national",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "mining",
+      "community-rights",
+      "extractivism",
+      "water",
+      "Peru",
+      "environmental-justice"
+    ],
+    "continent": "latin-america",
+    "subregion": "south-america",
+    "country": [
+      "PE"
+    ],
+    "bioregion": [
+      "andes"
+    ],
+    "peoples": [],
+    "languages": [
+      "es"
+    ]
   },
   {
     "id": 82,
@@ -3197,6 +5269,39 @@
     "languages": []
   },
   {
+    "id": 3,
+    "slug": "rth",
+    "name": "ÆRTH",
+    "type": "Company",
+    "description": "Planetary AI digital twin using blockchain and remote sensing.",
+    "about": "ÆRTH is building a living digital twin of Earth that combines satellite remote sensing, blockchain verification, and AI to model planetary systems in near-real time. As one of the most ambitious SPACESHIP projects in the ecosystem, it embodies the conviction that governing the Earth well requires seeing it whole — not as a collection of national datasets, but as a single interconnected system. If it delivers on its promise, ÆRTH could become foundational infrastructure for any serious planetary governance architecture.",
+    "website": "https://www.aerth.live",
+    "location": "Global",
+    "scale": "Global",
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "tags": [
+      "digital-twins-earth-modelling",
+      "enterprise",
+      "nature-based",
+      "ecological-governance",
+      "blockchain",
+      "ai",
+      "global",
+      "digital-twin"
+    ],
+    "image": "/images/actors/aerth-reef.jpg",
+    "imageAlt": "Underwater reef ecosystem monitored by ÆRTH platform",
+    "continent": "transnational",
+    "subregion": null,
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
     "id": 91,
     "slug": "saami-council",
     "name": "Saami Council",
@@ -3233,6 +5338,139 @@
     "peoples": [
       "Sami"
     ],
+    "languages": []
+  },
+  {
+    "slug": "satoyama-initiative",
+    "name": "Satoyama Initiative (IPSI)",
+    "type": "Network",
+    "description": "A UNU-led global partnership of nearly 300 organisations working on the governance and stewardship of socio-ecological production landscapes and seascapes.",
+    "about": "The International Partnership for the Satoyama Initiative (IPSI) is co-organised by the UN University Institute for the Advanced Study of Sustainability (UNU-IAS) and the CBD Secretariat. It draws on the Japanese concept of satoyama — the human-managed landscape between wilderness and cultivation — to describe a broader global category: production landscapes jointly shaped by ecological processes and local cultural practice. IPSI brings together nearly 300 organisations to study, restore, and govern these landscapes, which range from traditional agroforestry systems to coastal fishing commons. It connects landscape-level practice with biodiversity governance at the CBD, grounding global policy in local knowledge.",
+    "website": "https://satoyamainitiative.org",
+    "location": "Tokyo, Japan / Global",
+    "scale": "Global",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "landscape-governance",
+      "biodiversity",
+      "agroecology",
+      "traditional-knowledge",
+      "commons"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "2010",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "asia",
+    "subregion": "eastern-asia",
+    "country": [
+      "JP"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "searice",
+    "name": "SEARICE – Southeast Asia Regional Initiatives for Community Empowerment",
+    "type": "NGO",
+    "description": "Philippines-based NGO empowering farming communities through seed sovereignty, agroecology policy advocacy, and farmers' rights across Southeast Asia.",
+    "about": "SEARICE (Southeast Asia Regional Initiatives for Community Empowerment) is based in Quezon City, Philippines, and works to empower rural farming communities toward the realisation of farmers' rights and sustainable agri-food systems. The organisation focuses on seed work and plant genetic resource conservation, policy advocacy for agroecology, and youth participation in agriculture. SEARICE supports farmer-led initiatives and engages in regional and international policy processes around seed laws and food sovereignty. With decades of experience in community-based plant genetic resource management, SEARICE is a leading voice for food sovereignty in Southeast Asia, working across the Philippines, Vietnam, Laos, and neighbouring countries.",
+    "website": "https://searice.org.ph",
+    "location": "Quezon City, Philippines",
+    "scale": "regional",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "seed-sovereignty",
+      "agroecology",
+      "food-sovereignty",
+      "farmers-rights",
+      "plant-genetic-resources"
+    ],
+    "continent": "asia",
+    "subregion": "south-eastern-asia",
+    "country": [
+      "PH",
+      "VN",
+      "LA"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "fil"
+    ]
+  },
+  {
+    "slug": "sewa-india",
+    "name": "SEWA — Self Employed Women's Association",
+    "type": "Movement",
+    "description": "One of India's largest trade unions, organising millions of informal-sector women workers into cooperative enterprises and a self-built welfare system.",
+    "about": "Founded in 1972 in Ahmedabad by Ela Bhatt, SEWA (Self Employed Women's Association) is a trade union and cooperative movement representing over 2.5 million informal-sector women workers — street vendors, home-based workers, agricultural labourers, and waste pickers. SEWA has built its own bank, healthcare system, childcare, and social security for workers excluded from formal labour protections. It demonstrates a core principle of the planetary governance movement: governance need not wait for the state. The women of SEWA have collectively constructed welfare institutions, cooperative enterprises, and democratic representation from the ground up.",
+    "website": "https://sewa.org",
+    "location": "Ahmedabad, India",
+    "scale": "National",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "labour",
+      "cooperatives",
+      "women",
+      "india",
+      "informal-economy"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1972",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "asia",
+    "subregion": "southern-asia",
+    "country": [
+      "IN"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
+    "slug": "shack-slum-dwellers-international",
+    "name": "Shack/Slum Dwellers International",
+    "type": "Network",
+    "description": "A global network of community-based federations of the urban poor, rooted in self-organising practices developed by slum and shack dwellers across the Global South.",
+    "about": "Shack/Slum Dwellers International (SDI) links federations of the urban poor across more than 30 countries in Africa, Asia, and Latin America. Its members — largely women — organise around savings, enumeration of their communities, and negotiation with city governments for land security and basic services. SDI represents a form of democratic governance from below: residents map their own settlements, produce their own data, and negotiate directly with the state. It is one of the most significant models of community-driven urban governance in the world.",
+    "website": "https://sdinet.org",
+    "location": "Cape Town, South Africa / Global",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "urban-governance",
+      "housing",
+      "community-organising",
+      "global-south"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1996",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "africa",
+    "subregion": "southern-africa",
+    "country": [
+      "ZA"
+    ],
+    "bioregion": [],
+    "peoples": [],
     "languages": []
   },
   {
@@ -3428,6 +5666,42 @@
     "languages": []
   },
   {
+    "slug": "sprep",
+    "name": "SPREP — Secretariat of the Pacific Regional Environment Programme",
+    "type": "Government",
+    "description": "The intergovernmental body responsible for protecting and managing the environment and natural resources of the Pacific region on behalf of 26 member nations and territories.",
+    "about": "SPREP (Secretariat of the Pacific Regional Environment Programme) was established in 1982 and is based in Apia, Samoa. It serves 26 member nations across climate change adaptation, biodiversity conservation, waste management, and ocean governance. SPREP coordinates the Pacific's engagement with major multilateral environmental agreements including the UNFCCC, CBD, and Basel Convention. For a region of extraordinary ecological diversity and fragility — including some of the world's most important ocean and reef ecosystems — SPREP represents the governance infrastructure through which Pacific peoples protect their shared natural inheritance.",
+    "website": "https://sprep.org",
+    "location": "Apia, Samoa",
+    "scale": "Regional",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "pacific",
+      "biodiversity",
+      "ocean",
+      "climate-adaptation",
+      "small-island-states"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1982",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "oceania",
+    "subregion": "polynesia",
+    "country": [
+      "WS"
+    ],
+    "bioregion": [
+      "Pacific Islands"
+    ],
+    "peoples": [],
+    "languages": []
+  },
+  {
     "id": 56,
     "slug": "steward-ownership",
     "name": "Steward Ownership",
@@ -3529,6 +5803,38 @@
     "bioregion": [],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "te-ipukarea-society",
+    "name": "Te Ipukarea Society",
+    "type": "NGO",
+    "description": "Cook Islands' leading environmental NGO working on biodiversity conservation, marine protected areas, and climate resilience through community-based approaches.",
+    "about": "Te Ipukarea Society (TIS) is the Cook Islands' primary environmental organisation, founded to promote sustainable development and the conservation of the country's unique biodiversity. The society focuses on terrestrial and marine conservation, invasive species management, seabird protection, and community-based natural resource management. TIS works closely with communities on the outer islands to implement biodiversity conservation and climate resilience projects. The organisation has been a key voice in establishing marine protected areas in the Cook Islands and represents Pacific civil society at international biodiversity and climate forums. Its name means 'The Homeland Society', reflecting deep cultural ties to place and ocean.",
+    "website": "https://www.nature.org.ck",
+    "location": "Rarotonga, Cook Islands",
+    "scale": "national",
+    "orientations": [
+      "GARDEN"
+    ],
+    "tags": [
+      "biodiversity",
+      "marine-conservation",
+      "invasive-species",
+      "community-conservation",
+      "Pacific"
+    ],
+    "continent": "oceania",
+    "subregion": "polynesia",
+    "country": [
+      "CK"
+    ],
+    "bioregion": [],
+    "peoples": [
+      "Cook Islands Maori"
+    ],
+    "languages": [
+      "en"
+    ]
   },
   {
     "id": 21,
@@ -3638,6 +5944,39 @@
     "languages": []
   },
   {
+    "slug": "third-world-network",
+    "name": "Third World Network",
+    "type": "Network",
+    "description": "An international research and advocacy network based in Penang, producing critical analysis of trade, development, and environmental policy from the perspective of the Global South.",
+    "about": "Third World Network (TWN) is one of the most influential independent voices in global economic and environmental governance. Founded in 1984 in Penang, it publishes analysis of WTO negotiations, climate agreements, biodiversity policy, and food systems from a perspective explicitly grounded in the rights and interests of developing countries. TWN's critical engagement with international institutions has shaped Southern governments' negotiating positions across decades of multilateral processes — from GATT/WTO to the CBD to the UNFCCC. It remains essential reading for anyone trying to understand why global governance so often fails the people most affected.",
+    "website": "https://twn.my",
+    "location": "Penang, Malaysia",
+    "scale": "Global",
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "tags": [
+      "trade-policy",
+      "global-south",
+      "development",
+      "multilateralism"
+    ],
+    "image": "",
+    "imageAlt": "",
+    "founded": "1984",
+    "lastActive": "",
+    "fundingDisclosure": "",
+    "continent": "asia",
+    "subregion": "south-eastern-asia",
+    "country": [
+      "MY"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": []
+  },
+  {
     "id": 51,
     "slug": "toucan-protocol",
     "name": "Toucan Protocol",
@@ -3739,6 +6078,42 @@
     "languages": []
   },
   {
+    "slug": "ujamaa-community-resource-team",
+    "name": "Ujamaa Community Resource Team",
+    "type": "NGO",
+    "description": "Tanzanian NGO securing land and resource rights for indigenous pastoralist and hunter-gatherer communities in northern Tanzania, with over 1.7 million hectares protected.",
+    "about": "Founded in 1998 and based in Arusha, Tanzania, the Ujamaa Community Resource Team (UCRT) strengthens the capacity of indigenous pastoralist, agro-pastoralist, and hunter-gatherer communities to secure rights to land and natural resources. UCRT works in roughly 60 communities across northern Tanzania using legal instruments and community processes to establish tenure security. The organisation has collectively secured over 1.7 million hectares of communal land and received the 2024 Natural Climate Solutions Ashden Award and was named a 2024 Earthshot Prize Portfolio Innovator. UCRT's work integrates land rights, natural resource management, and community governance.",
+    "website": "https://www.ujamaa-crt.or.tz",
+    "location": "Arusha, Tanzania",
+    "scale": "national",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "land-rights",
+      "indigenous-rights",
+      "pastoralism",
+      "communal-tenure",
+      "natural-resource-management"
+    ],
+    "continent": "africa",
+    "subregion": "eastern-africa",
+    "country": [
+      "TZ"
+    ],
+    "bioregion": [],
+    "peoples": [
+      "Hadzabe",
+      "Akie",
+      "Maasai"
+    ],
+    "languages": [
+      "en",
+      "sw"
+    ]
+  },
+  {
     "id": 33,
     "slug": "viable-cities",
     "name": "Viable Cities",
@@ -3772,6 +6147,38 @@
     ],
     "peoples": [],
     "languages": []
+  },
+  {
+    "slug": "wangari-maathai-institute",
+    "name": "Wangari Maathai Institute for Peace and Environmental Studies",
+    "type": "Research",
+    "description": "University of Nairobi institute offering multi-disciplinary training and research in environmental governance, land restoration, and cultures of peace across East Africa.",
+    "about": "The Wangari Maathai Institute for Peace and Environmental Studies (WMI) is a centre of excellence at the University of Nairobi, named in honour of the late Nobel laureate and Green Belt Movement founder. WMI provides holistic, multi-disciplinary training and research in environmental governance, management, and peace. The Institute is registered as a centre for Environmental Impact Assessment training and runs the Landscape Restoration and Tree Growing (LANSRET) programme across Kenya. Academic offerings include a Master of Science in Environmental Governance. WMI links environmental stewardship, peace-building, and community practice, embodying Wangari Maathai's integrated vision.",
+    "website": "https://wmi.uonbi.ac.ke",
+    "location": "Nairobi, Kenya",
+    "scale": "regional",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "environmental-governance",
+      "land-restoration",
+      "peace",
+      "agroforestry",
+      "higher-education"
+    ],
+    "continent": "africa",
+    "subregion": "eastern-africa",
+    "country": [
+      "KE"
+    ],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "sw"
+    ]
   },
   {
     "id": 93,
@@ -3841,6 +6248,36 @@
     "languages": []
   },
   {
+    "slug": "womin-african-alliance",
+    "name": "WoMin African Alliance",
+    "type": "Network",
+    "description": "Pan-African ecofeminist alliance partnering with women and communities on the frontlines of resistance to extractivism and building post-extractivist alternatives.",
+    "about": "WoMin African Alliance is a pan-African ecofeminist organization that supports and amplifies the voices of African women — particularly peasant and working-class communities — impacted by large-scale mining and extractive industries. The alliance runs programs including resistance to green extractivism, the Right to Say NO campaign, debt and reparations advocacy, development alternatives, and ecofeminist popular education. WoMin conducts research, supports community organizing, and coordinates campaigns across multiple African countries including Burkina Faso and South Africa. The organization advocates for an African post-extractivist, ecologically just, and women-centred development model.",
+    "website": "https://womin.africa",
+    "location": "",
+    "scale": "continental",
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "tags": [
+      "ecofeminism",
+      "extractivism",
+      "gender-justice",
+      "land-rights",
+      "environmental-justice"
+    ],
+    "continent": "africa",
+    "subregion": "sub-saharan-africa",
+    "country": [],
+    "bioregion": [],
+    "peoples": [],
+    "languages": [
+      "en",
+      "fr"
+    ]
+  },
+  {
     "id": 60,
     "slug": "world-game-workshop",
     "name": "World Game Workshop",
@@ -3899,753 +6336,6 @@
     "continent": "transnational",
     "subregion": null,
     "country": [],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "african-climate-foundation",
-    "name": "African Climate Foundation",
-    "type": "Research",
-    "description": "An African-led foundation working at the nexus of climate change and developmental justice across the continent.",
-    "about": "The African Climate Foundation (ACF) is the first African-led strategic grant-maker and think-do tank working at the nexus of climate change and developmental justice. Founded in 2020 and based in Cape Town, ACF funds African-led solutions to the climate crisis and pushes for ambitious climate policy on the continent. It brings African voices and priorities into global climate governance conversations — particularly around just energy transition, climate finance access, and continental resilience — insisting that African communities must set the terms of their own transition.",
-    "website": "https://africanclimatefoundation.org",
-    "location": "Cape Town, South Africa",
-    "scale": "Continental",
-    "orientations": [
-      "ASSEMBLY",
-      "GARDEN"
-    ],
-    "tags": [
-      "climate-policy",
-      "climate-finance",
-      "just-transition",
-      "africa"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "2020",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "africa",
-    "subregion": "southern-africa",
-    "country": [
-      "ZA"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "pan-african-climate-justice-alliance",
-    "name": "Pan African Climate Justice Alliance",
-    "type": "Network",
-    "description": "A consortium of over 2,000 civil society organisations across 54 African countries advancing climate justice from a people-centred, rights-based perspective.",
-    "about": "The Pan African Climate Justice Alliance (PACJA) is one of the largest civil society coalitions on the continent, bringing together grassroots groups, faith organisations, farmers, pastoralists, and NGOs around a shared demand for climate justice. Founded in 2008 in Johannesburg, PACJA is the principal African voice in international climate negotiations, insisting that communities least responsible for emissions must not bear the cost of adaptation. Its campaigns press both African governments and wealthy nations on finance, loss and damage, and the right to a just transition.",
-    "website": "https://pacja.org",
-    "location": "Johannesburg, South Africa / Pan-African",
-    "scale": "Continental",
-    "orientations": [
-      "ASSEMBLY",
-      "GARDEN"
-    ],
-    "tags": [
-      "climate-justice",
-      "civil-society",
-      "africa",
-      "loss-and-damage"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "2008",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "africa",
-    "subregion": "southern-africa",
-    "country": [
-      "ZA"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "shack-slum-dwellers-international",
-    "name": "Shack/Slum Dwellers International",
-    "type": "Network",
-    "description": "A global network of community-based federations of the urban poor, rooted in self-organising practices developed by slum and shack dwellers across the Global South.",
-    "about": "Shack/Slum Dwellers International (SDI) links federations of the urban poor across more than 30 countries in Africa, Asia, and Latin America. Its members — largely women — organise around savings, enumeration of their communities, and negotiation with city governments for land security and basic services. SDI represents a form of democratic governance from below: residents map their own settlements, produce their own data, and negotiate directly with the state. It is one of the most significant models of community-driven urban governance in the world.",
-    "website": "https://sdinet.org",
-    "location": "Cape Town, South Africa / Global",
-    "scale": "Global",
-    "orientations": [
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "urban-governance",
-      "housing",
-      "community-organising",
-      "global-south"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1996",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "africa",
-    "subregion": "southern-africa",
-    "country": [
-      "ZA"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "african-biodiversity-network",
-    "name": "African Biodiversity Network",
-    "type": "Network",
-    "description": "A Pan-African network defending seed sovereignty, indigenous food systems, and community rights against industrial agriculture and extractivism.",
-    "about": "The African Biodiversity Network (ABN) brings together individuals and organisations across 19 African countries to resist the erosion of agricultural biodiversity and the knowledge systems that sustain it. ABN works on seed sovereignty, opposition to GMOs in African food systems, agroecological alternatives to industrial farming, and the rights of smallholder farmers and pastoralists. It sits at the intersection of ecology and governance: who controls seeds controls food systems, and ABN insists that control belongs with communities, not corporations or states.",
-    "website": "https://africanbiodiversity.org",
-    "location": "Thika, Kenya / Pan-African",
-    "scale": "Continental",
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "seed-sovereignty",
-      "agroecology",
-      "food-sovereignty",
-      "africa",
-      "indigenous-knowledge"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1999",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "africa",
-    "subregion": "eastern-africa",
-    "country": [
-      "KE"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "green-belt-movement",
-    "name": "Green Belt Movement",
-    "type": "NGO",
-    "description": "A Kenyan environmental NGO founded by Nobel laureate Wangari Maathai, linking tree planting to democratic culture, women's empowerment, and community governance.",
-    "about": "Founded by Wangari Maathai in 1977, the Green Belt Movement began as a grassroots response to environmental degradation — asking women to plant trees to restore degraded land. Over decades it became something far larger: a demonstration that ecological health, democratic governance, and women's empowerment are inseparable. Maathai won the Nobel Peace Prize in 2004. The movement has planted over 51 million trees and continues to work on reforestation, civic education, and the links between ecological and political freedom — a model that influenced environmental and democratic movements worldwide.",
-    "website": "https://greenbeltmovement.org",
-    "location": "Nairobi, Kenya",
-    "scale": "National",
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "reforestation",
-      "women",
-      "civic-culture",
-      "africa",
-      "ecological-democracy"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1977",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "africa",
-    "subregion": "eastern-africa",
-    "country": [
-      "KE"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "great-green-wall-initiative",
-    "name": "Great Green Wall Initiative",
-    "type": "Government",
-    "description": "An African Union-led initiative to restore 100 million hectares of degraded land across the Sahel — an 8,000km mosaic of restored landscapes spanning the full width of Africa.",
-    "about": "Launched by the African Union in 2007, the Great Green Wall aims to restore degraded land, fight desertification, and improve food security and climate resilience across 22 countries from Senegal to Djibouti. Its goals include restoring 100 million hectares, sequestering 250 million tons of carbon, and creating 10 million green jobs by 2030. The initiative explicitly links ecological restoration with social stability and is a governance experiment requiring unprecedented coordination across sovereign states around a shared ecosystem. It is also a test of whether global climate finance can actually reach the communities on the frontline of climate disruption.",
-    "website": "https://thegreatgreenwall.org",
-    "location": "Sahel Region, Africa",
-    "scale": "Continental",
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "restoration",
-      "desertification",
-      "sahel",
-      "africa",
-      "land-use"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "2007",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "africa",
-    "subregion": null,
-    "country": [],
-    "bioregion": [
-      "Sahel"
-    ],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "iclei-africa",
-    "name": "ICLEI Africa",
-    "type": "Network",
-    "description": "The African regional office of ICLEI – Local Governments for Sustainability, supporting African cities and municipalities in building low-carbon, resilient urban futures.",
-    "about": "ICLEI Africa is the regional node of the global ICLEI network for African municipalities and sub-national governments. It works with cities across the continent to embed climate resilience, sustainable urban planning, and low-emission development into local governance. African cities face accelerating urbanisation, climate risk, and severely constrained resources simultaneously — ICLEI Africa builds peer networks, tools, and political will for local governments to act collectively. It connects municipal action to national and international climate governance frameworks, including the UNFCCC and the African Union's Agenda 2063.",
-    "website": "https://africa.iclei.org",
-    "location": "Cape Town, South Africa",
-    "scale": "Continental",
-    "orientations": [
-      "ASSEMBLY",
-      "SPACESHIP"
-    ],
-    "tags": [
-      "urban-governance",
-      "cities",
-      "climate-resilience",
-      "africa",
-      "local-government"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1995",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "africa",
-    "subregion": "southern-africa",
-    "country": [
-      "ZA"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "sewa-india",
-    "name": "SEWA — Self Employed Women's Association",
-    "type": "Movement",
-    "description": "One of India's largest trade unions, organising millions of informal-sector women workers into cooperative enterprises and a self-built welfare system.",
-    "about": "Founded in 1972 in Ahmedabad by Ela Bhatt, SEWA (Self Employed Women's Association) is a trade union and cooperative movement representing over 2.5 million informal-sector women workers — street vendors, home-based workers, agricultural labourers, and waste pickers. SEWA has built its own bank, healthcare system, childcare, and social security for workers excluded from formal labour protections. It demonstrates a core principle of the planetary governance movement: governance need not wait for the state. The women of SEWA have collectively constructed welfare institutions, cooperative enterprises, and democratic representation from the ground up.",
-    "website": "https://sewa.org",
-    "location": "Ahmedabad, India",
-    "scale": "National",
-    "orientations": [
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "labour",
-      "cooperatives",
-      "women",
-      "india",
-      "informal-economy"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1972",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "asia",
-    "subregion": "southern-asia",
-    "country": [
-      "IN"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "third-world-network",
-    "name": "Third World Network",
-    "type": "Network",
-    "description": "An international research and advocacy network based in Penang, producing critical analysis of trade, development, and environmental policy from the perspective of the Global South.",
-    "about": "Third World Network (TWN) is one of the most influential independent voices in global economic and environmental governance. Founded in 1984 in Penang, it publishes analysis of WTO negotiations, climate agreements, biodiversity policy, and food systems from a perspective explicitly grounded in the rights and interests of developing countries. TWN's critical engagement with international institutions has shaped Southern governments' negotiating positions across decades of multilateral processes — from GATT/WTO to the CBD to the UNFCCC. It remains essential reading for anyone trying to understand why global governance so often fails the people most affected.",
-    "website": "https://twn.my",
-    "location": "Penang, Malaysia",
-    "scale": "Global",
-    "orientations": [
-      "ASSEMBLY",
-      "GARDEN"
-    ],
-    "tags": [
-      "trade-policy",
-      "global-south",
-      "development",
-      "multilateralism"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1984",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "asia",
-    "subregion": "south-eastern-asia",
-    "country": [
-      "MY"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "focus-on-the-global-south",
-    "name": "Focus on the Global South",
-    "type": "Research",
-    "description": "A Bangkok-based policy institute developing alternatives to neoliberal globalisation, centred on the rights, knowledge, and self-determination of Southern peoples.",
-    "about": "Founded in 1995 at Chulalongkorn University in Bangkok, Focus on the Global South produces critical research and advocacy on trade, food sovereignty, militarism, and development from a perspective that centres Southern communities and their alternatives. Focus has been a persistent voice in WTO and World Bank negotiations, in anti-war movements, and in debates about food and energy systems. It works across Southeast Asia, South Asia, and the Pacific, and is particularly strong on the political economy of post-growth and commons-based development alternatives.",
-    "website": "https://focusweb.org",
-    "location": "Bangkok, Thailand",
-    "scale": "Global",
-    "orientations": [
-      "ASSEMBLY",
-      "GARDEN"
-    ],
-    "tags": [
-      "development-alternatives",
-      "food-sovereignty",
-      "global-south",
-      "political-economy"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1995",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "asia",
-    "subregion": "south-eastern-asia",
-    "country": [
-      "TH"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "icsf",
-    "name": "ICSF — International Collective in Support of Fishworkers",
-    "type": "Network",
-    "description": "An international network defending the rights and livelihoods of small-scale fishing communities and ocean commons against industrial enclosure.",
-    "about": "The International Collective in Support of Fishworkers (ICSF) was founded in 1986 and is based in Chennai, India. It works on the governance of fisheries as a global commons: the rights of small-scale fishing communities, equitable access to coastal and ocean resources, and the threats posed by industrial fishing and aquaculture expansion. ICSF produces policy analysis, supports community advocacy, and connects fishing communities across Asia, Africa, and Latin America with international governance processes — including the FAO's Small-Scale Fisheries Guidelines, which ICSF helped shape over many years of engagement.",
-    "website": "https://icsf.net",
-    "location": "Chennai, India",
-    "scale": "Global",
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "fisheries",
-      "ocean-commons",
-      "coastal-communities",
-      "food-sovereignty"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1986",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "asia",
-    "subregion": "southern-asia",
-    "country": [
-      "IN"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "ibon-international",
-    "name": "IBON International",
-    "type": "Research",
-    "description": "A Philippines-based development organisation building civil society capacity to advance sustainable development and challenge extractive globalisation in international governance.",
-    "about": "IBON International is the international arm of IBON Foundation, established in the Philippines in 1978 as a research and education organisation serving progressive civil society. It holds UN ECOSOC consultative status and works with civil society coalitions worldwide on development assistance, public finance, climate finance, and alternatives to neoliberal globalisation. IBON is particularly active in building Southern civil society capacity to engage in international processes where the voice of poor and marginalised communities is structurally underrepresented — including the UN climate process, the Global South civil society engagement with the OECD, and debates about technology transfer.",
-    "website": "https://iboninternational.org",
-    "location": "Manila, Philippines",
-    "scale": "Global",
-    "orientations": [
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "development-finance",
-      "global-south",
-      "civil-society",
-      "philippines"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1978",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "asia",
-    "subregion": "south-eastern-asia",
-    "country": [
-      "PH"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "satoyama-initiative",
-    "name": "Satoyama Initiative (IPSI)",
-    "type": "Network",
-    "description": "A UNU-led global partnership of nearly 300 organisations working on the governance and stewardship of socio-ecological production landscapes and seascapes.",
-    "about": "The International Partnership for the Satoyama Initiative (IPSI) is co-organised by the UN University Institute for the Advanced Study of Sustainability (UNU-IAS) and the CBD Secretariat. It draws on the Japanese concept of satoyama — the human-managed landscape between wilderness and cultivation — to describe a broader global category: production landscapes jointly shaped by ecological processes and local cultural practice. IPSI brings together nearly 300 organisations to study, restore, and govern these landscapes, which range from traditional agroforestry systems to coastal fishing commons. It connects landscape-level practice with biodiversity governance at the CBD, grounding global policy in local knowledge.",
-    "website": "https://satoyamainitiative.org",
-    "location": "Tokyo, Japan / Global",
-    "scale": "Global",
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "landscape-governance",
-      "biodiversity",
-      "agroecology",
-      "traditional-knowledge",
-      "commons"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "2010",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "asia",
-    "subregion": "eastern-asia",
-    "country": [
-      "JP"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "fundacion-avina",
-    "name": "Fundación Avina",
-    "type": "Network",
-    "description": "A Latin American philanthropic foundation building alliances between civil society, business, and government around democratic innovation, climate action, and just economies.",
-    "about": "Fundación Avina was founded in 1994 and is headquartered in Panama, with offices across Latin America. Over 30 years it has developed a distinctive collaborative model — brokering alliances, co-investing in shared strategies, and supporting social entrepreneurs to scale. Its current focus areas are democratic innovation, climate action, and just and regenerative economy. Avina is particularly strong on the collaborative infrastructure of systemic change: how do actors across sectors actually align around transformative goals? Its experience in Latin America makes it a key practitioner of multi-stakeholder governance at continental scale.",
-    "website": "https://avina.net",
-    "location": "Panama City, Panama / Latin America",
-    "scale": "Continental",
-    "orientations": [
-      "ASSEMBLY",
-      "GARDEN"
-    ],
-    "tags": [
-      "philanthropy",
-      "latin-america",
-      "democratic-innovation",
-      "climate-action"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1994",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "latin-america",
-    "subregion": "central-america",
-    "country": [
-      "PA"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "coica",
-    "name": "COICA — Coordinator of Indigenous Organizations of the Amazon Basin",
-    "type": "Network",
-    "description": "The coordinating body of nine national Indigenous organisations representing peoples across the nine Amazonian countries in international governance and territorial defence.",
-    "about": "COICA (Coordinadora de las Organizaciones Indígenas de la Cuenca Amazónica) was founded in Lima in 1984 and is based in Quito. It represents the Indigenous federations of nine Amazonian nations in international governance processes. COICA has been central to establishing that Indigenous territorial rights are the most effective mechanism for Amazon conservation — a scientific and political argument the organisation has pressed for four decades. It advocates for free, prior and informed consent; legal recognition of ancestral territories; and protection of peoples living in voluntary isolation. As the Amazon approaches ecological tipping points, COICA's governance model becomes increasingly urgent.",
-    "website": "https://coicamazonia.org",
-    "location": "Quito, Ecuador",
-    "scale": "Continental",
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "indigenous-rights",
-      "amazon",
-      "territorial-rights",
-      "fpic",
-      "latin-america"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1984",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "latin-america",
-    "subregion": "south-america",
-    "country": [
-      "EC"
-    ],
-    "bioregion": [
-      "Amazonia"
-    ],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "ipam-amazonia",
-    "name": "IPAM Amazônia",
-    "type": "Research",
-    "description": "A Brazilian non-profit research and policy institute working on climate science, deforestation, and the governance of the Amazon and Cerrado biomes.",
-    "about": "Founded in 1995 in Belém, the Amazon Environmental Research Institute (IPAM) is one of Brazil's most significant independent research institutions for Amazonian science and policy. It produces scientific knowledge on deforestation, carbon stocks, fire, and land-use change, and translates that knowledge into policy engagement. IPAM works on three axes: low-carbon farming, protected territory governance, and sustainable family production. It makes the scientific and economic case that Amazon protection is compatible with — and necessary for — sustainable development, directly challenging the political economy of deforestation in Brazil.",
-    "website": "https://ipam.org.br",
-    "location": "Brasília, Brazil",
-    "scale": "National",
-    "orientations": [
-      "GARDEN",
-      "SPACESHIP"
-    ],
-    "tags": [
-      "amazon",
-      "deforestation",
-      "climate-science",
-      "brazil",
-      "land-use"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1995",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "latin-america",
-    "subregion": "south-america",
-    "country": [
-      "BR"
-    ],
-    "bioregion": [
-      "Amazonia"
-    ],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "mst-brazil",
-    "name": "MST — Movimento dos Trabalhadores Rurais Sem Terra",
-    "type": "Movement",
-    "description": "Brazil's Landless Workers' Movement — one of the largest social movements in the world, organising landless rural families to occupy unused land, build agroecological settlements, and practise food sovereignty.",
-    "about": "The MST (Landless Workers' Movement) was formally founded in 1984 and has grown into one of the world's largest social movements, with hundreds of thousands of families in organised settlements. MST occupies large landholdings not fulfilling their social function under Brazilian law, negotiates land reform, and builds collective communities practising agroecology and food sovereignty. Settlements run their own schools, health systems, and cooperative enterprises — making MST one of the most ambitious experiments in democratic self-governance in the contemporary world. It is a central actor in the global food sovereignty movement and La Via Campesina.",
-    "website": "https://mst.org.br",
-    "location": "São Paulo, Brazil",
-    "scale": "National",
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "land-reform",
-      "food-sovereignty",
-      "agroecology",
-      "brazil",
-      "cooperative"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1984",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "latin-america",
-    "subregion": "south-america",
-    "country": [
-      "BR"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "filac",
-    "name": "FILAC — Fund for the Development of Indigenous Peoples of Latin America",
-    "type": "Government",
-    "description": "An intergovernmental body where Indigenous peoples and governments share equal decision-making power, working to advance indigenous self-development across Latin America and the Caribbean.",
-    "about": "FILAC (Fondo para el Desarrollo de los Pueblos Indígenas de América Latina y el Caribe) was created by the Second Ibero-American Summit in 1992 with a governance structure that gives Indigenous peoples and governments equal representation — a rare model of shared sovereignty. It supports Indigenous self-development processes, promotes Buen Vivir / Vivir Bien as an alternative development framework, and works on indigenous languages, gender equality, and territorial rights. FILAC holds Permanent Observer status at the UN General Assembly. Its structure — co-governed by states and peoples on equal terms — embodies precisely the kind of plurinational governance design that planetary governance ultimately requires.",
-    "website": "https://filac.org",
-    "location": "La Paz, Bolivia",
-    "scale": "Continental",
-    "orientations": [
-      "ASSEMBLY",
-      "GARDEN"
-    ],
-    "tags": [
-      "indigenous-rights",
-      "buen-vivir",
-      "latin-america",
-      "self-determination",
-      "governance"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1992",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "latin-america",
-    "subregion": "south-america",
-    "country": [
-      "BO"
-    ],
-    "bioregion": [],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "pican",
-    "name": "PICAN — Pacific Islands Climate Action Network",
-    "type": "Network",
-    "description": "The regional civil society alliance of Pacific Island organisations advocating for climate justice and ambitious global action in international negotiations.",
-    "about": "The Pacific Islands Climate Action Network (PICAN) brings together over 190 civil society organisations across Pacific Island countries to amplify the Pacific voice in global climate governance. Established in 2013 and part of Climate Action Network International, PICAN coordinates national civil society nodes across Fiji, Samoa, Vanuatu, and beyond. The Pacific Islands are among the most vulnerable places on Earth to sea-level rise and climate disruption — PICAN turns that frontline experience into political advocacy, demanding loss and damage finance, rapid global decarbonisation, and recognition of climate-driven human rights. The movement's moral authority in climate negotiations is unmatched.",
-    "website": "https://pican.org",
-    "location": "Suva, Fiji / Pacific Region",
-    "scale": "Regional",
-    "orientations": [
-      "ASSEMBLY",
-      "GARDEN"
-    ],
-    "tags": [
-      "climate-justice",
-      "pacific",
-      "sea-level-rise",
-      "loss-and-damage",
-      "small-island-states"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "2013",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "oceania",
-    "subregion": "melanesia",
-    "country": [
-      "FJ"
-    ],
-    "bioregion": [
-      "Pacific Islands"
-    ],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "pacific-community-spc",
-    "name": "Pacific Community (SPC)",
-    "type": "Government",
-    "description": "The principal intergovernmental scientific and technical organisation supporting development across the Pacific, providing data, analysis, and policy capacity to 26 Pacific nations and territories.",
-    "about": "The Pacific Community (SPC) was founded in 1947 and is the oldest and most comprehensive intergovernmental organisation in the Pacific. Based in Noumea, it serves 26 Pacific Island countries and territories with scientific and technical expertise across fisheries, public health, geoscience, social development, and ocean governance. SPC manages key Pacific data commons and supports member nations' capacity to participate in international governance processes. For small island states with limited institutional capacity, SPC is often the primary source of technical knowledge needed to govern complex ocean and climate systems. It is the backbone infrastructure of Pacific collective governance.",
-    "website": "https://spc.int",
-    "location": "Noumea, New Caledonia / Pacific Region",
-    "scale": "Regional",
-    "orientations": [
-      "ASSEMBLY",
-      "SPACESHIP"
-    ],
-    "tags": [
-      "pacific",
-      "fisheries",
-      "ocean-governance",
-      "data",
-      "small-island-states"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1947",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "oceania",
-    "subregion": "melanesia",
-    "country": [
-      "NC"
-    ],
-    "bioregion": [
-      "Pacific Islands"
-    ],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "sprep",
-    "name": "SPREP — Secretariat of the Pacific Regional Environment Programme",
-    "type": "Government",
-    "description": "The intergovernmental body responsible for protecting and managing the environment and natural resources of the Pacific region on behalf of 26 member nations and territories.",
-    "about": "SPREP (Secretariat of the Pacific Regional Environment Programme) was established in 1982 and is based in Apia, Samoa. It serves 26 member nations across climate change adaptation, biodiversity conservation, waste management, and ocean governance. SPREP coordinates the Pacific's engagement with major multilateral environmental agreements including the UNFCCC, CBD, and Basel Convention. For a region of extraordinary ecological diversity and fragility — including some of the world's most important ocean and reef ecosystems — SPREP represents the governance infrastructure through which Pacific peoples protect their shared natural inheritance.",
-    "website": "https://sprep.org",
-    "location": "Apia, Samoa",
-    "scale": "Regional",
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "pacific",
-      "biodiversity",
-      "ocean",
-      "climate-adaptation",
-      "small-island-states"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1982",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "oceania",
-    "subregion": "polynesia",
-    "country": [
-      "WS"
-    ],
-    "bioregion": [
-      "Pacific Islands"
-    ],
-    "peoples": [],
-    "languages": []
-  },
-  {
-    "slug": "la-via-campesina",
-    "name": "La Via Campesina",
-    "type": "Movement",
-    "description": "The international peasant movement — a global alliance of small farmers, landless workers, indigenous peoples, and rural women that coined the concept of food sovereignty.",
-    "about": "La Via Campesina represents an estimated 200 million farmers, landless workers, rural women, and indigenous peoples across 81 countries. Founded in 1993, it coined the concept of food sovereignty — the right of peoples to define their own food and agriculture systems — which has become a foundational principle in international food politics. La Via Campesina campaigns against industrial agriculture, land grabbing, free trade agreements, and GMOs, while promoting agroecology, seed sovereignty, and land reform. It is one of the most significant examples in existence of transnational democratic governance: millions of people across the world coordinating around shared principles without a state.",
-    "website": "https://viacampesina.org",
-    "location": "Harare, Zimbabwe / Global",
-    "scale": "Global",
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "tags": [
-      "food-sovereignty",
-      "peasant-rights",
-      "agroecology",
-      "land-reform",
-      "seed-sovereignty"
-    ],
-    "image": "",
-    "imageAlt": "",
-    "founded": "1993",
-    "lastActive": "",
-    "fundingDisclosure": "",
-    "continent": "transnational",
-    "subregion": null,
-    "country": [
-      "ZW"
-    ],
     "bioregion": [],
     "peoples": [],
     "languages": []

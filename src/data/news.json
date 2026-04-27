@@ -1,5 +1,77 @@
 [
   {
+    "slug": "indigenous-peacebuilding-biodiversity-conflicts",
+    "title": "Why Indigenous Peacebuilding Matters in Today’s World",
+    "date": "2026-04-24",
+    "image": "https://www.ipsnews.net/Library/2026/04/historic-second_.jpg",
+    "imageAlt": "Why Indigenous Peacebuilding Matters in Today’s World",
+    "summary": "80% of 132 active wars occur in biodiversity hotspots where Indigenous Peoples live; Indigenous peacebuilding practices offer governance models for conflict resolution tied to ecological stewardship.",
+    "body": "",
+    "insight": "Indigenous conflict resolution embedded in land relationships reframes peace as inseparable from ecosystem regeneration—a governance model for polycrisis regions where ecological and social collapse intersect.",
+    "actors": [],
+    "tags": [
+      "indigenous-governance",
+      "conflict-resolution",
+      "biodiversity-protection",
+      "peacebuilding",
+      "rights-of-nature",
+      "land-sovereignty"
+    ],
+    "orientations": [
+      "GARDEN",
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.ipsnews.net/2026/04/why-indigenous-peacebuilding-matters-in-todays-world/"
+  },
+  {
+    "slug": "crisis-globalization-search-alternatives",
+    "title": "The Crisis of Globalization and the Search for Alternatives",
+    "date": "2026-04-21",
+    "image": "https://www.localfutures.org/wp-content/uploads/ndia-©-Vipul-Sangoi.jpg",
+    "imageAlt": "The Crisis of Globalization and the Search for Alternatives",
+    "summary": "Local Futures examines how multilateral institutions fail to address interconnected crises of war, climate collapse, and inequality, arguing for genuine self-reliance and localized alternatives.",
+    "body": "",
+    "insight": "Critiquing global governance failure while advocating localization creates an opening to explore how bioregional assemblies and commons-based systems could distribute decision-making power away from ineffective centralized institutions.",
+    "actors": [],
+    "tags": [
+      "deglobalization",
+      "localization",
+      "commons",
+      "governance-alternatives",
+      "climate-crisis",
+      "self-reliance"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.localfutures.org/the-crisis-of-globalization-and-the-search-for-alternatives/"
+  },
+  {
+    "slug": "gef-sea-turtle-conservation-bangladesh",
+    "title": "Guardians of the Sea: How GEF Small Grants Program Enables Young Volunteers Take the Lead in Sea Turtle Conservation",
+    "date": "2026-04-20",
+    "image": "https://www.ipsnews.net/Library/2026/04/Sea-Turtle-baby.jpeg",
+    "imageAlt": "Guardians of the Sea: How GEF Small Grants Program Enables Young Volunteers Take the Lead in Sea Turtle Conservation",
+    "summary": "GEF Small Grants Program funds young volunteers in Bangladesh to protect sea turtles at Cox's Bazar breeding grounds, addressing threats from fishing nets, coastal development, and light pollution.",
+    "body": "",
+    "insight": "Community-led conservation models that empower local youth as stewards demonstrate how decentralized governance of commons—in this case marine biodiversity—can scale impact beyond top-down management.",
+    "actors": [],
+    "tags": [
+      "marine-biodiversity",
+      "ocean-commons",
+      "community-stewardship",
+      "local-governance",
+      "sea-turtle-conservation"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.ipsnews.net/2026/04/guardians-of-the-sea-how-gef-small-grants-program-enables-young-volunteers-take-the-lead-in-sea-turtle-conservation/"
+  },
+  {
     "slug": "chernobyl-exclusion-zone-biodiversity-invasion",
     "title": "Chernobyl’s exclusion zone is a beacon of biodiversity – but it faces new threats from Russia’s invasion",
     "date": "2026-04-24",

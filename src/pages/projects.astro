@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import projectsData from '../data/projects.json';
+import actorsData from '../data/actors.json';
 
 const iconMap: Record<string, string> = {
   GARDEN:    'Icons2-01.svg',
@@ -13,6 +14,12 @@ const orientationLabels: Record<string, string> = {
   SPACESHIP: 'Spaceship Earth',
   MYSTERIES: 'The Mysteries',
   ASSEMBLY:  'The Assemblies',
+};
+const accentMap: Record<string, string> = {
+  GARDEN:   '#4a7c59',
+  SPACESHIP:'#2a6496',
+  MYSTERIES:'#7b5ea7',
+  ASSEMBLY: '#b8860b',
 };
 const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
 
@@ -32,7 +39,7 @@ const STATUS_LABEL: Record<string, string> = {
   archived:  'Archived',
 };
 
-// Status pills for filter — count from data
+// Status pills — count from data
 const STATUS_ORDER = ['active','planned','completed','paused','archived'] as const;
 const statusCounts: Record<string, number> = {};
 STATUS_ORDER.forEach(s => { statusCounts[s] = 0; });
@@ -41,14 +48,61 @@ STATUS_ORDER.forEach(s => { statusCounts[s] = 0; });
   statusCounts[s] = (statusCounts[s] ?? 0) + 1;
 });
 
+// Project type filter — only show if data exists
+const PROJECT_TYPE_ORDER = ['campaign','platform','research','coalition','infrastructure','other'] as const;
+const PROJECT_TYPE_LABELS: Record<string, string> = {
+  campaign: 'Campaign', platform: 'Platform', research: 'Research',
+  coalition: 'Coalition', infrastructure: 'Infrastructure', other: 'Other',
+};
+const projectTypeCounts: Record<string, number> = {};
+PROJECT_TYPE_ORDER.forEach(t => { projectTypeCounts[t] = 0; });
+(projectsData as any[]).forEach((p: any) => {
+  const t = (p.project_type ?? '').toLowerCase();
+  if (t) projectTypeCounts[t] = (projectTypeCounts[t] ?? 0) + 1;
+});
+const activeProjectTypes = PROJECT_TYPE_ORDER.filter(t => (projectTypeCounts[t] ?? 0) > 0);
+
+// Scale filter — only show if data exists
+const SCALE_ORDER = ['local','regional','national','continental','global'] as const;
+const scaleCounts: Record<string, number> = {};
+SCALE_ORDER.forEach(s => { scaleCounts[s] = 0; });
+(projectsData as any[]).forEach((p: any) => {
+  const s = (p.scale ?? '').toLowerCase();
+  if (s) scaleCounts[s] = (scaleCounts[s] ?? 0) + 1;
+});
+const activeScales = SCALE_ORDER.filter(s => (scaleCounts[s] ?? 0) > 0);
+
+// Continent filter — only show if data exists
+const CONTINENT_ORDER = ['africa','north-america','latin-america','asia','europe','oceania','transnational'] as const;
+const CONTINENT_LABELS: Record<string, string> = {
+  'africa': 'Africa', 'north-america': 'N. America', 'latin-america': 'Latin America',
+  'asia': 'Asia', 'europe': 'Europe', 'oceania': 'Oceania', 'transnational': 'Transnational',
+};
+const continentCounts: Record<string, number> = {};
+CONTINENT_ORDER.forEach(c => { continentCounts[c] = 0; });
+(projectsData as any[]).forEach((p: any) => {
+  const c = (p.continent ?? '').toLowerCase();
+  if (c) continentCounts[c] = (continentCounts[c] ?? 0) + 1;
+});
+const activeContinents = CONTINENT_ORDER.filter(c => (continentCounts[c] ?? 0) > 0);
+
 const total = projectsData.length;
+const actorMap = Object.fromEntries((actorsData as any[]).map((a: any) => [a.slug, a]));
 
 function getFavicon(website: string): string {
   if (!website) return '';
-  try {
-    const url = new URL(website);
-    return `https://icons.duckduckgo.com/ip3/${url.hostname}.ico`;
-  } catch { return ''; }
+  try { return `https://icons.duckduckgo.com/ip3/${new URL(website).hostname}.ico`; }
+  catch { return ''; }
+}
+
+// Logo: prefer primary linked actor, fall back to project favicon
+function getLogoInfo(project: any): { src: string; initial: string; accent: string } {
+  const actor = project.actors?.length > 0 ? (actorMap as any)[project.actors[0]] : null;
+  const website = actor?.website || project.website || '';
+  const src = website ? getFavicon(website) : '';
+  const name: string = actor?.name || project.name || '?';
+  const orient: string = actor?.orientations?.[0] || project.orientations?.[0] || 'ASSEMBLY';
+  return { src, initial: name.charAt(0).toUpperCase(), accent: accentMap[orient] ?? '#64748b' };
 }
 ---
 
@@ -60,16 +114,11 @@ function getFavicon(website: string): string {
       <p class="projects-desc">Specific initiatives and experiments at the frontier of planetary governance.</p>
     </div>
 
-    <!-- TODO(olle): editorial intro
-         Add a short paragraph here (2–4 sentences) contextualising the
-         projects index — what counts as a "project" vs an "actor", how
-         to read the status labels, and what the index covers.
-         Remove this comment and uncomment the block below when ready.
-
-    <div class="editorial-intro">
-      <p>…</p>
-    </div>
-    -->
+    <p class="representation-note">
+      A curated selection of projects at the frontier of planetary governance. We currently over-represent
+      initiatives from Europe and North America — more to come.
+      <a href="/contact">Suggest a project</a>.
+    </p>
 
     <!-- Filter bar -->
     <div class="filter-bar" id="filter-bar">
@@ -86,18 +135,52 @@ function getFavicon(website: string): string {
         <span class="filter-row-label">Status</span>
         <div class="filter-row-pills">
           {STATUS_ORDER.filter(s => statusCounts[s] > 0).map(s => (
-            <button
-              class="pill-btn active status-btn"
-              data-status={s}
-              aria-pressed="true"
-            >
+            <button class="pill-btn active status-btn" data-status={s} aria-pressed="true">
               <span class="status-dot" style={`background:${STATUS_COLOR[s]}`}></span>
-              {STATUS_LABEL[s]}
-              <span class="pill-count">({statusCounts[s]})</span>
+              {STATUS_LABEL[s]} <span class="pill-count">({statusCounts[s]})</span>
             </button>
           ))}
         </div>
       </div>
+
+      {activeProjectTypes.length > 0 && (
+        <div class="filter-row">
+          <span class="filter-row-label">Type</span>
+          <div class="filter-row-pills">
+            {activeProjectTypes.map(t => (
+              <button class="pill-btn active project-type-btn" data-project-type={t} aria-pressed="true">
+                {PROJECT_TYPE_LABELS[t]} <span class="pill-count">({projectTypeCounts[t]})</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {activeScales.length > 0 && (
+        <div class="filter-row">
+          <span class="filter-row-label">Scale</span>
+          <div class="filter-row-pills">
+            {activeScales.map(s => (
+              <button class="pill-btn active scale-btn" data-scale={s} aria-pressed="true">
+                {s.charAt(0).toUpperCase() + s.slice(1)} <span class="pill-count">({scaleCounts[s]})</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {activeContinents.length > 0 && (
+        <div class="filter-row">
+          <span class="filter-row-label">Region</span>
+          <div class="filter-row-pills">
+            {activeContinents.map(c => (
+              <button class="pill-btn active continent-btn" data-continent={c} aria-pressed="true">
+                {CONTINENT_LABELS[c]} <span class="pill-count">({continentCounts[c]})</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
 
     <!-- Count -->
@@ -110,20 +193,18 @@ function getFavicon(website: string): string {
       {(projectsData as any[]).map((project: any) => {
         const status = (project.status ?? 'active').toLowerCase();
         const accentColor = STATUS_COLOR[status] ?? '#64748b';
-        const hasImage = !!(project.image);
+        const logo = getLogoInfo(project);
         return (
           <a
-            href={project.website || '#'}
-            target={project.website ? '_blank' : undefined}
-            rel={project.website ? 'noopener' : undefined}
+            href={`/projects/${project.slug}`}
             class="project-card"
             data-orientations={project.orientations.join(',')}
             data-status={status}
+            data-project-type={(project.project_type ?? '').toLowerCase()}
+            data-scale={(project.scale ?? '').toLowerCase()}
+            data-continent={(project.continent ?? '').toLowerCase()}
             style={`--accent:${accentColor}`}
           >
-            {hasImage && (
-              <div class="card-image" style={`background-image:url('${project.image}')`} aria-hidden="true"></div>
-            )}
             <div class="card-body">
               <div class="card-top">
                 <span class="card-status">
@@ -132,9 +213,9 @@ function getFavicon(website: string): string {
                 </span>
               </div>
               <h3 class="card-name">
-                {getFavicon(project.website) && (
-                  <img src={getFavicon(project.website)} alt="" class="card-favicon" referrerpolicy="no-referrer" onerror="this.style.display='none'" loading="lazy" />
-                )}
+                <div class="favicon-wrap sm" style={`--fav-accent:${logo.accent}`} data-initial={logo.initial}>
+                  {logo.src && <img src={logo.src} alt="" referrerpolicy="no-referrer" onerror="this.remove()" loading="lazy" />}
+                </div>
                 {project.name}
               </h3>
               <p class="card-desc">{project.description}</p>
@@ -151,7 +232,7 @@ function getFavicon(website: string): string {
             <div class="card-footer">
               <div class="card-tags">
                 {(project.tags ?? []).slice(0, 3).map((tag: string) => (
-                  <span class="card-tag">{tag.replace(/-/g, '\u00a0')}</span>
+                  <span class="card-tag">{tag.replace(/-/g, ' ')}</span>
                 ))}
               </div>
               <div class="card-icons">
@@ -185,14 +266,16 @@ function getFavicon(website: string): string {
 }
 .projects-desc { font-size: .9375rem; color: var(--text-2); }
 
-/* ── Editorial intro ── */
-.editorial-intro {
-  font-size: .9375rem;
-  color: var(--text-2);
-  line-height: 1.7;
-  margin: .5rem 0 1.5rem;
-  max-width: 680px;
+/* ── Transparency note ── */
+.representation-note {
+  font-size: .8125rem;
+  color: var(--text-3);
+  line-height: 1.6;
+  margin: .75rem 0 1.5rem;
+  font-style: italic;
 }
+.representation-note a { color: var(--text-2); font-weight: 600; text-decoration: none; }
+.representation-note a:hover { text-decoration: underline; }
 
 /* ── Filter bar (orientations) ── */
 .filter-bar {
@@ -262,11 +345,7 @@ function getFavicon(website: string): string {
   white-space: nowrap;
 }
 .pill-btn:hover { border-color: var(--text-2); color: var(--text-2); }
-.pill-btn.active {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
-}
+.pill-btn.active { background: var(--text); color: var(--bg); border-color: var(--text); }
 .pill-btn.active:hover { opacity: .85; }
 .pill-count { opacity: .65; font-size: .625rem; }
 .pill-btn.active .pill-count { opacity: .8; }
@@ -311,14 +390,38 @@ function getFavicon(website: string): string {
 }
 .project-card.hidden { display: none; }
 
-/* ── Card image strip ── */
-.card-image {
-  width: 100%;
-  height: 100px;
-  background-size: cover;
-  background-position: center;
+/* ── Favicon with fallback initial ── */
+.favicon-wrap {
+  --fw: 22px;
+  position: relative;
+  width: var(--fw);
+  height: var(--fw);
+  border-radius: 3px;
+  background: var(--fav-accent, #64748b);
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
+.favicon-wrap::before {
+  content: attr(data-initial);
+  font-family: var(--font-sans);
+  font-size: .5625rem;
+  font-weight: 800;
+  color: rgba(255,255,255,.9);
+  line-height: 1;
+}
+.favicon-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 2px;
+  background: var(--bg);
+}
+.favicon-wrap.sm { --fw: 18px; }
 
 /* ── Card body ── */
 .card-body {
@@ -328,11 +431,7 @@ function getFavicon(website: string): string {
   flex-direction: column;
   gap: .5rem;
 }
-.card-top {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-}
+.card-top { display: flex; align-items: center; gap: .5rem; }
 .card-status {
   display: inline-flex;
   align-items: center;
@@ -359,14 +458,6 @@ function getFavicon(website: string): string {
   line-height: 1.35;
   color: var(--text);
 }
-.card-favicon {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-  border-radius: 3px;
-  flex-shrink: 0;
-  opacity: .75;
-}
 .card-desc {
   font-size: .8125rem;
   line-height: 1.65;
@@ -381,12 +472,7 @@ function getFavicon(website: string): string {
   color: var(--text-3);
   margin-top: .125rem;
 }
-.geo-icon {
-  width: 11px;
-  height: 11px;
-  flex-shrink: 0;
-  opacity: .6;
-}
+.geo-icon { width: 11px; height: 11px; flex-shrink: 0; opacity: .6; }
 
 /* ── Card footer ── */
 .card-footer {
@@ -398,12 +484,7 @@ function getFavicon(website: string): string {
   border-top: 1px solid var(--border);
   background: color-mix(in srgb, var(--accent) 3%, var(--bg));
 }
-.card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .25rem;
-  flex: 1;
-}
+.card-tags { display: flex; flex-wrap: wrap; gap: .25rem; flex: 1; }
 .card-tag {
   font-size: .625rem;
   color: var(--text-3);
@@ -430,20 +511,26 @@ function getFavicon(website: string): string {
 const ORIENTATIONS = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'];
 let activeOrientations = new Set(ORIENTATIONS);
 let activeStatuses     = new Set<string>();
+let activeProjectTypes = new Set<string>();
+let activeScales       = new Set<string>();
+let activeContinents   = new Set<string>();
 
-// Init statuses from rendered pills
-document.querySelectorAll<HTMLElement>('.status-btn').forEach(b => {
-  activeStatuses.add(b.dataset.status!);
-});
+// Init from rendered pills
+document.querySelectorAll<HTMLElement>('.status-btn').forEach(b => activeStatuses.add(b.dataset.status!));
+document.querySelectorAll<HTMLElement>('.project-type-btn').forEach(b => activeProjectTypes.add(b.dataset.projectType!));
+document.querySelectorAll<HTMLElement>('.scale-btn').forEach(b => activeScales.add(b.dataset.scale!));
+document.querySelectorAll<HTMLElement>('.continent-btn').forEach(b => activeContinents.add(b.dataset.continent!));
+
+const projectTypeBtns  = document.querySelectorAll<HTMLElement>('.project-type-btn');
+const scaleBtns        = document.querySelectorAll<HTMLElement>('.scale-btn');
+const continentBtns    = document.querySelectorAll<HTMLElement>('.continent-btn');
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 function pushURL() {
   const params = new URLSearchParams();
-  const missingO = ORIENTATIONS.filter(o => !activeOrientations.has(o));
-  if (missingO.length) params.set('o', [...activeOrientations].join(','));
-  const allStatuses = [...document.querySelectorAll<HTMLElement>('.status-btn')].map(b => b.dataset.status!);
-  const missingS = allStatuses.filter(s => !activeStatuses.has(s));
-  if (missingS.length) params.set('st', [...activeStatuses].join(','));
+  if (activeOrientations.size < ORIENTATIONS.length) params.set('o', [...activeOrientations].join(','));
+  const allSt = [...document.querySelectorAll<HTMLElement>('.status-btn')].map(b => b.dataset.status!);
+  if (activeStatuses.size < allSt.length) params.set('st', [...activeStatuses].join(','));
   const qs = params.toString();
   history.replaceState(null, '', qs ? '?' + qs : location.pathname);
 }
@@ -452,11 +539,16 @@ function applyFilters() {
   const cards = document.querySelectorAll<HTMLElement>('.project-card');
   let visible = 0;
   cards.forEach(card => {
-    const orientations = (card.dataset.orientations || '').split(',').filter(Boolean);
-    const status       = card.dataset.status ?? '';
-    const passO = orientations.length === 0 || orientations.some(o => activeOrientations.has(o));
-    const passSt = activeStatuses.has(status);
-    const show = passO && passSt;
+    const orients = (card.dataset.orientations || '').split(',').filter(Boolean);
+    const passO  = orients.length === 0 || orients.some(o => activeOrientations.has(o));
+    const passSt = activeStatuses.has(card.dataset.status ?? '');
+    const passPT = projectTypeBtns.length === 0 || activeProjectTypes.size === 0
+                   || activeProjectTypes.has(card.dataset.projectType ?? '');
+    const passSc = scaleBtns.length === 0 || activeScales.size === 0
+                   || activeScales.has(card.dataset.scale ?? '');
+    const passC  = continentBtns.length === 0 || activeContinents.size === 0
+                   || activeContinents.has(card.dataset.continent ?? '');
+    const show = passO && passSt && passPT && passSc && passC;
     card.classList.toggle('hidden', !show);
     if (show) visible++;
   });
@@ -477,6 +569,21 @@ function syncButtons() {
     btn.classList.toggle('active', active);
     btn.setAttribute('aria-pressed', String(active));
   });
+  projectTypeBtns.forEach(btn => {
+    const active = activeProjectTypes.has(btn.dataset.projectType!);
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  scaleBtns.forEach(btn => {
+    const active = activeScales.has(btn.dataset.scale!);
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  continentBtns.forEach(btn => {
+    const active = activeContinents.has(btn.dataset.continent!);
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
 }
 
 // ── Init from URL ────────────────────────────────────────────────────────────
@@ -486,8 +593,8 @@ function syncButtons() {
   const st = params.get('st');
   if (o)  activeOrientations = new Set(o.split(',').filter(x => ORIENTATIONS.includes(x)));
   if (st) {
-    const allStatuses = [...document.querySelectorAll<HTMLElement>('.status-btn')].map(b => b.dataset.status!);
-    activeStatuses = new Set(st.split(',').filter(x => allStatuses.includes(x)));
+    const allSt = [...document.querySelectorAll<HTMLElement>('.status-btn')].map(b => b.dataset.status!);
+    activeStatuses = new Set(st.split(',').filter(x => allSt.includes(x)));
   }
   syncButtons();
   applyFilters();
@@ -499,33 +606,56 @@ document.getElementById('filter-bar')!.addEventListener('click', e => {
   if (!btn) return;
   const key = btn.dataset.orientation!;
   if (activeOrientations.has(key)) {
-    if (activeOrientations.size === 1) { activeOrientations = new Set(ORIENTATIONS); }
+    if (activeOrientations.size === 1) activeOrientations = new Set(ORIENTATIONS);
     else activeOrientations.delete(key);
   } else {
     activeOrientations.add(key);
   }
-  syncButtons();
-  applyFilters();
-  pushURL();
+  syncButtons(); applyFilters(); pushURL();
 });
 
-// ── Status buttons ────────────────────────────────────────────────────────────
+// ── Secondary filter buttons ─────────────────────────────────────────────────
 document.getElementById('secondary-filters')!.addEventListener('click', e => {
-  const btn = (e.target as Element).closest<HTMLElement>('.status-btn');
-  if (!btn) return;
-  const key = btn.dataset.status!;
-  if (activeStatuses.has(key)) {
-    if (activeStatuses.size === 1) {
-      // Re-select all
-      document.querySelectorAll<HTMLElement>('.status-btn').forEach(b => activeStatuses.add(b.dataset.status!));
-    } else {
-      activeStatuses.delete(key);
-    }
-  } else {
-    activeStatuses.add(key);
+  const target = e.target as Element;
+
+  const statusBtn = target.closest<HTMLElement>('.status-btn');
+  if (statusBtn) {
+    const key = statusBtn.dataset.status!;
+    if (activeStatuses.has(key)) {
+      if (activeStatuses.size === 1) document.querySelectorAll<HTMLElement>('.status-btn').forEach(b => activeStatuses.add(b.dataset.status!));
+      else activeStatuses.delete(key);
+    } else activeStatuses.add(key);
+    syncButtons(); applyFilters(); pushURL(); return;
   }
-  syncButtons();
-  applyFilters();
-  pushURL();
+
+  const ptBtn = target.closest<HTMLElement>('.project-type-btn');
+  if (ptBtn) {
+    const key = ptBtn.dataset.projectType!;
+    if (activeProjectTypes.has(key)) {
+      if (activeProjectTypes.size === 1) projectTypeBtns.forEach(b => activeProjectTypes.add(b.dataset.projectType!));
+      else activeProjectTypes.delete(key);
+    } else activeProjectTypes.add(key);
+    syncButtons(); applyFilters(); return;
+  }
+
+  const scaleBtn = target.closest<HTMLElement>('.scale-btn');
+  if (scaleBtn) {
+    const key = scaleBtn.dataset.scale!;
+    if (activeScales.has(key)) {
+      if (activeScales.size === 1) scaleBtns.forEach(b => activeScales.add(b.dataset.scale!));
+      else activeScales.delete(key);
+    } else activeScales.add(key);
+    syncButtons(); applyFilters(); return;
+  }
+
+  const contBtn = target.closest<HTMLElement>('.continent-btn');
+  if (contBtn) {
+    const key = contBtn.dataset.continent!;
+    if (activeContinents.has(key)) {
+      if (activeContinents.size === 1) continentBtns.forEach(b => activeContinents.add(b.dataset.continent!));
+      else activeContinents.delete(key);
+    } else activeContinents.add(key);
+    syncButtons(); applyFilters(); return;
+  }
 });
 </script>

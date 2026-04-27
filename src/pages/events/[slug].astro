@@ -1,0 +1,295 @@
+---
+import Base from '../../layouts/Base.astro';
+import eventsData from '../../data/events.json';
+import actorsData from '../../data/actors.json';
+import projectsData from '../../data/projects.json';
+
+export function getStaticPaths() {
+  return eventsData.map(e => ({ params: { slug: e.slug } }));
+}
+
+const { slug } = Astro.params;
+const event = eventsData.find(e => e.slug === slug)!;
+const actorMap  = Object.fromEntries(actorsData.map(a => [a.slug, a]));
+const projectMap = Object.fromEntries(projectsData.map(p => [p.slug, p]));
+
+const orientationLabels: Record<string, string> = {
+  GARDEN: 'The Garden', SPACESHIP: 'Spaceship Earth',
+  MYSTERIES: 'The Mysteries', ASSEMBLY: 'The Assemblies',
+};
+const iconMap: Record<string, string> = {
+  GARDEN: 'Icons2-01.svg', SPACESHIP: 'Icons2-04.svg',
+  MYSTERIES: 'Icons2-03.svg', ASSEMBLY: 'Icons2-02.svg',
+};
+const accentMap: Record<string, string> = {
+  GARDEN: '#4a7c59', SPACESHIP: '#2a6496', MYSTERIES: '#7b5ea7', ASSEMBLY: '#b8860b',
+};
+
+const FORMAT_LABEL: Record<string, string> = {
+  'in-person': 'In person', 'online': 'Online', 'hybrid': 'Hybrid',
+};
+const COST_LABEL: Record<string, string> = {
+  'free': 'Free', 'paid': 'Paid', 'sliding-scale': 'Sliding scale',
+};
+
+function getFavicon(website: string): string {
+  if (!website) return '';
+  try { return `https://icons.duckduckgo.com/ip3/${new URL(website).hostname}.ico`; }
+  catch { return ''; }
+}
+
+function formatDateRange(start: string, end: string) {
+  if (!start) return '';
+  const s = new Date(start + 'T12:00:00Z');
+  const opts: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' };
+  const sStr = s.toLocaleDateString('en-GB', opts);
+  if (!end || end === start) return sStr;
+  const e = new Date(end + 'T12:00:00Z');
+  if (s.getUTCFullYear() === e.getUTCFullYear() && s.getUTCMonth() === e.getUTCMonth()) {
+    return `${s.getUTCDate()}–${e.getUTCDate()} ${s.toLocaleDateString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' })}`;
+  }
+  return `${sStr} – ${e.toLocaleDateString('en-GB', opts)}`;
+}
+
+const linkedActors   = ((event as any).actors   ?? []).map((s: string) => actorMap[s]  ).filter(Boolean);
+const linkedProjects = ((event as any).linked_projects ?? []).map((s: string) => projectMap[s]).filter(Boolean);
+
+const today = new Date().toISOString().slice(0, 10);
+const isUpcoming = event.date_start >= today;
+---
+
+<Base title={`${event.name} — The Orbital`} description={event.description}>
+  <div class="container">
+    <div class="event-wrap">
+
+      <div class="event-header-top">
+        <p class="event-eyebrow">
+          {isUpcoming ? 'Upcoming event' : 'Past event'}
+          {event.date_start && ` · ${formatDateRange(event.date_start, event.date_end)}`}
+          {event.location && ` · ${event.location}`}
+        </p>
+        <h1 class="event-title">{event.name}</h1>
+        <div class="event-chips">
+          {(event as any).type && <span class="meta-chip">{(event as any).type}</span>}
+          {(event as any).format && FORMAT_LABEL[(event as any).format] && (
+            <span class="meta-chip format-chip">{FORMAT_LABEL[(event as any).format]}</span>
+          )}
+          {(event as any).cost && COST_LABEL[(event as any).cost] && (
+            <span class="meta-chip">{COST_LABEL[(event as any).cost]}</span>
+          )}
+        </div>
+        <div class="orient-row">
+          {(event.orientations ?? []).map(o => (
+            <span class="orient-chip">
+              <img src={`/assets/${iconMap[o]}`} alt="" class="orient-icon" />
+              {orientationLabels[o]}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <p class="event-desc">{event.description}</p>
+
+      {event.relevance_note && (
+        <p class="event-relevance"><em>{event.relevance_note}</em></p>
+      )}
+
+      {event.website && (
+        <div class="event-meta-block">
+          <a href={event.website} target="_blank" rel="noopener" class="website-link">Visit website ↗</a>
+        </div>
+      )}
+
+      {event.tags?.length > 0 && (
+        <div class="tags tags-row">
+          {event.tags.map((t: string) => <a href={`/tags/${t}`} class="tag">{t.replace(/-/g, ' ')}</a>)}
+        </div>
+      )}
+
+      {linkedActors.length > 0 && (
+        <section>
+          <h2 class="section-heading">Actors</h2>
+          <div class="actor-cards">
+            {(linkedActors as any[]).map((actor: any, i: number) => {
+              const accent = accentMap[actor.orientations?.[0]] ?? '#64748b';
+              const fav = getFavicon(actor.website);
+              return (
+                <a href={`/actors/${actor.slug}`} class="actor-pill" style={`--accent:${accent}`}>
+                  <div class="favicon-wrap" style={`--fav-accent:${accent}`} data-initial={actor.name.charAt(0).toUpperCase()}>
+                    {fav && <img src={fav} alt="" referrerpolicy="no-referrer" onerror="this.remove()" loading="lazy" />}
+                  </div>
+                  <span class="actor-pill-name">
+                    {i === 0 && <span class="host-label">Host</span>}
+                    {actor.name}
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {linkedProjects.length > 0 && (
+        <section>
+          <h2 class="section-heading">Related projects</h2>
+          <div class="project-links">
+            {(linkedProjects as any[]).map((p: any) => (
+              <a href={`/projects/${p.slug}`} class="project-link">{p.name}</a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <a href="/events" class="back-link">← All events</a>
+    </div>
+  </div>
+</Base>
+
+<style>
+.event-wrap { max-width: var(--max-w); margin: 0 auto; padding-top: 2rem; }
+
+.event-header-top { padding-bottom: 1.25rem; border-bottom: 3px double var(--border); margin-bottom: 1.25rem; }
+.event-eyebrow {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: .5rem;
+}
+.event-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: .75rem;
+}
+
+.event-chips { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .75rem; }
+.meta-chip {
+  font-size: .625rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .175rem .55rem;
+  border-radius: 3px;
+  background: var(--filter-bg);
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+.format-chip { background: #e8f5e9; color: #2e7d32; border-color: #c8e6c9; }
+
+.orient-row { display: flex; flex-wrap: wrap; gap: .4rem; }
+.orient-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-size: .75rem;
+  color: var(--text-2);
+  background: var(--filter-bg);
+  padding: .2rem .6rem .2rem .4rem;
+  border-radius: 999px;
+}
+.orient-icon { width: 16px; height: 16px; object-fit: contain; }
+
+.event-desc {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: .75rem;
+  font-weight: 300;
+}
+.event-relevance {
+  font-size: .9375rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.event-meta-block { margin-bottom: 1rem; }
+.website-link { color: var(--text); font-weight: 600; text-decoration: none; font-size: .9375rem; }
+.website-link:hover { text-decoration: underline; }
+
+.tags-row { margin-bottom: 1.5rem; }
+
+.section-heading {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin: 2rem 0 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Actor pills ── */
+.actor-cards { display: flex; flex-wrap: wrap; gap: .625rem; }
+.actor-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .375rem .75rem .375rem .375rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 5%, var(--bg));
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color .15s, background .15s;
+}
+.actor-pill:hover {
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg));
+  text-decoration: none;
+}
+.actor-pill-name { font-size: .875rem; font-weight: 500; display: flex; align-items: center; gap: .3rem; }
+.host-label {
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: .8;
+}
+
+/* ── Favicon with fallback initial ── */
+.favicon-wrap {
+  --fw: 22px;
+  position: relative;
+  width: var(--fw); height: var(--fw);
+  border-radius: 50%;
+  background: var(--fav-accent, #64748b);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.favicon-wrap::before {
+  content: attr(data-initial);
+  font-family: var(--font-sans);
+  font-size: .5625rem;
+  font-weight: 800;
+  color: rgba(255,255,255,.9);
+  line-height: 1;
+}
+.favicon-wrap img {
+  position: absolute;
+  inset: 0; width: 100%; height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+/* ── Related projects ── */
+.project-links { display: flex; flex-wrap: wrap; gap: .5rem .875rem; }
+.project-link { font-size: .875rem; color: var(--text-2); text-decoration: none; font-weight: 500; }
+.project-link:hover { color: var(--text); text-decoration: underline; }
+
+.back-link { display: inline-block; margin-top: 2rem; font-size: .875rem; color: var(--text-2); text-decoration: none; }
+.back-link:hover { color: var(--text); }
+</style>

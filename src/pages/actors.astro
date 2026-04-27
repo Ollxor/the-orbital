@@ -32,7 +32,6 @@ function normalizeType(t: string): string {
 
 // ── Continent filter — counts from data, always show all ─────────────────────
 const CONTINENT_ORDER = ['africa','north-america','latin-america','asia','europe','oceania','transnational'] as const;
-type Continent = typeof CONTINENT_ORDER[number];
 
 const continentCounts: Record<string, number> = {};
 CONTINENT_ORDER.forEach(c => { continentCounts[c] = 0; });
@@ -100,7 +99,7 @@ function getFavicon(website: string): string {
       ))}
     </div>
 
-    <!-- Continent · Scale · Type secondary filters -->
+    <!-- Continent · Scale · Type · Search secondary filters -->
     <div class="secondary-filters" id="secondary-filters">
 
       <div class="filter-row">
@@ -152,6 +151,11 @@ function getFavicon(website: string): string {
         </div>
       </div>
 
+      <div class="filter-row search-row">
+        <span class="filter-row-label">Search</span>
+        <input type="search" id="actor-search" placeholder="Search actors…" class="search-input" />
+      </div>
+
     </div>
 
     <!-- Featured this week -->
@@ -180,9 +184,9 @@ function getFavicon(website: string): string {
                   ))}
                 </div>
                 <div class="card-name-row">
-                  {favicon && (
-                    <img src={favicon} alt="" class="card-favicon" referrerpolicy="no-referrer" onerror="this.style.display='none'" loading="lazy" />
-                  )}
+                  <div class="favicon-wrap" style={`--fav-accent:${accent}`} data-initial={(actor as any).name.charAt(0).toUpperCase()}>
+                    {favicon && <img src={favicon} alt="" referrerpolicy="no-referrer" onerror="this.remove()" loading="lazy" />}
+                  </div>
                   <h3 class="card-name">{(actor as any).name}</h3>
                 </div>
                 <p class="card-desc featured-desc">{(actor as any).description}</p>
@@ -198,9 +202,8 @@ function getFavicon(website: string): string {
       </div>
     </div>
 
-    <!-- Search + count -->
-    <div class="search-row">
-      <input type="search" id="actor-search" placeholder="Search actors…" class="search-input" />
+    <!-- Count -->
+    <div class="count-row">
       <span class="actor-count" id="actor-count">{actorsData.length} actors</span>
     </div>
 
@@ -231,9 +234,9 @@ function getFavicon(website: string): string {
               ))}
             </div>
             <div class="card-name-row">
-              {favicon && (
-                <img src={favicon} alt="" class="card-favicon" referrerpolicy="no-referrer" onerror="this.style.display='none'" loading="lazy" />
-              )}
+              <div class="favicon-wrap" style={`--fav-accent:${accent}`} data-initial={actor.name.charAt(0).toUpperCase()}>
+                {favicon && <img src={favicon} alt="" referrerpolicy="no-referrer" onerror="this.remove()" loading="lazy" />}
+              </div>
               <h3 class="card-name">{actor.name}</h3>
             </div>
             <p class="card-desc">{actor.description}</p>
@@ -360,13 +363,27 @@ function getFavicon(website: string): string {
   border-color: var(--text);
 }
 .pill-btn.active:hover { opacity: .85; }
-/* Zero-count continent buttons — always visible but subtly muted */
-.pill-btn[data-count="0"]:not(.active) { opacity: .5; }
 .pill-count { opacity: .65; font-size: .625rem; }
 .pill-btn.active .pill-count { opacity: .8; }
 
+/* ── Search row (inside secondary-filters) ── */
+.search-row { flex-wrap: nowrap; }
+.search-input {
+  flex: 1;
+  max-width: 320px;
+  padding: .3rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  font-size: .8125rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color .15s;
+}
+.search-input:focus { border-color: var(--text-2); }
+
 /* ── Featured this week ── */
-.featured-section { margin-bottom: 2rem; }
+.featured-section { margin-bottom: 1.5rem; }
 .featured-header { display: flex; align-items: center; gap: .5rem; margin-bottom: 1rem; }
 .featured-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--text-3); opacity: .5; flex-shrink: 0; }
 .featured-label {
@@ -407,27 +424,12 @@ function getFavicon(website: string): string {
   text-decoration: none;
 }
 
-/* ── Search row ── */
-.search-row {
+/* ── Count row ── */
+.count-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  justify-content: flex-end;
+  margin: 0 0 1rem;
 }
-.search-input {
-  flex: 1;
-  max-width: 360px;
-  padding: .5rem .875rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg);
-  font-size: .875rem;
-  color: var(--text);
-  outline: none;
-  transition: border-color .15s;
-}
-.search-input:focus { border-color: var(--text-2); }
 .actor-count { font-size: .8125rem; color: var(--text-3); }
 
 /* ── Grid ── */
@@ -463,11 +465,42 @@ function getFavicon(website: string): string {
 }
 .actor-card.hidden { display: none; }
 
+/* ── Favicon with fallback initial ── */
+.favicon-wrap {
+  --fw: 22px;
+  position: relative;
+  width: var(--fw);
+  height: var(--fw);
+  border-radius: 3px;
+  background: var(--fav-accent, #64748b);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.favicon-wrap::before {
+  content: attr(data-initial);
+  font-family: var(--font-sans);
+  font-size: .5625rem;
+  font-weight: 800;
+  color: rgba(255,255,255,.9);
+  line-height: 1;
+}
+.favicon-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 2px;
+  background: var(--bg);
+}
+
 /* ── Shared card elements ── */
 .card-orientations { position: absolute; top: 1.25rem; right: 1.25rem; display: flex; gap: .3rem; }
 .card-orient-icon { width: 20px; height: 20px; object-fit: contain; opacity: .85; }
 .card-name-row { display: flex; align-items: center; gap: .625rem; padding-right: 3.5rem; }
-.card-favicon { width: 22px; height: 22px; object-fit: contain; border-radius: 3px; flex-shrink: 0; opacity: .8; }
 .card-name {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.0625rem;

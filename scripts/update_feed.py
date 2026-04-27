@@ -19,46 +19,100 @@ import anthropic
 
 # ── Configuration ────────────────────────────────────────────────────────────
 
-LOOKBACK_DAYS = 5       # How far back to look for new articles
-MAX_CANDIDATES = 20     # Max articles to evaluate per run (controls cost)
+LOOKBACK_DAYS = 7       # How far back to look (was 5 — widened to reduce dry-run risk)
+MAX_CANDIDATES = 30     # Max articles to evaluate per run (was 20)
 MAX_NEW_ENTRIES = 8     # Max articles to actually add per run
 NEWS_JSON = "src/data/news.json"
 
-# RSS feeds to poll. Add more as discovered.
+# RSS feeds — all URLs verified live as of 2026-04-27.
+# Organised by thematic cluster for easy maintenance.
 RSS_FEEDS = [
+    # ── Ecological / regenerative ──────────────────────────────────────────
+    # High volume, consistently on-topic
     {"url": "https://www.resilience.org/feed/",
      "name": "Resilience.org"},
-    {"url": "https://democracynext.org/feed/",
-     "name": "DemocracyNext"},
+    # Post-growth, local economies, Slow Food adjacent
+    {"url": "https://localfutures.org/feed/",
+     "name": "Local Futures"},
+    # Rights of nature legal news
     {"url": "https://www.garn.org/feed/",
      "name": "GARN"},
-    {"url": "https://www.involve.org.uk/feed",
-     "name": "Involve"},
-    {"url": "https://globalchallenges.org/feed/",
-     "name": "Global Challenges Foundation"},
-    {"url": "https://theconversation.com/articles.atom",
-     "name": "The Conversation"},
+    # Global south environmental reporting
+    {"url": "https://www.ipsnews.net/feed/",
+     "name": "IPS News"},
+    # Sharing economy, commons, community
+    {"url": "https://www.shareable.net/feed/",
+     "name": "Shareable"},
+    # Justice / ecology / social movements
+    {"url": "https://www.yesmagazine.org/feed",
+     "name": "YES! Magazine"},
+
+    # ── Deliberative democracy / participation ─────────────────────────────
+    # Dedicated citizens-assembly outlet
+    {"url": "https://democracynext.org/feed/",
+     "name": "DemocracyNext"},
+    # Democratic theory, global governance reform
+    {"url": "https://www.opendemocracy.net/feed/",
+     "name": "openDemocracy"},
+    # Civil society, nonprofit governance
+    {"url": "https://nonprofitquarterly.org/feed/",
+     "name": "Nonprofit Quarterly"},
+    # Commons practices and governance resources
+    {"url": "https://commonslibrary.org/feed/",
+     "name": "Commons Library"},
+
+    # ── Systems / tech / civic innovation ─────────────────────────────────
+    # Civic tech aggregator — tools, platforms, experiments
+    {"url": "https://civictech.guide/feed/",
+     "name": "Civic Tech Guide"},
+    # Climate data and systems science journalism
+    {"url": "https://www.carbonbrief.org/feed/",
+     "name": "Carbon Brief"},
+    # Climate investigation reporting
     {"url": "https://insideclimatenews.org/feed/",
      "name": "Inside Climate News"},
-    {"url": "https://www.commondreams.org/feed",
-     "name": "Common Dreams"},
+
+    # ── Economics / transition ─────────────────────────────────────────────
+    # New Economics Foundation — wellbeing, post-growth policy
+    {"url": "https://neweconomics.org/feed",
+     "name": "New Economics Foundation"},
+    # Existential risk / global governance think-tank
+    {"url": "https://globalchallenges.org/feed/",
+     "name": "Global Challenges Foundation"},
+
+    # ── Broad academic / international ─────────────────────────────────────
+    # Large quality academic feed — good signal when filtered
+    {"url": "https://theconversation.com/articles.atom",
+     "name": "The Conversation"},
 ]
 
-# Keyword pre-filter — only articles containing one of these go to Claude.
-# Keeps cost low by eliminating clearly off-topic articles before API calls.
+# Keyword pre-filter — only articles containing one of these strings
+# (case-insensitive) pass to Claude. Keeps API cost minimal.
 KEYWORDS = [
+    # Ecological / land
     "agroecology", "rewilding", "rights of nature", "rights of the",
+    "food sovereignty", "biodiversity", "planetary boundaries",
+    "regenerative", "bioregion", "ecocide", "ecosystem restoration",
+    "land rights", "ocean governance", "water governance",
+    "seed sovereignty", "agroforestry", "permaculture",
+    "community land trust", "biocultural", "nature-based",
+    "ecological", "indigenous land", "food system",
+    # Governance / democracy
     "citizens assembly", "citizen assembly", "citizens' assembly",
-    "deliberative democracy", "food sovereignty", "biodiversity",
-    "planetary boundaries", "degrowth", "post-growth", "wellbeing economy",
-    "commons", "ecological", "climate justice", "regenerative",
-    "bioregion", "ecocide", "sortition", "digital democracy",
-    "collective intelligence", "metagovernance", "earth governance",
-    "planetary governance", "indigenous land", "food system",
+    "deliberative democracy", "sortition", "digital democracy",
     "participatory", "climate assembly", "global governance",
-    "ecosystem restoration", "land rights", "ocean governance",
-    "water governance", "seed sovereignty", "agroforestry",
-    "polycrisis", "climate collapse", "just transition",
+    "degrowth", "post-growth", "wellbeing economy",
+    "commons", "metagovernance", "earth governance",
+    "planetary governance", "collective intelligence",
+    "cooperative", "cooperatives", "commons-based",
+    "climate justice", "just transition", "polycrisis",
+    "doughnut economics", "circular economy",
+    "transition towns", "community resilience",
+    # Systems / civic tech
+    "civic tech", "open data", "digital twin",
+    "satellite monitoring", "blockchain governance",
+    # Cultural / futures
+    "experiential futures", "futures literacy",
 ]
 
 # ── Prompts ──────────────────────────────────────────────────────────────────
@@ -138,7 +192,6 @@ def get_og_image(url: str) -> str:
             "Accept": "text/html",
         }
         r = requests.get(url, timeout=12, headers=headers)
-        # Try og:image
         match = re.search(
             r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
             r.text, re.IGNORECASE
@@ -159,7 +212,6 @@ def is_relevant(text: str) -> bool:
 
 
 def load_news() -> tuple[list, set]:
-    """Load news.json, return (data, set_of_slugs)."""
     with open(NEWS_JSON, encoding="utf-8") as f:
         data = json.load(f)
     slugs = {item["slug"] for item in data}
@@ -167,7 +219,6 @@ def load_news() -> tuple[list, set]:
 
 
 def load_existing_urls() -> set:
-    """Get all source URLs already in the feed."""
     with open(NEWS_JSON, encoding="utf-8") as f:
         data = json.load(f)
     return {item.get("sourceUrl", "") for item in data}
@@ -179,14 +230,19 @@ def fetch_candidates(cutoff: datetime, existing_urls: set) -> list:
     """Fetch and keyword-filter new articles from all RSS feeds."""
     candidates = []
     seen_urls = set(existing_urls)
+    feed_stats = []
 
     for feed_info in RSS_FEEDS:
+        feed_name = feed_info["name"]
         try:
             feed = feedparser.parse(feed_info["url"])
             if feed.bozo and not feed.entries:
-                print(f"  Warning: could not parse {feed_info['url']}")
+                print(f"  ✗ {feed_name}: parse error")
+                feed_stats.append((feed_name, 0, 0))
                 continue
 
+            total_recent = 0
+            matched = 0
             for entry in feed.entries:
                 pub = entry.get("published_parsed") or entry.get("updated_parsed")
                 if not pub:
@@ -195,6 +251,7 @@ def fetch_candidates(cutoff: datetime, existing_urls: set) -> list:
                 if pub_dt < cutoff:
                     continue
 
+                total_recent += 1
                 url = entry.get("link", "").strip()
                 if not url or url in seen_urls:
                     continue
@@ -204,8 +261,7 @@ def fetch_candidates(cutoff: datetime, existing_urls: set) -> list:
                     entry.get("summary", "") or entry.get("description", "")
                 )[:600]
 
-                combined = f"{title} {description}"
-                if not is_relevant(combined):
+                if not is_relevant(f"{title} {description}"):
                     continue
 
                 candidates.append({
@@ -213,14 +269,23 @@ def fetch_candidates(cutoff: datetime, existing_urls: set) -> list:
                     "url": url,
                     "date": pub_dt.strftime("%Y-%m-%d"),
                     "description": description,
-                    "source": feed_info["name"],
+                    "source": feed_name,
                 })
                 seen_urls.add(url)
+                matched += 1
+
+            feed_stats.append((feed_name, total_recent, matched))
 
         except Exception as e:
-            print(f"  Warning: feed error for {feed_info['url']}: {e}")
+            print(f"  ✗ {feed_name}: {e}")
+            feed_stats.append((feed_name, 0, 0))
 
-    # Sort newest first
+    # Per-feed summary
+    print("\nFeed results (recent entries / keyword matches):")
+    for name, total, matched in feed_stats:
+        marker = "✓" if matched > 0 else "·"
+        print(f"  {marker} {name}: {total} recent, {matched} matched")
+
     candidates.sort(key=lambda c: c["date"], reverse=True)
     return candidates
 
@@ -235,13 +300,12 @@ def generate_entry(client: anthropic.Anthropic, candidate: dict) -> dict | None:
     )
     try:
         msg = client.messages.create(
-            model="claude-haiku-4-5-20251001",
+            model="claude-haiku-4-5",
             max_tokens=450,
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": prompt}],
         )
         text = msg.content[0].text.strip()
-        # Strip any accidental markdown fences
         text = re.sub(r"^```json?\s*", "", text)
         text = re.sub(r"\s*```$", "", text)
         return json.loads(text)
@@ -263,20 +327,20 @@ def main() -> int:
     cutoff = datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS)
 
     print(f"The Orbital — feed updater")
-    print(f"Looking back {LOOKBACK_DAYS} days (since {cutoff.strftime('%Y-%m-%d')})")
-    print(f"Polling {len(RSS_FEEDS)} sources...\n")
+    print(f"Lookback: {LOOKBACK_DAYS} days (since {cutoff.strftime('%Y-%m-%d')})")
+    print(f"Sources:  {len(RSS_FEEDS)}")
+    print(f"Max candidates: {MAX_CANDIDATES}, max new entries: {MAX_NEW_ENTRIES}\n")
 
     existing_news, existing_slugs = load_news()
     existing_urls = load_existing_urls()
 
     candidates = fetch_candidates(cutoff, existing_urls)
-    print(f"Found {len(candidates)} keyword-matching candidates\n")
+    print(f"\n{len(candidates)} keyword-matching candidates\n")
 
     if not candidates:
         print("Nothing new — done.")
         return 0
 
-    # Cap to avoid excessive API cost
     candidates = candidates[:MAX_CANDIDATES]
 
     new_entries = []
@@ -286,20 +350,16 @@ def main() -> int:
         if len(new_entries) >= MAX_NEW_ENTRIES:
             break
 
-        title_short = candidate["title"][:65]
-        print(f"Evaluating: {title_short}")
-
+        print(f"Evaluating: {candidate['title'][:65]}")
         result = generate_entry(client, candidate)
         if not result:
             print("  → skipped (API error)")
             continue
-
         if not result.get("include"):
             print("  → not relevant")
             continue
 
         slug = result.get("slug") or slugify(candidate["title"])
-        # Ensure uniqueness
         base_slug = slug[:55]
         final_slug = base_slug
         suffix = 2
@@ -307,7 +367,6 @@ def main() -> int:
             final_slug = f"{base_slug}-{suffix}"
             suffix += 1
 
-        print(f"  Fetching image...")
         image = get_og_image(candidate["url"])
 
         entry = {
@@ -327,19 +386,17 @@ def main() -> int:
 
         new_entries.append(entry)
         added_slugs.add(final_slug)
-        orients = ", ".join(entry["orientations"])
-        print(f"  → added [{orients}]: {final_slug}")
+        print(f"  → [{', '.join(entry['orientations'])}] {final_slug}")
 
     if not new_entries:
-        print("\nNo new entries passed the relevance filter — done.")
+        print("\nNo entries passed the relevance filter — done.")
         return 0
 
-    # Prepend (index.astro sorts by date anyway)
     updated = new_entries + existing_news
     with open(NEWS_JSON, "w", encoding="utf-8") as f:
         json.dump(updated, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✓ Added {len(new_entries)} entries to {NEWS_JSON}:")
+    print(f"\n✓ Added {len(new_entries)} entries:")
     for e in new_entries:
         print(f"  {e['date']}  {e['slug']}")
 
@@ -347,5 +404,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    count = main()
-    sys.exit(0)
+    sys.exit(0 if main() >= 0 else 1)

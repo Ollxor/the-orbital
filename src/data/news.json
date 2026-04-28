@@ -1,5 +1,52 @@
 [
   {
+    "slug": "nature-language-decline-ecological-vocabulary",
+    "title": "As nature terms disappear, so does our ability to see and protect the natural world",
+    "date": "2026-04-27",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-lureofadventure-35660258-1-scaled.jpg",
+    "imageAlt": "As nature terms disappear, so does our ability to see and protect the natural world",
+    "summary": "Research documents steep decline in nature-related terminology across books and music, while citizen science, children's literature, and practices like gardening rebuild ecological vocabulary and perception.",
+    "body": "",
+    "insight": "Language loss directly undermines capacity for collective environmental governance — we cannot protect or deliberate about ecosystems we lack words to name and think with.",
+    "actors": [],
+    "tags": [
+      "ecological-vocabulary",
+      "nature-literacy",
+      "citizen-science",
+      "cultural-narrative",
+      "biocultural-diversity"
+    ],
+    "orientations": [
+      "GARDEN",
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-27/as-nature-terms-disappear-so-does-our-ability-to-see-and-protect-the-natural-world/"
+  },
+  {
+    "slug": "modernity-collapse-adaptation-overshoot",
+    "title": "In conversation: Dave Murphy and Tom Murphy – if modernity can’t last forever, what comes next?",
+    "date": "2026-04-27",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-kelly-4320479-1024x682.jpg",
+    "imageAlt": "In conversation: Dave Murphy and Tom Murphy – if modernity can’t last forever, what comes next?",
+    "summary": "Dave and Tom Murphy debate whether modern industrial civilization can adapt within planetary limits or faces inevitable collapse, and what obligations emerge during ecological overshoot.",
+    "body": "",
+    "insight": "Clarifying whether adaptation or transformation is possible fundamentally shapes which governance models are viable—assembly-based systems optimized for incremental change versus mystery-work preparing for discontinuous transitions.",
+    "actors": [],
+    "tags": [
+      "polycrisis",
+      "collapse-adaptation",
+      "system-transformation",
+      "ecological-overshoot",
+      "futures-thinking"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-27/in-conversation-dave-murphy-and-tom-murphy-if-modernity-cant-last-forever-what-comes-next/"
+  },
+  {
     "slug": "indigenous-peacebuilding-biodiversity-conflicts",
     "title": "Why Indigenous Peacebuilding Matters in Today’s World",
     "date": "2026-04-24",

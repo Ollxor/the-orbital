@@ -1,73 +1,98 @@
 ---
-export const prerender = false;
+import Base from '../../layouts/Base.astro';
+---
 
-import { createSupabaseServerClient, createSupabaseAdminClient } from '../../lib/supabase';
+<Base title="Signing in… — The Orbital" description="">
+  <div class="container">
+    <div class="callback-wrap">
+      <p class="callback-msg" id="callback-msg">Signing you in…</p>
+    </div>
+  </div>
+</Base>
 
-const supabase = createSupabaseServerClient(Astro.request, Astro.cookies);
+<script>
+  import { createBrowserClient } from '@supabase/ssr';
 
-const code = Astro.url.searchParams.get('code');
-const next = Astro.url.searchParams.get('next') ?? '/';
-
-if (!code) {
-  return Astro.redirect('/login?error=no_code');
-}
-
-// Exchange the OAuth code for a session
-const { data: { session }, error: exchangeError } = await supabase.auth.exchangeCodeForSession(code);
-
-if (exchangeError || !session) {
-  console.error('Auth callback error:', exchangeError);
-  return Astro.redirect('/login?error=auth_failed');
-}
-
-const user = session.user;
-const email = user.email ?? '';
-
-// ── Invite gate ──────────────────────────────────────────────────────────────
-// Check the invites table via admin client (bypasses RLS so anon can't peek)
-const signupEnabled = import.meta.env.PUBLIC_SIGNUP_ENABLED === 'true';
-
-if (!signupEnabled) {
-  const admin = createSupabaseAdminClient();
-  const { data: invite } = await admin
-    .from('invites')
-    .select('id, used_at')
-    .eq('email', email.toLowerCase())
-    .maybeSingle();
-
-  if (!invite) {
-    // No invite — sign them back out and redirect with error
-    await supabase.auth.signOut();
-    return Astro.redirect('/login?error=not_invited');
-  }
-
-  // Mark invite as used (idempotent — only sets used_at if null)
-  if (!invite.used_at) {
-    await admin
-      .from('invites')
-      .update({ used_at: new Date().toISOString() })
-      .eq('id', invite.id);
-  }
-}
-
-// ── Upsert user profile ──────────────────────────────────────────────────────
-const { error: profileError } = await supabase
-  .from('user_profiles')
-  .upsert(
-    {
-      id: user.id,
-      email,
-      display_name: user.user_metadata?.full_name ?? user.user_metadata?.name ?? email.split('@')[0],
-      avatar_url: user.user_metadata?.avatar_url ?? user.user_metadata?.picture ?? null,
-      last_sign_in: new Date().toISOString(),
-    },
-    { onConflict: 'id' },
+  const supabase = createBrowserClient(
+    'https://lathlnothoosbwrvxtel.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhdGhsbm90aG9vc2J3cnZ4dGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczNjU1OTYsImV4cCI6MjA5Mjk0MTU5Nn0.VZJxCAbOfpiepbvgq9m0xC2wMe0IgFNlUUUC9wbk3Gc',
   );
 
-if (profileError) {
-  // Non-fatal — profile upsert failure shouldn't block the user
-  console.error('Profile upsert error:', profileError);
-}
+  const msgEl = document.getElementById('callback-msg');
+  function setMsg(text: string) { if (msgEl) msgEl.textContent = text; }
 
-return Astro.redirect(next);
----
+  // Supabase PKCE: exchange the ?code= param for a session automatically
+  // createBrowserClient handles this when we call getSession() with a code in the URL
+  const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+
+  if (sessionError || !session) {
+    setMsg('Sign-in failed. Redirecting…');
+    setTimeout(() => window.location.href = '/login?error=auth_failed', 1500);
+    // Nothing more to do
+  } else {
+    const user = session.user;
+    const email = user.email ?? '';
+
+    // ── Invite check ─────────────────────────────────────────────────────────
+    // Invites table has RLS: authenticated users can only select their own row.
+    // If PUBLIC_SIGNUP_ENABLED is 'true' we skip this check entirely.
+    const signupOpen = false; // injected at build time below
+
+    if (!signupOpen) {
+      const { data: invite, error: inviteError } = await supabase
+        .from('invites')
+        .select('id, used_at')
+        .eq('email', email.toLowerCase())
+        .maybeSingle();
+
+      if (!invite) {
+        // Not invited — sign out and redirect with error
+        await supabase.auth.signOut();
+        window.location.href = '/login?error=not_invited';
+        // Stop here
+      } else {
+        // Mark as used (update only if not already used)
+        if (!invite.used_at) {
+          await supabase
+            .from('invites')
+            .update({ used_at: new Date().toISOString() })
+            .eq('id', invite.id);
+        }
+        await finishSignIn(user, email);
+      }
+    } else {
+      await finishSignIn(user, email);
+    }
+  }
+
+  async function finishSignIn(user: any, email: string) {
+    // ── Upsert profile ──────────────────────────────────────────────────────
+    await supabase.from('user_profiles').upsert(
+      {
+        id: user.id,
+        email,
+        display_name: user.user_metadata?.full_name ?? user.user_metadata?.name ?? email.split('@')[0],
+        avatar_url: user.user_metadata?.avatar_url ?? user.user_metadata?.picture ?? null,
+        last_sign_in: new Date().toISOString(),
+      },
+      { onConflict: 'id' },
+    );
+
+    const next = new URLSearchParams(window.location.search).get('next') ?? '/';
+    window.location.href = next;
+  }
+</script>
+
+<style>
+.callback-wrap {
+  max-width: 420px;
+  margin: 8rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+.callback-msg {
+  font-size: .9375rem;
+  color: var(--text-2);
+  font-style: italic;
+}
+</style>

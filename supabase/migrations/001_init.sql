@@ -43,7 +43,11 @@ create table if not exists public.invites (
 
 alter table public.invites enable row level security;
 
--- No policies: only accessible via service role key
+-- Authenticated users can read their own invite row (needed for client-side invite check)
+-- They cannot insert, update, or delete — that's service-role-only via invite-user.py
+create policy "users: check own invite"
+  on public.invites for select
+  using (auth.jwt()->>'email' = email);
 
 -- ── reads (Phase 2 — created now, populated later) ───────────────────────────
 -- One row per article/video a user has read.

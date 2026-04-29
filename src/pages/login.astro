@@ -1,14 +1,5 @@
 ---
-export const prerender = false;
-
 import Base from '../layouts/Base.astro';
-import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../lib/supabase';
-
-// If already signed in, bounce to home
-const session = Astro.locals.session;
-if (session) {
-  return Astro.redirect('/');
-}
 ---
 
 <Base title="Sign in — The Orbital" description="Sign in to The Orbital">
@@ -16,6 +7,8 @@ if (session) {
     <div class="login-wrap">
       <h1 class="login-title">Sign in</h1>
       <p class="login-sub">The Orbital is currently invite-only. If you have an invitation, sign in below.</p>
+
+      <div id="error-msg" class="error-msg" style="display:none"></div>
 
       <button id="google-btn" class="google-btn">
         <svg class="google-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -32,27 +25,39 @@ if (session) {
   </div>
 </Base>
 
-<script define:vars={{ SUPABASE_URL, SUPABASE_ANON_KEY }}>
+<script>
   import { createBrowserClient } from '@supabase/ssr';
 
-  const supabase = createBrowserClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  const supabase = createBrowserClient(
+    'https://lathlnothoosbwrvxtel.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhdGhsbm90aG9vc2J3cnZ4dGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczNjU1OTYsImV4cCI6MjA5Mjk0MTU5Nn0.VZJxCAbOfpiepbvgq9m0xC2wMe0IgFNlUUUC9wbk3Gc',
+  );
+
+  // Show error from query param (e.g. ?error=not_invited)
+  const params = new URLSearchParams(window.location.search);
+  const err = params.get('error');
+  const errEl = document.getElementById('error-msg');
+  if (err && errEl) {
+    const msgs: Record<string, string> = {
+      not_invited: "This email address hasn't been invited yet. Get in touch if you'd like access.",
+      auth_failed:  "Something went wrong with sign-in. Please try again.",
+    };
+    errEl.textContent = msgs[err] ?? 'Sign-in error. Please try again.';
+    errEl.style.display = 'block';
+  }
+
+  // If already signed in, redirect home
+  const { data: { session } } = await supabase.auth.getSession();
+  if (session) window.location.href = '/';
 
   document.getElementById('google-btn')?.addEventListener('click', async () => {
-    const btn = document.getElementById('google-btn');
+    const btn = document.getElementById('google-btn') as HTMLButtonElement | null;
     if (btn) btn.disabled = true;
-
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: {
-        redirectTo: `${window.location.origin}/auth/callback`,
-      },
+      options: { redirectTo: `${window.location.origin}/auth/callback` },
     });
-
-    if (error) {
-      console.error('OAuth error:', error);
-      if (btn) btn.disabled = false;
-    }
-    // On success the browser navigates to Google — nothing else needed here
+    if (error && btn) btn.disabled = false;
   });
 </script>
 
@@ -75,6 +80,17 @@ if (session) {
   line-height: 1.6;
   margin-bottom: 2rem;
 }
+.error-msg {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  font-size: .875rem;
+  line-height: 1.5;
+  padding: .75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
 .google-btn {
   display: inline-flex;
   align-items: center;
@@ -94,10 +110,7 @@ if (session) {
   border-color: #aaa;
   box-shadow: 0 1px 4px rgba(0,0,0,.08);
 }
-.google-btn:disabled {
-  opacity: .6;
-  cursor: not-allowed;
-}
+.google-btn:disabled { opacity: .6; cursor: not-allowed; }
 .google-icon { width: 20px; height: 20px; flex-shrink: 0; }
 .login-note {
   margin-top: 1.75rem;

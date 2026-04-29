@@ -1,10 +1,21 @@
 ---
-export const prerender = false;
-
-import { createSupabaseServerClient } from '../../lib/supabase';
-
-const supabase = createSupabaseServerClient(Astro.request, Astro.cookies);
-await supabase.auth.signOut();
-
-return Astro.redirect('/');
+import Base from '../../layouts/Base.astro';
 ---
+
+<Base title="Signing out… — The Orbital" description="">
+  <div class="container" style="text-align:center;margin-top:6rem;">
+    <p style="color:var(--text-2);font-style:italic;font-size:.9375rem">Signing you out…</p>
+  </div>
+</Base>
+
+<script>
+  import { createBrowserClient } from '@supabase/ssr';
+
+  const supabase = createBrowserClient(
+    'https://lathlnothoosbwrvxtel.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhdGhsbm90aG9vc2J3cnZ4dGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczNjU1OTYsImV4cCI6MjA5Mjk0MTU5Nn0.VZJxCAbOfpiepbvgq9m0xC2wMe0IgFNlUUUC9wbk3Gc',
+  );
+
+  await supabase.auth.signOut();
+  window.location.href = '/';
+</script>

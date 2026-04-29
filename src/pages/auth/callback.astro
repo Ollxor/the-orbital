@@ -6,105 +6,174 @@ import Base from '../../layouts/Base.astro';
   <div class="container">
     <div class="callback-wrap">
       <p class="callback-msg" id="callback-msg">Signing you in…</p>
+      <pre id="debug-out" class="debug-out" style="display:none"></pre>
     </div>
   </div>
 </Base>
 
 <script>
-  import { createBrowserClient } from '@supabase/ssr';
+  import { createClient } from '@supabase/supabase-js';
 
   const SUPABASE_URL = 'https://lathlnothoosbwrvxtel.supabase.co';
   const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhdGhsbm90aG9vc2J3cnZ4dGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczNjU1OTYsImV4cCI6MjA5Mjk0MTU5Nn0.VZJxCAbOfpiepbvgq9m0xC2wMe0IgFNlUUUC9wbk3Gc';
 
-  // createBrowserClient sets detectSessionInUrl:true + flowType:'pkce' by default.
-  // It automatically exchanges the ?code= param — we must NOT call
-  // exchangeCodeForSession() manually or we'll double-consume the code and hang.
-  const supabase = createBrowserClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  const debugLog: string[] = [];
+  function log(...args: any[]) {
+    const line = '[callback] ' + args.map(a =>
+      typeof a === 'object' ? JSON.stringify(a, null, 2) : String(a)
+    ).join(' ');
+    console.log(line);
+    debugLog.push(line);
+  }
+
+  // Disable auto-detect so we control the exchange explicitly
+  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    auth: {
+      persistSession: true,
+      autoRefreshToken: true,
+      detectSessionInUrl: false,
+      flowType: 'pkce',
+    },
+  });
+  (window as any).__supabase = supabase;
 
   const msgEl = document.getElementById('callback-msg');
+  const debugEl = document.getElementById('debug-out');
   function setMsg(s: string) { if (msgEl) msgEl.textContent = s; }
+  function showDebug() {
+    if (debugEl) {
+      debugEl.textContent = debugLog.join('\n');
+      debugEl.style.display = 'block';
+    }
+  }
 
   let handled = false;
 
-  function bail(reason: string) {
+  function bail(reason: string, redirect: boolean = true) {
     if (handled) return;
     handled = true;
-    setMsg('Sign-in failed. Redirecting…');
-    console.error('[auth/callback] bail:', reason);
-    setTimeout(() => { window.location.href = '/login?error=auth_failed'; }, 1500);
+    log('BAIL:', reason);
+    setMsg('Sign-in failed. Redirecting in 4s…');
+    showDebug();
+    if (redirect) {
+      setTimeout(() => { window.location.href = '/login?error=auth_failed'; }, 4000);
+    }
   }
 
-  // Wait for the client to finish the auto-exchange and emit SIGNED_IN
-  const { data: { subscription } } = supabase.auth.onAuthStateChange(
-    async (event, session) => {
-      if (handled) return;
+  log('URL:', window.location.href);
+  log('search:', window.location.search);
+  log('hash:', window.location.hash);
 
-      if (event === 'SIGNED_IN' && session) {
-        handled = true;
-        subscription.unsubscribe();
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  const errParam = params.get('error');
+  const errDesc = params.get('error_description');
 
-        const user = session.user;
-        const email = (user.email ?? '').toLowerCase();
+  if (errParam) {
+    bail(`OAuth provider error: ${errParam} — ${errDesc ?? 'no description'}`);
+  } else if (!code) {
+    bail('No ?code= param in callback URL');
+  } else {
+    log('exchanging code...');
+    setMsg('Verifying your sign-in…');
 
-        // ── Invite check ────────────────────────────────────────────────────
-        // RLS allows authenticated users to SELECT their own invite row only.
-        const { data: invite } = await supabase
-          .from('invites')
-          .select('id, used_at')
-          .eq('email', email)
-          .maybeSingle();
-
-        if (!invite) {
-          await supabase.auth.signOut();
-          window.location.href = '/login?error=not_invited';
+    supabase.auth.exchangeCodeForSession(code)
+      .then(async ({ data, error }) => {
+        if (error) {
+          bail('exchangeCodeForSession error: ' + error.message);
+          return;
+        }
+        if (!data?.session) {
+          bail('exchange returned no session');
           return;
         }
 
-        // Mark invite used (idempotent)
-        if (!invite.used_at) {
-          await supabase
-            .from('invites')
-            .update({ used_at: new Date().toISOString() })
-            .eq('id', invite.id);
-        }
+        log('exchange OK, user:', data.session.user.email);
+        await processSession(data.session);
+      })
+      .catch((e) => {
+        bail('exchange threw: ' + (e?.message ?? String(e)));
+      });
+  }
 
-        // ── Upsert profile ───────────────────────────────────────────────────
-        await supabase.from('user_profiles').upsert(
-          {
-            id: user.id,
-            email,
-            display_name:
-              user.user_metadata?.full_name ??
-              user.user_metadata?.name ??
-              email.split('@')[0],
-            avatar_url:
-              user.user_metadata?.avatar_url ??
-              user.user_metadata?.picture ??
-              null,
-            last_sign_in: new Date().toISOString(),
-          },
-          { onConflict: 'id' },
-        );
+  async function processSession(session: any) {
+    if (handled) return;
+    const user = session.user;
+    const email = (user.email ?? '').toLowerCase();
 
-        const next = new URLSearchParams(window.location.search).get('next') ?? '/';
-        window.location.href = next;
+    setMsg('Verifying your invitation…');
+    log('checking invite for', email);
 
-      } else if (event === 'INITIAL_SESSION' && !session) {
-        // Auto-exchange failed or no code in URL — bail after a short grace period
-        // (give SIGNED_IN a moment to arrive before giving up)
-        setTimeout(() => bail('INITIAL_SESSION with no session'), 3000);
+    try {
+      const { data: invite, error: inviteErr } = await supabase
+        .from('invites')
+        .select('id, used_at')
+        .eq('email', email)
+        .maybeSingle();
+
+      if (inviteErr) {
+        log('invite query error:', inviteErr.message);
+        // Don't bail — let it through if RLS/query fails, easier to debug
+        // Actually, security-wise we should bail. But surface the error.
+        bail('invite check failed: ' + inviteErr.message);
+        return;
       }
-    }
-  );
 
-  // Hard timeout — if nothing happens in 12 seconds, something is very wrong
-  setTimeout(() => bail('timeout waiting for SIGNED_IN'), 12000);
+      if (!invite) {
+        log('no invite found, signing out');
+        handled = true;
+        setMsg('Email not on invite list. Redirecting…');
+        await supabase.auth.signOut();
+        setTimeout(() => { window.location.href = '/login?error=not_invited'; }, 1200);
+        return;
+      }
+
+      log('invite found, used_at =', invite.used_at);
+
+      if (!invite.used_at) {
+        await supabase.from('invites')
+          .update({ used_at: new Date().toISOString() })
+          .eq('id', invite.id);
+      }
+
+      // Upsert profile (best-effort)
+      const { error: profileErr } = await supabase.from('user_profiles').upsert(
+        {
+          id: user.id,
+          email,
+          display_name:
+            user.user_metadata?.full_name ??
+            user.user_metadata?.name ??
+            email.split('@')[0],
+          avatar_url:
+            user.user_metadata?.avatar_url ??
+            user.user_metadata?.picture ??
+            null,
+          last_sign_in: new Date().toISOString(),
+        },
+        { onConflict: 'id' },
+      );
+      if (profileErr) log('profile upsert error (non-fatal):', profileErr.message);
+
+      handled = true;
+      setMsg('Welcome. Redirecting…');
+      const next = new URLSearchParams(window.location.search).get('next') ?? '/';
+      window.location.href = next;
+    } catch (e: any) {
+      bail('processSession threw: ' + (e?.message ?? String(e)));
+    }
+  }
+
+  // Hard timeout safety net
+  setTimeout(() => {
+    if (!handled) bail('15s timeout — nothing completed');
+  }, 15000);
 </script>
 
 <style>
 .callback-wrap {
-  max-width: 420px;
-  margin: 8rem auto;
+  max-width: 600px;
+  margin: 6rem auto;
   text-align: center;
   padding: 0 1rem;
 }
@@ -112,5 +181,20 @@ import Base from '../../layouts/Base.astro';
   font-size: .9375rem;
   color: var(--text-2);
   font-style: italic;
+}
+.debug-out {
+  margin-top: 2rem;
+  text-align: left;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: .75rem;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: #444;
+  max-height: 400px;
+  overflow: auto;
 }
 </style>

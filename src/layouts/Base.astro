@@ -90,11 +90,12 @@ const currentPath = Astro.url.pathname;
 
   <script>
     // Client-side auth state — updates the Sign in / user menu without SSR
-    import { createBrowserClient } from '@supabase/ssr';
+    import { createClient } from '@supabase/supabase-js';
 
-    const supabase = createBrowserClient(
+    const supabase = createClient(
       'https://lathlnothoosbwrvxtel.supabase.co',
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhdGhsbm90aG9vc2J3cnZ4dGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczNjU1OTYsImV4cCI6MjA5Mjk0MTU5Nn0.VZJxCAbOfpiepbvgq9m0xC2wMe0IgFNlUUUC9wbk3Gc',
+      { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false } },
     );
 
     async function updateAuthNav() {

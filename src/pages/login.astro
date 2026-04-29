@@ -26,45 +26,58 @@ import Base from '../layouts/Base.astro';
 </Base>
 
 <script>
-  import { createBrowserClient } from '@supabase/ssr';
+  import { createClient } from '@supabase/supabase-js';
 
   const SUPABASE_URL = 'https://lathlnothoosbwrvxtel.supabase.co';
   const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhdGhsbm90aG9vc2J3cnZ4dGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczNjU1OTYsImV4cCI6MjA5Mjk0MTU5Nn0.VZJxCAbOfpiepbvgq9m0xC2wMe0IgFNlUUUC9wbk3Gc';
 
-  const supabase = createBrowserClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    auth: {
+      persistSession: true,
+      autoRefreshToken: true,
+      detectSessionInUrl: false,
+      flowType: 'pkce',
+    },
+  });
+
+  // Make available for console debugging
+  (window as any).__supabase = supabase;
 
   // Show error from ?error= param
   const params = new URLSearchParams(window.location.search);
-  const err = params.get('error');
+  const errParam = params.get('error');
   const errEl = document.getElementById('error-msg');
-  if (err && errEl) {
-    const msgs = {
+  if (errParam && errEl) {
+    const msgs: Record<string, string> = {
       not_invited: "This email address hasn't been invited yet. Get in touch if you'd like access.",
       auth_failed: 'Something went wrong with sign-in. Please try again.',
     };
-    errEl.textContent = (msgs as Record<string, string>)[err] ?? 'Sign-in error. Please try again.';
+    errEl.textContent = msgs[errParam] ?? 'Sign-in error. Please try again.';
     errEl.style.display = 'block';
   }
 
   // If already signed in, bounce home
   supabase.auth.getSession().then(({ data }) => {
-    if (data.session) window.location.href = '/';
+    if (data.session) {
+      console.log('[login] already signed in, redirecting');
+      window.location.href = '/';
+    }
   });
 
-  // Button handler — wire up immediately so there's no async gap
   const btn = document.getElementById('google-btn') as HTMLButtonElement;
   const label = document.getElementById('btn-label');
 
-  btn?.addEventListener('click', () => {
+  btn?.addEventListener('click', async () => {
     btn.disabled = true;
     if (label) label.textContent = 'Redirecting…';
 
-    supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: `${window.location.origin}/auth/callback` },
-    }).then(({ error }) => {
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: { redirectTo: `${window.location.origin}/auth/callback` },
+      });
       if (error) {
-        // Re-enable if something goes wrong before the redirect fires
+        console.error('[login] OAuth error:', error);
         btn.disabled = false;
         if (label) label.textContent = 'Sign in with Google';
         if (errEl) {
@@ -72,8 +85,15 @@ import Base from '../layouts/Base.astro';
           errEl.style.display = 'block';
         }
       }
-      // On success, browser navigates away — nothing else needed
-    });
+    } catch (e: any) {
+      console.error('[login] thrown:', e);
+      btn.disabled = false;
+      if (label) label.textContent = 'Sign in with Google';
+      if (errEl) {
+        errEl.textContent = 'Sign-in error: ' + (e?.message ?? 'unknown');
+        errEl.style.display = 'block';
+      }
+    }
   });
 </script>
 
@@ -122,17 +142,10 @@ import Base from '../layouts/Base.astro';
   cursor: pointer;
   transition: border-color .15s, box-shadow .15s;
 }
-.google-btn:hover {
-  border-color: #aaa;
-  box-shadow: 0 1px 4px rgba(0,0,0,.08);
-}
+.google-btn:hover { border-color: #aaa; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
 .google-btn:disabled { opacity: .6; cursor: not-allowed; }
 .google-icon { width: 20px; height: 20px; flex-shrink: 0; }
-.login-note {
-  margin-top: 1.75rem;
-  font-size: .8125rem;
-  color: var(--text-3);
-}
+.login-note { margin-top: 1.75rem; font-size: .8125rem; color: var(--text-3); }
 .login-note a { color: var(--text-2); }
 .login-note a:hover { color: var(--text); }
 </style>

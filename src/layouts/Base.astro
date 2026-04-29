@@ -50,6 +50,9 @@ const currentPath = Astro.url.pathname;
         <a href="/about" class={currentPath.startsWith('/about') ? 'active' : ''}>About</a>
         <a href="/contact" class={currentPath.startsWith('/contact') ? 'active' : ''}>Contact</a>
         <a href="/join" class="nav-join">Join →</a>
+        <span class="nav-auth-wrap">
+          <a href="/login" class="nav-auth-link" id="nav-auth-link">Sign in</a>
+        </span>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -83,6 +86,47 @@ const currentPath = Astro.url.pathname;
     const toggle = document.getElementById('nav-toggle');
     const nav = document.getElementById('main-nav');
     toggle?.addEventListener('click', () => nav?.classList.toggle('open'));
+  </script>
+
+  <script>
+    // Client-side auth state — updates the Sign in / user menu without SSR
+    import { createBrowserClient } from '@supabase/ssr';
+
+    const supabase = createBrowserClient(
+      'https://lathlnothoosbwrvxtel.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhdGhsbm90aG9vc2J3cnZ4dGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczNjU1OTYsImV4cCI6MjA5Mjk0MTU5Nn0.VZJxCAbOfpiepbvgq9m0xC2wMe0IgFNlUUUC9wbk3Gc',
+    );
+
+    async function updateAuthNav() {
+      const authLink = document.getElementById('nav-auth-link');
+      if (!authLink) return;
+
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session?.user) {
+        const name = session.user.user_metadata?.name
+          ?? session.user.email?.split('@')[0]
+          ?? 'Account';
+        authLink.textContent = name;
+        authLink.href = '/me';
+        authLink.title = 'Your account';
+        // Add a small sign-out affordance next to the name
+        const wrap = authLink.parentElement;
+        if (wrap && !wrap.querySelector('.nav-signout')) {
+          const so = document.createElement('a');
+          so.href = '/auth/signout';
+          so.className = 'nav-signout';
+          so.textContent = '↩';
+          so.title = 'Sign out';
+          wrap.appendChild(so);
+        }
+      } else {
+        authLink.textContent = 'Sign in';
+        authLink.href = '/login';
+      }
+    }
+
+    updateAuthNav();
+    supabase.auth.onAuthStateChange(() => updateAuthNav());
   </script>
 </body>
 </html>
@@ -165,6 +209,39 @@ const currentPath = Astro.url.pathname;
     border-left: 1px solid var(--border);
     padding-left: .875rem !important;
   }
+  .nav-auth-wrap {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    margin-left: .25rem;
+    border-left: 1px solid var(--border);
+    padding-left: .875rem;
+  }
+  .nav-auth-link {
+    display: flex;
+    align-items: center;
+    font-size: .6875rem;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--text-3) !important;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color .15s;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .nav-auth-link:hover { color: var(--text) !important; }
+  .nav-signout {
+    font-size: .75rem;
+    color: var(--text-3);
+    text-decoration: none;
+    opacity: .6;
+    transition: opacity .15s;
+    flex-shrink: 0;
+  }
+  .nav-signout:hover { opacity: 1; }
 
   .nav-toggle {
     display: none;
@@ -199,6 +276,8 @@ const currentPath = Astro.url.pathname;
     .main-nav.open .nav-links { display: flex; }
     .nav-links a { padding: .6rem 1.25rem; border-bottom: none; font-size: .8rem; }
     .nav-join { border-left: none; margin-left: 0; padding-left: 1.25rem !important; }
+    .nav-auth-wrap { border-left: none; margin-left: 0; padding-left: 1.25rem; }
+    .nav-auth-link { max-width: none; }
   }
 
   /* ── Footer ── */

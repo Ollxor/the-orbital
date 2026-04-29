@@ -1,0 +1,10 @@
+---
+export const prerender = false;
+
+import { createSupabaseServerClient } from '../../lib/supabase';
+
+const supabase = createSupabaseServerClient(Astro.request, Astro.cookies);
+await supabase.auth.signOut();
+
+return Astro.redirect('/');
+---

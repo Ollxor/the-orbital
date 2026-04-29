@@ -12,7 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.7",
-    "better-sqlite3": "^12.9.0"
+    "@astrojs/cloudflare": "^13.2.2",
+    "@supabase/ssr": "^0.10.2",
+    "astro": "^6.1.7"
   }
 }

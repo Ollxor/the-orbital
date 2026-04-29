@@ -1,0 +1,73 @@
+---
+export const prerender = false;
+
+import { createSupabaseServerClient, createSupabaseAdminClient } from '../../lib/supabase';
+
+const supabase = createSupabaseServerClient(Astro.request, Astro.cookies);
+
+const code = Astro.url.searchParams.get('code');
+const next = Astro.url.searchParams.get('next') ?? '/';
+
+if (!code) {
+  return Astro.redirect('/login?error=no_code');
+}
+
+// Exchange the OAuth code for a session
+const { data: { session }, error: exchangeError } = await supabase.auth.exchangeCodeForSession(code);
+
+if (exchangeError || !session) {
+  console.error('Auth callback error:', exchangeError);
+  return Astro.redirect('/login?error=auth_failed');
+}
+
+const user = session.user;
+const email = user.email ?? '';
+
+// ── Invite gate ──────────────────────────────────────────────────────────────
+// Check the invites table via admin client (bypasses RLS so anon can't peek)
+const signupEnabled = import.meta.env.PUBLIC_SIGNUP_ENABLED === 'true';
+
+if (!signupEnabled) {
+  const admin = createSupabaseAdminClient();
+  const { data: invite } = await admin
+    .from('invites')
+    .select('id, used_at')
+    .eq('email', email.toLowerCase())
+    .maybeSingle();
+
+  if (!invite) {
+    // No invite — sign them back out and redirect with error
+    await supabase.auth.signOut();
+    return Astro.redirect('/login?error=not_invited');
+  }
+
+  // Mark invite as used (idempotent — only sets used_at if null)
+  if (!invite.used_at) {
+    await admin
+      .from('invites')
+      .update({ used_at: new Date().toISOString() })
+      .eq('id', invite.id);
+  }
+}
+
+// ── Upsert user profile ──────────────────────────────────────────────────────
+const { error: profileError } = await supabase
+  .from('user_profiles')
+  .upsert(
+    {
+      id: user.id,
+      email,
+      display_name: user.user_metadata?.full_name ?? user.user_metadata?.name ?? email.split('@')[0],
+      avatar_url: user.user_metadata?.avatar_url ?? user.user_metadata?.picture ?? null,
+      last_sign_in: new Date().toISOString(),
+    },
+    { onConflict: 'id' },
+  );
+
+if (profileError) {
+  // Non-fatal — profile upsert failure shouldn't block the user
+  console.error('Profile upsert error:', profileError);
+}
+
+return Astro.redirect(next);
+---

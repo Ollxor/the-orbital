@@ -1,30 +1,5 @@
 [
   {
-    "slug": "critical-minerals-extraction-sacrifice-zones",
-    "title": "The race to mine critical minerals for AI and clean energy is creating ‘sacrifice zones’ that harm water and health of world’s poor",
-    "date": "2026-04-29",
-    "image": "https://images.theconversation.com/files/732611/original/file-20260427-57-cfq5c0.jpg?ixlib=rb-4.1.0&amp;rect=0%2C0%2C3740%2C1870&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
-    "imageAlt": "The race to mine critical minerals for AI and clean energy is creating ‘sacrifice zones’ that harm water and health of w",
-    "summary": "Mining for AI and clean energy minerals is creating 'sacrifice zones' that devastate water systems and harm vulnerable communities, revealing a hidden cost of the green energy transition.",
-    "body": "",
-    "insight": "Planetary governance models must internalize externalities and rights-of-nature frameworks into supply chains — otherwise 'clean' tech reproduces colonial extraction patterns that undermine ecological regeneration.",
-    "actors": [],
-    "tags": [
-      "critical-minerals",
-      "rights-of-nature",
-      "sacrifice-zones",
-      "extractivism",
-      "energy-transition",
-      "water-commons"
-    ],
-    "orientations": [
-      "GARDEN",
-      "SPACESHIP",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://theconversation.com/the-race-to-mine-critical-minerals-for-ai-and-clean-energy-is-creating-sacrifice-zones-that-harm-water-and-health-of-worlds-poor-281524"
-  },
-  {
     "slug": "remember-future-90k-arts-collectives-cooperatives",
     "title": "Remember the Future Podcast: Why We Moved $90k to Arts Collectives & Cooperatives",
     "date": "2026-04-28",
@@ -69,30 +44,6 @@
       "MYSTERIES"
     ],
     "sourceUrl": "https://www.resilience.org/stories/2026-04-27/as-nature-terms-disappear-so-does-our-ability-to-see-and-protect-the-natural-world/"
-  },
-  {
-    "slug": "modernity-collapse-adaptation-overshoot",
-    "title": "In conversation: Dave Murphy and Tom Murphy – if modernity can’t last forever, what comes next?",
-    "date": "2026-04-27",
-    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-kelly-4320479-1024x682.jpg",
-    "imageAlt": "In conversation: Dave Murphy and Tom Murphy – if modernity can’t last forever, what comes next?",
-    "summary": "Dave and Tom Murphy debate whether modern industrial civilization can adapt within planetary limits or faces inevitable collapse, and what obligations emerge during ecological overshoot.",
-    "body": "",
-    "insight": "Clarifying whether adaptation or transformation is possible fundamentally shapes which governance models are viable—assembly-based systems optimized for incremental change versus mystery-work preparing for discontinuous transitions.",
-    "actors": [],
-    "tags": [
-      "polycrisis",
-      "collapse-adaptation",
-      "system-transformation",
-      "ecological-overshoot",
-      "futures-thinking"
-    ],
-    "orientations": [
-      "SPACESHIP",
-      "MYSTERIES",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.resilience.org/stories/2026-04-27/in-conversation-dave-murphy-and-tom-murphy-if-modernity-cant-last-forever-what-comes-next/"
   },
   {
     "slug": "indigenous-peacebuilding-biodiversity-conflicts",
@@ -165,53 +116,6 @@
       "ASSEMBLY"
     ],
     "sourceUrl": "https://www.ipsnews.net/2026/04/guardians-of-the-sea-how-gef-small-grants-program-enables-young-volunteers-take-the-lead-in-sea-turtle-conservation/"
-  },
-  {
-    "slug": "chernobyl-exclusion-zone-biodiversity-invasion",
-    "title": "Chernobyl’s exclusion zone is a beacon of biodiversity – but it faces new threats from Russia’s invasion",
-    "date": "2026-04-24",
-    "image": "https://images.theconversation.com/files/731698/original/file-20260413-57-32f42l.jpg?ixlib=rb-4.1.0&amp;rect=0%2C511%2C3648%2C1824&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
-    "imageAlt": "Chernobyl’s exclusion zone is a beacon of biodiversity – but it faces new threats from Russia’s invasion",
-    "summary": "Chernobyl's 30-year exclusion zone has evolved into Europe's largest nature reserve, demonstrating how absence of human industrial activity allows ecosystems to regenerate despite radiation—but Russia's invasion threatens its ecological integrity.",
-    "body": "",
-    "insight": "When militarized landscapes override ecological preservation, it reveals the fragility of de facto wilderness protection and the need for legal rights-of-nature frameworks that supersede geopolitical conflict.",
-    "actors": [],
-    "tags": [
-      "rights-of-nature",
-      "rewilding",
-      "biodiversity-recovery",
-      "ecological-conflict",
-      "nature-reserves",
-      "geopolitics"
-    ],
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://theconversation.com/chernobyls-exclusion-zone-is-a-beacon-of-biodiversity-but-it-faces-new-threats-from-russias-invasion-281270"
-  },
-  {
-    "slug": "uk-climate-resilience-systemic-shocks",
-    "title": "The UK can’t debate its way out of climate impacts. It needs a Plan B now",
-    "date": "2026-04-22",
-    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-markusspiske-2990650-scaled.jpg",
-    "imageAlt": "The UK can’t debate its way out of climate impacts. It needs a Plan B now",
-    "summary": "UK faces intensifying climate and biodiversity impacts with inadequate preparation for systemic shocks; argues resilience-building must replace prolonged consensus-seeking on long-term solutions.",
-    "body": "",
-    "insight": "Prioritizing adaptive resilience over delayed deliberation reshapes how governance systems must respond to polycrisis—shifting from aspirational policy to rapid institutional adaptation.",
-    "actors": [],
-    "tags": [
-      "climate-resilience",
-      "systemic-shocks",
-      "uk-governance",
-      "biodiversity-collapse",
-      "adaptive-capacity"
-    ],
-    "orientations": [
-      "SPACESHIP",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.resilience.org/stories/2026-04-22/the-uk-cant-debate-its-way-out-of-climate-impacts-it-needs-a-plan-b-now/"
   },
   {
     "slug": "hajar-tazi-weaving-ecosystems-resilience",
@@ -307,29 +211,6 @@
       "ASSEMBLY"
     ],
     "sourceUrl": "https://www.garn.org/yuvelis-morales/"
-  },
-  {
-    "slug": "australia-food-system-shocks-resilience",
-    "title": "These shocks to Australia’s food system won’t be the last. Will it learn in time for the next one?",
-    "date": "2026-04-22",
-    "image": "https://images.theconversation.com/files/730930/original/file-20260420-63-vkaf6v.jpg?ixlib=rb-4.1.0&amp;rect=0%2C389%2C3635%2C1817&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
-    "imageAlt": "These shocks to Australia’s food system won’t be the last. Will it learn in time for the next one?",
-    "summary": "Australia's food system faces repeated shocks from geopolitical disruption and climate volatility; the article examines whether institutional learning can build resilience before the next crisis hits.",
-    "body": "",
-    "insight": "Food system vulnerability reveals how planetary governance must integrate supply chain sovereignty with ecological stewardship—requiring both local regeneration (GARDEN) and systems mapping (SPACESHIP) rather than relying on open sea lanes alone.",
-    "actors": [],
-    "tags": [
-      "food-sovereignty",
-      "supply-chain-resilience",
-      "climate-shocks",
-      "systems-learning"
-    ],
-    "orientations": [
-      "GARDEN",
-      "SPACESHIP",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://theconversation.com/these-shocks-to-australias-food-system-wont-be-the-last-will-it-learn-in-time-for-the-next-one-281007"
   },
   {
     "slug": "forests-natural-flood-defences-new-research-2026",
@@ -589,30 +470,6 @@
       "ASSEMBLY"
     ],
     "sourceUrl": "https://www.resilience.org/stories/2026-04-07/the-restorative-promise-of-agroecology-farming-for-sovereignty-and-resilience-in-malawi-part-2/"
-  },
-  {
-    "slug": "climate-cracks-spreading-system-cant-hold-rupert-read-2026",
-    "title": "Climate Cracks Are Spreading — and Even the System Knows It Can't Hold",
-    "date": "2026-04-06",
-    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-oscar-sanchez197-19894925-scaled.jpg",
-    "imageAlt": "Cracked dry earth symbolising ecological and institutional breakdown",
-    "summary": "Rupert Read documents how suppressed government reports across multiple countries already project food security failures by 2030 and potential ecosystem collapse — yet mainstream media barely covers them and financial markets ignore them entirely.",
-    "body": "",
-    "insight": "When the system's own intelligence assessments acknowledge it cannot hold, and that intelligence is suppressed rather than acted on, the response must come from communities — not institutions.",
-    "actors": [],
-    "tags": [
-      "climate",
-      "governance",
-      "collapse",
-      "polycrisis",
-      "systems",
-      "resilience"
-    ],
-    "orientations": [
-      "SPACESHIP",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.resilience.org/stories/2026-04-06/climate-cracks-are-spreading-and-even-the-system-knows-it-cant-hold/"
   },
   {
     "slug": "democracy-tested-citizen-assemblies-can-help-rafitoson-ted",

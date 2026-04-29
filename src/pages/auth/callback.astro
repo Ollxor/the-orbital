@@ -16,44 +16,50 @@ import Base from '../../layouts/Base.astro';
   const SUPABASE_URL = 'https://lathlnothoosbwrvxtel.supabase.co';
   const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhdGhsbm90aG9vc2J3cnZ4dGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczNjU1OTYsImV4cCI6MjA5Mjk0MTU5Nn0.VZJxCAbOfpiepbvgq9m0xC2wMe0IgFNlUUUC9wbk3Gc';
 
+  // createBrowserClient sets detectSessionInUrl:true + flowType:'pkce' by default.
+  // It automatically exchanges the ?code= param — we must NOT call
+  // exchangeCodeForSession() manually or we'll double-consume the code and hang.
   const supabase = createBrowserClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
   const msgEl = document.getElementById('callback-msg');
   function setMsg(s: string) { if (msgEl) msgEl.textContent = s; }
 
+  let handled = false;
+
   function bail(reason: string) {
+    if (handled) return;
+    handled = true;
     setMsg('Sign-in failed. Redirecting…');
-    console.error('Auth callback error:', reason);
+    console.error('[auth/callback] bail:', reason);
     setTimeout(() => { window.location.href = '/login?error=auth_failed'; }, 1500);
   }
 
-  // PKCE flow: Supabase appends ?code= to this URL after Google auth.
-  // We must call exchangeCodeForSession() explicitly — getSession() alone won't do it.
-  const code = new URLSearchParams(window.location.search).get('code');
+  // Wait for the client to finish the auto-exchange and emit SIGNED_IN
+  const { data: { subscription } } = supabase.auth.onAuthStateChange(
+    async (event, session) => {
+      if (handled) return;
 
-  if (!code) {
-    bail('No code param in callback URL');
-  } else {
-    const { data, error } = await supabase.auth.exchangeCodeForSession(code);
+      if (event === 'SIGNED_IN' && session) {
+        handled = true;
+        subscription.unsubscribe();
 
-    if (error || !data.session) {
-      bail(error?.message ?? 'No session after code exchange');
-    } else {
-      const user = data.session.user;
-      const email = (user.email ?? '').toLowerCase();
+        const user = session.user;
+        const email = (user.email ?? '').toLowerCase();
 
-      // ── Invite check ──────────────────────────────────────────────────────
-      // RLS policy: authenticated users can SELECT their own row in invites.
-      const { data: invite } = await supabase
-        .from('invites')
-        .select('id, used_at')
-        .eq('email', email)
-        .maybeSingle();
+        // ── Invite check ────────────────────────────────────────────────────
+        // RLS allows authenticated users to SELECT their own invite row only.
+        const { data: invite } = await supabase
+          .from('invites')
+          .select('id, used_at')
+          .eq('email', email)
+          .maybeSingle();
 
-      if (!invite) {
-        await supabase.auth.signOut();
-        window.location.href = '/login?error=not_invited';
-      } else {
+        if (!invite) {
+          await supabase.auth.signOut();
+          window.location.href = '/login?error=not_invited';
+          return;
+        }
+
         // Mark invite used (idempotent)
         if (!invite.used_at) {
           await supabase
@@ -62,7 +68,7 @@ import Base from '../../layouts/Base.astro';
             .eq('id', invite.id);
         }
 
-        // ── Upsert profile ───────────────────────────────────────────────
+        // ── Upsert profile ───────────────────────────────────────────────────
         await supabase.from('user_profiles').upsert(
           {
             id: user.id,
@@ -82,9 +88,17 @@ import Base from '../../layouts/Base.astro';
 
         const next = new URLSearchParams(window.location.search).get('next') ?? '/';
         window.location.href = next;
+
+      } else if (event === 'INITIAL_SESSION' && !session) {
+        // Auto-exchange failed or no code in URL — bail after a short grace period
+        // (give SIGNED_IN a moment to arrive before giving up)
+        setTimeout(() => bail('INITIAL_SESSION with no session'), 3000);
       }
     }
-  }
+  );
+
+  // Hard timeout — if nothing happens in 12 seconds, something is very wrong
+  setTimeout(() => bail('timeout waiting for SIGNED_IN'), 12000);
 </script>
 
 <style>

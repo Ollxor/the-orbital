@@ -88,25 +88,30 @@ RSS_FEEDS = [
 
 # Keyword pre-filter — only articles containing one of these strings
 # (case-insensitive) pass to Claude. Keeps API cost minimal.
+# Bias toward solution/practice/governance terms; avoid bare crisis terms
+# (e.g. "biodiversity loss" or "climate crisis" without a response frame).
 KEYWORDS = [
-    # Ecological / land
+    # Ecological practice / transition
     "agroecology", "rewilding", "rights of nature", "rights of the",
-    "food sovereignty", "biodiversity", "planetary boundaries",
-    "regenerative", "bioregion", "ecocide", "ecosystem restoration",
+    "food sovereignty", "planetary boundaries",
+    "regenerative", "bioregion", "ecocide",
+    "ecosystem restoration", "ecological restoration",
     "land rights", "ocean governance", "water governance",
     "seed sovereignty", "agroforestry", "permaculture",
-    "community land trust", "biocultural", "nature-based",
-    "ecological", "indigenous land", "food system",
+    "community land trust", "biocultural", "nature-based solution",
+    "indigenous land stewardship", "indigenous land management",
+    "food system transition", "food system transformation",
+    "marine protected", "ocean commons",
     # Governance / democracy
     "citizens assembly", "citizen assembly", "citizens' assembly",
     "deliberative democracy", "sortition", "digital democracy",
-    "participatory", "climate assembly", "global governance",
+    "participatory budget", "participatory governance",
+    "climate assembly", "global governance reform",
     "degrowth", "post-growth", "wellbeing economy",
-    "commons", "metagovernance", "earth governance",
+    "commons governance", "metagovernance", "earth governance",
     "planetary governance", "collective intelligence",
-    "cooperative", "cooperatives", "commons-based",
-    "climate justice", "just transition", "polycrisis",
-    "doughnut economics", "circular economy",
+    "cooperative governance", "commons-based",
+    "just transition", "doughnut economics",
     "transition towns", "community resilience",
     # Systems / civic tech
     "civic tech", "open data", "digital twin",
@@ -117,13 +122,15 @@ KEYWORDS = [
 
 # ── Prompts ──────────────────────────────────────────────────────────────────
 
-SYSTEM_PROMPT = """You are the curator of The Orbital (theorbital.net), a news feed tracking the planetary systems governance movement — the slow global shift toward regenerative, participatory, ecologically grounded governance.
+SYSTEM_PROMPT = """You are the curator of The Orbital (theorbital.net), a solutions-focused news feed tracking the planetary systems governance movement — the slow global shift toward regenerative, participatory, ecologically grounded governance.
+
+CRITICAL EDITORIAL PRINCIPLE: The Orbital covers SOLUTIONS, RESPONSES, and INITIATIVES — not the crisis itself. An article about a new citizens assembly on biodiversity belongs here. An article reporting biodiversity loss statistics does not. When in doubt, ask: "Is this article primarily about something being built, practiced, decided, or transformed?" If the primary angle is documenting damage, sounding an alarm, or reporting failure, exclude it.
 
 The feed uses four "orientations" as lenses:
-- GARDEN: How do we tend living systems? (agroecology, rewilding, rights of nature, soil, food sovereignty, biodiversity, indigenous land practice, ocean commons)
-- SPACESHIP: How do we build and model the systems? (AI, digital twins, satellite monitoring, blockchain governance, open data protocols, climate modelling, civic tech, systems thinking)
+- GARDEN: How do we tend living systems? (agroecology, rewilding, rights of nature, soil, food sovereignty, indigenous land stewardship, ocean commons, ecosystem restoration)
+- SPACESHIP: How do we build and model the systems? (AI for governance, digital twins, satellite monitoring, open data protocols, civic tech, systems thinking, climate modelling tools)
 - MYSTERIES: How do we transform culture and consciousness? (LARP, megagames, ritual design, experiential futures, festival culture, theatre, ceremony, inner work, narrative)
-- ASSEMBLY: How do we decide together? (citizens assemblies, deliberative democracy, sortition, rights of nature legal frameworks, global governance, commons governance, participatory budgeting)
+- ASSEMBLY: How do we decide together? (citizens assemblies, deliberative democracy, sortition, rights of nature legal frameworks, global governance reform, commons governance, participatory budgeting)
 
 Orientation assignment rules:
 - Rights of nature LEGAL work → GARDEN + ASSEMBLY
@@ -132,7 +139,7 @@ Orientation assignment rules:
 - Indigenous knowledge holders → GARDEN + MYSTERIES (not ASSEMBLY unless doing governance advocacy)
 - Climate science research → SPACESHIP + GARDEN (not ASSEMBLY unless governance-focused)
 - Digital democracy tools → SPACESHIP + ASSEMBLY
-- Polycrisis / systems collapse → SPACESHIP primary
+- Polycrisis / systems collapse → SPACESHIP primary (only if solution-oriented, e.g. resilience design)
 - Cultural/narrative/inner work around ecology → MYSTERIES + GARDEN
 
 You respond ONLY with valid JSON. No preamble, no explanation outside the JSON."""
@@ -146,11 +153,11 @@ Description: {description}
 
 Respond with JSON in EXACTLY this format:
 
-If RELEVANT to planetary systems governance:
+If RELEVANT:
 {{
   "include": true,
   "slug": "kebab-case-slug-max-60-chars",
-  "summary": "1-2 sentence summary, 120-160 chars, factual and specific — what happened, what was found, or what is argued",
+  "summary": "1-2 sentence summary, 120-160 chars, factual and specific — what happened, what was decided, what was built, or what is being practiced",
   "insight": "One sentence: why this matters for planetary governance — specific implication, not a restatement of the summary",
   "orientations": ["GARDEN"],
   "tags": ["tag-1", "tag-2", "tag-3", "tag-4"]
@@ -159,13 +166,28 @@ If RELEVANT to planetary systems governance:
 If NOT relevant:
 {{"include": false}}
 
-Rules:
-- slug: derived from title, lowercase, hyphens only, max 60 chars, no year needed unless disambiguating
-- summary: concrete and informative, not vague ("The article argues X because Y")
-- insight: forward-looking and specific ("When X, it changes Y — not just a summary repeat")
+INCLUSION TEST — include ONLY if the article is primarily about one of:
+✓ A new governance initiative, policy, legal ruling, or institutional experiment
+✓ A community, cooperative, or commons-based practice in action
+✓ A deliberative or participatory process (assembly, sortition, co-design)
+✓ A regenerative or ecological practice being adopted or scaled
+✓ A tool, platform, or methodology for better collective decision-making
+✓ Research on what works — evidence for transition pathways
+✓ A rights-of-nature case, ruling, or advocacy campaign
+
+EXCLUSION TEST — exclude if the article is primarily about:
+✗ Documenting ecological damage, species loss, or climate statistics without a response frame
+✗ Reporting failure, rollback, or political obstruction without a constructive angle
+✗ General alarm-raising or crisis framing with no concrete initiative
+✗ Corporate greenwashing or PR without substantive governance/practice content
+✗ Policy proposals that are purely speculative with no real actor behind them
+
+Other rules:
+- slug: derived from title, lowercase, hyphens only, max 60 chars
+- summary: what is concretely happening, not vague ("X community launched Y, which does Z")
+- insight: forward-looking ("This shows that X is now possible at Y scale")
 - orientations: 1-3 values from [GARDEN, SPACESHIP, MYSTERIES, ASSEMBLY]
-- tags: 4-6 lowercase kebab-case strings, specific (prefer "rights-of-nature" over "environment")
-- Only include if the article clearly advances the planetary governance / ecological transition / deliberative democracy agenda"""
+- tags: 4-6 lowercase kebab-case strings, specific (prefer "rights-of-nature" over "environment")"""
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────

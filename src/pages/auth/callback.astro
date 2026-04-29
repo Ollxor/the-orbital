@@ -13,73 +13,77 @@ import Base from '../../layouts/Base.astro';
 <script>
   import { createBrowserClient } from '@supabase/ssr';
 
-  const supabase = createBrowserClient(
-    'https://lathlnothoosbwrvxtel.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhdGhsbm90aG9vc2J3cnZ4dGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczNjU1OTYsImV4cCI6MjA5Mjk0MTU5Nn0.VZJxCAbOfpiepbvgq9m0xC2wMe0IgFNlUUUC9wbk3Gc',
-  );
+  const SUPABASE_URL = 'https://lathlnothoosbwrvxtel.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhdGhsbm90aG9vc2J3cnZ4dGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczNjU1OTYsImV4cCI6MjA5Mjk0MTU5Nn0.VZJxCAbOfpiepbvgq9m0xC2wMe0IgFNlUUUC9wbk3Gc';
+
+  const supabase = createBrowserClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
   const msgEl = document.getElementById('callback-msg');
-  function setMsg(text: string) { if (msgEl) msgEl.textContent = text; }
+  function setMsg(s: string) { if (msgEl) msgEl.textContent = s; }
 
-  // Supabase PKCE: exchange the ?code= param for a session automatically
-  // createBrowserClient handles this when we call getSession() with a code in the URL
-  const { data: { session }, error: sessionError } = await supabase.auth.getSession();
-
-  if (sessionError || !session) {
+  function bail(reason: string) {
     setMsg('Sign-in failed. Redirecting…');
-    setTimeout(() => window.location.href = '/login?error=auth_failed', 1500);
-    // Nothing more to do
+    console.error('Auth callback error:', reason);
+    setTimeout(() => { window.location.href = '/login?error=auth_failed'; }, 1500);
+  }
+
+  // PKCE flow: Supabase appends ?code= to this URL after Google auth.
+  // We must call exchangeCodeForSession() explicitly — getSession() alone won't do it.
+  const code = new URLSearchParams(window.location.search).get('code');
+
+  if (!code) {
+    bail('No code param in callback URL');
   } else {
-    const user = session.user;
-    const email = user.email ?? '';
+    const { data, error } = await supabase.auth.exchangeCodeForSession(code);
 
-    // ── Invite check ─────────────────────────────────────────────────────────
-    // Invites table has RLS: authenticated users can only select their own row.
-    // If PUBLIC_SIGNUP_ENABLED is 'true' we skip this check entirely.
-    const signupOpen = false; // injected at build time below
+    if (error || !data.session) {
+      bail(error?.message ?? 'No session after code exchange');
+    } else {
+      const user = data.session.user;
+      const email = (user.email ?? '').toLowerCase();
 
-    if (!signupOpen) {
-      const { data: invite, error: inviteError } = await supabase
+      // ── Invite check ──────────────────────────────────────────────────────
+      // RLS policy: authenticated users can SELECT their own row in invites.
+      const { data: invite } = await supabase
         .from('invites')
         .select('id, used_at')
-        .eq('email', email.toLowerCase())
+        .eq('email', email)
         .maybeSingle();
 
       if (!invite) {
-        // Not invited — sign out and redirect with error
         await supabase.auth.signOut();
         window.location.href = '/login?error=not_invited';
-        // Stop here
       } else {
-        // Mark as used (update only if not already used)
+        // Mark invite used (idempotent)
         if (!invite.used_at) {
           await supabase
             .from('invites')
             .update({ used_at: new Date().toISOString() })
             .eq('id', invite.id);
         }
-        await finishSignIn(user, email);
+
+        // ── Upsert profile ───────────────────────────────────────────────
+        await supabase.from('user_profiles').upsert(
+          {
+            id: user.id,
+            email,
+            display_name:
+              user.user_metadata?.full_name ??
+              user.user_metadata?.name ??
+              email.split('@')[0],
+            avatar_url:
+              user.user_metadata?.avatar_url ??
+              user.user_metadata?.picture ??
+              null,
+            last_sign_in: new Date().toISOString(),
+          },
+          { onConflict: 'id' },
+        );
+
+        const next = new URLSearchParams(window.location.search).get('next') ?? '/';
+        window.location.href = next;
       }
-    } else {
-      await finishSignIn(user, email);
     }
-  }
-
-  async function finishSignIn(user: any, email: string) {
-    // ── Upsert profile ──────────────────────────────────────────────────────
-    await supabase.from('user_profiles').upsert(
-      {
-        id: user.id,
-        email,
-        display_name: user.user_metadata?.full_name ?? user.user_metadata?.name ?? email.split('@')[0],
-        avatar_url: user.user_metadata?.avatar_url ?? user.user_metadata?.picture ?? null,
-        last_sign_in: new Date().toISOString(),
-      },
-      { onConflict: 'id' },
-    );
-
-    const next = new URLSearchParams(window.location.search).get('next') ?? '/';
-    window.location.href = next;
   }
 </script>
 

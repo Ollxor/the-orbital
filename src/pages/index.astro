@@ -136,7 +136,15 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
           ) : (
 
             /* ── Standard news / video card ── */
-            <article class="news-card" data-orientations={story.orientations.join(',')}>
+            <article
+              class="news-card"
+              data-slug={story.slug}
+              data-title={story.title}
+              data-date={story.date}
+              data-orientations={story.orientations.join(',')}
+              data-tags={(story.tags || []).join(',')}
+              data-source-url={story.sourceUrl || ''}
+            >
               <div class={`card-image-wrap${story.image ? '' : ' card-placeholder'}${(story as any).kind === 'video' ? ' card-video' : ''}`} data-orient={story.orientations[0] || 'GARDEN'}>
                 <a href={`/news/${story.slug}`}>
                   {story.image ? (
@@ -266,6 +274,57 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
   transition: opacity .2s;
 }
 .news-card.hidden { opacity: .2; pointer-events: none; }
+
+/* ── Read state ── */
+.news-card.is-read { opacity: .55; }
+.news-card.is-read:hover { opacity: .85; }
+.news-card.is-read .card-image-wrap { filter: saturate(.55); }
+
+.read-row {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  margin-top: .875rem;
+  padding-top: .75rem;
+  border-top: 1px dashed var(--border);
+}
+.mark-read-btn {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: .375rem .75rem;
+  background: var(--bg);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.mark-read-btn:hover {
+  border-color: #4a7c59;
+  color: #4a7c59;
+}
+.mark-read-btn[data-read="1"] {
+  background: #4a7c59;
+  color: #fff;
+  border-color: #4a7c59;
+}
+.mark-read-btn[data-read="1"]:hover {
+  background: #fff;
+  color: #4a7c59;
+}
+.read-badge {
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #4a7c59;
+  display: none;
+}
+.news-card.is-read .read-badge { display: inline; }
 
 /* ── Standard card image ── */
 .card-image-wrap { margin-bottom: 1rem; position: relative; border-radius: 5px; overflow: hidden; }
@@ -596,4 +655,10 @@ document.querySelectorAll('.card-reactions').forEach(container => {
     });
   });
 });
+</script>
+
+<script>
+  // Reads tracking — adds "Mark as read" button to every news card
+  // when the user is signed in, and persists state via Supabase.
+  import '../scripts/reads.ts';
 </script>

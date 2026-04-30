@@ -118,16 +118,9 @@ function injectButtons() {
       toggleRead(card);
     });
 
-    // Add a "Read" badge container too (visible only when read)
-    const badge = document.createElement('span');
-    badge.className = 'read-badge';
-    badge.textContent = '✓ Read';
-
-    // Wrap in a row so they sit together
     const row = document.createElement('div');
     row.className = 'read-row';
     row.appendChild(btn);
-    row.appendChild(badge);
     body.appendChild(row);
 
     applyState(card);

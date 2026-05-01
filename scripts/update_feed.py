@@ -98,7 +98,31 @@ RSS_FEEDS = [
     # AI + animal communication — direct sensing-the-living-world work
     {"url": "https://www.earthspecies.org/blog?format=rss",
      "name": "Earth Species Project"},
+
+    # ── YouTube channels (kind="youtube" → entries become video items) ─────
+    # The breakthrough rubric in SYSTEM_PROMPT still gates these. Most
+    # videos from these channels will NOT qualify (cosmology, hardware
+    # milestones, pop science). Only worldview-shifting / governance-
+    # relevant ones should pass.
+    {"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCciQ8wFcVoIIMi-lfu8-cjQ",
+     "name": "Anton Petrov", "kind": "youtube"},
+    {"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCOT2iLov0V7Re7ku_3UBtcQ",
+     "name": "Hank Green", "kind": "youtube"},
 ]
+
+
+# ── YouTube URL helper ───────────────────────────────────────────────────────
+
+YOUTUBE_VIDEO_ID_RE = re.compile(
+    r"(?:v=|/watch\?v=|youtu\.be/|/embed/|/v/)([A-Za-z0-9_-]{11})"
+)
+
+def youtube_video_id(url: str) -> str:
+    """Extract the YouTube video ID from a watch/embed URL. Empty if none."""
+    if not url:
+        return ""
+    m = YOUTUBE_VIDEO_ID_RE.search(url)
+    return m.group(1) if m else ""
 
 # Keyword pre-filter — only articles containing one of these strings
 # (case-insensitive) pass to Claude. Keeps API cost minimal.
@@ -313,6 +337,7 @@ def fetch_candidates(cutoff: datetime, existing_urls: set) -> list:
 
     for feed_info in RSS_FEEDS:
         feed_name = feed_info["name"]
+        feed_kind = feed_info.get("kind", "article")
         try:
             feed = feedparser.parse(feed_info["url"])
             if feed.bozo and not feed.entries:
@@ -349,6 +374,7 @@ def fetch_candidates(cutoff: datetime, existing_urls: set) -> list:
                     "date": pub_dt.strftime("%Y-%m-%d"),
                     "description": description,
                     "source": feed_name,
+                    "kind": feed_kind,
                 })
                 seen_urls.add(url)
                 matched += 1
@@ -446,7 +472,15 @@ def main() -> int:
             final_slug = f"{base_slug}-{suffix}"
             suffix += 1
 
-        image = get_og_image(candidate["url"])
+        is_youtube = candidate.get("kind") == "youtube"
+        if is_youtube:
+            video_id = youtube_video_id(candidate["url"])
+            if not video_id:
+                print("  → skipped (no YouTube videoId in URL)")
+                continue
+            image = f"https://img.youtube.com/vi/{video_id}/maxresdefault.jpg"
+        else:
+            image = get_og_image(candidate["url"])
 
         entry = {
             "slug": final_slug,
@@ -462,6 +496,9 @@ def main() -> int:
             "orientations": result.get("orientations", ["GARDEN"]),
             "sourceUrl": candidate["url"],
         }
+        if is_youtube:
+            entry["kind"] = "video"
+            entry["videoId"] = video_id
 
         new_entries.append(entry)
         added_slugs.add(final_slug)

@@ -1,5 +1,57 @@
 [
   {
+    "slug": "anton-petrov-how-complex-life-began",
+    "kind": "video",
+    "videoId": "vZBvT5brYZI",
+    "title": "How Complex Life Actually Began — New Imaging Reveals the Earliest Cells",
+    "date": "2026-05-01",
+    "image": "https://img.youtube.com/vi/vZBvT5brYZI/maxresdefault.jpg",
+    "imageAlt": "Anton Petrov video on the origin of complex eukaryotic life",
+    "summary": "Anton Petrov walks through new imaging research that finally lets scientists see how the first complex cells assembled — the endosymbiotic event that produced all plants, animals, and fungi.",
+    "body": "",
+    "insight": "When we can directly see the architecture of the first eukaryotic cell, the boundary between physics and biology — and between separate organisms and a cooperating whole — gets harder to draw. Stewardship of life rests on knowing what life actually is.",
+    "actors": [],
+    "tags": [
+      "origin-of-life",
+      "eukaryogenesis",
+      "endosymbiosis",
+      "cell-imaging",
+      "worldview-shift",
+      "breakthrough-science"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN",
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=vZBvT5brYZI"
+  },
+  {
+    "slug": "hank-green-artemis-ii-earth-photos",
+    "kind": "video",
+    "videoId": "oaXRREHVkHo",
+    "title": "Reading the Most Important Artemis II Photos — Earth From the Moon, Again",
+    "date": "2026-05-01",
+    "image": "https://img.youtube.com/vi/oaXRREHVkHo/maxresdefault.jpg",
+    "imageAlt": "Hank Green explaining Artemis II Earth and Moon imagery",
+    "summary": "Hank Green walks through the photographs returning from the Artemis II crewed lunar flyby — the first time in over 50 years humans have looked back at Earth from cislunar space and brought home pictures.",
+    "body": "",
+    "insight": "Earthrise (Apollo 8, 1968) is widely credited with launching the modern environmental movement. A new generation of humans seeing Earth as a single small object — and a new generation of audiences seeing it through them — is itself a planetary-scale governance event.",
+    "actors": [],
+    "tags": [
+      "earthrise",
+      "planetary-perspective",
+      "spaceflight",
+      "overview-effect",
+      "cultural-narrative"
+    ],
+    "orientations": [
+      "MYSTERIES",
+      "SPACESHIP"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=oaXRREHVkHo"
+  },
+  {
     "slug": "sixkiller-sinquah-world-championship-hoop-dance-2025",
     "kind": "video",
     "videoId": "4zjHK0tqgkc",

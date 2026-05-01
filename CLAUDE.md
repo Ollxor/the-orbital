@@ -27,8 +27,8 @@ three. Almost never all four — that's usually a sign of being too generous.
 | Orientation | Core question | Examples |
 |-------------|---------------|---------|
 | **GARDEN** | How do we tend living systems? | Agroecology, rewilding, rights of nature, soil, food sovereignty, biodiversity, indigenous land practice |
-| **SPACESHIP** | How do we build and model the systems? | AI, digital twins, satellite monitoring, blockchain governance, open data protocols, climate modelling, civic tech |
-| **MYSTERIES** | How do we transform culture and consciousness? | LARP, megagames, ritual design, experiential futures, festival culture, theatre, ceremony, inner work |
+| **SPACESHIP** | How do we build, model, and *sense* the systems? | AI, digital twins, satellite monitoring, civic tech, climate modelling — and AI for animal communication, bioacoustics, environmental DNA, mycelial network mapping |
+| **MYSTERIES** | How do we transform culture and consciousness? | LARP, megagames, ritual, festival culture, theatre, inner work — and indigenous arts, music, dance, ceremony, embodied knowledge transmission |
 | **ASSEMBLY** | How do we decide together? | Citizens assemblies, deliberative democracy, sortition, rights of nature legal frameworks, global governance, commons |
 
 **Assignment rules:**
@@ -41,6 +41,24 @@ three. Almost never all four — that's usually a sign of being too generous.
 - Regenerative farming → GARDEN only, unless it has policy angle (add ASSEMBLY)
 - Digital democracy tools → SPACESHIP, ASSEMBLY
 - Indigenous knowledge holders → GARDEN, MYSTERIES (not Assembly unless they're doing governance advocacy)
+- Indigenous arts / dance / song / ceremony → MYSTERIES primary; add GARDEN if explicitly land-relational
+- Animal communication / bioacoustics / sensing breakthroughs → SPACESHIP + GARDEN
+- Mycelial network / plant intelligence research → GARDEN + SPACESHIP (+ MYSTERIES if worldview-shifting)
+- Consciousness / more-than-human philosophy → MYSTERIES (+ SPACESHIP if instrumented research)
+
+### Breakthrough science rubric
+
+The Orbital includes science articles only when they meet a high bar — we are
+not Science Daily. Include only if **at least one** is true:
+
+- **New perception capability**: AI/sensors revealing something we couldn't see before (whale syntax decoded, mycelial signaling mapped, plant electrical communication, environmental DNA mapping a community)
+- **Worldview shift**: a finding that changes how we understand life or Earth systems — not "X is bigger than we thought" but "X turns out to communicate / be agentic / form a network / behave in a way we didn't know was possible"
+- **Governance hook**: a discovery that gives stewardship or rights-of-nature work a new lever (a species turns out to be a keystone, a forest turns out to predate a nation, an ecosystem proves to be communicating)
+
+Exclude:
+- Routine "study finds X correlates with Y" papers
+- Pure tech / physics / cosmology with no biosphere or governance application
+- Climate damage reporting (separate "no problem-only articles" rule)
 
 ---
 

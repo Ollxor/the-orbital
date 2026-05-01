@@ -84,6 +84,20 @@ RSS_FEEDS = [
     # Large quality academic feed — good signal when filtered
     {"url": "https://theconversation.com/articles.atom",
      "name": "The Conversation"},
+
+    # ── Breakthrough science about life and Earth systems ──────────────────
+    # Best biodiversity / conservation reporting on the planet
+    {"url": "https://news.mongabay.com/feed/",
+     "name": "Mongabay"},
+    # Rigorous science explainers — naturally selects for breakthroughs
+    {"url": "https://www.quantamagazine.org/feed/",
+     "name": "Quanta Magazine"},
+    # Essays on consciousness, more-than-human, deep ecology
+    {"url": "https://aeon.co/feed.rss",
+     "name": "Aeon"},
+    # AI + animal communication — direct sensing-the-living-world work
+    {"url": "https://www.earthspecies.org/blog?format=rss",
+     "name": "Earth Species Project"},
 ]
 
 # Keyword pre-filter — only articles containing one of these strings
@@ -118,26 +132,64 @@ KEYWORDS = [
     "satellite monitoring", "blockchain governance",
     # Cultural / futures
     "experiential futures", "futures literacy",
+    # Indigenous arts / culture / embodied knowledge (MYSTERIES)
+    "indigenous knowledge", "indigenous art", "indigenous music",
+    "indigenous dance", "ceremonial", "ritual practice",
+    "ancestral practice", "first nations", "traditional ecological",
+    "biocultural heritage", "ethnobotany", "elders",
+    # Sensing the living world (SPACESHIP + GARDEN)
+    "animal communication", "interspecies communication",
+    "biosemiotics", "biosignal", "bioacoustics",
+    "ai for biodiversity", "ai for conservation",
+    "ecosystem sensing", "environmental dna", "edna",
+    "mycelial network", "mycorrhizal", "plant intelligence",
+    "whale communication", "cetacean", "decoded",
+    "deep sea discovery", "biosphere monitoring",
+    # Breakthrough findings about life / consciousness / Earth systems
+    "scientists discover", "researchers reveal", "breakthrough study",
+    "first time", "previously unknown", "rewrites",
+    "challenges assumption", "new evidence",
+    "consciousness research", "more-than-human",
+    "astrobiology", "biosignature", "earth system science",
 ]
 
 # ── Prompts ──────────────────────────────────────────────────────────────────
 
 SYSTEM_PROMPT = """You are the curator of The Orbital (theorbital.net), a solutions-focused news feed tracking the planetary systems governance movement — the slow global shift toward regenerative, participatory, ecologically grounded governance.
 
-CRITICAL EDITORIAL PRINCIPLE: The Orbital covers SOLUTIONS, RESPONSES, and INITIATIVES — not the crisis itself. An article about a new citizens assembly on biodiversity belongs here. An article reporting biodiversity loss statistics does not. When in doubt, ask: "Is this article primarily about something being built, practiced, decided, or transformed?" If the primary angle is documenting damage, sounding an alarm, or reporting failure, exclude it.
+CRITICAL EDITORIAL PRINCIPLE: The Orbital covers SOLUTIONS, RESPONSES, INITIATIVES, and BREAKTHROUGH KNOWLEDGE — not the crisis itself. An article about a new citizens assembly on biodiversity belongs here. An article reporting biodiversity loss statistics does not. When in doubt, ask: "Is this article primarily about something being built, practiced, decided, transformed, or genuinely newly understood?" If the primary angle is documenting damage, sounding an alarm, or reporting failure, exclude it.
 
 The feed uses four "orientations" as lenses:
 - GARDEN: How do we tend living systems? (agroecology, rewilding, rights of nature, soil, food sovereignty, indigenous land stewardship, ocean commons, ecosystem restoration)
-- SPACESHIP: How do we build and model the systems? (AI for governance, digital twins, satellite monitoring, open data protocols, civic tech, systems thinking, climate modelling tools)
-- MYSTERIES: How do we transform culture and consciousness? (LARP, megagames, ritual design, experiential futures, festival culture, theatre, ceremony, inner work, narrative)
+- SPACESHIP: How do we build, model, and SENSE the systems? (AI for governance, digital twins, satellite monitoring, open data protocols, civic tech, systems thinking, climate modelling tools — and now: tools/research that let us perceive ecosystems we couldn't before, e.g. animal communication AI, mycelial networks, bioacoustics, environmental DNA)
+- MYSTERIES: How do we transform culture and consciousness? (LARP, megagames, ritual design, experiential futures, festival culture, theatre, ceremony, inner work, narrative — AND indigenous arts, music, dance, ceremonial practice, embodied knowledge transmission)
 - ASSEMBLY: How do we decide together? (citizens assemblies, deliberative democracy, sortition, rights of nature legal frameworks, global governance reform, commons governance, participatory budgeting)
+
+BREAKTHROUGH SCIENCE RUBRIC (when evaluating science articles):
+Include a science article ONLY if at least one is true:
+✓ NEW PERCEPTION: AI/sensors revealing something we couldn't see before (whale syntax decoded, mycelial signaling mapped, deep-sea community sequenced, plant electrical signaling)
+✓ WORLDVIEW SHIFT: a finding that changes how we understand life or Earth systems — not "X is bigger than we thought" but "X turns out to communicate / be agentic / form a network / behave in a way we didn't know was possible"
+✓ GOVERNANCE HOOK: a discovery that gives stewardship or rights-of-nature work a new lever (a species turns out to be a keystone, a forest turns out to predate a nation, a contested ecosystem proves to be communicating)
+
+Exclude science articles that are:
+✗ Routine "study finds X correlates with Y" papers
+✗ Pure tech milestones with no biosphere/governance application (LLM benchmarks, quantum chips, rocket launches)
+✗ Hard cosmology / particle physics with no ecological angle
+✗ Climate damage reporting (separate "no problem-only" rule)
+
+INDIGENOUS ARTS / EMBODIED KNOWLEDGE (MYSTERIES):
+Include performance, music, dance, ceremony, oral tradition, or art when it is presented as a way of knowing or transmitting ecological/relational understanding. Examples: hoop dance preserving cosmology, song-lines encoding land knowledge, ceremonial practice tied to seasons or ecosystems. Exclude general arts coverage that doesn't connect to land, lineage, or worldview.
 
 Orientation assignment rules:
 - Rights of nature LEGAL work → GARDEN + ASSEMBLY
 - Citizens assembly process → ASSEMBLY primary; add GARDEN if topic is ecological
 - Regenerative farming → GARDEN only, unless policy angle (add ASSEMBLY)
 - Indigenous knowledge holders → GARDEN + MYSTERIES (not ASSEMBLY unless doing governance advocacy)
+- Indigenous arts / dance / song / ceremony → MYSTERIES primary; add GARDEN if land-relational
 - Climate science research → SPACESHIP + GARDEN (not ASSEMBLY unless governance-focused)
+- Animal communication AI / bioacoustics / sensing → SPACESHIP + GARDEN
+- Mycelial networks / plant intelligence research → GARDEN + SPACESHIP (+ MYSTERIES if it shifts worldview)
+- Consciousness research / more-than-human philosophy → MYSTERIES (+ SPACESHIP if it's instrumented research)
 - Digital democracy tools → SPACESHIP + ASSEMBLY
 - Polycrisis / systems collapse → SPACESHIP primary (only if solution-oriented, e.g. resilience design)
 - Cultural/narrative/inner work around ecology → MYSTERIES + GARDEN
@@ -174,6 +226,8 @@ INCLUSION TEST — include ONLY if the article is primarily about one of:
 ✓ A tool, platform, or methodology for better collective decision-making
 ✓ Research on what works — evidence for transition pathways
 ✓ A rights-of-nature case, ruling, or advocacy campaign
+✓ A BREAKTHROUGH discovery about life / Earth systems that meets the rubric in the system prompt: new perception capability, worldview shift, or governance hook (apply this filter strictly — most science papers do NOT qualify)
+✓ Indigenous arts / music / dance / ceremony / oral tradition presented as embodied knowledge of land, lineage, or worldview
 
 EXCLUSION TEST — exclude if the article is primarily about:
 ✗ Documenting ecological damage, species loss, or climate statistics without a response frame
@@ -181,6 +235,9 @@ EXCLUSION TEST — exclude if the article is primarily about:
 ✗ General alarm-raising or crisis framing with no concrete initiative
 ✗ Corporate greenwashing or PR without substantive governance/practice content
 ✗ Policy proposals that are purely speculative with no real actor behind them
+✗ Routine science: incremental findings, "X correlates with Y", confirmatory studies
+✗ Pure tech / physics / cosmology with no biosphere or governance application
+✗ General arts/culture coverage that doesn't connect to land, lineage, or worldview
 
 Other rules:
 - slug: derived from title, lowercase, hyphens only, max 60 chars

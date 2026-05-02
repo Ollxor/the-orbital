@@ -1,5 +1,75 @@
 [
   {
+    "slug": "ego-limitation-practices-community-resilience",
+    "title": "Rethinking self-importance in a time of social and ecological collapse",
+    "date": "2026-04-30",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/Elon_Musk_54349800344-scaled.jpg",
+    "imageAlt": "Rethinking self-importance in a time of social and ecological collapse",
+    "summary": "Cross-cultural practices that reduce ego and hierarchy—framed as 'social technologies'—are being studied and applied to strengthen cooperation, trust, and collective action in communities facing cascading crises.",
+    "body": "",
+    "insight": "Identifying ego-limitation practices as transferable social technologies gives community resilience work and participatory governance a concrete cultural toolkit grounded in anthropological evidence.",
+    "actors": [],
+    "tags": [
+      "social-technologies",
+      "community-resilience",
+      "collective-action",
+      "cultural-practice",
+      "hierarchy-reduction"
+    ],
+    "orientations": [
+      "MYSTERIES",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-30/rethinking-self-importance-in-a-time-of-social-and-ecological-collapse/"
+  },
+  {
+    "slug": "forest-gardening-resilience-new-zealand",
+    "title": "Forest gardening for resilience: Growing regenerative food systems in New Zealand",
+    "date": "2026-04-30",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/NZ-forest-garden.jpg",
+    "imageAlt": "Forest gardening for resilience: Growing regenerative food systems in New Zealand",
+    "summary": "New Zealand communities are adapting forest gardening practices to local climates, ecosystems, and indigenous knowledge, demonstrating place-based regenerative food systems grounded in years of research and practice.",
+    "body": "",
+    "insight": "This shows that regenerative food sovereignty can be scaled by rooting practices in local ecology and cultural context rather than importing universal models — a key pathway for decentralized food resilience.",
+    "actors": [],
+    "tags": [
+      "forest-gardening",
+      "regenerative-agriculture",
+      "food-sovereignty",
+      "indigenous-knowledge",
+      "agroecology",
+      "place-based-adaptation"
+    ],
+    "orientations": [
+      "GARDEN",
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-30/revolt-reform-or-rebuild-building-resilient-food-systems-from-the-ground-up-2/"
+  },
+  {
+    "slug": "rebuild-resilient-food-systems-ground-up",
+    "title": "Revolt, reform or rebuild: Building resilient food systems from the ground up",
+    "date": "2026-04-29",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/063G7ruUtTDH2cmZtk7yviQaA4AdwjZ6eKcOa45W.jpg",
+    "imageAlt": "Revolt, reform or rebuild: Building resilient food systems from the ground up",
+    "summary": "Article examines the case for rebuilding local, regenerative food systems as an alternative to reforming the unsustainable global food system, arguing that decentralized, community-based food production offers a pathway to systemic change.",
+    "body": "",
+    "insight": "Demonstrates that food system transformation requires not incremental policy reform but structural rebuild through grassroots practice — a governance shift from top-down regulation toward distributed, ecological autonomy.",
+    "actors": [],
+    "tags": [
+      "food-sovereignty",
+      "regenerative-agriculture",
+      "local-food-systems",
+      "commons-based-practice",
+      "system-transformation"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-29/revolt-reform-or-rebuild-building-resilient-food-systems-from-the-ground-up/"
+  },
+  {
     "slug": "anton-petrov-how-complex-life-began",
     "kind": "video",
     "videoId": "vZBvT5brYZI",

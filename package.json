@@ -8,13 +8,21 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "npm run build && wrangler dev",
+    "astro": "astro",
+    "generate-types": "wrangler types",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.2.2",
+    "@astrojs/cloudflare": "^13.3.0",
     "@supabase/ssr": "^0.10.2",
     "@supabase/supabase-js": "^2.105.1",
     "astro": "^6.1.7"
+  },
+  "devDependencies": {
+    "wrangler": "^4.87.0"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }

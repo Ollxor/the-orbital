@@ -1,5 +1,27 @@
 [
   {
+    "slug": "california-battery-array-12000-megawatts",
+    "title": "California’s Battery Array Is as Powerful as 12 Nuclear Power Plants. Here’s What’s on the Horizon.",
+    "date": "2026-05-05",
+    "image": "https://insideclimatenews.org/wp-content/uploads/2026/04/GettyImages-2271289621-1024x683.jpg",
+    "imageAlt": "California’s Battery Array Is as Powerful as 12 Nuclear Power Plants. Here’s What’s on the Horizon.",
+    "summary": "California's battery storage arrays discharged over 12,000 megawatts of energy in March 2026, equivalent to 12 large nuclear plants — a breakthrough demonstration of grid-scale renewable energy storage at scale.",
+    "body": "",
+    "insight": "This proves that distributed battery systems can now provide baseload power reliability without fossil fuels or nuclear, fundamentally shifting what's technically feasible for decarbonized grids.",
+    "actors": [],
+    "tags": [
+      "renewable-energy-infrastructure",
+      "battery-storage-scale",
+      "grid-decarbonization",
+      "energy-transition"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://insideclimatenews.org/news/05052026/california-battery-power/"
+  },
+  {
     "slug": "kangaroo-island-fire-history-indigenous-stewardship",
     "title": "Lake mud reveals 7,000 years of Kangaroo Island’s complex fire history",
     "date": "2026-05-04",

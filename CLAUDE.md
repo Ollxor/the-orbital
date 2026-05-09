@@ -441,3 +441,42 @@ The `peoples` field enables Indigenous and First Nations networks to be indexed 
 ### Filter URL compat
 
 Old `/actors?r=nordic` links no longer resolve (the `r=` region param was replaced by `c=` continent and `s=` scale in the geographic taxonomy migration). If inbound links need support, add a redirect or param-mapping shim at the Cloudflare level.
+
+### Personal-prompt feed filter (Lindy-style v2)
+
+Future enhancement to the existing `user_preferences` system: let signed-in
+users provide a free-text natural-language description of what they want from
+the feed (Lindy AI pattern). For each new article × each user, score relevance
+via Claude Haiku against their prompt; cache the result in a `relevance_scores`
+table. Estimated cost: ~$0.001 per (article × user) per week.
+
+Architecture sketch:
+- `personal_prompt text` column in `user_preferences` (already added)
+- New `relevance_scores (user_id, article_slug, score, reason, scored_at)` table
+- Background worker (Cloudflare Worker on cron, or GitHub Action) that
+  iterates new articles since last run × users with personal_prompt set,
+  calls Claude, stores scores
+- Client-side filter in `preferences.ts`: hide cards where the user's score
+  for that slug is below a threshold (configurable in settings)
+
+Worth building when: there are 5+ active users with materially different
+interests, or when one user wants to fork a very-personal feed view.
+
+### Editorial tier overrides (admin)
+
+`editorial_overrides (slug, tier, set_by, set_at, note)` — admin can promote
+stream→main or demote main→stream from the homepage / stream page directly.
+Anonymous users can read overrides but only `is_admin = true` user_profiles
+rows can write. Implemented in `src/scripts/editorial.ts`.
+
+### Admin role
+
+The `user_profiles.is_admin boolean` flag gates:
+- The Stream nav link (hidden for non-admins)
+- The homepage stream-callout card (hidden for non-admins)
+- The editorial tier-override pills on each card
+
+To grant admin to a user, run in Supabase SQL:
+```sql
+update public.user_profiles set is_admin = true where email = 'olle@example.com';
+```

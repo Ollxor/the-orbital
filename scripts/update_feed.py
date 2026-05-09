@@ -139,6 +139,44 @@ RSS_FEEDS = [
     {"url": "https://billmckibben.substack.com/feed",
      "name": "Crucial Years (Bill McKibben)"},
 
+    # ── Substack — extended set across all four orientations ───────────────
+    # GARDEN: small-farm + agroecology + post-growth ag
+    {"url": "https://chrissmaje.substack.com/feed",
+     "name": "Small Farm Future (Chris Smaje)"},
+    # SPACESHIP + GARDEN: sustainability data, evidence-based
+    {"url": "https://hannahritchie.substack.com/feed",
+     "name": "By the Numbers (Hannah Ritchie)"},
+    # SPACESHIP + MYSTERIES: civilisation-scale essays (Berggruen Institute)
+    {"url": "https://noemamag.com/feed/",
+     "name": "Noema Magazine"},
+    # MYSTERIES: sacred economy, gift, more-than-human
+    {"url": "https://charleseisenstein.substack.com/feed",
+     "name": "Charles Eisenstein"},
+    # MYSTERIES: Dark Mountain co-founder, deep ecology, narrative
+    {"url": "https://dougald.substack.com/feed",
+     "name": "Writing Home (Dougald Hine)"},
+    # MYSTERIES: consciousness research, transformation
+    {"url": "https://danielpinchbeck.substack.com/feed",
+     "name": "Liminal News (Daniel Pinchbeck)"},
+    # MYSTERIES: Ministry for the Future author
+    {"url": "https://kim.substack.com/feed",
+     "name": "Kim Stanley Robinson"},
+    # MYSTERIES: Booker winner, planetary perspective from orbit
+    {"url": "https://samanthaharvey.substack.com/feed",
+     "name": "Samantha Harvey"},
+    # ASSEMBLY + MYSTERIES: emergent strategy, Movement Generation
+    {"url": "https://www.adriennemareebrown.net/feed",
+     "name": "adrienne maree brown"},
+    # ASSEMBLY + MYSTERIES: politics, architecture, decoloniality
+    {"url": "https://thefunambulist.net/feed",
+     "name": "The Funambulist"},
+    # ASSEMBLY + GARDEN: post-growth movement
+    {"url": "https://post-growth.substack.com/feed",
+     "name": "Post-Growth Institute"},
+    # ASSEMBLY: democracy theory and practice (podcast + blog)
+    {"url": "https://www.democracyparadox.com/feed",
+     "name": "Democracy Paradox"},
+
     # ── Additional culture / regenerative / indigenous / commons ──────────
     # Climate + culture intersection
     {"url": "https://atmos.earth/feed/",
@@ -589,6 +627,7 @@ def main() -> int:
             "tags": result.get("tags", []),
             "orientations": result.get("orientations", ["GARDEN"]),
             "sourceUrl": candidate["url"],
+            "source": candidate.get("source", ""),
         }
         if is_youtube:
             entry["kind"] = "video"
@@ -602,13 +641,28 @@ def main() -> int:
         print("\nNo entries passed the relevance filter — done.")
         return 0
 
-    # Combine and sort by date desc, then slug, so the feed is always
-    # chronological regardless of when an entry was added.
-    updated = new_entries + existing_news
-    updated.sort(key=lambda e: (e.get("date", ""), e.get("slug", "")), reverse=True)
+    # Combine, dedupe defensively by slug and sourceUrl, then sort
+    # by date desc / slug so the feed is always chronological.
+    combined = new_entries + existing_news
+    seen_slugs = set()
+    seen_urls = set()
+    deduped = []
+    for e in combined:
+        slug = e.get("slug", "")
+        url = e.get("sourceUrl", "")
+        if slug and slug in seen_slugs:
+            continue
+        if url and url in seen_urls:
+            continue
+        if slug:
+            seen_slugs.add(slug)
+        if url:
+            seen_urls.add(url)
+        deduped.append(e)
+    deduped.sort(key=lambda e: (e.get("date", ""), e.get("slug", "")), reverse=True)
 
     with open(NEWS_JSON, "w", encoding="utf-8") as f:
-        json.dump(updated, f, ensure_ascii=False, indent=2)
+        json.dump(deduped, f, ensure_ascii=False, indent=2)
 
     print(f"\n✓ Added {len(new_entries)} entries:")
     for e in new_entries:

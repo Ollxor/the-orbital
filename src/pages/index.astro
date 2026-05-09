@@ -206,7 +206,7 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
       ))}
     </section>
 
-    <aside class="stream-callout">
+    <aside class="stream-callout admin-only" style="display:none">
       <div class="stream-callout-inner">
         <p class="stream-callout-eyebrow">Looking for more</p>
         <h2 class="stream-callout-title">The Stream</h2>
@@ -831,9 +831,44 @@ document.querySelectorAll('.card-reactions').forEach(container => {
   import '../scripts/preferences.ts';
 </script>
 
+<script>
+  // Admin-only editorial tier overrides
+  import '../scripts/editorial.ts';
+</script>
+
 <style is:global>
   /* Hide cards filtered out by user preferences */
   .news-card.pref-hidden { display: none !important; }
+  /* Hide cards demoted to stream by editorial override (homepage only) */
+  .news-card.editorial-hidden { display: none !important; }
+
+  /* Editorial admin pill (visible only to admins) */
+  .editorial-pill {
+    margin-left: auto;
+    font-family: var(--font-sans);
+    font-size: .625rem;
+    font-weight: 700;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    padding: .25rem .55rem;
+    background: #fff8e1;
+    border: 1px dashed #c5a345;
+    color: #8a6a18;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .editorial-pill:hover {
+    background: #fff;
+    border-color: #8a6a18;
+  }
+  .editorial-pill:disabled { opacity: .5; cursor: wait; }
+
+  /* Visually mark cards that have an editorial override */
+  body.is-admin .news-card[data-effective-tier="stream"] {
+    outline: 2px dashed rgba(184,134,11,.35);
+    outline-offset: -2px;
+  }
 </style>
 
 <style>

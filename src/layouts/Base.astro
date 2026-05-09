@@ -42,7 +42,7 @@ const currentPath = Astro.url.pathname;
     <div class="main-nav-inner">
       <div class="nav-links">
         <a href="/" class={currentPath === '/' ? 'active' : ''}>Feed</a>
-        <a href="/stream" class={currentPath.startsWith('/stream') ? 'active' : ''}>Stream</a>
+        <a href="/stream" class={`admin-only ${currentPath.startsWith('/stream') ? 'active' : ''}`} id="nav-stream-link" style="display:none">Stream</a>
         <a href="/actors" class={currentPath.startsWith('/actors') ? 'active' : ''}>Actors</a>
         <a href="/projects" class={currentPath.startsWith('/projects') ? 'active' : ''}>Projects</a>
         <a href="/events" class={currentPath.startsWith('/events') ? 'active' : ''}>Events</a>
@@ -144,12 +144,36 @@ const currentPath = Astro.url.pathname;
       wrap.innerHTML = `<a href="/login" class="nav-auth-link" id="nav-auth-link">Sign in</a>`;
     }
 
+    async function applyAdminState(userId: string | null) {
+      let isAdmin = false;
+      if (userId) {
+        try {
+          const { data } = await supabase
+            .from('user_profiles')
+            .select('is_admin')
+            .eq('id', userId)
+            .maybeSingle();
+          isAdmin = !!data?.is_admin;
+        } catch {}
+      }
+      // Toggle .admin-only elements
+      document.querySelectorAll<HTMLElement>('.admin-only').forEach(el => {
+        el.style.display = isAdmin ? '' : 'none';
+      });
+      document.body.classList.toggle('is-admin', isAdmin);
+      (window as any).__isAdmin = isAdmin;
+      // Fire event so other scripts can react (e.g. tier-override UI)
+      document.dispatchEvent(new CustomEvent('admin-state', { detail: { isAdmin } }));
+    }
+
     async function updateAuthNav() {
       const { data: { session } } = await supabase.auth.getSession();
       if (session?.user) {
         await renderSignedIn(session.user);
+        await applyAdminState(session.user.id);
       } else {
         renderSignedOut();
+        await applyAdminState(null);
       }
     }
 

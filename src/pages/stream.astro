@@ -242,6 +242,12 @@ const streamCount = all.filter(n => (n as any).tier === 'stream').length;
   import '../scripts/preferences.ts';
 </script>
 
+<script>
+  // Admin-only editorial tier overrides
+  import '../scripts/editorial.ts';
+</script>
+
 <style is:global>
   .stream-item.pref-hidden { display: none !important; }
+  .stream-item.editorial-hidden { display: none !important; } /* not used on /stream */
 </style>

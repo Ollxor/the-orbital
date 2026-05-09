@@ -1,0 +1,247 @@
+---
+import Base from '../layouts/Base.astro';
+import newsData from '../data/news.json';
+
+// Stream page shows ALL relevant entries — both main and stream tier.
+// Stream-tier entries are visually marked.
+const all = [...newsData].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+
+const orientationLabels: Record<string, string> = {
+  GARDEN: 'The Garden',
+  SPACESHIP: 'Spaceship Earth',
+  MYSTERIES: 'The Mysteries',
+  ASSEMBLY: 'The Assemblies',
+};
+const iconMap: Record<string, string> = {
+  GARDEN: 'Icons2-01.svg',
+  SPACESHIP: 'Icons2-04.svg',
+  MYSTERIES: 'Icons2-03.svg',
+  ASSEMBLY: 'Icons2-02.svg',
+};
+
+function formatDate(d: string) {
+  return new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function hostFromUrl(url: string): string {
+  try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; }
+}
+
+const mainCount = all.filter(n => !(n as any).tier || (n as any).tier === 'main').length;
+const streamCount = all.filter(n => (n as any).tier === 'stream').length;
+---
+
+<Base title="Stream — The Orbital" description="Every article that passes The Orbital's planetary-governance filter — main feed and the broader stream.">
+  <div class="container">
+    <header class="stream-header">
+      <p class="stream-eyebrow">Raw feed</p>
+      <h1 class="stream-title">The Stream</h1>
+      <p class="stream-intro">
+        Every article that clears our planetary-governance filter — both the
+        main feed's highlights and the wider stream of context, commentary,
+        and smaller-scope practice notes. Stream-tier items are marked.
+      </p>
+      <p class="stream-stats">
+        <span><strong>{mainCount}</strong> main</span>
+        <span class="sep">·</span>
+        <span><strong>{streamCount}</strong> stream</span>
+        <span class="sep">·</span>
+        <span><strong>{all.length}</strong> total</span>
+      </p>
+    </header>
+
+    <ol class="stream-list">
+      {all.map((n: any) => {
+        const isStream = n.tier === 'stream';
+        const isVideo = n.kind === 'video';
+        const host = hostFromUrl(n.sourceUrl);
+        const detailUrl = `/news/${n.slug}`;
+        return (
+          <li
+            class={`stream-item news-card ${isStream ? 'is-stream' : 'is-main'}`}
+            data-slug={n.slug}
+            data-orientations={(n.orientations ?? []).join(',')}
+            data-tags={(n.tags ?? []).join(',')}
+            data-tier={n.tier ?? 'main'}
+            data-kind={n.kind ?? 'article'}
+          >
+            <div class="stream-line-top">
+              <time class="stream-date">{formatDate(n.date)}</time>
+              {isStream && <span class="tier-chip tier-stream">stream</span>}
+              {!isStream && <span class="tier-chip tier-main">main</span>}
+              {isVideo && <span class="tier-chip kind-video">video</span>}
+              {host && <span class="stream-host">{host}</span>}
+            </div>
+            <h2 class="stream-item-title">
+              <a href={detailUrl}>{n.title}</a>
+            </h2>
+            {n.summary && <p class="stream-item-summary">{n.summary}</p>}
+            <div class="stream-line-bot">
+              {(n.orientations ?? []).map((o: string) => (
+                <span class="orient-mini">
+                  <img src={`/assets/${iconMap[o]}`} alt="" class="orient-mini-icon" />
+                  {orientationLabels[o] ?? o}
+                </span>
+              ))}
+              {(n.tags ?? []).slice(0, 4).map((t: string) => (
+                <a href={`/tags/${t}`} class="stream-tag">{t.replace(/-/g, ' ')}</a>
+              ))}
+            </div>
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</Base>
+
+<style>
+.stream-header {
+  max-width: var(--max-w);
+  margin: 2rem auto 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px double var(--border);
+}
+.stream-eyebrow {
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: .5rem;
+}
+.stream-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: .75rem;
+}
+.stream-intro {
+  font-size: .9375rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  max-width: 60ch;
+  margin-bottom: .75rem;
+}
+.stream-stats {
+  font-size: .8125rem;
+  color: var(--text-3);
+  display: flex;
+  gap: .625rem;
+  align-items: center;
+}
+.stream-stats strong { color: var(--text); font-weight: 700; }
+.stream-stats .sep { color: var(--text-3); }
+
+.stream-list {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+.stream-item {
+  padding: 1.25rem 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.stream-item.is-stream {
+  opacity: .85;
+}
+.stream-item.is-stream:hover { opacity: 1; }
+
+.stream-line-top {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  margin-bottom: .5rem;
+  flex-wrap: wrap;
+}
+.stream-date {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--text-3);
+  letter-spacing: .03em;
+}
+.tier-chip {
+  font-family: var(--font-sans);
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .15rem .55rem;
+  border-radius: 999px;
+  border: 1px solid;
+}
+.tier-main { color: #4a7c59; border-color: #4a7c59; background: #f0f6f2; }
+.tier-stream { color: #777; border-color: #aaa; background: #f6f6f6; }
+.kind-video { color: #b8860b; border-color: #b8860b; background: #fcf6e6; }
+.stream-host {
+  font-size: .6875rem;
+  color: var(--text-3);
+  letter-spacing: .03em;
+  margin-left: auto;
+  font-family: var(--font-sans);
+}
+
+.stream-item-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 0 .5rem;
+}
+.stream-item.is-stream .stream-item-title {
+  font-size: 1.0625rem;
+  color: var(--text-2);
+}
+.stream-item-title a { text-decoration: none; color: inherit; }
+.stream-item-title a:hover { text-decoration: underline; }
+.stream-item-summary {
+  font-size: .875rem;
+  color: var(--text-2);
+  line-height: 1.55;
+  margin-bottom: .625rem;
+  max-width: 70ch;
+}
+
+.stream-line-bot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .55rem;
+  align-items: center;
+}
+.orient-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  font-size: .6875rem;
+  color: var(--text-3);
+  font-weight: 500;
+  letter-spacing: .02em;
+}
+.orient-mini-icon { width: 14px; height: 14px; object-fit: contain; }
+.stream-tag {
+  font-size: .6875rem;
+  color: var(--text-3);
+  text-decoration: none;
+  padding: .1rem .45rem;
+  border-radius: 3px;
+  background: var(--filter-bg);
+}
+.stream-tag:hover { color: var(--text-2); background: var(--border); }
+
+@media (max-width: 640px) {
+  .stream-host { margin-left: 0; }
+}
+</style>
+
+<script>
+  // Per-user feed preferences applied client-side
+  import '../scripts/preferences.ts';
+</script>
+
+<style is:global>
+  .stream-item.pref-hidden { display: none !important; }
+</style>

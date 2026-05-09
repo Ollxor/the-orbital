@@ -1,0 +1,457 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Account — The Orbital" description="Your profile, feed preferences, and reading dashboard.">
+  <div class="container me-wrap">
+    <div id="me-loading" class="me-loading">Loading…</div>
+
+    <div id="me-signed-out" class="me-signed-out" style="display:none">
+      <h1 class="me-title">Sign in</h1>
+      <p class="me-sub">You need to sign in to manage your preferences and reading.</p>
+      <a href="/login" class="me-cta">Sign in</a>
+    </div>
+
+    <div id="me-content" style="display:none">
+      <header class="me-header">
+        <div class="me-avatar-wrap">
+          <img id="me-avatar" alt="" />
+          <span id="me-avatar-fallback" class="me-avatar-fallback"></span>
+        </div>
+        <div class="me-id">
+          <h1 class="me-name" id="me-name">Loading…</h1>
+          <p class="me-email" id="me-email"></p>
+        </div>
+      </header>
+
+      <nav class="me-tabs">
+        <button class="me-tab active" data-tab="profile">Profile</button>
+        <button class="me-tab" data-tab="feed">Feed</button>
+        <button class="me-tab" data-tab="reading">Reading</button>
+      </nav>
+
+      <!-- ── Profile tab ── -->
+      <section class="me-panel active" data-panel="profile">
+        <h2 class="me-h">Profile</h2>
+        <dl class="me-dl">
+          <dt>Display name</dt><dd id="me-display-name">—</dd>
+          <dt>Email</dt><dd id="me-email-2">—</dd>
+          <dt>Joined</dt><dd id="me-joined">—</dd>
+          <dt>Last sign-in</dt><dd id="me-last-sign-in">—</dd>
+        </dl>
+        <a href="/auth/signout" class="me-action danger">Sign out</a>
+      </section>
+
+      <!-- ── Feed tab ── -->
+      <section class="me-panel" data-panel="feed" style="display:none">
+        <h2 class="me-h">Feed preferences</h2>
+        <p class="me-help">Customise what shows up on your homepage. Saved to your account; applies on every device.</p>
+
+        <div class="pref-group">
+          <h3 class="pref-h">Orientations</h3>
+          <p class="pref-help">Hide content from any orientation lens.</p>
+          <div class="pref-toggles" id="orient-toggles">
+            <label class="pref-toggle"><input type="checkbox" data-orient="GARDEN" checked /> The Garden</label>
+            <label class="pref-toggle"><input type="checkbox" data-orient="SPACESHIP" checked /> Spaceship Earth</label>
+            <label class="pref-toggle"><input type="checkbox" data-orient="MYSTERIES" checked /> The Mysteries</label>
+            <label class="pref-toggle"><input type="checkbox" data-orient="ASSEMBLY" checked /> The Assemblies</label>
+          </div>
+        </div>
+
+        <div class="pref-group">
+          <h3 class="pref-h">Content type</h3>
+          <div class="pref-toggles">
+            <label class="pref-toggle"><input type="checkbox" id="show-articles" checked /> Articles</label>
+            <label class="pref-toggle"><input type="checkbox" id="show-videos" checked /> Videos</label>
+          </div>
+        </div>
+
+        <div class="pref-group">
+          <h3 class="pref-h">Stream tier</h3>
+          <p class="pref-help">By default the homepage shows only main-tier highlights. Enable to also see stream-tier context articles on the homepage.</p>
+          <div class="pref-toggles">
+            <label class="pref-toggle"><input type="checkbox" id="show-stream" /> Include stream-tier on homepage</label>
+          </div>
+        </div>
+
+        <div class="pref-actions">
+          <button id="save-prefs" class="me-action primary">Save preferences</button>
+          <span id="save-status" class="save-status"></span>
+        </div>
+      </section>
+
+      <!-- ── Reading tab ── -->
+      <section class="me-panel" data-panel="reading" style="display:none">
+        <h2 class="me-h">Reading</h2>
+
+        <div class="reading-stats">
+          <div class="stat-block">
+            <div class="stat-num" id="reads-total">0</div>
+            <div class="stat-label">total reads</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num" id="reads-week">0</div>
+            <div class="stat-label">this week</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num" id="reads-streak">0</div>
+            <div class="stat-label">day streak</div>
+          </div>
+        </div>
+
+        <h3 class="reading-h">By orientation</h3>
+        <div class="orient-bars" id="orient-bars">
+          <div class="orient-bar" data-orient="GARDEN"><span class="ob-label">Garden</span><span class="ob-track"><span class="ob-fill"></span></span><span class="ob-count">0</span></div>
+          <div class="orient-bar" data-orient="SPACESHIP"><span class="ob-label">Spaceship</span><span class="ob-track"><span class="ob-fill"></span></span><span class="ob-count">0</span></div>
+          <div class="orient-bar" data-orient="MYSTERIES"><span class="ob-label">Mysteries</span><span class="ob-track"><span class="ob-fill"></span></span><span class="ob-count">0</span></div>
+          <div class="orient-bar" data-orient="ASSEMBLY"><span class="ob-label">Assemblies</span><span class="ob-track"><span class="ob-fill"></span></span><span class="ob-count">0</span></div>
+        </div>
+
+        <h3 class="reading-h">Top tags</h3>
+        <div class="tag-cloud" id="tag-cloud"></div>
+
+        <h3 class="reading-h">Recent reads</h3>
+        <ol id="recent-reads" class="recent-reads"></ol>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<script>
+  import { createClient } from '@supabase/supabase-js';
+
+  const SUPABASE_URL = 'https://lathlnothoosbwrvxtel.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhdGhsbm90aG9vc2J3cnZ4dGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczNjU1OTYsImV4cCI6MjA5Mjk0MTU5Nn0.VZJxCAbOfpiepbvgq9m0xC2wMe0IgFNlUUUC9wbk3Gc';
+
+  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false },
+  });
+
+  const $ = (id: string) => document.getElementById(id);
+
+  async function init() {
+    const { data: { session } } = await supabase.auth.getSession();
+    const loadingEl = $('me-loading');
+    if (loadingEl) loadingEl.style.display = 'none';
+
+    if (!session) {
+      const sout = $('me-signed-out');
+      if (sout) sout.style.display = 'block';
+      return;
+    }
+
+    const content = $('me-content');
+    if (content) content.style.display = 'block';
+
+    const user = session.user;
+
+    // ── Avatar + identity ──────────────────────────────────────────────────
+    const avatar = $('me-avatar') as HTMLImageElement | null;
+    const fallback = $('me-avatar-fallback');
+    const meta = (user.user_metadata ?? {}) as any;
+    const avatarUrl = meta.avatar_url ?? meta.picture ?? '';
+    const name = meta.full_name ?? meta.name ?? (user.email ?? '').split('@')[0];
+    const email = user.email ?? '';
+
+    if (avatar) {
+      if (avatarUrl) {
+        avatar.src = avatarUrl;
+        avatar.referrerPolicy = 'no-referrer';
+        avatar.onerror = () => { avatar.style.display = 'none'; if (fallback) fallback.style.display = 'flex'; };
+      } else {
+        avatar.style.display = 'none';
+        if (fallback) fallback.style.display = 'flex';
+      }
+    }
+    if (fallback) fallback.textContent = (name?.charAt(0) ?? '?').toUpperCase();
+
+    if ($('me-name')) $('me-name')!.textContent = name ?? 'Account';
+    if ($('me-email')) $('me-email')!.textContent = email;
+    if ($('me-display-name')) $('me-display-name')!.textContent = name ?? '—';
+    if ($('me-email-2')) $('me-email-2')!.textContent = email;
+    if ($('me-joined')) $('me-joined')!.textContent = new Date(user.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
+    // Fetch profile for last_sign_in
+    const { data: profile } = await supabase
+      .from('user_profiles')
+      .select('last_sign_in')
+      .eq('id', user.id)
+      .maybeSingle();
+    if (profile?.last_sign_in && $('me-last-sign-in')) {
+      $('me-last-sign-in')!.textContent = new Date(profile.last_sign_in).toLocaleString('en-GB');
+    }
+
+    // ── Tab switching ──────────────────────────────────────────────────────
+    document.querySelectorAll('.me-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.me-tab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const target = (btn as HTMLElement).dataset.tab;
+        document.querySelectorAll('.me-panel').forEach(p => {
+          (p as HTMLElement).style.display = (p as HTMLElement).dataset.panel === target ? 'block' : 'none';
+        });
+      });
+    });
+
+    // ── Load and bind preferences ─────────────────────────────────────────
+    const { data: prefs } = await supabase
+      .from('user_preferences')
+      .select('*')
+      .eq('user_id', user.id)
+      .maybeSingle();
+
+    const orientHide: string[] = prefs?.orientations_hide ?? [];
+    const showArticles = prefs?.show_articles ?? true;
+    const showVideos = prefs?.show_videos ?? true;
+    const showStream = prefs?.show_stream ?? false;
+
+    document.querySelectorAll<HTMLInputElement>('#orient-toggles input').forEach(cb => {
+      const o = cb.dataset.orient!;
+      cb.checked = !orientHide.includes(o);
+    });
+    ($('show-articles') as HTMLInputElement).checked = showArticles;
+    ($('show-videos') as HTMLInputElement).checked = showVideos;
+    ($('show-stream') as HTMLInputElement).checked = showStream;
+
+    // Save handler
+    $('save-prefs')?.addEventListener('click', async () => {
+      const status = $('save-status');
+      if (status) status.textContent = 'Saving…';
+
+      const newOrientHide: string[] = [];
+      document.querySelectorAll<HTMLInputElement>('#orient-toggles input').forEach(cb => {
+        if (!cb.checked) newOrientHide.push(cb.dataset.orient!);
+      });
+
+      const payload = {
+        user_id: user.id,
+        orientations_hide: newOrientHide,
+        show_articles: ($('show-articles') as HTMLInputElement).checked,
+        show_videos: ($('show-videos') as HTMLInputElement).checked,
+        show_stream: ($('show-stream') as HTMLInputElement).checked,
+      };
+
+      const { error } = await supabase
+        .from('user_preferences')
+        .upsert(payload, { onConflict: 'user_id' });
+
+      if (status) {
+        if (error) {
+          status.textContent = 'Error: ' + error.message;
+          status.style.color = '#991b1b';
+        } else {
+          status.textContent = 'Saved.';
+          status.style.color = '#4a7c59';
+          setTimeout(() => { if (status) status.textContent = ''; }, 2500);
+        }
+      }
+    });
+
+    // ── Reading dashboard ─────────────────────────────────────────────────
+    const { data: reads } = await supabase
+      .from('reads')
+      .select('article_slug, article_title, article_date, orientations, tags, read_at')
+      .order('read_at', { ascending: false });
+
+    const list = reads ?? [];
+    if ($('reads-total')) $('reads-total')!.textContent = String(list.length);
+
+    const oneWeekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+    const weekReads = list.filter(r => new Date(r.read_at).getTime() > oneWeekAgo);
+    if ($('reads-week')) $('reads-week')!.textContent = String(weekReads.length);
+
+    // Day streak (consecutive days back from today with at least one read)
+    const dates = new Set(list.map(r => r.read_at.slice(0, 10)));
+    let streak = 0;
+    const d = new Date();
+    while (dates.has(d.toISOString().slice(0, 10))) {
+      streak++;
+      d.setDate(d.getDate() - 1);
+    }
+    if ($('reads-streak')) $('reads-streak')!.textContent = String(streak);
+
+    // Orientation bars
+    const orientCounts: Record<string, number> = { GARDEN: 0, SPACESHIP: 0, MYSTERIES: 0, ASSEMBLY: 0 };
+    list.forEach(r => (r.orientations ?? []).forEach((o: string) => {
+      if (o in orientCounts) orientCounts[o]++;
+    }));
+    const maxOrient = Math.max(1, ...Object.values(orientCounts));
+    Object.entries(orientCounts).forEach(([o, n]) => {
+      const bar = document.querySelector(`.orient-bar[data-orient="${o}"]`);
+      if (!bar) return;
+      const fill = bar.querySelector('.ob-fill') as HTMLElement | null;
+      const count = bar.querySelector('.ob-count') as HTMLElement | null;
+      if (fill) fill.style.width = `${(n / maxOrient) * 100}%`;
+      if (count) count.textContent = String(n);
+    });
+
+    // Top tags
+    const tagCounts: Record<string, number> = {};
+    list.forEach(r => (r.tags ?? []).forEach((t: string) => {
+      tagCounts[t] = (tagCounts[t] ?? 0) + 1;
+    }));
+    const topTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).slice(0, 20);
+    const cloud = $('tag-cloud');
+    if (cloud) {
+      cloud.innerHTML = '';
+      const maxTag = topTags[0]?.[1] ?? 1;
+      topTags.forEach(([tag, n]) => {
+        const a = document.createElement('a');
+        a.href = `/tags/${tag}`;
+        a.className = 'tc-tag';
+        const scale = 0.85 + 0.7 * (n / maxTag);
+        a.style.fontSize = `${scale}rem`;
+        a.textContent = `${tag.replace(/-/g, ' ')} (${n})`;
+        cloud.appendChild(a);
+      });
+      if (topTags.length === 0) cloud.innerHTML = '<p class="me-help">No reads yet — start marking articles to build your tag cloud.</p>';
+    }
+
+    // Recent reads
+    const recent = $('recent-reads');
+    if (recent) {
+      recent.innerHTML = '';
+      list.slice(0, 12).forEach(r => {
+        const li = document.createElement('li');
+        li.className = 'recent-read';
+        const date = new Date(r.read_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+        li.innerHTML = `
+          <span class="rr-date">${date}</span>
+          <a class="rr-title" href="/news/${r.article_slug}">${r.article_title ?? r.article_slug}</a>
+        `;
+        recent.appendChild(li);
+      });
+      if (list.length === 0) recent.innerHTML = '<p class="me-help">No reads yet.</p>';
+    }
+  }
+
+  init();
+</script>
+
+<style>
+.me-wrap { max-width: 720px; margin: 0 auto; padding-top: 2rem; }
+.me-loading, .me-signed-out { padding: 4rem 0; text-align: center; color: var(--text-2); font-style: italic; }
+.me-cta {
+  display: inline-block; margin-top: 1rem; padding: .65rem 1.5rem;
+  background: #4a7c59; color: #fff; text-decoration: none; border-radius: 6px;
+  font-family: var(--font-sans); font-weight: 600; font-size: .875rem; letter-spacing: .04em;
+}
+.me-cta:hover { background: #3e6b4a; text-decoration: none; }
+
+.me-header {
+  display: flex; align-items: center; gap: 1.25rem;
+  padding-bottom: 1.5rem; border-bottom: 3px double var(--border); margin-bottom: 1.5rem;
+}
+.me-avatar-wrap {
+  width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex-shrink: 0;
+  background: linear-gradient(135deg, #4a7c59 0%, #3e6b4a 100%);
+  position: relative;
+}
+.me-avatar-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.me-avatar-fallback {
+  position: absolute; inset: 0; display: none; align-items: center; justify-content: center;
+  font-family: var(--font-sans); font-weight: 700; font-size: 1.75rem; color: #fff;
+}
+.me-name { font-family: 'Playfair Display', Georgia, serif; font-size: 1.75rem; font-weight: 400; margin: 0; line-height: 1.1; }
+.me-email { font-size: .8125rem; color: var(--text-3); margin: .25rem 0 0; }
+
+.me-tabs {
+  display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 1.75rem;
+}
+.me-tab {
+  padding: .65rem 1.1rem;
+  background: none; border: none; cursor: pointer;
+  font-family: var(--font-sans); font-size: .75rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--text-3);
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: color .15s, border-color .15s;
+}
+.me-tab:hover { color: var(--text-2); }
+.me-tab.active { color: var(--text); border-bottom-color: var(--text); }
+
+.me-h {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem; font-weight: 400; margin: 0 0 .75rem;
+}
+.me-help { font-size: .8125rem; color: var(--text-3); line-height: 1.5; margin-bottom: 1rem; }
+
+.me-dl { display: grid; grid-template-columns: 130px 1fr; gap: .5rem 1.5rem; margin-bottom: 2rem; }
+.me-dl dt { font-size: .75rem; color: var(--text-3); letter-spacing: .04em; text-transform: uppercase; font-weight: 600; align-self: center; }
+.me-dl dd { font-size: .9375rem; color: var(--text); margin: 0; }
+
+.me-action {
+  display: inline-block;
+  padding: .55rem 1.1rem;
+  font-family: var(--font-sans); font-size: .8125rem; font-weight: 600;
+  letter-spacing: .04em;
+  text-decoration: none;
+  border-radius: 6px; cursor: pointer; border: 1px solid var(--border);
+  background: var(--bg); color: var(--text);
+  transition: all .15s;
+}
+.me-action.primary { background: #4a7c59; color: #fff; border-color: #4a7c59; }
+.me-action.primary:hover { background: #3e6b4a; }
+.me-action.danger { color: #991b1b; border-color: #fecaca; }
+.me-action.danger:hover { background: #fef2f2; }
+
+.pref-group {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--border);
+}
+.pref-group:last-of-type { border-bottom: none; }
+.pref-h { font-size: .875rem; font-weight: 700; letter-spacing: .04em; margin-bottom: .35rem; }
+.pref-help { font-size: .8125rem; color: var(--text-3); margin-bottom: .65rem; line-height: 1.45; }
+.pref-toggles { display: flex; flex-wrap: wrap; gap: .65rem 1rem; }
+.pref-toggle { display: inline-flex; align-items: center; gap: .45rem; font-size: .875rem; cursor: pointer; }
+.pref-toggle input { cursor: pointer; }
+
+.pref-actions { display: flex; align-items: center; gap: .85rem; margin-top: .5rem; }
+.save-status { font-size: .8125rem; font-style: italic; color: var(--text-3); }
+
+/* Reading dashboard */
+.reading-stats { display: flex; gap: 1rem; margin: 1rem 0 2rem; flex-wrap: wrap; }
+.stat-block {
+  flex: 1 1 0; min-width: 130px;
+  padding: 1rem 1.25rem;
+  background: var(--filter-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.25rem; font-weight: 400; line-height: 1;
+  color: var(--text);
+}
+.stat-label { font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); margin-top: .35rem; font-weight: 600; }
+
+.reading-h { font-family: var(--font-sans); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); margin: 1.75rem 0 .75rem; }
+
+.orient-bars { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1rem; }
+.orient-bar {
+  display: grid; grid-template-columns: 100px 1fr 40px;
+  align-items: center; gap: .75rem;
+}
+.ob-label { font-size: .8125rem; color: var(--text-2); }
+.ob-track { background: var(--filter-bg); border-radius: 999px; height: 14px; overflow: hidden; }
+.ob-fill { display: block; height: 100%; background: linear-gradient(90deg, #4a7c59, #6ba180); transition: width .4s ease; }
+.orient-bar[data-orient="SPACESHIP"] .ob-fill { background: linear-gradient(90deg, #2a6496, #4d7090); }
+.orient-bar[data-orient="MYSTERIES"] .ob-fill { background: linear-gradient(90deg, #7b5ea7, #826099); }
+.orient-bar[data-orient="ASSEMBLY"] .ob-fill { background: linear-gradient(90deg, #b8860b, #c19c5e); }
+.ob-count { font-size: .8125rem; font-weight: 600; color: var(--text-2); text-align: right; }
+
+.tag-cloud { display: flex; flex-wrap: wrap; gap: .5rem .75rem; margin-bottom: 1rem; }
+.tc-tag { color: var(--text-2); text-decoration: none; line-height: 1.2; }
+.tc-tag:hover { color: var(--text); text-decoration: underline; }
+
+.recent-reads { list-style: none; padding: 0; }
+.recent-read {
+  display: flex; gap: .75rem; padding: .5rem 0;
+  border-bottom: 1px solid var(--border); align-items: baseline;
+}
+.rr-date { font-size: .75rem; color: var(--text-3); flex-shrink: 0; width: 64px; }
+.rr-title { color: var(--text); text-decoration: none; font-size: .9375rem; }
+.rr-title:hover { text-decoration: underline; }
+</style>

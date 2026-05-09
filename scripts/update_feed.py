@@ -19,9 +19,11 @@ import anthropic
 
 # ── Configuration ────────────────────────────────────────────────────────────
 
-LOOKBACK_DAYS = 7       # How far back to look (was 5 — widened to reduce dry-run risk)
-MAX_CANDIDATES = 30     # Max articles to evaluate per run (was 20)
-MAX_NEW_ENTRIES = 8     # Max articles to actually add per run
+LOOKBACK_DAYS = 7       # How far back to look
+MAX_CANDIDATES = 80     # Max articles to evaluate per run (was 30 — raised for the
+                        # 38-source pipeline. ~$0.001 per eval, so up to ~$0.08/run)
+MAX_NEW_ENTRIES = 25    # Max articles to actually add per run (was 8)
+                        # Most go to "stream" tier; "main" stays selective
 NEWS_JSON = "src/data/news.json"
 
 # RSS feeds — all URLs verified live as of 2026-04-27.
@@ -122,6 +124,47 @@ RSS_FEEDS = [
     {"url": "https://www.solutionsjournalism.org/blog?format=rss",
      "name": "Solutions Journalism Network"},
 
+    # ── Substack — individual writers with depth ───────────────────────────
+    # The 3-tier system absorbs higher volume; main-tier filter still strict.
+    # Volts — David Roberts on energy/climate policy
+    {"url": "https://www.volts.wtf/feed",
+     "name": "Volts"},
+    # Andrew Dessler & Zeke Hausfather on climate science
+    {"url": "https://www.theclimatebrink.com/feed",
+     "name": "The Climate Brink"},
+    # Emily Atkin on climate accountability
+    {"url": "https://heated.world/feed",
+     "name": "Heated"},
+    # Bill McKibben on the climate movement
+    {"url": "https://billmckibben.substack.com/feed",
+     "name": "Crucial Years (Bill McKibben)"},
+
+    # ── Additional culture / regenerative / indigenous / commons ──────────
+    # Climate + culture intersection
+    {"url": "https://atmos.earth/feed/",
+     "name": "Atmos"},
+    # Broad solutions-leaning climate
+    {"url": "https://grist.org/feed/",
+     "name": "Grist"},
+    # DIY regenerative practice
+    {"url": "https://www.lowimpact.org/feed/",
+     "name": "Low Impact"},
+    # Indigenous rights and biocultural heritage
+    {"url": "https://www.culturalsurvival.org/rss.xml",
+     "name": "Cultural Survival"},
+    # Regenerative culture / biomimicry / environmental movement
+    {"url": "https://www.bioneers.org/feed/",
+     "name": "Bioneers"},
+    # Commons governance and economy
+    {"url": "https://commonsstrategies.org/feed/",
+     "name": "Commons Strategies Group"},
+    # Low-carbon living, slow-tech sensibility
+    {"url": "https://earthbound.report/feed/",
+     "name": "Earthbound Report"},
+    # Regenerative innovation
+    {"url": "https://transformatise.com/feed/",
+     "name": "Transformatise"},
+
     # ── YouTube channels (kind="youtube" → entries become video items) ─────
     # The breakthrough rubric in SYSTEM_PROMPT still gates these. Most
     # videos from these channels will NOT qualify (cosmology, hardware
@@ -209,6 +252,14 @@ SYSTEM_PROMPT = """You are the curator of The Orbital (theorbital.net), a soluti
 
 CRITICAL EDITORIAL PRINCIPLE: The Orbital covers SOLUTIONS, RESPONSES, INITIATIVES, and BREAKTHROUGH KNOWLEDGE — not the crisis itself. An article about a new citizens assembly on biodiversity belongs here. An article reporting biodiversity loss statistics does not. When in doubt, ask: "Is this article primarily about something being built, practiced, decided, transformed, or genuinely newly understood?" If the primary angle is documenting damage, sounding an alarm, or reporting failure, exclude it.
 
+TWO-TIER FEED: every relevant article is classified into one of two tiers.
+
+- "main" → top-tier feature material. Use for articles that clearly meet at least one of: (a) a new governance initiative / legal ruling / institutional experiment with real actors; (b) a breakthrough discovery meeting the science rubric below; (c) a deliberative process with concrete outcomes; (d) a regenerative practice scaling visibly; (e) embodied indigenous knowledge presented as a way of knowing; (f) an article that genuinely changes how a reader would think about planetary governance.
+
+- "stream" → relevant context. Use for articles that fit the planetary-governance theme but are not main-feed-tier: commentary, smaller-scale practice notes, niche policy detail, evergreen explainers, opinion pieces grounded in real practice, repackaging of ideas already in our feed. They show up on /stream but not on the homepage.
+
+Be honest. Most relevant articles are stream-tier. Main is the highlight reel.
+
 The feed uses four "orientations" as lenses:
 - GARDEN: How do we tend living systems? (agroecology, rewilding, rights of nature, soil, food sovereignty, indigenous land stewardship, ocean commons, ecosystem restoration)
 - SPACESHIP: How do we build, model, and SENSE the systems? (AI for governance, digital twins, satellite monitoring, open data protocols, civic tech, systems thinking, climate modelling tools — and now: tools/research that let us perceive ecosystems we couldn't before, e.g. animal communication AI, mycelial networks, bioacoustics, environmental DNA)
@@ -255,14 +306,26 @@ Description: {description}
 
 Respond with JSON in EXACTLY this format:
 
-If RELEVANT:
+If RELEVANT (main-tier — strict, see system prompt):
 {{
   "include": true,
+  "tier": "main",
   "slug": "kebab-case-slug-max-60-chars",
   "summary": "1-2 sentence summary, 120-160 chars, factual and specific — what happened, what was decided, what was built, or what is being practiced",
   "insight": "One sentence: why this matters for planetary governance — specific implication, not a restatement of the summary",
   "orientations": ["GARDEN"],
   "tags": ["tag-1", "tag-2", "tag-3", "tag-4"]
+}}
+
+If RELEVANT but not main-tier (stream — context, commentary, smaller scope):
+{{
+  "include": true,
+  "tier": "stream",
+  "slug": "kebab-case-slug-max-60-chars",
+  "summary": "...",
+  "insight": "...",
+  "orientations": ["..."],
+  "tags": ["..."]
 }}
 
 If NOT relevant:
@@ -508,8 +571,13 @@ def main() -> int:
         else:
             image = get_og_image(candidate["url"])
 
+        tier = result.get("tier", "main")
+        if tier not in ("main", "stream"):
+            tier = "main"
+
         entry = {
             "slug": final_slug,
+            "tier": tier,
             "title": candidate["title"],
             "date": candidate["date"],
             "image": image,
@@ -528,7 +596,7 @@ def main() -> int:
 
         new_entries.append(entry)
         added_slugs.add(final_slug)
-        print(f"  → [{', '.join(entry['orientations'])}] {final_slug}")
+        print(f"  → [{tier:>6}] [{', '.join(entry['orientations'])}] {final_slug}")
 
     if not new_entries:
         print("\nNo entries passed the relevance filter — done.")

@@ -5,7 +5,11 @@ import actorsData from '../data/actors.json';
 import projectsData from '../data/projects.json';
 import eventsData from '../data/events.json';
 
-const news = [...newsData].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+// Homepage shows main-tier only. Stream-tier entries appear at /stream.
+// Entries without an explicit tier are treated as main (legacy compat).
+const news = [...newsData]
+  .filter(n => !(n as any).tier || (n as any).tier === 'main')
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 const actorCount = actorsData.length;
 const projectCount = projectsData.length;
 const eventCount = eventsData.length;
@@ -144,6 +148,8 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
               data-orientations={story.orientations.join(',')}
               data-tags={(story.tags || []).join(',')}
               data-source-url={story.sourceUrl || ''}
+              data-tier={(story as any).tier || 'main'}
+              data-kind={(story as any).kind || 'article'}
             >
               <div class={`card-image-wrap${story.image ? '' : ' card-placeholder'}${(story as any).kind === 'video' ? ' card-video' : ''}`} data-orient={story.orientations[0] || 'GARDEN'}>
                 <a href={`/news/${story.slug}`}>
@@ -806,3 +812,13 @@ document.querySelectorAll('.card-reactions').forEach(container => {
   // when the user is signed in, and persists state via Supabase.
   import '../scripts/reads.ts';
 </script>
+
+<script>
+  // Per-user feed preferences applied client-side
+  import '../scripts/preferences.ts';
+</script>
+
+<style is:global>
+  /* Hide cards filtered out by user preferences */
+  .news-card.pref-hidden { display: none !important; }
+</style>

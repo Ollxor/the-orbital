@@ -99,6 +99,29 @@ RSS_FEEDS = [
     {"url": "https://www.earthspecies.org/blog?format=rss",
      "name": "Earth Species Project"},
 
+    # ── Solutions journalism + planetary perspective ──────────────────────
+    # Solutions science journalism — naturally selects for breakthroughs
+    {"url": "https://www.anthropocenemagazine.org/feed/",
+     "name": "Anthropocene Magazine"},
+    # Deep ecology, more-than-human, indigenous wisdom — strong MYSTERIES
+    {"url": "https://emergencemagazine.org/feed/",
+     "name": "Emergence Magazine"},
+    # Solutions-focused climate journalism
+    {"url": "https://yaleclimateconnections.org/feed/",
+     "name": "Yale Climate Connections"},
+    # Solutions journalism flagship (broad)
+    {"url": "https://reasonstobecheerful.world/feed/",
+     "name": "Reasons to be Cheerful"},
+    # Long-term thinking, planetary perspective, civilisation-scale
+    {"url": "https://blog.longnow.org/feed/atom/",
+     "name": "Long Now Foundation"},
+    # Post-growth economics — small but high quality
+    {"url": "https://centerforneweconomics.org/feed/",
+     "name": "Schumacher Center"},
+    # Meta — solutions journalism methodology + practitioner stories
+    {"url": "https://www.solutionsjournalism.org/blog?format=rss",
+     "name": "Solutions Journalism Network"},
+
     # ── YouTube channels (kind="youtube" → entries become video items) ─────
     # The breakthrough rubric in SYSTEM_PROMPT still gates these. Most
     # videos from these channels will NOT qualify (cosmology, hardware
@@ -108,6 +131,9 @@ RSS_FEEDS = [
      "name": "Anton Petrov", "kind": "youtube"},
     {"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCOT2iLov0V7Re7ku_3UBtcQ",
      "name": "Hank Green", "kind": "youtube"},
+    # Deep Look (PBS/KQED) — macro biology, sensing-the-living-world
+    {"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-3SbfTPJsL8fJAPKiVqBLg",
+     "name": "Deep Look", "kind": "youtube"},
 ]
 
 
@@ -508,7 +534,11 @@ def main() -> int:
         print("\nNo entries passed the relevance filter — done.")
         return 0
 
+    # Combine and sort by date desc, then slug, so the feed is always
+    # chronological regardless of when an entry was added.
     updated = new_entries + existing_news
+    updated.sort(key=lambda e: (e.get("date", ""), e.get("slug", "")), reverse=True)
+
     with open(NEWS_JSON, "w", encoding="utf-8") as f:
         json.dump(updated, f, ensure_ascii=False, indent=2)
 

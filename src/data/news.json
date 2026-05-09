@@ -190,7 +190,7 @@
     "kind": "video",
     "videoId": "vZBvT5brYZI",
     "title": "How Complex Life Actually Began — New Imaging Reveals the Earliest Cells",
-    "date": "2026-05-01",
+    "date": "2026-04-29",
     "image": "https://img.youtube.com/vi/vZBvT5brYZI/maxresdefault.jpg",
     "imageAlt": "Anton Petrov video on the origin of complex eukaryotic life",
     "summary": "Anton Petrov walks through new imaging research that finally lets scientists see how the first complex cells assembled — the endosymbiotic event that produced all plants, animals, and fungi.",
@@ -211,57 +211,6 @@
       "MYSTERIES"
     ],
     "sourceUrl": "https://www.youtube.com/watch?v=vZBvT5brYZI"
-  },
-  {
-    "slug": "hank-green-artemis-ii-earth-photos",
-    "kind": "video",
-    "videoId": "oaXRREHVkHo",
-    "title": "Reading the Most Important Artemis II Photos — Earth From the Moon, Again",
-    "date": "2026-05-01",
-    "image": "https://img.youtube.com/vi/oaXRREHVkHo/maxresdefault.jpg",
-    "imageAlt": "Hank Green explaining Artemis II Earth and Moon imagery",
-    "summary": "Hank Green walks through the photographs returning from the Artemis II crewed lunar flyby — the first time in over 50 years humans have looked back at Earth from cislunar space and brought home pictures.",
-    "body": "",
-    "insight": "Earthrise (Apollo 8, 1968) is widely credited with launching the modern environmental movement. A new generation of humans seeing Earth as a single small object — and a new generation of audiences seeing it through them — is itself a planetary-scale governance event.",
-    "actors": [],
-    "tags": [
-      "earthrise",
-      "planetary-perspective",
-      "spaceflight",
-      "overview-effect",
-      "cultural-narrative"
-    ],
-    "orientations": [
-      "MYSTERIES",
-      "SPACESHIP"
-    ],
-    "sourceUrl": "https://www.youtube.com/watch?v=oaXRREHVkHo"
-  },
-  {
-    "slug": "sixkiller-sinquah-world-championship-hoop-dance-2025",
-    "kind": "video",
-    "videoId": "4zjHK0tqgkc",
-    "title": "Scott Sixkiller Sinquah — 35th World Championship Hoop Dance Contest",
-    "date": "2026-02-15",
-    "image": "https://img.youtube.com/vi/4zjHK0tqgkc/maxresdefault.jpg",
-    "imageAlt": "Scott Sixkiller Sinquah performing at the 35th Annual World Championship Hoop Dance Contest at the Heard Museum",
-    "summary": "Scott Sixkiller Sinquah's performance at the 35th Annual World Championship Hoop Dance Contest weaves song, drum, and up to 30 hoops into the embodied transmission of cosmology and ecology.",
-    "body": "",
-    "insight": "Hoop dance is not performance alone — it is a knowledge architecture in motion, encoding relationships between body, ancestor, and land in a form that text cannot carry. The Orbital includes it because the planetary governance movement still under-recognises embodied epistemologies as governance infrastructure.",
-    "actors": [],
-    "tags": [
-      "indigenous-arts",
-      "hoop-dance",
-      "embodied-knowledge",
-      "ceremony",
-      "oral-tradition",
-      "biocultural-heritage"
-    ],
-    "orientations": [
-      "MYSTERIES",
-      "GARDEN"
-    ],
-    "sourceUrl": "https://www.youtube.com/watch?v=4zjHK0tqgkc"
   },
   {
     "slug": "remember-future-90k-arts-collectives-cooperatives",
@@ -335,6 +284,77 @@
     "sourceUrl": "https://www.ipsnews.net/2026/04/why-indigenous-peacebuilding-matters-in-todays-world/"
   },
   {
+    "slug": "global-citizens-assembly-food-systems-climate-2026",
+    "title": "Rethinking How We Feed the World: Insights from the Global Citizens' Assembly",
+    "date": "2026-04-22",
+    "image": "https://www.eedama.org/wp-content/uploads/image-1.png",
+    "imageAlt": "Participants in the Global Citizens Assembly on food systems",
+    "summary": "A 105-person Global Citizens' Assembly representing humanity's demographic spread deliberated on food systems and climate change over three months — and reached strong consensus (70%+ agreement) that the solution requires systemic reform, not individual behaviour change.",
+    "body": "",
+    "insight": "When a genuine cross-section of humanity deliberates on food — not activists, not lobbyists — they overwhelmingly conclude the same thing: the system itself must change.",
+    "actors": [],
+    "tags": [
+      "citizens-assembly",
+      "food-systems",
+      "climate",
+      "governance",
+      "deliberation",
+      "global"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.eedama.org/rethinking-how-we-feed-the-world-insights-from-the-global-citizens-assembly/"
+  },
+  {
+    "slug": "indigenous-council-rights-of-nature-unpfii",
+    "title": "Centering Indigenous Voices: Reflections from GARN’s Indigenous Council Gathering at UNPFII 2026",
+    "date": "2026-04-22",
+    "image": "https://www.garn.org/wp-content/uploads/2026/04/Captura-de-pantalla-2026-04-22-a-las-18.01.58.png",
+    "imageAlt": "Centering Indigenous Voices: Reflections from GARN’s Indigenous Council Gathering at UNPFII 2026",
+    "summary": "GARN's Indigenous Council convened at UNPFII 2026 to dialogue on Rights of Nature grounded in Indigenous worldviews, centering Indigenous voices in global governance forums.",
+    "body": "",
+    "insight": "Embedding Indigenous knowledge systems and ontologies into international rights-of-nature governance frameworks shifts the legitimacy and implementation pathways of planetary stewardship from Western legal models toward relational, land-based epistemologies.",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "indigenous-governance",
+      "unpfii",
+      "worldviews",
+      "global-forum"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://www.garn.org/indigenous-council-unpfii-2026/"
+  },
+  {
+    "slug": "yuvelis-morales-rights-of-nature-goldman-prize",
+    "title": "Yuvelis Morales: 2026 Goldman Prize Winner for defending the Rights of Nature",
+    "date": "2026-04-22",
+    "image": "https://www.garn.org/wp-content/uploads/2026/04/2.png",
+    "imageAlt": "Yuvelis Morales: 2026 Goldman Prize Winner for defending the Rights of Nature",
+    "summary": "Yuvelis Morales wins 2026 Goldman Prize for defending rights of nature, recognizing frontline environmental advocacy that centers ecological personhood and non-human legal standing.",
+    "body": "",
+    "insight": "Goldman Prize visibility for rights-of-nature work signals mainstream legitimacy for legal frameworks that subordinate human economic interests to ecosystem integrity — a governance paradigm shift.",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "legal-frameworks",
+      "environmental-justice",
+      "goldman-prize",
+      "ecological-advocacy"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.garn.org/yuvelis-morales/"
+  },
+  {
     "slug": "crisis-globalization-search-alternatives",
     "title": "The Crisis of Globalization and the Search for Alternatives",
     "date": "2026-04-21",
@@ -357,29 +377,6 @@
       "GARDEN"
     ],
     "sourceUrl": "https://www.localfutures.org/the-crisis-of-globalization-and-the-search-for-alternatives/"
-  },
-  {
-    "slug": "gef-sea-turtle-conservation-bangladesh",
-    "title": "Guardians of the Sea: How GEF Small Grants Program Enables Young Volunteers Take the Lead in Sea Turtle Conservation",
-    "date": "2026-04-20",
-    "image": "https://www.ipsnews.net/Library/2026/04/Sea-Turtle-baby.jpeg",
-    "imageAlt": "Guardians of the Sea: How GEF Small Grants Program Enables Young Volunteers Take the Lead in Sea Turtle Conservation",
-    "summary": "GEF Small Grants Program funds young volunteers in Bangladesh to protect sea turtles at Cox's Bazar breeding grounds, addressing threats from fishing nets, coastal development, and light pollution.",
-    "body": "",
-    "insight": "Community-led conservation models that empower local youth as stewards demonstrate how decentralized governance of commons—in this case marine biodiversity—can scale impact beyond top-down management.",
-    "actors": [],
-    "tags": [
-      "marine-biodiversity",
-      "ocean-commons",
-      "community-stewardship",
-      "local-governance",
-      "sea-turtle-conservation"
-    ],
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.ipsnews.net/2026/04/guardians-of-the-sea-how-gef-small-grants-program-enables-young-volunteers-take-the-lead-in-sea-turtle-conservation/"
   },
   {
     "slug": "hajar-tazi-weaving-ecosystems-resilience",
@@ -430,53 +427,6 @@
     "sourceUrl": "https://www.resilience.org/stories/2026-04-20/beyond-growth-the-promise-of-a-wellbeing-economy/"
   },
   {
-    "slug": "indigenous-council-rights-of-nature-unpfii",
-    "title": "Centering Indigenous Voices: Reflections from GARN’s Indigenous Council Gathering at UNPFII 2026",
-    "date": "2026-04-22",
-    "image": "https://www.garn.org/wp-content/uploads/2026/04/Captura-de-pantalla-2026-04-22-a-las-18.01.58.png",
-    "imageAlt": "Centering Indigenous Voices: Reflections from GARN’s Indigenous Council Gathering at UNPFII 2026",
-    "summary": "GARN's Indigenous Council convened at UNPFII 2026 to dialogue on Rights of Nature grounded in Indigenous worldviews, centering Indigenous voices in global governance forums.",
-    "body": "",
-    "insight": "Embedding Indigenous knowledge systems and ontologies into international rights-of-nature governance frameworks shifts the legitimacy and implementation pathways of planetary stewardship from Western legal models toward relational, land-based epistemologies.",
-    "actors": [],
-    "tags": [
-      "rights-of-nature",
-      "indigenous-governance",
-      "unpfii",
-      "worldviews",
-      "global-forum"
-    ],
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY",
-      "MYSTERIES"
-    ],
-    "sourceUrl": "https://www.garn.org/indigenous-council-unpfii-2026/"
-  },
-  {
-    "slug": "yuvelis-morales-rights-of-nature-goldman-prize",
-    "title": "Yuvelis Morales: 2026 Goldman Prize Winner for defending the Rights of Nature",
-    "date": "2026-04-22",
-    "image": "https://www.garn.org/wp-content/uploads/2026/04/2.png",
-    "imageAlt": "Yuvelis Morales: 2026 Goldman Prize Winner for defending the Rights of Nature",
-    "summary": "Yuvelis Morales wins 2026 Goldman Prize for defending rights of nature, recognizing frontline environmental advocacy that centers ecological personhood and non-human legal standing.",
-    "body": "",
-    "insight": "Goldman Prize visibility for rights-of-nature work signals mainstream legitimacy for legal frameworks that subordinate human economic interests to ecosystem integrity — a governance paradigm shift.",
-    "actors": [],
-    "tags": [
-      "rights-of-nature",
-      "legal-frameworks",
-      "environmental-justice",
-      "goldman-prize",
-      "ecological-advocacy"
-    ],
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.garn.org/yuvelis-morales/"
-  },
-  {
     "slug": "forests-natural-flood-defences-new-research-2026",
     "title": "How Forests Act as Natural Flood Defences: New Research Shows Trees Can Slash Flood Risk",
     "date": "2026-04-20",
@@ -501,132 +451,27 @@
     "sourceUrl": "https://www.resilience.org/stories/2026-04-20/how-forests-act-as-natural-flood-defences-new-research-shows-trees-can-slash-flood-risk/"
   },
   {
-    "slug": "knorr-four-neural-states-polycrisis-burning-world-2026",
-    "title": "How to Stay Sane in a Burning World: The Four Neural States of the Polycrisis",
+    "slug": "gef-sea-turtle-conservation-bangladesh",
+    "title": "Guardians of the Sea: How GEF Small Grants Program Enables Young Volunteers Take the Lead in Sea Turtle Conservation",
     "date": "2026-04-20",
-    "image": "https://www.resilience.org/wp-content/uploads/2026/04/Pawel_Janiak____URD8IKE2V7-1.jpg",
-    "imageAlt": "Abstract image of light and shadow representing nervous system states and psychological resilience",
-    "summary": "Climate scientist Wolfgang Knorr maps how our nervous systems get locked between panic and shutdown when facing inescapable crises — and argues that surviving the polycrisis requires deliberately moving between four neural states rather than getting stuck in chronic activation or denial.",
+    "image": "https://www.ipsnews.net/Library/2026/04/Sea-Turtle-baby.jpeg",
+    "imageAlt": "Guardians of the Sea: How GEF Small Grants Program Enables Young Volunteers Take the Lead in Sea Turtle Conservation",
+    "summary": "GEF Small Grants Program funds young volunteers in Bangladesh to protect sea turtles at Cox's Bazar breeding grounds, addressing threats from fishing nets, coastal development, and light pollution.",
     "body": "",
-    "insight": "The climate and governance movement spends enormous energy on information; Knorr suggests the real barrier is neurological, not informational — and that changes what effective strategy looks like.",
+    "insight": "Community-led conservation models that empower local youth as stewards demonstrate how decentralized governance of commons—in this case marine biodiversity—can scale impact beyond top-down management.",
     "actors": [],
     "tags": [
-      "polycrisis",
-      "climate",
-      "psychology",
-      "resilience",
-      "nervous-system",
-      "systems",
-      "collapse"
-    ],
-    "orientations": [
-      "SPACESHIP",
-      "MYSTERIES"
-    ],
-    "sourceUrl": "https://www.resilience.org/stories/2026-04-20/how-to-stay-sane-in-a-burning-world-the-four-neural-states-of-the-polycrisis/"
-  },
-  {
-    "slug": "climate-movement-pluralism-far-right-risk-2026",
-    "title": "Without Pluralism in the Climate Movement, We Risk Handing the Future to the Far Right",
-    "date": "2026-04-14",
-    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-tony-zohari-3296024-16511269-scaled.jpg",
-    "imageAlt": "Political protest and movement signage, representing the debate over climate movement strategy and pluralism",
-    "summary": "Vlad Vexler and Rupert Read argue that the climate movement's drift toward ideological conformity — requiring agreement on race, gender, and social justice as conditions for entry — is closing off the broad coalition that climate action requires. They warn that far-right movements could weaponise ecological concerns if progressives continue to exclude people who share environmental goals but not the full political package.",
-    "body": "",
-    "insight": "Who belongs in the climate movement is also a question of who gets to shape the planetary future — and ideological exclusion has governance costs that show up in electoral losses and surrendered ground.",
-    "actors": [],
-    "tags": [
-      "climate-movement",
-      "pluralism",
-      "strategy",
-      "far-right",
-      "politics",
-      "governance"
-    ],
-    "orientations": [
-      "ASSEMBLY",
-      "MYSTERIES"
-    ],
-    "sourceUrl": "https://www.resilience.org/stories/2026-04-14/without-pluralism-within-the-climate-movement-we-risk-handing-the-future-to-the-far-right/"
-  },
-  {
-    "slug": "nature-gaining-legal-rights-global-movement-2026",
-    "title": "Nature Is Gaining Legal Rights",
-    "date": "2026-04-02",
-    "image": "https://www.independent.com/wp-content/uploads/2026/03/AdobeStock_352941394.jpeg",
-    "imageAlt": "Natural landscape representing the growing global movement to grant legal rights to ecosystems",
-    "summary": "From Ecuador's 2008 Pachamama framework to Peru's 2024 recognition of stingless bees as legal subjects, over 150 laws across 30+ countries now grant ecosystems and species legal personhood — making it possible for advocates to speak in court on nature's behalf. The movement is accelerating fastest where Indigenous jurisprudence already treats nature as a subject rather than an object.",
-    "body": "",
-    "insight": "When nature has legal standing, the question shifts from 'can we afford to protect it?' to 'can we justify the harm?' — and that changes both policy and power.",
-    "actors": [
-      "global-alliance-for-the-rights-of-nature",
-      "earth-law-center"
-    ],
-    "tags": [
-      "rights-of-nature",
-      "legal",
-      "indigenous-rights",
-      "ecology",
-      "international-law",
-      "governance"
+      "marine-biodiversity",
+      "ocean-commons",
+      "community-stewardship",
+      "local-governance",
+      "sea-turtle-conservation"
     ],
     "orientations": [
       "GARDEN",
       "ASSEMBLY"
     ],
-    "sourceUrl": "https://www.independent.com/2026/04/02/nature-is-gaining-legal-rights/"
-  },
-  {
-    "slug": "ocean-marine-ecosystem-cop-restoration-communities-2026",
-    "title": "A New Wave of Collaboration for Our Oceans",
-    "date": "2026-04-03",
-    "image": "https://www.resilience.org/wp-content/uploads/2026/04/Marine-Ecosystem-CoP_page-header.jpg",
-    "imageAlt": "Coastal ocean ecosystem being restored by community practitioners in the Philippines, Kenya, and Egypt",
-    "summary": "A newly launched Marine Ecosystems Community of Practice unites coastal restoration initiatives across the Philippines, Kenya, and Egypt — showing that community-led, cross-regional coordination can dramatically cut the cost of ocean restoration while achieving better outcomes than top-down approaches. The model embeds ocean-based livelihoods as a structural part of conservation rather than an afterthought.",
-    "body": "",
-    "insight": "Community-driven marine restoration is building the governance infrastructure for ocean commons at precisely the moment state-led conservation is retreating — and proving it can do more with less.",
-    "actors": [
-      "ecosystem-restoration-communities"
-    ],
-    "tags": [
-      "ocean",
-      "marine",
-      "restoration",
-      "community",
-      "commons",
-      "governance",
-      "philippines",
-      "kenya"
-    ],
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.resilience.org/stories/2026-04-03/a-new-wave-of-collaboration-for-our-oceans/"
-  },
-  {
-    "slug": "global-citizens-assembly-food-systems-climate-2026",
-    "title": "Rethinking How We Feed the World: Insights from the Global Citizens' Assembly",
-    "date": "2026-04-22",
-    "image": "https://www.eedama.org/wp-content/uploads/image-1.png",
-    "imageAlt": "Participants in the Global Citizens Assembly on food systems",
-    "summary": "A 105-person Global Citizens' Assembly representing humanity's demographic spread deliberated on food systems and climate change over three months — and reached strong consensus (70%+ agreement) that the solution requires systemic reform, not individual behaviour change.",
-    "body": "",
-    "insight": "When a genuine cross-section of humanity deliberates on food — not activists, not lobbyists — they overwhelmingly conclude the same thing: the system itself must change.",
-    "actors": [],
-    "tags": [
-      "citizens-assembly",
-      "food-systems",
-      "climate",
-      "governance",
-      "deliberation",
-      "global"
-    ],
-    "orientations": [
-      "ASSEMBLY",
-      "GARDEN"
-    ],
-    "sourceUrl": "https://www.eedama.org/rethinking-how-we-feed-the-world-insights-from-the-global-citizens-assembly/"
+    "sourceUrl": "https://www.ipsnews.net/2026/04/guardians-of-the-sea-how-gef-small-grants-program-enables-young-volunteers-take-the-lead-in-sea-turtle-conservation/"
   },
   {
     "slug": "goldman-prize-yuvelis-morales-magdalena-river-colombia-fracking",
@@ -655,183 +500,29 @@
     "sourceUrl": "https://insideclimatenews.org/news/20042026/rights-of-nature-defender-yuvelis-morales-blanco-goldman-prize/"
   },
   {
-    "slug": "rethinking-place-in-nature-means-rethinking-the-law",
-    "title": "Rethinking Our Place in Nature Means Rethinking the Law",
-    "date": "2026-04-14",
-    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-billsalazar-27010821-scaled.jpg",
-    "imageAlt": "Natural landscape representing the case for ecocentric legal frameworks",
-    "summary": "Erika Schelby argues that the crisis of environmental law is philosophical before it is technical: as long as nature is legally property, no regulation can fundamentally protect it. Granting legal personhood to ecosystems — drawing on both Indigenous jurisprudence and scientific evidence — changes who can sue and on whose behalf.",
+    "slug": "knorr-four-neural-states-polycrisis-burning-world-2026",
+    "title": "How to Stay Sane in a Burning World: The Four Neural States of the Polycrisis",
+    "date": "2026-04-20",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/Pawel_Janiak____URD8IKE2V7-1.jpg",
+    "imageAlt": "Abstract image of light and shadow representing nervous system states and psychological resilience",
+    "summary": "Climate scientist Wolfgang Knorr maps how our nervous systems get locked between panic and shutdown when facing inescapable crises — and argues that surviving the polycrisis requires deliberately moving between four neural states rather than getting stuck in chronic activation or denial.",
     "body": "",
-    "insight": "The Atrato River (Colombia) and Ganges (India) cases reveal the same lesson: legal personhood is only the first step — it requires institutions and communities capable of wielding it.",
-    "actors": [
-      "earth-law-center",
-      "global-alliance-for-the-rights-of-nature"
-    ],
-    "tags": [
-      "rights-of-nature",
-      "legal",
-      "governance",
-      "indigenous-knowledge",
-      "ecology",
-      "ecocentric"
-    ],
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.resilience.org/stories/2026-04-14/rethinking-our-place-in-nature-means-rethinking-the-law/"
-  },
-  {
-    "slug": "growing-push-legal-rights-nature-global-movement-2026",
-    "title": "The Growing Push to Grant Legal Rights to Nature",
-    "date": "2026-04-13",
-    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-yogendras31-18215095-scaled.jpg",
-    "imageAlt": "River ecosystem representing the global rights of nature movement",
-    "summary": "From Ecuador's 2008 constitutional recognition of Pachamama to Bangladesh declaring all 700 of its rivers living entities with legal rights, the global movement to grant legal personhood to natural systems is accelerating — and scientists are now helping make it enforceable.",
-    "body": "",
-    "insight": "The map of jurisdictions granting rights to nature has doubled in five years — the question is no longer whether, but how fast it becomes the global legal norm.",
-    "actors": [
-      "global-alliance-for-the-rights-of-nature",
-      "earth-law-center"
-    ],
-    "tags": [
-      "rights-of-nature",
-      "legal",
-      "governance",
-      "indigenous-rights",
-      "ecology",
-      "international-law"
-    ],
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.resilience.org/stories/2026-04-13/how-countries-are-granting-legal-rights-to-nature/"
-  },
-  {
-    "slug": "agroecology-malawi-political-barriers-green-revolution-part-2",
-    "title": "Agroecology in Malawi: Why the Green Revolution's Grip Persists Despite Its Failures",
-    "date": "2026-04-07",
-    "image": "https://www.resilience.org/wp-content/uploads/2026/04/farmers-Malawi.jpg",
-    "imageAlt": "Farmers in Malawi practising agroecological methods",
-    "summary": "Thomas Shivers examines why Malawi's agricultural policy remains locked into industrial monoculture despite growing evidence for agroecology — arguing the barriers are not technical but political: institutions that fund development prefer solutions that preserve their own power.",
-    "body": "",
-    "insight": "Food system transformation is blocked at the policy level precisely because the actors with money and influence benefit from keeping it industrial — understanding this is the prerequisite for changing it.",
-    "actors": [
-      "agroecology-coalition"
-    ],
-    "tags": [
-      "agroecology",
-      "food-sovereignty",
-      "malawi",
-      "africa",
-      "political-economy",
-      "degrowth",
-      "food-systems"
-    ],
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.resilience.org/stories/2026-04-07/the-restorative-promise-of-agroecology-farming-for-sovereignty-and-resilience-in-malawi-part-2/"
-  },
-  {
-    "slug": "democracy-tested-citizen-assemblies-can-help-rafitoson-ted",
-    "kind": "video",
-    "videoId": "hHYe3O7_TUA",
-    "title": "Democracy Is Being Tested. Citizen Assemblies Can Help",
-    "date": "2024-11-01",
-    "image": "https://img.youtube.com/vi/hHYe3O7_TUA/maxresdefault.jpg",
-    "imageAlt": "Ketakandriana Rafitoson speaking at TED about citizen assemblies and democracy",
-    "summary": "Ketakandriana Rafitoson — democracy advocate from Madagascar — argues at TED that citizen assemblies, by bringing ordinary people into direct participation, can revive democratic legitimacy at precisely the moment autocratisation is accelerating globally.",
-    "body": "",
-    "insight": "At a time when formal democracy is retreating in more countries than it is advancing, assemblies of randomly selected citizens may be the most resilient democratic institution we can build.",
+    "insight": "The climate and governance movement spends enormous energy on information; Knorr suggests the real barrier is neurological, not informational — and that changes what effective strategy looks like.",
     "actors": [],
     "tags": [
-      "citizens-assembly",
-      "democracy",
-      "deliberation",
-      "governance",
-      "autocratisation"
-    ],
-    "orientations": [
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.youtube.com/watch?v=hHYe3O7_TUA"
-  },
-  {
-    "slug": "rockstrom-10-years-transform-future-humanity",
-    "kind": "video",
-    "videoId": "8Sl28fkrozE",
-    "title": "10 Years to Transform the Future of Humanity — or Destabilise the Planet",
-    "date": "2024-08-15",
-    "image": "https://img.youtube.com/vi/8Sl28fkrozE/maxresdefault.jpg",
-    "imageAlt": "Johan Rockström speaking at TED about planetary boundaries",
-    "summary": "Planetary scientist Johan Rockström lays out the maths: we have roughly until 2030 to fundamentally redirect civilisation away from the tipping points that make climate disruption self-reinforcing and irreversible.",
-    "body": "",
-    "insight": "The window for avoiding compounding planetary tipping points is not measured in generations — it is measured in the decisions made before 2030.",
-    "actors": [],
-    "tags": [
-      "planetary-boundaries",
+      "polycrisis",
       "climate",
-      "tipping-points",
-      "science",
-      "governance"
+      "psychology",
+      "resilience",
+      "nervous-system",
+      "systems",
+      "collapse"
     ],
     "orientations": [
       "SPACESHIP",
-      "GARDEN"
+      "MYSTERIES"
     ],
-    "sourceUrl": "https://www.youtube.com/watch?v=8Sl28fkrozE"
-  },
-  {
-    "slug": "citizens-assembly-save-planet-tedx-duvic-paoli",
-    "kind": "video",
-    "videoId": "vz9Lwueu7Hg",
-    "title": "Will Citizens' Assemblies Save the Planet?",
-    "date": "2023-07-25",
-    "image": "https://img.youtube.com/vi/vz9Lwueu7Hg/maxresdefault.jpg",
-    "imageAlt": "TEDx speaker discussing citizens assemblies and climate",
-    "summary": "Leslie Anne Duvic Paoli makes the case at TEDxModena that randomly selected citizens' assemblies — freed from electoral pressures — are uniquely capable of recommending bold, science-aligned climate policy that elected governments cannot.",
-    "body": "",
-    "insight": "Where elections reward short-termism, assemblies create space for long-term reasoning — which may be exactly the institutional innovation climate policy requires.",
-    "actors": [],
-    "tags": [
-      "citizens-assembly",
-      "democracy",
-      "climate",
-      "deliberation",
-      "governance"
-    ],
-    "orientations": [
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.youtube.com/watch?v=vz9Lwueu7Hg"
-  },
-  {
-    "slug": "rights-of-nature-necessary-tomorrows-documentary",
-    "kind": "video",
-    "videoId": "KmTq9PdwBoI",
-    "title": "The Rights of Nature — Necessary Tomorrows",
-    "date": "2024-01-15",
-    "image": "https://img.youtube.com/vi/KmTq9PdwBoI/maxresdefault.jpg",
-    "imageAlt": "Documentary still: legal personhood for rivers and forests",
-    "summary": "Sci-fi author Christopher Brown follows the growing legal movement that grants rights to rivers, forests, and ecosystems — a direct challenge to four centuries of law treating nature as property to be owned.",
-    "body": "",
-    "insight": "Legal personhood for ecosystems is no longer theoretical: communities are already wielding it in court against extractive industries.",
-    "actors": [],
-    "tags": [
-      "rights-of-nature",
-      "legal",
-      "ecology",
-      "commons",
-      "indigenous-knowledge"
-    ],
-    "orientations": [
-      "GARDEN",
-      "ASSEMBLY"
-    ],
-    "sourceUrl": "https://www.youtube.com/watch?v=KmTq9PdwBoI"
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-20/how-to-stay-sane-in-a-burning-world-the-four-neural-states-of-the-polycrisis/"
   },
   {
     "slug": "africa-regenerative-farmers-food-sovereignty-global-instability-2026",
@@ -905,6 +596,84 @@
     "sourceUrl": "https://www.larpocracy.eu/"
   },
   {
+    "slug": "climate-movement-pluralism-far-right-risk-2026",
+    "title": "Without Pluralism in the Climate Movement, We Risk Handing the Future to the Far Right",
+    "date": "2026-04-14",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-tony-zohari-3296024-16511269-scaled.jpg",
+    "imageAlt": "Political protest and movement signage, representing the debate over climate movement strategy and pluralism",
+    "summary": "Vlad Vexler and Rupert Read argue that the climate movement's drift toward ideological conformity — requiring agreement on race, gender, and social justice as conditions for entry — is closing off the broad coalition that climate action requires. They warn that far-right movements could weaponise ecological concerns if progressives continue to exclude people who share environmental goals but not the full political package.",
+    "body": "",
+    "insight": "Who belongs in the climate movement is also a question of who gets to shape the planetary future — and ideological exclusion has governance costs that show up in electoral losses and surrendered ground.",
+    "actors": [],
+    "tags": [
+      "climate-movement",
+      "pluralism",
+      "strategy",
+      "far-right",
+      "politics",
+      "governance"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-14/without-pluralism-within-the-climate-movement-we-risk-handing-the-future-to-the-far-right/"
+  },
+  {
+    "slug": "rethinking-place-in-nature-means-rethinking-the-law",
+    "title": "Rethinking Our Place in Nature Means Rethinking the Law",
+    "date": "2026-04-14",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-billsalazar-27010821-scaled.jpg",
+    "imageAlt": "Natural landscape representing the case for ecocentric legal frameworks",
+    "summary": "Erika Schelby argues that the crisis of environmental law is philosophical before it is technical: as long as nature is legally property, no regulation can fundamentally protect it. Granting legal personhood to ecosystems — drawing on both Indigenous jurisprudence and scientific evidence — changes who can sue and on whose behalf.",
+    "body": "",
+    "insight": "The Atrato River (Colombia) and Ganges (India) cases reveal the same lesson: legal personhood is only the first step — it requires institutions and communities capable of wielding it.",
+    "actors": [
+      "earth-law-center",
+      "global-alliance-for-the-rights-of-nature"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "legal",
+      "governance",
+      "indigenous-knowledge",
+      "ecology",
+      "ecocentric"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-14/rethinking-our-place-in-nature-means-rethinking-the-law/"
+  },
+  {
+    "slug": "growing-push-legal-rights-nature-global-movement-2026",
+    "title": "The Growing Push to Grant Legal Rights to Nature",
+    "date": "2026-04-13",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/pexels-yogendras31-18215095-scaled.jpg",
+    "imageAlt": "River ecosystem representing the global rights of nature movement",
+    "summary": "From Ecuador's 2008 constitutional recognition of Pachamama to Bangladesh declaring all 700 of its rivers living entities with legal rights, the global movement to grant legal personhood to natural systems is accelerating — and scientists are now helping make it enforceable.",
+    "body": "",
+    "insight": "The map of jurisdictions granting rights to nature has doubled in five years — the question is no longer whether, but how fast it becomes the global legal norm.",
+    "actors": [
+      "global-alliance-for-the-rights-of-nature",
+      "earth-law-center"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "legal",
+      "governance",
+      "indigenous-rights",
+      "ecology",
+      "international-law"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-13/how-countries-are-granting-legal-rights-to-nature/"
+  },
+  {
     "slug": "democracy-without-borders-global-citizens-assembly-un-report-2026",
     "title": "New Report: Global Citizens' Assemblies Should Be Embedded in the UN System",
     "date": "2026-04-10",
@@ -930,6 +699,58 @@
     "sourceUrl": "https://www.democracywithoutborders.org/36794/global-citizens-assemblies-should-help-revive-the-un-new-report/"
   },
   {
+    "slug": "hank-green-artemis-ii-earth-photos",
+    "kind": "video",
+    "videoId": "oaXRREHVkHo",
+    "title": "Reading the Most Important Artemis II Photos — Earth From the Moon, Again",
+    "date": "2026-04-09",
+    "image": "https://img.youtube.com/vi/oaXRREHVkHo/maxresdefault.jpg",
+    "imageAlt": "Hank Green explaining Artemis II Earth and Moon imagery",
+    "summary": "Hank Green walks through the photographs returning from the Artemis II crewed lunar flyby — the first time in over 50 years humans have looked back at Earth from cislunar space and brought home pictures.",
+    "body": "",
+    "insight": "Earthrise (Apollo 8, 1968) is widely credited with launching the modern environmental movement. A new generation of humans seeing Earth as a single small object — and a new generation of audiences seeing it through them — is itself a planetary-scale governance event.",
+    "actors": [],
+    "tags": [
+      "earthrise",
+      "planetary-perspective",
+      "spaceflight",
+      "overview-effect",
+      "cultural-narrative"
+    ],
+    "orientations": [
+      "MYSTERIES",
+      "SPACESHIP"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=oaXRREHVkHo"
+  },
+  {
+    "slug": "agroecology-malawi-political-barriers-green-revolution-part-2",
+    "title": "Agroecology in Malawi: Why the Green Revolution's Grip Persists Despite Its Failures",
+    "date": "2026-04-07",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/farmers-Malawi.jpg",
+    "imageAlt": "Farmers in Malawi practising agroecological methods",
+    "summary": "Thomas Shivers examines why Malawi's agricultural policy remains locked into industrial monoculture despite growing evidence for agroecology — arguing the barriers are not technical but political: institutions that fund development prefer solutions that preserve their own power.",
+    "body": "",
+    "insight": "Food system transformation is blocked at the policy level precisely because the actors with money and influence benefit from keeping it industrial — understanding this is the prerequisite for changing it.",
+    "actors": [
+      "agroecology-coalition"
+    ],
+    "tags": [
+      "agroecology",
+      "food-sovereignty",
+      "malawi",
+      "africa",
+      "political-economy",
+      "degrowth",
+      "food-systems"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-07/the-restorative-promise-of-agroecology-farming-for-sovereignty-and-resilience-in-malawi-part-2/"
+  },
+  {
     "slug": "agroecology-malawi-farming-sovereignty-resilience-2026",
     "title": "Malawi's Agroecology Movement Shows What Farmer-First Agriculture Can Look Like",
     "date": "2026-04-06",
@@ -952,6 +773,61 @@
       "MYSTERIES"
     ],
     "sourceUrl": "https://www.resilience.org/stories/2026-04-06/the-restorative-promise-of-agroecology-farming-for-sovereignty-and-resilience-in-malawi/"
+  },
+  {
+    "slug": "ocean-marine-ecosystem-cop-restoration-communities-2026",
+    "title": "A New Wave of Collaboration for Our Oceans",
+    "date": "2026-04-03",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/04/Marine-Ecosystem-CoP_page-header.jpg",
+    "imageAlt": "Coastal ocean ecosystem being restored by community practitioners in the Philippines, Kenya, and Egypt",
+    "summary": "A newly launched Marine Ecosystems Community of Practice unites coastal restoration initiatives across the Philippines, Kenya, and Egypt — showing that community-led, cross-regional coordination can dramatically cut the cost of ocean restoration while achieving better outcomes than top-down approaches. The model embeds ocean-based livelihoods as a structural part of conservation rather than an afterthought.",
+    "body": "",
+    "insight": "Community-driven marine restoration is building the governance infrastructure for ocean commons at precisely the moment state-led conservation is retreating — and proving it can do more with less.",
+    "actors": [
+      "ecosystem-restoration-communities"
+    ],
+    "tags": [
+      "ocean",
+      "marine",
+      "restoration",
+      "community",
+      "commons",
+      "governance",
+      "philippines",
+      "kenya"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-04-03/a-new-wave-of-collaboration-for-our-oceans/"
+  },
+  {
+    "slug": "nature-gaining-legal-rights-global-movement-2026",
+    "title": "Nature Is Gaining Legal Rights",
+    "date": "2026-04-02",
+    "image": "https://www.independent.com/wp-content/uploads/2026/03/AdobeStock_352941394.jpeg",
+    "imageAlt": "Natural landscape representing the growing global movement to grant legal rights to ecosystems",
+    "summary": "From Ecuador's 2008 Pachamama framework to Peru's 2024 recognition of stingless bees as legal subjects, over 150 laws across 30+ countries now grant ecosystems and species legal personhood — making it possible for advocates to speak in court on nature's behalf. The movement is accelerating fastest where Indigenous jurisprudence already treats nature as a subject rather than an object.",
+    "body": "",
+    "insight": "When nature has legal standing, the question shifts from 'can we afford to protect it?' to 'can we justify the harm?' — and that changes both policy and power.",
+    "actors": [
+      "global-alliance-for-the-rights-of-nature",
+      "earth-law-center"
+    ],
+    "tags": [
+      "rights-of-nature",
+      "legal",
+      "indigenous-rights",
+      "ecology",
+      "international-law",
+      "governance"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.independent.com/2026/04/02/nature-is-gaining-legal-rights/"
   },
   {
     "slug": "cigi-digital-governance-2026-key-shifts-technology-power",
@@ -3069,6 +2945,32 @@
     "body": "Luleå, a northern Swedish city of 78,000 navigating rapid industrial decarbonization, has opened \"The Luleå Way\" — a climate transition exhibition in a shopping center. The placement is deliberate: municipal officials and industrial actors explain steel plant conversions, circular construction pilots, and renewable energy timelines where people already gather, no appointment needed. It's governance as storefront, a bet that legitimacy comes from accessibility rather than consultation theater.\n\nThe exhibition supports a broader mobilization architecture. Luleå convened a citizens' forum in 2025 — randomly selected residents working with experts from the steel industry, university researchers, and municipal staff across four full-day sessions. Recommendations now feed into a climate plan targeting municipal carbon neutrality by 2030, territorial neutrality by 2040, and resident-scale action by 2045. The targets are scaffolded by organizational capacity, a recognition that governance operates at different speeds across institutional boundaries.\n\nMeanwhile, five northern Swedish cities have formed Thriving Northern Cities, pooling resources on circular building standards and transit electrification — the kind of horizontal coordination that emerges when national frameworks move too slowly. Process leader Sophie Forsberg describes a meal program redesign that cut food waste while keeping portions at 12 kronor, proof that climate action and fiscal constraint can align when implementation involves the people doing the work. Whether a shopping mall can host the messy work of transition remains an open question, but Luleå is testing the premise that governance must be encountered, not merely announced."
   },
   {
+    "slug": "sixkiller-sinquah-world-championship-hoop-dance-2025",
+    "kind": "video",
+    "videoId": "4zjHK0tqgkc",
+    "title": "Scott Sixkiller Sinquah — 35th World Championship Hoop Dance Contest",
+    "date": "2026-01-18",
+    "image": "https://img.youtube.com/vi/4zjHK0tqgkc/maxresdefault.jpg",
+    "imageAlt": "Scott Sixkiller Sinquah performing at the 35th Annual World Championship Hoop Dance Contest at the Heard Museum",
+    "summary": "Scott Sixkiller Sinquah's performance at the 35th Annual World Championship Hoop Dance Contest weaves song, drum, and up to 30 hoops into the embodied transmission of cosmology and ecology.",
+    "body": "",
+    "insight": "Hoop dance is not performance alone — it is a knowledge architecture in motion, encoding relationships between body, ancestor, and land in a form that text cannot carry. The Orbital includes it because the planetary governance movement still under-recognises embodied epistemologies as governance infrastructure.",
+    "actors": [],
+    "tags": [
+      "indigenous-arts",
+      "hoop-dance",
+      "embodied-knowledge",
+      "ceremony",
+      "oral-tradition",
+      "biocultural-heritage"
+    ],
+    "orientations": [
+      "MYSTERIES",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=4zjHK0tqgkc"
+  },
+  {
     "slug": "eu-mercosur-a-test-case-for-whether-agroecology-can-move-from-niche-to-policy",
     "title": "EU-Mercosur: a test case for whether agroecology can move from niche to policy",
     "date": "2026-01-15",
@@ -3241,5 +3143,103 @@
     ],
     "sourceUrl": "https://www.agroecology-europe.org/agroecology-europe-newsletter-winter-2025/",
     "body": "Agroecology Europe closed 2025 with a Winter Newsletter that doubles as movement infrastructure report — tracking not just policy engagement but the growth of networks that treat food system transformation as a governance practice. The organization's Youth Network now counts more than 450 members, while gatherings like the Malmö Forum and the first International Congress of Mediterranean Agroecology in Agrigento created spaces where scientists, farmers, and movement actors tested ideas together rather than in parallel silos.\n\nThe newsletter reflects on what the organization calls \"renewed governance\" — a reworking of its own statutes and decision-making structures — while highlighting work on soil health policy, feminist approaches to land stewardship, and the OASIS tool for assessing agroecological transitions. These aren't academic exercises. They're attempts to build governance capacity within a movement that understands food systems as sites of democratic experimentation, where questions about who decides, who benefits, and who bears risk must be answered through practice, not proclamation.\n\nThe timing matters. As the newsletter notes, 2025 brought \"ongoing wars and genocides, climate breakdown, and political backsliding on environmental commitments.\" Against that backdrop, the growth of a 450-member youth network and the expansion of cross-border gatherings suggests something about how governance alternatives emerge — not from policy victories alone, but from the patient work of building structures that can hold complexity, bridge movements, and test ideas in real time.\n\nThe newsletter points toward 2026 with \"fresh energy, a growing team, and a new board on the horizon\" — language that sounds bureaucratic until you consider what it means to maintain democratic infrastructure during systemic unraveling. Agroecology Europe's year wasn't about breakthroughs. It was about the unglamorous work of keeping governance experiments alive when the dominant systems are actively retreating."
+  },
+  {
+    "slug": "democracy-tested-citizen-assemblies-can-help-rafitoson-ted",
+    "kind": "video",
+    "videoId": "hHYe3O7_TUA",
+    "title": "Democracy Is Being Tested. Citizen Assemblies Can Help",
+    "date": "2024-11-01",
+    "image": "https://img.youtube.com/vi/hHYe3O7_TUA/maxresdefault.jpg",
+    "imageAlt": "Ketakandriana Rafitoson speaking at TED about citizen assemblies and democracy",
+    "summary": "Ketakandriana Rafitoson — democracy advocate from Madagascar — argues at TED that citizen assemblies, by bringing ordinary people into direct participation, can revive democratic legitimacy at precisely the moment autocratisation is accelerating globally.",
+    "body": "",
+    "insight": "At a time when formal democracy is retreating in more countries than it is advancing, assemblies of randomly selected citizens may be the most resilient democratic institution we can build.",
+    "actors": [],
+    "tags": [
+      "citizens-assembly",
+      "democracy",
+      "deliberation",
+      "governance",
+      "autocratisation"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=hHYe3O7_TUA"
+  },
+  {
+    "slug": "rockstrom-10-years-transform-future-humanity",
+    "kind": "video",
+    "videoId": "8Sl28fkrozE",
+    "title": "10 Years to Transform the Future of Humanity — or Destabilise the Planet",
+    "date": "2024-08-15",
+    "image": "https://img.youtube.com/vi/8Sl28fkrozE/maxresdefault.jpg",
+    "imageAlt": "Johan Rockström speaking at TED about planetary boundaries",
+    "summary": "Planetary scientist Johan Rockström lays out the maths: we have roughly until 2030 to fundamentally redirect civilisation away from the tipping points that make climate disruption self-reinforcing and irreversible.",
+    "body": "",
+    "insight": "The window for avoiding compounding planetary tipping points is not measured in generations — it is measured in the decisions made before 2030.",
+    "actors": [],
+    "tags": [
+      "planetary-boundaries",
+      "climate",
+      "tipping-points",
+      "science",
+      "governance"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=8Sl28fkrozE"
+  },
+  {
+    "slug": "rights-of-nature-necessary-tomorrows-documentary",
+    "kind": "video",
+    "videoId": "KmTq9PdwBoI",
+    "title": "The Rights of Nature — Necessary Tomorrows",
+    "date": "2024-01-15",
+    "image": "https://img.youtube.com/vi/KmTq9PdwBoI/maxresdefault.jpg",
+    "imageAlt": "Documentary still: legal personhood for rivers and forests",
+    "summary": "Sci-fi author Christopher Brown follows the growing legal movement that grants rights to rivers, forests, and ecosystems — a direct challenge to four centuries of law treating nature as property to be owned.",
+    "body": "",
+    "insight": "Legal personhood for ecosystems is no longer theoretical: communities are already wielding it in court against extractive industries.",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "legal",
+      "ecology",
+      "commons",
+      "indigenous-knowledge"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=KmTq9PdwBoI"
+  },
+  {
+    "slug": "citizens-assembly-save-planet-tedx-duvic-paoli",
+    "kind": "video",
+    "videoId": "vz9Lwueu7Hg",
+    "title": "Will Citizens' Assemblies Save the Planet?",
+    "date": "2023-07-25",
+    "image": "https://img.youtube.com/vi/vz9Lwueu7Hg/maxresdefault.jpg",
+    "imageAlt": "TEDx speaker discussing citizens assemblies and climate",
+    "summary": "Leslie Anne Duvic Paoli makes the case at TEDxModena that randomly selected citizens' assemblies — freed from electoral pressures — are uniquely capable of recommending bold, science-aligned climate policy that elected governments cannot.",
+    "body": "",
+    "insight": "Where elections reward short-termism, assemblies create space for long-term reasoning — which may be exactly the institutional innovation climate policy requires.",
+    "actors": [],
+    "tags": [
+      "citizens-assembly",
+      "democracy",
+      "climate",
+      "deliberation",
+      "governance"
+    ],
+    "orientations": [
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=vz9Lwueu7Hg"
   }
 ]

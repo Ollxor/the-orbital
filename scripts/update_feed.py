@@ -11,6 +11,7 @@ import json
 import os
 import re
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone, timedelta
 
 import feedparser
@@ -456,67 +457,87 @@ def load_existing_urls() -> set:
 
 # ── Main logic ───────────────────────────────────────────────────────────────
 
-def fetch_candidates(cutoff: datetime, existing_urls: set) -> list:
-    """Fetch and keyword-filter new articles from all RSS feeds."""
-    candidates = []
-    seen_urls = set(existing_urls)
-    feed_stats = []
+def _fetch_one_feed(feed_info: dict, cutoff: datetime) -> tuple:
+    """Fetch and keyword-filter one feed. Returns ((name, total, matched), candidates).
+    Designed to run in a thread; no shared mutable state.
+    """
+    feed_name = feed_info["name"]
+    feed_kind = feed_info.get("kind", "article")
+    candidates: list = []
+    try:
+        feed = feedparser.parse(feed_info["url"])
+        if feed.bozo and not feed.entries:
+            return ((feed_name, 0, 0, "parse error"), [])
 
-    for feed_info in RSS_FEEDS:
-        feed_name = feed_info["name"]
-        feed_kind = feed_info.get("kind", "article")
-        try:
-            feed = feedparser.parse(feed_info["url"])
-            if feed.bozo and not feed.entries:
-                print(f"  ✗ {feed_name}: parse error")
-                feed_stats.append((feed_name, 0, 0))
+        total_recent = 0
+        matched = 0
+        for entry in feed.entries:
+            pub = entry.get("published_parsed") or entry.get("updated_parsed")
+            if not pub:
+                continue
+            pub_dt = datetime(*pub[:6], tzinfo=timezone.utc)
+            if pub_dt < cutoff:
                 continue
 
-            total_recent = 0
-            matched = 0
-            for entry in feed.entries:
-                pub = entry.get("published_parsed") or entry.get("updated_parsed")
-                if not pub:
-                    continue
-                pub_dt = datetime(*pub[:6], tzinfo=timezone.utc)
-                if pub_dt < cutoff:
-                    continue
+            total_recent += 1
+            url = entry.get("link", "").strip()
+            if not url:
+                continue
 
-                total_recent += 1
-                url = entry.get("link", "").strip()
-                if not url or url in seen_urls:
-                    continue
+            title = strip_html(entry.get("title", ""))
+            description = strip_html(
+                entry.get("summary", "") or entry.get("description", "")
+            )[:600]
 
-                title = strip_html(entry.get("title", ""))
-                description = strip_html(
-                    entry.get("summary", "") or entry.get("description", "")
-                )[:600]
+            if not is_relevant(f"{title} {description}"):
+                continue
 
-                if not is_relevant(f"{title} {description}"):
-                    continue
+            candidates.append({
+                "title": title,
+                "url": url,
+                "date": pub_dt.strftime("%Y-%m-%d"),
+                "description": description,
+                "source": feed_name,
+                "kind": feed_kind,
+            })
+            matched += 1
 
-                candidates.append({
-                    "title": title,
-                    "url": url,
-                    "date": pub_dt.strftime("%Y-%m-%d"),
-                    "description": description,
-                    "source": feed_name,
-                    "kind": feed_kind,
-                })
-                seen_urls.add(url)
-                matched += 1
+        return ((feed_name, total_recent, matched, None), candidates)
+    except Exception as e:
+        return ((feed_name, 0, 0, str(e)), [])
 
-            feed_stats.append((feed_name, total_recent, matched))
 
-        except Exception as e:
-            print(f"  ✗ {feed_name}: {e}")
-            feed_stats.append((feed_name, 0, 0))
+def fetch_candidates(cutoff: datetime, existing_urls: set) -> list:
+    """Fetch and keyword-filter new articles from all RSS feeds, in parallel.
+    feedparser releases the GIL during network I/O so threads work well here.
+    """
+    # 12 workers ≈ all 50 feeds in 3-4 staggered batches; gentle on remote hosts.
+    with ThreadPoolExecutor(max_workers=12) as ex:
+        results = list(ex.map(lambda f: _fetch_one_feed(f, cutoff), RSS_FEEDS))
 
-    # Per-feed summary
+    # Dedupe candidates against existing URLs and across feeds (some feeds
+    # republish each other's content)
+    seen_urls = set(existing_urls)
+    candidates: list = []
+    for _, feed_candidates in results:
+        for c in feed_candidates:
+            if c["url"] in seen_urls:
+                continue
+            seen_urls.add(c["url"])
+            candidates.append(c)
+
+    # Per-feed summary (sorted by matched desc so the productive feeds surface first)
+    feed_stats = sorted(
+        (r[0] for r in results),
+        key=lambda s: (-s[2], s[0])
+    )
     print("\nFeed results (recent entries / keyword matches):")
-    for name, total, matched in feed_stats:
-        marker = "✓" if matched > 0 else "·"
-        print(f"  {marker} {name}: {total} recent, {matched} matched")
+    for name, total, matched, err in feed_stats:
+        if err:
+            print(f"  ✗ {name}: {err}")
+        else:
+            marker = "✓" if matched > 0 else "·"
+            print(f"  {marker} {name}: {total} recent, {matched} matched")
 
     candidates.sort(key=lambda c: c["date"], reverse=True)
     return candidates

@@ -206,6 +206,19 @@ const orientations = ['GARDEN','SPACESHIP','MYSTERIES','ASSEMBLY'] as const;
       ))}
     </section>
 
+    <aside class="stream-callout">
+      <div class="stream-callout-inner">
+        <p class="stream-callout-eyebrow">Looking for more</p>
+        <h2 class="stream-callout-title">The Stream</h2>
+        <p class="stream-callout-body">
+          The wider feed of context, commentary, and smaller-scope practice notes
+          that didn't make the highlight reel — but still cleared our planetary
+          governance filter.
+        </p>
+        <a href="/stream" class="stream-callout-link">Open the stream →</a>
+      </div>
+    </aside>
+
   </div>
 </Base>
 
@@ -821,4 +834,59 @@ document.querySelectorAll('.card-reactions').forEach(container => {
 <style is:global>
   /* Hide cards filtered out by user preferences */
   .news-card.pref-hidden { display: none !important; }
+</style>
+
+<style>
+  .stream-callout {
+    max-width: var(--max-w);
+    margin: 3rem auto 1rem;
+    padding: 2rem 2.25rem;
+    background:
+      radial-gradient(ellipse 50% 60% at 20% 30%, rgba(74,124,89,.10), transparent 65%),
+      radial-gradient(ellipse 60% 70% at 80% 70%, rgba(42,100,150,.08), transparent 65%),
+      var(--filter-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .stream-callout-eyebrow {
+    font-family: var(--font-sans);
+    font-size: .6875rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    margin-bottom: .35rem;
+  }
+  .stream-callout-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.625rem;
+    font-weight: 400;
+    margin-bottom: .65rem;
+  }
+  .stream-callout-body {
+    font-size: .9375rem;
+    color: var(--text-2);
+    line-height: 1.6;
+    max-width: 52ch;
+    margin: 0 auto 1rem;
+  }
+  .stream-callout-link {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: .8125rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    color: #4a7c59;
+    text-decoration: none;
+    padding: .5rem .9rem;
+    border: 1px solid #4a7c59;
+    border-radius: 999px;
+    transition: all .15s;
+  }
+  .stream-callout-link:hover {
+    background: #4a7c59;
+    color: #fff;
+    text-decoration: none;
+  }
 </style>

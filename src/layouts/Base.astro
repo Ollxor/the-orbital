@@ -31,9 +31,37 @@ const currentPath = Astro.url.pathname;
 
   <!-- Masthead -->
   <header class="masthead">
+    <!-- Orbital watermark -->
+    <svg class="masthead-orrery" width="520" height="220" viewBox="0 0 520 220" fill="none" aria-hidden="true" focusable="false">
+      <ellipse cx="260" cy="110" rx="248" ry="68" stroke="#2e5c3c" stroke-width="0.8" opacity="0.055"/>
+      <ellipse cx="260" cy="110" rx="186" ry="50" stroke="#a35820" stroke-width="0.6" opacity="0.045"/>
+      <ellipse cx="260" cy="110" rx="124" ry="33" stroke="#2e5c3c" stroke-width="0.6" opacity="0.04"/>
+      <ellipse cx="260" cy="110" rx="66"  ry="18" stroke="#a35820" stroke-width="0.5" opacity="0.035"/>
+      <circle cx="260" cy="110" r="5" fill="#2e5c3c" opacity="0.07"/>
+      <circle cx="472" cy="97"  r="3.5" fill="#a35820" opacity="0.1"/>
+      <circle cx="96"  cy="80"  r="2.5" fill="#2b606c" opacity="0.1"/>
+      <circle cx="170" cy="67"  r="2"   fill="#4c3d6e" opacity="0.09"/>
+    </svg>
     <a href="/" class="masthead-brand">
       <span class="masthead-title">THE ORBITAL</span>
       <span class="masthead-tagline">Tracking the emergent movement for planetary systems governance</span>
+      <!-- Botanical ornament -->
+      <span class="masthead-ornament" aria-hidden="true">
+        <svg width="130" height="26" viewBox="0 0 130 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="13" x2="42" y2="13" stroke="#cec4b0" stroke-width="0.8"/>
+          <path d="M35 13 C33 8,27 6,24 8 C21 10,21 15,24 16 C27 17.5,33 16,35 13Z" fill="#4c7d5a" opacity="0.4"/>
+          <path d="M42 13 C40 9,35 7.5,33 9.5 C31 11.5,31.5 15.5,33.5 16.5 C35.5 17.5,40 16,42 13Z" fill="#4c7d5a" opacity="0.28"/>
+          <line x1="42" y1="13" x2="54" y2="13" stroke="#cec4b0" stroke-width="0.8"/>
+          <line x1="76" y1="13" x2="88" y2="13" stroke="#cec4b0" stroke-width="0.8"/>
+          <circle cx="65" cy="13" r="5" stroke="#a35820" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <circle cx="65" cy="13" r="2" fill="#a35820" opacity="0.35"/>
+          <line x1="54" y1="13" x2="60" y2="13" stroke="#cec4b0" stroke-width="0.8"/>
+          <line x1="70" y1="13" x2="76" y2="13" stroke="#cec4b0" stroke-width="0.8"/>
+          <path d="M88 13 C90 9,95 7.5,97 9.5 C99 11.5,98.5 15.5,96.5 16.5 C94.5 17.5,90 16,88 13Z" fill="#4c7d5a" opacity="0.28"/>
+          <path d="M95 13 C97 8,103 6,106 8 C109 10,109 15,106 16 C103 17.5,97 16,95 13Z" fill="#4c7d5a" opacity="0.4"/>
+          <line x1="88" y1="13" x2="130" y2="13" stroke="#cec4b0" stroke-width="0.8"/>
+        </svg>
+      </span>
     </a>
   </header>
 
@@ -192,32 +220,57 @@ const currentPath = Astro.url.pathname;
   /* ── Masthead ── */
   .masthead {
     border-bottom: 1px solid var(--border);
-    padding: 2.25rem 1.25rem 1.75rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Top accent rule */
+    border-top: 3px solid transparent;
+    background-clip: padding-box;
+    box-shadow: inset 0 3px 0 0 var(--forest-2), inset 0 4px 0 0 var(--copper);
+  }
+  .masthead::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 200px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--copper), transparent);
+    opacity: .3;
+  }
+  .masthead-orrery {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
   }
   .masthead-brand {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    gap: .5rem;
+    gap: .6rem;
     text-decoration: none;
+    padding: 2.5rem 1.25rem 2rem;
+    position: relative;
   }
   .masthead-brand:hover { text-decoration: none; }
   .masthead-title {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 3.75rem;
+    font-size: 4.25rem;
     font-weight: 600;
-    letter-spacing: .25em;
-    color: var(--text);
+    letter-spacing: .26em;
+    color: var(--forest);
     line-height: 1;
   }
   .masthead-tagline {
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: .9375rem;
+    font-size: .9rem;
     font-weight: 300;
-    color: var(--text-2);
+    color: var(--text-3);
     letter-spacing: .04em;
     font-style: italic;
+  }
+  .masthead-ornament {
+    display: block;
+    line-height: 0;
+    margin-top: .25rem;
   }
 
   /* ── Main nav ── */

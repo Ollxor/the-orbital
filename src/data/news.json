@@ -1,5 +1,30 @@
 [
   {
+    "slug": "khulan-reestablishment-eastern-mongolia",
+    "tier": "main",
+    "title": "Hundreds of Khulan return to Eastern Mongolia after 65-year absence",
+    "date": "2026-05-11",
+    "image": "https://imgs.mongabay.com/wp-content/uploads/sites/20/2026/05/11125822/khulans.jpeg",
+    "imageAlt": "Hundreds of Khulan return to Eastern Mongolia after 65-year absence",
+    "summary": "Hundreds of Asiatic wild asses (khulan) have successfully recolonized eastern Mongolia for the first time in 65 years, crossing through a gap in the Trans-Mongolian Railway fence—demonstrating that large-scale wildlife restoration is possible across major infrastructure barriers.",
+    "body": "",
+    "insight": "This shows that ecosystem connectivity can be restored even through industrialized landscapes when barriers have gaps, making it a practical model for rewilding and wildlife corridor design in fragmented regions.",
+    "actors": [],
+    "tags": [
+      "rewilding",
+      "wildlife-restoration",
+      "ecosystem-connectivity",
+      "large-herbivore-recovery",
+      "infrastructure-design"
+    ],
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP"
+    ],
+    "sourceUrl": "https://news.mongabay.com/short-article/2026/05/hundreds-of-khulan-return-to-eastern-mongolia-after-65-year-absence/",
+    "source": "Mongabay"
+  },
+  {
     "slug": "vodun-mangrove-protection-benin",
     "title": "Vodun’s sacred role in saving West Africa’s mangroves",
     "date": "2026-05-09",

@@ -216,6 +216,169 @@ RSS_FEEDS = [
     # Deep Look (PBS/KQED) — macro biology, sensing-the-living-world
     {"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-3SbfTPJsL8fJAPKiVqBLg",
      "name": "Deep Look", "kind": "youtube"},
+
+    # ── Science / sensing the living world (expanded) ──────────────────────
+    # Coastal + ocean science, marine ecosystems, rarely covered — GARDEN + SPACESHIP
+    {"url": "https://hakaimagazine.com/feed/",
+     "name": "Hakai Magazine"},
+    # Interdisciplinary science — consciousness, biology, Earth systems
+    {"url": "https://nautil.us/feed/",
+     "name": "Nautilus Magazine"},
+    # Neuroscience journalism — brain, consciousness, interspecies perception
+    {"url": "https://www.thetransmitter.org/feed/",
+     "name": "The Transmitter"},
+    # Science journalism with social + ethical framing — SPACESHIP
+    {"url": "https://undark.org/feed/",
+     "name": "Undark"},
+    # Animal cognition, sentience, food systems — GARDEN + SPACESHIP
+    {"url": "https://sentientmedia.org/feed/",
+     "name": "Sentient Media"},
+    # Philosophy of mind, human nature — Aeon's sister publication — MYSTERIES
+    {"url": "https://psyche.co/feed",
+     "name": "Psyche"},
+    # Independent ecology + politics magazine — GARDEN + ASSEMBLY
+    {"url": "https://theecologist.org/feed",
+     "name": "The Ecologist"},
+
+    # ── Global majority / food sovereignty / decolonial ────────────────────
+    # Tech + politics from Global South perspective — SPACESHIP + ASSEMBLY
+    {"url": "https://restofworld.org/feed/",
+     "name": "Rest of World"},
+    # Pan-African political culture, decoloniality — MYSTERIES + ASSEMBLY
+    {"url": "https://africasacountry.com/feed/",
+     "name": "Africa Is A Country"},
+    # Global peasant movement, food sovereignty — GARDEN + ASSEMBLY
+    {"url": "https://viacampesina.org/en/feed/",
+     "name": "La Via Campesina"},
+    # Seed rights, land grabs, agroecology — GARDEN + ASSEMBLY
+    {"url": "https://grain.org/e/feed",
+     "name": "GRAIN"},
+    # Citizen media worldwide, multilingual perspectives
+    {"url": "https://globalvoices.org/feed/",
+     "name": "Global Voices"},
+    # Himalayan water, Asian ecology, glacier governance — GARDEN + ASSEMBLY
+    {"url": "https://www.thethirdpole.net/feed/",
+     "name": "The Third Pole"},
+    # Social movement strategy, nonviolent action — ASSEMBLY
+    {"url": "https://wagingnonviolence.org/feed/",
+     "name": "Waging Nonviolence"},
+    # Pan-African progressive media — ASSEMBLY + GARDEN
+    {"url": "https://www.pambazuka.org/rss.xml",
+     "name": "Pambazuka News"},
+
+    # ── Democracy / governance depth ───────────────────────────────────────
+    # Global open government initiative — ASSEMBLY + SPACESHIP
+    {"url": "https://www.opengovpartnership.org/feed/",
+     "name": "Open Government Partnership"},
+    # Civic tech for democracy, digital tools — SPACESHIP + ASSEMBLY
+    {"url": "https://www.mysociety.org/feed/",
+     "name": "mySociety"},
+    # Commons, peer production, distributed governance
+    {"url": "https://blog.p2pfoundation.net/feed",
+     "name": "P2P Foundation"},
+    # Digital governance, DAOs, collective intelligence research
+    {"url": "https://metagov.org/feed/",
+     "name": "Metagov"},
+    # UK participation + deliberation — ASSEMBLY
+    {"url": "https://www.involve.org.uk/feed",
+     "name": "Involve"},
+    # Forest tenure, land rights for local + Indigenous peoples — GARDEN + ASSEMBLY
+    {"url": "https://rightsandresources.org/feed/",
+     "name": "Rights and Resources Initiative"},
+    # Innovation + social change — SPACESHIP + ASSEMBLY
+    {"url": "https://www.nesta.org.uk/feed/",
+     "name": "Nesta"},
+
+    # ── Culture / consciousness / MYSTERIES ────────────────────────────────
+    # Deep ecology arts + writing — flagship MYSTERIES publication
+    {"url": "https://dark-mountain.net/feed/",
+     "name": "Dark Mountain"},
+    # Inner + outer transformation, global consciousness — MYSTERIES + ASSEMBLY
+    {"url": "https://www.kosmosjournal.org/feed/",
+     "name": "Kosmos Journal"},
+    # Ecology, spirituality, arts — GARDEN + MYSTERIES
+    {"url": "https://www.resurgence.org/news/rss.xml",
+     "name": "Resurgence & Ecologist"},
+    # Buddhist ecology and social engagement — MYSTERIES + ASSEMBLY
+    {"url": "https://tricycle.org/feed/",
+     "name": "Tricycle"},
+    # Joanna Macy tradition — grief, agency, ecological reconnection
+    {"url": "https://workthatreconnects.org/feed/",
+     "name": "Work That Reconnects"},
+
+    # ── Post-growth / circular / commons economics ─────────────────────────
+    # Circular economy research and case studies — SPACESHIP + ASSEMBLY
+    {"url": "https://www.ellenmacarthurfoundation.org/articles/rss",
+     "name": "Ellen MacArthur Foundation"},
+    # Wellbeing economy policy + practice — ASSEMBLY + GARDEN
+    {"url": "https://wellbeingeconomy.org/feed",
+     "name": "Wellbeing Economy Alliance"},
+    # Ecological / steady-state economics — ASSEMBLY + SPACESHIP
+    {"url": "https://steadystate.org/feed/",
+     "name": "Steady State Herald"},
+    # Positive futures — curated breakthrough news — GARDEN + SPACESHIP
+    {"url": "https://futurecrunch.com/feed/",
+     "name": "Future Crunch"},
+    # Global justice, commons, decolonisation — ASSEMBLY
+    {"url": "https://www.tni.org/en/rss.xml",
+     "name": "Transnational Institute"},
+
+    # ── More quality outlets ────────────────────────────────────────────────
+    # Stories proving rapid change is already happening — GARDEN + ASSEMBLY
+    {"url": "https://rapidtransition.org/feed/",
+     "name": "Rapid Transition Alliance"},
+    # Climate movement, fossil fuel divestment — ASSEMBLY + GARDEN
+    {"url": "https://350.org/feed/",
+     "name": "350.org"},
+    # Environmental law + litigation news — ASSEMBLY + GARDEN
+    {"url": "https://earthjustice.org/feeds/blog",
+     "name": "Earthjustice"},
+    # Conservation science journalism (Center for Biological Diversity)
+    {"url": "https://therevelator.org/feed/",
+     "name": "The Revelator"},
+    # Earth system science — Columbia Climate School
+    {"url": "https://news.climate.columbia.edu/feed/",
+     "name": "State of the Planet"},
+    # Global environmental research and solutions — GARDEN + SPACESHIP
+    {"url": "https://www.wri.org/feed",
+     "name": "World Resources Institute"},
+
+    # ── Substack — extended set (second wave) ──────────────────────────────
+    # ASSEMBLY + GARDEN: degrowth economics
+    {"url": "https://jasonhickel.substack.com/feed",
+     "name": "Jason Hickel"},
+    # MYSTERIES + SPACESHIP: worldview transformation — Patterning Instinct author
+    {"url": "https://jeremylent.substack.com/feed",
+     "name": "Jeremy Lent"},
+    # SPACESHIP + ASSEMBLY: polycrisis political economy
+    {"url": "https://adamtooze.substack.com/feed",
+     "name": "Chartbook (Adam Tooze)"},
+    # GARDEN + ASSEMBLY: ecology and politics — Guardian columnist
+    {"url": "https://www.monbiot.com/feed/",
+     "name": "George Monbiot"},
+    # GARDEN + ASSEMBLY: transition towns movement blog
+    {"url": "https://transitionnetwork.org/feed/",
+     "name": "Transition Network"},
+    # SPACESHIP + ASSEMBLY: systems analysis, polycrisis — Planet: Critical
+    {"url": "https://racheldonaldwriter.substack.com/feed",
+     "name": "Planet: Critical (Rachel Donald)"},
+    # SPACESHIP + MYSTERIES: biophysical economics, energy limits
+    {"url": "https://www.thegreatsimplification.com/feed",
+     "name": "The Great Simplification (Nate Hagens)"},
+    # MYSTERIES + GARDEN: Indigenous land songs, regeneration
+    {"url": "https://lylajune.substack.com/feed",
+     "name": "Lyla June Johnston"},
+    # SPACESHIP + GARDEN: low-tech, pre-industrial solutions journalism
+    {"url": "https://solar.lowtechmagazine.com/feeds/all-articles.html",
+     "name": "Low-Tech Magazine"},
+
+    # ── YouTube channels (expanded) ────────────────────────────────────────
+    # Earth history, evolution, paleontology — worldview-shifting at planetary scale
+    {"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCzR-rom72CDW_8yKkAFuF3g",
+     "name": "PBS Eons", "kind": "youtube"},
+    # Animated science — passes breakthrough rubric rarely but memorably
+    {"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q",
+     "name": "Kurzgesagt", "kind": "youtube"},
 ]
 
 
@@ -511,8 +674,8 @@ def fetch_candidates(cutoff: datetime, existing_urls: set) -> list:
     """Fetch and keyword-filter new articles from all RSS feeds, in parallel.
     feedparser releases the GIL during network I/O so threads work well here.
     """
-    # 12 workers ≈ all 50 feeds in 3-4 staggered batches; gentle on remote hosts.
-    with ThreadPoolExecutor(max_workers=12) as ex:
+    # 16 workers ≈ all 100 feeds in 6-7 staggered batches; gentle on remote hosts.
+    with ThreadPoolExecutor(max_workers=16) as ex:
         results = list(ex.map(lambda f: _fetch_one_feed(f, cutoff), RSS_FEEDS))
 
     # Dedupe candidates against existing URLs and across feeds (some feeds

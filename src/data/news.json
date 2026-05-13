@@ -1,5 +1,54 @@
 [
   {
+    "slug": "canada-first-nations-data-platform",
+    "tier": "main",
+    "title": "New data platform aims to reduce conflicts between First Nations and businesses in Canada",
+    "date": "2026-05-12",
+    "image": "https://imgs.mongabay.com/wp-content/uploads/sites/20/2026/05/12182459/First-Nations-elders.jpg",
+    "imageAlt": "New data platform aims to reduce conflicts between First Nations and businesses in Canada",
+    "summary": "Canada launches a data-sharing platform enabling First Nations to verify their own identity and control information in dealings with businesses, reducing fraud and conflict through Indigenous-led data governance.",
+    "body": "",
+    "insight": "This inverts the usual asymmetry: Indigenous communities now hold the authoritative record, shifting power in resource negotiations and establishing a template for data sovereignty in cross-sector governance.",
+    "actors": [],
+    "tags": [
+      "indigenous-data-sovereignty",
+      "first-nations-governance",
+      "platform-governance",
+      "canada"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://news.mongabay.com/2026/05/new-data-platform-aims-to-reduce-conflicts-between-first-nations-and-businesses-in-canada/",
+    "source": "Mongabay"
+  },
+  {
+    "slug": "australia-high-court-coal-emissions-scope",
+    "tier": "main",
+    "title": "Should emissions from coal burned overseas be considered in Australian mine approvals? For the first time, the High Court will decide",
+    "date": "2026-05-12",
+    "image": "https://images.theconversation.com/files/735201/original/file-20260512-57-3dd4es.jpg?ixlib=rb-4.1.0&amp;rect=0%2C0%2C856%2C428&amp;q=45&amp;auto=format&amp;w=1356&amp;h=668&amp;fit=crop",
+    "imageAlt": "Should emissions from coal burned overseas be considered in Australian mine approvals? For the first time, the High Cour",
+    "summary": "Australia's High Court will rule for the first time on whether emissions from coal burned overseas must be considered in domestic mine approvals — a case that could reshape how nations account for fossil fuel exports.",
+    "body": "",
+    "insight": "If the court expands the legal scope of emissions accounting to include end-use combustion abroad, it sets a precedent that reframes mining approvals as planetary governance decisions, not just domestic resource extraction.",
+    "actors": [],
+    "tags": [
+      "rights-of-nature",
+      "high-court-ruling",
+      "emissions-accountability",
+      "fossil-fuel-governance",
+      "scope-expansion"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://theconversation.com/should-emissions-from-coal-burned-overseas-be-considered-in-australian-mine-approvals-for-the-first-time-the-high-court-will-decide-281343",
+    "source": "The Conversation"
+  },
+  {
     "slug": "khulan-reestablishment-eastern-mongolia",
     "tier": "main",
     "title": "Hundreds of Khulan return to Eastern Mongolia after 65-year absence",
@@ -25,6 +74,32 @@
     "source": "Mongabay"
   },
   {
+    "slug": "nepal-medicinal-plants-indigenous-knowledge-archive",
+    "tier": "main",
+    "title": "Archiving Nepal’s medicinal plants and Indigenous knowledge for future generations",
+    "date": "2026-05-10",
+    "image": "https://globalvoices.org/wp-content/uploads/2026/05/Sanjib_Chaudhary_01-800x450.webp",
+    "imageAlt": "Archiving Nepal’s medicinal plants and Indigenous knowledge for future generations",
+    "summary": "Nepalese archivist Sanjib Chaudhary is systematically documenting healers' medicinal plant knowledge in audio and video formats with community consent, creating a reusable archive that preserves Indigenous ecological wisdom for future generations.",
+    "body": "",
+    "insight": "This shows that Indigenous knowledge systems can be stewarded as living, distributable commons—shifting archival practice from extraction to consent-based stewardship.",
+    "actors": [],
+    "tags": [
+      "indigenous-knowledge",
+      "medicinal-plants",
+      "commons-stewardship",
+      "oral-tradition",
+      "community-consent",
+      "knowledge-archiving"
+    ],
+    "orientations": [
+      "GARDEN",
+      "MYSTERIES"
+    ],
+    "sourceUrl": "https://globalvoices.org/2026/05/10/archiving-nepals-medicinal-plants-and-indigenous-knowledge-for-future-generations/",
+    "source": "Global Voices"
+  },
+  {
     "slug": "vodun-mangrove-protection-benin",
     "title": "Vodun’s sacred role in saving West Africa’s mangroves",
     "date": "2026-05-09",
@@ -48,6 +123,31 @@
     "sourceUrl": "https://news.mongabay.com/video/2026/05/voduns-sacred-role-in-saving-west-africas-mangroves/",
     "tier": "main",
     "source": "Mongabay"
+  },
+  {
+    "slug": "feminist-agrarian-reform-via-campesina",
+    "tier": "stream",
+    "title": "Feminist Agrarian Reform: Transforming Society and Relations for All Humanity",
+    "date": "2026-05-08",
+    "image": "https://viacampesina.org/en/wp-content/uploads/sites/2/2026/05/Capire-ICARRD.jpg",
+    "imageAlt": "Feminist Agrarian Reform: Transforming Society and Relations for All Humanity",
+    "summary": "La Via Campesina leaders articulate a feminist agrarian reform framework connecting land sovereignty, food systems, and gender justice as integrated transformation of relations and society.",
+    "body": "",
+    "insight": "Grounds food sovereignty and land reform in feminist praxis, positioning gender transformation as central to regenerative governance rather than secondary.",
+    "actors": [],
+    "tags": [
+      "food-sovereignty",
+      "land-reform",
+      "feminist-praxis",
+      "agrarian-movements",
+      "gender-justice"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://viacampesina.org/en/2026/05/feminist-agrarian-reform-transforming-society-and-relations-for-all-humanity/",
+    "source": "La Via Campesina"
   },
   {
     "slug": "warlpiri-songlines-traditional-knowledge-country-care",

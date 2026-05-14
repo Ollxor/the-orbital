@@ -1,5 +1,80 @@
 [
   {
+    "slug": "ai-decrypts-crow-communication-cooperative-breeding",
+    "tier": "main",
+    "title": "From caws to code: AI helps decrypt animal communication",
+    "date": "2026-05-14",
+    "image": "https://imgs.mongabay.com/wp-content/uploads/sites/20/2026/05/14030403/Banner-Image.jpg",
+    "imageAlt": "From caws to code: AI helps decrypt animal communication",
+    "summary": "AI analysis of carrion crow vocalizations is revealing the linguistic structure underlying cooperative breeding behavior, decades of field research by Baglione and Canestrari now augmented by machine learning to decode animal syntax and social coordination.",
+    "body": "",
+    "insight": "When we can hear animal communication as structured language, we gain evidence for non-human agency and cognition—shifting the case for rights-of-nature frameworks and ecosystem stewardship from ethics toward a recognition of agentic, communicating beings.",
+    "actors": [],
+    "tags": [
+      "animal-communication",
+      "ai-perception",
+      "corvid-cognition",
+      "new-sensing",
+      "more-than-human"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://news.mongabay.com/2026/05/from-caws-to-code-ai-helps-decrypt-animal-communication/",
+    "source": "Mongabay"
+  },
+  {
+    "slug": "paradise-california-wildfire-resilience-gathering",
+    "tier": "stream",
+    "title": "Rebuilding after wildfire: Paradise, California hosts a gathering on community resilience",
+    "date": "2026-05-13",
+    "image": "https://www.resilience.org/wp-content/uploads/2026/05/Paradise-45123073654_4fc00c6e46_b.jpg",
+    "imageAlt": "Rebuilding after wildfire: Paradise, California hosts a gathering on community resilience",
+    "summary": "Paradise, California is hosting a gathering of fire-affected communities, local leaders, and resilience practitioners to explore post-catastrophe rebuilding approaches that move beyond restoring pre-fire conditions.",
+    "body": "",
+    "insight": "This models how communities can use deliberative space after acute crisis to reimagine governance and land stewardship — turning disaster response into an opportunity for systemic redesign.",
+    "actors": [],
+    "tags": [
+      "community-resilience",
+      "post-disaster-governance",
+      "participatory-rebuilding",
+      "wildfire-recovery",
+      "deliberative-process"
+    ],
+    "orientations": [
+      "ASSEMBLY",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.resilience.org/stories/2026-05-13/rebuilding-after-wildfire-paradise-california-hosts-a-gathering-on-community-resilience/",
+    "source": "Resilience.org"
+  },
+  {
+    "slug": "elephants-return-eastern-zambia-coexistence",
+    "tier": "main",
+    "title": "As elephants return in eastern Zambia, communities adapt to coexistence",
+    "date": "2026-05-13",
+    "image": "https://imgs.mongabay.com/wp-content/uploads/sites/20/2026/05/13140225/Elephants_farmers_granary.jpg",
+    "imageAlt": "As elephants return in eastern Zambia, communities adapt to coexistence",
+    "summary": "Communities in eastern Zambia are developing practical coexistence strategies as elephant populations recover, including modified farming practices, early-warning systems, and land-use planning that accommodates wildlife corridors alongside human settlement.",
+    "body": "",
+    "insight": "Wildlife recovery at scale now requires active commons governance—communities learning to redesign land use and decision-making to sustain both human livelihoods and ecosystem restoration.",
+    "actors": [],
+    "tags": [
+      "wildlife-corridors",
+      "human-wildlife-coexistence",
+      "community-land-management",
+      "elephant-conservation",
+      "regenerative-land-use"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://news.mongabay.com/2026/05/as-elephants-return-in-eastern-zambia-communities-adapt-to-coexistence/",
+    "source": "Mongabay"
+  },
+  {
     "slug": "canada-first-nations-data-platform",
     "tier": "main",
     "title": "New data platform aims to reduce conflicts between First Nations and businesses in Canada",

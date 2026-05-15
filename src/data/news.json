@@ -1,5 +1,108 @@
 [
   {
+    "slug": "whale-communication-phonology-breakthrough",
+    "tier": "main",
+    "title": "Incredible Breakthrough in Whale Communication Studies",
+    "date": "2026-05-14",
+    "image": "https://img.youtube.com/vi/Hm9ADZ28Wgo/maxresdefault.jpg",
+    "imageAlt": "Incredible Breakthrough in Whale Communication Studies",
+    "summary": "CETI researchers have decoded the phonological structure of sperm whale codas, revealing that whales use vowel-like sounds in patterned sequences—a discovery that demonstrates non-human linguistic complexity and enables direct translation of whale communication.",
+    "body": "",
+    "insight": "This breakthrough in decoding whale syntax creates a new foundation for rights-of-nature governance: we can now verify that whales are linguistic, intentional agents, strengthening legal and ethical frameworks for marine protection and ocean commons stewardship.",
+    "actors": [],
+    "tags": [
+      "whale-communication",
+      "cetacean-intelligence",
+      "new-perception",
+      "rights-of-nature",
+      "ocean-commons"
+    ],
+    "orientations": [
+      "SPACESHIP",
+      "GARDEN"
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=Hm9ADZ28Wgo",
+    "source": "Anton Petrov",
+    "kind": "video",
+    "videoId": "Hm9ADZ28Wgo"
+  },
+  {
+    "slug": "sharks-international-conference-conservation-measures",
+    "tier": "stream",
+    "title": "At world’s largest shark conference, scientists warn of a grim outlook across the board",
+    "date": "2026-05-14",
+    "image": "https://imgs.mongabay.com/wp-content/uploads/sites/20/2026/05/14072415/l.-Greenland_shark_profile%C2%A9Hemming1952.jpg",
+    "imageAlt": "At world’s largest shark conference, scientists warn of a grim outlook across the board",
+    "summary": "800+ shark researchers gathered at Sharks International in Colombo to present conservation research, including rewilding initiatives and marine protected area effectiveness improvements alongside global trade impact analysis.",
+    "body": "",
+    "insight": "Conference convening demonstrates how marine conservation science is shifting toward regenerative and protection-based practices, though the article frames findings rather than concrete governance outcomes.",
+    "actors": [],
+    "tags": [
+      "marine-conservation",
+      "shark-protection",
+      "rewilding",
+      "mpa-effectiveness",
+      "ocean-commons"
+    ],
+    "orientations": [
+      "GARDEN",
+      "SPACESHIP"
+    ],
+    "sourceUrl": "https://news.mongabay.com/2026/05/at-worlds-largest-shark-conference-scientists-warn-of-a-grim-outlook-across-the-board/",
+    "source": "Mongabay"
+  },
+  {
+    "slug": "seabed-life-recovery-bottom-trawling-ban-scotland",
+    "tier": "main",
+    "title": "Seabed life triples after bottom trawling ban in Scotland protected area",
+    "date": "2026-05-14",
+    "image": "https://imgs.mongabay.com/wp-content/uploads/sites/20/2026/05/14103836/Arran-Expedition-Underwater-Image-3-Credit-Henley-Spiers.jpg",
+    "imageAlt": "Seabed life triples after bottom trawling ban in Scotland protected area",
+    "summary": "Nearly a decade after Scotland banned bottom trawling in the South Arran Marine Protected Area, seabed life has tripled in abundance and doubled in species diversity compared to unprotected waters, providing measurable evidence of ocean recovery from destructive fishing practices.",
+    "body": "",
+    "insight": "This demonstrates that marine protection frameworks with concrete fishing restrictions can restore ecosystem function at scale—a replicable governance model for ocean commons stewardship.",
+    "actors": [],
+    "tags": [
+      "marine-protected-areas",
+      "bottom-trawling-ban",
+      "ocean-restoration",
+      "rights-of-nature",
+      "regenerative-fisheries",
+      "marine-governance"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://news.mongabay.com/short-article/2026/05/seabed-life-triples-after-bottom-trawling-ban-in-scotland-protected-area/",
+    "source": "Mongabay"
+  },
+  {
+    "slug": "kenyan-community-reclaims-land-rights",
+    "tier": "main",
+    "title": "How one Kenyan community is building a new future on reclaimed ground",
+    "date": "2026-05-14",
+    "image": "https://globalvoices.org/wp-content/uploads/2026/05/Laikipia-County-beadwork-seller-800x450.webp",
+    "imageAlt": "How one Kenyan community is building a new future on reclaimed ground",
+    "summary": "A Kenyan community secured formal land rights and is now rebuilding livelihoods on reclaimed ground, demonstrating how legal recognition of land tenure reshapes power distribution and enables community-led development.",
+    "body": "",
+    "insight": "This case shows that formalizing land rights—especially for historically dispossessed communities—is a foundational governance practice that unlocks regenerative stewardship and economic sovereignty.",
+    "actors": [],
+    "tags": [
+      "land-rights",
+      "community-governance",
+      "land-tenure",
+      "kenya",
+      "livelihood-restoration"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://globalvoices.org/2026/05/14/how-one-kenyan-community-is-building-a-new-future-on-reclaimed-ground/",
+    "source": "Global Voices"
+  },
+  {
     "slug": "ai-decrypts-crow-communication-cooperative-breeding",
     "tier": "main",
     "title": "From caws to code: AI helps decrypt animal communication",

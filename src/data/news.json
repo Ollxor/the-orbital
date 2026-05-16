@@ -103,6 +103,31 @@
     "source": "Global Voices"
   },
   {
+    "slug": "ghana-marine-protected-area-fisheries",
+    "tier": "stream",
+    "title": "Q&A: What a healthier ocean means to Ghana",
+    "date": "2026-05-14",
+    "image": "https://dialogue.earth/content/uploads/2026/05/20221119_lighthouse-Cape-Three-Point_Western-Ghana_Amazing-Aerial_Alamy-3E00JHN-thumb_v2-1.jpeg",
+    "imageAlt": "Q&A: What a healthier ocean means to Ghana",
+    "summary": "Fisheries expert Socrates Segbor discusses Ghana's first marine protected area as a step toward ocean health and the preservation of fishing communities and livelihoods dependent on sustainable ocean stewardship.",
+    "body": "",
+    "insight": "Ghana's move toward marine protection signals how coastal nations are integrating ecosystem health with food sovereignty and cultural continuity in ocean governance.",
+    "actors": [],
+    "tags": [
+      "marine-protected-areas",
+      "ocean-commons",
+      "food-sovereignty",
+      "west-africa",
+      "fisheries-governance"
+    ],
+    "orientations": [
+      "GARDEN",
+      "ASSEMBLY"
+    ],
+    "sourceUrl": "https://dialogue.earth/en/ocean/qa-what-a-healthier-ocean-means-to-ghana/",
+    "source": "The Third Pole"
+  },
+  {
     "slug": "ai-decrypts-crow-communication-cooperative-breeding",
     "tier": "main",
     "title": "From caws to code: AI helps decrypt animal communication",
